@@ -4,32 +4,8 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+## Information Architect Sample
+Information architecture (IA) focuses on organizing, structuring, and labeling content effectively and sustainably.  The goal is to help users find information and complete tasks.  To do this, you need to understand how the pieces fit together to create the larger picture and how items relate to the system.
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+Check back for examples. 

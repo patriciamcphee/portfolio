@@ -20,6 +20,13 @@
   --ifm-color-secondary-light: #edd088;
   --ifm-color-secondary-lighter: #f0d696;
   --ifm-color-secondary-lightest: #f6e7c3;
+  --ifm-color-background: #CDCDCD;
+  --ifm-color-background-dark: #999999;
+  --ifm-color-background-darker: #909090;
+  --ifm-color-background-darkest: #aaaaaa;
+  --ifm-color-background-light: #bbbbbb;
+  --ifm-color-background-lighter: #c3c3c3;
+  --ifm-color-background-lightest: #dddddd;
   --ifm-code-font-size: 95%;
 }
 
@@ -32,4 +39,25 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background-color: var(--ifm-color-secondary);
+}
+
+.footer a:link {
+  color: var(--ifm-color-primary);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+a:link {
+  color: var(--ifm-color-primary);
+}
+
+a:hover {
+  color: var(--ifm-color-secondary);
+  font-weight: bold;
 }

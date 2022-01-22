@@ -13,8 +13,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
+  projectName: 'portfolio', // Usually your repo name.
 
   presets: [
     [
@@ -43,6 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        style: 'primary',
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',

@@ -44,7 +44,7 @@ const config = {
     ({
       navbar: {
         style: 'primary',
-        title: '',
+        title: 'Patricia McPhee',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',

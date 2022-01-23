@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Patricia McPhee',
+  tagline: 'UX and Technical Writing Samples',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -24,7 +24,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -44,7 +44,7 @@ const config = {
     ({
       navbar: {
         style: 'primary',
-        title: 'My Site',
+        title: 'Patricia McPhee',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -52,9 +52,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'how-tos',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Samples',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -65,14 +65,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+
         links: [
           {
             title: 'Docs',
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/how-tos',
               },
             ],
           },

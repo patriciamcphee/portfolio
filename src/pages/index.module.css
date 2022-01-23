@@ -17,12 +17,12 @@
   }
 }
 
+
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.jumbotron {
-  background-color: #c3c3c3;
-}
+
+

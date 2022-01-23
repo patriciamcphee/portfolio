@@ -10,6 +10,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+
+.heroSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.header {
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+}
+
+.heroContent {
+  padding: 50px;
+  align-items: baseline;
+}
+
+
+
 main {
   padding: 10px;
 }

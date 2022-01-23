@@ -12,11 +12,11 @@ const FeatureList = [
         used to get your website up and running quickly.
       </>
     ),
-    href: ('../../docs/resume'),
+    href: ('../../docs/resume#accomplishments'),
     label: ('Learn more'),
   },
   {
-    title: 'Employment History',
+    title: 'Work experience',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -24,7 +24,7 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
-    href: ('../../docs/resume'),
+    href: ('../../docs/resume#work-experience'),
     label: ('Learn more'),
   },
   {
@@ -36,7 +36,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-    href: ('../../docs/resume'),
+    href: ('../../docs/resume#skills'),
     label: ('Learn more'),
   },
 ];
@@ -53,7 +53,7 @@ function Feature({Svg, title, description, href, label}) {
 
         <div className={styles.buttons}>
 
-                <a className="button button--secondary button--sm" href={href}>{label}</a> 
+                <a className="button button--primary button--sm" href={href}>{label}</a> 
 
               </div> 
       </div>

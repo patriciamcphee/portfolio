@@ -12,10 +12,10 @@ import HomepageFeatures from '../components/HomepageFeatures';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header class="jumbotron align-items-center heroContent">
-        <div class="container ">
-          <div class="row row-content align-items-center">           
-            <div class="col-4 col-sm col-md">
+    <header class="jumbotron align-items-center">
+        <div class="container">
+          <div class="row row-content row--align-center">           
+            <div class="col col-sm col-md">
               <h1>{siteConfig.title}</h1>
               <p>{siteConfig.tagline}</p>
               <div className={styles.buttons}>
@@ -26,8 +26,8 @@ function HomepageHeader() {
                 </Link>
               </div> 
             </div>
-            <div class="col-2 col-sm col-md"></div>
-            <div class="col-3 col-sm col-md alignRight">
+            <div class="col-sm"></div>
+            <div class="col-3 col-sm col-md">
               <p class="d-none d-sm-block">
               <HeroImage width="auto" />
               </p>

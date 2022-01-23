@@ -29,9 +29,29 @@ const sidebars = {
     'info-architect',
     {
       type: 'category',
-      label: 'How-tos',
-      items: [ 'how-tos/how-tos', 'resume' ]
+      label: 'How-to samples',
+      items: [ 'how-tos/how-tos' ],
     },
+    {
+      type: 'category',
+      label: 'KB article samples',
+      items: [ 'kb-articles/kb-article-samples' ],
+    },
+    {
+      type: 'category',
+      label: 'Quick start samples',
+      items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
+    },
+    {
+      type: 'category',
+      label: 'UX writing sampmles',
+      items: [ 'ux-writing/ux-writing-samples' ],
+    },
+    {
+      type: 'category',
+      label: 'Voiceover script sampmles',
+      items: [ 'voiceover-scripts/intro' ],
+    },    
   ],
 };
 

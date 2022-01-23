@@ -12,6 +12,8 @@ const FeatureList = [
         used to get your website up and running quickly.
       </>
     ),
+    href: ('../../docs/resume'),
+    label: ('Learn more'),
   },
   {
     title: 'Employment History',
@@ -22,6 +24,8 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
+    href: ('../../docs/resume'),
+    label: ('Learn more'),
   },
   {
     title: 'Skillset',
@@ -32,18 +36,26 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
+    href: ('../../docs/resume'),
+    label: ('Learn more'),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, href, label}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <h3><a href={href}>{title}</a></h3>
         <p>{description}</p>
+
+        <div className={styles.buttons}>
+
+                <a className="button button--secondary button--sm" href={href}>{label}</a> 
+
+              </div> 
       </div>
     </div>
   );

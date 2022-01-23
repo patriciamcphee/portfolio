@@ -9,7 +9,7 @@ import HomepageFeatures from '../components/HomepageFeatures';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--light', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       
       <div className="container">
       <div class="jumbotron">
@@ -18,8 +18,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/how-tos">
+            Learn more about me
           </Link>
         </div>
         </div>

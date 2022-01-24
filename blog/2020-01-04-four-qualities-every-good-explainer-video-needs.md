@@ -3,18 +3,12 @@ title: "4 Qualities of a Great How-To Video (blog draft)"
 date:   2020-01-04 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: creative writing
-badges:
- - type: success
-   tag: video-production
- - type: info
-   tag: scriptwriting
- - type: secondary
-   tag: voiceover
+tags: [ video-production, script writing, voiceover ] 
 ---
 
 Let's face it, everyone likes learning something new. Your audience is a curious bunch, no matter who they are, which is why how-to/explainer videos are perfect for any target audience. These videos are short, engaging breakdowns of broader concepts or tasks. They are also one of the most effective ways to quickly show viewers a big idea or how to do something. How-to/explainer videos must be easy to consume, and to achieve this, the information delivered must be clear.
 
-<!--more-->
+<!--truncate-->
 
 A well-produced video can undoubtedly enhance the experience for your viewers, but a well-produced video takes planning to meet a high standard of quality and clarity. Many people begin without knowing where to start or realizing the extent of the work involved. Video production is not a simple matter of recording and pressing play when you're done. It takes several hours to make a few minutes of high-quality video. A few tasks in creating a well-produced vide include planning, script writing, recording the video, recording and editing the voiceover, and rendering. 
 
@@ -55,7 +49,6 @@ You can record anything and everything on your screen, but it can end up as a no
 - **Set up your desktop recording area and your recording software.** Do not record "full screen" because it can record at a "not-so-great" aspect ratio.   Recording at 1280x720 may seem small, but it's considered HD, plus it's the recommended size for YouTube videos.
 
   ![16:9 ratio](https://www.pscmdesigns.com/images/16-9-ratio.png) 
-
 
   >**Tip!** You can make a 1280 x 720px placeholder image for your desktop and then re-size any browser or application within the white space before you
  start to record.
@@ -114,4 +107,32 @@ It's all about balance:
 >>*Engage; don't bore.*<br />
 >>*Enchant; don't demand.*
 
+:::note
 
+Some **content** with _markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::caution
+
+Some **content** with _markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _markdown_ `syntax`. Check [this `api`](#).
+
+:::

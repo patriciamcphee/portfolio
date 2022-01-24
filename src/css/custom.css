@@ -9,11 +9,17 @@
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 966px) {
+  .jumbotron {
+    padding: 20px 0px;
+  }
 }
 
 .jumbotron {
-  padding: 10px 0px;
+  padding: 30px 0px 20px 0px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -21,33 +27,18 @@ body {
 }
 
 .jumbotron h1 {
-  font-size: 32pt;
+  font-size: 28pt;
 /*  font-family: 'Roboto Slab', serif; */
-  font-weight: lighter; 
+  font-weight: 400; 
   text-align: left;
 }
 
 .jumbotron p {
   text-align: left;
-  font-size: 18pt;
-
+  font-size: 13pt;
+  margin-right: 0px;
 /*  font-family: 'Roboto', sans-serif;
   font-weight: 300; */
-}
-
-.heroSvg {
-  height: 200px;
-  width: 200px;
-}
-
-.header {
-  padding:30px 0px;
-  margin:0px auto;
-}
-
-.heroContent {
-  padding: 50px;
-  align-items: baseline;
 }
 
 h1, h2, h3 {

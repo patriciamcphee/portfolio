@@ -27,7 +27,7 @@ function HomepageHeader() {
               </div> 
             </div>
             <div class="col-sm"></div>
-            <div class="col-3 col-sm col-md">
+            <div class="col-3 col-sm col-md heroSvg">
 
               <HeroImage width="auto" />
 

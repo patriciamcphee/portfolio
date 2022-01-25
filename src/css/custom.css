@@ -141,4 +141,13 @@ a:hover {
 
 }
 
-
+@media (orientation:portrait) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}
+@media (orientation:landscape) and (max-width: 767px) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}

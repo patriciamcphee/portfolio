@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 966px) {
@@ -108,7 +109,7 @@ html[data-theme="dark"]:root {
 }
 
 .footer {
-  background-color: var(--ifm-color-secondary-light);
+  background-color: var(--ifm-color-secondary);
 }
 
 .footer a {
@@ -140,4 +141,13 @@ a:hover {
 
 }
 
-
+@media (orientation:portrait) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}
+@media (orientation:landscape) and (max-width: 767px) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}

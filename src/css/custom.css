@@ -42,6 +42,11 @@ body {
   font-weight: 300; */
 }
 
+html[data-theme=dark] .jumbotron {
+  background-color: var(--ifm-footer-background-color);
+}
+
+
 h1, h2, h3 {
   font-family: 'Roboto Slab', serif;
   font-weight: 400;

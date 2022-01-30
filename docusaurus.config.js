@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My UX & Tech Writing Samples',
+  title: 'Patricia McPhee - UX & Tech Writing Samples',
   tagline: 'Here you\'ll find writing samples that include UI strings, microcontent, how-to\'s, troubleshooting KB articles, and blog articles.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -44,7 +44,7 @@ const config = {
     ({
       navbar: {
         style: 'primary',
-        title: 'Patricia McPhee',
+        title: ' ',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',

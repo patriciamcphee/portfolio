@@ -49,7 +49,7 @@ function Feature({Svg, title, description, href, label}) {
         <Svg className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--lg">
-      <h3>{title}</h3>
+      <h3><a href={href}>{title}</a></h3>
       <p>{description}</p>
 
         <a className="button button--primary button--sm text--center" href={href}>{label}</a> 

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import HeroImage from '../../static/img/hero-1.svg';
+import HeroImage from '../../static/img/hero-2.svg';
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures';
 /*import { Grid, Box } from '@site/src/components/Grid'*/

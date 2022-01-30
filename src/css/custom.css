@@ -13,6 +13,10 @@ body {
   font-weight: 400;
 }
 
+td {
+  vertical-align: top;
+}
+
 @media screen and (max-width: 966px) {
   .jumbotron {
     padding: 20px 0px;

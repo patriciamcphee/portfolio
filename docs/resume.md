@@ -6,8 +6,8 @@ title: Resume
 
 I have a vast array of writing experience as well as instructional design, visual design, video production, and voice over. My expertise is in taking the guesswork out of complex technical content for busy IT professionals. I am a self-driven Sr. Technical UX Writer with a degree and strong background in computer networking and system administration, and more than 20 years in the tech industry. Over the last ten years, I have helped organizations reduce, simplify, and restructure their content, ensuring quality and accuracy, and increasing overall customer satisfaction rates.
 
-## Patti Short 
->Sr. Technical Writer \| Voiceover Professional<br /> 
+## Patricia McPhee 
+>Sr. Technical Writer \| UX Writer \| Content Developer<br /> 
 > *I am passionate about creating content experiences that help IT Pros achieve more with the technology they use.*
 
 - [Accomplishments](#accomplishments)
@@ -25,19 +25,34 @@ I have a vast array of writing experience as well as instructional design, visua
 - Built a _**custom**_ authoring environment in MadCap Flare and converted legacy content for several large corporations to maximize content reuse and to reduce the cost of creating, managing, and publishing content.
 
 ### Work Experience
-#### Freelance Technical Writer and Voiceover Professional
-Remote
-July 2019 - Present 
+#### Senior Technical Writer 
+
+**Keyavi Data Corp**<br /> 
+100% remote <br /> 
+October 2021 - present
+
+Work collaboratively with the product core engineering to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
 
 
-
-#### Contract Technical Writer 
+#### Technical Writer, Contractor 
 
 **Microsoft**<br /> 
 100% remote <br /> 
-May 2020 - Present 
+May 2020 - October 2021 
 
-Azure Dedicated technical writing working on the Azure VMware Solution service. Work in close collaboration with development, design, and project management teams.
+Work collaboratively with the [Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/introduction) core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
+
+
+#### Freelance Technical Writer and Voiceover Professional
+Remote
+July 2019 - June 2021 
+
+| Project | Job Description |
+| ------- | --------------- |
+| [**Extreme Networks**](https://www.extremenetworks.com)<br />Technical Writer<br />100% remote<br />September 2020 - May 2021 | Reviewed and edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing. |
+| [**Netdata**](https://www.netdata.cloud)<br />Technical Writer<br />100% remote<br />February 2020 - April 2020 | Wrote product content for a Linux server performance tool. |
+| [**ZPE Systems**](https://www.zpesystems.com)<br />Freelance Network Content Writer<br />100% remote<br />September 2019 - January 2020 | Wrote a marketing campaign eBook on automating the data center. Wrote video scripts, provided the voiceover, and produced how-to videos. | 
+| [**WAX.io**](https://wax.io/)<br />Freelance Technical Marketing Writer<br />100% remote<br />July 2019 - August 2019 | Contributed to blockchain blog articles. |
 
 
 #### Technical Writer II

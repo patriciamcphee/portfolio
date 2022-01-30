@@ -17,7 +17,7 @@ function HomepageHeader() {
           <div class="row row-content row--align-center">           
             <div class="col col-sm col-md">
               <h1>{siteConfig.title}</h1>
-              <p>Here you'll find a variety of my samples, such as UI strings, KB articles, how-to's, and more. This site was built using React, GitHub pages for hosting, and markdown to write the content. Around 2015, I started using markdown more as the primary format for content mostly in Confluence and other wiki platforms. In 2018, I started using static-site generators like Jekyll, Hugo,Docusaurus, Jekyll, and DocFx as a primary authoring envinronment .</p>
+              <p>Here you'll find a variety of my writing samples, such as UI strings, KB articles, how-to's, and more. It's a way for me to showcase my writing samples in an online format that is common in today's enterprises.  </p>
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"

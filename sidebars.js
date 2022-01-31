@@ -29,27 +29,47 @@ const sidebars = {
     'info-architect',
     {
       type: 'category',
-      label: 'How-to samples',
-      items: [ 'how-tos/how-tos' ],
+      label: 'How-to\'s',
+      link: {
+        type: 'doc',
+        id: 'how-tos/how-to-samples',
+      },      
+      items: [ 'how-tos/mobile-sdk' ],
     },
     {
       type: 'category',
-      label: 'KB article samples',
-      items: [ 'kb-articles/kb-article-samples' ],
+      label: 'KB articles',
+      link: {
+        type: 'doc',
+        id: 'kb-articles/kb-article-samples',
+      },         
+      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
     {
       type: 'category',
-      label: 'Quick start samples',
+      label: 'Quick starts',
+      link: {
+        type: 'doc',
+        id: 'quick-starts/quick-starts',
+      },         
       items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
     },
     {
       type: 'category',
-      label: 'UX writing sampmles',
-      items: [ 'ux-writing/ux-writing-samples' ],
+      label: 'UX writing',
+      link: {
+        type: 'doc',
+        id: 'ux-writing/ux-writing-samples',
+      },          
+      items: [ 'ux-writing/ui-strings', 'ux-writing/errors-warnings-confirmations', 'ux-writing/group-policies' ],
     },
     {
       type: 'category',
-      label: 'Voiceover script sampmles',
+      label: 'Voiceover scripts',
+      link: {
+        type: 'doc',
+        id: 'voiceover-scripts/intro',
+      },       
       items: [ 'voiceover-scripts/intro' ],
     },    
   ],

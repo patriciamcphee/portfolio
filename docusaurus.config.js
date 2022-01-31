@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My UX & Tech Writing Samples',
+  title: 'Patricia McPhee - UX & Tech Writing Samples',
   tagline: 'Here you\'ll find writing samples that include UI strings, microcontent, how-to\'s, troubleshooting KB articles, and blog articles.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -29,8 +29,8 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+         // editUrl:
+           // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -44,9 +44,9 @@ const config = {
     ({
       navbar: {
         style: 'primary',
-        title: 'Patricia McPhee',
+        title: ' ',
         logo: {
-          alt: 'My Site Logo',
+          alt: '',
           src: 'img/logo.svg',
         },
         items: [
@@ -54,7 +54,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Samples',
+            label: 'Samples',           
           },
           {
             type: 'doc',
@@ -69,7 +69,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/patriciamcphee/portfolio',
             label: 'GitHub',
             position: 'right',
           },
@@ -113,12 +113,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/patriciamcphee/portfolio',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -3,16 +3,58 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+ 
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: auto; 
+  padding: 20px 0px;
+  align-items: center;
 }
 
 .card {
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
-  min-height: 400px;
+
 }
+
+
+.features-card {
+  border: 1px solid var(--ifm-color-background);
+  border-radius: 20px;
+  
+
+}
+
+
+
+
+.features-content {
+  margin: 20px;
+}
+
+
+
+.feature-button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+
+.feature-button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.feature-button a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  text-align: match-parent;
+
+}
+

@@ -1,3 +1,3 @@
 ---
-title: Voiceover script samples
+title: Voiceover scripts
 ---

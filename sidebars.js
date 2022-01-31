@@ -65,7 +65,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Voiceover script samples',
+      label: 'Voiceover scripts',
       link: {
         type: 'doc',
         id: 'voiceover-scripts/intro',

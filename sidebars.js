@@ -32,7 +32,7 @@ const sidebars = {
       label: 'How-to\'s',
       link: {
         type: 'doc',
-        id: 'how-tos/how-tos',
+        id: 'how-tos/how-to-samples',
       },      
       items: [ 'how-tos/mobile-sdk' ],
     },

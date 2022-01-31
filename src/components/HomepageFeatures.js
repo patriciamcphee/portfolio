@@ -4,39 +4,39 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Accomplishments',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'UX Writing',
+    Svg: require('../../static/img/d126220ad0f941e80e15108aade273dc.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
         used to get your website up and running quickly.
       </>
     ),
-    href: ('../../docs/resume#accomplishments'),
+    href: ('../../docs/ux-writing/ux-writing-samples'),
     label: ('Learn more'),
   },
   {
-    title: 'Work experience',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'How-to\'s',
+    Svg: require('../../static/img/5.svg').default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
-    href: ('../../docs/resume#work-experience'),
+    href: ('../../docs/how-tos/how-to-samples'),
     label: ('Learn more'),
   },
   {
-    title: 'Skillset',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'KB articles',
+    Svg: require('../../static/img/illustration.svg').default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
       </>
     ),
-    href: ('../../docs/resume#skills'),
+    href: ('../../docs/kb-articles/kb-article-samples'),
     label: ('Learn more'),
   },
 ];

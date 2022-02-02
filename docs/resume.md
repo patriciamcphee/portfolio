@@ -31,7 +31,7 @@ I have a vast array of writing experience as well as instructional design, visua
 100% remote <br /> 
 October 2021 - present
 
-Work collaboratively with the product core engineering to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
+Work collaboratively with the product core engineering team to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
 
 
 #### Technical Writer, Contractor 

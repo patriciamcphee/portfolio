@@ -34,6 +34,8 @@ October 2021 - present
 Work collaboratively with the product core engineering team to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
 
 
+add something here about the Start-up business Phases A and B -- I started near the end of Phase A -- are these called "Round" or "Phase"?
+
 #### Technical Writer, Contractor 
 
 **Microsoft**<br /> 

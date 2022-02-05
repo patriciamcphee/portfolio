@@ -4,11 +4,13 @@ tags: [ux writing, tech writing, before/after ]
 description: Writing error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the user in a deaden?  For example, if they get "Invalid or unsupported" error, do the users know what to do next?
 ---
 
-Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to provide guidance to the user to prevent dead ends. What does "dead end" mean in this context? Does the message give the user the next steps to fix it themselves? For example, if they get an "Invalid or unsupported" error, do they know what to do next? This message is a dead-end message. It doesn't tell the user what supported files to try to get past the error.
+Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to provide guidance to the user to prevent dead ends. What does "dead end" mean in this context? Does the message give the user the next steps to fix it themselves? For example, if they get an "Invalid or unsupported file type" error, do they know what to do next? This message is a dead-end message. It doesn't tell the user what supported file types to try to get past the error.
 
-> "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant."
+<div class="quote">
+"Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant."
+</div>
 
-The examples on this page are the original, as it appears in the application and the rewrite.
+The examples on this page are the original, as it appears in the application and then the rewrite.
 
 
 | Original | Rewrite | Description | Resolution |

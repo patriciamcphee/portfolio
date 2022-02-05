@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import HeroImage from '../../static/img/hero-2.svg';
+import HeroImage from '@site/static/img/hero-2.svg';
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures';
 /*import { Grid, Box } from '@site/src/components/Grid'*/
@@ -15,8 +15,16 @@ function HomepageHeader() {
     <header class="jumbotron align-items-center">
         <div class="container">
           <div class="row row-content row--align-center">           
-            <div class="col col-sm col-md">
+
+          <div class="col col-sm col-md heroSvg flex">
+
+           <HeroImage width="auto" />
+
+          </div>
+
+            <div class="col col-sm col-md text--left">
               <h1>{siteConfig.title}</h1>
+              <h2>{siteConfig.tagline}</h2>
               <p>Here you'll find a variety of my writing samples, such as UI strings, KB articles, how-to's, and more. It's a way for me to showcase my writing samples in an online format that is common in today's enterprises.  </p>
               <div className={styles.buttons}>
                 <Link
@@ -26,12 +34,8 @@ function HomepageHeader() {
                 </Link>
               </div> 
             </div>
-            <div class="col-sm"></div>
-            <div class="col-3 col-sm col-md heroSvg">
 
-              <HeroImage width="auto" />
 
-          </div>
         </div>
       </div>
     </header>

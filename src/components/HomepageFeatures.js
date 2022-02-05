@@ -4,24 +4,23 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'UX Writing',
-    Svg: require('../../static/img/d126220ad0f941e80e15108aade273dc.svg').default,
+    title: 'UX writing',
+    Svg: require('../../static/img/ui-ux-design.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
       </>
     ),
     href: ('../../docs/ux-writing/ux-writing-samples'),
     label: ('Learn more'),
-  },
+  },  
   {
     title: 'How-to\'s',
-    Svg: require('../../static/img/5.svg').default,
+    Svg: require('../../static/img/kb-articles.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        UX Writing is the production of written content that becomes part of, and supports, a product's user experience.
       </>
     ),
     href: ('../../docs/how-tos/how-to-samples'),
@@ -29,11 +28,11 @@ const FeatureList = [
   },
   {
     title: 'KB articles',
-    Svg: require('../../static/img/illustration.svg').default,
+    Svg: require('../../static/img/faq.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
     href: ('../../docs/kb-articles/kb-article-samples'),

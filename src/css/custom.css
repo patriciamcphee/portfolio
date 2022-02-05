@@ -157,6 +157,10 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
+.navbar svg {
+  height: auto;
+}
+
 .navbar a:hover {
   color: var(--ifm-color-secondary);
 }

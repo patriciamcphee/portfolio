@@ -1,6 +1,7 @@
 ---
 title: Resume
-
+date: 02/05/2022
+description: Learn more about my career path, accomplishments, and training.
 ---
 
 
@@ -192,6 +193,11 @@ Wrote provisioning procedures in an online help format for field technicians in 
 - File sharing: Google Drive, Box, Dropbox, OneDrive
 
 ### Training and education
+
+#### Full Stack Web Development
+[CareerFoundry](https://careerfoundry.com/en/courses/become-a-web-developer/) - Remote<br />
+February 2022 - Present
+
 
 #### [Voice over acting](https://www.pattishortvo.com) 
 Such A Voice - Remote <br />

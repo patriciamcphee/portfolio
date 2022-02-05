@@ -34,6 +34,8 @@ October 2021 - present
 Work collaboratively with the product core engineering team to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
 
 
+add something here about the Start-up business Phases A and B -- I started near the end of Phase A -- are these called "Round" or "Phase"?
+
 #### Technical Writer, Contractor 
 
 **Microsoft**<br /> 
@@ -152,10 +154,9 @@ Wrote provisioning procedures in an online help format for field technicians in 
 
 #### Technical writing and authoring
 - Technical and UX writing \| 100%
-- MadCap Flare (Certified expert) \| 95%
 - Markdown, Confluence or other wiki platforms \| 95%
+- Static-site generators (Docusaurus, Jekyll) \|85%
 - DITA/XML, oXygen, Arbortext \| 80%
-- Adobe Robohelp \| 75%
 
 #### Visual design/graphic design
 - Visual design and desktop publishing \| 95%

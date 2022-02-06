@@ -8,7 +8,7 @@ description: Learn more about my career path, accomplishments, and training.
 > *I am passionate about creating content experiences that help IT Pros achieve more with the technology they use.*
 
 
-I have a vast array of writing experience as well as instructional design, visual design, video production, and voice over. My expertise is in taking the guesswork out of complex technical content for busy IT professionals. I am a self-driven Sr. Technical UX Writer with a degree and strong background in computer networking and system administration, and more than 20 years in the tech industry. Over the last ten years, I have helped organizations reduce, simplify, and restructure their content, ensuring quality and accuracy, and increasing overall customer satisfaction rates.
+I have a vast array of writing experience as well as instructional design, visual design, video production, and voice over. My expertise is in taking the guesswork out of complex technical content for busy IT professionals. I am a self-driven Sr. Technical UX Writer with a degree and strong background in computer networking and system administration, and more than 25 years in the tech industry. Over the last ten years, I have helped organizations reduce, simplify, and restructure their content, ensuring quality and accuracy, resulting in increased overall customer satisfaction rates.
 
 
 ## Accomplishments 
@@ -25,7 +25,8 @@ I have a vast array of writing experience as well as instructional design, visua
 100% remote <br /> 
 October 2021 - present
 
-Work collaboratively with the product core engineering team to develop user guides, admin guides, and deployment guides. Write and edit UX microcopy and UI strings. Develop online help system using Docusaurus, a React-based platform. Conduct content audits of existing content to identify areas for improvement. 
+Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement.
+ 
 
 ### Technical Writer, Contractor 
 

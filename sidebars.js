@@ -26,7 +26,6 @@ const sidebars = {
 
   tutorialSidebar: [
     'intro',
-    'info-architect',
     {
       type: 'category',
       label: 'How-to\'s',
@@ -70,7 +69,7 @@ const sidebars = {
         type: 'doc',
         id: 'voiceover-scripts/intro',
       },       
-      items: [ 'voiceover-scripts/intro' ],
+      items: [ 'voiceover-scripts/tech-software-training' ],
     },    
   ],
 };

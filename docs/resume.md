@@ -208,7 +208,7 @@ March 2019 - March 2020
 
 
 **Bachelor's in Health Science**<br />
-Environmental Health <br /> 
+Environmental Health/Public Health <br /> 
 Kaplan University - Remote <br />
 October 2010 to May 2012   
 

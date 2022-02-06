@@ -46,8 +46,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}'s UX and Tech Writing Samples`}
+      description="Here you'll find a variety of my writing samples, such as UI strings, KB articles, how-to's, and more. It's a way for me to showcase my writing samples in an online format that is common in today's enterprises.  ">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

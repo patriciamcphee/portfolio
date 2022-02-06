@@ -39,6 +39,20 @@ td {
   .heroSvg {
      display: none; /* visibility: none; */
   }
+
+}
+@media (orientation:landscape) and (max-width: 767px) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}
+
+
+
+@media (orientation:portrait) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
 }
 @media (orientation:landscape) and (max-width: 997px) {
   .heroSvg {
@@ -152,6 +166,12 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
+@media screen and (max-width: 995px) {
+  .footer {
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
 
 .navbar, .footer a:link {
   color: white;
@@ -177,16 +197,7 @@ a:hover {
 
 }
 
-@media (orientation:portrait) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
-@media (orientation:landscape) and (max-width: 767px) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
+
 
 .quote {
   font-size: 16pt;

@@ -196,3 +196,16 @@ a:hover {
   border-top: 2px solid var(--ifm-color-background-lightest);
   border-bottom: 2px solid var(--ifm-color-background-lightest);
 }
+
+.markdown img { 
+  border: 0.5pt solid lightgray; 
+  border-radius:5px;
+  max-width: 75%;
+  height: auto;
+  margin-left: 3px;
+}
+
+.markdown>table th, td {
+  margin: 6px;
+  text-align: left;
+}

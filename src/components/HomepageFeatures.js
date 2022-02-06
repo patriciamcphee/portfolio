@@ -5,11 +5,10 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'UX writing',
-    Svg: require('../../static/img/ui-ux-design.svg').default,
+    Svg: require('../../static/img/ux-writing.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product.
       </>
     ),
     href: ('../../docs/ux-writing/ux-writing-samples'),
@@ -20,7 +19,7 @@ const FeatureList = [
     Svg: require('../../static/img/kb-articles.svg').default,
     description: (
       <>
-        UX Writing is the production of written content that becomes part of, and supports, a product's user experience.
+        How-tos are easy-to-follow instructions that explain step-by-step how to perform a task or use a specific feature in an app. How-tos are focused procedural articles that help you complete a task.   
       </>
     ),
     href: ('../../docs/how-tos/how-to-samples'),
@@ -31,8 +30,7 @@ const FeatureList = [
     Svg: require('../../static/img/faq.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        A knowledge base article is a "self-service" online document that solves issues with products or services. Article types include informational articles, how-tos, troubleshooting guides, and FAQs.
       </>
     ),
     href: ('../../docs/kb-articles/kb-article-samples'),

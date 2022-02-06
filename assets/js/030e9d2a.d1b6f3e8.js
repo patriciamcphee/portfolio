@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[482],{4034:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/creative-writing","name":"creative writing","count":2,"permalink":"/blog/tags/creative-writing"}')}}]);

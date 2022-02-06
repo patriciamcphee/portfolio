@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7436],{8745:function(t){t.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/technical-writing","name":"technical writing","count":2,"permalink":"/blog/tags/technical-writing"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8289],{9298:function(o){o.exports=JSON.parse('{"allTagsPath":"/portfolio/blog/tags","slug":"/portfolio/blog/tags/video-production","name":"video-production","count":1,"permalink":"/portfolio/blog/tags/video-production"}')}}]);

@@ -7,6 +7,7 @@ description: Learn more about my career path, accomplishments, and training.
 >**Sr. Technical Writer \| UX Writer \| Content Developer**<br /> 
 > *I am passionate about creating content experiences that help IT Pros achieve more with the technology they use.*
 
+<p><i class="fas fa-file-pdf"></i> <a href="/portfolio/static/pdf/resume-patricia-mcphee.pdf">Download Resume</a></p>
 
 I have a vast array of writing experience as well as instructional design, visual design, video production, and voice over. My expertise is in taking the guesswork out of complex technical content for busy IT professionals. I am a self-driven Sr. Technical UX Writer with a degree and strong background in computer networking and system administration, and more than 25 years in the tech industry. Over the last ten years, I have helped organizations reduce, simplify, and restructure their content, ensuring quality and accuracy, resulting in increased overall customer satisfaction rates.
 

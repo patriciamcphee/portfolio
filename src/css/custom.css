@@ -69,10 +69,10 @@ td {
 }
 
 .jumbotron h1 {
-  font-size: 28pt;
+  font-size: 32pt;
 /*  font-family: 'Roboto Slab', serif; */
   font-weight: 400; 
-  text-align: left;
+/*  text-align: left;*/
 }
 
 .jumbotron p {
@@ -156,6 +156,7 @@ html[data-theme="dark"]:root {
 
 .footer {
   background-color: var(--ifm-color-primary);
+  padding: 20px
 }
 
 .footer a {

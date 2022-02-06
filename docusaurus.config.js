@@ -65,7 +65,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'http://pscmdesigns.com/',
+            href: 'https://www.pscmdesigns.com/',
             label: 'Portfolio',
             position: 'left',
           },

@@ -11,7 +11,7 @@ const FeatureList = [
         UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product.
       </>
     ),
-    href: ('@site/portfolio/docs/ux-writing/ux-writing-samples'),
+    href: ('/portfolio/docs/ux-writing/ux-writing-samples'),
     label: ('Learn more'),
   },  
   {
@@ -22,7 +22,7 @@ const FeatureList = [
         How-tos are easy-to-follow instructions that explain step-by-step how to perform a task or use a specific feature in an app. How-tos are focused procedural articles that help you complete a task.   
       </>
     ),
-    href: ('@site/portfolio/docs/how-tos/how-to-samples'),
+    href: ('/portfolio/docs/how-tos/how-to-samples'),
     label: ('Learn more'),
   },
   {
@@ -33,7 +33,7 @@ const FeatureList = [
         A knowledge base article is a "self-service" online document that solves issues with products or services. Article types include informational articles, how-tos, troubleshooting guides, and FAQs.
       </>
     ),
-    href: ('@site/portfolio/docs/kb-articles/kb-article-samples'),
+    href: ('/portfolio/docs/kb-articles/kb-article-samples'),
     label: ('Learn more'),
   },
 ];

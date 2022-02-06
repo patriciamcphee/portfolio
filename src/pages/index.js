@@ -25,7 +25,7 @@ function HomepageHeader() {
             <div class="col col-sm col-md text--left">
               <h1>{siteConfig.title}</h1>
               <h2>{siteConfig.tagline}</h2>
-              <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more. I built this site using <a href="https://docusaurus.io">Docusaurus</a>, GitHub Pages for hosting, and markdown for content development. The purpose of the site is to showcase my writing samples in an online format common in today's enterprises. </p>
+              <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more. I built this site using <a href="https://docusaurus.io">Docusaurus</a> for the authoring platform, GitHub Pages for hosting, and markdown for content development. The purpose of the site is to showcase my writing samples in an online format common in today's enterprises. </p>
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"

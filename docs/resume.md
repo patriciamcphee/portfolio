@@ -201,14 +201,8 @@ March 2019 - March 2020
 |---|---|
 | <ul><li>Technical (computer networking, software, cloud storage)</li><li>Corporate (presentations, training, e-learning)</li><li>Narration (informational, textbooks)</li><li>Medical (hand/wrist anatomy and health conditions, environmental health, public health)</li></ul>  | <ul><li>Confident</li><li>Educated</li><li>Intelligent</li><li>Warm</li><li>Friendly</li><li>Trusting</li><li>Honest</li><li>Sultry/playful</li></ul>  |
 
-
-
-
-
-
-
-**Bachelor's in Health Science**<br />
-Environmental Health/Public Health <br /> 
+s**Bachelor's in Health Science**<br />
+Environmental Health and Public Health <br /> 
 Kaplan University - Remote <br />
 October 2010 to May 2012   
 

@@ -20,25 +20,24 @@ I have a vast array of writing experience as well as instructional design, visua
 - Built a _**custom**_ authoring environment in MadCap Flare and converted legacy content for several large corporations to maximize content reuse and to reduce the cost of creating, managing, and publishing content.
 
 ## Work Experience
-### Senior Technical Writer 
-
-**Keyavi Data Corp**<br /> 
+**Keyavi Data Corp**<br />
+**Senior Technical Writer**<br /> 
 100% remote <br /> 
 October 2021 - present
 
 Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement.
  
 
-### Technical Writer, Contractor 
-
-**Microsoft**<br /> 
+**Microsoft/Kforce**<br />
+**Technical Writer, Contractor**<br /> 
 100% remote <br /> 
 May 2020 - October 2021 
 
 Work collaboratively with the [Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/introduction) core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
 
 
-### Freelance Technical Writer
+**PSCM Designs, LLC**<br />
+**Freelance Technical Writer**<br />
 100% Remote<br />
 July 2019 - June 2021 
 
@@ -50,17 +49,16 @@ July 2019 - June 2021
 | [**WAX.io**](https://wax.io/)<br />Freelance Technical Marketing Writer<br />100% remote<br />July 2019 - August 2019 | Contributed to blockchain blog articles. |
 
 
-### Technical Writer II
-
-**LivePerson** <br /> 
+**LivePerson**<br />
+**Technical Writer II** <br /> 
 Seattle, WA and partially remote <br /> 
 March 2019 - June 2019 
 
 Worked with the Android and iOS development team to rewrite the SDK and API guides for mobile messaging.
 
 
-### Technical Writer II 
-**Microsoft** <br /> 
+**Microsoft**<br /> 
+**Technical Writer II** <br /> 
 Redmond, WA and partially remote <br /> 
 January 2018 to January 2019
 
@@ -68,8 +66,8 @@ January 2018 to January 2019
 - Worked with the networking team to update the [Always On VPN](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) and other networking content.
 
 
-### Contract Technical Writer 
-**Oculus VR, *a Facebook company*** <br /> 
+**Oculus VR, *a Facebook company***<br /> 
+**Contract Technical Writer** <br /> 
 Redmond, WA <br /> 
 July 2017 to December 2017 
 
@@ -77,24 +75,24 @@ July 2017 to December 2017
 - Managed all controlled documentation, such as SOWs, CAD drawings, and SOPs.
 
 
-### Software Technical Writer
-**GE Healthcare** <br /> 
+**GE Healthcare**<br />
+**Software Technical Writer** <br /> 
 Seattle, WA and remote <br /> 
 August 2016 to May 2017 
 
 Collaborated with developers and customers to rewrite an outdated installation/upgrade guide, reducing data loss or corruption as well as support calls.
 
 
-### Technical Writer II
-**Amazon** <br /> 
+**Amazon**<br />
+**Technical Writer II** <br /> 
 Seattle, WA and remote <br /> 
 September 2015 to July 2016 
 
 Wrote feature announcements and task-oriented guides for the employees at the Amazon Fulfillment Centers (FCs). 
 
 
-### Contract Technical Writer 
-**Charter Communications** <br /> 
+**Charter Communications**<br /> 
+**Contract Technical Writer** <br /> 
 Greenwood Village, CO <br /> 
 March 2015 to September 2015 
 
@@ -102,15 +100,15 @@ March 2015 to September 2015
 - Wrote Python scripts for system administration tasks.
 
 
-### MadCap Flare Conversion Specialist 
+**MadCap Flare Conversion Specialist** <br />
 Superior, CO <br /> 
 October 2014 to December 2014 
 
 Trained technical writers and instructional designers to use and customize MadCap Flare.
 
 
-### Technical Writer
-**SolidFire, *a NetApp company*** <br /> 
+**SolidFire, *a NetApp company***<br />
+**Technical Writer** <br /> 
 Boulder, CO <br /> 
 January 2014 to October 2014 
 
@@ -118,8 +116,8 @@ January 2014 to October 2014
 - Contributed and edited content for white papers, best practice articles, and solution briefs for the cloud storage solution.
 
 
-### Contract Technical Writer 
-**Sybase, *an SAP company*** <br /> 
+**Sybase, *an SAP company***<br /> 
+**Contract Technical Writer** <br /> 
 Broomfield, CO <br /> 
 December 2012 to November 2013 
 
@@ -127,7 +125,7 @@ December 2012 to November 2013
 - Worked closely with software developers (Java), project managers, and product architects.
 
 
-### Technical Writing Consultant 
+**Technical Writing Consultant**<br /> 
 Arvada, CO and remote <br /> 
 July 2012 to January 2013 
 
@@ -135,8 +133,8 @@ July 2012 to January 2013
 - Restructured the instructor-led training to include scenario-based, hands-on exercises and review questions for general users and IT personnel.
 
 
-### Contract Sr. Technical Writer
-**Level 3 Communications, *a CenturyLink company*** <br /> 
+**Level 3 Communications, *a CenturyLink company***<br />
+**Contract Sr. Technical Writer** <br /> 
 Broomfield, CO <br /> 
 August 2011 to July 2012 
 
@@ -146,28 +144,28 @@ Wrote provisioning procedures in an online help format for field technicians in 
 ## Skills
 
 
-### Technical writing and authoring
+#### Technical writing and authoring
 - Technical and UX writing \| 100%
 - Markdown, Confluence or other wiki platforms \| 95%
 - Static-site generators (Docusaurus, Jekyll) \|85%
 - DITA/XML, oXygen, Arbortext \| 80%
 
-### Visual design/graphic design
+#### Visual design/graphic design
 - Visual design and desktop publishing \| 95%
 - Adobe Creative Cloud (Photoshop, InDesign, Illustrator) \| 90%
 
-### Video production
+#### Video production
 - Adobe Premiere Pro \| 50% 
 
-### Voice over and audio editing
+#### Voice over and audio editing
 - Audacity \| 75%
 - Adobe Audition \| 30%
 
-### Instructional design
+#### Instructional design
 - Curriculum writing \| 75%
 - Adobe Captivate \| 75% 
 
-### Programming and misc. 
+#### Programming and misc. 
 - HTML5/CSS3 \| 85%
 - GitHub/Git/Git bash \| 90%
 - JIRA or other sprint-based systems \| 60%
@@ -175,7 +173,7 @@ Wrote provisioning procedures in an online help format for field technicians in 
 - JavaScript \| 30%
 - Python \| 20%
 
-### Remote, flexible work experience
+#### Remote, flexible work experience
 - Focus and time management
 - Proactive communication
 - Troubleshooting
@@ -187,40 +185,32 @@ Wrote provisioning procedures in an online help format for field technicians in 
 
 ## Training and education
 
-### Full Stack Web Development
+**Full Stack Web Development**<br />
 [CareerFoundry](https://careerfoundry.com/en/courses/become-a-web-developer/) - Remote<br />
 February 2022 - Present
 
 
-### [Voice over acting](https://www.pattishortvo.com) 
+**[Voice over acting](https://www.pattishortvo.com)**<br /> 
 Such A Voice - Remote <br />
 Coach: [Jan Haley-Soule](https://www.imdb.com/name/nm1695988/) <br />
 March 2019 - March 2020
 
-#### Niche: 
-- Technical (computer networking, software, cloud storage)
-- Corporate (presentations, training, e-learning)
-- Narration (informational, textbooks)
-- Medical (hand/wrist anatomy and health conditions, environmental health, public health)
-- Commercials 
-
-#### Voice traits: 
-- Confident
-- Educated
-- Intelligent
-- Warm
-- Friendly
-- Trusting
-- Honest
-- Sultry/playful 
+| **Niche** | **Voice traits** |
+|---|---|
+| <ul><li>Technical (computer networking, software, cloud storage)</li><li>Corporate (presentations, training, e-learning)</li><li>Narration (informational, textbooks)</li><li>Medical (hand/wrist anatomy and health conditions, environmental health, public health)</li></ul>  | <ul><li>Confident</li><li>Educated</li><li>Intelligent</li><li>Warm</li><li>Friendly</li><li>Trusting</li><li>Honest</li><li>Sultry/playful</li></ul>  |
 
 
-### Bachelor's in Health Science
+
+
+
+
+
+**Bachelor's in Health Science**<br />
 Environmental Health <br /> 
 Kaplan University - Remote <br />
 October 2010 to May 2012   
 
-### Associate's of Applied Science 
+**Associate's of Applied Science**<br /> 
 Computer Science and Information Technology<br />
 Denver Technical College, a division of DeVry University - Denver, CO <br />
 February 1999 to April 2001 

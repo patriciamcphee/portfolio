@@ -18,7 +18,7 @@ function HomepageHeader() {
 
           <div class="col col-sm col-md heroSvg flex">
 
-           <HeroImage width="auto" />
+           <HeroImage  />
 
           </div>
 

@@ -9,12 +9,13 @@ const config = {
   title: 'Patricia McPhee',
   tagline: 'UX & Tech Writing Samples',
   url: 'https://patriciamcphee.github.io',
-  baseUrl: '/',
+  baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [

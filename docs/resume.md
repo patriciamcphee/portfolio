@@ -53,7 +53,7 @@ July 2019 - June 2021
 
 **LivePerson**<br />
 **Technical Writer II** <br /> 
-Seattle, WA and partially remote <br /> 
+Seattle, WA - Partially remote <br /> 
 March 2019 - June 2019 
 
 Worked with the Android and iOS development team to rewrite the SDK and API guides for mobile messaging.
@@ -61,7 +61,7 @@ Worked with the Android and iOS development team to rewrite the SDK and API guid
 
 **Microsoft**<br /> 
 **Technical Writer II** <br /> 
-Redmond, WA and partially remote <br /> 
+Redmond, WA - Partially remote <br /> 
 January 2018 to January 2019
 
 - Worked with the Microsoft Edge development team to rewrite the [Microsoft Edge (Legacy) deployment group policies](https://docs.microsoft.com/en-us/microsoft-edge/deploy/available-policies). 
@@ -79,7 +79,7 @@ July 2017 to December 2017
 
 **GE Healthcare**<br />
 **Software Technical Writer** <br /> 
-Seattle, WA and remote <br /> 
+Seattle, WA - Partially remote <br /> 
 August 2016 to May 2017 
 
 Collaborated with developers and customers to rewrite an outdated installation/upgrade guide, reducing data loss or corruption as well as support calls.
@@ -87,7 +87,7 @@ Collaborated with developers and customers to rewrite an outdated installation/u
 
 **Amazon**<br />
 **Technical Writer II** <br /> 
-Seattle, WA and remote <br /> 
+Seattle, WA - Partially remote <br /> 
 September 2015 to July 2016 
 
 Wrote feature announcements and task-oriented guides for the employees at the Amazon Fulfillment Centers (FCs). 
@@ -128,7 +128,7 @@ December 2012 to November 2013
 
 
 **Technical Writing Consultant**<br /> 
-Arvada, CO and remote <br /> 
+100% Remote <br /> 
 July 2012 to January 2013 
 
 - Wrote design specifications for the enterprise planning and budgeting software. 

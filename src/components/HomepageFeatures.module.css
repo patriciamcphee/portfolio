@@ -36,21 +36,10 @@
 
 
 
-.feature-button {
-  background-color: var(--ifm-color-primary);
-  color: white;
+html[data-theme=dark] .button {
+  background-color: var(--ifm-color-background);
 }
 
-
-.feature-button a:link {
-  color: white;
-  text-decoration: none;
-}
-
-.feature-button a:hover {
-  color: white;
-  text-decoration: none;
-}
 
 p {
   text-align: match-parent;

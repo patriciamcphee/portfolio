@@ -35,18 +35,6 @@ td {
 
 
 
-@media (orientation:portrait) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-
-}
-@media (orientation:landscape) and (max-width: 767px) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
-
 
 
 @media (orientation:portrait) {
@@ -85,6 +73,10 @@ td {
 
 html[data-theme=dark] .jumbotron {
   background-color: var(--ifm-footer-background-color);
+}
+
+html[data-theme=dark] .button {
+  background-color: var(--ifm-color-secondary);
 }
 
 

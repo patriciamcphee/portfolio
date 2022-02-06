@@ -25,5 +25,7 @@
   padding: 10px 0px;
 }
 
-
+html[data-theme=dark] .buttons {
+  color: white;
+}
 

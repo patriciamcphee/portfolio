@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Patricia McPhee',
   tagline: 'UX & Tech Writing Samples',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://patriciamcphee.github.io/portfolio/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

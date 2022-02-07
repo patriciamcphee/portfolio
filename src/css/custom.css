@@ -26,12 +26,7 @@ td {
 .banner {
   padding: 4rem;
 }
-/** In mobile view, reduce the padding */
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
+
 
 
 

@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
@@ -48,7 +48,7 @@ const config = {
         title: ' ',
         logo: {
           alt: '',
-          src: 'img/pm-moniker.svg',
+          src: 'img/favicon.png',
         },
         items: [
           {

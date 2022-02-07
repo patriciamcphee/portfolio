@@ -64,8 +64,8 @@ Worked with the Android and iOS development team to rewrite the SDK and API guid
 Redmond, WA - Partially remote <br /> 
 January 2018 to January 2019
 
-- Worked with the Microsoft Edge development team to rewrite the [Microsoft Edge (Legacy) deployment group policies](https://docs.microsoft.com/en-us/microsoft-edge/deploy/available-policies). 
-- Worked with the networking team to update the [Always On VPN](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) and other networking content.
+- Worked with the Microsoft Edge development team to rewrite the Microsoft Edge (Legacy) deployment group policies. 
+- Worked with the networking team to update the Always On VPN and other networking content.
 
 
 **Oculus VR, *a Facebook company***<br /> 
@@ -201,7 +201,7 @@ March 2019 - March 2020
 |---|---|
 | <ul><li>Technical (computer networking, software, cloud storage)</li><li>Corporate (presentations, training, e-learning)</li><li>Narration (informational, textbooks)</li><li>Medical (hand/wrist anatomy and health conditions, environmental health, public health)</li></ul>  | <ul><li>Confident</li><li>Educated</li><li>Intelligent</li><li>Warm</li><li>Friendly</li><li>Trusting</li><li>Honest</li><li>Sultry/playful</li></ul>  |
 
-s**Bachelor's in Health Science**<br />
+**Bachelor's in Health Science**<br />
 Environmental Health and Public Health <br /> 
 Kaplan University - Remote <br />
 October 2010 to May 2012   

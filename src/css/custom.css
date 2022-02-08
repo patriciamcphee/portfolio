@@ -23,21 +23,13 @@ td {
   }
 }
 
-.banner {
-  padding: 4rem;
-}
-
-
-
-
-
 
 @media (orientation:portrait) {
   .heroSvg {
      display: none; /* visibility: none; */
   }
 }
-@media (orientation:landscape) and (max-width: 997px) {
+@media (orientation:landscape) and (max-width: 996px) {
   .heroSvg {
      display: none; /* visibility: none; */
   }
@@ -155,7 +147,7 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 996px) {
   .footer {
     padding: 20px 0px;
     text-align: center;

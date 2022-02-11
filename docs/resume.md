@@ -27,7 +27,7 @@ Over the last ten years, I have helped organizations reduce, simplify, and restr
 100% Remote <br /> 
 October 2021 - present
 
-Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement.
+Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit in platform UX microcopy (tool tips, error and warning messages, and welcome instructions). Conduct content audits of existing content to identify areas for improvement.
  
 
 **Microsoft/Kforce**<br />

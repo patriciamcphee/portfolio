@@ -27,7 +27,7 @@ Over the last ten years, I have helped organizations reduce, simplify, and restr
 100% Remote <br /> 
 October 2021 - present
 
-Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit in-platform UX microcopy (tool tips, error and warning messages, and welcome instructions). Conduct content audits of existing content to identify areas for improvement.
+Work collaboratively with the product core engineering team to develop user guides and a scenario-based deployment guide. Write and edit in-platform UX microcopy (tooltips, error and warning messages, and welcome instructions). Continuously conduct audits of existing content to identify areas for improvement.
  
 
 **Microsoft/Kforce**<br />
@@ -35,7 +35,7 @@ Work collaboratively with the product core engineering team to develop user guid
 100% Remote <br /> 
 May 2020 - October 2021 
 
-Work collaboratively with the Azure VMware Solution core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
+Work collaboratively with the Azure VMware Solution core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
 
 
 **PSCM Designs, LLC**<br />

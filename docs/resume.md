@@ -35,7 +35,7 @@ Work collaboratively with the product core engineering team to develop user guid
 100% Remote <br /> 
 May 2020 - October 2021 
 
-Work collaboratively with the [Azure VMware Solution](https://docs.microsoft.com/en-us/azure/azure-vmware/introduction) core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
+Work collaboratively with the Azure VMware Solution core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct content audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
 
 
 **PSCM Designs, LLC**<br />

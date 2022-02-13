@@ -22,13 +22,14 @@ Make sure to log into the same server using Microsoft's RDP client instead of th
 1. **For existing users**, remove any references to a profile path from the following:
 
    - Remote Desktop User 
+
    - Profile path within Active Directory (AD) users and computers, if applicable
+
    - Computer Management
 
    :::tip
    Create a local account directly on the Remote Desktop Server to ensure that the profile loads directly from the server. Retest the logon.
    :::
-   
 
 2. **For new user accounts**, accounts without a local profile and anonymous accounts need to generate a local profile upon login. The creation of the original profile might take time. Make sure to verify if local copies of the user profiles are cached or deleted on logoff.  If so, this slows down logons if they get deleted on logoff using a Microsoft Policy. 
 

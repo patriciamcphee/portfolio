@@ -5,7 +5,9 @@ description: Group policies are like API reference guides. They all have a purpo
 date: 02/12/2022
 ---
 
-Group policies are common settings that system administrators configure for the enterprise. They are in-platform microcopy (UI strings) that display as a dialog window. In these examples, the group policies to configure are found in the Group Policy Editor in Windows 10. 
+A Group Policy has both control labels and in-platform microcopy (status UI text).  The static UI text provides users with detailed instructions or explanations to make informed decisions.  
+
+Group policies are common settings that system administrators configure for the enterprise. In these examples, the group policies to configure are found in the Group Policy Editor in Windows 10. 
 
 :::note
 Also, these examples are specific to the Microsoft Edge (legacy) browser. 

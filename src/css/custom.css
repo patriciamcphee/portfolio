@@ -23,21 +23,13 @@ td {
   }
 }
 
-.banner {
-  padding: 4rem;
-}
-
-
-
-
-
 
 @media (orientation:portrait) {
   .heroSvg {
      display: none; /* visibility: none; */
   }
 }
-@media (orientation:landscape) and (max-width: 997px) {
+@media (orientation:landscape) and (max-width: 996px) {
   .heroSvg {
      display: none; /* visibility: none; */
   }
@@ -143,7 +135,8 @@ html[data-theme="dark"]:root {
 
 .footer {
   background-color: var(--ifm-color-primary);
-  padding: 30px 0px;
+  padding: 40px 0px;
+  text-align: center;
 }
 
 .footer a {
@@ -154,7 +147,7 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 996px) {
   .footer {
     padding: 20px 0px;
     text-align: center;
@@ -190,7 +183,7 @@ a:hover {
 .quote {
   font-size: 16pt;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 30px 50px;
+  margin: 30px;
   padding: 10px;
   border-top: 2px solid var(--ifm-color-background-lightest);
   border-bottom: 2px solid var(--ifm-color-background-lightest);

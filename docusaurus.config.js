@@ -48,7 +48,7 @@ const config = {
         title: ' ',
         logo: {
           alt: '',
-          src: 'img/pm-moniker.svg',
+          src: 'img/favicon.png',
         },
         items: [
           {

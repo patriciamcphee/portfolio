@@ -16,31 +16,20 @@
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
-
 }
 
 
 .features-card {
   border: 1px solid var(--ifm-color-background);
   border-radius: 20px;
-  
-
+  height: inherit;
 }
-
-
-
 
 .features-content {
   margin: 20px;
 }
 
-
-
-
-
-
 p {
   text-align: match-parent;
-
 }
 

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[569],{2262:function(e){e.exports=JSON.parse('{"allTagsPath":"/portfolio/blog/tags","slug":"/portfolio/blog/tags/content-reuse","name":"content reuse","count":1,"permalink":"/portfolio/blog/tags/content-reuse"}')}}]);

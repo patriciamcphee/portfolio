@@ -2,25 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://patriciamcphee.github.io/portfolio/blog</id>
     <title>Patricia McPhee Blog</title>
-    <updated>2022-02-18T11:41:21.000Z</updated>
+    <updated>2022-02-05T11:41:21.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://patriciamcphee.github.io/portfolio/blog"/>
     <subtitle>Patricia McPhee Blog</subtitle>
     <icon>https://patriciamcphee.github.io/portfolio/img/favicon.png</icon>
-    <entry>
-        <title type="html"><![CDATA[Topic-based writing]]></title>
-        <id>/2022/02/18/topic-based-writing</id>
-        <link href="https://patriciamcphee.github.io/portfolio/blog/2022/02/18/topic-based-writing"/>
-        <updated>2022-02-18T11:41:21.000Z</updated>
-        <summary type="html"><![CDATA[--content tbd]]></summary>
-        <content type="html"><![CDATA[<p>--content tbd</p>]]></content>
-        <author>
-            <name>Patricia McPhee</name>
-            <uri>https://github.com/patriciamcphee</uri>
-        </author>
-        <category label="technical writing" term="technical writing"/>
-        <category label="content reuse" term="content reuse"/>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Single sourcing]]></title>
         <id>/2022/02/05/single-sourcing</id>

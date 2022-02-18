@@ -4,9 +4,19 @@
         <title>Patricia McPhee Blog</title>
         <link>https://patriciamcphee.github.io/portfolio/blog</link>
         <description>Patricia McPhee Blog</description>
-        <lastBuildDate>Sat, 05 Feb 2022 11:41:21 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Feb 2022 11:41:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Topic-based writing]]></title>
+            <link>https://patriciamcphee.github.io/portfolio/blog/2022/02/18/topic-based-writing</link>
+            <guid>/2022/02/18/topic-based-writing</guid>
+            <pubDate>Fri, 18 Feb 2022 11:41:21 GMT</pubDate>
+            <description><![CDATA[--content tbd]]></description>
+            <content:encoded><![CDATA[<p>--content tbd</p>]]></content:encoded>
+            <category>technical writing</category>
+            <category>content reuse</category>
+        </item>
         <item>
             <title><![CDATA[Single sourcing]]></title>
             <link>https://patriciamcphee.github.io/portfolio/blog/2022/02/05/single-sourcing</link>

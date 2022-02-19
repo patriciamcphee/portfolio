@@ -6,3 +6,6 @@ categories: technical writing
 tags: [ technical writing ]
 ---
 
+Come back soon for the full article.
+
+<!--truncate-->

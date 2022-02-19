@@ -3,8 +3,10 @@ title: How much does quality content matter?
 date:   2022-02-25 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: technical writing
-tags: [ technical writing ] 
+tags: [ technical writing, draft ] 
 ---
+
+>Draft
 
 The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether they're an IT professional evaluating an enterprise application or a consumer using a product, they're reading your content to learn about the product and how to use it. 
 
@@ -52,8 +54,9 @@ A great example of SEO in technical documentation comes from Microsoft. In their
 ~~~
 ---
 title: Manage Azure portal settings and preferences
-description: Change Azure portal settings such as default subscription/directory, timeouts, menu mode, contrast, theme, notifications, language/region, and more.
+description: Learn how to change Azure portal settings such as default subscription or directory, timeouts, menu mode, contrast, theme, notifications, language or region, and more.
 date:  08/10/2021 
+topic: how-to
 ---
 ~~~
 

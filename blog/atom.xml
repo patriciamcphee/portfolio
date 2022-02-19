@@ -13,7 +13,7 @@
         <link href="https://patriciamcphee.github.io/portfolio/blog/2022/03/04/technical-writing-demystified"/>
         <updated>2022-03-04T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[Come back soon for the full article.]]></summary>
-        <content type="html"><![CDATA[<p>Come back soon for the full article.</p>]]></content>
+        <content type="html"><![CDATA[<p>Come back soon for the full article.</p><p>Other articles I'm working on include: </p><ul><li>What's wrong with Technical Writer job descriptions</li><li>What technical writing is NOT!</li><li>Information architecture</li><li>Content Strategy</li><li>Topic-based writing</li><li>Scenario and goal-based writing</li></ul>]]></content>
         <author>
             <name>Patricia McPhee</name>
             <uri>https://github.com/patriciamcphee</uri>
@@ -48,6 +48,8 @@
         <category label="creative writing" term="creative writing"/>
         <category label="technical writing" term="technical writing"/>
         <category label="single sourcing" term="single sourcing"/>
+        <category label="content reuse" term="content reuse"/>
+        <category label="draft" term="draft"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[4 Qualities of a Great How-To Video (blog draft)]]></title>

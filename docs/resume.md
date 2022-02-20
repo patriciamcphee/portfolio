@@ -19,7 +19,7 @@ Over the last ten years, I have helped organizations reduce, simplify, and restr
 - Wrote shell scripts to automate OpenAPI content publishing for Extreme Networks.
 - Streamlined a weekly team status report for the Amazon executive team, reducing the time to compile and deliver the report by ~4 hours (more than half).
 - Rewrote a decades-old installation/upgrade guide for the GE Healthcare customers and support team, reducing the time to install/upgrade, data loss or corruption, and support calls.
-- Built a _**custom**_ authoring environment in MadCap Flare and converted legacy content for several large corporations to maximize content reuse and to reduce the cost of creating, managing, and publishing content.
+- Built a _**custom**_ authoring environment in MadCap Flare and converted legacy content for several large corporations to maximize content reuse and reduce the cost of creating, managing, and publishing content.
 
 ## Work Experience
 **Keyavi Data Corp**<br />
@@ -35,7 +35,7 @@ Work collaboratively with the product core engineering team to develop user guid
 100% Remote <br /> 
 May 2020 - October 2021 
 
-Work collaboratively with the Azure VMware Solution core engineering and UX Research teams to develop scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
+Work collaboratively with the Azure VMware Solution core engineering and UX Research teams to develop the scenario and goal-based content. Write and edit UX microcopy and UI strings. Conduct audits of existing content to identify areas for improvement. Use qualitative and quantitative data to make data-driven decisions.
 
 
 **PSCM Designs, LLC**<br />
@@ -82,7 +82,7 @@ July 2017 to December 2017
 Seattle, WA - Partially remote <br /> 
 August 2016 to May 2017 
 
-Collaborated with developers and customers to rewrite an outdated installation/upgrade guide, reducing data loss or corruption as well as support calls.
+Collaborated with developers and customers to rewrite an outdated installation/upgrade guide, reducing data loss or corruption and support calls.
 
 
 **Amazon**<br />
@@ -140,7 +140,7 @@ July 2012 to January 2013
 Broomfield, CO <br /> 
 August 2011 to July 2012 
 
-Wrote provisioning procedures in an online help format for field technicians in the fiber optic cable industry.
+Wrote fiber optic cable provisioning procedures in an online help format for field technicians.
 
 
 ## Skills
@@ -148,7 +148,7 @@ Wrote provisioning procedures in an online help format for field technicians in 
 
 #### Technical writing and authoring
 - Technical and UX writing \| 100%
-- Markdown, Confluence or other wiki platforms \| 95%
+- Markdown, Confluence, and other wiki platforms \| 95%
 - Static-site generators (Docusaurus, Jekyll) \|85%
 - DITA/XML, oXygen, Arbortext \| 80%
 

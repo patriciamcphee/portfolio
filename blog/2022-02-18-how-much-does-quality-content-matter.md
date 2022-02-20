@@ -1,6 +1,6 @@
 ---
 title: How much does quality content matter?
-date:   2022-02-25 11:41:21 -0800
+date:   2022-02-19 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: technical writing
 tags: [ technical writing, draft ] 
@@ -34,35 +34,36 @@ There are several dimensions to good technical documentation:
 
 We can break these down further, but we'll stick with this high-level list for this article. 
 
-### Accurate and complete
-Technical documentation is living content that is continuously updated as new features are released. Because of this, it must be reviewed for accuracy and completeness. For example, is the expected behavior of the product feature accurately described? Are the procedural steps accurate and complete? 
-
-Accurate and complete means the user accomplished what they set out to do because the information was in the documentation. However, they are at a dead end and left to call support if it's not there.
-
-### Consistent
-Inconsistencies can have a definite impact. For example, it can confuse users or affect the company's brand. In addition, the user might be confused about which content is correct, especially if your content uses several terms interchangeably. Finally, the translations by human and machine translators can contain these inconsistencies if your content is localized.  
-
-:::important
-If your company has a valuable brand, you'll suffer a tangible loss if branding isn't used consistently.
-:::
-
 ### Findable
 Today, it's more important to be able to search the content. In addition, technical documentation has evolved, especially over the past decade. Technical documentation is primarily in an online help format with an option to download a PDF version. With that said, SEO in technical documentation helps search engines respond with the most relevant content.
 
 A great example of SEO in technical documentation comes from Microsoft. In their content, on docs.microsoft.com, the `description` metadata field is required and must follow the SEO writing guidelines.
 
-~~~
+```text
 ---
 title: Manage Azure portal settings and preferences
 description: Learn how to change Azure portal settings such as default subscription or directory, timeouts, menu mode, contrast, theme, notifications, language or region, and more.
 date:  08/10/2021 
 topic: how-to
 ---
-~~~
+```
+
+### Accurate and complete
+Technical documentation is living content that is continuously updated as new features are released or operational processes change. Because of this, it must be reviewed for accuracy and completeness. For example, is the expected behavior of the product feature accurately described? Are the procedural steps accurate and complete? 
+
+Accurate and complete means the user accomplished what they set out to do because the information was in the documentation. However, they're at a dead end and left to call support if it's not there.
+
+
+
+
+### Consistent
+If your company has a valuable brand, you'll suffer a tangible loss if branding isn't used consistently. Inconsistencies can confuse users or affect the company's brand. For example, the user might be confused about which content is correct, mainly if your content uses several terms interchangeably. In addition, the translations by human and machine translators can contain these inconsistencies if your content is localized.       
+
+
 
 ### Understandable
 
-Now that we've briefly touched on the "findable" aspect of this article let's talk about the other piece, "understandable." Even if the content is accurate, complete, and consistent, it might not be understood. Many factors come into play when we talk about whether someone understands it or not:
+Even if the content is accurate, complete, and consistent, it might not be understood. Many factors come into play when we talk about whether someone understands it or not:
 
 - **Sentence structure**: Does the sentence articulate the idea clearly and directly? Is the sentence so long it's too difficult to follow? Is the sentence too convoluted to understand? Does the sentence include information that adds nothing but confusion?
 

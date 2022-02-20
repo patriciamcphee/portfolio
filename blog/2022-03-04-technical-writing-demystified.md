@@ -8,4 +8,12 @@ tags: [ technical writing ]
 
 Come back soon for the full article.
 
-<!--truncate-->
+Other articles I'm working on include: 
+
+- What's wrong with Technical Writer job descriptions
+- What technical writing is NOT!
+- Information architecture
+- Content strategy
+- Topic-based writing
+- Scenario and goal-based writing
+

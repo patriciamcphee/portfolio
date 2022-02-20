@@ -1,6 +1,6 @@
 ---
 title: Resume - Patricia McPhee
-date: 02/05/2022
+date: 02/19/2022
 description: Learn more about my career path, accomplishments, and training.
 ---
 
@@ -170,10 +170,8 @@ Wrote provisioning procedures in an online help format for field technicians in 
 #### Programming and misc. 
 - HTML5/CSS3 \| 85%
 - GitHub/Git/Git bash \| 90%
-- JIRA or other sprint-based systems \| 60%
-- Jekyll \| 50%
 - JavaScript \| 30%
-- Python \| 20%
+- Azure DevOps \| 70%
 
 #### Remote, flexible work experience
 - Focus and time management
@@ -182,7 +180,7 @@ Wrote provisioning procedures in an online help format for field technicians in 
 - Growth mindset
 - Comfortable with digital communication
 - Video conferencing: MS Teams, Skype, Zoom
-- Instant messaging: Skype, Slack, Google Chat, MS Teams
+- Instant messaging: Skype, Slack, MS Teams
 - File sharing: Google Drive, Box, Dropbox, OneDrive
 
 ## Training and education

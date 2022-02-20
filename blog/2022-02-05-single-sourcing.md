@@ -1,10 +1,12 @@
 ---
-title: Single sourcing
+title: Single sourcing and content reuse
 date:   2022-02-05 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: creative writing
-tags: [ creative writing, technical writing, single sourcing ] 
+tags: [ creative writing, technical writing, single sourcing, content reuse, draft ] 
 ---
+
+>**Draft**
 
 Single sourcing is a simple idea but misunderstood. People often think that single sourcing means that the online help and user manuals must be identical in terms of content. This is an incorrect assumption. Single sourcing is creating a single content source then producing different types of documentation from it. Single sourcing considers the differing needs of the audience and the strengths and weaknesses of each of your output media (Darley, p. 3).
 

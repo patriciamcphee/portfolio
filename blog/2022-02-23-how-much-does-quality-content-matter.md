@@ -19,7 +19,7 @@ If your prospective customers cannot find high-quality technical or user documen
 
 - Great technical documentation *empowers* the user. Not frustrate them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
 
-In this article, you'll learn about the costs and risks of content quality problems. You'll also learn how to course-correct and create a good experience for the user when using your product or service.  
+In this article, you'll learn about the costs and risks of content quality problems. You'll also learn about ways to course-correct and create a good experience for the user when they use your product or service.  
 
 
 ## Costs and risks of content quality problems
@@ -68,27 +68,27 @@ Even if the content is accurate, complete, and consistent, it might not be under
 - **Spelling and grammar**: Does the content contain relatively simple errors that distract, confuse, or mislead your readers?
 
 ## Where content quality problems come from
-Content quality problems can come from different areas. I've observed that the audience is misunderstood—that is, the overall user journey is overlooked. For example, IT professionals are often misunderstood, so their content doesn't directly speak to them. What do I mean by this? Most often, the content is written by a very technical person, and then it's handed off for editing and formatting. There's rarely a discussion among the cross-functional teams on use cases or scenarios for the flow of the content, which would give the user what they need when they need it.  
+Content quality problems can come from different areas. I've observed that the user is misunderstood—that is, the overall user journey is overlooked. For example, IT professionals are often misunderstood, so their content doesn't directly speak to them. What do I mean by this? Most often, the content is written by a very technical person, and then it's handed off for editing and formatting. There's rarely a discussion among the cross-functional teams on use cases or scenarios for the flow of the content, which would give the user what they need when they need it.  
 
 I use the IT professional as an example because they have a hard job. Not one company has the same IT infrastructure implemented. So there's a lot on their plate with supporting different operating systems, versions of applications, security and preventing intrusions, user administration, and evaluating solutions. Because of this, I have found that writing content for them works best if it's in a scenario or goal-based format. The IT Professional consults technical documentation for a reason: get answers to their questions or implement an enterprise solution end-to-end. This format results in giving them what they need when they need it.
 
 A survey conducted by the author and content strategist Rachel McConnel clearly recognized how quality content adds value. However, it also recognized the adverse business impact of letting just *anyone* create the content. But at the moment, it's still a blind spot for some organizations. 
 
 ## Ways to design and develop better content 
-In addition to the dimensions to good technical documentation mentioned earlier, you'll want to understand the user journey by "designing the content." Content design helps you develop better content because it answers a user's need in the best way to consume it. Sarah Winters states in her book that content design is "…about using data and evidence to give the audience what they need, at the time they need it and in a way they expect it." 
+In addition to the dimensions to good technical documentation mentioned earlier, you'll want to understand the user journey by "designing the content." Content design helps you develop better content because it answers a user's need in the best way to consume it. Sarah Winters states in her book that content design is "…about using data and evidence to give the user what they need, at the time they need it and in a way they expect it." 
 
 Content design is not just writing. It's a way of thinking. It's collaborating with cross-functional teams like UX, product owners, and engineers to find the best solutions to give the user what they need when they need it and how they expect it. For example, the content could be a one-pager, a complete user guide, a training module, and so on. It could even be as small as UX/in-platform microcopy.
 
 The basic principle here is that user needs come first, then comes the format. You're creating content that helps create a good experience for the user when using your product or service. You're helping them along their journey!
 
-- **User needs come first**:  Research what your audience wants and needs. It can be user research, usability research, expert research, or any kind of research with data and evidence of what the audience wants and needs.
+- **User needs come first**:  Research what your user wants and needs. It can be user research, usability research, expert research, or any kind of research with data and evidence of what the user wants and needs.
 
-- **Give them what they need when they need it**: We know that giving people information too early or in the wrong place can make people leave in frustration and no longer trust you. Understanding what your audience needs – when they need it – can be the difference between success and failure.
+- **Give them what they need when they need it**: We know that giving people information too early or in the wrong place can make people leave in frustration and no longer trust you. Understanding what your user needs – when they need it – can be the difference between success and failure.
 
-- **In the way they expect it**: Use the language our users are using. You don't use language for search engines – you use it for the humans behind those engines. You don't pull people into useless pages. Instead, you help people. Language used in a product must reflect your audience's vocabulary, or they may find the interaction too difficult and eventually abandon it.
+- **In the way they expect it**: Use the language our users are using. You don't use language for search engines – you use it for the humans behind those engines. You don't pull people into useless pages. Instead, you help people. Language used in a product must reflect your user's vocabulary, or they may find the interaction too difficult and eventually abandon it.
 
 
-In the end, once you have a better understanding of the user journey, you'll have a complete picture of what kind of content your audience needs at each step of their journey to help them make a decision. 
+In the end, once you have a better understanding of the user journey, you'll have a complete picture of what kind of content your user needs at each step of their journey to help them make a decision. 
 
 **Plain and simple:** After you've done the user research and understand the user journey better, you can create the content that gives them what they need when they need it and in the way they expect it.
 

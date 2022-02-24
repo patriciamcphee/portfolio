@@ -13,13 +13,11 @@ If your prospective customers cannot find high-quality technical or user documen
 
 <!--truncate-->
 
-- Good informational content helps your prospects become customers. They want to understand your capabilities and unique value. 
+- Good informational content helps your prospects become customers. They want to understand your capabilities and unique value. However, know that this type of content falls more into the hands of Marketing and Sales. It's the bait on the hook, so to speak.
 
-- Good instructional content helps your customers *remain* your customers. They need fast, effective service. 
+- Good instructional content and technical documentation help your customers *remain* your customers. They need fast, effective service. Content organized around user roles and activities *empowers* them rather than frustrates them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
 
-- Great technical documentation *empowers* the user. Not frustrate them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
-
-In this article, you'll learn about the costs and risks of content quality problems. You'll also learn about ways to course-correct and create a good experience for the user when they use your product or service.  
+In this article, you'll learn about the costs and risks of content quality problems. You'll also learn ways to course-correct and create a good experience for the user when they use your product or service.  
 
 
 ## Costs and risks of content quality problems
@@ -49,7 +47,7 @@ topic: how-to
 ```
 
 ### Accurate and complete
-Technical documentation is living content that is continuously updated as new features are released, or operational processes change. Because of this, it must be reviewed for accuracy and completeness. For example, is the expected behavior of the product feature accurately described? Are the procedural steps accurate and complete? 
+Technical documentation is living content that is continuously updated as new features are released, or operational processes change. Because of this, it must be reviewed for accuracy and completeness. Is the expected behavior of the product feature accurately described? Are the procedural steps accurate and complete? 
 
 Accurate and complete means the user accomplished what they set out to do because the information was in the documentation. However, they're at a dead-end and left to call support if it's not there. 
 
@@ -81,21 +79,17 @@ Content design is not just writing. It's a way of thinking. It's collaborating w
 
 The basic principle here is that user needs come first, then comes the format. You're creating content that helps create a good experience for the user when using your product or service. You're helping them along their journey!
 
-- **User needs come first**:  Research what your user wants and needs. It can be user research, usability research, expert research, or any kind of research with data and evidence of what the user wants and needs.
+- **User needs come first**:  Research what your user wants and needs. It can be user research, usability research, industry research, expert research, or any kind of research with data and evidence of what the user wants and needs.
 
 - **Give them what they need when they need it**: We know that giving people information too early or in the wrong place can make people leave in frustration and no longer trust you. Understanding what your user needs – when they need it – can be the difference between success and failure.
 
-- **In the way they expect it**: Use the language our users are using. You don't use language for search engines – you use it for the humans behind those engines. You don't pull people into useless pages. Instead, you help people. Language used in a product must reflect your user's vocabulary, or they may find the interaction too difficult and eventually abandon it.
+- **In the way they expect it**: Use the language your users are using. You don't use language for search engines – you use it for the humans behind those engines. You don't pull people into useless pages. Instead, you help people. Language used in a product must reflect your user's vocabulary, or they may find the interaction too difficult and eventually abandon it.
 
 
-In the end, once you have a better understanding of the user journey, you'll have a complete picture of what kind of content your user needs at each step of their journey to help them make a decision. 
-
-**Plain and simple:** After you've done the user research and understand the user journey better, you can create the content that gives them what they need when they need it and in the way they expect it.
+In the end, once you have a better understanding of the user journey, you'll have a complete picture of what kind of content your user needs at each step of their journey to help them make a decision. Putting the user's needs first results in quality documentation and builds trust.
 
 ## References
 Winters, S. (05 December 2019). What is Content Design? Content Design London.
 
 Found on Twitter. Content precedes design quote. https://twitter.com/zeldman/status/804159148?s=20
-
-
 

@@ -22,12 +22,15 @@ Comprehensible text is crucial to effective UI. Product managers and software de
 >*Forrester reports words in software have the most impact on user engagement with four times the conversion differential on text.*[^1]
 
 
-## Design considerations UI text
+## Design considerations for UI text
 
 Consider the following when you think about the UI text and its placement in the UI:
 - People read in a left-to-right, top-to-bottom order (in Western cultures).
-- Users aren't immersed in the UI itself but their work when using the software. 
-- Users don't read UI text; **they scan it**. When scanning, users may appear to be reading text when filtering it in reality. However, they often don't truly comprehend the UI text unless they perceive the need.
+
+- Users aren't immersed in the UI itself. They're immersed in their work when using the software. 
+
+- Users don't read UI text; ***they scan it***. When scanning, users may appear to be reading text when filtering it in reality. However, they often don't truly comprehend the UI text unless they perceive the need.
+
 - Within a window, different UI elements receive different levels of attention. Users tend to read control labels first, especially those that appear relevant to completing the task at hand. By contrast, users tend to read static text only when they think they need to.
 
 Also assume that once users have decided what to do, they will immediately stop reading and do it.

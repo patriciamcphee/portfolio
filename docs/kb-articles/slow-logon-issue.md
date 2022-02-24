@@ -40,9 +40,12 @@ Make sure to log into the same server using Microsoft's RDP client instead of th
 ## Logon script issues
 
 1. Remove any references to a logon script within:
-   - Active Directory uses and computers
+
+   - Active Directory users and computers
+
    - Computer Management
-   - Any sore of computer or group policy.
+
+   - Any sort of computer or group policy
 
 2. Create a local account directly on the Remote Desktop Server to ensure that the profile loads directly from the server. Retest the logon.
 
@@ -55,14 +58,21 @@ To help troubleshoot the resources in the script, comment out (REM) or input pau
 The root cause that indicates a network issue:
 
 - The Remote Desktop Server is searching for fonts by name and not finding them.
+
 - A user encounters a black screen for 1 to 20 minutes before the logon completes. 
+
 - An application is searching for fonts (usually created by older apps). Occasional occurrence.
 
 **Steps for troubleshooting**<br />
 1. In the system *Control Panel*, click the **Environment** tab.
+
 2. In the *System Variables* section, click **Path**.
-3. At the bottom, in the *Value* field, add the following to the end of the string:<br />
-   `;%SystemRoot%\Fonts`
+
+3. At the bottom, in the *Value* field, add the following to the end of the string:
+    
+   ```
+   ;%SystemRoot%\Fonts
+   ```
 4. Click **Set**.
 
 ## Permissions issues

@@ -44,7 +44,7 @@ const sidebars = {
       },         
       items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
-    {
+/*    {
       type: 'category',
       label: 'Quick starts',
       link: {
@@ -53,7 +53,7 @@ const sidebars = {
       },         
       items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
     },
-    {
+*/    {
       type: 'category',
       label: 'UX writing',
       link: {

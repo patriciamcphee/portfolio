@@ -3,6 +3,7 @@ title: Overview
 permalink: 'docs/intro'
 description: My writing samples site was built using Docusaurus, GitHub Pages to host the site, and markdown to write the content.
 tags: [ overview, intro ]
+date: 03/02/2022
 ---
 
 My writing samples site was built using the [Docusaurus](https://docusaurus.io) framework, GitHub Pages to host the site, and markdown to write the content. I originally built it in Jekyll as a challenge to myself in 2018 as a way to showcase my writing samples in an online format, rather than in PDF format. 

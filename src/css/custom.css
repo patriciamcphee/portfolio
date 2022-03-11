@@ -184,7 +184,6 @@ a:hover {
 
 .quote {
   font-size: 16pt;
-  font-family: 'Fredericka the Great', cursive;
   margin: 30px 20px;
   padding: 20px;
   border: 2px solid var(--ifm-color-background-lightest);

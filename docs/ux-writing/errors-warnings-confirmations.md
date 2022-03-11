@@ -5,9 +5,9 @@ description: Writing error messages is an art. Your goal is to provide guidance 
 date: 02/12/2022
 ---
 
-Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to provide guidance to the user to prevent dead ends. 
+Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to provide guidance to the user to prevent dead ends. So, what does "dead end" mean in this context? It means the user is stuck at a dead end because the message doesn't give them the next steps to fix it themselves. 
 
-So, what does "dead end" mean in this context? It means the user is stuck at a dead end because the message doesn't give them the next steps to fix it themselves. For example, if they get an "Invalid or unsupported file type. Please try again." error, do they know what to do next? This message is a good example of a dead-end message. It doesn't tell the user what supported file types to try to get past the error. You can find the rewrite to this example below.
+For example, if they get an "Invalid or unsupported file type. Please try again." error, do they know what to do next? This message is a good example of a dead-end message. It doesn't tell the user what supported file types to try to get past the error. You can find the rewrite to this example below.
 
 <div class="quote">
 "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant."

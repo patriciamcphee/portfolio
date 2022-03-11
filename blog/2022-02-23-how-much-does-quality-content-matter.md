@@ -13,9 +13,9 @@ If your prospective customers cannot find high-quality technical or user documen
 
 <!--truncate-->
 
-- Good informational content helps your prospects become customers. They want to understand your capabilities and unique value. However, know that this type of content falls more into the hands of Marketing and Sales. It's the bait on the hook, so to speak.
+- Good **informational** content helps your prospects become customers. They want to understand your capabilities and unique value. However, know that this type of content falls more into the hands of Marketing and Sales. It's the bait on the hook, so to speak.
 
-- Good instructional content and technical documentation help your customers *remain* your customers. They need fast, effective service. Content organized around user roles and activities *empowers* them rather than frustrates them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
+- Good **instructional** content and technical documentation help your customers *remain* your customers. They need fast, effective service. Content organized around user roles and activities *empowers* them rather than frustrates them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
 
 In this article, you'll learn about the costs and risks of content quality problems. You'll also learn ways to course-correct and create a good experience for the user when they use your product or service.  
 
@@ -30,12 +30,18 @@ There are several dimensions to good technical documentation:
 
 - Is there a consistent use of product branding and industry terminology? 
 
+:::note
 We can break these down further, but we'll stick with this high-level list for this article. 
+:::
 
 ### Findable
 Today, it's more important to be able to search the content. In addition, technical documentation has evolved, especially over the past decade. Technical documentation is primarily in an online help format with an option to download a PDF version. With that said, SEO in technical documentation helps search engines respond with the most relevant content.
 
-A great example of SEO in technical documentation comes from Microsoft. In their content, on docs.microsoft.com, the `description` metadata field is required and must follow the SEO writing guidelines. Microsoft develops its technical content using markdown in the Docfx ecosystem.
+A great example of SEO in technical documentation comes from Microsoft. In their content, on docs.microsoft.com, the `description` metadata field is required. It must follow the SEO writing guidelines that Microsoft lays out for their content contributors. 
+
+:::info
+If you're unfamiliar with the example below, Microsoft develops its technical content using markdown in the Docfx docs-as-code framework.
+:::
 
 ```text
 ---
@@ -52,7 +58,11 @@ Technical documentation is living content that is continuously updated as new fe
 Accurate and complete means the user accomplished what they set out to do because the information was in the documentation. However, they're at a dead-end and left to call support if it's not there. 
 
 ### Consistent
-If your company has a valuable brand, you'll suffer a tangible loss if branding isn't used consistently. Inconsistencies can confuse users or affect the company's brand. For example, the user might be confused about which content is correct, mainly if your content uses several terms interchangeably. In addition, the translations by human and machine translators can contain these inconsistencies if your content is localized.       
+If your company has a valuable brand, you'll suffer a tangible loss if branding isn't used consistently. Inconsistencies can confuse users or affect the company's brand. For example, the user might be confused about which content is correct, mainly if your content uses several terms interchangeably. In addition, the translations by human and machine translators can contain these inconsistencies if your content is localized. 
+
+
+
+      
 
 ### Understandable
 Even if the content is accurate, complete, and consistent, it might not be understood. This is because so many factors come into play when we talk about whether someone understands it or not:
@@ -70,7 +80,7 @@ Content quality problems can come from different areas. The top problem I've obs
 
 I use the IT professional as an example because they have a hard job. Not one company has the same IT infrastructure implemented. Plus, there's a lot on their plate with supporting different operating systems, versions of applications, security and preventing intrusions, user administration, and evaluating solutions. Because of this, I have found that writing content for them works best if it's in a scenario or goal-based format. The IT Professional consults technical documentation for a reason: get answers to their questions or implement an enterprise solution end-to-end. This format results in giving them what they need when they need it.
 
-A survey conducted by the author and content strategist Rachel McConnel clearly recognized how quality content adds value. However, it also recognized the adverse business impact of letting just *anyone* create the content. But at the moment, it's still a blind spot for some organizations. 
+A survey conducted by the author and content strategist Rachel McConnel clearly recognized how quality content adds value. However, this same survey also recognized the adverse business impact of letting just *anyone* create the content. But at the moment, it's still a blind spot for some organizations. 
 
 ## Ways to design and develop better content 
 In addition to the dimensions to good technical documentation mentioned earlier, you'll want to understand the user journey by "designing the content." Content design helps you develop better content because it answers a user's need in the best way to consume it. Sarah Winters states in her book that content design is "…about using data and evidence to give the user what they need, at the time they need it and in a way they expect it." 

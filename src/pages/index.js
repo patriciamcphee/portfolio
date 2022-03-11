@@ -4,7 +4,8 @@ import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import HeroImage from '@site/static/img/hero-2.svg';
-import styles from './index.module.css'
+import styles from './index.module.css';
+import 'font-awesome/css/font-awesome.min.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 /*import { Grid, Box } from '@site/src/components/Grid'*/
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
@@ -29,7 +30,7 @@ function HomepageHeader() {
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"
-                  to="/docs/resume">
+                  to="/docs/about">
                     Learn more about me
                 </Link>
               </div> 

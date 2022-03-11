@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
@@ -53,9 +53,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'about',
             position: 'left',
-            label: 'Samples',           
+            label: 'About',           
           },
           {
             type: 'doc',
@@ -63,11 +63,17 @@ const config = {
             position: 'left',
             label: 'Resume',
           },
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Samples',           
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.pscmdesigns.com/',
             label: 'Portfolio',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/patriciamcphee/portfolio',

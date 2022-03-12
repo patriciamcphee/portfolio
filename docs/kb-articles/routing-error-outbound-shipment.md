@@ -5,7 +5,7 @@ description: API guide for photo and file sharing in a mobile app.
 ---
 
 >**Project:** Work-related; self-service KB article for manufacturing<br />
->**Description:**  Written for the support desk professionals in a manufacturing environment.  <br />
+>**Description:**  Written for the support desk professionals in a manufacturing environment. I learned how to write technical KB articles using an Information Technology Infrastructure Library (ITIL) format for helpdesk professionals and customer self-service. <br />
 >**Date of the rewrite:** January 8, 2019   
 
 ## Root cause  

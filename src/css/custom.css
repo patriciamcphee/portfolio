@@ -193,7 +193,7 @@ a:hover {
 }
 
 .markdown img { 
-  border: 0.5pt solid lightgray; 
+  border: none; 
   border-radius:5px;
   max-width: 75%;
   height: auto;

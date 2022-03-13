@@ -71,6 +71,12 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            type: 'doc',
+            docId: 'learn/intro',
+            position: 'left',
+            label: 'Learn',
+          },
+          {
             href: 'https://www.pscmdesigns.com/',
             label: 'Portfolio',
             position: 'right',

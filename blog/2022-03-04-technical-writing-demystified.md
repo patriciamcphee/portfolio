@@ -14,6 +14,6 @@ Other articles I'm working on include:
 - What technical writing is NOT!
 - Information architecture
 - Content strategy
-- Minimalism and Topic-based writing
+- Minimalism and topic-based writing
 - Scenario and goal-based writing
 

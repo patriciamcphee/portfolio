@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6674],{8133:function(t){t.exports=JSON.parse('{"allTagsPath":"/portfolio/blog/tags","name":"scriptwriting","count":1,"permalink":"/portfolio/blog/tags/scriptwriting"}')}}]);

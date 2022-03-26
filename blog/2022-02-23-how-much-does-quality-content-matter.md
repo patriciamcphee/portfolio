@@ -7,7 +7,7 @@ categories: technical writing
 tags: [ technical writing ] 
 ---
 
-The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether they're an IT professional evaluating an enterprise application or a consumer using a product, they're reading your content to learn about the product and how to use it. 
+The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether an IT professional evaluating an enterprise application or a consumer using a product, they're reading your content to learn about the product and how to use it. 
 
 If your prospective customers cannot find high-quality technical or user documentation to support their purchase decisions, you may never have a chance to close the deal. 
 
@@ -15,9 +15,9 @@ If your prospective customers cannot find high-quality technical or user documen
 
 - Good **informational** content helps your prospects become customers. They want to understand your capabilities and unique value. However, know that this type of content falls more into the hands of Marketing and Sales. It's the bait on the hook, so to speak.
 
-- Good **instructional** content and technical documentation help your customers *remain* your customers. They need fast, effective service. Content organized around user roles and activities *empowers* them rather than frustrates them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
+- Good **instructional** content and technical documentation help your customers *remain* your customers. They need fast, effective service. Organizing content around user roles and activities *empowers* them rather than frustrates them. Plus, it's an integral part of customer support, branding, and trust. If it's not there for them, they start looking for alternatives.
 
-In this article, you'll learn about the costs and risks of content quality problems. You'll also learn ways to course-correct and create a good experience for the user when they use your product or service.  
+In this article, you'll learn about content quality problems and learn ways to course-correct so that you create a good user experience when they use your product or service.  
 
 
 ## Costs and risks of content quality problems

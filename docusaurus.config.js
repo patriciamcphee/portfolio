@@ -69,15 +69,12 @@ const config = {
             position: 'left',
             label: 'Samples',           
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-/*          {
-            type: 'doc',
-            docId: 'learn/intro',
-            position: 'left',
-            label: 'Learn',
-          }, */
           {
-            href: 'https://www.pscmdesigns.com/',
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left'},
+          {
+            href: 'https://www.pscmdesigns.com/', //Graphic design portfolio
             label: 'Portfolio',
             position: 'right',
           },

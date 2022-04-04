@@ -53,7 +53,8 @@ const sidebars = {
       },         
       items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
     },
-*/    {
+*/  
+    {
       type: 'category',
       label: 'UX writing',
       link: {

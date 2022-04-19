@@ -92,6 +92,10 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Resume',
+                to: '/docs/resume',
+              },
+              {
                 label: 'Samples',
                 to: '/docs/intro',
               },

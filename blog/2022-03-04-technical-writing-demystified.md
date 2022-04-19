@@ -10,10 +10,10 @@ Come back soon for the full article.
 
 Other articles I'm working on include: 
 
-- What's wrong with Technical Writer job descriptions
-- What technical writing is NOT!
+- What is technical writing?
+- Docs-as-code frameworks
 - Information architecture
 - Content strategy
-- Minimalism and Topic-based writing
+- Minimalism and topic-based writing
 - Scenario and goal-based writing
 

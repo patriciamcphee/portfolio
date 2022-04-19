@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 td {
@@ -180,11 +180,14 @@ a:hover {
 
 }
 
+.markdown a {
+  text-decoration: none;
+}
+
 
 
 .quote {
   font-size: 16pt;
-  font-family: 'Fredericka the Great', cursive;
   margin: 30px 20px;
   padding: 20px;
   border: 2px solid var(--ifm-color-background-lightest);
@@ -194,7 +197,7 @@ a:hover {
 }
 
 .markdown img { 
-  border: 0.5pt solid lightgray; 
+  border: none; 
   border-radius:5px;
   max-width: 75%;
   height: auto;

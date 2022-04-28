@@ -4,19 +4,10 @@
         <title>Patricia McPhee Blog</title>
         <link>https://patriciamcphee.github.io/portfolio/blog</link>
         <description>Patricia McPhee Blog</description>
-        <lastBuildDate>Fri, 04 Mar 2022 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Feb 2022 11:41:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <item>
-            <title><![CDATA[Technical Writing Demystified]]></title>
-            <link>https://patriciamcphee.github.io/portfolio/blog/2022/03/04/technical-writing-demystified</link>
-            <guid>/2022/03/04/technical-writing-demystified</guid>
-            <pubDate>Fri, 04 Mar 2022 12:00:00 GMT</pubDate>
-            <description><![CDATA[Come back soon for the full article.]]></description>
-            <content:encoded><![CDATA[<p>Come back soon for the full article.</p><p>Other articles I'm working on include: </p><ul><li>What is technical writing?</li><li>Docs-as-code frameworks</li><li>Information architecture</li><li>Content strategy</li><li>Minimalism and topic-based writing</li><li>Scenario and goal-based writing</li></ul>]]></content:encoded>
-            <category>technical writing</category>
-        </item>
         <item>
             <title><![CDATA[How much does quality content matter?]]></title>
             <link>https://patriciamcphee.github.io/portfolio/blog/2022/02/23/how-much-does-quality-content-matter</link>

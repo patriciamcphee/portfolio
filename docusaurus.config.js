@@ -79,7 +79,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/patriciamcphee/portfolio',
+            href: 'https://github.com/patriciamcphee/',
             label: 'GitHub',
             position: 'right',
           },

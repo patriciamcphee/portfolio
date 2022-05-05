@@ -1,9 +1,8 @@
 import React from 'react'
-import clsx from 'clsx';
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import HeroImage from '@site/static/img/hero-2.svg';
+import HeroImage from '@site/static/img/cms-development.svg';
 import styles from './index.module.css';
 import 'font-awesome/css/font-awesome.min.css';
 import HomepageFeatures from '../components/HomepageFeatures';
@@ -17,15 +16,16 @@ function HomepageHeader() {
         <div class="container">
           <div class="row row-content row--align-center">           
 
-          <div class="col col-sm col-md heroSvg flex">
+          <div class="col-4 col-sm col-md heroSvg">
 
            <HeroImage  />
 
           </div>
 
-            <div class="col col-sm col-md text--left">
-              <h1>{siteConfig.title}</h1>
-              <h2>{siteConfig.tagline}</h2>
+            <div class="col col-md col-sm text--left">
+              <h1>Hello!</h1>
+              <h1>My name is  {siteConfig.title}.</h1>
+              <h2>Sr. Content Designer / UX Writer</h2>
               <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more. I built this site using the <a href="https://docusaurus.io">Docusaurus</a> framework for the authoring platform, GitHub Pages for hosting, and markdown for content development. The purpose of the site is to showcase my writing samples in an online format common in today's enterprises. </p>
               <div className={styles.buttons}>
                 <Link

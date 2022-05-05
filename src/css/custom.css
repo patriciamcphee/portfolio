@@ -19,23 +19,7 @@ td {
   vertical-align: top;
 }
 
-@media screen and (max-width: 966px) {
-  .jumbotron {
-    padding: 20px 0px;
-  }
-}
 
-
-@media (orientation:portrait) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
-@media (orientation:landscape) and (max-width: 996px) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
 
 .jumbotron {
   padding: 30px 0px;
@@ -149,12 +133,7 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
-@media screen and (max-width: 996px) {
-  .footer {
-    padding: 20px 0px;
-    text-align: center;
-  }
-}
+
 
 .navbar, .footer a:link {
   color: white;
@@ -208,3 +187,29 @@ a:hover {
   margin: 6px;
   text-align: left;
 }
+
+@media screen and (max-width: 966px) {
+  .heroSvg {
+    display:flexbox;
+ }
+  .jumbotron {
+    padding: 20px 0px;
+  }
+  .footer {
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+
+
+@media (orientation:portrait) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}
+@media (orientation:landscape) and (max-width: 996px) {
+  .heroSvg {
+     display: none; /* visibility: none; */
+  }
+}
+

@@ -41,6 +41,7 @@ const FeatureList = [
 function Feature({Svg, title, description, href, label}) {
   return (
     <div className={clsx('col col--4 padding--md')}>
+
       <div class="card features-card">
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />

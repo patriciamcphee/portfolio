@@ -1,9 +1,8 @@
 import React from 'react'
-import clsx from 'clsx';
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import HeroImage from '@site/static/img/hero-2.svg';
+import HeroImage from '@site/static/img/cms-development.svg';
 import styles from './index.module.css';
 import 'font-awesome/css/font-awesome.min.css';
 import HomepageFeatures from '../components/HomepageFeatures';
@@ -15,18 +14,18 @@ function HomepageHeader() {
   return (
     <header class="jumbotron align-items-center">
         <div class="container">
-          <div class="row row-content row--align-center">           
-
-          <div class="col col-sm col-md heroSvg flex">
+          <div class="row row--align-center">           
+          <div class="col-md heroSvg">
 
            <HeroImage  />
 
           </div>
 
-            <div class="col col-sm col-md text--left">
-              <h1>{siteConfig.title}</h1>
-              <h2>{siteConfig.tagline}</h2>
-              <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more. I built this site using the <a href="https://docusaurus.io">Docusaurus</a> framework for the authoring platform, GitHub Pages for hosting, and markdown for content development. The purpose of the site is to showcase my writing samples in an online format common in today's enterprises. </p>
+            <div class="col text--left">
+              <h1>Hello! I'm {siteConfig.title}. </h1>
+              <h2>Sr. Content Designer and UX Writer</h2>
+              <p>I'm passionate about creating content experiences that help people navigate, use, and troubleshoot products. Fueled by curiosity and strong coffee, I collect information and design meaningful digital content experiences. </p>
+              
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"
@@ -36,10 +35,11 @@ function HomepageHeader() {
               </div> 
             </div>
 
-
         </div>
       </div>
+
     </header>
+    
   );
 }
 
@@ -50,7 +50,9 @@ export default function Home() {
       title={`${siteConfig.title}'s UX and Tech Writing Samples`}
       description="Here you'll find a variety of my writing samples, such as UI strings, KB articles, how-to's, and more. It's a way for me to showcase my writing samples in an online format that is common in today's enterprises.  ">
       <HomepageHeader />
+
       <main>
+     
         <HomepageFeatures />
       </main>
     </Layout>

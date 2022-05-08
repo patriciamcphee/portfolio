@@ -25,7 +25,7 @@ function HomepageHeader() {
               <h1>Hello! I'm {siteConfig.title}. </h1>
               <h2>Sr. Content Designer and UX Writer</h2>
               <p>I'm passionate about creating content experiences that help people navigate, use, and troubleshoot products. Fueled by curiosity and strong coffee, I collect information and design meaningful digital content experiences. </p>
-              
+              <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more.</p>
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"

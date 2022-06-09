@@ -2,7 +2,7 @@
 title: Group policies
 tags: [ux writing, tech writing, before/after ]
 description: Group policies are like API reference guides. They all have a purpose and some have dependencies.   
-date: 02/12/2022
+date: 05/27/2022
 ---
 
 A Group Policy has both control labels and in-platform microcopy (static UI text).  The static UI text provides users with detailed instructions or explanations to make informed decisions.  
@@ -47,7 +47,7 @@ By default, the "browser" group syncs between users' devices automatically, allo
 
 ### Original
 
-![Orginal browser group policy](../../static/img/gp-browser-before2.png)
+![Orginal browser group policy for preventing enterprise websites from loading non-enterprise content.](../../static/img/gp-browser-before2.png)
 
 ### Rewrite 
 
@@ -64,7 +64,7 @@ By default, non-enterprise sites open in Internet Explorer and Microsoft Edge ou
 
 ### Original 
 
-![Orginal MDM group policy](../../static/img/gp-mdm-before1.png)
+![Orginal MDM group policy for enabling automatic MDM enrollment using default Azure AD credentials.](../../static/img/gp-mdm-before1.png)
 
 ### Rewrite
 
@@ -82,7 +82,7 @@ With this policy, you can enroll a device to the Mobile Device Management (MDM) 
 
 ### Original 
 
-![Orginal MDM group policy](../../static/img/gp-mdm-before2.png)
+![Orginal MDM group policy for disabling MDM enrollment.](../../static/img/gp-mdm-before2.png)
 
 ### Rewrite
 

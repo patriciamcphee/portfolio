@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
-  tagline: 'Writing Samples',
+  tagline: 'UX & Tech Writing Samples',
   url: 'https://patriciamcphee.github.io',
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
@@ -128,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee | Built with Docusaurus`,
+        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       prism: {
         theme: lightCodeTheme,

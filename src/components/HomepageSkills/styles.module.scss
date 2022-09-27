@@ -1,0 +1,25 @@
+@use "@material/card";
+
+@include card.core-styles;
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.my-card-content {
+  padding: 16px;
+}
+
+.my-card {
+  border: 1px solid pink;
+  height: 350px;
+  width: 350px;
+}

@@ -8,7 +8,8 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import clsx from 'clsx';
-import { CardMedia, Container } from '@mui/material';
+import { CardMedia, Container, Link } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 
 
@@ -24,39 +25,39 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ServiceList = [
   {
-    title: 'Introduction',
+    title: 'UX writing',
     img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/logo.img',
     alt: 'alt text for image',
     description: (
       <>
-        Start here if you’re new to EGDS, new to design systems, or simply need a refresher. 
+        UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product.
       </>
     ),
-    href: ('/pmcphee/egds-docs/docs/intro'),
+    href: ('/portfolio/docs/ux-writing/ux-writing-samples'),
     label: ('Learn more'),
   },
   {
-    title: 'For Designers',
+    title: 'How-to\'s',
     img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/design.img',
     alt: 'alt text for image',
     description: (
       <>
-        Learn how to use the design system Figma library.  You’ll find information on variants, auto-layout, breakpoints, practical plugins, “unwritten rules,” and more.
+        How-tos are easy-to-follow instructions that explain step-by-step how to perform a task or use a specific feature in an app. How-tos are focused procedural articles that help you complete a task.
       </>
     ),
-    href: ('/pmcphee/egds-docs/docs/intro/for-designers-intro'),
+    href: ('/portfolio/docs/how-tos/how-to-samples'),
     label: ('Learn more'),
   },
   {
-    title: 'For Developers',
+    title: 'KB articles',
     img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/toggle.img',
     alt: 'alt text for image',
     description: (
       <>
-        Learn about everything you need to get up and running with the code.  You’ll find code, samples and documentation, useful tools, and more. 
+        A knowledge base article is a "self-service" online document that solves issues with products or services. Article types include informational articles, how-tos, troubleshooting guides, and FAQs.
       </>
     ),
-    href: ('/pmcphee/egds-docs/docs/intro/for-developers-intro/'),
+    href: ('/portfolio/docs/kb-articles/kb-article-samples'),
     label: ('Learn more'),
   },
 ];
@@ -64,20 +65,28 @@ const ServiceList = [
 function Service({ img, alt, title, description, href, label}) {
   return (
 
-    <Paper sx={{ maxWidth: 345, padding: 2, minHeight: 235 }}  elevation={4} >
+    <Paper sx={{ maxWidth: 345, padding: 2, minHeight: 195 }}  elevation={4} >
 
       <CardContent>
-      
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
+      <Grid container spacing={9}>
+  <Grid item xs={11} md={9}>
+    <Typography gutterBottom variant="h5" component="div">
+          {title} 
         </Typography>
+  </Grid>
+  <Grid item xs={1} md={3}>
+    <Link href={href}>
+    <NavigateNextIcon alignItems="right" color="warning" /></Link>
+  </Grid>
+
+</Grid>
+      
+
         <Typography variant="body2">
           {description}
         </Typography>
       </CardContent>
-      <CardActions variant="bottom">
-        <Button size="small" color="secondary" href={href}>{label}</Button>
-      </CardActions>
+
     </Paper>
 
   );

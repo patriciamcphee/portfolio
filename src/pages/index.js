@@ -2,16 +2,18 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import HeroImage from '@site/static/img/cms-development.svg';
-import HomepageSkills from '../components/HomepageSkills';
+import HeroImage from '@site/static/img/portfolio-landing-page.svg';
+
 import HomepageServices from '../components/HomepageServices';
+import HomepageLatest from '../components/HomepageLatest';
+
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -29,7 +31,7 @@ function HomepageHeader() {
     <Container>
     <Box
       bgcolor={'alternate.main'}
-      padding={{ xs: 2, md: 4 }}
+      padding={{ xs: 2, md: 4, py: 2 }}
       borderRadius={2}
     >
       <Grid container spacing={12}>
@@ -43,21 +45,22 @@ function HomepageHeader() {
         >
           <Box marginBottom={4}>
             <Box marginBottom={2}>
-              <Typography 
-                variant='h3'
+
+                <Typography 
+                variant='h2'
                 component={'p'}
                 gutterBottom={true}
                 >
-                  {siteConfig.title}
+                 Hi! I'm {siteConfig.title}
                 </Typography>
               <Typography
-                variant="h5"
+                variant="h4"
                 component={'p'}
                 sx={{
                   fontWeight: 700,
                 }}
               >
-                Sr. Content Designer and UX Writer
+                Sr. Content Designer<br />UX Writer
               </Typography>
             </Box>
             <Box marginBottom={3}>
@@ -78,7 +81,7 @@ function HomepageHeader() {
               alignItems={{ xs: 'stretched', sm: 'flex-start' }}
             >
               <Link
-                className="button button--primary button--md"
+                className="button button--secondary button--md"
                 to="/docs/about">
                 Learn more about me
               </Link>
@@ -113,22 +116,14 @@ function HomepageHeader() {
               width={1}
               maxWidth={{ xs: 500, md: '100%' }}
               maxHeight={500}
+              sx={{ py: 2,
+                filter:
+                  theme.palette.mode === 'dark'
+                    ? 'brightness(0.8)'
+                    : 'none',
+              }}
             >
-              <Box
-                component={'img'}
-                class='heroBanner'
-                src={
-                  'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration1.svg'
-                }
-                width={1}
-                height={1}
-                sx={{
-                  filter:
-                    theme.palette.mode === 'dark'
-                      ? 'brightness(0.8)'
-                      : 'none',
-                }}
-              />
+              <HeroImage />
             </Box>
           </Box>
         </Grid>
@@ -148,8 +143,11 @@ export default function Home() {
         <main id="heroBanner">
         <HomepageHeader />
         </main>
-      <section id="servives">
+      <section id="services">
       <HomepageServices />
+      </section>
+      <section id="current">
+      <HomepageLatest />
       </section>
 
     </Layout>

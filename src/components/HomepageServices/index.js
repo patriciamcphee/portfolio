@@ -8,9 +8,13 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import clsx from 'clsx';
-import { CardMedia, Container, Link } from '@mui/material';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-
+import { CardMedia, Container, Link, Box, CardActionArea } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import { positions, position, right } from '@mui/system';
+import Layout from '@theme/Layout';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -65,29 +69,36 @@ const ServiceList = [
 function Service({ img, alt, title, description, href, label}) {
   return (
 
-    <Paper sx={{ maxWidth: 345, padding: 2, minHeight: 195 }}  elevation={4} >
-
+    <Card sx={{ maxWidth: 345, p:1 }} elevation={4}>
+      <CardActionArea href={href}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={img}
+        alt={alt}
+      />
       <CardContent>
-      <Grid container spacing={9}>
-  <Grid item xs={11} md={9}>
+
     <Typography gutterBottom variant="h5" component="div">
           {title} 
         </Typography>
-  </Grid>
-  <Grid item xs={1} md={3}>
-    <Link href={href}>
-    <NavigateNextIcon alignItems="right" color="warning" /></Link>
-  </Grid>
 
-</Grid>
       
 
         <Typography variant="body2">
           {description}
         </Typography>
       </CardContent>
+      <CardActions disableSpacing>
+        <Typography align='right'>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        </Typography>
+      </CardActions>
 
-    </Paper>
+</CardActionArea>
+</Card>
 
   );
 }
@@ -96,18 +107,17 @@ export default function HomepageServices() {
   return (
 
 <Container 
-  fixed     
   justifyContent="center"
   alignItems="center" 
   sx={{ py: 6 }}>
-
 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} py={4}>
   {ServiceList.map((props, idx) => (
-    <Grid item p={2}>
+    <Grid item>
       <Service key={idx} {...props} />
     </Grid>
   ))}
 </Grid>
+
   </Container>
 
   );

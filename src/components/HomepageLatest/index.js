@@ -74,7 +74,7 @@ export default function HomepageLatest() {
     
   <Box
                 component={'img'}
-
+                class="currentProject"
                 src={
                   'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration1.svg'
                 }

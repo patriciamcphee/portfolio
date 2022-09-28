@@ -57,7 +57,7 @@ function HomepageHeader() {
                 variant="h4"
                 component={'p'}
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 500,
                 }}
               >
                 Sr. Content Designer<br />UX Writer

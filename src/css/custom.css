@@ -187,10 +187,12 @@ a:hover {
 }
 
 @media screen and (max-width: 966px) {
+  .currentProject,
   .heroSvg {
     display:flexbox;
  }
-  .jumbotron {
+ .currentProject,
+ .jumbotron {
     padding: 20px;
   }
   .footer {
@@ -208,6 +210,9 @@ a:hover {
 @media (orientation:landscape) and (max-width: 996px) {
   .heroSvg {
      display: none; /* visibility: none; */
+  }
+  .cardWidth {
+    width: '100%';
   }
 
 }

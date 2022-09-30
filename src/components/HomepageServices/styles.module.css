@@ -1,0 +1,29 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+ height: 100px;
+  width: 100px; 
+  opacity: 0.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ div.center {
+  display: flex;
+  justify-content: center;
+ }
+
+

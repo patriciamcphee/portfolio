@@ -4,11 +4,11 @@
  * work well for content-centric websites.
  */
 
- @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
- @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Special+Elite&display=swap');
+.currentProject {
+  
+}
+ 
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -19,30 +19,7 @@ td {
   vertical-align: top;
 }
 
-.heroSvg {
-  padding: 20px;
-}
 
-.jumbotron {
-  padding: 30px 60px;
-
-  background-color: #F1F2F4;
-}
-
-.jumbotron h1 {
-  font-size: 32pt;
-/*  font-family: 'Roboto Slab', serif; */
-  font-weight: 400; 
-/*  text-align: left;*/
-}
-
-.jumbotron p {
-  text-align: left;
-  font-size: 13pt;
-  margin-right: 0px;
-/*  font-family: 'Roboto', sans-serif;
-  font-weight: 300; */
-}
 
 html[data-theme=dark] .jumbotron {
   background-color: var(--ifm-footer-background-color);
@@ -52,19 +29,18 @@ html[data-theme=dark] .button {
   background-color: var(--ifm-color-secondary);
 }
 
+h1 {
+  margin-top: 60px;
+  text-align: left;
+}
 
 h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+
+  font-weight: 500;
 }
 
-main {
-  padding: 10px;
-}
 
-.tutorialSidebar {
-  padding: 10px;
-}
+
 
 /* You can override the default Infima variables here. */
 :root {
@@ -153,14 +129,17 @@ a  {
 }
 
 a:hover {
-  color: var(--ifm-color-primary-lightest);
+
   font-weight: bold;
-  text-decoration: none;
+ text-decoration: none;
 
 }
 
-.markdown a {
-  text-decoration: none;
+
+.markdown a:link {
+
+  background-color: #f6e7c3;
+
 }
 
 
@@ -189,10 +168,10 @@ a:hover {
 }
 
 @media screen and (max-width: 966px) {
-  .heroSvg {
+  .currentProject {
     display:flexbox;
  }
-  .jumbotron {
+ .currentProject {
     padding: 20px;
   }
   .footer {
@@ -210,6 +189,9 @@ a:hover {
 @media (orientation:landscape) and (max-width: 996px) {
   .heroSvg {
      display: none; /* visibility: none; */
+  }
+  .cardWidth {
+    width: '100%';
   }
 
 }

@@ -59,7 +59,9 @@ When the agent shares any supported file type, if the consumer isn't within the 
 
 1. Change the boolean value:
 
-   `<bool name="enable_photo_sharing">`
+   ```
+   <bool name="enable_photo_sharing">
+   ```
 
    By default, this value is **false**.
 
@@ -69,53 +71,64 @@ When the agent shares any supported file type, if the consumer isn't within the 
 
 1. Set the max number of photos or files to save on disk:
 
-   `<integer name="max_number_stored_images">`
-
-   `<integer name="max_number_stored_documents">`
+   ```
+   <integer name="max_number_stored_images">
+   <integer name="max_number_stored_documents">
+   ```
 
    The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
 
 2. Set the max image size:
 
-   `<integer name="max_image_size_kb">`
+   ```
+   <integer name="max_image_size_kb">
+   ```
 
    The default max image is 3000kb.
 
 3. Change the color of the attachment menu:
 
-   `<color name="attachment_menu_item_background_color">`
-
-   `<color name="lp_attachment_menu_background_color">`
-
-   `<color name="lp_attachment_menu_item_text_color">`
-
-   `<color name="lp_attachment_menu_item_icon_color">`
+   ```
+   <color name="attachment_menu_item_background_color">
+   <color name="lp_attachment_menu_background_color">
+   <color name="lp_attachment_menu_item_text_color">
+   <color name="lp_attachment_menu_item_icon_color">
+   ```
 
 4. Change the text of buttons:
 
-   `<string name="lp_accessibility_gallery">`
-
-   `<string name="lp_accessibility_camera">`
+   ```
+   <string name="lp_accessibility_gallery">
+   <string name="lp_accessibility_camera">
+   ```
 
 5. Define the max number of stored images allowed locally.
 
-   `<integer name="max_number_stored_images">`
+   ```
+   <integer name="max_number_stored_images">
+   ```
 
    The default max number is 20.
 
 6. Define the resize dimensions:
 
-   `<integer name="thumbnail_longer_dimension_resize">`
+   ```
+   <integer name="thumbnail_longer_dimension_resize">
+   ```
 
    The default thumbnail dimension is 100.
 
-   `<integer name="full_image_longer_dimension_resize">`
+   ```
+   <integer name="full_image_longer_dimension_resize">
+   ```
 
    The default full image dimension is 800.
 
 7. Set the compression rate (percentage) for full images:
 
-   `<integer name="full_image_compression_rate">`
+   ```
+   <integer name="full_image_compression_rate">
+   ```
 
    The default compression rate is 50.
 
@@ -170,11 +183,15 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can call 
 
 1. Change the boolean value:
 
-   `LPConfig.defaultConfiguration.enablePhotoSharing`
+   ```
+   LPConfig.defaultConfiguration.enablePhotoSharing
+   ```
 
    By default, the value is set to **false**.
 
-   `LPConfig.defaultConfiguration.enableFileSharing`
+   ```
+   LPConfig.defaultConfiguration.enableFileSharing
+   ```
 
    By default, the value is **true**.
 
@@ -184,25 +201,35 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can call 
 
 1. Set the max number of photos or files to save on disk:
 
-   `LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk`
+   ```
+   LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk
+   ```
 
    The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
 
 2. Change the background color of the attachment menu:
 
-   `LPConfig.defaultConfiguration.photosharingMenuBackgroundColor`
+   ```
+   LPConfig.defaultConfiguration.photosharingMenuBackgroundColor
+   ```
 
 3. Change the text of buttons:
 
-   `LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor`
+   ```
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTextColor
+   ```
 
 4. Change the menu button&#39;s background color:
 
-   `LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor`
+   ```
+   LPConfig.defaultConfiguration.photosharingMenuButtonsBackgroundColor
+   ```
 
 5. Change the menu button&#39;s tint color:
 
-   `LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor`
+   ```
+   LPConfig.defaultConfiguration.photosharingMenuButtonsTintColor
+   ```
 
 7. Customize the navigation bar on UIDocumentationInteractionController:
 

@@ -60,7 +60,7 @@ function HomepageHeader() {
                   fontWeight: 500,
                 }}
               >
-                Sr. Content Designer<br />UX Writer
+                Sr. Content Designer
               </Typography>
             </Box>
             <Box marginBottom={3}>
@@ -98,6 +98,7 @@ function HomepageHeader() {
               },
               '& .MuiOutlinedInput-notchedOutline': {
                 border: '0 !important',
+                class: 'heroSvg'
               },
             }}
           >

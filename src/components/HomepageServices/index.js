@@ -15,6 +15,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import { positions, position, right } from '@mui/system';
 import Layout from '@theme/Layout';
+import Image from 'mui-image'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -30,7 +31,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const ServiceList = [
   {
     title: 'UX writing',
-    img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/logo.img',
+    img: 'https://cdn-icons-png.flaticon.com/512/674/674337.png',
     alt: 'alt text for image',
     description: (
       <>
@@ -42,7 +43,7 @@ const ServiceList = [
   },
   {
     title: 'How-to\'s',
-    img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/design.img',
+    img: 'https://cdn-icons-png.flaticon.com/512/674/674327.png',
     alt: 'alt text for image',
     description: (
       <>
@@ -54,7 +55,7 @@ const ServiceList = [
   },
   {
     title: 'KB articles',
-    img: 'https://raw.githubusercontent.com/patriciamcphee/ds-doc-site-prototype/1683f779030a3194abc683eca14ef7553a695019/static/img/toggle.img',
+    img: 'https://cdn-icons-png.flaticon.com/512/674/674348.png',
     alt: 'alt text for image',
     description: (
       <>
@@ -69,14 +70,22 @@ const ServiceList = [
 function Service({ img, alt, title, description, href, label}) {
   return (
 
-    <Card sx={{ maxWidth: 345, p:1 }} elevation={4}>
+    <Card sx={{ maxWidth: 350, p:1, minHeight: 380 }} elevation={9}>
       <CardActionArea href={href}>
-      <CardMedia
-        component="img"
-        height="140"
-        image={img}
+    <Box
+      component="div"
+      sx={{ p: 2, justifyContent: 'center',  display: 'flex' } }
+    >
+      <Image
+        src={img}
         alt={alt}
+        height="50%"
+        width="50%"
+        fit="contain"
+
       />
+    </Box>
+
       <CardContent>
 
     <Typography gutterBottom variant="h5" component="div">
@@ -89,13 +98,7 @@ function Service({ img, alt, title, description, href, label}) {
           {description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <Typography align='right'>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        </Typography>
-      </CardActions>
+
 
 </CardActionArea>
 </Card>
@@ -108,8 +111,8 @@ export default function HomepageServices() {
 
 <Container 
   justifyContent="center"
-  alignItems="center" 
-  sx={{ py: 6 }}>
+  alignItems={'center'}  
+  sx={{ py: 6, position: 'relative' }}>
 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} py={4}>
   {ServiceList.map((props, idx) => (
     <Grid item>

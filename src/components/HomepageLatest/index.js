@@ -12,6 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import CurrentProjectsImage from '@site/static/img/code-details-page-1.svg';
+import Image from 'mui-image';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -36,32 +37,34 @@ export default function HomepageLatest() {
       <Grid item xs={6}>
 
     <Typography variant="h3" align="left" gutterBottom={true}>Current Projects</Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Components are reusable UI building blocks, which you can assemble in various ways. They are groups or blocks of design tokens, other components, or a combination built together with a specific functional behavior serving a variety of applications. Each component meets a specific interaction or UI need and is created to work together to provide intuitive user experiences.</Typography>
+    <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I'm realizing that I'm a web developer disguised as a Content Designer.</Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, React, and NodeJS.  I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.  Another fun project I'm working on is a single doc site for a design system that accommodates both the developer and designer. You got that right!  A single doc site for design system user content. No more multiple doc sites. </Typography>
      <Typography variant='p' align="left">
-     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+     <Box sx={{ width: '100%', maxWidth: 360 }}>
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
-            <ListItemButton onClick={handleClick} href="/portfolio/docs/latest">
+            <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/bflix-api">
               <ListItemIcon>
-              <ArrowCircleRightIcon />
+              <GitHubIcon />
               </ListItemIcon>
-              <ListItemText primary="Browse components" />
+              <ListItemText primary="Bflix API" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={handleClick}>
+            <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/bflix-client">
               <ListItemIcon>
                 <GitHubIcon />
               </ListItemIcon>
-              <ListItemText primary="Repo" />
+              <ListItemText primary="Bflix frontend (WIP)" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={handleClick} href="https://www.figma.com/files/639936565468671000/project/12594923/Components---EGDS?fuid=1108408490962901297" target="_blank">
-              <ListItemIcon>
-                <img src="https://cdn.iconscout.com/icon/free/png-128/figma-3521426-2944870.png" height="24px"  />              </ListItemIcon>
-              <ListItemText primary="Library" />
+          <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/ds-doc-site-prototype">
+            <ListItemIcon>
+                <GitHubIcon />
+              </ListItemIcon>
+              <ListItemText primary="Doc site prototype (WIP)" />
             </ListItemButton>
           </ListItem>
         </List>
@@ -72,16 +75,13 @@ export default function HomepageLatest() {
   <Grid item xs={6} px={6}>
     
     
-  <Box
-                component={'img'}
-                class="currentProject"
-                src={
-                  'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration1.svg'
-                }
-                width={1}
-                height={1}
-
-              />
+  <Image
+    src='https://cdn2.iconfinder.com/data/icons/digital-marketing-300/4000/Content_ideas-512.png'
+    fit="contain"
+    shift="left"
+    sx={{ justifyContent: 'center' } }
+    
+  />
 
   </Grid>
 </Grid>

@@ -36,6 +36,7 @@
     "font-awesome": "^4.7.0",
     "glob-parent": "^6.0.2",
     "got": "^12.1.0",
+    "mui-image": "^1.0.7",
     "popper": "^1.0.1",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",

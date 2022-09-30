@@ -6,16 +6,24 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+ height: 100px;
+  width: 100px; 
+  opacity: 0.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
-.my-card-content {
-  padding: 16px;
-}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
 
-.my-card {
-  border: 1px solid pink;
-  height: 350px;
-  width: 350px;
-}
+ div.center {
+  display: flex;
+  justify-content: center;
+ }
+
+

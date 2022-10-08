@@ -19,6 +19,8 @@
             <uri>https://patriciamcphee.github.io/portfolio/docs/about</uri>
         </author>
         <category label="information architecture" term="information architecture"/>
+        <category label="content design" term="content design"/>
+        <category label="content strategy" term="content strategy"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[How much does quality content matter?]]></title>
@@ -31,7 +33,7 @@
             <name>Patricia McPhee</name>
             <uri>https://patriciamcphee.github.io/portfolio/docs/about</uri>
         </author>
-        <category label="technical writing" term="technical writing"/>
+        <category label="content design" term="content design"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Single sourcing and content reuse]]></title>
@@ -44,8 +46,8 @@
             <name>Patricia McPhee</name>
             <uri>https://patriciamcphee.github.io/portfolio/docs/about</uri>
         </author>
-        <category label="creative writing" term="creative writing"/>
-        <category label="technical writing" term="technical writing"/>
+        <category label="content design" term="content design"/>
+        <category label="content strategy" term="content strategy"/>
         <category label="single sourcing" term="single sourcing"/>
         <category label="content reuse" term="content reuse"/>
         <category label="information architecture" term="information architecture"/>

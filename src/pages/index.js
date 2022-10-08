@@ -2,18 +2,15 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import HeroImage from '@site/static/img/portfolio-landing-page.svg';
-
+import HeroImage from '@site/static/img/hero03.svg';
 import HomepageServices from '../components/HomepageServices';
 import HomepageLatest from '../components/HomepageLatest';
-
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -28,10 +25,10 @@ function HomepageHeader() {
     defaultMatches: true,
   });
   return (
-    <Container>
+    <Container sx={{ marginTop: 4 }} >
     <Box
       bgcolor={'alternate.main'}
-      padding={{ xs: 2, md: 4, py: 2 }}
+      padding={{ xs: 2, md: 4 }}
       borderRadius={2}
     >
       <Grid container spacing={12}>
@@ -51,7 +48,7 @@ function HomepageHeader() {
                 component={'p'}
                 gutterBottom={true}
                 >
-                 Hi! I'm {siteConfig.title}
+                 {siteConfig.title}
                 </Typography>
               <Typography
                 variant="h4"
@@ -60,7 +57,7 @@ function HomepageHeader() {
                   fontWeight: 500,
                 }}
               >
-                Sr. Content Designer
+                Sr. Content Designer<br />Information Architect
               </Typography>
             </Box>
             <Box marginBottom={3}>
@@ -69,55 +66,29 @@ function HomepageHeader() {
                 
               </Typography>
             </Box>
-            <Box marginBottom={3}>
-              <Typography variant="p" component="p">
-              Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more.
-                
-              </Typography>
-            </Box>
+
             <Box
               display="flex"
               flexDirection={{ xs: 'column', sm: 'row' }}
               alignItems={{ xs: 'stretched', sm: 'flex-start' }}
             >
               <Link
-                className="button button--secondary button--md"
+                className="button button--secondary button--lg"
                 to="/docs/about">
                 Learn more about me
               </Link>
             </Box>
           </Box>
-          <Box
-            sx={{
-              width: '100%',
-              background: theme.palette.background.paper,
-              [theme.breakpoints.up('md')]: {
-                position: 'absolute',
-                bottom: 0,
-                transform: 'translateY(100%)',
-              },
-              '& .MuiOutlinedInput-notchedOutline': {
-                border: '0 !important',
-                class: 'heroSvg'
-              },
-            }}
-          >
 
-          </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box
-            height={1}
-            width={1}
-            display={'flex'}
-            justifyContent={'center'}
-          >
+
             <Box
               height={1}
               width={1}
               maxWidth={{ xs: 500, md: '100%' }}
               maxHeight={500}
-              sx={{ py: 2,
+              sx={{ py: 2, display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
                 filter:
                   theme.palette.mode === 'dark'
                     ? 'brightness(0.8)'
@@ -126,7 +97,7 @@ function HomepageHeader() {
             >
               <HeroImage />
             </Box>
-          </Box>
+
         </Grid>
       </Grid>
     </Box>

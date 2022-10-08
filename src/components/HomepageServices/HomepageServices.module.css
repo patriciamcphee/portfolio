@@ -6,13 +6,9 @@
 }
 
 .featureSvg {
- height: 100px;
-  width: 100px; 
-  opacity: 0.5;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+ height: 200px;
+  width: 200px; 
+
 }
 
 img.center {
@@ -24,6 +20,10 @@ img.center {
  div.center {
   display: flex;
   justify-content: center;
+ }
+
+ .my-card {
+  max-width: 360px;
  }
 
 

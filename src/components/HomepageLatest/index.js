@@ -10,9 +10,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import CurrentProjectsImage from '@site/static/img/code-details-page-1.svg';
-import Image from 'mui-image';
+import CurrentProjectImage from '@site/static/img/circular-data-chart.svg';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -32,15 +30,22 @@ export default function HomepageLatest() {
   };
   return (
 
-    <Container sx={{ py: 12, flexGrow: 1 }} spacing={4} maxWidth="lg">
-      <Grid container >
+    <Container sx={{ alignItems: 'center', py: 6}}>
+    <Box
+      bgcolor={'alternate.main'}
+      padding={{ xs: 2, md: 4, py: 2 }}
+      borderRadius={2}
+      
+    >
+<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
       <Grid item xs={6}>
 
     <Typography variant="h3" align="left" gutterBottom={true}>Current Projects</Typography>
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I'm realizing that I'm a web developer disguised as a Content Designer.</Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, React, and NodeJS.  I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.  Another fun project I'm working on is a single doc site for a design system that accommodates both the developer and designer. You got that right!  A single doc site for design system user content. No more multiple doc sites. </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, React, and NodeJS.  I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project I'm working on is a single doc site for a design system that accommodates both the developer and designer. You got that right!  A single doc site for design system user content. No more multiple doc sites. </Typography>
      <Typography variant='p' align="left">
-     <Box sx={{ width: '100%', maxWidth: 360 }}>
+     <Box sx={{ width: '100%', maxWidth: 340, alignItems: 'center' }}>
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
@@ -64,7 +69,7 @@ export default function HomepageLatest() {
             <ListItemIcon>
                 <GitHubIcon />
               </ListItemIcon>
-              <ListItemText primary="Doc site prototype (WIP)" />
+              <ListItemText primary="Design system doc site prototype (WIP)" />
             </ListItemButton>
           </ListItem>
         </List>
@@ -72,20 +77,17 @@ export default function HomepageLatest() {
      </Box>
       </Typography>
   </Grid>
-  <Grid item xs={6} px={6}>
+  <Grid item xs={6}>
     
-    
-  <Image
-    src='https://cdn2.iconfinder.com/data/icons/digital-marketing-300/4000/Content_ideas-512.png'
-    fit="contain"
-    shift="left"
-    sx={{ justifyContent: 'center' } }
-    
-  />
-
+  <Box
+      component="div"
+      sx={{ p: 2, justifyContent: 'center',  display: 'flex', maxWidth: 400 } }
+    >
+  <CurrentProjectImage />
+</Box>
   </Grid>
 </Grid>
-
+</Box>
   </Container>
   );
 }

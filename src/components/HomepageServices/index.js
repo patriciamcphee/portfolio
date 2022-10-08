@@ -38,7 +38,7 @@ const ServiceList = [
     alt: 'alt text for image',
     description: (
       <>
-        APIs provide a way for two or more computer programs to communicate with each other. It's a type of software interface, offering a service to other pieces of software.
+        Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a software interface offering a service to other pieces of software.
       </>
     ),
     href: ('/portfolio/docs/api/api-example-bflix'),

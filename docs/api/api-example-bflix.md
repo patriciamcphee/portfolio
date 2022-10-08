@@ -13,7 +13,7 @@ date: 10/08/2022
 ![Movie Camera](../../static/img/movie-camera.png)
 
 # My B-Movie Flix API
-This API lets users access information about different B-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite B-movies. They can can remove movies from their favorites and even unregister from the movie app if they'd like.
+This API lets users access information about different B-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite B-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
 
 ## Get a list of all movies
 
@@ -23,11 +23,11 @@ This API lets users access information about different B-movies, such as directo
 | --- | --- | --- | --- |
 |  `/movies` |  GET | None | Body |
 
-##### Request
+#### Request
 
 None
 
-##### Response  
+#### Response  
 A JSON object holding data about all the movies.
 
 
@@ -41,7 +41,7 @@ A JSON object holding data about all the movies.
 
 
 
-##### Request
+#### Request
 
 None
 

@@ -163,7 +163,7 @@ a:hover {
 .markdown img { 
   border: none; 
   border-radius:5px;
-  max-width: 75%;
+  max-width: 80%;
   height: auto;
   margin-left: 3px;
 }

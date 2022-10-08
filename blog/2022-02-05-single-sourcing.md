@@ -3,7 +3,7 @@ title: Single sourcing and content reuse
 date:   2022-02-05 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: creative writing
-tags: [ creative writing, technical writing, single sourcing, content reuse, draft ] 
+tags: [ content design, content strategy, single sourcing, content reuse, information architecture ] 
 ---
 
 >**Draft**

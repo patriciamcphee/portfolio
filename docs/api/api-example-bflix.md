@@ -1,12 +1,12 @@
 ---
 title: API example - Bflix
 tags: [ tech writing, api, information architecture ]
-description: Written for the API I wrote for the B-movie app that I've been developing.   
+description: Written for the B-movie app that I've been developing.  
 date: 10/08/2022
 ---
 
 >**Project:** CareerFoundry Assignment; write an API for a movie app<br />
->**Description:**  Written for the API I wrote for the B-movie app that I've been developing. <br />
+>**Description:**  Written for the B-movie app that I've been developing. <br />
 >**Date of the rewrite:** July 8, 2022   
 
 

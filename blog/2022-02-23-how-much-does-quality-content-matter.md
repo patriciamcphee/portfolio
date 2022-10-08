@@ -4,7 +4,7 @@ description: The quality of your organization's technical documentation matters 
 date:   2022-02-23 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: technical writing
-tags: [ technical writing ] 
+tags: [ content design ] 
 ---
 
 The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether an IT professional evaluating an enterprise application or a consumer using a product, they're reading your content to learn about the product and how to use it.

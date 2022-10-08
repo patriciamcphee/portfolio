@@ -25,10 +25,10 @@ function HomepageHeader() {
     defaultMatches: true,
   });
   return (
-    <Container sx={{ marginTop: 4 }} >
+    <Container sx={{ alignItems: 'center', py: 2}}>
     <Box
       bgcolor={'alternate.main'}
-      padding={{ xs: 2, md: 4 }}
+      padding={2}
       borderRadius={2}
     >
       <Grid container spacing={12}>
@@ -40,7 +40,7 @@ function HomepageHeader() {
           alignItems={'center'}
           sx={{ position: 'relative' }}
         >
-          <Box marginBottom={4}>
+          <Box gutterBottom={true}>
             <Box marginBottom={2}>
 
                 <Typography 
@@ -112,16 +112,19 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description={`${siteConfig.description}`}>
-        <main id="heroBanner">
+        <main id="homePage">
+          <section id="banner">
         <HomepageHeader />
-        </main>
+        </section>
+       
       <section id="services">
+      
       <HomepageServices />
       </section>
       <section id="current">
       <HomepageLatest />
       </section>
-
+      </main>
     </Layout>
   );
 }

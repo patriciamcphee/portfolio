@@ -97,13 +97,18 @@ function Service({ Svg, alt, title, description, href, label}) {
 export default function HomepageServices() {
   return (
 
-    <Container sx={{ alignItems: 'center', maxWidth: 400,  }}>
+    <Container sx={{ alignItems: 'center', maxWidth: 400, py: 6 }}>
     <Box
       bgcolor={'alternate.main'}
-      padding={{ p: 2 }}
       sx={{ flexWrap: 'wrap' }}
     >
-<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} py={4}>
+          <Grid item sx={12} px={2}>
+
+    <Typography variant="h4" align="left" gutterBottom={true}>Writing Samples</Typography>
+
+    </Grid>
+<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} p={2}>
+
   {ServiceList.map((props, idx) => (
     <Grid item>
       <Service key={idx} {...props} />

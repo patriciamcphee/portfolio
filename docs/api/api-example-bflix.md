@@ -15,26 +15,6 @@ date: 10/08/2022
 # My B-Movie Flix API
 This API lets users access information about different B-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite B-movies. They can can remove movies from their favorites and even unregister from the movie app if they'd like.
 
-**In this article**
-
-- [Get a list of all movies](#get-a-list-of-all-movies)
-
-- [Get data about a single movie by title](#get-data-about-a-single-movie-by-title)
-
-- [Get data about a genre by name](#get-data-about-a-genre-by-name)
-
-- [Get data about a director by name](#get-data-about-a-director-by-name)
-
-- [User registration](#user-registration)
-
-- [Update user info](#update-user-info)
-
-- [Unregister user (delete user)](#unregister-user-delete-user)
-
-- [Add a movie to a user's "favorites" list](#add-a-movie-to-a-users-favorites-list)
-
-- [Remove a movie from the user's "favorites" list](#remove-a-movie-from-the-users-favorites-list)
-
 ## Get a list of all movies
 
 

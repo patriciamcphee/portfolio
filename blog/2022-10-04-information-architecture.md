@@ -26,7 +26,9 @@ As you can see, the last three reasons are related to PEOPLE. Organizing things 
 
 There are three crucial things to understand before designing an IA that works:
 
-- **People:** What they need to do, how they think, and what they already know. To put it into perspective, think of this as "need to know" vs. "need to do." If you don't understand the user, you won't be able to group content in ways that make sense to them. Cloud Architects, for example, consult end-user documentation because they're trying to do something and need instructions on how to do it. In this particular case, you wouldn't want to bury conceptual information in the topic because it's assumed they know this information. See where I'm going with this? Your audience is key to your IA decisions.  
+![Three crucial things about design an IA that works: People/Users, Content, and Context.](https://miro.medium.com/max/720/1*j-oIpGC81NmSG0daT22aFg.jpeg)
+
+- **People/Users:** What they need to do, how they think, and what they already know. To put it into perspective, think of this as "need to know" vs. "need to do." If you don't understand the user, you won't be able to group content in ways that make sense to them. Cloud Architects, for example, consult end-user documentation because they're trying to do something and need instructions on how to do it. In this particular case, you wouldn't want to bury conceptual information in the topic because it's assumed they know this information. See where I'm going with this? Your audience is key to your IA decisions.  
 - **Content:** What you have, what you should have, and what you need. Without a good understanding of your content, you won't be able to create an information architecture that works well for current and future content.
 - **Context:** The business or personal goals for the site: your stakeholders and constraints. If you don't know the context, you won't be able to create something that works for people and the business, and you'll have endless trouble with the project.
 

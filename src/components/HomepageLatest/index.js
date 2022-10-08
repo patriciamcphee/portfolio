@@ -11,6 +11,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CurrentProjectImage from '@site/static/img/circular-data-chart.svg';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -65,11 +66,19 @@ export default function HomepageLatest() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
+          <ListItemButton onClick={handleClick} href="https://patriciamcphee.github.io/to-do-list-app/">
+            <ListItemIcon>
+                <CheckBoxIcon />
+              </ListItemIcon>
+              <ListItemText primary="To Do List App" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
           <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/ds-doc-site-prototype">
             <ListItemIcon>
                 <GitHubIcon />
               </ListItemIcon>
-              <ListItemText primary="Design system doc site prototype (WIP)" />
+              <ListItemText primary="Doc site prototype (WIP)" />
             </ListItemButton>
           </ListItem>
         </List>

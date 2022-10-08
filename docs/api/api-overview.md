@@ -1,11 +1,11 @@
 ---
 title: API examples
 tags: [tech writing, api, information architecture ]
-description:  Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a type of software interface, offering a service to other pieces of software.
+description:  Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a software interface offering a service to other pieces of software.
 date: 10/08/2022
 ---
 
-Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a type of software interface, offering a service to other pieces of software. A document describes how to build or use such a connection or interface is called an API specification. The term API may refer either to the specification or to the implementation.
+Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a software interface offering a service to other pieces of software. A document that describes how to build or use such a connection or interface is called an API specification. The term API may refer either to the specification or to the implementation.
 
-As for the [information architecture](/portfolio/blog/2022/10/04/information-architecture) of API documentation, the jury is still out.  I've seen and been involved in many API documentation projects and each one had a different way of presenting the information (the format).  With that said, I am not sure which format works best for the developer.  Which format is easier to navigate?  Which format has a distracting format (lots happening on the page and too much to consume)? These are questions I'd ask to a set of different app developers.  
+As for the [information architecture](/portfolio/blog/2022/10/04/information-architecture) of API documentation, the jury is still out.  I've seen and been a part of many API documentation projects. Each had a different way of presenting the information (the format). With that said, I am not sure which format works best for the developer. Which format is easier to navigate? Which format has a distracting format (lots happening on the page and too much to consume)? These are questions I'd ask a set of different app developers. 
 

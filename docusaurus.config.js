@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
-  tagline: 'UX & Tech Writing Samples',
+  tagline: 'I\'m passionate about creating content experiences that help people navigate, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I gather information and design meaningful digital content experiences.',
   url: 'https://patriciamcphee.github.io',
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
@@ -79,17 +79,14 @@ const config = {
           {
             to: '/blog', 
             label: 'Blog', 
-            position: 'left'},
-          {
-            href: 'https://www.pscmdesigns.com/', //Graphic design portfolio
-            label: 'Portfolio',
-            position: 'right',
+            position: 'left'
           },
           {
             href: 'https://github.com/patriciamcphee/',
-            label: 'GitHub',
             position: 'right',
-          },
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+           },
         ],
       },
       footer: {
@@ -137,11 +134,21 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
+      
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [
+      [require.resolve('docusaurus-lunr-search'),
+          {
+              indexBaseUrl: true
+          }
+      ]
+  ],
+  themes: ['@docusaurus/theme-live-codeblock'],
+
 };
 
 module.exports = config;

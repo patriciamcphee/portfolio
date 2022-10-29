@@ -1,29 +1,42 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+
+@use "@material/card";
+
+@include card.core-styles;
+
 .features {
-  display: flex;
+  display: inline;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
 }
 
-.featureSvg {
- height: 200px;
-  width: 200px; 
 
+.feature {
+ max-inline-size: 380px;
+ padding-bottom: 40px;
 }
 
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
- }
+a:link {
+  text-decoration: none;
+}
 
- div.center {
-  display: flex;
+@media (max-width: 996px) {
+  .feature:before {
+
+    margin: 20px;
+  }
+}
+
+.featureSvg {
+  height: 150px;
+  width: 150px;
+}
+
+.featuresRow {
   justify-content: center;
- }
-
- .my-card {
-  max-width: 360px;
- }
+  padding: 2rem 0;
 
 
+}

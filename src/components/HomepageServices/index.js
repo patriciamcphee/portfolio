@@ -7,7 +7,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import {  Container, Box, CardActionArea } from '@mui/material';
 import styles from './HomepageServices.module.css';
-
+import clsx from 'clsx';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -58,25 +58,32 @@ const ServiceList = [
   },
 ];
 
-function Service({ Svg, alt, title, description, href, label}) {
+function Service({ Svg, title, description, href }) {
   return (
-
-    <Card sx={{ maxWidth: 350, p: 2, minHeight: 400, borderRadius: 4 }} elevation={12}>
+    
+    <div className={clsx('col col--4', styles.feature)}>
+<Card sx={{ minHeight: 370, p: 2, borderRadius: 4 }} elevation={9}>
       <CardActionArea href={href}>
         
-        <Box
-      component="div"
-      sx={{  justifyContent: 'center',  display: 'flex' } }
 
-    >
-      <Svg className={styles.featureSvg} alt={title} />
-    </Box>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} alt={title} />
+      </div>
+
       
 
 
       <CardContent>
 
-    <Typography gutterBottom variant="h5" component="div">
+    <Typography
+      gutterBottom 
+      variant="h4" 
+      component="div"
+      sx={{
+        fontWeight: 500,
+        fontFamily: 'NTR',
+      }} 
+    >
           {title} 
         </Typography>
 
@@ -90,33 +97,21 @@ function Service({ Svg, alt, title, description, href, label}) {
 
 </CardActionArea>
 </Card>
-
+    </div>
+    
   );
 }
 
 export default function HomepageServices() {
   return (
-
-    <Container sx={{ alignItems: 'center', maxWidth: 400, py: 6 }}>
-    <Box
-      bgcolor={'alternate.main'}
-      sx={{ flexWrap: 'wrap' }}
-    >
-          <Grid item sx={12} px={2}>
-
-    <Typography variant="h4" align="left" gutterBottom={true}>Writing Samples</Typography>
-
-    </Grid>
-<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} p={2}>
-
-  {ServiceList.map((props, idx) => (
-    <Grid item>
-      <Service key={idx} {...props} />
-    </Grid>
-  ))}
-</Grid>
-</Box>
-  </Container>
-
+    <section className={styles.features}>
+      <div className="container">
+        <div className={clsx('row', styles.featuresRow)}>
+          {ServiceList.map((props, idx) => (
+            <Service key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

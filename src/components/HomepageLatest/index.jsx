@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CurrentProjectImage from '@site/static/img/circular-data-chart.svg';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-
+import { useTheme } from '@mui/material/styles';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -25,7 +25,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function HomepageLatest() {
   const [open, setOpen] = React.useState(true);
-
+  const theme = useTheme();
   const handleClick = () => {
     setOpen(!open);
   };
@@ -41,7 +41,17 @@ export default function HomepageLatest() {
 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
       <Grid item xs={6}>
 
-    <Typography variant="h4" align="left" gutterBottom={true}>Current Projects</Typography>
+    <Typography
+      variant="h3"
+      component={'p'}
+      align="left" 
+      gutterBottom={true}
+      sx={{
+        fontWeight: 500,
+        fontFamily: 'NTR',
+
+      }} 
+    >Current Projects</Typography>
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I'm realizing that <b>I'm a web developer disguised as a Content Designer/Information Architect</b>.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project I'm working on is a single doc site for a design system that accommodates both the developer and designer. The design system has multiple subsystems representing the different tiers of the product, including components for email and data visualization. You got that right!  A single doc site for design system design guidelines and usage content. No more multiple doc sites. This challenging project leverages my passion for <b><a href="https://patriciamcphee.github.io/portfolio/blog/2022/10/04/information-architecture">Information Architecture.</a></b> </Typography>
@@ -51,7 +61,7 @@ export default function HomepageLatest() {
         <List>
           <ListItem disablePadding>
             <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/bflix-api">
-              <ListItemIcon>
+            <ListItemIcon class="test-gh">
               <GitHubIcon />
               </ListItemIcon>
               <ListItemText primary="Bflix API" />
@@ -59,7 +69,7 @@ export default function HomepageLatest() {
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/bflix-client">
-              <ListItemIcon>
+            <ListItemIcon class="test-gh">
                 <GitHubIcon />
               </ListItemIcon>
               <ListItemText primary="Bflix frontend (WIP)" />
@@ -67,7 +77,7 @@ export default function HomepageLatest() {
           </ListItem>
           <ListItem disablePadding>
           <ListItemButton onClick={handleClick} href="https://patriciamcphee.github.io/to-do-list-app/">
-            <ListItemIcon>
+            <ListItemIcon class="test-gh">
                 <CheckBoxIcon />
               </ListItemIcon>
               <ListItemText primary="To Do List App" />
@@ -75,7 +85,7 @@ export default function HomepageLatest() {
           </ListItem>
           <ListItem disablePadding>
           <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/ds-doc-site-prototype">
-            <ListItemIcon>
+          <ListItemIcon class="test-gh">
                 <GitHubIcon />
               </ListItemIcon>
               <ListItemText primary="Doc site prototype (WIP)" />

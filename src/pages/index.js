@@ -11,11 +11,8 @@ import { useTheme } from '@mui/material/styles';
 import HeroImage from '@site/static/img/hero03.svg';
 import HomepageServices from '../components/HomepageServices';
 import HomepageLatest from '../components/HomepageLatest';
+import styles from './index.module.css';
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 
 
 function HomepageHeader() {
@@ -31,7 +28,7 @@ function HomepageHeader() {
       padding={2}
       borderRadius={2}
     >
-      <Grid container spacing={12}>
+      <Grid container spacing={2}>
         <Grid
           item
           container
@@ -40,37 +37,47 @@ function HomepageHeader() {
           alignItems={'center'}
           sx={{ position: 'relative' }}
         >
-          <Box gutterBottom={true}>
-            <Box marginBottom={2}>
+          
+            <Box marginBottom={0}>
 
                 <Typography 
-                variant='h2'
+                variant='h1'
                 component={'p'}
+                sx = {{
+                  fontFamily: 'Oswald',
+                }}
                 gutterBottom={true}
                 >
                  {siteConfig.title}
                 </Typography>
-              <Typography
-                variant="h4"
+                <Typography
+                variant="h3"
                 component={'p'}
                 sx={{
                   fontWeight: 500,
+                  fontFamily: 'NTR',
+                  fontSize: '1.75em',
+                  marginBottom: 2,
                 }}
               >
-                Sr. Content Designer<br />Information Architect
+                Sr. Content Designer | Information Architect
               </Typography>
-            </Box>
-            <Box marginBottom={3}>
-              <Typography variant="p" component="p">
-              I'm passionate about creating content experiences that help people navigate, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I gather information and design meaningful digital content experiences. 
+              <Typography 
+                variant="p" 
+                component={'p'}
+                gutterBottom={true}
+              >
+              {siteConfig.tagline} 
                 
               </Typography>
-            </Box>
-
-            <Box
+              <Box
               display="flex"
               flexDirection={{ xs: 'column', sm: 'row' }}
-              alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+              alignItems={{ xs: 'inline', sm: 'inline' }}
+              sx={{
+                marginBottom: 4,
+                marginTop: 2,
+              }}
             >
               <Link
                 className="button button--secondary button--lg"
@@ -78,7 +85,10 @@ function HomepageHeader() {
                 Learn more about me
               </Link>
             </Box>
-          </Box>
+            </Box>
+
+
+
 
         </Grid>
         <Grid item xs={12} md={6}>
@@ -113,7 +123,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.description}`}>
         <main id="homePage">
-          <section id="banner">
+          <section id="heroBanner" class="heroBanner">
         <HomepageHeader />
         </section>
        

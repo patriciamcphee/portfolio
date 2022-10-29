@@ -1,19 +1,19 @@
 ---
 title: API example - Bflix
 tags: [ tech writing, api, information architecture ]
-description: Written for the B-movie app that I've been developing.  
+description: Written for the b-movie app that I've been developing.  
 date: 10/08/2022
 ---
 
->**Project:** CareerFoundry Assignment; write an API for a movie app<br />
->**Description:**  Written for the B-movie app that I've been developing. <br />
->**Date of the rewrite:** July 8, 2022   
+>**Project:** CareerFoundry assignment; write an API for a movie app<br />
+>**Description:**  Written for the b-movie app that I've been developing. <br />
+>**Doc written:** July 8, 2022   
 
 
 ![Movie Camera](../../static/img/movie-camera.png)
 
-# My B-Movie Flix API
-This API lets users access information about different B-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite B-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
+# BFlix API
+This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
 
 ## Get a list of all movies
 

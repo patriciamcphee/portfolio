@@ -28,12 +28,21 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'How-to\'s',
+      label: 'API',
       link: {
         type: 'doc',
-        id: 'how-tos/how-to-samples',
+        id: 'api/api-overview',
       },      
-      items: [ 'how-tos/mobile-sdk' ],
+      items: [ 'api/api-example-bflix' ],
+    },
+    {
+      type: 'category',
+      label: 'UX writing',
+      link: {
+        type: 'doc',
+        id: 'ux-writing/ux-writing-samples',
+      },          
+      items: [ 'ux-writing/ui-strings', 'ux-writing/errors-warnings-confirmations', 'ux-writing/group-policies' ],
     },
     {
       type: 'category',
@@ -44,6 +53,15 @@ const sidebars = {
       },         
       items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
+    {
+      type: 'category',
+      label: 'How-to\'s',
+      link: {
+        type: 'doc',
+        id: 'how-tos/how-to-samples',
+      },      
+      items: [ 'how-tos/mobile-sdk' ],
+    },
 /*    {
       type: 'category',
       label: 'Quick starts',
@@ -53,15 +71,7 @@ const sidebars = {
       },         
       items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
     },
-*/    {
-      type: 'category',
-      label: 'UX writing',
-      link: {
-        type: 'doc',
-        id: 'ux-writing/ux-writing-samples',
-      },          
-      items: [ 'ux-writing/ui-strings', 'ux-writing/errors-warnings-confirmations', 'ux-writing/group-policies' ],
-    },
+*/  
     {
       type: 'category',
       label: 'Voiceover scripts',

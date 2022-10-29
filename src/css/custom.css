@@ -4,60 +4,17 @@
  * work well for content-centric websites.
  */
 
- @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
- @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Special+Elite&display=swap');
+ @import url(https://fonts.googleapis.com/css2?family=NTR&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300&display=swap);
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  font-size: large;
 }
 
 td {
   vertical-align: top;
-}
-
-@media screen and (max-width: 966px) {
-  .jumbotron {
-    padding: 20px 0px;
-  }
-}
-
-
-@media (orientation:portrait) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
-@media (orientation:landscape) and (max-width: 996px) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-}
-
-.jumbotron {
-  padding: 30px 0px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-color: #F1F2F4;
-}
-
-.jumbotron h1 {
-  font-size: 32pt;
-/*  font-family: 'Roboto Slab', serif; */
-  font-weight: 400; 
-/*  text-align: left;*/
-}
-
-.jumbotron p {
-  text-align: left;
-  font-size: 13pt;
-  margin-right: 0px;
-/*  font-family: 'Roboto', sans-serif;
-  font-weight: 300; */
 }
 
 html[data-theme=dark] .jumbotron {
@@ -68,36 +25,87 @@ html[data-theme=dark] .button {
   background-color: var(--ifm-color-secondary);
 }
 
-
-h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+h1 {
+  margin-top: 20px;
+  text-align: left;
+  font-family: 'Oswald';
+  font-weight: 300;
 }
 
-main {
-  padding: 10px;
+h2 {
+  font-weight: 'NTR';
+  font-weight: 600;
 }
 
-.tutorialSidebar {
-  padding: 10px;
+
+.test-gh {
+  margin-right: 14px;
+  padding: 0;
+  margin-top: 6px;
 }
+
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+
+
+
+
+
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
+
+
+
+
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #264653;
-  --ifm-color-primary-dark: #223f4b;
-  --ifm-color-primary-darker: #203c47;
-  --ifm-color-primary-darkest: #1b313a;
-  --ifm-color-primary-light: #2a4d5b;
-  --ifm-color-primary-lighter: #2c515f;
-  --ifm-color-primary-lightest: #315b6c;
-  --ifm-color-secondary: #e9c46a;
-  --ifm-color-secondary-dark: #e5b84c;
-  --ifm-color-secondary-darker: #e2b23e;
-  --ifm-color-secondary-darkest: #cf9b1f;
-  --ifm-color-secondary-light: #edd088;
-  --ifm-color-secondary-lighter: #f0d696;
-  --ifm-color-secondary-lightest: #f6e7c3;
+  --ifm-color-primary: #253368;
+  --ifm-color-primary-dark: #212e5e;
+  --ifm-color-primary-darker: #1f2b58;
+  --ifm-color-primary-darkest: #1a2449;
+  --ifm-color-primary-light: #293872;
+  --ifm-color-primary-lighter: #2b3b78;
+  --ifm-color-primary-lightest: #304287;
+  --ifm-color-secondary: #faad14;
+  --ifm-color-secondary-dark: #eea005;
+  --ifm-color-secondary-darker: #e19705;
+  --ifm-color-secondary-darkest: #b97c04;
+  --ifm-color-secondary-light: #fbb62e;
+  --ifm-color-secondary-lighter: #fbbb3c;
+  --ifm-color-secondary-lightest: #fcc963;
   --ifm-color-background: #CDCDCD;
   --ifm-color-background-dark: #999999;
   --ifm-color-background-darker: #909090;
@@ -121,13 +129,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 
 html[data-theme="dark"]:root {
-  --ifm-background-color: #35414a;
+  --ifm-background-color: #3B4877;
   --ifm-navbar-background-color: #2b3136;
   --ifm-navbar-link-color: white;
   --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
   --ifm-font-color-base: #f5f6f7;
-  --ifm-link-color: var(--ifm-color-primary-light);
+  --ifm-link-color: var(--ifm-color-secondary-light);
 }
+
 
 
 .navbar {
@@ -149,12 +158,7 @@ html[data-theme="dark"]:root {
   color: white;
 }
 
-@media screen and (max-width: 996px) {
-  .footer {
-    padding: 20px 0px;
-    text-align: center;
-  }
-}
+
 
 .navbar, .footer a:link {
   color: white;
@@ -164,19 +168,29 @@ html[data-theme="dark"]:root {
   height: auto;
 }
 
+.navbar a:link {
+  color: white;
+}
+
 .navbar a:hover {
+  font-weight: bold;
   color: var(--ifm-color-secondary);
 }
 
-a  {
-  color: var(--ifm-color-secondary-darkest);
 
-}
+
 
 a:hover {
-  color: var(--ifm-color-primary-lightest);
-  font-weight: bold;
-  text-decoration: none;
+
+  font-weight: 700;
+ text-decoration: none;
+ color: var(--ifm-color-secondary);
+}
+
+
+.markdown a:link {
+
+font-weight: 600;
 
 }
 
@@ -184,7 +198,6 @@ a:hover {
 
 .quote {
   font-size: 16pt;
-  font-family: 'Fredericka the Great', cursive;
   margin: 30px 20px;
   padding: 20px;
   border: 2px solid var(--ifm-color-background-lightest);
@@ -194,9 +207,9 @@ a:hover {
 }
 
 .markdown img { 
-  border: 0.5pt solid lightgray; 
+  border: none; 
   border-radius:5px;
-  max-width: 75%;
+  max-width: 80%;
   height: auto;
   margin-left: 3px;
 }
@@ -205,3 +218,40 @@ a:hover {
   margin: 6px;
   text-align: left;
 }
+
+.featureSvg {
+  height: 250px;
+  width: auto; 
+  padding: 20px 0px;
+  align-items: center;
+}
+
+@media screen and (max-width: 966px) {
+  .currentProject {
+    display:flexbox;
+ }
+ .currentProject {
+    padding: 20px;
+  }
+  .footer {
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+
+
+@media (orientation:portrait) {
+  .featureSvg {
+     display: inline; /* visibility: none; */
+  }
+}
+@media (orientation:landscape) and (max-width: 996px) {
+  .featureSvg {
+     display: inline; /* visibility: none; */
+  }
+  .cardWidth {
+    width: '100%';
+  }
+
+}
+

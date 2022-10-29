@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
-  tagline: 'UX & Tech Writing Samples',
+  tagline: 'I\'m passionate about creating content experiences that help people navigate, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I gather information and design meaningful digital content experiences.',
   url: 'https://patriciamcphee.github.io',
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
@@ -23,6 +23,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -43,6 +44,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        }
+      },
       navbar: {
         style: 'primary',
         title: ' ',
@@ -69,17 +76,17 @@ const config = {
             position: 'left',
             label: 'Samples',           
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://www.pscmdesigns.com/',
-            label: 'Portfolio',
-            position: 'right',
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left'
           },
           {
-            href: 'https://github.com/patriciamcphee/portfolio',
-            label: 'GitHub',
+            href: 'https://github.com/patriciamcphee/',
             position: 'right',
-          },
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+           },
         ],
       },
       footer: {
@@ -88,6 +95,10 @@ const config = {
           {
             title: 'Docs',
             items: [
+              {
+                label: 'Resume',
+                to: '/docs/resume',
+              },
               {
                 label: 'Samples',
                 to: '/docs/intro',
@@ -123,11 +134,21 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
+      
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [
+      [require.resolve('docusaurus-lunr-search'),
+          {
+              indexBaseUrl: true
+          }
+      ]
+  ],
+  themes: ['@docusaurus/theme-live-codeblock'],
+
 };
 
 module.exports = config;

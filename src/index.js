@@ -5,6 +5,12 @@ import questionAPI from './question';
 import QuestionBox from './components/QuestionBox';
 import Result from './components/ResultBox';
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+
 class Quiz extends Component {
 constructor() {
 	super();

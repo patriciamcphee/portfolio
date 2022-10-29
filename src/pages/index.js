@@ -1,58 +1,141 @@
-import React from 'react'
-import clsx from 'clsx';
-import Layout from '@theme/Layout'
-import Link from '@docusaurus/Link'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import HeroImage from '@site/static/img/hero-2.svg';
+import React from 'react';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import { Container } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import HeroImage from '@site/static/img/hero03.svg';
+import HomepageServices from '../components/HomepageServices';
+import HomepageLatest from '../components/HomepageLatest';
 import styles from './index.module.css';
-import 'font-awesome/css/font-awesome.min.css';
-import HomepageFeatures from '../components/HomepageFeatures';
-/*import { Grid, Box } from '@site/src/components/Grid'*/
-/*import 'bootstrap/dist/css/bootstrap.min.css';*/
+
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
   return (
-    <header class="jumbotron align-items-center">
-        <div class="container">
-          <div class="row row-content row--align-center">           
+    <Container sx={{ alignItems: 'center', py: 2}}>
+    <Box
+      bgcolor={'alternate.main'}
+      padding={2}
+      borderRadius={2}
+    >
+      <Grid container spacing={2}>
+        <Grid
+          item
+          container
+          xs={12}
+          md={6}
+          alignItems={'center'}
+          sx={{ position: 'relative' }}
+        >
+          
+            <Box marginBottom={0}>
 
-          <div class="col col-sm col-md heroSvg flex">
+                <Typography 
+                variant='h1'
+                component={'p'}
+                sx = {{
+                  fontFamily: 'Oswald',
+                }}
+                gutterBottom={true}
+                >
+                 {siteConfig.title}
+                </Typography>
+                <Typography
+                variant="h3"
+                component={'p'}
+                sx={{
+                  fontWeight: 500,
+                  fontFamily: 'NTR',
+                  fontSize: '1.75em',
+                  marginBottom: 2,
+                }}
+              >
+                Sr. Content Designer | Information Architect
+              </Typography>
+              <Typography 
+                variant="p" 
+                component={'p'}
+                gutterBottom={true}
+              >
+              {siteConfig.tagline} 
+                
+              </Typography>
+              <Box
+              display="flex"
+              flexDirection={{ xs: 'column', sm: 'row' }}
+              alignItems={{ xs: 'inline', sm: 'inline' }}
+              sx={{
+                marginBottom: 4,
+                marginTop: 2,
+              }}
+            >
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/about">
+                Learn more about me
+              </Link>
+            </Box>
+            </Box>
 
-           <HeroImage  />
-
-          </div>
-
-            <div class="col col-sm col-md text--left">
-              <h1>{siteConfig.title}</h1>
-              <h2>{siteConfig.tagline}</h2>
-              <p>Here, you'll find various writing samples, such as UI strings, error messages, KB articles, how-to's, and more. I built this site using <a href="https://docusaurus.io">Docusaurus</a> for the authoring platform, GitHub Pages for hosting, and markdown for content development. The purpose of the site is to showcase my writing samples in an online format common in today's enterprises. </p>
-              <div className={styles.buttons}>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/docs/about">
-                    Learn more about me
-                </Link>
-              </div> 
-            </div>
 
 
-        </div>
-      </div>
-    </header>
+
+        </Grid>
+        <Grid item xs={12} md={6}>
+
+            <Box
+              height={1}
+              width={1}
+              maxWidth={{ xs: 500, md: '100%' }}
+              maxHeight={500}
+              sx={{ py: 2, display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+                filter:
+                  theme.palette.mode === 'dark'
+                    ? 'brightness(0.8)'
+                    : 'none',
+              }}
+            >
+              <HeroImage />
+            </Box>
+
+        </Grid>
+      </Grid>
+    </Box>
+  </Container>
   );
 }
+
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}'s UX and Tech Writing Samples`}
-      description="Here you'll find a variety of my writing samples, such as UI strings, KB articles, how-to's, and more. It's a way for me to showcase my writing samples in an online format that is common in today's enterprises.  ">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title={`${siteConfig.title}`}
+      description={`${siteConfig.description}`}>
+        <main id="homePage">
+          <section id="heroBanner" class="heroBanner">
+        <HomepageHeader />
+        </section>
+       
+      <section id="services">
+      
+      <HomepageServices />
+      </section>
+      <section id="current">
+      <HomepageLatest />
+      </section>
       </main>
     </Layout>
   );
 }
+

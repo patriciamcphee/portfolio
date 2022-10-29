@@ -37,7 +37,7 @@ By default, the "browser" group syncs between users' devices automatically, allo
 | Setting | Description |
 | ------- | ----------- |
 | Disabled or not configured **(default)** | Allowed/turned on |
-| Enabled | Prevent/turned off |
+| Enabled | Prevented/turned off |
 
 >> **Related policies:** Prevent users from turning on browser syncing.
 
@@ -56,7 +56,7 @@ By default, non-enterprise sites open in Internet Explorer and Microsoft Edge ou
 | Setting | Description |
 | ------- | ----------- |
 | Disabled or not configured **(default)** | Allowed |
-| Enabled | Prevent |
+| Enabled | Prevented |
 
 <hr />
 

@@ -5,7 +5,7 @@ description: Slow logon issues with XenDesktop 7.8, XenDesktop 7.7, XenDesk 7.6 
 ---
 
 >**Project:**  UX and KB writing challenge  <br />
->**Description:**  I like to keep up with the writing trends. I also like to challenge myself by rewriting and reformatting KB articles. I learned how to write technical KB articles using an Information Technology Infrastructure Library (ITIL) format for helpdesk professionals and customer self-service.<br />
+>**Description:**  I like to keep up with the writing trends. I also like to challenge myself by rewriting and reformatting KB articles. <br />
 >**Original:** [How to Troubleshoot Slow Logons on XenApp](https://support.citrix.com/article/CTX101705)<br />
 >**Date of the rewrite:** January 10, 2020 
 

@@ -20,8 +20,8 @@ The examples on this page are the original, as it appears in the application and
 |---|---|---|---|
 | Error Logging in. System cannot connect at this time  | We're unable to sign you in because your account is deactivated. Contact your system user administrator to have it activated.  | Displays when the user account is deactivated.  | The user administrator needs to activate them in the portal.  |
 | Access denied to this resource. Please try again with an appropriate account.  | Access denied. Use an authorized account to access this resource.  |   |   |
-| Invalid/Unsupported file type. Please try again.  | The file type format you entered for this directory service is incorrect. Try \*.\* for all file types or \*.{*file extension*} for a specific file type, for example, \*.docx or \*.pdf.  | Displays when the user enters the incorrect file type format to the directory service.    |   |
+| Invalid/Unsupported file type. Please try again.  | The file type format you entered for this directory service is incorrect. Try \*.\* for all file types or \*.{*file extension*}, for example, \*.docx or \*.pdf.  | Displays when the user enters the incorrect file type format to the directory service.    |   |
 
 :::tip
-If you’re able to spin what could be a negative into a positive, you’re more likely to keep that user around and improve their user journey.
+If you're able to spin what could be a negative into a positive, you're more likely to keep that user around and improve their user journey.
 :::

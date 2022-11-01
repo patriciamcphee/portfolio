@@ -4,17 +4,17 @@ tags: [ ux writing, tech writing, how-tos ]
 description: API guide for photo and file sharing in a mobile app.  
 ---
 
-Mobile SDK v3.9 introduces a feature for agents to share photos or files with the consumers within the app.  Agents can share a reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product.  Agents can also share files to provide consumers with information such as mortgage documents, product catalogs, or transaction details as requested by consumers. Agents can even share photos or files in a resolved conversation to resume the conversation with the consumer.
+Mobile SDK v3.9 introduces a feature for agents to share photos or files with the consumers within the app. Agents can share a reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments about a product. Agents can also share files to provide consumers with information such as mortgage documents, product catalogs, or transaction details as requested by consumers. Agents can even share photos or files in a resolved conversation to resume the conversation with the consumer.
 
 When the agent shares any supported file type, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, a thumbnail for the photo or file appears in the conversation window when the consumer returns.
 
 - **Files:** the consumer can tap on it to view it full screen, share it through the default app on the device, or save it to a location.
 
-   The Android SDK supports opening any file types other than images through the picker application. The consumer can long-click on the thumbnail or open the file through the picker application to share and save.
+   The Android SDK supports opening any file type other than images through the picker application. The consumer can long-click on the thumbnail or open the file through the picker application to share and save.
 
-   The iOS SDK supports the opening of all the supported file types on the device as per the iOS operating system.
+   The iOS SDK supports opening all the supported file types on the device as per the iOS operating system.
 
-- **Photos:** the consumer can tap on the photo to view it full screen or share it through the default app on their device.  Consumers cannot download images; they can only preview or share images.
+- **Photos:** the consumer can tap on the photo to view it full screen or share it through the default app on their device. Consumers cannot download images; they can only preview or share images.
 
 ## Supported formats
 
@@ -37,19 +37,19 @@ When the agent shares any supported file type, if the consumer isn't within the 
 
 - Photo sharing is two-way (agent-to-consumer and consumer-to-agent). Still, file sharing is one way only (agent to consumer).
 
-  **For SDKs previous to 3.8:** Photo-sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
+  **For SDKs previous to 3.8:** Photo-sharing is one-way only (from consumer to agent, but not vice versa) and available only for the Mobile Message SDK.
 
 - If an attempt to view a photo is unsuccessful, an error icon covers the thumbnail.
 
-- If an attempt to download a file is unsuccessful, an error icon covers the thumbnail.  Upon retry, the file attempts to download again. Retry can be tried as many times as possible (in case of a poor network) till the file download successfully.
+- If an attempt to download a file is unsuccessful, an error icon covers the thumbnail. Upon retrying, the file attempts to download again. Retry can be tried as often as possible (in case of a poor network) until the file downloads successfully.
 
-- The consumer can return to a resolved conversation to view the photos, as long as the images are part of the conversation history.
+- The consumer can return to a resolved conversation to view the photos as long as the images are part of the conversation history.
 
 - If an agent sends an unsupported file, a message indicates the file type is not supported, and the agent should retry sending a supported file format. On the consumer side, they see an empty message with no content.
 
 - For authenticated users, backgrounding the app while loading the photo does not get interrupted.
 
-- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
+- Consumers must tap the photo again with each visit for unauthenticated sessions because the history gets cleared when a session expires or logs the consumer out.
 
 ## How photo sharing works - Android
 
@@ -65,7 +65,7 @@ When the agent shares any supported file type, if the consumer isn't within the 
 
    By default, this value is **false**.
 
-2. Contact your Account Team to have the feature enabled on your account.
+2. Contact your Account Team to enable the feature on your account.
 
 ### Step 2. Change the settings
 
@@ -132,13 +132,13 @@ When the agent shares any supported file type, if the consumer isn't within the 
 
    The default compression rate is 50.
 
-   More advanced configurations, like image size, compression rate, can be found under Photo Sharing in the Configuring the SDK section.
+   More advanced configurations, like image size, and compression rate, can be found under Photo Sharing in the Configuring the SDK section.
 
 ## How photo sharing works - iOS
 
 ### Step 1. Set the requirements for Custom View Controller Mode
 
-When using Custom View Controller Mode, you must remove the Conversation view when leaving the App. To avoid dismissing the View when presenting CSAT/SecureForms/PhotoSharing View, you should only ignore the Conversation view if Moving From ParentView:
+When using Custom View Controller Mode, you must remove the Conversation view when leaving the app. To avoid dismissing the View when presenting CSAT/SecureForms/PhotoSharing View, you should only ignore the Conversation view if Moving From ParentView:
 
 ```swift
 
@@ -156,26 +156,26 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can call 
 1. Set the photo library privacy settings:
   
    - **Key:** NSPhotoLibraryUsageDescription
-   - **Value:**"Photo Library Privacy Setting for Mobile App Messaging SDK for iOS"
+   - **Value:** "Photo Library Privacy Setting for Mobile App Messaging SDK for iOS"
 
 2. Set the camera privacy settings:
 
    - **Key:** NSCameraUsageDescription
-   - **Value:**"Camera Privacy Setting for Mobile App Messaging SDK for iOS"
+   - **Value:** "Camera Privacy Setting for Mobile App Messaging SDK for iOS"
 
     Values for these descriptions are up to the brand to define; these are only examples.
 
 3. Set the file-sharing privacy settings:
 
-   - UIFileSharingEnabled: Application supports iTunes file sharing
+   - UIFileSharingEnabled: The application supports iTunes file sharing
    - Privacy - Photo Library Usage Description
    - Privacy - Photo Library Additions Usage Description
 
     iOS supports the preview of file types per iOS operating system and requires some configurations to be enabled ("YES") within the Host App's plist file. Enabling supports file sharing and the export and saving of photos.
 
-4. Save documents or photos to a directory belonging to the host app, enable the following flag with **caution**.  
+4. Save documents or photos to a directory belonging to the host app, and enable the following flag with **caution**.  
   
-   >**Note:** A current limitation within the SDK causes the SQL files to be public if enabling this setting. Therefore, we suggest you not enable this setting until a fix is available in a future release. However, if this functionality is essential to your user flow, enable it at the user's risk.
+   >**Note:** A current limitation within the SDK causes the SQL files to be public if enabling this setting. Therefore, we suggest you wait to enable this setting until a fix is available in a future release. However, if this functionality is essential to your user flow, enable it at the user's risk.
 
    LSSupportsOpeningDocumentsInPlace: Supports opening documents in place
 
@@ -195,7 +195,7 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can call 
 
    By default, the value is **true**.
 
-2. Contact your Account Team to have the feature enabled on your account.
+2. Contact your Account Team to enable the feature on your account.
 
 ### Step 4. Change the settings
 
@@ -238,10 +238,10 @@ When using ViewController Mode, on the Navigation Bar Back Button, you can call 
    The UIDocumentationInteractionController adopts applicable branding customizations that have been set, for example:
 
    - `conversationNavigationBackgroundColor` sets the NavController tint color with translucence set to false.
-   - `conversationNavigationTintColor` colors the L & R bar buttons as well as the title color.
+   - `conversationNavigationTintColor` colors the L & R bar buttons and the title color.
 
    **View Controller Mode:**
 
       Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
 
-      You can find all the related configurations in the resources ID table, under Photo Sharing.
+      You can find all the related configurations in the resources ID table under Photo Sharing.

@@ -10,7 +10,11 @@
  * and scoped locally.
  */
 
- @import url(https://fonts.googleapis.com/css2?family=NTR&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300&display=swap);
+
+ @import url(https://fonts.googleapis.com/css2?family=NTR&display=swap);
+ @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap);
+ @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+
 
  .heroBanner {
   padding: 4rem 0;
@@ -19,16 +23,23 @@
   overflow: hidden;
 }
 
-h1 {
-  text-align: left;
-  font-size: 56px;
-  margin-top: 20px;
+.heroBannerTitle {
+  margin-bottom: 0;
+  font-size: 96px;
   font-family: 'Oswald';
   font-weight: 300;
 }
 
+.heroBannerSubTitle {
+  margin-bottom: 20px;
+  font-family: 'NTR';
+  font-weight: 500;
+  font-size: 1.75em;
+  line-height: 120%;
+}
+
 .heroBannerContent {
-  padding: 20rem 0;
+  padding: 0 0;
 }
 
 
@@ -71,6 +82,22 @@ h1 {
     align-items: center;
   }
 
+  .heroBannerTitle {
+    text-align: center;
+    font-size: 76px;
+    line-height: 82px;
+  }
+
+  .heroBannerSubTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+
+  .heroBannerContent {
+    text-align: center;
+  }
+
 }
 
 @media (orientation:portrait) {
@@ -81,12 +108,18 @@ h1 {
 
     text-align: center;
   }
+
+
+
 }
 @media (orientation:landscape) and (max-width: 996px) {
   .heroSvg {
      display: none; /* visibility: none; */
   }
-
+  h1 {
+    font-size: 42px;
+    text-align: center;
+  }
 }
 
 

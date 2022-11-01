@@ -26,7 +26,7 @@ const ServiceList = [
     alt: 'alt text for image',
     description: (
       <>
-        Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to provide guidance to the user to prevent dead ends. 
+        Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to guide the user to prevent dead ends. 
       </>
     ),
     href: ('/portfolio/docs/ux-writing/errors-warnings-confirmations'),

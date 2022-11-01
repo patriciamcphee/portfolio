@@ -14,7 +14,7 @@ description: Slow logon issues with XenDesktop 7.8, XenDesktop 7.7, XenDesk 7.6 
 | CTX101705 | - XenDesktop 7.8<br />- XenDesktop 7.7<br />- XenDesktop 7.6 FP3<br />-XenApp |
 
 :::important
-Make sure to log into the same server using Microsoft's RDP client instead of the Citrix Receiver. By doing this, you can determine whether the issue is a profile, logon script, network, or other user environment issue.
+Make sure to log into the same server using Microsoft's RDP client instead of the Citrix Receiver. Doing this lets you determine whether the issue is a profile, logon script, network, or other user environment issue.
 :::
 
 ## Profile issues
@@ -45,7 +45,7 @@ Make sure to log into the same server using Microsoft's RDP client instead of th
 
    - Computer Management
 
-   - Any sort of computer or group policy
+   - Any computer or group policy
 
 2. Create a local account directly on the Remote Desktop Server to ensure that the profile loads directly from the server. Retest the logon.
 
@@ -57,11 +57,11 @@ To help troubleshoot the resources in the script, comment out (REM) or input pau
 
 The root cause that indicates a network issue:
 
-- The Remote Desktop Server is searching for fonts by name and not finding them.
+- The Remote Desktop Server searches for fonts by name and does not find them.
 
 - A user encounters a black screen for 1 to 20 minutes before the logon completes. 
 
-- An application is searching for fonts (usually created by older apps). Occasional occurrence.
+- An application searches for fonts (usually created by older apps). Occasional occurrence.
 
 **Steps for troubleshooting**<br />
 1. In the system *Control Panel*, click the **Environment** tab.

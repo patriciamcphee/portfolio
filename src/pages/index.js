@@ -13,8 +13,6 @@ import HomepageServices from '../components/HomepageServices';
 import HomepageLatest from '../components/HomepageLatest';
 import styles from './index.module.css';
 
-
-
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const theme = useTheme();
@@ -38,27 +36,21 @@ function HomepageHeader() {
           sx={{ position: 'relative' }}
         >
           
-            <Box marginBottom={0}>
+            <Box marginBottom={2}>
 
                 <Typography 
-                variant='h4'
+
+                variant='h3'
                 component={'p'}
-                sx = {{
-                  fontFamily: 'Oswald',
-                }}
-                gutterBottom={true}
+                class={styles.heroBannerTitle}
                 >
                  {siteConfig.title}
                 </Typography>
                 <Typography
-                variant="p"
+                variant="h5"
                 component={'p'}
-                sx={{
-                  fontWeight: 500,
-                  fontFamily: 'NTR',
-                  fontSize: '1.75em',
-                  marginBottom: 2,
-                }}
+                class={styles.heroBannerSubTitle}
+                gutterBottom={true}
               >
                 Sr. Content Designer | Information Architect
               </Typography>
@@ -66,6 +58,7 @@ function HomepageHeader() {
                 variant="p" 
                 component={'p'}
                 gutterBottom={true}
+                class={styles.heroBannerContent}
               >
               {siteConfig.tagline} 
                 
@@ -76,7 +69,7 @@ function HomepageHeader() {
               alignItems={{ xs: 'inline', sm: 'inline' }}
               sx={{
                 marginBottom: 4,
-                marginTop: 2,
+                marginTop: 4,
               }}
             >
               <Link

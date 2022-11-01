@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.31 125.31"><defs><style>.cls-1{stroke:#000;stroke-width:0.31px;}.cls-1,.cls-2,.cls-3{stroke-miterlimit:10;}.cls-2{font-size:38.7px;stroke-width:1.25px;letter-spacing:0.01em;}.cls-2,.cls-3{fill:#fff;stroke:#fff;font-family:MissLeGateesPro, MissLeGatees Pro;}.cls-3{font-size:57px;letter-spacing:0.01em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle class="cls-1" cx="62.66" cy="62.66" r="62.5"/><text class="cls-2" transform="translate(34.68 84.85) scale(1.11 1)">M</text><text class="cls-3" transform="translate(17.68 61.85) scale(1.11 1)">P</text></g></g></svg>
+<svg width="190" height="132" viewBox="0 0 190 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M58 66L124 0L190 66L124 132L58 66Z" fill="#BB8EFF"/>
+<path d="M0 0H57.1478L124 66L57.1478 132H0V0Z" fill="black"/>
+<path d="M58 66L91 33L124 66L91 99L58 66Z" fill="#9F5FFF"/>
+</svg>

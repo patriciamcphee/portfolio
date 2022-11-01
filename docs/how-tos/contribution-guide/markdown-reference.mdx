@@ -1,6 +1,258 @@
 ---
 title: Markdown reference guide
+permalink: 'docs/how-tos/contribution-guide/markdown-reference' 
 tags: [ tech writing, how-tos, onboarding ]
 description: Contributor's guide to a doc site.
-date: 11/02/2022
+keywords:
+  - contribute
+  - documentation
+last_update: 
+   date: 11/02/2022
+   author: Patricia McPhee
 ---
+
+## Headings
+
+Docs supports six levels of Markdown headings:
+
+```markdown
+# This is a first level heading (H1)
+
+## This is a second level heading (H2)
+
+...
+
+###### This is a sixth level heading (H6)
+```
+
+There must be a space between the last `#` and heading text.
+
+
+## Blockquotes
+
+Blockquotes are created using the `>` character:
+
+```markdown
+> This is a blockquote. It is usually rendered indented and with a different background color.
+```
+
+The preceding example renders as follows:
+
+> This is a blockquote. It is usually rendered indented and with a different background color.
+
+## Bold and italic text
+
+To format text as **bold**, enclose it in two asterisks:
+
+```markdown
+This text is **bold**.
+```
+
+To format text as *italic*, enclose it in a single asterisk:
+
+```markdown
+This text is *italic*.
+```
+
+To format text as both ***bold and italic***, enclose it in three asterisks:
+
+```markdown
+This text is both ***bold and italic***.
+```
+
+## Indentation
+
+In Markdown, spaces before the first character of a line determine the line's alignment relative to the preceding lines. Indentation especially influences numbered and bulleted lists to render multiple levels of nesting in a hierarchical or outline format.
+
+To indent text to align with a preceding paragraph or an item in a numbered or bulleted list, use spaces.
+
+```markdown
+1. This is a numbered list example (one space after the period before the letter T).
+  This sentence is indented three spaces.
+  This code block is indented three spaces.
+  
+- This is a bulleted list example (one space after the bullet before the letter T).
+This sentence is indented two spaces.
+
+- This is a second-level bullet (indented two spaces, with one space after the bullet before the letter T).
+  This sentence is indented four spaces.
+  > This quote block is indented four spaces.
+
+```
+
+The example above renders as:
+
+1. This is a numbered list example (one space after the period before the letter T).
+
+  This sentence is indented three spaces.
+
+  ```
+  This code block is indented three spaces.
+  ```
+
+- This is a bulleted list example (one space after the bullet before the letter T).
+
+This sentence is indented two spaces.
+
+This tip is indented two spaces.
+- This is a second-level bullet (indented two spaces, with one space after the bullet before the letter T).
+  This sentence is indented four spaces.
+  > This quote block is indented four spaces.
+
+
+## Lists 
+
+### Numbered list
+
+To create a numbered list, you can use all 1s. The numbers are rendered in ascending order as a sequential list when published. For increased source readability, you can increment your lists manually.
+
+Don't use letters in lists, including nested lists. They don't render correctly when published to Docs. Nested lists using numbers will render as lowercase letters when published. For example:
+
+```markdown
+1. This is
+1. a parent numbered list
+  1. and this is
+  1. a nested numbered list
+1. (fin)
+```
+
+This renders as follows:
+
+1. This is
+1. a parent numbered list
+  1. and this is
+  1. a nested numbered list
+1. (fin)
+
+### Bulleted list
+
+To create a bulleted list, use `-` or `*` followed by a space at the beginning of each line:
+
+```markdown
+- This is
+- a parent bulleted list
+- and this is
+- a nested bulleted list
+- All done!
+```
+
+This renders as follows:
+
+- This is
+- a parent bulleted list
+- and this is
+- a nested bulleted list
+- All done!
+
+Whichever syntax you use, `-` or `*`, use it consistently within a topic.
+
+
+## Tables
+
+The simplest way to create a table in Markdown is to use pipes and lines. To create a standard table with a header, follow the first line with dashed line:
+
+```markdown
+|This is   |a simple   |table header|
+|----------|-----------|------------|
+|table     |data       |here        |
+|it doesn't|actually   |have to line up nicely!|
+```
+
+This renders as follows:
+
+|This is   |a simple   |table header|
+|----------|-----------|------------|
+|table     |data       |here        |
+|it doesn't|actually   |have to line up nicely!|
+
+You can align the columns by using colons:
+
+```markdown
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
+```
+
+Renders as follows:
+
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
+
+> **TIP**
+> You can also use an [online table generator](http://www.tablesgenerator.com/markdown_tables).
+
+
+### Inconsistent column widths between tables
+
+You may notice that the column widths of the tables look odd or inconsistent. This behavior occurs because the length of text within the cells determines the layout of the table. Unfortunately, there's no way to control how the tables render. This is a limitation of Markdown. Even though it would look nicer to have the width of table columns be consistent, this would have some disadvantages too:
+
+- Interlacing HTML code with Markdown makes topics more complicated and discourages community contributions.
+- A table that you make look good for a specific screen size may end up looking unreadable at different screen sizes as it preempts responsive rendering.
+
+### Data matrix tables
+
+A data matrix table has both a header and a weighted first column, creating a matrix with an empty cell in the top left. Docs has custom Markdown for data matrix tables:
+
+```md
+|                  |Header 1 |Header 2|
+|------------------|---------|--------|
+|**First column A**|Cell 1A  |Cell 2A |
+|**First column B**|Cell 1B  |Cell 2B |
+```
+
+The example renders as:
+
+|                  |Header 1 |Header 2|
+|------------------|---------|--------|
+|**First column A**|Cell 1A  |Cell 2A |
+|**First column B**|Cell 1B  |Cell 2B |
+
+Every entry in the first column must be styled as bold (`**bold**`); otherwise the tables won't be accessible for screen readers or valid for Docs.
+
+## Add code blocks 
+There are several ways to include code:
+
+* Individual elements (words) within a line.
+
+Here's an example of `code` style.
+
+Use code format when referring to named parameters and variables in a nearby code block in your text. Code format may also be used for properties, methods, classes, and language keywords. 
+
+
+* Code blocks in the article Markdown file.
+
+  ```markdown
+    ```javascript
+    module.exports = {
+      sidebar: [
+        {
+          type: 'category',
+          label: 'Overview',
+          items: ['release-notes', 'intro', 'how-it-works'],
+        };
+      ],
+    ```
+  ```
+
+The example renders as:
+
+```javascript
+module.exports = {
+  sidebar: [
+    {
+      type: 'category',
+      label: 'Overview',
+      items: ['release-notes', 'intro', 'how-it-works'],
+    };
+  ],
+```
+
+Use inline code blocks when it's impractical to display code by reference to a code file. 
+

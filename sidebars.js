@@ -62,7 +62,17 @@ const sidebars = {
       },      
       items: [ 
         'how-tos/mobile-sdk', 
-        'how-tos/contribution-guide/contribute',
+        {
+          type: 'category',
+          label: 'Contributor\'s guide',
+          link: {
+            type: 'doc',
+            id: 'how-tos/contribution-guide/contribute',
+          },      
+          items: [ 
+      'how-tos/contribution-guide/onboard',
+      'how-tos/contribution-guide/markdown-reference' ],
+        },
       ],
     },
 /*    {

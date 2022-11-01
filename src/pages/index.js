@@ -39,6 +39,7 @@ function HomepageHeader() {
             <Box marginBottom={2}>
 
                 <Typography 
+
                 variant='h3'
                 component={'p'}
                 class={styles.heroBannerTitle}

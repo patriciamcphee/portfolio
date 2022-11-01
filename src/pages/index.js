@@ -41,7 +41,7 @@ function HomepageHeader() {
             <Box marginBottom={0}>
 
                 <Typography 
-                variant='h1'
+                variant='h4'
                 component={'p'}
                 sx = {{
                   fontFamily: 'Oswald',
@@ -51,7 +51,7 @@ function HomepageHeader() {
                  {siteConfig.title}
                 </Typography>
                 <Typography
-                variant="h3"
+                variant="p"
                 component={'p'}
                 sx={{
                   fontWeight: 500,

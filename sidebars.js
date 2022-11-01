@@ -55,12 +55,15 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'How-to\'s',
+      label: 'Guides',
       link: {
         type: 'doc',
         id: 'how-tos/how-to-samples',
       },      
-      items: [ 'how-tos/mobile-sdk' ],
+      items: [ 
+        'how-tos/mobile-sdk', 
+        'how-tos/contribution-guide/contribute',
+      ],
     },
 /*    {
       type: 'category',

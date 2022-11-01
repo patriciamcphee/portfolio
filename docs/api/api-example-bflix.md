@@ -1,19 +1,20 @@
 ---
-title: API example - Bflix
+title: BFlix API
 tags: [ tech writing, api, information architecture ]
 description: Written for the b-movie app that I've been developing.  
 date: 10/08/2022
 ---
 
 >**Project:** CareerFoundry assignment; write an API for a movie app<br />
->**Description:**  Written for the b-movie app that I've been developing. <br />
+>**Description:**  Written for the b-movie app I've been developing. <br />
 >**Doc written:** July 8, 2022   
 
+<br />
 
 ![Movie Camera](../../static/img/movie-camera.png)
 
-# BFlix API
-This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also lets them sign up so they can create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
+
+This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also allows them to sign up to create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
 
 ## Get a list of all movies
 
@@ -53,11 +54,11 @@ A JSON object holding data about a single movie containing the description, genr
 {
     "Genre": {
         "Name": "Horror",
-        "Description": "The final girl, the \"not dead yet\" scare, and the dystopian endings. Horror is famous for having story beats that we come to expect like jump scares. Lean into them and find ways to subvert. You have subsets like haunted houses, slashers, zombies, evil creatures, and other subgenres."
+        "Description": "The final girl, the \"not dead yet\" scare, and the dystopian endings. Horror is famous for having story beats that we come to expect, like jump scares. Lean into them and find ways to subvert. You have subsets like haunted houses, slashers, zombies, evil creatures, and other subgenres."
     },
     "Director": {
         "Name": "Dan O'Bannon",
-        "Bio": "Was inspired at an early age by EC Comics like Tales from the Crypt and old horror films that he saw in St. Louis. He even wrote a few stories for Heavy Metal magazine (which also showed up in the film). O'Bannon got his start when he and John Carpenter collaborated on the cult sci-fi film Dark Star (1974). ",
+        "Bio": "Was inspired at an early age by EC Comics like Tales from the Crypt and old horror films that he saw in St. Louis. He even wrote a few stories for Heavy Metal magazine (which also appeared in the film). O'Bannon started when he and John Carpenter collaborated on the cult sci-fi film Dark Star (1974). ",
         "Birth": "1946-09-30",
         "Death": "2009-12-17"
     },
@@ -97,7 +98,7 @@ A JSON object that holds data about the genre of the movies in the database.
 ```json
 {
     "Name": "Action",
-    "Description": "A clear division between good and evil. Lots of fighting and set pieces. Their pacing and structure are built around scenes like car chases and their climaxes often have the biggest set-pieces."
+    "Description": "A clear division between good and evil. Lots of fighting and set pieces. Their pacing and structure are built around scenes like car chases, and their climaxes often have the biggest set-pieces."
 }
 ```
 
@@ -121,7 +122,7 @@ A JSON object holding data about a director.
 ```json
 {
     "Name": "Chang Cheh",
-    "Bio": "He was the leading Martial Arts director in Hong Kong in the 1970s, now with close to 100 films to his name. He has influenced other directors such as John Woo and Liu Chiau Liang, and made famous such Hong Kong stars as Phillip Chung-Fung Kwok, Fu Sheng, and Lung Ti.",
+    "Bio": "He was the leading Martial Arts director in Hong Kong in the 1970s, with close to 100 films to his name. He has influenced other directors such as John Woo and Liu Chiau Liang and made famous such Hong Kong stars as Phillip Chung-Fung Kwok, Fu Sheng, and Lung Ti.",
     "Birth": "1923-02-10",
     "Death": "2002-06-22"
 }

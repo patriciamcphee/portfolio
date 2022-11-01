@@ -1,5 +1,5 @@
 ---
-title: Routing error on outbout shipment
+title: Routing error on outbound shipment
 tags: [ tech writing, kb, troubleshooting ]
 description: API guide for photo and file sharing in a mobile app.  
 ---
@@ -10,7 +10,7 @@ description: API guide for photo and file sharing in a mobile app.
 
 ## Root cause  
 
-Uknown  
+Unknown  
 
 ## Scenario  
 
@@ -30,7 +30,7 @@ Shipment number
    2. Type an asterisk for Branch/Plant. 
    3. Click **Find**.
 5. Check the routing status:
-   <details><summary>Does a <b>9</b> display and is the Promised ship date blank?</summary><p>
+   <details><summary>Does a <b>9</b> display and is the <b>Promised ship date</b> blank?</summary><p>
     <ol>
     <li>To the left of the shipment, click the check box to select it. </li>
     <li>On the toolbar, click <b>Row</b> and then select <b>Routing options.</b><div><b>Note.</b> If the <i>A detail rate was not found</i> error message displays, close the message.</div></li>
@@ -47,6 +47,6 @@ Shipment number
    </details>
 6. On the toolbar, click <b>Row</b> and then select <b>Routing options</b>.
 7. Select the route and click **Select.**
-8. Select the route again, and on the toolbar, click **Select**.
+8. Select the route again, and click **Select**on the toolbar.
 
 If the error still appears, try again or escalate to your team lead.

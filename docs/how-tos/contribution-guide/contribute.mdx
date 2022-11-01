@@ -21,9 +21,9 @@ Thank you for taking the time to contribute to the SCOOBY Design System document
 
 ## Prerequisites
 
-- Your [environement is setup](./onboard.mdx). 
+- Your [environement is setup](./onboard.mdx).
 
-- Understand [Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+- You understand the [basics of Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) and [markdown](./markdown-reference.mdx).
 
 ## When to contribute
 
@@ -36,13 +36,14 @@ The acceptance criteria for contributing to SCOOBY documentation is:
 - If yes, update the doc! Contribute until your heart's content. But first, determine which use case best fits your update:
 
   - **[Minor changes:](#edit-content-minor-changes)** If you only need to fix a typo or make a clarification to a sentence or section, this option is your best choice. 
-
+    <!--
     <details>
     <summary><b>Show me how!</b></summary>
     <div>
     <video  width="100%" controls src="https://user-images.githubusercontent.com/88200052/199261463-899c36ad-e433-46c9-ac28-87f7e86c1f84.mp4" />
     </div>
     </details>
+    -->
     
   - **[Significant changes:](#edit-content---significant-changes)** If you need to make substantial changes, add an image or add a section to a topic.
 
@@ -84,19 +85,19 @@ To promote consistency, follow the guidelines below and mentioned throughout to 
 
 - [ ] Always consult with the SCOOBY Content Design Lead when adding topics or want to propose changes to the content structure.  
 
-### Edit content (minor changes)
+## Edit content (minor changes)
 
 If you only need to fix a typo or make a clarification to a sentence or section, this option is your best choice. It streamlines the process of reporting and correcting minor errors and omissions in the documentation.  
 
 Despite all efforts, small grammar and spelling errors _do_ make their way into our published documents. While you can create GitHub issues to report mistakes, creating a PR to fix the issue is faster and easier when the option is available.
-
+<!--
 <details>
 <summary><b>Show me how!</b></summary>
 <div>
 <video  width="100%" controls src="https://user-images.githubusercontent.com/88200052/199261463-899c36ad-e433-46c9-ac28-87f7e86c1f84.mp4" />
 </div>
 </details>
-
+-->
 
 1. In the [repo](https://github.com/patriciamcphee/ds-doc-site-prototype), navigate to the /docs folder and locate the file you want to edit. Then, select the pencil icon to edit the article. 
 
@@ -123,7 +124,7 @@ Despite all efforts, small grammar and spelling errors _do_ make their way into 
 
 That's it! Content team members will review your PR and merge it when approved. You may get feedback requesting changes.
 
-### Edit content (significant changes)
+## Edit content (significant changes)
 
 If you need to make substantial changes, add an image or add a section to a topic. On the other hand, if your change is minor that doesn't involve uploading a file or making changes to multiple files, follow the [Edit content - minor change](#edit-content-minor-changes) instructions.
 
@@ -155,13 +156,14 @@ If you need to make substantial changes, add an image or add a section to a topi
   ![](../../../static/img/readme/image8.png)
 
 3. Navigate to /docs and locate the topic you want to change. 
-  
+
   <details>
   <summary><b>Show me how!</b></summary>
   <div>
    <video  width="100%" controls src="https://user-images.githubusercontent.com/88200052/199261867-f7184410-ad9b-49db-8ac6-0cf90f19d47e.mp4" />
   </div>
   </details>
+
   
 4. Change the date in the metadata and ensure the title, description, and author are correct. Add any additional keywords if they are missing.
 
@@ -176,7 +178,7 @@ If you need to make substantial changes, add an image or add a section to a topi
     - prerequisites
   last_update: 
     date: 09/20/2022
-    author: Patricia McPhee
+    author: Paige Turner
   ---
   ```
 
@@ -312,7 +314,7 @@ If you need to make substantial changes, add an image or add a section to a topi
 
 
 
-### Add new content
+## Add new content
 
 
 
@@ -341,7 +343,7 @@ If you need to make substantial changes, add an image or add a section to a topi
 
   ![](../../../static/img/readme/image8.png)
 
-3. Navigate to `/docs` and locate the subdirectory for your new topic. 
+3. Navigate to `/docs` and locate the topic you want to change. 
 
   <details>
   <summary><b>Show me how!</b></summary>
@@ -449,7 +451,7 @@ If you need to make substantial changes, add an image or add a section to a topi
   <details>
   <summary><b>Show me how!</b></summary>
   <div>
-  <video  width="100%" controls src="https://media.github.expedia.biz/user/24498/files/96279ce8-95dd-48be-83b3-0228c9544c4c" />
+   <video  width="100%" controls src="https://user-images.githubusercontent.com/88200052/199261867-f7184410-ad9b-49db-8ac6-0cf90f19d47e.mp4" />
   </div>
   </details>
 
@@ -536,260 +538,6 @@ If you need to make substantial changes, add an image or add a section to a topi
 </Tabs>
 
 
-
-## Markdown reference 
-
-
-
-### Headings
-
-Docs supports six levels of Markdown headings:
-
-```markdown
-# This is a first level heading (H1)
-
-## This is a second level heading (H2)
-
-...
-
-###### This is a sixth level heading (H6)
-```
-
-There must be a space between the last `#` and heading text.
-
-
-### Blockquotes
-
-Blockquotes are created using the `>` character:
-
-```markdown
-> This is a blockquote. It is usually rendered indented and with a different background color.
-```
-
-The preceding example renders as follows:
-
-> This is a blockquote. It is usually rendered indented and with a different background color.
-
-### Bold and italic text
-
-To format text as **bold**, enclose it in two asterisks:
-
-```markdown
-This text is **bold**.
-```
-
-To format text as *italic*, enclose it in a single asterisk:
-
-```markdown
-This text is *italic*.
-```
-
-To format text as both ***bold and italic***, enclose it in three asterisks:
-
-```markdown
-This text is both ***bold and italic***.
-```
-
-### Indentation
-
-In Markdown, spaces before the first character of a line determine the line's alignment relative to the preceding lines. Indentation especially influences numbered and bulleted lists to render multiple levels of nesting in a hierarchical or outline format.
-
-To indent text to align with a preceding paragraph or an item in a numbered or bulleted list, use spaces.
-
-```markdown
-1. This is a numbered list example (one space after the period before the letter T).
-   This sentence is indented three spaces.
-   This code block is indented three spaces.
-   
-- This is a bulleted list example (one space after the bullet before the letter T).
-  This sentence is indented two spaces.
-  
-  - This is a second-level bullet (indented two spaces, with one space after the bullet before the letter T).
-    This sentence is indented four spaces.
-    > This quote block is indented four spaces.
-
-```
-
-The example above renders as:
-
-1. This is a numbered list example (one space after the period before the letter T).
-
-   This sentence is indented three spaces.
-
-   ```
-   This code block is indented three spaces.
-   ```
-
-- This is a bulleted list example (one space after the bullet before the letter T).
-
-  This sentence is indented two spaces.
-
-  This tip is indented two spaces.
-  - This is a second-level bullet (indented two spaces, with one space after the bullet before the letter T).
-    This sentence is indented four spaces.
-    > This quote block is indented four spaces.
-
-
-### Lists 
-
-#### Numbered list
-
-To create a numbered list, you can use all 1s. The numbers are rendered in ascending order as a sequential list when published. For increased source readability, you can increment your lists manually.
-
-Don't use letters in lists, including nested lists. They don't render correctly when published to Docs. Nested lists using numbers will render as lowercase letters when published. For example:
-
-```markdown
-1. This is
-1. a parent numbered list
-   1. and this is
-   1. a nested numbered list
-1. (fin)
-```
-
-This renders as follows:
-
-1. This is
-1. a parent numbered list
-   1. and this is
-   1. a nested numbered list
-1. (fin)
-
-#### Bulleted list
-
-To create a bulleted list, use `-` or `*` followed by a space at the beginning of each line:
-
-```markdown
-- This is
-- a parent bulleted list
-  - and this is
-  - a nested bulleted list
-- All done!
-```
-
-This renders as follows:
-
-- This is
-- a parent bulleted list
-  - and this is
-  - a nested bulleted list
-- All done!
-
-Whichever syntax you use, `-` or `*`, use it consistently within a topic.
-
-
-### Tables
-
-The simplest way to create a table in Markdown is to use pipes and lines. To create a standard table with a header, follow the first line with dashed line:
-
-```markdown
-|This is   |a simple   |table header|
-|----------|-----------|------------|
-|table     |data       |here        |
-|it doesn't|actually   |have to line up nicely!|
-```
-
-This renders as follows:
-
-|This is   |a simple   |table header|
-|----------|-----------|------------|
-|table     |data       |here        |
-|it doesn't|actually   |have to line up nicely!|
-
-You can align the columns by using colons:
-
-```markdown
-| Fun                  | With                 | Tables          |
-| :------------------- | -------------------: |:---------------:|
-| left-aligned column  | right-aligned column | centered column |
-| $100                 | $100                 | $100            |
-| $10                  | $10                  | $10             |
-| $1                   | $1                   | $1              |
-```
-
-Renders as follows:
-
-| Fun                  | With                 | Tables          |
-| :------------------- | -------------------: |:---------------:|
-| left-aligned column  | right-aligned column | centered column |
-| $100                 | $100                 | $100            |
-| $10                  | $10                  | $10             |
-| $1                   | $1                   | $1              |
-
-> **TIP**
-> You can also use an [online table generator](http://www.tablesgenerator.com/markdown_tables).
-
-
-#### Inconsistent column widths between tables
-
-You may notice that the column widths of the tables look odd or inconsistent. This behavior occurs because the length of text within the cells determines the layout of the table. Unfortunately, there's no way to control how the tables render. This is a limitation of Markdown. Even though it would look nicer to have the width of table columns be consistent, this would have some disadvantages too:
-
-- Interlacing HTML code with Markdown makes topics more complicated and discourages community contributions.
-- A table that you make look good for a specific screen size may end up looking unreadable at different screen sizes as it preempts responsive rendering.
-
-#### Data matrix tables
-
-A data matrix table has both a header and a weighted first column, creating a matrix with an empty cell in the top left. Docs has custom Markdown for data matrix tables:
-
-```md
-|                  |Header 1 |Header 2|
-|------------------|---------|--------|
-|**First column A**|Cell 1A  |Cell 2A |
-|**First column B**|Cell 1B  |Cell 2B |
-```
-
-The example renders as:
-
-|                  |Header 1 |Header 2|
-|------------------|---------|--------|
-|**First column A**|Cell 1A  |Cell 2A |
-|**First column B**|Cell 1B  |Cell 2B |
-
-Every entry in the first column must be styled as bold (`**bold**`); otherwise the tables won't be accessible for screen readers or valid for Docs.
-
-### Add code blocks 
-There are several ways to include code:
-
-* Individual elements (words) within a line.
-
-  Here's an example of `code` style.
-
-  Use code format when referring to named parameters and variables in a nearby code block in your text. Code format may also be used for properties, methods, classes, and language keywords. 
-
-
-* Code blocks in the article Markdown file.
-
-   ```markdown
-      ```javascript
-      module.exports = {
-        sidebar: [
-          {
-            type: 'category',
-            label: 'Overview',
-            items: ['release-notes', 'intro', 'how-it-works'],
-          };
-        ],
-      ```
-   ```
-
- The example renders as:
-
- ```javascript
- module.exports = {
-   sidebar: [
-     {
-       type: 'category',
-       label: 'Overview',
-       items: ['release-notes', 'intro', 'how-it-works'],
-     };
-   ],
- ```
-
-  Use inline code blocks when it's impractical to display code by reference to a code file. 
-
-
-
-
-
 ## Pull request process
 
 We use PRs for all changes, even for contributors who have write access. Most repositories protect the default branch so that updates must be submitted as PRs.
@@ -799,8 +547,9 @@ If a PR reviewer has reviewed your PR, they can also provide feedback through co
 
 If you're new to GitHub, see [About pull requests](https://docs.github.com/articles/using-pull-requests) for more information.
 
-
-
+<!-- workflow diagram of the pull request process 
+![Pull request process](../../../static/img/content-contributor-process.png)
+-->
 
 ## Troubleshoot errors or issues
 
@@ -808,7 +557,7 @@ If you're new to GitHub, see [About pull requests](https://docs.github.com/artic
 
 ## How to get support
 
-For questions or to get help with onboarding or contributing, go to the [#SCOOBY-docs](https://expedia.slack.com/archives/C02U44U2197) channel. 
+For questions or to get help with onboarding or contributing, go to the [#SCOOBY-docs](https://patriciamcphee.slack.com/archives/C048ZT7LEKV) channel. 
 
 ## Additional resources
 

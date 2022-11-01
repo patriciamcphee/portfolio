@@ -81,7 +81,7 @@ const steps = [
     label: 'Establish your workspace',
     description: (
       <>
-        <p>If this is your first time downloading an EG GitHub repository, it's crucial to establish a workspace folder to store the repo.</p>
+        <p>If this is your first time downloading a GitHub repository, it's crucial to establish a workspace folder to store the repo.</p>
         <h4>Windows</h4>
         <p>Create a new folder as your working directory, for example, <b>github</b>. You can create the folder anywhere on your system, including in your <b>Documents</b> folder.</p>
         <h4>macOS</h4>
@@ -112,22 +112,22 @@ const steps = [
 <ol>
         <li>Select <b>File > Clone repository</b>.
         
-          <p><img src="https://raw.github.expedia.biz/egds/docs-next/main/static/img/readme/image1.png?token=GHSAT0AAAAAAAAANIFHMY7C6ZZZLWVEQJ4OY3EJD4Q" /></p>
+          <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image1.png?raw=true" /></p>
         </li>
         <li>Select the <b>URL</b> tab and enter the following URL in the <b>Repository URL or GitHub username and repository</b> field:
-          <pre><code>https://github.expedia.biz/egds/docs-next.git</code></pre>
+          <pre><code>https://github.io/scooby/docs-next.git</code></pre>
 
-        <p><img src="https://raw.github.expedia.biz/egds/docs-next/main/static/img/readme/image2.png?token=GHSAT0AAAAAAAAANIFHEAOUQ5JKIKYEUYPEY3EJQPA" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image2.png?raw=true" /></p>
         </li>
         <li>For the <b>Local path</b>, browse to your established workspace or working directory. Select <b>Clone</b> when you're ready.</li><p></p>
         <li>Select <b>Open in Visual Studio Code</b>.
 
-        <p><img src="https://raw.github.expedia.biz/egds/docs-next/main/static/img/readme/image3.png?token=GHSAT0AAAAAAAAANIFHF4RYQGADJTL6EHOSY3EJ3EQ" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image3.png?raw=true" /></p>
         </li>
         <li>Select <b>View > Terminal</b>. 
         <p>You'll use the terminal for configuring the remote connection between your local repo and the main repo. You'll also use the terminal to finalize the last bit of installation required.</p>
 
-        <p><img src="https://raw.github.expedia.biz/egds/docs-next/main/static/img/readme/image4.png?token=GHSAT0AAAAAAAAANIFGS22MGXW27ORTMHWSY3EJ4PQ" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image4.png?raw=true" /></p>
         </li>
       </ol>    
 
@@ -140,7 +140,7 @@ const steps = [
 <ol>
         <li>Open Git Bash to the folder where you're cloning the doc site repo (this should be workspace if macOS).</li><p></p>
         <li>Clone the docs-next repo.
-          <pre><code>https://github.expedia.biz/egds/docs-next.git</code></pre>
+          <pre><code>https://github.io/scooby/docs-next.git</code></pre>
 
         </li>
         <li>Change directories to docs-next.
@@ -215,7 +215,7 @@ export default function OnboardingProcessStepper() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography variant="h5" align="center" sx={{ py: 1 }}>Yah! You&apos;re finished!<br />You can now <a href="https://pages.github.expedia.biz/egds/docs-next/docs/resources/contribute/documentation">contribute</a> until your heart's content.</Typography>
+          <Typography variant="h5" align="center" sx={{ py: 1 }}>Yah! You&apos;re finished!<br />You can now <a href="https://patriciamcphee.github.io/portfolio/docs/how-tos/contribution-guide/contribute">contribute</a> until your heart's content.</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
           </Button>

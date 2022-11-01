@@ -92,8 +92,15 @@ const sidebars = {
         type: 'doc',
         id: 'voiceover-scripts/intro',
       },       
-      items: [ 'voiceover-scripts/tech-software-training' ],
+      items: [ 'voiceover-scripts/tech-software-training',
+        {
+          type: 'link',
+          label: 'Professional demos',
+          href: 'https://patriciamcphee.github.io/pmcphee-voiceover/',
+        }, 
+      ],
     },    
+
   ],
 };
 

@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build --no-minify",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -35,9 +35,9 @@
     "docusaurus-lunr-search": "^2.1.0",
     "eventsource": "^2.0.2",
     "font-awesome": "^4.7.0",
-    "glob-parent": "^6.0.2",
     "got": "^12.1.0",
     "mui-image": "^1.0.7",
+    "node-fetch": "^2.6.7",
     "popper": "^1.0.1",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
@@ -46,7 +46,9 @@
     "semver-regex": "^4.0.5"
   },
   "devDependencies": {
-    "shell-quote": ">=1.7.3"
+    "glob-parent": ">=5.1.2",
+    "shell-quote": ">=1.7.3",
+    "trim": ">=0.0.3"
   },
   "browserslist": {
     "production": [

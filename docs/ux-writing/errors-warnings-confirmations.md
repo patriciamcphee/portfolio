@@ -18,7 +18,7 @@ The examples on this page are the original, as it appears in the application and
 
 | Original | Rewrite | Description | Resolution |
 |---|---|---|---|
-| Error Logging in. System cannot connect at this time  | We're unable to sign you in because your account is deactivated. Contact your system user administrator to have it activated.  | Displays when the user account is deactivated.  | The user administrator needs to activate them in the portal.  |
+| Error Logging in. System cannot connect at this time  | We're unable to sign you in because your account is deactivated. Contact your administrator to have it activated.  | Displays when the user account is deactivated.  | The user administrator needs to activate them in the portal.  |
 | Access denied to this resource. Please try again with an appropriate account.  | Access denied. Use an authorized account to access this resource.  |   |   |
 | Invalid/Unsupported file type. Please try again.  | The file type format you entered for this directory service is incorrect. Try \*.\* for all file types or \*.{*file extension*}, for example, \*.docx or \*.pdf.  | Displays when the user enters the incorrect file type format to the directory service.    |   |
 

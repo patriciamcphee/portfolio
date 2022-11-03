@@ -54,7 +54,7 @@ export default function HomepageLatest() {
     >Current Projects</Typography>
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I realize that <b>I'm a web developer disguised as a Content Designer / Information Architect</b>.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project I'm working on is a design system doc site that accommodates both the developer and designer. The design system has multiple subsystems representing the different tiers of the product, including components for email and data visualization. You got that right! A single doc site for design system design guidelines and useful content. No more multiple doc sites. This challenging project leverages my passion for <b><a href="https://patriciamcphee.github.io/portfolio/blog/2022/10/04/information-architecture">Information Architecture.</a></b> </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b><a href="https://patriciamcphee.github.io/portfolio/blog/2022/10/04/information-architecture">Information Architecture.</a></b> </Typography>
      <Typography variant='p' align="left">
      <Box sx={{ width: '100%' }}>
       <nav aria-label="main mailbox folders">
@@ -83,14 +83,7 @@ export default function HomepageLatest() {
               <ListItemText primary="To Do List App" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding divider>
-          <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/ds-doc-site-prototype">
-          <ListItemIcon class="test-gh">
-                <GitHubIcon />
-              </ListItemIcon>
-              <ListItemText primary="Doc site prototype (WIP)" />
-            </ListItemButton>
-          </ListItem>
+
         </List>
       </nav>
      </Box>

@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
@@ -16,6 +18,7 @@ const config = {
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
+  
 
   presets: [
     [
@@ -44,6 +47,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      
       docs: {
         sidebar: {
           hideable: true,
@@ -140,7 +144,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-
+    plugins: [
+      'plugin-image-zoom'
+    ],
   themes: [
     '@docusaurus/theme-live-codeblock', 
     [

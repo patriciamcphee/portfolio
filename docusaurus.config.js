@@ -143,7 +143,7 @@ const config = {
           },
         ],
         */
-        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
+        copyright: `Copyright © ${new Date().getFullYear()} PSCM Designs LLC`,
       },
       
       prism: {

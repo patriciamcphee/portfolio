@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
@@ -16,6 +18,7 @@ const config = {
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
+  
 
   presets: [
     [
@@ -44,6 +47,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      
       docs: {
         sidebar: {
           hideable: true,
@@ -76,11 +80,17 @@ const config = {
             position: 'left',
             label: 'Samples',           
           },
-          {
+/*          {
             to: '/blog', 
             label: 'Blog', 
             position: 'left'
-          },
+          }, */
+          {
+            href: 'https://www.linkedin.com/in/patriciamcphee/',
+            position: 'right',
+            className: 'linkedin-logo',
+            'aria-label': 'Linkedin',
+           },
           {
             href: 'https://github.com/patriciamcphee/',
             position: 'right',
@@ -91,7 +101,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
+/*        links: [
           {
             title: 'Docs',
             items: [
@@ -132,6 +142,7 @@ const config = {
             ],
           },
         ],
+        */
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       
@@ -140,7 +151,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-
+    plugins: [
+      'plugin-image-zoom'
+    ],
   themes: [
     '@docusaurus/theme-live-codeblock', 
     [

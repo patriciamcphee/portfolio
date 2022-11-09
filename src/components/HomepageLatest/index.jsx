@@ -14,6 +14,7 @@ import CurrentProjectImage from '@site/static/img/circular-data-chart.svg';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import { useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -54,7 +55,8 @@ export default function HomepageLatest() {
     >Current Projects</Typography>
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I realize that <b>I'm a web developer disguised as a Content Designer / Information Architect</b>.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b><a href="https://patriciamcphee.github.io/portfolio/blog/2022/10/04/information-architecture">Information Architecture.</a></b> </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b>Information Architecture.</b> I've recruited an aspiring UX Designer to design the landing page.  </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm also selecting scripts for new voiceover demos as my current demos are three years old. </Typography>
      <Typography variant='p' align="left">
      <Box sx={{ width: '100%' }}>
       <nav aria-label="main mailbox folders">
@@ -81,6 +83,14 @@ export default function HomepageLatest() {
                 <CheckBoxIcon />
               </ListItemIcon>
               <ListItemText primary="To Do List App" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding divider>
+          <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/to-do-list-app/">
+            <ListItemIcon class="test-gh">
+                <GitHubIcon />
+              </ListItemIcon>
+              <ListItemText primary="To Do List repo" />
             </ListItemButton>
           </ListItem>
 

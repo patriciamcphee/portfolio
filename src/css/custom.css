@@ -59,7 +59,17 @@ h2, h3, h4 {
 }
 
 
+.linkedin-logo:hover {
+  opacity: 0.6;
+}
 
+.linkedin-logo::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background: no-repeat url("../../static/img/linkedin-logo-dark.svg");
+}
 
 
 

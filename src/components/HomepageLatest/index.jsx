@@ -55,8 +55,8 @@ export default function HomepageLatest() {
     >Current Projects</Typography>
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I realize that <b>I'm a web developer disguised as a Content Designer / Information Architect</b>.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b><a href="https://patriciamcphee.github.io/portfolio/blog/2022/10/04/information-architecture">Information Architecture.</a></b> </Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm also selecting scripts for new voiceover demos as my current demos are three years old. I might even start singing again! I'm itching to start belting out some tunes.</Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b>Information Architecture.</b> I've recruited an aspiring UX Designer to design the landing page.  </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm also selecting scripts for new voiceover demos as my current demos are three years old. </Typography>
      <Typography variant='p' align="left">
      <Box sx={{ width: '100%' }}>
       <nav aria-label="main mailbox folders">
@@ -86,7 +86,7 @@ export default function HomepageLatest() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding divider>
-          <ListItemButton onClick={handleClick} href="https://patriciamcphee.github.io/to-do-list-app/">
+          <ListItemButton onClick={handleClick} href="https://github.com/patriciamcphee/to-do-list-app/">
             <ListItemIcon class="test-gh">
                 <GitHubIcon />
               </ListItemIcon>

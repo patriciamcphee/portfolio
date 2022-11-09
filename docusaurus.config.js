@@ -80,11 +80,17 @@ const config = {
             position: 'left',
             label: 'Samples',           
           },
-          {
+/*          {
             to: '/blog', 
             label: 'Blog', 
             position: 'left'
-          },
+          }, */
+          {
+            href: 'https://www.linkedin.com/in/patriciamcphee/',
+            position: 'right',
+            className: 'linkedin-logo',
+            'aria-label': 'Linkedin',
+           },
           {
             href: 'https://github.com/patriciamcphee/',
             position: 'right',
@@ -95,7 +101,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
+/*        links: [
           {
             title: 'Docs',
             items: [
@@ -136,6 +142,7 @@ const config = {
             ],
           },
         ],
+        */
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       

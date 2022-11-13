@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8297],{3826:s=>{s.exports=JSON.parse('{"label":"single sourcing","permalink":"/portfolio/blog/tags/single-sourcing","allTagsPath":"/portfolio/blog/tags","count":1}')}}]);

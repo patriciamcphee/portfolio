@@ -63,8 +63,7 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'about',
+            to: '/#about',
             position: 'left',
             label: 'About',           
           },
@@ -143,7 +142,7 @@ const config = {
           },
         ],
         */
-        copyright: `Copyright © ${new Date().getFullYear()} PSCM Designs LLC`,
+        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       
       prism: {

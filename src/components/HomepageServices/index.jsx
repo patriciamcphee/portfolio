@@ -26,7 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function HomepageLatest() {
+export default function HomepageServices() {
   const [open, setOpen] = React.useState(true);
   const theme = useTheme();
   const handleClick = () => {
@@ -34,7 +34,7 @@ export default function HomepageLatest() {
   };
   return (
 
-    <Container sx={{ alignItems: 'center'}}>
+    <Container sx={{ alignItems: 'center', py: 6}}>
     <Box
       bgcolor={'alternate.main'}
       padding={{ xs: 2, md: 4, p: 2 }}
@@ -42,7 +42,6 @@ export default function HomepageLatest() {
       
     >
 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-
       <Grid item xs={8}>
 
     <Typography
@@ -69,8 +68,8 @@ export default function HomepageLatest() {
     >
   <Box
       component="div"
-      sx={{ width: '100%' }}
 
+      class="heroSvg"
     >
   <CurrentProjectImage />
   <Typography variant='p' align="left">

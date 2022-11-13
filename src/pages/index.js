@@ -9,9 +9,13 @@ import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import HeroImage from '@site/static/img/hero03.svg';
-import HomepageServices from '../components/HomepageServices';
+import HomepageServices from '@site/src/components/HomepageServices';
 import HomepageLatest from '../components/HomepageLatest';
 import styles from './index.module.css';
+import ContactPageCover from '../components/ContactPageCover/ContactPageCover';
+import About from '../components/About/About';
+import HomepageSamples from '../components/HomepageSamples';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -20,14 +24,16 @@ function HomepageHeader() {
     defaultMatches: true,
   });
   return (
-    <Container sx={{ alignItems: 'center', py: 2}}>
+    <Container sx={{ alignItems: 'center', py: 6}}>
     <Box
       bgcolor={'alternate.main'}
-      padding={2}
+
       borderRadius={2}
+      
     >
       <Grid container spacing={2}>
-        <Grid
+      
+      <Grid
           item
           container
           xs={12}
@@ -35,6 +41,23 @@ function HomepageHeader() {
           alignItems={'center'}
           sx={{ position: 'relative' }}
         >
+        <Box
+          height={1}
+          width={1}
+          maxWidth={{ xs: 500, md: '100%' }}
+
+          sx={{ py: 1, display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
+            filter:
+              theme.palette.mode === 'dark'
+                ? 'brightness(0.8)'
+                : 'none',
+          }}
+        >
+          <HeroImage />
+        </Box>
+
+        </Grid>
+        <Grid item xs={12} md={6} >
           
             <Box marginBottom={2}>
 
@@ -44,7 +67,7 @@ function HomepageHeader() {
                 component={'p'}
                 class={styles.heroBannerTitle}
                 >
-                 {siteConfig.title}
+                 Hi, I'm Patricia
                 </Typography>
                 <Typography
                 variant="h5"
@@ -52,7 +75,7 @@ function HomepageHeader() {
                 class={styles.heroBannerSubTitle}
                 gutterBottom={true}
               >
-                Sr. Content Designer | Information Architect
+                I'm a Content Designer & Information Architect based in Redmond, WA.
               </Typography>
               <Typography 
                 variant="p" 
@@ -74,7 +97,7 @@ function HomepageHeader() {
             >
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/about">
+                to="/#about">
                 Learn more about me
               </Link>
             </Box>
@@ -84,24 +107,7 @@ function HomepageHeader() {
 
 
         </Grid>
-        <Grid item xs={12} md={6}>
-
-            <Box
-              height={1}
-              width={1}
-              maxWidth={{ xs: 500, md: '100%' }}
-              maxHeight={500}
-              sx={{ py: 2, display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' },
-                filter:
-                  theme.palette.mode === 'dark'
-                    ? 'brightness(0.8)'
-                    : 'none',
-              }}
-            >
-              <HeroImage />
-            </Box>
-
-        </Grid>
+       
       </Grid>
     </Box>
   </Container>
@@ -116,14 +122,19 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.description}`}>
         <main id="homePage">
-          <section id="heroBanner" class="heroBanner">
+          <section id="heroBanner" >
         <HomepageHeader />
         </section>
        
-      <section id="services">
-      
-      <HomepageServices />
+      <section id="samples">
+
+      <HomepageSamples />
       </section>
+      <a name="about"></a>
+      <section id="about">
+        <About />
+      </section>
+ 
       <section id="current">
       <HomepageLatest />
       </section>

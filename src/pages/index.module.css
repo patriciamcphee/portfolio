@@ -16,7 +16,7 @@
  @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 
 
- .heroBanner {
+.heroBanner {
   padding: 4rem 0;
   text-align: left;
   position: relative;
@@ -48,7 +48,7 @@
   justify-content: center;
   align-items: start;
   flex-direction: row;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 .heroContainerCaption {

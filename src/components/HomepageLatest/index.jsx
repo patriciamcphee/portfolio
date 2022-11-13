@@ -16,6 +16,7 @@ import { useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -36,12 +37,12 @@ export default function HomepageLatest() {
     <Container sx={{ alignItems: 'center', py: 6}}>
     <Box
       bgcolor={'alternate.main'}
-      padding={{ xs: 2, md: 4, py: 2 }}
+      padding={{ xs: 2, md: 4, p: 2 }}
       borderRadius={2}
       
     >
 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
 
     <Typography
       variant="h3"
@@ -57,7 +58,21 @@ export default function HomepageLatest() {
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b>Information Architecture.</b> I've recruited an aspiring UX Designer to design the landing page.  </Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm also selecting scripts for new voiceover demos as my current demos are three years old. </Typography>
-     <Typography variant='p' align="left">
+  </Grid>
+  <Grid item xs={4}>
+  <Box
+      bgcolor={'alternate.main'}
+      padding={{ xs: 2, md: 4, p: 2 }}
+      borderRadius={2}
+      
+    >
+  <Box
+      component="div"
+
+      class="heroSvg"
+    >
+  <CurrentProjectImage />
+  <Typography variant='p' align="left">
      <Box sx={{ width: '100%' }}>
       <nav aria-label="main mailbox folders">
         <List>
@@ -98,20 +113,7 @@ export default function HomepageLatest() {
       </nav>
      </Box>
       </Typography>
-  </Grid>
-  <Grid item xs={6}>
-  <Box
-      bgcolor={'alternate.main'}
-      padding={{ xs: 2, md: 4, py: 2 }}
-      borderRadius={2}
-      
-    >
-  <Box
-      component="div"
 
-      class="heroSvg"
-    >
-  <CurrentProjectImage />
 </Box>
 </Box>
   </Grid>

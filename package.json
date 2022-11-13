@@ -36,19 +36,25 @@
     "docusaurus-lunr-search": "^2.1.0",
     "eventsource": "^2.0.2",
     "font-awesome": "^4.7.0",
+    "formik": "^2.2.9",
     "glob-parent": "^6.0.2",
     "got": "^12.1.0",
     "immer": "^9.0.6",
+    "jarallax": "^2.0.4",
     "loader-utils": "^2.0.3",
     "medium-zoom": "^1.0.6",
+    "minimatch": "^3.0.5",
     "mui-image": "^1.0.7",
     "plugin-image-zoom": "github:flexanalytics/plugin-image-zoom",
     "popper": "^1.0.1",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-lazy-load-image-component": "^1.5.6",
     "react-player": "^2.9.0",
-    "semver-regex": "^4.0.5"
+    "semver-regex": "^4.0.5",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "shell-quote": "^1.7.3"

@@ -218,7 +218,7 @@ font-weight: 700;
 .markdown img { 
   border: none; 
   border-radius:5px;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   margin-left: 3px;
 }

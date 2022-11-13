@@ -46,15 +46,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'KB articles',
-      link: {
-        type: 'doc',
-        id: 'kb-articles/kb-article-samples',
-      },         
-      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
-    },
-    {
-      type: 'category',
       label: 'Guides',
       link: {
         type: 'doc',
@@ -85,6 +76,15 @@ const sidebars = {
       items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
     },
 */  
+    {
+      type: 'category',
+      label: 'KB articles',
+      link: {
+        type: 'doc',
+        id: 'kb-articles/kb-article-samples',
+      },         
+      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
+    },
     {
       type: 'category',
       label: 'Voiceover scripts',

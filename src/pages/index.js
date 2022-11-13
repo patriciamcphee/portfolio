@@ -8,12 +8,13 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import HeroImage from '@site/static/img/group-2.svg';
-import HomepageServices from '../components/HomepageServices';
+import HeroImage from '@site/static/img/hero03.svg';
+import HomepageServices from '@site/src/components/HomepageServices';
 import HomepageLatest from '../components/HomepageLatest';
 import styles from './index.module.css';
 import ContactPageCover from '../components/ContactPageCover/ContactPageCover';
 import About from '../components/About/About';
+import HomepageSamples from '../components/HomepageSamples';
 
 
 function HomepageHeader() {
@@ -125,15 +126,15 @@ export default function Home() {
         <HomepageHeader />
         </section>
        
-      <section id="services">
-      
-      <HomepageServices />
-      </section>
+      <section id="samples">
 
+      <HomepageSamples />
+      </section>
       <a name="about"></a>
       <section id="about">
         <About />
       </section>
+ 
       <section id="current">
       <HomepageLatest />
       </section>

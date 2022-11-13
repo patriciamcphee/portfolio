@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import {  Container, Box, CardActionArea } from '@mui/material';
-import styles from './HomepageServices.module.css';
+import styles from './HomepageSamples.module.css';
 import clsx from 'clsx';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,10 +18,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-
-const ServiceList = [
+const SamplesList = [
   {
-    title: 'Writing for errors',
+    title: 'Error messages',
     Svg: require('@site/static/img/Details-page-02.svg').default,
     alt: 'alt text for image',
     description: (
@@ -30,6 +29,18 @@ const ServiceList = [
       </>
     ),
     href: ('/portfolio/docs/ux-writing/errors-warnings-confirmations'),
+    label: ('Learn more'),
+  },
+  {
+    title: 'UX Writing',
+    Svg: require('@site/static/img/Code-details-page-02.svg').default,
+    alt: 'alt text for image',
+    description: (
+      <>
+        UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product.
+      </>
+    ),
+    href: ('/portfolio/docs/ux-writing/ui-strings'),
     label: ('Learn more'),
   },
   {
@@ -44,21 +55,9 @@ const ServiceList = [
     href: ('/portfolio/docs/api/api-example-bflix'),
     label: ('Learn more'),
   },
-  {
-    title: 'KB articles',
-    Svg: require('@site/static/img/Search-details-page.svg').default,
-    alt: 'alt text for image',
-    description: (
-      <>
-        A knowledge base article is a "self-service" online document that solves issues with products or services. Article types include informational articles, how-tos, troubleshooting guides, and FAQs.
-      </>
-    ),
-    href: ('/portfolio/docs/kb-articles/kb-article-samples'),
-    label: ('Learn more'),
-  },
 ];
 
-function Service({ Svg, title, description, href }) {
+function Sample({ Svg, title, description, href }) {
   return (
     
     <div className={clsx('col col--4', styles.feature)}>
@@ -102,13 +101,14 @@ function Service({ Svg, title, description, href }) {
   );
 }
 
-export default function HomepageServices() {
+export default function HomepageSamples() {
   return (
     <section className={styles.features}>
       <div className="container">
+        
         <div className={clsx('row', styles.featuresRow)}>
-          {ServiceList.map((props, idx) => (
-            <Service key={idx} {...props} />
+          {SamplesList.map((props, idx) => (
+            <Sample key={idx} {...props} />
           ))}
         </div>
       </div>

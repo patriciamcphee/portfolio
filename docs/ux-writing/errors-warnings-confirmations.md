@@ -1,6 +1,5 @@
 ---
 title: Error messages
-tags: [ux writing, tech writing ]
 description: Writing error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the user in a dead end?  For example, if they get "Invalid or unsupported" error, do the users know what to do next?
 date: 02/12/2022
 ---

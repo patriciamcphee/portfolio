@@ -47,7 +47,3 @@ If you're able to spin what could be a negative into a positive, you're more lik
 :::
 
 For example, if they get an "Invalid or unsupported file type. Please try again." error, do they know what to do next? This message is a good example of a dead-end message. It doesn't tell the user what supported file types to try to get past the error. You can find the rewrite to this example below.
-
-<div class="quote">
-"Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant."
-</div>

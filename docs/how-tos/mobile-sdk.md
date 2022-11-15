@@ -1,6 +1,8 @@
 ---
 title: Mobile SDK - Photo and file sharing
-tags: [ ux writing, tech writing, how-tos ]
+last_update: 
+   date: 09/26/2022
+   author: Patricia McPhee
 description: API guide for photo and file sharing in a mobile app.  
 ---
 

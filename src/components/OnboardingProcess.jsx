@@ -37,25 +37,7 @@ const steps = [
               </li><p></p>
               <li><a href="ttps://code.visualstudio.com/">Visual Studio Code (VS Code)</a><p>You can use Atom, but these instructions are VS Code-specific.</p>  
               <p></p>
-              <p>If you want the WYSIWYG experience, you can install one of the VS Code extensions:</p>
-                <ul>
-                  <li><a href="https://marketplace.visualstudio.com/items?itemName=patmood.rich-markdown-editor">Rich Markdown Editor</a></li>
-                  <li><a href="https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor">Markdown Editor</a></li>
-                  <li><a href="https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes">UNOTES</a></li>  
-                
-                </ul>
-                <p><b>Other helpful VS Code extensions:</b></p>
-                <ul>
-                  <li><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a></li>
-                  <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One </a></li>
-                </ul>
 
-                <p><b>Non VS Code markdown editors:</b></p>
-                <ul>
-                  <li><a href="https://stackedit.io/">StackEdit</a></li>
-                  <li><a href="https://dillinger.io/">Dillinger</a></li>
-                  <li><a href="https://pandao.github.io/editor.md/en.html">Pandeo MEditor.md</a></li>
-                </ul>
 
                 
               </li><p></p>

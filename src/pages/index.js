@@ -19,6 +19,9 @@ import HomepageSamples from '../components/HomepageSamples';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -75,7 +78,7 @@ function HomepageHeader() {
                 class={styles.heroBannerSubTitle}
                 gutterBottom={true}
               >
-                I'm a Content Designer & Information Architect based in Redmond, WA.
+                I'm a {customFields.jobTitle} based in Redmond, WA.
               </Typography>
               <Typography 
                 variant="p" 
@@ -117,6 +120,7 @@ function HomepageHeader() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}

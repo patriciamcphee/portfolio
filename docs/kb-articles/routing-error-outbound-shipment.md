@@ -1,6 +1,8 @@
 ---
 title: Routing error on outbound shipment
-tags: [ tech writing, kb, troubleshooting ]
+last_update: 
+   date: 09/26/2022
+   author: Patricia McPhee
 description: API guide for photo and file sharing in a mobile app.  
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: Guides and how-to samples
-tags: [ ux writing, tech writing, how-tos, guides ]
 description: How-tos are easy-to-follow instructions that explain step-by-step how to perform a task or use a specific feature in an app. How-tos are focused procedural articles that help you complete a task.  
-date: 10/30/2022
+last_update: 
+   date: 10/30/2022
+   author: Patricia McPhee
  
 ---
 

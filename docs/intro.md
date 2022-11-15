@@ -2,8 +2,9 @@
 title: Overview
 permalink: 'docs/intro'
 description: I used the Docusaurus framework for my portfolio, GitHub Pages to host the site, and markdown to write the content.
-tags: [ overview, intro ]
-date: 03/02/2022
+last_update: 
+   date: 10/25/2022
+   author: Patricia McPhee
 ---
 
 I used [Docusaurus v2.2](https://docusaurus.io) for my writing samples, GitHub Pages to host the site, and markdown to write the content. I originally built it in [Jekyll](https://jekyllrb.com/) to challenge myself in 2018 to showcase my writing samples online rather than PDF format. 

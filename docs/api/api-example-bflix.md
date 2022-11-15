@@ -1,8 +1,9 @@
 ---
 title: BFlix API
-tags: [ tech writing, api, information architecture ]
 description: Written for the b-movie app that I've been developing.  
-date: 10/08/2022
+last_update: 
+   date: 10/08/2022
+   author: Patricia McPhee
 ---
 
 >**Project:** CareerFoundry assignment; write an API for a movie app<br />

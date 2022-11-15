@@ -1,7 +1,9 @@
 ---
 title: Error messages
 description: Writing error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the user in a dead end?  For example, if they get "Invalid or unsupported" error, do the users know what to do next?
-date: 02/12/2022
+last_update: 
+   date: 11/13/2022
+   author: Patricia McPhee
 ---
 
 Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant.

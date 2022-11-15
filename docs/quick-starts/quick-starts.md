@@ -1,6 +1,8 @@
 ---
 title: Get started
-tags: [ tech writing, quick start, onboarding ]
+last_update: 
+   date: 09/26/2022
+   author: Patricia McPhee
 description: Get started 
 ---
 

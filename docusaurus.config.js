@@ -19,6 +19,10 @@ const config = {
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
   
+  customFields: {
+    // Put your custom environment here
+    jobTitle: 'Technical Writer / Content Designer',
+  },
 
   presets: [
     [
@@ -28,6 +32,8 @@ const config = {
         docs: {
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },

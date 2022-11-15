@@ -1,6 +1,8 @@
 ---
 title: XenApp - Slow logon issues
-tags: [ tech writing, kb, troubleshooting ]
+last_update: 
+   date: 09/26/2022
+   author: Patricia McPhee
 description: Slow logon issues with XenDesktop 7.8, XenDesktop 7.7, XenDesk 7.6 FP3, and XenApp.  
 ---
 

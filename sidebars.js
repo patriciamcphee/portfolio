@@ -33,7 +33,7 @@ const sidebars = {
         type: 'doc',
         id: 'api/api-overview',
       },      
-      items: [ 'api/api-example-bflix' ],
+      items: [ 'api/api-example-bflix', 'how-tos/mobile-sdk',  ],
     },
     {
       type: 'category',
@@ -64,7 +64,7 @@ const sidebars = {
       'how-tos/contribution-guide/markdown-reference' ],
         },
         'how-tos/get-started/get-started',
-        'how-tos/mobile-sdk', 
+        
       ],
     },
     {

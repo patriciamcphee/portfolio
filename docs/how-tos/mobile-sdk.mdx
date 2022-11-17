@@ -6,6 +6,47 @@ last_update:
 description: API guide for photo and file sharing in a mobile app.  
 ---
 
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="Work-related; Get Started guide for mobile app developers" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Written for mobile app developers to implement the messaging API. " />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="June 2019" />
+  </ListItem>
+</List>
+<Divider />
+<br />
+
 Mobile SDK v3.9 introduces a feature for agents to share photos or files with the consumers within the app. Agents can share a reference photo or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments about a product. Agents can also share files to provide consumers with information such as mortgage documents, product catalogs, or transaction details as requested by consumers. Agents can even share photos or files in a resolved conversation to resume the conversation with the consumer.
 
 When the agent shares any supported file type, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, a thumbnail for the photo or file appears in the conversation window when the consumer returns.

@@ -69,11 +69,6 @@ const config = {
         },
         items: [
           {
-            to: '/#about',
-            position: 'left',
-            label: 'About',           
-          },
-          {
             type: 'doc',
             docId: 'resume',
             position: 'left',
@@ -83,7 +78,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Samples',           
+            label: 'Work',           
           },
 /*          {
             to: '/blog', 

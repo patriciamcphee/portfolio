@@ -6,10 +6,51 @@ last_update:
 description: Slow logon issues with XenDesktop 7.8, XenDesktop 7.7, XenDesk 7.6 FP3, and XenApp.  
 ---
 
->**Project:**  UX and KB writing challenge  <br />
->**Description:**  I like to keep up with the writing trends. I also like to challenge myself by rewriting and reformatting KB articles. <br />
->**Original:** [How to Troubleshoot Slow Logons on XenApp](https://support.citrix.com/article/CTX101705)<br />
->**Date of the rewrite:** January 10, 2020 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+
+<Typography><a href="https://support.citrix.com/article/CTX101705">Original KB article</a></Typography>
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="UX and KB writing challenge" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="I like to keep up with the writing trends. I also like to challenge myself by rewriting and reformatting KB articles. To see the difference, see the original KB article. "  />
+ 
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="January 10, 2020" />
+  </ListItem>
+</List>
+
+<Divider />
+
+<br />
+
 
 | Article # | Product(s) |
 | --------- | ---------- |

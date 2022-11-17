@@ -89,21 +89,7 @@ function HomepageHeader() {
               {siteConfig.tagline} 
                 
               </Typography>
-              <Box
-              display="flex"
-              flexDirection={{ xs: 'column', sm: 'row' }}
-              alignItems={{ xs: 'inline', sm: 'inline' }}
-              sx={{
-                marginBottom: 4,
-                marginTop: 4,
-              }}
-            >
-              <Link
-                className="button button--secondary button--lg"
-                to="/#about">
-                Learn more about me
-              </Link>
-            </Box>
+
             </Box>
 
 
@@ -129,16 +115,16 @@ export default function Home() {
           <section id="heroBanner" >
         <HomepageHeader />
         </section>
-       
-      <section id="samples">
 
-      <HomepageSamples />
-      </section>
       <a name="about"></a>
       <section id="about">
         <About />
       </section>
- 
+        
+      <section id="samples">
+
+      <HomepageSamples />
+      </section>
       <section id="current">
       <HomepageLatest />
       </section>

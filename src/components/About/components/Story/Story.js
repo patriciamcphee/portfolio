@@ -31,6 +31,7 @@ const Story = () => {
             <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>
             Over the past two decades, I've helped organizations reduce, simplify, and restructure their digital end-user documentation, ensuring quality and accuracy and increasing customer satisfaction rates.  
             </Typography>
+
           </Box>
         </Grid>
         <Grid

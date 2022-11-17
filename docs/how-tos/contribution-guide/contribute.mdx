@@ -1,5 +1,5 @@
 ---
-title: Doc site contributor guide
+title: Doc site contributor's guide
 permalink: 'docs/how-tos/contribution-guide/contribute'
 description: Contributor's guide to a doc site.
 keywords:
@@ -15,6 +15,45 @@ import TabItem from '@theme/TabItem';
 import OnboardingProcessStepper from '@site/src/components/OnboardingProcess';
 
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="Work-related; self-service onboarding and contributor guide for a doc site built using Docusaurus" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Written for to help content creators and content developers contribute to the product documentation." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="October 25, 2022" />
+  </ListItem>
+</List>
+<Divider />
+<br />
 
 Thank you for taking the time to contribute to the SCOOBY documentation. This site is open source, built using [Docusaurus 2.2](https://docusaurus.io/). You'll use markdown, a lightweight markup language, to author the content. This open-source approach streamlines and improves communication between designers, engineers, content teams, and product owners.
 

@@ -5,14 +5,50 @@ last_update:
    date: 10/08/2022
    author: Patricia McPhee
 ---
+ 
 
->**Project:** CareerFoundry assignment; write an API for a movie app<br />
->**Description:**  Written for the b-movie app I've been developing. <br />
->**Doc written:** July 8, 2022   
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="CareerFoundry assignment; write an API for a movie app" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Written for the b-movie app I've been developing." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="July 8, 2022" />
+  </ListItem>
+</List>
+<Divider />
 <br />
 
-![Movie Camera](../../static/img/movie-camera.png)
+
 
 
 This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also allows them to sign up to create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.

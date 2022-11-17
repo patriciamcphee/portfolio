@@ -62,10 +62,11 @@ const WhoWeAre = () => {
             <li>End-user Documentation</li>
             <li>How-to's</li>
             <li>Knowledgebase Articles</li>
-            <li>Video Scripts</li>
+            <li>Voiceover Scripts</li>
             <li>eBooks</li>
-            <li>Whitepapers</li>
+            <li>eLearning</li>
             <li>Newsletters</li>
+            <li>FAQs</li>
           </ul>
       </Typography>
 
@@ -105,6 +106,7 @@ const WhoWeAre = () => {
           <ul>
             <li>Microcopy</li>
             <li>Error messages</li>
+            <li>Notifications</li>
             <li>Taxonomy & Labeling</li>
             <li>Content Style Guide</li>
             <li>Design Principles</li>

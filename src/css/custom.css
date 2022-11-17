@@ -203,7 +203,12 @@ font-weight: 700;
 
 }
 
-
+.subtask {
+  list-style-type: lower-alpha;
+  margin-left: -15px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
 
 .quote {
   font-size: 16pt;
@@ -218,7 +223,7 @@ font-weight: 700;
 .markdown img { 
   border: 1px solid #ccc; 
   border-radius:5px;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   margin-left: 3px;
 }

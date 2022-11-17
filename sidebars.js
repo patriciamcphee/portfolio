@@ -52,7 +52,6 @@ const sidebars = {
         id: 'how-tos/how-to-samples',
       },      
       items: [ 
-        'how-tos/mobile-sdk', 
         {
           type: 'category',
           label: 'Contributor\'s guide',
@@ -64,18 +63,10 @@ const sidebars = {
       'how-tos/contribution-guide/onboard',
       'how-tos/contribution-guide/markdown-reference' ],
         },
+        'how-tos/get-started/get-started',
+        'how-tos/mobile-sdk', 
       ],
     },
-/*    {
-      type: 'category',
-      label: 'Quick starts',
-      link: {
-        type: 'doc',
-        id: 'quick-starts/quick-starts',
-      },         
-      items: [ 'quick-starts/quick-start-mobile-sdk-android' ],
-    },
-*/  
     {
       type: 'category',
       label: 'KB articles',

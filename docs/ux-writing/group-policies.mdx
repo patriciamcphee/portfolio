@@ -12,14 +12,52 @@ A Group Policy has both control labels and in-platform microcopy (static UI text
 
 Group policies are common settings that system administrators configure for the enterprise. In these examples, the group policies to configure are found in the Group Policy Editor in Windows 10. 
 
+
+
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="UX writing challenge" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Simplify, simplify, simplify.  Here I wanted to continue what I had been doing while as an FTE with Microsoft - reworking the Microsoft Edge Group Policies for the IT Pros. What I found during my initial rewrite was that the dependencies weren't idenfied. For example, if the policy relied on another one to work correctly, the IT Professional wouldn't know this because the in-platform microcopy or user documentation didn't indicate this dependency." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="February 12, 2022" />
+  </ListItem>
+</List>
+<Divider />
+<br />
+
 :::note
 Also, these examples are specific to the Microsoft Edge (legacy) browser. 
 :::
-
->**Project:**  UX writing challenge   
->**Description:** Simplify, simplify, simplify.  Here I wanted to continue what I had been doing while as an FTE with Microsoft - reworking the Microsoft Edge Group Policies for the IT Pros. What I found during my initial rewrite was that the dependencies weren't idenfied. For example, if the policy relied on another one to work correctly, the IT Professional wouldn't know this because the in-platform microcopy or user documentation didn't indicate this dependency. <br />
->**Date of the rewrite:** January 8, 2019   <br />
->**Date last modified:** February 12, 2022
 
 ## Do not sync browser setting 
 

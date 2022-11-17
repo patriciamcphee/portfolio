@@ -1,0 +1,139 @@
+---
+title: Get Started sample
+description: ''  
+last_update: 
+   date: 11/16/2022
+   author: Patricia McPhee
+ 
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="Work-related; Get Started guide for a cloud storage provider" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Written for the Cloud Architects and Engineers. " />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="November 16, 2022" />
+  </ListItem>
+</List>
+<Divider />
+<br />
+
+
+A cluster appears on the network as a single local group presented to hosts and administrators by virtual IP addresses. Use the SCOOBY plugin to discover the storage system cluster, manage the storage volumes in a cluster environment, and view the status of the storage appliance. You can also monitor the real-time error and alert messages for any event that may occur while performing various operations. 
+
+## Prerequisites
+- Tomcat Web Server 7.0 or higher
+- Ubuntu appliance (FDVA 5981) 12.04 LTS or higher
+- Java JDK 7
+- VMware ESXi Server and vSphere 5.5 or higher
+
+## Install the plugin
+You can install the plugin using the Debian package or import the Fast Deploy Virtual Appliance (FDVA) Open Virtual Appliance (OVA) template.
+
+
+<Tabs groupId="install-options">
+<TabItem value="FDVA" label="OVA Template">
+The OVA template contains the Debian package already configured and ready to install.
+
+1. Create a virtual machine by deploying the FDVA OVA template.
+2. Power on the virtual machine.
+3. Proceed to the Registration section.
+
+
+</TabItem>
+
+<TabItem value="Debian" label="Debian">
+
+<ol type="1">
+  <li>From the FDVA virtual machine, sign into the ESX host.</li>
+  <li>Increase the FDVA memory capacity to 8GB.
+<ol class="subtask">
+  <li>Shut down the FDVA for Debian package installation.</li>
+  <li>Edit the virtual machine's settings to increase memory.</li>
+  <li>Start the FDVA.</li>
+</ol>
+  </li>
+  <li>On the FDVA, log in as <code>root</code> to install <code>openjdk-7-jdk</code> and <code>tomcat7</code>.
+<pre>
+apt-get update 
+
+apt-get install openjdk-7-jdk
+apt-get install tomcat7 
+</pre>
+  </li>
+  <li>Enable the Tomcat SSL setting.
+    <ol class="subtask">
+      <li>Copy the <b>.keystore</b> file available in the release-package folder to:
+<pre>
+CATALINA_BASE/ 
+</pre>
+The default location is <code>/var/lib/tomcat7</code>.  Use the <code>ls -a</code> command to check the availability or to verify the presence of the <b>.keystore</b> file.
+      </li>
+      <li>Add the following to the <b>server.xml</b> file, under the <code>Service name="Catalina"</code> tag.  You can find the server.xml file in CATALINA_BASE/conf/.
+<pre>
+
+&#060;Connector 
+    protocol="HTTP/1.1" 
+    port="8443" maxThreads="200" 
+    scheme="https" secure="true" SSLEnabled="true" 
+    keystoreFile=".keystore" keystorePass="calsoft123" 
+    keyAlias="selfsigned" clientAuth="false" sslProtocol="TLS" 
+/&#062;
+
+</pre>
+      </li>
+    </ol>
+  </li>
+  <li>On the FDVA, log in as <code>root</code>, edit the <b>/etc/environment</b>, and add the following:
+<pre> 
+
+JAVE_HOME="/usr/lib/jvm/java-7-openjdk-amd64" 
+CATALINA_BASE="/var/lib/tomcat7" 
+CATALINA_BASE="/usr/share/tomcat7" 
+</pre>
+  </li>
+  <li>Deploy Tomcat on the Ubuntu client as a service.</li>
+  <li>Run <code>dpkg -i &#060;path-to-dieb-package-file&#062;.deb</code>.</li>
+<li>Proceed to the Registration section.</li>
+</ol>
+
+
+
+</TabItem>
+
+</Tabs>
+
+## Register the plugin
+

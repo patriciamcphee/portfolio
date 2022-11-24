@@ -2,7 +2,7 @@
 title: Error messages
 description: Writing error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the user in a dead end?  For example, if they get "Invalid or unsupported" error, do the users know what to do next?
 last_update: 
-   date: 11/18/2022
+   date: 11/19/2022
    author: Patricia McPhee
 ---
 

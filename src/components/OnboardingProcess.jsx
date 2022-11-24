@@ -94,22 +94,22 @@ const steps = [
 <ol>
         <li>Select <b>File > Clone repository</b>.
         
-          <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image1.png?raw=true" /></p>
+          <p><img src="https://github.com/patriciamcphee/portfolio/blob/main/static/img/readme/image1.png?raw=true" /></p>
         </li>
         <li>Select the <b>URL</b> tab and enter the following URL in the <b>Repository URL or GitHub username and repository</b> field:
           <pre><code>https://github.io/scooby/docs-next.git</code></pre>
 
-        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image2.png?raw=true" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/main/static/img/readme/image2.png?raw=true" /></p>
         </li>
         <li>For the <b>Local path</b>, browse to your established workspace or working directory. Select <b>Clone</b> when you're ready.</li><p></p>
         <li>Select <b>Open in Visual Studio Code</b>.
 
-        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image3.png?raw=true" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/main/static/img/readme/image3.png?raw=true" /></p>
         </li>
         <li>Select <b>View > Terminal</b>. 
         <p>You'll use the terminal for configuring the remote connection between your local repo and the main repo. You'll also use the terminal to finalize the last bit of installation required.</p>
 
-        <p><img src="https://github.com/patriciamcphee/portfolio/blob/master/static/img/readme/image4.png?raw=true" /></p>
+        <p><img src="https://github.com/patriciamcphee/portfolio/blob/main/static/img/readme/image4.png?raw=true" /></p>
         </li>
       </ol>    
 

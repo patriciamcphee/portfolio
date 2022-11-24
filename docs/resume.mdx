@@ -2,7 +2,7 @@
 title: Resume - Patricia McPhee
 description: Learn more about my career path, accomplishments, skills, and training.
 last_update: 
-   date: 11/15/2022
+   date: 11/17/2022
    author: Patricia McPhee
 ---
 
@@ -12,11 +12,35 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
 
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import Divider from '@mui/material/Divider';
+import GradeIcon from '@mui/icons-material/Grade';
+
+import WorkIcon from '@mui/icons-material/Work';
 
 
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 
+import Slider from '@mui/material/Slider';
 
-
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 >**Technical Writer / Content Designer**<br /> 
 > *I am passionate about creating content experiences that help people navigate, use, and troubleshoot products.*
@@ -34,197 +58,450 @@ import Chip from '@mui/material/Chip';
 
 
 
-
-<!-- Include file 
-I’m a Technical Writer / Content Designer and have been in the Tech Industry since the late 1990s, starting in support and moving to network system administration. However, for the past two decades, I’ve been taking the guesswork out of complex technical content and helping people navigate, use and troubleshoot products. -->
-<!-- -->
-
 ## Accomplishments 
 
-- Built an online help system using Docusaurus for a tech security startup.
-- Wrote shell scripts to automate OpenAPI content publishing for a data center hardware company.
-- Streamlined a weekly team status report for the executive team of a large technology company, reducing the time to compile and deliver the information by ~4 hours (more than half).
-- Rewrote a decades-old installation and upgrade guide for customers and the support team of an electronic medical records platform, reducing the time to install or upgrade, data loss or corruption, and support calls.
-- Built a _**custom**_ authoring environment in MadCap Flare and converted legacy content for several large corporations, from healthcare companies to tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content.
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <GradeIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Built an online help system using Docusaurus for a tech security startup." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <GradeIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Wrote shell scripts to automate OpenAPI content publishing for a data center hardware company." />
+  </ListItem>
+    <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <GradeIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Streamlined a weekly team status report for the executive team of a large technology company, reducing the time to compile and deliver the information by ~4 hours (more than half)." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <GradeIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Rewrote a decades-old installation and upgrade guide for customers and the support team of an electronic medical records platform, reducing the time to install or upgrade, data loss or corruption, and support calls." />
+  </ListItem>
+    <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <GradeIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Built a custom authoring environment in MadCap Flare and converted legacy content for several large corporations, from healthcare companies to tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content." />
+  </ListItem>
+
+</List>
+<Divider />
+
+
+
+
+
 
 ## Work experience
 
-
-**Expedia Group/Braintrust**<br />
-**Content Strategist, Contractor**<br /> 
-100% Remote <br /> 
-May 2022 - November 2022 
-
-Performed a content analysis and inventory of the design system training material and documentation. Developed the initial outline for the onboarding and learning material for the design system.
-
-
-**Microsoft/Kforce**<br />
-**Technical Writer, Contractor**<br /> 
-100% Remote <br /> 
-May 2020 - October 2021 
-
-Worked collaboratively with the Azure Dedicated engineering and UX Research teams to develop scenario and goal-based content. Wrote and edited UX microcopy and UI strings. Conducted audits of existing content to identify areas for improvement. Assisted with the copywriting of the Azure VMware Solution learning modules. 
-
-
-
-**PSCM Designs, LLC**<br />
-**Freelancer**<br />
-100% Remote<br />
-July 2019 - June 2021 
-
-| Project | Job Description |
-| ------- | --------------- |
-| [**Extreme Networks**](https://www.extremenetworks.com)<br />Technical Writer<br />100% remote<br />September 2020 - May 2021 | Reviewed and copy edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing.  |
-| [**ZPE Systems**](https://www.zpesystems.com)<br />Network Content Writer<br />100% remote<br />September 2019 - January 2020 | Wrote a marketing campaign eBook. Wrote the learning material and voiceover scripts, provided the voiceover, and produced how-to videos.  | 
-| [**WAX.io**](https://wax.io/)<br />Technical Marketing Writer<br />100% remote<br />July 2019 - August 2019 | Contributed to blockchain blog articles. |
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Content Strategist, Contractor
+    </Typography>
+    <Typography color="text.secondary">
+      Expedia Group, Braintrust
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      May 2022 - November 2022
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Performed a content analysis and inventory of the design system training material and documentation. Developed the initial outline for the onboarding and learning material for the design system.
+    </Typography>
+  </CardContent>
+</Card>
 
 
-**LivePerson**<br />
-**Technical Writer II** <br /> 
-Seattle, WA - Partially remote <br /> 
-March 2019 - June 2019 
-
-Worked with the mobile app development team to rewrite the SDK and API guides for mobile messaging.
-
-
-**Microsoft**<br /> 
-**Technical Writer II** <br /> 
-Redmond, WA - Partially remote <br /> 
-January 2018 - January 2019
-
-- Worked with the Microsoft Edge development team to rewrite the Microsoft Edge (Legacy) deployment group policies. 
-- Worked with the networking team to update the Always On VPN and other networking content.
-
-**Oculus VR, *a Facebook company***<br /> 
-**Technical Writer, Contractor** <br /> 
-Redmond, WA <br /> 
-July 2017 - December 2017 
-
-- Developed cross-functional workflows and process documentation for the Mechanical and Electrical Engineers in a Virtual Reality R&D environment. 
-- Managed all controlled documentation, such as SOWs, CAD drawings, and SOPs.
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer, Contractor
+    </Typography>
+    <Typography color="text.secondary">
+      Microsoft, Kforce
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      May 2020 - October 2021
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Worked collaboratively with the Azure Dedicated engineering and UX Research teams to develop scenario and goal-based content. Wrote and edited UX microcopy and UI strings. Conducted audits of existing content to identify areas for improvement. Assisted with the copywriting of the Azure VMware Solution learning modules.
+    </Typography>
+  </CardContent>
+</Card>
 
 
-**GE Healthcare**<br />
-**Software Technical Writer** <br /> 
-Seattle, WA - Partially remote <br /> 
-August 2016 - May 2017 
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Freelance Technical Writer
+    </Typography>
+    <Typography color="text.secondary">
+      PSCM Designs LLC
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      July 2019 - June 2021
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Extreme Networks" secondary="Reviewed and copy edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing." />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="ZPE Systems" secondary="Wrote a marketing campaign eBook. Wrote the learning material and voiceover scripts, provided the voiceover, and produced how-to videos."  />
+ 
+  </ListItem>
 
-Collaborated with developers and customers to rewrite an outdated installation/upgrade guide, reducing data loss, corruption, and support calls.
+</List>
+    </Typography>
+  </CardContent>
+</Card>
+
+ 
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer II
+    </Typography>
+    <Typography color="text.secondary">
+      LivePerson
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      March 2019 - June 2019
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Worked with the mobile app development team to rewrite the SDK and API guides for mobile messaging.
+    </Typography>
+  </CardContent>
+</Card>
+
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer II
+    </Typography>
+    <Typography color="text.secondary">
+      Microsoft
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      January 2018 - January 2019
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Worked collaboratively with the Microsoft Edge and Windows networking core teams. Wrote and edited UX microcopy and UI strings.  Conducted content audits to identify areas for potential improvement. Used qualitative and quantitative data to make data-driven decisions. 
+    </Typography>
+  </CardContent>
+</Card>
+
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer, Contractor
+    </Typography>
+    <Typography color="text.secondary">
+      Oculus VR, a Facebook company
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      July 2017 - December 2017 
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Developed internal cross-functional workflows and process documentation for a virtual reality R&D environment.
+ 
+    </Typography>
+  </CardContent>
+</Card>
+
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer
+    </Typography>
+    <Typography color="text.secondary">
+      GE Healthcare
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      August 2016 - May 2017  
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Worked collaboratively with customers and support to update the outdated installation and upgrade guides. The rework resulted in more successful upgrades and reduced customer support calls.  
+    </Typography>
+  </CardContent>
+</Card>
 
 
-**Amazon**<br />
-**Technical Writer II** <br /> 
-Seattle, WA - Partially remote <br /> 
-September 2015 - July 2016 
-
-Wrote feature announcements and task-oriented guides for the employees at the Amazon Fulfillment Centers (FCs). 
-
-
-**Charter Communications**<br /> 
-**Technical Writer, Contractor** <br /> 
-Greenwood Village, CO <br /> 
-March 2015 - September 2015 
-
-- Collaborated with the video-on-demand (VOD) and network engineers on Method of Procedures (MOPs) documentation.
-- Wrote Python scripts for system administration tasks.
-
-
-**MadCap Flare Conversion Specialist** <br />
-Superior, CO <br /> 
-October 2014 - December 2014 
-
-- Built a custom authoring environment in MadCap Flare and converted legacy content.
-- Trained technical writers and instructional designers to use and customize MadCap Flare.
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer II
+    </Typography>
+    <Typography color="text.secondary">
+      Amazon
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      September 2015 - July 2016  
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Wrote internal feature announcements and task-oriented procedure guides using MadCap Flare for warehouse employees.  
+    </Typography>
+  </CardContent>
+</Card>
 
 
-**SolidFire, *a NetApp company***<br />
-**Technical Writer** <br /> 
-Boulder, CO <br /> 
-January 2014 - October 2014 
-
-- Wrote release notes, API guides, user guides, and online help for the support team, field technicians, developers, and customers. 
-- Contributed and edited content for white papers, best practice articles, and solution briefs for the cloud storage solution.
-
-
-**Sybase, *an SAP company***<br /> 
-**Technical Writer, Contractor** <br /> 
-Broomfield, CO <br /> 
-December 2012 - December 2013 
-
-- Wrote installation, configuration, and API guides on the Sybase Money Mobiliser Platform for developers, support, and customers. 
-- Worked closely with software developers, project managers, and product architects.
-
-
-**Technical Writing Consultant**<br /> 
-100% Remote <br /> 
-July 2012 - January 2013 
-
-- Wrote design specifications for the city planning and budgeting software. 
-- Restructured the instructor-led training to include scenario-based, hands-on exercises and review questions for general users and IT personnel.
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer, Contractor
+    </Typography>
+    <Typography color="text.secondary">
+      Charter Communications
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      March 2015 - September 2015  
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Worked collaboratively with video-on-demand and networking engineers to write standard procedures.  Wrote Python scripts for system administration tasks.   
+    </Typography>
+  </CardContent>
+</Card>
 
 
-**Level 3 Communications, *a CenturyLink company***<br />
-**Technical Writer, Contractor** <br /> 
-Broomfield, CO <br /> 
-August 2011 - July 2012 
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer
+    </Typography>
+    <Typography color="text.secondary">
+      SolidFire, a NetApp company
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      January 2014 - October 2014  
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Wrote release notes, configuration and troubleshooting guides, white papers, and solution briefs for the cloud storage solution. Also, wrote and edited UX microcopy and UI strings.   
+    </Typography>
+  </CardContent>
+</Card>
 
-Wrote fiber optic cable provisioning procedures in an online help format for field technicians.
+
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Technical Writer, Contractor
+    </Typography>
+    <Typography color="text.secondary">
+      Sybase, an SAP company
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      December 2012 - December 2013   
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Wrote installation, configuration, and API guides for a mobile money app.  
+    </Typography>
+  </CardContent>
+</Card>
+
+
+<Card sx={{ minWidth: '100%' }} elevation={0}>
+  <CardContent>
+    <Typography variant="h5" component="div">
+      Freelance Technical Writer
+    </Typography>
+    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
+      July 2012 - January 2013   
+    </Typography>
+    <Typography variant="body2" sx={{ py: 1 }}>
+      Wrote design specifications and instructor-led training guides for enterprise planning and budgeting software. Also, wrote and edited UX microcopy and UI strings.
+    </Typography>
+  </CardContent>
+</Card>
+
+
+
 
 
 ## Skills
 
 
-#### Technical writing and authoring
-- Technical and UX writing \| 100%
-- Markdown, Confluence, and other wiki platforms \| 100%
-- Static-site generators/Docs-as-code (Docusaurus, Jekyll, Gatsby, and DocFX) \| 90%
-- DITA/XML, oXygen, Arbortext \| 60%
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Technical Writing</Typography>
+  <Slider
+    aria-label="Technical Writing"
+    label="Technical Writing"
+    value={100}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">UX Writing</Typography>
+  <Slider
+    aria-label="UX Writing"
+    label="UX Writing"
+    value={90}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Content Strategy</Typography>
+  <Slider
+    aria-label="Content Strategy"
+    label="Content Strategy"
+    value={80}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Markdown</Typography>
+  <Slider
+    aria-label="Markdown"
+    label="Markdown"
+    value={100}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Docusaurus</Typography>
+  <Slider
+    aria-label="Docusaurus"
+    label="Docusaurus"
+    value={80}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">DITA/XML</Typography>
+  <Slider
+    aria-label="DITA/XML"
+    label="DITA/XML"
+    value={60}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Curriculum Writing</Typography>
+  <Slider
+    aria-label="Curriculum Writing"
+    label="Curriculum Writing"
+    value={70}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Figma/Miro</Typography>
+  <Slider
+    aria-label="Temperature"
+    label="Technical Writing"
+    value={80}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
+<Box sx={{ width: 300 }}>
+  <Typography variant="p">Git/GitHub</Typography>
+  <Slider
+    aria-label="Temperature"
+    label="Technical Writing"
+    value={90}
+    sx={{ marginBottom: '1rem', color: '#253368' }}
+  />
+</Box>
 
-#### Visual design/graphic design
-- Visual design and desktop publishing \| 90%
-- Adobe Creative Cloud (Photoshop, InDesign, Illustrator) \| 80%
 
-#### Video production
-  Adobe Premiere Pro \| 50% 
-
-#### Voiceover and audio editing
-- Audacity \| 75%
-- Adobe Audition \| 30%
-
-#### Instructional design
-- Curriculum writing \| 75%
-- Storyboarding \| 75%
-- Adobe Captivate \| 75% 
-
-#### Programming and misc. 
-- HTML5/CSS3 \| 85%
-- JavaScript/Node.js \| 70%
-- GitHub/Git/Git bash \| 90%
-- Azure DevOps \| 60%
-
-#### Remote, flexible work experience
-- Focus and time management
-- Proactive communication
-- Troubleshooting
-- Growth mindset
-- Comfortable with digital communication
-- Video conferencing: MS Teams, Skype, Zoom
-- Instant messaging: Skype, Slack, Google Chat, MS Teams
-- File sharing: Google Drive, Box, Dropbox, OneDrive
 
 ## Documentation frameworks
 Around 2015, I started using markdown more as the primary format for content, mainly in Confluence and other wiki platforms. In 2018, I started using static-site generators like Jekyll, Hugo, Gatsby, Docusaurus, and DocFX as a primary authoring environment. My favorite, so far, has been Docusuarus. I like DocFX, but it's a bit more complicated to set up.
 
-| Framework | Platform | User type | Company | 
-| --- | --- | --- | --- |
-| Docs-as-Code | Docusaurus<br />(React/Node.js) | <ul><li>Author</li><li>Information Architect</li></ul> | <ul><li>A Tech Security Startup (2021-2022)</li><li>A Tech Startup (2020)</li></ul> | 
-| Docs-as-Code | DocFX | Author | Microsoft (2018, 2020-2021, 2022) |
-| Docs-as-Code | Jekyll<br />(Ruby) | Author | LivePerson (2019) |
-| DITA | oXygen | Author | <ul><li>Extreme Networks (2020-2021)</li><li>Sybase/SAP (2012-2013)</li></ul> |
-| DITA | Arbortext | Author | <ul><li>Pillar Data (2010)</li><li>Ericsson (2008)</li></ul> |
-| DITA | Structured Framemaker | <ul><li>Author</li><li>Information Architect</li></ul> | <ul><li>Covidien/Medtronic (2009-2010)</li><li>LSI Logic (2008-2009)</li></ul> |
-| HTML/CSS | MacCap Flare | <ul><li>Author</li><li>Information Architect</li><li>Certified Trainer</li></ul> | <ul><li>GE Healthcare (2016-2017)</li><li>Amazon (2015-2016)</li><li>SolidFire (2014)</li><li>Level 3 Communications (2011-2012)</li><li>ESM (2010-2011)</li></ul> |
-| HTML/CSS | Robohelp | <ul><li>Author</li><li>Information Architect</li></ul> | P2 Energy Solutions (2007-2008) |
+
+<TableContainer>
+  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableHead>
+      <TableRow>
+        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Framework</TableCell>
+        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Platform</TableCell>
+        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Role</TableCell>
+        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Company</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>Docs-as-code</TableCell>
+          <TableCell>Docusaurus</TableCell>
+          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
+          <TableCell><ul><li>A Tech Security Startup (2021-2022)</li><li>A Tech Startup (2020)</li></ul></TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>Docs-as-code</TableCell>
+          <TableCell>DocFx</TableCell>
+          <TableCell>Author</TableCell>
+          <TableCell>Microsoft (2018, 2020-2021, 2022)</TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>Docs-as-code</TableCell>
+          <TableCell>Jekyll</TableCell>
+          <TableCell>Author</TableCell>
+          <TableCell>LivePerson (2019)</TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>DITA</TableCell>
+          <TableCell>oXygen</TableCell>
+          <TableCell>Author</TableCell>
+          <TableCell><ul><li>Extreme Networks (2020-2021)</li><li>Sybase/SAP (2012-2013)</li></ul></TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>DITA</TableCell>
+          <TableCell>Arbortext</TableCell>
+          <TableCell>Author</TableCell>
+          <TableCell><ul><li>Pillar Data (2010)</li><li>Ericsson (2008)</li></ul></TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>DITA</TableCell>
+          <TableCell>Structured Framemaker</TableCell>
+          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
+          <TableCell><ul><li>Covidien/Medtronic (2009-2010)</li><li>LSI Logic (2008-2009)</li></ul></TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>HTML/CSS</TableCell>
+          <TableCell>MacCap Flare</TableCell>
+          <TableCell><ul><li>Author</li><li>Information Architect</li><li>Certified Trainer</li></ul></TableCell>
+          <TableCell><ul><li>GE Healthcare (2016-2017)</li><li>Amazon (2015-2016)</li><li>SolidFire (2014)</li><li>Level 3 Communications (2011-2012)</li><li>ESM (2010-2011)</li></ul></TableCell>
+        </TableRow>
+        <TableRow sx={{ verticalAlign: 'top' }}>
+        <TableCell>HTML/CSS</TableCell>
+          <TableCell>Robohelp</TableCell>
+          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
+          <TableCell>P2 Energy Solutions (2007-2008)</TableCell>
+        </TableRow>               
+    </TableBody>
+  </Table>
+</TableContainer>
+
+
+
 
 ## Training and education
 

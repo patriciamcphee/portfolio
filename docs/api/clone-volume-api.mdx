@@ -1,0 +1,120 @@
+---
+title: CloneVolume API
+description: Written for cloud storage or data center admins to create a copy of the volume.  
+last_update: 
+   date: 11/18/2022
+   author: Patricia McPhee
+---
+ 
+
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WorkIcon from '@mui/icons-material/Work';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Divider from '@mui/material/Divider';
+
+
+<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <WorkIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Project" secondary="Work-related" />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <DescriptionIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Description" secondary="Written for cloud storage or data center admins to create a copy of the volume.  " />
+  </ListItem>
+  <ListItem>
+    <ListItemAvatar>
+      <Avatar>
+        <CalendarMonthIcon />
+      </Avatar>
+    </ListItemAvatar>
+    <ListItemText primary="Date" secondary="June 18, 2014" />
+  </ListItem>
+</List>
+<Divider />
+<br />
+
+
+CloneVolume is used to create a copy of the volume. This method is asynchronous and may take a variable time to complete. The cloning process begins immediately when the CloneVolume request is made and is representative of the state of the volume when the API method is issued. [GetAsyncResults](./get-async-results) can determine when the cloning process is complete, and the new volume is available for connections. ListSyncJobs can be used to see the progress of creating the clone.
+
+:::note Notes
+- The cloned volume inherits the initial attributes and quality of service settings for the volume. If different settings are required, you can change them through ModifyVolume.
+- Cloned volumes do not inherit volume access group memberships from the source volume.
+:::
+
+## Parameters
+
+| Name | Description | Type | Default value |
+| ------- | -------------------- | ------ | ------ |
+| <code>volumeID</code> | ID of the volume to be cloned.  | Integer  | Required  |
+| <code>name</code> | Name of the cloned volume. Up to 64 characters are allowed  | String  | Required  |
+| <code>newAccountID</code> | AccountID for the owner of the new volume. If unspecified, the accountID is inherited from the volume cloned.    | Integer  | Optional  |
+| <code>newSize</code> | New size, in bytes, of the volume. It may be greater or less than the size of the volume cloned. If unspecified, the volume size does not change and gets rounded to the nearest 1MB.   | Integer  | Optional  |
+| <code>access</code> | Access allowed for the new volume. Possible values:<ul><li><b><code>readOnly</code></b>: Only read operations allowed.</li><li><b><code>readWrite</code></b>: Reads and writes allowed.</li><li><b><code>locked</code></b>: No reads or writes allowed. If unspecified, the access value gets inherited from the volume cloned.</li><li><b><code>replicationTarget</code></b>: Identify a volume as the target volume for a paired set of volumes. If the volume is not paired, the access status is <i>blocked</i>.</li></ul> If a value is unspecified, the access value does not change. | String  | Optional  |
+| <code>attributes</code> | List of Name/Value pairs in JSON object format.  | JSON  | Optional  |
+| <code>snapshotID</code> | ID of the snapshot used as the source of the clone. If no ID is provided, the current active volume is used.  | Integer  | Optional  |
+
+
+
+## Return value
+
+| Name | Description | Type |
+| --- | --- | --- |
+| <code>asyncHandle</code> | Handle value used to obtain the operation result | Integer  |
+| <code>cloneID</code> | Clone ID for the newly cloned volume. | Integer   |
+| <code>curve</code> | QoS curve value applied to the clone. | Array of integers  |
+| <code>volumeID</code> | Volume ID for the newly cloned volume.  | Integer  |
+
+
+## Request example
+
+```JSON
+{
+   "method": "CloneVolume",
+   "params": {
+      "volumeID" : 5,
+      "name"  : "mysqldata-snapshot1",
+      "access" : "readOnly"
+   },
+   "id" : 1
+}
+```
+
+
+## Response example
+
+```JSON
+{
+   "id" : 1,
+   "result" : {
+      "asyncHandle" : 1,
+      "cloneID: 3,
+      "curve" : {
+         "1048576" : 19200,
+         "131072" : 2400,
+         "16384" : 300,
+         "262144" : 4800,
+         "32768" : 600,
+         "4096" : 100,
+         "524288" : 9600,
+         "65536" : 1200,
+         "8192" : 160
+      },
+      "volumeID" : 202
+   }
+}
+```

@@ -1,19 +1,10 @@
 ---
 title: Group policies
-description: Group policies are like API reference guides. They all have a purpose and some have dependencies.   
+description: Group policies are common settings that system administrators configure for an enterprise.   
 last_update: 
-   date: 09/26/2022
+   date: 11/19/2022
    author: Patricia McPhee
 ---
-
-
-
-A Group Policy has both control labels and in-platform microcopy (static UI text).  The static UI text provides users with detailed instructions or explanations to make informed decisions.  
-
-Group policies are common settings that system administrators configure for the enterprise. In these examples, the group policies to configure are found in the Group Policy Editor in Windows 10. 
-
-
-
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -41,7 +32,7 @@ import Divider from '@mui/material/Divider';
         <DescriptionIcon />
       </Avatar>
     </ListItemAvatar>
-    <ListItemText primary="Description" secondary="Simplify, simplify, simplify.  Here I wanted to continue what I had been doing while as an FTE with Microsoft - reworking the Microsoft Edge Group Policies for the IT Pros. What I found during my initial rewrite was that the dependencies weren't idenfied. For example, if the policy relied on another one to work correctly, the IT Professional wouldn't know this because the in-platform microcopy or user documentation didn't indicate this dependency." />
+    <ListItemText primary="Description" secondary="Simplify, simplify, simplify. I wanted to continue what I had done while at Microsoft during 2018 - reworking the Microsoft Edge Group Policies for the IT Pros. During my initial rewrite, I removed a lot of unnecessary repetition." />
   </ListItem>
   <ListItem>
     <ListItemAvatar>
@@ -49,87 +40,28 @@ import Divider from '@mui/material/Divider';
         <CalendarMonthIcon />
       </Avatar>
     </ListItemAvatar>
-    <ListItemText primary="Date" secondary="February 12, 2022" />
+    <ListItemText primary="Date" secondary="November 18, 2022" />
   </ListItem>
 </List>
 <Divider />
 <br />
 
-:::note
-Also, these examples are specific to the Microsoft Edge (legacy) browser. 
-:::
 
-## Do not sync browser setting 
+Group policies are common settings that system administrators configure for an enterprise. These policies have control labels and in-platform microcopy that give users detailed instructions or explanations to make informed decisions. 
 
-### Original
+![Local group policy window](../../static/img/group-policy-window.png)
 
-Prevent the "browser" group from syncing to and from this PC. It turns off and disables the "browser" group on the "sync your settings" page in PC settings. The "browser" group contains settings and info like history and favorites.
+The following examples are group policies found in the Group Policy Editor in Windows 10/11. The original microcopy is shown on the left, and the rewrite is on the right.
 
-If you enable this policy setting, the "browser" group, including history and favorites, will not be synced.
+## Allow search engine customization
 
-Use the option "Allow users to turn browser syncing on" so that syncing is turned off by default but not disabled.
+<iframe width="980" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D893%253A5148%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
 
-If you do not set or disable this setting, syncing of the "browser" group is on by default and configuration by the user.
 
-### Rewrite 
+## Prevent using LocalHost IP address for WebRTC
 
-By default, the "browser" group syncs between users' devices automatically, allowing them to make changes. In addition, the "browser" group uses the **Sync your Settings** option in Settings for syncing information like history and favorites.
+<iframe width="980" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D893%253A5153%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
 
-| Setting | Description |
-| ------- | ----------- |
-| Disabled or not configured **(default)** | Allowed/turned on |
-| Enabled | Prevented/turned off |
+## Allow only system backup
 
->> **Related policies:** Prevent users from turning on browser syncing.
-
-<hr />
-
-## Prevent enterprise websites from loading non-enterprise content
-
-### Original
-
-![Orginal browser group policy](../../static/img/gp-browser-before2.png)
-
-### Rewrite 
-
-By default, non-enterprise sites open in Internet Explorer and Microsoft Edge outside of the Windows Defender Application Guard container.
-
-| Setting | Description |
-| ------- | ----------- |
-| Disabled or not configured **(default)** | Allowed |
-| Enabled | Prevented |
-
-<hr />
-
-## Enable automatic MDM enrollment using default Azure AD credentials
-
-### Original 
-
-![Orginal MDM group policy](../../static/img/gp-mdm-before1.png)
-
-### Rewrite
-
-With this policy, you can enroll a device to the Mobile Device Management (MDM) service configured in Azure Active Directory (AAD) automatically.  The device must be registered in AAD for enrollment to succeed. Once enrolled, the device gets managed remotely by the MDM service.  
-
-| Setting | Description |
-| ------- | ----------- |
-| Not configured **(default)** | Automatic MDM enrollment does not initiate.  |
-| Disabled | Unenroll from MDM. |
-| Enabled | A task gets created to initiate MDM enrollment. |
-
-<hr />
-
-## Disable MDM Enrollment
-
-### Original 
-
-![Orginal MDM group policy](../../static/img/gp-mdm-before2.png)
-
-### Rewrite
-
-With this policy, you can prevent Mobile Device Management (MDM) enrollment for all users.   
-
-| Setting | Description |
-| ------- | ----------- |
-| Disabled or not configured **(default)** | Automatic MDM enrollment initiates. Enable MDM enrollment for all users. |
-| Enabled | Disable MDM enrollment for all users. It does not unenroll existing MDM enrollments. |
+<iframe width="980" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D1007%253A3721%26t%3DoamaxtivsiQYHXg2-1" allowfullscreen></iframe>

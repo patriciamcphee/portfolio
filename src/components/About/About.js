@@ -35,9 +35,7 @@ const About = () => {
         <WhoWeAre />
       </Container>
 
-      <Container sx={{ alignItems: 'center', py: 6}}>
-      <Divider />
-      </Container>
+
       
 
 

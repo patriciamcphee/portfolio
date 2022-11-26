@@ -33,8 +33,6 @@ const PersonaList = [
     location: 'Brooklyn, NY',
     experience:  '7 years',
     industry: 'Healthcare',
-    href: ('/portfolio/docs/ux-writing/errors-warnings-confirmations'),
-    label: ('Learn more'),
     level: 'Intermediate',
   },
   {
@@ -52,8 +50,6 @@ const PersonaList = [
     experience:  '12 years',
     industry: 'Retail',
     level: 'Advanced',
-    href: ('/portfolio/docs/ux-writing/ui-strings'),
-    label: ('Learn more'),
   },
   {
     title: 'IT Architect',
@@ -70,8 +66,6 @@ const PersonaList = [
     experience:  '17 years',
     industry: 'FinTech',
     level: 'Expert/MacGyver',
-    href: ('/portfolio/docs/api/api-example-bflix'),
-    label: ('Learn more'),
   },
 ];
 
@@ -79,8 +73,8 @@ function Persona({ Svg, title, description, name, age, location, experience, ind
   return (
     
     <div className={clsx('col col--4', styles.feature)}>
-<Card sx={{  p: 2, borderRadius: 4, minHeight: 710 }} elevation={9}>
-      <CardActionArea>
+<Card sx={{  p: 2, borderRadius: 4, minHeight: 655 }} elevation={9}>
+    
         
 
       <div className="text--center">
@@ -108,30 +102,30 @@ function Persona({ Svg, title, description, name, age, location, experience, ind
         </Typography>
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
+
               <ListItemText 
                 primary={name}
                 secondary={age}
 
                />
                   
-            </ListItemButton>
+
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+
               <ListItemText primary={location} />
-            </ListItemButton>
+
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+
               <ListItemText primary={level}
               secondary={experience} />
-            </ListItemButton>
+
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+
               <ListItemText primary={industry} />
-            </ListItemButton>
+
           </ListItem>
         </List>
       </nav>
@@ -144,7 +138,7 @@ function Persona({ Svg, title, description, name, age, location, experience, ind
 
         
       </CardContent>
-    </CardActionArea>
+
     </Card>
   </div>
     

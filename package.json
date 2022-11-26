@@ -37,6 +37,8 @@
     "eventsource": "^2.0.2",
     "font-awesome": "^4.7.0",
     "formik": "^2.2.9",
+    "formik-mui": "^5.0.0-alpha.0",
+    "formik-mui-x-date-pickers": "^0.0.1",
     "glob-parent": "^6.0.2",
     "got": "^12.1.0",
     "immer": "^9.0.6",

@@ -2,7 +2,7 @@
 title: Resume - Patricia McPhee
 description: Learn more about my career path, accomplishments, skills, and training.
 last_update: 
-   date: 11/17/2022
+   date: 11/26/2022
    author: Patricia McPhee
 ---
 
@@ -41,11 +41,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
->**Technical Writer / Content Designer**<br /> 
+>**Technical Writer / Content Strategist**<br /> 
 > *I am passionate about creating content experiences that help people navigate, use, and troubleshoot products.*
 
-
+<br />
 <Button
   label="Download Resume"
   component="a"
@@ -60,7 +61,8 @@ import Paper from '@mui/material/Paper';
 
 ## Accomplishments 
 
-
+<Card sx={{ minWidth: '100%', borderRadius: 4 }} elevation={0}>
+  <CardContent>
 <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
   <ListItem>
     <ListItemAvatar>
@@ -104,7 +106,9 @@ import Paper from '@mui/material/Paper';
   </ListItem>
 
 </List>
-<Divider />
+  </CardContent>
+</Card>
+
 
 
 
@@ -113,7 +117,7 @@ import Paper from '@mui/material/Paper';
 
 ## Work experience
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Content Strategist, Contractor
@@ -131,7 +135,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Senior Technical Writer
@@ -149,7 +153,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -167,7 +171,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Freelance Technical Writer
@@ -204,7 +208,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
  
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -221,7 +225,7 @@ import Paper from '@mui/material/Paper';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -238,7 +242,7 @@ import Paper from '@mui/material/Paper';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -256,7 +260,7 @@ import Paper from '@mui/material/Paper';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer
@@ -274,7 +278,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -292,7 +296,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -310,7 +314,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer
@@ -328,7 +332,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -346,7 +350,7 @@ import Paper from '@mui/material/Paper';
 </Card>
 
 
-<Card sx={{ minWidth: '100%' }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Freelance Technical Writer
@@ -364,146 +368,153 @@ import Paper from '@mui/material/Paper';
 
 
 
+
 ## Skills
 
 
-<Box sx={{ width: 300 }}>
-  <Typography variant="p">Technical Writing</Typography>
-  <Slider
-    aria-label="Technical Writing"
-    label="Technical Writing"
-    value={100}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
-  />
-</Box>
-<Box sx={{ width: 300 }}>
-  <Typography variant="p">Content Strategy/Design</Typography>
-  <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
-    value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
-  />
-</Box>
-<Box sx={{ width: 300 }}>
-  <Typography variant="p">UX/UI Writing</Typography>
-  <Slider
-    aria-label="UX Writing"
-    label="UX Writing"
-    value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
-  />
-</Box>
-<Box sx={{ width: 300 }}>
+<Card elevation={0}>
+  <CardContent sx={{ p: 4 }}>
+<Box sx={{ flexGrow: 1, align: 'center' }}  >
+  <Grid container spacing={4} columns={16}>
+    <Grid item xs={5} sx={{ p: 4 }} >
+        <Typography variant="p">Technical Writing</Typography>
+        <Slider
+        aria-label="Technical Writing"
+        label="Technical Writing"
+        value={100}
+        sx={{  color: '#253368' }}
+        />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
+        <Typography variant="p">Content Strategy/Design</Typography>
+        <Slider
+          aria-label="Content Strategy"
+          label="Content Strategy"
+          value={90}
+          sx={{  color: '#253368' }}
+        />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
+      <Typography variant="p">UX/UI Writing</Typography>
+      <Slider
+        aria-label="UX Writing"
+        label="UX Writing"
+        value={90}
+        sx={{  color: '#253368' }}
+      />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Information Architecture</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="Information Architecture"
+    label="Information Architecture"
     value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Instructional Design</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="Instructional Design"
+    label="Instructional Design"
     value={80}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">HTML/CSS</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="HTML/CSS"
+    label="HTML/CSS"
     value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">DITA/XML</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="DITA/XML"
+    label="DITA/XML"
     value={60}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Figma/Miro</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="Figma/Miro"
+    label="Figma/Miro"
     value={80}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Markdown</Typography>
   <Slider
-    aria-label="Content Strategy"
-    label="Content Strategy"
+    aria-label="Markdown"
+    label="Markdown"
     value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Git/GitHub</Typography>
   <Slider
-    aria-label="Temperature"
-    label="Technical Writing"
+    aria-label="Git/GitHub"
+    label="Git/GitHub"
     value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Agile/Jira/Azure DevOps</Typography>
   <Slider
-    aria-label="Temperature"
-    label="Technical Writing"
+    aria-label="Agile/Jira/Azure DevOps"
+    label="Agile/Jira/Azure DevOps"
     value={70}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">JavaScript/Node.js</Typography>
   <Slider
-    aria-label="Temperature"
-    label="Technical Writing"
+    aria-label="JavaScript/Node.js"
+    label="JavaScript/Node.js"
     value={80}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Postman/Swagger</Typography>
   <Slider
-    aria-label="Temperature"
-    label="Technical Writing"
+    aria-label="Postman/Swagger"
+    label="Postman/Swagger"
     value={50}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">MongoDB</Typography>
   <Slider
-    aria-label="Temperature"
-    label="Technical Writing"
+    aria-label="MongoDB"
+    label="MongoDB"
     value={60}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{  color: '#253368' }}
   />
-</Box>
-<Box sx={{ width: 300 }}>
+    </Grid>
+    <Grid item xs={5} sx={{ p: 4 }} >
   <Typography variant="p">Docusaurus</Typography>
   <Slider
     aria-label="Docusaurus"
     label="Docusaurus"
     value={90}
-    sx={{ marginBottom: '1rem', color: '#253368' }}
+    sx={{ color: '#253368' }}
   />
+    </Grid>
+  </Grid>
 </Box>
-
-
+  </CardContent>
+</Card>
 
 
 

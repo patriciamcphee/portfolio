@@ -373,10 +373,10 @@ import Grid from '@mui/material/Grid';
 
 
 <Card elevation={0}>
-  <CardContent sx={{ p: 4 }}>
+  <CardContent sx={{ p: 2 }}>
 <Box sx={{ flexGrow: 1, align: 'center' }}  >
-  <Grid container spacing={4} columns={16}>
-    <Grid item xs={5} sx={{ p: 4 }} >
+  <Grid container spacing={2} columns={16}>
+    <Grid item xs={5} sx={{ p: 2 }} >
         <Typography variant="p">Technical Writing</Typography>
         <Slider
         aria-label="Technical Writing"
@@ -385,7 +385,7 @@ import Grid from '@mui/material/Grid';
         sx={{  color: '#253368' }}
         />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
         <Typography variant="p">Content Strategy/Design</Typography>
         <Slider
           aria-label="Content Strategy"
@@ -394,7 +394,7 @@ import Grid from '@mui/material/Grid';
           sx={{  color: '#253368' }}
         />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
       <Typography variant="p">UX/UI Writing</Typography>
       <Slider
         aria-label="UX Writing"
@@ -403,7 +403,7 @@ import Grid from '@mui/material/Grid';
         sx={{  color: '#253368' }}
       />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">Information Architecture</Typography>
   <Slider
     aria-label="Information Architecture"
@@ -412,7 +412,7 @@ import Grid from '@mui/material/Grid';
     sx={{  color: '#253368' }}
   />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">Instructional Design</Typography>
   <Slider
     aria-label="Instructional Design"
@@ -421,7 +421,7 @@ import Grid from '@mui/material/Grid';
     sx={{  color: '#253368' }}
   />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">HTML/CSS</Typography>
   <Slider
     aria-label="HTML/CSS"
@@ -430,7 +430,7 @@ import Grid from '@mui/material/Grid';
     sx={{  color: '#253368' }}
   />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">DITA/XML</Typography>
   <Slider
     aria-label="DITA/XML"
@@ -439,7 +439,7 @@ import Grid from '@mui/material/Grid';
     sx={{  color: '#253368' }}
   />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">Figma/Miro</Typography>
   <Slider
     aria-label="Figma/Miro"
@@ -448,61 +448,16 @@ import Grid from '@mui/material/Grid';
     sx={{  color: '#253368' }}
   />
     </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">Markdown</Typography>
-  <Slider
-    aria-label="Markdown"
-    label="Markdown"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">Git/GitHub</Typography>
-  <Slider
-    aria-label="Git/GitHub"
-    label="Git/GitHub"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">Agile/Jira/Azure DevOps</Typography>
-  <Slider
-    aria-label="Agile/Jira/Azure DevOps"
-    label="Agile/Jira/Azure DevOps"
-    value={70}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">JavaScript/Node.js</Typography>
-  <Slider
-    aria-label="JavaScript/Node.js"
-    label="JavaScript/Node.js"
-    value={80}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">Postman/Swagger</Typography>
-  <Slider
-    aria-label="Postman/Swagger"
-    label="Postman/Swagger"
-    value={50}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
-  <Typography variant="p">MongoDB</Typography>
-  <Slider
-    aria-label="MongoDB"
-    label="MongoDB"
-    value={60}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 4 }} >
+    <Grid item xs={5} sx={{ p: 2 }} >
+      <Typography variant="p">Asseccibility Concepts</Typography>
+      <Slider
+        aria-label="a11y"
+        label="a11y"
+        value={70}
+        sx={{ color: '#253368' }}
+      />
+    </Grid> 
+    <Grid item xs={5} sx={{ p: 2 }} >
   <Typography variant="p">Docusaurus</Typography>
   <Slider
     aria-label="Docusaurus"
@@ -511,12 +466,75 @@ import Grid from '@mui/material/Grid';
     sx={{ color: '#253368' }}
   />
     </Grid>
+        <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">Confluence</Typography>
+  <Slider
+    aria-label="Confluence"
+    label="Confluence"
+    value={90}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">Markdown</Typography>
+  <Slider
+    aria-label="Markdown"
+    label="Markdown"
+    value={90}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">Git/GitHub</Typography>
+  <Slider
+    aria-label="Git/GitHub"
+    label="Git/GitHub"
+    value={90}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">Agile/Jira/Azure DevOps</Typography>
+  <Slider
+    aria-label="Agile/Jira/Azure DevOps"
+    label="Agile/Jira/Azure DevOps"
+    value={70}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">JavaScript/Node.js</Typography>
+  <Slider
+    aria-label="JavaScript/Node.js"
+    label="JavaScript/Node.js"
+    value={80}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">Postman/Swagger</Typography>
+  <Slider
+    aria-label="Postman/Swagger"
+    label="Postman/Swagger"
+    value={50}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+    <Grid item xs={5} sx={{ p: 2 }} >
+  <Typography variant="p">MongoDB</Typography>
+  <Slider
+    aria-label="MongoDB"
+    label="MongoDB"
+    value={60}
+    sx={{  color: '#253368' }}
+  />
+    </Grid>
+
+ 
   </Grid>
 </Box>
   </CardContent>
 </Card>
-
-
 
 
 

@@ -21,7 +21,7 @@ const config = {
   
   customFields: {
     // Put your custom environment here
-    jobTitle: 'Technical Writer / Content Designer',
+    jobTitle: 'Technical Writer / Content Strategist',
   },
 
   presets: [

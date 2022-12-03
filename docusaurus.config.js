@@ -78,13 +78,13 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Work',           
+            label: 'Writing Samples',           
           },
-/*          {
+          {
             to: '/blog', 
             label: 'Blog', 
             position: 'left'
-          }, */
+          }, 
           {
             href: 'https://www.linkedin.com/in/patriciamcphee/',
             position: 'right',

@@ -20,9 +20,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const WorkList = [
   {
-    title: 'Error messages',
+    title: 'Errors',
     Svg: require('@site/static/img/Details-page-02.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         Writing error messages can be challenging because you want them to be short but have enough information to help the user. Your overall goal is to guide the user to prevent dead ends. 
@@ -34,7 +33,6 @@ const WorkList = [
   {
     title: 'UI strings',
     Svg: require('@site/static/img/Code-details-page-02.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product.
@@ -46,7 +44,6 @@ const WorkList = [
   {
     title: 'APIs',
     Svg: require('@site/static/img/Code-details-page-1.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a software interface offering a service to other pieces of software.
@@ -58,7 +55,6 @@ const WorkList = [
   {
     title: 'Guides',
     Svg: require('@site/static/img/form-details-02.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         
@@ -70,7 +66,6 @@ const WorkList = [
   {
     title: 'KB articles',
     Svg: require('@site/static/img/form-page.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         
@@ -82,7 +77,6 @@ const WorkList = [
   {
     title: 'Video scripts',
     Svg: require('@site/static/img/pucture-details-page-01.svg').default,
-    alt: 'alt text for image',
     description: (
       <>
         
@@ -93,7 +87,7 @@ const WorkList = [
   },
 ];
 
-function Work({ Svg, title, description, href }) {
+function Work({ Svg, title, href }) {
   return (
     
     <div className={clsx('col col--4', styles.feature)}>

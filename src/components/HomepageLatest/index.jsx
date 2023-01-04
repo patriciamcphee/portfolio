@@ -62,7 +62,7 @@ export default function HomepageLatest() {
     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I know these projects don't pertain to writing, but it's something fun. Plus, I realize that <b>I'm a web developer disguised as a {customFields.jobTitle}</b>.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>My current projects have mostly been full-stack web development with MongoDB, Express, ReactJS/TS, and Node. I've been busy building a movie app, kind of like IMDB but for bad movies that have either been riffed or can be riffed.</Typography>
      <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>Another fun project that I'm working on is a recipe site built using Docusaurus. This project leverages my passion for <b>Information Architecture.</b> I've recruited an aspiring UX Designer to design the landing page.  </Typography>
-     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm also selecting scripts for new voiceover demos as my current demos are three years old. </Typography>
+     <Typography variant="p" align="left" paragraph={true} gutterBottom={true}>I'm building a database for voiceover scripts using MongoDB. I'm also selecting scripts for new voiceover demos as my current demos are three years old. </Typography>
   </Grid>
   <Grid item xs={4}>
   <Box

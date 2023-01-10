@@ -16,7 +16,7 @@ const steps = [
     label: 'Install the tools',
     description: (
       <>
-        <p>Before you can contribute to the EGDS documentation, you'll need to install and set up the tools.</p>
+        <p>Before you can contribute to the SCOOBY documentation, you'll need to install and set up the tools.</p>
             <ol>
               <li><a href="https://nodejs.org/en/download/">NodeJS</a><p></p></li>
               <li>Git client<p></p>

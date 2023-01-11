@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9552],{91145:e=>{e.exports=JSON.parse('{"label":"content design","permalink":"/portfolio/blog/tags/content-design","allTagsPath":"/portfolio/blog/tags","count":2}')}}]);

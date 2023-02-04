@@ -8,13 +8,15 @@
 .features {
   display: inline;
   align-items: center;
+
   padding: 2rem 0;
   width: 100%;
 }
 
 
 .feature {
- max-inline-size: 380px;
+ max-inline-size: 280px;
+ max-height: 300px;
  padding-bottom: 40px;
 }
 

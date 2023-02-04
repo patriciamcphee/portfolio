@@ -15,10 +15,11 @@ import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -26,7 +27,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="UX writing challenge" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -34,7 +35,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Description" secondary="Simplify, simplify, simplify. I wanted to continue what I had done while at Microsoft during 2018 - reworking the Microsoft Edge Group Policies for the IT Pros. During my initial rewrite, I removed a lot of unnecessary repetition." />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -43,6 +44,8 @@ import Divider from '@mui/material/Divider';
     <ListItemText primary="Date" secondary="November 18, 2022" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 <br />
 

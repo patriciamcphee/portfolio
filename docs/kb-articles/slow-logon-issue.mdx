@@ -16,11 +16,11 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
-<Typography><a href="https://support.citrix.com/article/CTX101705">Original KB article</a></Typography>
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -28,7 +28,7 @@ import Typography from '@mui/material/Typography';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="UX and KB writing challenge" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -37,7 +37,7 @@ import Typography from '@mui/material/Typography';
     <ListItemText primary="Description" secondary="I like to keep up with the writing trends. I also like to challenge myself by rewriting and reformatting KB articles. To see the difference, see the original KB article. "  />
  
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -46,11 +46,13 @@ import Typography from '@mui/material/Typography';
     <ListItemText primary="Date" secondary="January 10, 2020" />
   </ListItem>
 </List>
-
+</Container>
+<br />
 <Divider />
 
 <br />
 
+<Typography><a href="https://support.citrix.com/article/CTX101705">Original KB article</a></Typography>
 
 | Article # | Product(s) |
 | --------- | ---------- |

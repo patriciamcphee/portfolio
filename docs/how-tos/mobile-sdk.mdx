@@ -1,7 +1,7 @@
 ---
 title: Mobile SDK 
 last_update: 
-   date: 09/26/2022
+   date: 02/04/2023
    author: Patricia McPhee
 description: API guide for photo and file sharing in a mobile app.  
 ---
@@ -16,10 +16,11 @@ import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -27,7 +28,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="Work-related; Get Started guide for mobile app developers" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -35,7 +36,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Description" secondary="Written for mobile app developers to implement the messaging API. " />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -44,6 +45,8 @@ import Divider from '@mui/material/Divider';
     <ListItemText primary="Date" secondary="June 2019" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 <br />
 

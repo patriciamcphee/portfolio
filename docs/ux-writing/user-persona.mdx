@@ -26,10 +26,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -37,7 +38,7 @@ import Paper from '@mui/material/Paper';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="Work-related, Sr. Technical Writer" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -45,7 +46,7 @@ import Paper from '@mui/material/Paper';
     </ListItemAvatar>
     <ListItemText primary="Description" secondary="Written as a reference to writing for the IT professional in a datacenter." />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -54,6 +55,8 @@ import Paper from '@mui/material/Paper';
     <ListItemText primary="Date" secondary="November 11, 2019" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 <br />
 

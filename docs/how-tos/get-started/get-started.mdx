@@ -19,10 +19,11 @@ import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -30,7 +31,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="Work-related; Get Started guide for a cloud storage provider" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -38,7 +39,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Description" secondary="Written for the Cloud Architects and Engineers. " />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -47,6 +48,8 @@ import Divider from '@mui/material/Divider';
     <ListItemText primary="Date" secondary="November 16, 2022" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 <br />
 
@@ -61,7 +64,6 @@ A cluster appears on the network as a single local group presented to hosts and 
 
 ## Install the plugin
 You can install the plugin using the Debian package or import the Fast Deploy Virtual Appliance (FDVA) Open Virtual Appliance (OVA) template.
-
 
 <Tabs groupId="install-options">
 <TabItem value="FDVA" label="OVA Template">

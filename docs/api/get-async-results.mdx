@@ -17,10 +17,11 @@ import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper'}}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -28,7 +29,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="Work-related" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -36,7 +37,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary= "Description" secondary=" Written for cloud storage or data center admins to retrieve the result of asynchronous method calls."/>
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -45,6 +46,8 @@ import Divider from '@mui/material/Divider';
     <ListItemText primary="Date" secondary="June 18, 2014" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 <br />
 

@@ -15,10 +15,11 @@ import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 
-
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<Container>
+<List sx={{ width: '100%', bgcolor: 'background.paper', color: '#000000', borderRadius: 4 }}>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -26,7 +27,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Project" secondary="Work-related; self-service KB article for manufacturing" />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <DescriptionIcon />
@@ -34,7 +35,7 @@ import Divider from '@mui/material/Divider';
     </ListItemAvatar>
     <ListItemText primary="Description" secondary="Written for the support desk professionals in a manufacturing environment. I learned how to write technical KB articles using an Information Technology Infrastructure Library (ITIL) format for helpdesk professionals and customer self-service." />
   </ListItem>
-  <ListItem>
+  <ListItem sx={{py: 0}}>
     <ListItemAvatar>
       <Avatar>
         <CalendarMonthIcon />
@@ -43,6 +44,8 @@ import Divider from '@mui/material/Divider';
     <ListItemText primary="Date" secondary="January 8, 2019" />
   </ListItem>
 </List>
+</Container>
+<br />
 <Divider />
 
 ## Root cause  

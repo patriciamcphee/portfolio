@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[1164],{49889:o=>{o.exports=JSON.parse('{"label":"video-production","permalink":"/portfolio/docs/blog/tags/video-production","allTagsPath":"/portfolio/docs/blog/tags","count":1}')}}]);

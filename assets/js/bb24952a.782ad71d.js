@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9644],{79439:t=>{t.exports=JSON.parse('{"label":"content strategy","permalink":"/portfolio/blog/tags/content-strategy","allTagsPath":"/portfolio/blog/tags","count":1}')}}]);

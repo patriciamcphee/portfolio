@@ -86,6 +86,7 @@ h2, h3, h4 {
   white-space: nowrap;
 }
 
+
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
 [data-theme='dark'] img[src$='#gh-light-mode-only'] {
   display: none;
@@ -135,7 +136,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 
 
-/* blue dark theme */
+/* blue dark theme*/
 html[data-theme="dark"]:root {
   --ifm-background-color: #6b7fcb;
   --ifm-navbar-background-color: #2b3136;
@@ -143,7 +144,7 @@ html[data-theme="dark"]:root {
   --ifm-navbar-link-hover-color: var(--ifm-color-secondary-light);
   --ifm-font-color-base: #f5f6f7;
   --ifm-link-color: var(--ifm-color-secondary-light);
-}
+} 
 
 
 

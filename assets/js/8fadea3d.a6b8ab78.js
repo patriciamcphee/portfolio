@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[2587],{48294:o=>{o.exports=JSON.parse('{"label":"information architecture","permalink":"/portfolio/docs/blog/tags/information-architecture","allTagsPath":"/portfolio/docs/blog/tags","count":1}')}}]);

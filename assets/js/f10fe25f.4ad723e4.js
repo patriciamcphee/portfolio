@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[1995],{55577:o=>{o.exports=JSON.parse('{"label":"content design","permalink":"/portfolio/docs/blog/tags/content-design","allTagsPath":"/portfolio/docs/blog/tags","count":2}')}}]);

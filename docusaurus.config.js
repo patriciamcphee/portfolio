@@ -11,7 +11,7 @@ const config = {
   title: 'Patricia McPhee',
   tagline: 'I\'m passionate about creating content experiences that help people navigate, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I gather information and design meaningful digital content experiences.',
   url: 'https://patriciamcphee.github.io',
-  baseUrl: '/portfolio/docs/',
+  baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
@@ -51,8 +51,15 @@ const config = {
   ],
 
   themeConfig:
+  
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       
       docs: {
         sidebar: {
@@ -146,9 +153,15 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
       
+       
       prism: {
         theme: lightCodeTheme,
-       /* darkTheme: darkCodeTheme, */
+       darkTheme: darkCodeTheme, 
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false
       },
     }),
     plugins: [
@@ -169,9 +182,12 @@ const config = {
         // ```
       }),
     ],
+    
   ],
 
 
 };
+
+
 
 module.exports = config;

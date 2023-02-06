@@ -209,12 +209,14 @@ font-weight: 700;
 
 }
 
+/*
 .subtask {
   list-style-type: lower-alpha;
   margin-left: -15px;
   margin-top: 6px;
   margin-bottom: 6px;
 }
+*/
 
 .quote {
   font-size: 16pt;
@@ -277,6 +279,19 @@ font-weight: 700;
     width: '100%';
   }
 
+}
+
+p, li {
+  margin: 12px 0;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* nested ordered list */
+
+ol li ol li{
+  list-style-type:lower-alpha;   
+  margin-left: -15px;
 }
 
 /* Tooltips */

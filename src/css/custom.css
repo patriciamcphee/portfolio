@@ -148,7 +148,9 @@ html[data-theme="dark"]:root {
 
 
 
-
+h2 {
+  margin-bottom: 6px;
+}
 
 .navbar {
   background-color: var(--ifm-color-primary);

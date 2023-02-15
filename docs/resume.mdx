@@ -46,7 +46,6 @@ import Grid from '@mui/material/Grid';
 >**Technical Writer / Content Strategist**<br /> 
 > *I am passionate about creating content experiences that help people navigate, use, and troubleshoot products.*
 
-<br />
 <Button
   label="Download Resume"
   component="a"
@@ -54,23 +53,21 @@ import Grid from '@mui/material/Grid';
   variant="text"
   clickable
   startIcon={<FileDownloadIcon />}
-  sx={{ marginBottom: '1rem', color: '#253368' }}
+  sx={{ marginBottom: 0, color: '#253368' }}
 >Download Resume</Button>
 
 
+## Accomplishments
 
-## Accomplishments 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4 }} elevation={0}>
-  <CardContent>
-<List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+<List sx={{ width: '100%', bgcolor: 'background.paper', pt: 0 }}>
+    <ListItem>
     <ListItemAvatar>
       <Avatar>
         <GradeIcon />
       </Avatar>
     </ListItemAvatar>
-    <ListItemText primary="Built an online help system using Docusaurus for a tech security startup." />
+    <ListItemText primary="Built doc sites in Docusaurus for several tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content." />
   </ListItem>
   <ListItem>
     <ListItemAvatar>
@@ -96,18 +93,10 @@ import Grid from '@mui/material/Grid';
     </ListItemAvatar>
     <ListItemText primary="Rewrote a decades-old installation and upgrade guide for customers and the support team of an electronic medical records platform, reducing the time to install or upgrade, data loss or corruption, and support calls." />
   </ListItem>
-    <ListItem>
-    <ListItemAvatar>
-      <Avatar>
-        <GradeIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Built a custom authoring environment in MadCap Flare and converted legacy content for several large corporations, from healthcare companies to tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content." />
-  </ListItem>
+
 
 </List>
-  </CardContent>
-</Card>
+
 
 
 
@@ -117,9 +106,9 @@ import Grid from '@mui/material/Grid';
 
 ## Work experience
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, my: 0 }} elevation={0}>
   <CardContent>
-    <Typography variant="h5" component="div">
+    <Typography variant="h5" component="div" sx={{ my: 0}}>
       Senior Technical Writer
     </Typography>
     <Typography color="text.secondary">
@@ -136,9 +125,9 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 0 }} elevation={0}>
   <CardContent>
-    <Typography variant="h5" component="div">
+    <Typography variant="h5" component="div" sx={{ my: 0}}>
       Content Strategist, Contractor
     </Typography>
     <Typography color="text.secondary">
@@ -150,13 +139,15 @@ import Grid from '@mui/material/Grid';
     <Typography variant="body2" sx={{ py: 1 }}>
       Performed a content analysis and inventory of the design system training material and documentation. Developed the initial outline for the onboarding and learning material for the design system.
     </Typography>
+    <Typography  sx={{ my: 0}}>
       <Chip label="#figma" /> <Chip label="#miro" /> <Chip label="#confluence" /> <Chip label="#slack" /> <Chip label="#trello" /> <Chip label="#jira" />
+      </Typography>
    
   </CardContent>
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Senior Technical Writer
@@ -170,14 +161,14 @@ import Grid from '@mui/material/Grid';
     <Typography variant="body2" sx={{ py: 1 }}>
       Worked collaboratively with the core product engineering team to develop user and scenario-based deployment guides. Wrote and edited in-platform UI microcopy (error and warning messages and welcome instructions).  Built an online help doc site using the Docusaurus docs-as-code framework. 
     </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
+    <Typography variant="body2" sx={{ my: 0 }}>
      <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#asana" /> <Chip label="#ms-teams" /> <Chip label="#docusaurus" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#markdown" /> <Chip label="#docs-as-code" /> 
      </Typography>
   </CardContent>
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -191,12 +182,13 @@ import Grid from '@mui/material/Grid';
     <Typography variant="body2" sx={{ py: 1 }}>
       Worked collaboratively with the Azure Dedicated engineering and UX Research teams to develop scenario and goal-based content. Wrote and edited UX microcopy and UI strings. Conducted audits of existing content to identify areas for improvement. Assisted with the copywriting of the Azure VMware Solution learning modules.
     </Typography>
-    <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#figma" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#acrolynx" /> <Chip label="#visio" />
+    <Typography variant="body2" sx={{ my: 0 }}>
+    <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#figma" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#acrolynx" /> <Chip label="#visio" /></Typography>
   </CardContent>
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, py: 0 }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Freelance Technical Writer
@@ -207,9 +199,9 @@ import Grid from '@mui/material/Grid';
     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
       July 2019 - June 2021
     </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
+    <Typography variant="body2" sx={{ py: 0 }}>
       <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem>
+  <ListItem sx={{ my: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -217,11 +209,11 @@ import Grid from '@mui/material/Grid';
     </ListItemAvatar>
     <ListItemText primary="Extreme Networks" secondary="Reviewed and copy edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing." />
   </ListItem>
-       <Typography variant="p" component="p" sx={{ py: 1, ml: 8 }}>
+       <Typography variant="p" component="p" sx={{ py: 0, ml: 8 }}>
      <Chip label="#technical-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#zoom" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#dita-xml" /> <Chip label="#oxygen" /> 
      </Typography>
       
-  <ListItem>
+  <ListItem sx={{ my: 0}}>
     <ListItemAvatar>
       <Avatar>
         <WorkIcon />
@@ -230,7 +222,7 @@ import Grid from '@mui/material/Grid';
     <ListItemText primary="ZPE Systems" secondary="Wrote a marketing campaign eBook about automation in the datacenter. Wrote the learning material and voiceover scripts, provided the voiceover, and produced how-to videos."  />
 
   </ListItem>
-       <Typography variant="p" component="p" sx={{ py: 1, ml: 8 }}>
+       <Typography variant="p" component="p" sx={{ py: 0, ml: 8 }}>
      <Chip label="#copywriting" /> <Chip label="#voiceover" /> <Chip label="#scriptwriting" /> <Chip label="#zoom" /> <Chip label="#adobe-premiere" /> <Chip label="#adobe-audition" /> <Chip label="#adobe-indesign" /> 
      </Typography>
         
@@ -241,7 +233,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
  
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -259,7 +251,7 @@ import Grid from '@mui/material/Grid';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -277,7 +269,7 @@ import Grid from '@mui/material/Grid';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -296,7 +288,7 @@ import Grid from '@mui/material/Grid';
   </CardContent>
 </Card>
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4, }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer
@@ -315,7 +307,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer II
@@ -334,7 +326,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -353,7 +345,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer
@@ -372,7 +364,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Technical Writer, Contractor
@@ -391,7 +383,7 @@ import Grid from '@mui/material/Grid';
 </Card>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 2 }} elevation={0}>
+<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
   <CardContent>
     <Typography variant="h5" component="div">
       Freelance Technical Writer
@@ -598,8 +590,10 @@ Around 2015, I started using markdown more as the primary format for content, ma
       <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>Docs-as-code</TableCell>
           <TableCell>Docusaurus</TableCell>
-          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
-          <TableCell><ul><li>A Tech Security Startup (2021-2022)</li><li>A Tech Startup (2020)</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>A Tech Security Startup (2021-2022)</Typography><Typography sx={{fontSize: 14}}>A Tech Startup (2020)</Typography>
+            
+              </TableCell>
         </TableRow>
         <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>Docs-as-code</TableCell>
@@ -617,30 +611,31 @@ Around 2015, I started using markdown more as the primary format for content, ma
         <TableCell>DITA</TableCell>
           <TableCell>oXygen</TableCell>
           <TableCell>Author</TableCell>
-          <TableCell><ul><li>Extreme Networks (2020-2021)</li><li>Sybase/SAP (2012-2013)</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Extreme Networks (2020-2021)</Typography><Typography sx={{fontSize: 14}}>Sybase/SAP (2012-2013)</Typography>
+</TableCell>
         </TableRow>
         <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>DITA</TableCell>
           <TableCell>Arbortext</TableCell>
           <TableCell>Author</TableCell>
-          <TableCell><ul><li>Pillar Data (2010)</li><li>Ericsson (2008)</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Pillar Data (2010)</Typography><Typography sx={{fontSize: 14}}>Ericsson (2008)</Typography></TableCell>
         </TableRow>
         <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>DITA</TableCell>
           <TableCell>Structured Framemaker</TableCell>
-          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
-          <TableCell><ul><li>Covidien/Medtronic (2009-2010)</li><li>LSI Logic (2008-2009)</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Covidien/Medtronic (2009-2010)</Typography><Typography sx={{fontSize: 14}}>LSI Logic (2008-2009)</Typography></TableCell>
         </TableRow>
         <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>HTML/CSS</TableCell>
           <TableCell>MacCap Flare</TableCell>
-          <TableCell><ul><li>Author</li><li>Information Architect</li><li>Certified Trainer</li></ul></TableCell>
-          <TableCell><ul><li>GE Healthcare (2016-2017)</li><li>Amazon (2015-2016)</li><li>SolidFire (2014)</li><li>Level 3 Communications (2011-2012)</li><li>ESM (2010-2011)</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography><Typography sx={{fontSize: 14}}>Certified Trainer</Typography></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>GE Healthcare (2016-2017)</Typography><Typography sx={{fontSize: 14}}>Amazon (2015-2016)</Typography><Typography sx={{fontSize: 14}}>SolidFire (2014)</Typography><Typography sx={{fontSize: 14}}>Level 3 Communications (2011-2012)</Typography><Typography sx={{fontSize: 14}}>ESM (2010-2011)</Typography></TableCell>
         </TableRow>
         <TableRow sx={{ verticalAlign: 'top' }}>
         <TableCell>HTML/CSS</TableCell>
           <TableCell>Robohelp</TableCell>
-          <TableCell><ul><li>Author</li><li>Information Architect</li></ul></TableCell>
+          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
           <TableCell>P2 Energy Solutions (2007-2008)</TableCell>
         </TableRow>               
     </TableBody>

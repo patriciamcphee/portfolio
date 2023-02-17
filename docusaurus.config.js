@@ -21,7 +21,7 @@ const config = {
   
   customFields: {
     // Put your custom environment here
-    jobTitle: 'Technical Writer / Content Strategist',
+    jobTitle: 'UX Technical Writer / Content Strategist',
   },
 
   presets: [
@@ -30,6 +30,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          sidebarCollapsed: true,
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateAuthor: false,
@@ -65,6 +66,7 @@ const config = {
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
+
         }
       },
       navbar: {

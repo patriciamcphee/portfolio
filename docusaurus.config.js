@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Patricia McPhee',
-  tagline: 'I\'m passionate about creating content experiences that help people navigate, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I gather information and design meaningful digital content experiences.',
+  tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
   url: 'https://patriciamcphee.github.io',
   baseUrl: '/portfolio/',
   onBrokenLinks: 'throw',
@@ -49,6 +49,25 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        id: "apiv1",
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: 'static/api/v1.yaml',
+            url: 'api/v1.yaml',
+            route: 'api',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#5077c5',
+        },
+      },
+    ],
   ],
 
   themeConfig:
@@ -57,9 +76,9 @@ const config = {
     ({
 
       colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
-        respectPrefersColorScheme: false,
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
       },
       
       docs: {
@@ -110,84 +129,30 @@ const config = {
       },
       footer: {
         style: 'dark',
-/*        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Resume',
-                to: '/docs/resume',
-              },
-              {
-                label: 'Samples',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/patriciamcphee/',
-              },
-              {
-                label: 'Slack',
-                href: 'https://patricia-mcphee.slack.com',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/patriciamcphee/',
-              },
-            ],
-          },
-        ],
-        */
         copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
       },
-      
-       
       prism: {
         theme: lightCodeTheme,
        darkTheme: darkCodeTheme, 
       },
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: false
-      },
     }),
     plugins: [
-      'plugin-image-zoom'
+      'plugin-image-zoom',
+      [
+        require.resolve("@easyops-cn/docusaurus-search-local"),
+        {
+          indexDocs: true,
+          indexBlog: false,
+          indexPages: true,
+          language: "en",
+          hashed: true
+        }
+      ],
     ],
-  themes: [
-    '@docusaurus/theme-live-codeblock', 
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
-      }),
+    themes: [
+      '@docusaurus/theme-live-codeblock', 
+      'docusaurus-theme-redoc',
     ],
-    
-  ],
-
-
 };
 
 

@@ -169,7 +169,8 @@ export default function OnboardingProcessStepper() {
                 ) : null
               }
             >
-              {step.label}
+              <Typography variant='h6'>
+              {step.label}</Typography>
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>

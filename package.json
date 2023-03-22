@@ -31,6 +31,7 @@
     "@mdx-js/react": "^1.6.21",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.11.4",
+    "async": "^3.2.2",
     "brace": "^0.11.1",
     "braces": "^3.0.2",
     "browserslist": "^4.16.5",

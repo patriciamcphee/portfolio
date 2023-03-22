@@ -37,6 +37,8 @@
     "clsx": "^1.1.1",
     "decode-uri-component": "^0.2.1",
     "docusaurus-lunr-search": "^2.3.2",
+    "docusaurus-plugin-openapi-docs": "^1.6.1",
+    "docusaurus-theme-redoc": "^1.6.1",
     "eventsource": "^2.0.2",
     "font-awesome": "^4.7.0",
     "formik": "^2.2.9",
@@ -60,20 +62,21 @@
     "react-image-lightbox": "^5.1.4",
     "react-lazy-load-image-component": "^1.5.6",
     "react-player": "^2.9.0",
+    "redocusaurus": "^1.6.1",
     "semver-regex": "^4.0.5",
     "tiny-warning": "^1.0.3",
     "trim-newlines": "^3.0.1",
     "typescript": "^4.9.4",
+    "webpack": "^5.76.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "shell-quote": "^1.7.3",
-    "http-cache-semantics": ">=4.1.1",
+    "@sideway/formula": ">=3.0.1",
     "eta": ">=2.0.0",
-    "ua-parser-js": ">=0.7.33",
-    "glob-parent": ">=5.1.2",
+    "http-cache-semantics": ">=4.1.1",
+    "shell-quote": "^1.7.3",
     "trim": ">=0.0.3",
-    "@sideway/formula": ">=3.0.1"
+    "ua-parser-js": ">=0.7.33"
   },
   "browserslist": {
     "production": [

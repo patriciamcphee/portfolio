@@ -33,7 +33,7 @@ const sidebars = {
         type: 'doc',
         id: 'api/api-overview',
       },      
-      items: [ 'api/api-example-bflix', 'how-tos/mobile-sdk', 'api/clone-volume-api', 'api/get-async-results',  ],
+      items: [ 'api/api-example-bflix', 'how-tos/mobile-sdk', 'api/clone-volume-api', 'api/get-async-results',   ],
     },
     {
       type: 'category',

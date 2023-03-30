@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[7920],{92826:(e,o,s)=>{s.d(o,{Hk:()=>f,J:()=>l,_k:()=>c,dK:()=>n,vc:()=>k});s(31336);const n=["en"],c=!1,k=null,l="search-index{dir}.json?_=525b2fab",f=50}}]);

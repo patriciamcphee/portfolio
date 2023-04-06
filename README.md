@@ -7,3 +7,7 @@ Around 2015, I started using markdown more as the primary format for content mos
 Content before variable.<br/>
 {{ nameOfVariableToCapture }}<br/>
 Content after variable.<br/>
+
+This is my [random value] located somewhere in my Markdown document.
+
+[random value]: variable value

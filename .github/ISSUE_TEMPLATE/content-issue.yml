@@ -1,7 +1,7 @@
 name: 📕 Content Issue
 description: Report missing or inaccurate content on the docs
 labels: ["triage"]
-title: "content: "
+title: "[Content issue]: "
 body:
   - type: input
     attributes:

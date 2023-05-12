@@ -29,15 +29,14 @@ export default function NotFound() {
                 <Translate
                   id="theme.NotFound.p1"
                   description="The first paragraph of the 404 page">
-                  We couldn't find what you were looking for. 
+                 Maybe this page moved? Got deleted? Never existed in the first place?
                 </Translate>
               </p>
               <p>
                 <Translate
                   id="theme.NotFound.p2"
                   description="The 2nd paragraph of the 404 page">
-                  Contact the owner of the site that linked you to the
-                  original URL and let them know their link is broken.
+                  Let's go home and try from there.
                 </Translate>
               </p>
             </div>

@@ -7,7 +7,7 @@ categories: technical writing
 tags: [ content design ] 
 ---
 
-The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether an IT professional evaluating an enterprise application or a consumer using a product, they're reading your content to learn about the product and how to use it.
+The quality of your organization's technical documentation matters now more than ever. I have found in my experience that potential customers also evaluate the technical documentation carefully before they buy. Whether an IT professional evaluating an enterprise application, a developer implementing an API, or a consumer using a product, they're reading your content to learn about the product and how to use it.
 
 If your prospective customers cannot find high-quality technical or user documentation to support their purchase decisions, you may never have a chance to close the deal.
 
@@ -76,7 +76,7 @@ Even if the content is accurate, complete, and consistent, it might not be under
 
 ## Where content quality problems come from
 
-Content quality problems can come from different areas. The top problem I've observed is that the user is misunderstood—that is, the overall user journey is overlooked. For example, IT professionals are often misunderstood, so their content doesn't directly speak to them. What do I mean by this? Most often, the content is written by a very technical person, and then it's handed off for editing and formatting. There's rarely a discussion among the cross-functional teams on use cases or scenarios for the flow of the content, which would give the user what they need when they need it.  
+Content quality problems can come from different areas. The top problem I've observed is that the user is misunderstood—that is, the overall user journey is overlooked. For example, IT professionals and developers are often misunderstood, so their content doesn't directly speak to them. What do I mean by this? Most often, the content is written by a very technical person, and then it's handed off for editing and formatting. There's rarely a discussion among the cross-functional teams on use cases or scenarios for the flow of the content, which would give the user what they need when they need it.  
 
 I use the IT professional as an example because they have a hard job. Not one company has the same IT infrastructure implemented. Plus, there's a lot on their plate with supporting different operating systems, versions of applications, security and preventing intrusions, user administration, and evaluating solutions. Because of this, I have found that writing content for them works best if it's in a scenario or goal-based format. The IT professional consults technical documentation for a reason: get answers to their questions or implement an enterprise solution end-to-end. This format results in giving them what they need when they need it.
 

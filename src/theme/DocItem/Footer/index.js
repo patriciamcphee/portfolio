@@ -52,6 +52,7 @@ export default function DocItemFooter() {
     return null;
   }
   return (
+    
     <footer
       className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
       {canDisplayTagsRow && <TagsRow tags={tags} />}
@@ -62,6 +63,7 @@ export default function DocItemFooter() {
           lastUpdatedBy={lastUpdatedBy}
           formattedLastUpdatedAt={formattedLastUpdatedAt}
         />
+        
       )}
     </footer>
   );

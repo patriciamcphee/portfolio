@@ -18,7 +18,6 @@ const config = {
   organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   trailingSlash: false,
-  
   customFields: {
     // Put your custom environment here
     jobTitle: 'UX Technical Writer / Content Strategist',
@@ -62,10 +61,10 @@ const config = {
           },
         ],
         // Theme Options for modifying how redoc renders them
-        theme: {
+        //theme: {
           // Change with your site colors
-          primaryColor: '#5077c5',
-        },
+          //primaryColor: '#5077c5',
+       // },
       },
     ],
   ],
@@ -75,11 +74,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
 
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
-      },
+    //  colorMode: {
+       // defaultMode: 'light',
+      //  disableSwitch: true,
+      //  respectPrefersColorScheme: true,
+     // },
       
       docs: {
         sidebar: {

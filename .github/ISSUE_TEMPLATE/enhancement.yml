@@ -5,7 +5,45 @@ body:
   - type: markdown
     attributes:
       value: |
-        - [ ] Thanks for taking the time to fill out this feature request!
+        Thanks for taking the time to fill out this feature request!
+        Use this section to give a description of what your suggestion is about.
+
+        - Title:
+        - Who is this for:
+
+        Please select or describe the audience your proposal targets in terms of
+        readers' familiarity with Beyond Identity:
+
+        - [ ] Beyond Identity Secure Workforce users
+        - [ ] Those interested in passwordless authentication
+        - [ ] Those not aware of passwordless authentication yet
+        - [ ] Others:
+
+        - Outline:
+
+        - Are there any particular tools, concepts, languages or platforms that readers
+          will learn about?
+  - type: textarea
+    id: suggestion-title
+    attributes:
+      label: Title
+      description: Please provide a descriptive title for your suggestion.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion-audience
+    attributes:
+      label: Audience 
+      description: Please provide a descriptive title for your suggestion.
+      value: |
+        Please select or describe the audience your proposal targets in terms of readers' familiarity with Beyond Identity:
+
+          - [ ] Beyond Identity Secure Workforce users
+          - [ ] Those interested in passwordless authentication
+          - [ ] Those not aware of passwordless authentication yet
+          - [ ] Others:
+    validations:
+      required: true
   - type: textarea
     id: motivation
     attributes:

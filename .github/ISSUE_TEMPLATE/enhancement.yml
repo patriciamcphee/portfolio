@@ -17,45 +17,19 @@ body:
         - [ ] Beyond Identity Secure Workforce users
         - [ ] Those interested in passwordless authentication
         - [ ] Those not aware of passwordless authentication yet
-        - [ ] Others:
 
-        - Outline:
-
-        - Are there any particular tools, concepts, languages or platforms that readers
-          will learn about?
-  - type: textarea
-    id: suggestion-title
-    attributes:
-      label: Title
-      description: Please provide a descriptive title for your suggestion.
-    validations:
-      required: true
-  - type: textarea
-    id: suggestion-audience
-    attributes:
-      label: Audience 
-      description: Please provide a descriptive title for your suggestion.
-      value: |
-        Please select or describe the audience your proposal targets in terms of readers' familiarity with Beyond Identity:
-
-          - [ ] Beyond Identity Secure Workforce users
-          - [ ] Those interested in passwordless authentication
-          - [ ] Those not aware of passwordless authentication yet
-          - [ ] Others:
-    validations:
-      required: true
   - type: textarea
     id: motivation
     attributes:
       label: Motivation
-      description: Please provide a clear and concise description of the rationale behind this request.
+      description: Please provide a clear and concise description of the rationale behind this request. Are there any particular tools, concepts, languages or platforms that readers will learn about?
     validations:
       required: true
   - type: textarea
     id: desired-behavior
     attributes:
-      label: Desired Behavior
-      description: Provide a clear and concise description of what you want to happen.
+      label: Outline
+      description: Provide an outline for your suggested document.
     validations:
       required: true
   - type: textarea
@@ -63,7 +37,4 @@ body:
     attributes:
       label: Additional Context
       description: Provide any additional information or screenshots that may be relevant or helpful.
-  - type: markdown
-    attributes:
-      value: |
-        By submitting this feature request, I agree to follow the [code of conduct](https://resoto.com/code-of-conduct).
+

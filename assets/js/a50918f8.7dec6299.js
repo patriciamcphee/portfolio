@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclean_deploy=self.webpackChunkclean_deploy||[]).push([[3673],{85279:e=>{e.exports=JSON.parse('{"label":"voiceover","permalink":"/portfolio/blog/tags/voiceover","allTagsPath":"/portfolio/blog/tags","count":1}')}}]);

@@ -1,0 +1,44 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+
+@use "@material/card";
+
+@include card.core-styles;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.topics {
+  display: inline-block;
+  align-items: center;
+  padding: 0rem 0; 
+  width: 100%;
+}
+
+
+.topic {
+/* max-inline-size: 380px; */
+ padding-bottom: 20px;
+ margin-top: 0px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+@media (max-width: 996px) {
+  .topic:before {
+
+    margin: 20px;
+  }
+}
+
+
+
+.topicsRow {
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+

@@ -4,6 +4,8 @@ description:  Application programming interfaces (APIs) provide a way for two or
 last_update: 
    date: 10/08/2022
    author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
 ---
 
 Application programming interfaces (APIs) provide a way for two or more computer programs to communicate with each other. It's a software interface offering a service to other pieces of software. A document that describes how to build or use such a connection or interface is called an API specification. The term API may refer either to the specification or to the implementation.

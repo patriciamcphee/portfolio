@@ -4,6 +4,8 @@ description: Writing error messages is an art. Your goal is to provide guidance 
 last_update: 
    date: 11/19/2022
    author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
 ---
 
 Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem. These steps can be contextually-relevant.

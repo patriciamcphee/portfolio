@@ -1,588 +1,458 @@
 ---
 title: Resume - Patricia McPhee
 description: Learn about my career path, accomplishments, skills, and training.
+id: 'resume'
+slug: '/resume'
+sidebar_label: 'Resume'
 last_update: 
    date: 02/15/2023
    author: Patricia McPhee
 ---
 
+import { 
+  Tag, 
+  ConfigProvider ,
+  Space, 
+  List,
+  Radio, 
+  Timeline, 
+  Progress, 
+  Col, 
+  Row, 
+  Typography, 
+  Divider, 
+  Table, 
+  Button,
+  Collapse,
+  Card,
+  theme 
+  } from 'antd';
+import { DownloadOutlined } from '@ant-design/icons';
 
+**UX Technical Writer / Content Strategist**
+ 
+*I am passionate about creating content experiences that help people navigate, use, and troubleshoot products.*
 
-import Button from '@mui/material/Button';
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import Stack from '@mui/material/Stack';
-import Chip from '@mui/material/Chip';
-
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import Divider from '@mui/material/Divider';
-import GradeIcon from '@mui/icons-material/Grade';
-
-import WorkIcon from '@mui/icons-material/Work';
-
-
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-
-import Slider from '@mui/material/Slider';
-
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-
-
-
-
->**UX Technical Writer / Content Strategist**<br /> 
-> *I am passionate about creating content experiences that help people navigate, use, and troubleshoot products.*
-
-<Button
-  label="Download Resume"
-  component="a"
-  href="https://www.dropbox.com/sh/femm7m5f65mwhxq/AAAWLMiUcwJa4CP0RwJVNgOfa?dl=0"
-  variant="text"
-  clickable
-  startIcon={<FileDownloadIcon />}
-  sx={{ marginBottom: 0, color: '#253368' }}
->Download Resume</Button>
+  <ConfigProvider
+    theme={{
+      token: {
+          colorPrimary: '#9ecd28',
+          colorPrimaryHover: '#046b99',
+        }
+      }
+    }
+  >
+    <Button type="primary" shape="round" icon={<DownloadOutlined />} size='small' href="https://www.dropbox.com/s/1ftuqnmfi5vsjg4/resume-patricia-mcphee.pdf?dl=0" >
+            Download Resume
+          </Button>
+  </ConfigProvider>
 
 
 ## Accomplishments
 
+ 
 
-<List sx={{ width: '100%', bgcolor: 'background.paper', pt: 0 }}>
-    <ListItem>
-    <ListItemAvatar>
-      <Avatar>
-        <GradeIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Built doc sites in Docusaurus for several tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content." />
-  </ListItem>
-  <ListItem>
-    <ListItemAvatar>
-      <Avatar>
-        <GradeIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Wrote shell scripts to automate OpenAPI content publishing for a data center hardware company." />
-  </ListItem>
-    <ListItem>
-    <ListItemAvatar>
-      <Avatar>
-        <GradeIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Streamlined a weekly team status report for the executive team of a large technology company, reducing the time to compile and deliver the information by ~4 hours (more than half)." />
-  </ListItem>
-  <ListItem>
-    <ListItemAvatar>
-      <Avatar>
-        <GradeIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Rewrote a decades-old installation and upgrade guide for customers and the support team of an electronic medical records platform, reducing the time to install or upgrade, data loss or corruption, and support calls." />
-  </ListItem>
+- Built doc sites in Docusaurus for several tech startups, maximizing content reuse and reducing the cost of creating, managing, and publishing content.
 
 
-</List>
+- Wrote shell scripts to automate OpenAPI content publishing for a data center hardware company.
 
 
+- Streamlined a weekly team status report for the executive team of a large technology company, reducing the time to compile and deliver the information by ~4 hours (more than half).
 
 
+- Rewrote a decades-old installation and upgrade guide for customers and the support team of an electronic medical records platform, reducing the time to install or upgrade, data loss or corruption, and support calls.
 
-
-
+<Divider />
 
 ## Work experience
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, my: 0 }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div" sx={{ my: 0}}>
-      Senior UX Technical Writer
-    </Typography>
-    <Typography color="text.secondary">
-      Beyond Identity
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      December 2022 - Present
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-       Preformed a content audit and analysis of the product documentation. Worked collaboratively with the core product engineering team to develop user and scenario-based integration guides. Wrote and edited in-platform UI microcopy (error and warning messages and welcome instructions). 
-    </Typography>
-     <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#confluence" /> <Chip label="#slack" /> <Chip label="#jira" /> 
-  </CardContent>
-</Card>
+#### Senior Technical Writer
+**Beyond Identity**   
+December 2022 - Present    <br /><br />
+Preformed a content audit and analysis of the product documentation. Worked collaboratively with the core product engineering team to develop user and scenario-based integration guides. Wrote and edited in-platform UI microcopy (error and warning messages and welcome instructions).
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#figma</Tag>
+        <Tag bordered={false} color="success">#confluence</Tag>
+        <Tag bordered={false} color="success">#slack</Tag>
+      <Tag bordered={false} color="success">#docusaurus</Tag>
+      <Tag bordered={false} color="success">#jira</Tag>
+      <Tag bordered={false} color="success">#ux-writing</Tag>
+</Space>
+</ConfigProvider>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4, marginBottom: 0 }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div" sx={{ my: 0}}>
-      Content Strategist, Contractor
-    </Typography>
-    <Typography color="text.secondary">
-      Expedia Group, Braintrust
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      May 2022 - November 2022
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Performed a content analysis and inventory of the design system training material and documentation. Developed the initial outline for the onboarding and learning material for the design system.
-    </Typography>
-    <Typography  sx={{ my: 0}}>
-      <Chip label="#figma" /> <Chip label="#miro" /> <Chip label="#confluence" /> <Chip label="#slack" /> <Chip label="#trello" /> <Chip label="#jira" />
-      </Typography>
-   
-  </CardContent>
-</Card>
+#### Content Strategist, Contractor
+**Expedia Group, Braintrust**   
+May 2022 - November 2022<br /><br />
+Performed a content analysis and inventory of the design system training material and documentation. Developed the initial outline for the onboarding and learning material for the design system.
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#figma</Tag>
+      <Tag bordered={false} color="success">#miro</Tag>
+        <Tag bordered={false} color="success">#confluence</Tag>
+        <Tag bordered={false} color="success">#slack</Tag>
+      <Tag bordered={false} color="success">#docusaurus</Tag>
+      <Tag bordered={false} color="success">#jira</Tag>
+      <Tag bordered={false} color="success">#ux-writing</Tag>
+</Space>
+</ConfigProvider>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Senior UX Technical Writer
-    </Typography>
-    <Typography color="text.secondary">
-      Keyavi Data
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      October 2021 - March 2022
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked collaboratively with the core product engineering team to develop user and scenario-based deployment guides. Wrote and edited in-platform UI microcopy (error and warning messages and welcome instructions).  Built an online help doc site using the Docusaurus docs-as-code framework. 
-    </Typography>
-    <Typography variant="body2" sx={{ my: 0 }}>
-     <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#asana" /> <Chip label="#ms-teams" /> <Chip label="#docusaurus" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#markdown" /> <Chip label="#docs-as-code" /> 
-     </Typography>
-  </CardContent>
-</Card>
+#### Senior UX Technical Writer
+**Keyavi Data**   
+October 2021 - March 2022<br /><br />
+Worked collaboratively with the core product engineering team to develop user and scenario-based deployment guides. Wrote and edited in-platform UI microcopy (error and warning messages and welcome instructions).  Built an online help doc site using the Docusaurus docs-as-code framework.
 
-
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer, Contractor
-    </Typography>
-    <Typography color="text.secondary">
-      Microsoft, Kforce
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      May 2020 - October 2021
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked collaboratively with the Azure Dedicated engineering and UX Research teams to develop scenario and goal-based content. Wrote and edited UX microcopy and UI strings. Conducted audits of existing content to identify areas for improvement. Assisted with the copywriting of the Azure VMware Solution learning modules.
-    </Typography>
-    <Typography variant="body2" sx={{ my: 0 }}>
-    <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#figma" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#acrolynx" /> <Chip label="#visio" /></Typography>
-  </CardContent>
-</Card>
-
-
-<Card sx={{ minWidth: '100%', borderRadius: 4, py: 0 }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Freelance Technical Writer
-    </Typography>
-    <Typography color="text.secondary">
-      PSCM Designs LLC
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      July 2019 - June 2021
-    </Typography>
-    <Typography variant="body2" sx={{ py: 0 }}>
-      <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-  <ListItem sx={{ my: 0}}>
-    <ListItemAvatar>
-      <Avatar>
-        <WorkIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="Extreme Networks" secondary="Reviewed and copy edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing." />
-  </ListItem>
-       <Typography variant="p" component="p" sx={{ py: 0, ml: 8 }}>
-     <Chip label="#technical-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#zoom" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#dita-xml" /> <Chip label="#oxygen" /> 
-     </Typography>
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#technical-writing</Tag>
+      <Tag bordered={false} color="success">#ux-writing</Tag>
+      <Tag bordered={false} color="success">#asana</Tag>
+        <Tag bordered={false} color="success">#github</Tag>
+        <Tag bordered={false} color="success">#markdown</Tag>
+        <Tag bordered={false} color="success">#docs-as-code</Tag>
+        <Tag bordered={false} color="success">#ms-teams</Tag>
+      <Tag bordered={false} color="success">#docusaurus</Tag>
+      <Tag bordered={false} color="success">#azure-devops</Tag>
       
-  <ListItem sx={{ my: 0}}>
-    <ListItemAvatar>
-      <Avatar>
-        <WorkIcon />
-      </Avatar>
-    </ListItemAvatar>
-    <ListItemText primary="ZPE Systems" secondary="Wrote a marketing campaign eBook about automation in the datacenter. Wrote the learning material and voiceover scripts, provided the voiceover, and produced how-to videos."  />
-
-  </ListItem>
-       <Typography variant="p" component="p" sx={{ py: 0, ml: 8 }}>
-     <Chip label="#copywriting" /> <Chip label="#voiceover" /> <Chip label="#scriptwriting" /> <Chip label="#zoom" /> <Chip label="#adobe-premiere" /> <Chip label="#adobe-audition" /> <Chip label="#adobe-indesign" /> 
-     </Typography>
-        
-</List>
-    </Typography>
-
-  </CardContent>
-</Card>
-
- 
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer II
-    </Typography>
-    <Typography color="text.secondary">
-      LivePerson
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      March 2019 - June 2019
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked with the mobile app development team to rewrite the SDK and API guides for mobile messaging.
-    </Typography>
-        <Chip label="#technical-writing" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#docs-as-code" />
-  </CardContent>
-</Card>
-
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer II
-    </Typography>
-    <Typography color="text.secondary">
-      Microsoft
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      January 2018 - January 2019
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked collaboratively with the Microsoft Edge and Windows networking core teams. Wrote and edited UX microcopy and UI strings.  Conducted content audits to identify areas for potential improvement. Used qualitative and quantitative data to make data-driven decisions. 
-    </Typography>
-    <Chip label="#technical-writing" /> <Chip label="#ux-writing" /> <Chip label="#azure-dev-ops" /> <Chip label="#azure" /> <Chip label="#ms-teams" /> <Chip label="#markdown" /> <Chip label="#github" /> <Chip label="#vs-code" /> <Chip label="#acrolynx" /> <Chip label="#visio" />
-  </CardContent>
-</Card>
-
-<Card sx={{ minWidth: '100%', borderRadius: 4, }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer, Contractor
-    </Typography>
-    <Typography color="text.secondary">
-      Oculus VR, a Facebook company
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      July 2017 - December 2017 
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Developed internal cross-functional workflows and process documentation for a virtual reality R&D environment.
-     
-    </Typography>
-    <Chip label="#technical-writing" />  <Chip label="#box" /> <Chip label="#sharepoint" /> <Chip label="#quip" />
-  </CardContent>
-</Card>
-
-<Card sx={{ minWidth: '100%', borderRadius: 4, }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer
-    </Typography>
-    <Typography color="text.secondary">
-      GE Healthcare
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      August 2016 - May 2017  
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked collaboratively with customers and support to update the outdated installation and upgrade guides. The rework resulted in more successful upgrades and reduced customer support calls.  
-    </Typography>
-        <Chip label="#technical-writing" /> <Chip label="#html" /> <Chip label="#css" /> <Chip label="#madcap-flare" /> <Chip label="#dita-xml" /> <Chip label="#oxygen" />
-  </CardContent>
-</Card>
+</Space>
+</ConfigProvider>
 
 
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer II
-    </Typography>
-    <Typography color="text.secondary">
-      Amazon
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      September 2015 - July 2016  
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Wrote internal feature announcements and task-oriented procedure guides using MadCap Flare for warehouse employees.  
-    </Typography>
-      <Chip label="#html" /> <Chip label="#css" /> <Chip label="#madcap-flare" /> <Chip label="#git" /> <Chip label="#sharepoint" />  <Chip label="#instructional-design" />
-  </CardContent>
-</Card>
+#### Technical Writer, Contractor
+**Microsoft, Kforce**   
+May 2020 - October 2021<br /><br />
+Worked collaboratively with the Azure Dedicated engineering and UX Research teams to develop scenario and goal-based content. Wrote and edited UX microcopy and UI strings. Conducted audits of existing content to identify areas for improvement. Assisted with the copywriting of the Azure VMware Solution learning modules.
 
-
-<Card sx={{ minWidth: '100%', borderRadius: 4,  }} elevation={0}>
-  <CardContent>
-    <Typography variant="h5" component="div">
-      Technical Writer, Contractor
-    </Typography>
-    <Typography color="text.secondary">
-      Charter Communications
-    </Typography>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom={true}>
-      March 2015 - September 2015  
-    </Typography>
-    <Typography variant="body2" sx={{ py: 1 }}>
-      Worked collaboratively with video-on-demand and networking engineers to write standard procedures.  Wrote Python scripts for system administration tasks.   
-    </Typography>
-      <Chip label="#confluence" /> <Chip label="#markdown" /> <Chip label="#visio" /> <Chip label="#git" /> 
-  </CardContent>
-</Card>
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#technical-writing</Tag>
+      <Tag bordered={false} color="success">#ux-writing</Tag>
+      <Tag bordered={false} color="success">#figma</Tag>
+      <Tag bordered={false} color="success">#azure</Tag>
+        <Tag bordered={false} color="success">#github</Tag>
+        <Tag bordered={false} color="success">#markdown</Tag>
+        <Tag bordered={false} color="success">#docs-as-code</Tag>
+        <Tag bordered={false} color="success">#ms-teams</Tag>
+      <Tag bordered={false} color="success">#docusaurus</Tag>
+      <Tag bordered={false} color="success">#azure-devops</Tag>
+      
+</Space>
+</ConfigProvider>
 
 
 
+#### Freelance Technical Writer
+**PSCM Designs LLC**   
+July 2019 - June 2021
+
+- **Extreme Networks**: Reviewed and copy edited network hardware content for the FIPS program. Wrote shell scripts to automate API content publishing.<br />
+
+  <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#technical-writing</Tag>
+      <Tag bordered={false} color="success">#azure</Tag>
+        <Tag bordered={false} color="success">#github</Tag>
+        <Tag bordered={false} color="success">#dita-xml</Tag>
+        <Tag bordered={false} color="success">#docs-as-code</Tag>
+        <Tag bordered={false} color="success">#ms-teams</Tag>
+      <Tag bordered={false} color="success">#oxygen</Tag>
+      <Tag bordered={false} color="success">#azure-devops</Tag>
+      
+  </Space>
+  </ConfigProvider>
+
+- **ZPE Systems**: Wrote a marketing campaign eBook about automation in the datacenter. Wrote the learning material and voiceover scripts, provided the voiceover, and produced how-to videos.<br />
+
+  <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#copy-writing</Tag>
+      <Tag bordered={false} color="success">#voiceover</Tag>
+        <Tag bordered={false} color="success">#script-writing</Tag>
+        <Tag bordered={false} color="success">#adobe-premiere</Tag>
+        <Tag bordered={false} color="success">#docs-as-code</Tag>
+        <Tag bordered={false} color="success">#adobe-audition</Tag>
+      <Tag bordered={false} color="success">#adobe-indesign</Tag>
+      
+  </Space>
+  </ConfigProvider>
+
+
+#### Technical Writer II
+**LivePerson**   
+March 2019 - June 2019<br /><br />
+Worked with the mobile app development team to rewrite the SDK and API guides for mobile messaging.
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+  <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="success">#technical-writing</Tag>
+        <Tag bordered={false} color="success">#github</Tag>
+        <Tag bordered={false} color="success">#markdown</Tag>
+        <Tag bordered={false} color="success">#docs-as-code</Tag>    
+</Space>
+</ConfigProvider>
+
+
+#### Technical Writer II
+**Microsoft**   
+January 2018 - January 2019<br /><br />
+Worked collaboratively with the Microsoft Edge and Windows networking core teams. Wrote and edited UX microcopy and UI strings.  Conducted content audits to identify areas for potential improvement. Used qualitative and quantitative data to make data-driven decisions.
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+<Space size={[0, 'small']} wrap>
+  <Tag bordered={false} color="success">#technical-writing</Tag>
+  <Tag bordered={false} color="success">#ux-writing</Tag>
+  <Tag bordered={false} color="success">#github</Tag>
+  <Tag bordered={false} color="success">#markdown</Tag>
+  <Tag bordered={false} color="success">#ms-teams</Tag>
+  <Tag bordered={false} color="success">#docusaurus</Tag>
+  <Tag bordered={false} color="success">#azure-devops</Tag>   
+</Space>
+</ConfigProvider>
+
+
+#### Technical Writer, Contractor
+**Oculus VR, a Facebook company**   
+July 2017 - December 2017<br /><br />
+Developed internal cross-functional workflows and process documentation for a virtual reality R&D environment.
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+<Space size={[0, 'small']} wrap>
+  <Tag bordered={false} color="success">#technical-writing</Tag>
+  <Tag bordered={false} color="success">#sharepoint</Tag> 
+</Space>
+</ConfigProvider>
+
+
+#### Technical Writer
+**GE Healthcare**   
+August 2016 - May 2017<br /><br />
+Worked collaboratively with customers and support to update the outdated installation and upgrade guides. The rework resulted in more successful upgrades and reduced customer support calls. 
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+<Space size={[0, 'small']} wrap>
+  <Tag bordered={false} color="success">#technical-writing</Tag>
+  <Tag bordered={false} color="success">#madcap-flare</Tag> 
+  <Tag bordered={false} color="success">#dita-xml</Tag> 
+  <Tag bordered={false} color="success">#oxygen</Tag> 
+</Space>
+</ConfigProvider>
+
+
+#### Technical Writer II
+**Amazon**   
+September 2015 - July 2016<br /><br />
+Wrote internal feature announcements and task-oriented procedure guides using MadCap Flare for warehouse employees. 
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+<Space size={[0, 'small']} wrap>
+  <Tag bordered={false} color="success">#technical-writing</Tag>
+  <Tag bordered={false} color="success">#madcap-flare</Tag> 
+  <Tag bordered={false} color="success">#git</Tag> 
+  <Tag bordered={false} color="success">#working-backwards</Tag> 
+</Space>
+</ConfigProvider>
+
+
+#### Technical Writer, Contractor
+**Charter Communications**   
+March 2015 - September 2015<br /><br />
+Worked collaboratively with video-on-demand and networking engineers to write standard procedures.  Wrote Python scripts for system administration tasks.
+
+ <ConfigProvider
+    theme={{
+      token: {
+        colorSuccess: '#a0cf39',
+        colorSuccessBg: '#a0cf3926',
+        colorSuccessBorder: '#a0cf3926',
+      },
+    }}
+  >
+<Space size={[0, 'small']} wrap>
+  <Tag bordered={false} color="success">#technical-writing</Tag>
+  <Tag bordered={false} color="success">#confluence</Tag> 
+  <Tag bordered={false} color="success">#markdown</Tag>
+  <Tag bordered={false} color="success">#git</Tag> 
+  <Tag bordered={false} color="success">#visio</Tag> 
+</Space>
+</ConfigProvider>
+
+<Divider />
 
 ## Skills
 
 
-<Card elevation={0}>
-  <CardContent sx={{ p: 2 }}>
-<Box sx={{ flexGrow: 1, align: 'center' }}  >
-  <Grid container spacing={2} columns={12}>
-    <Grid item xs={5} sx={{ p: 2 }} >
-        <Typography variant="p">Technical Writing</Typography>
-        <Slider
-        aria-label="Technical Writing"
-        label="Technical Writing"
-        value={100}
-        sx={{  color: '#253368' }}
-        />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-        <Typography variant="p">Content Strategy/Design</Typography>
-        <Slider
-          aria-label="Content Strategy"
-          label="Content Strategy"
-          value={90}
-          sx={{  color: '#253368' }}
-        />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-      <Typography variant="p">UX/UI Writing</Typography>
-      <Slider
-        aria-label="UX Writing"
-        label="UX Writing"
-        value={90}
-        sx={{  color: '#253368' }}
-      />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Information Architecture</Typography>
-  <Slider
-    aria-label="Information Architecture"
-    label="Information Architecture"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Instructional Design</Typography>
-  <Slider
-    aria-label="Instructional Design"
-    label="Instructional Design"
-    value={80}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">HTML/CSS</Typography>
-  <Slider
-    aria-label="HTML/CSS"
-    label="HTML/CSS"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Figma/Miro</Typography>
-  <Slider
-    aria-label="Figma/Miro"
-    label="Figma/Miro"
-    value={80}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-      <Typography variant="p">Accessibility Concepts</Typography>
-      <Slider
-        aria-label="a11y"
-        label="a11y"
-        value={70}
-        sx={{ color: '#253368' }}
-      />
-    </Grid> 
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Docusaurus</Typography>
-  <Slider
-    aria-label="Docusaurus"
-    label="Docusaurus"
-    value={90}
-    sx={{ color: '#253368' }}
-  />
-    </Grid>
-        <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Confluence</Typography>
-  <Slider
-    aria-label="Confluence"
-    label="Confluence"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Markdown</Typography>
-  <Slider
-    aria-label="Markdown"
-    label="Markdown"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Git/GitHub</Typography>
-  <Slider
-    aria-label="Git/GitHub"
-    label="Git/GitHub"
-    value={90}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Agile/Jira/Azure DevOps</Typography>
-  <Slider
-    aria-label="Agile/Jira/Azure DevOps"
-    label="Agile/Jira/Azure DevOps"
-    value={70}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">JavaScript/Node.js</Typography>
-  <Slider
-    aria-label="JavaScript/Node.js"
-    label="JavaScript/Node.js"
-    value={80}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">Postman/Swagger</Typography>
-  <Slider
-    aria-label="Postman/Swagger"
-    label="Postman/Swagger"
-    value={50}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-    <Grid item xs={5} sx={{ p: 2 }} >
-  <Typography variant="p">MongoDB</Typography>
-  <Slider
-    aria-label="MongoDB"
-    label="MongoDB"
-    value={60}
-    sx={{  color: '#253368' }}
-  />
-    </Grid>
-
- 
-  </Grid>
-</Box>
-  </CardContent>
-</Card>
 
 
+ <ConfigProvider
+    theme={{
+      token: {
+        colorInfo: '#b2d85f',
+        colorSuccess: '#b2d85f',
+        colorText: 'primary',
+        colorFillSecondary: '#d7e8e350',
+      },
+    }}
+  >
+<Row gutter={[32, -10]}>
+  <Col flex="1 1 300px"><p>Technical Writing</p>
+         <Progress percent={100} size="small" showInfo={true} /></Col>
+  <Col flex="1 1 300px"><p>Content Strategy/Design</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+</Row>
+<Row gutter={[32, -10]}>
+  <Col flex="1 1 300px"><p>UX/UI Writing</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+  <Col flex="1 1 300px"><p>Content Architecture</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+</Row>
+<Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Instructional Design</p>
+         <Progress percent={80} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>HTML/CSS</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+  </Row>
+  <Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Figma/Miro</p>
+         <Progress percent={80} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>Accessibility Concepts</p>
+         <Progress percent={70} size="small" showInfo={true} /></Col>
+  </Row>
+  <Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Docusaurus</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>Confluence</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+  </Row>
+  <Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Markdown</p>
+         <Progress percent={90} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>Git/GitHub</p>
+         <Progress percent={80} size="small" showInfo={true} /></Col>
+  </Row>
+  <Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Agile/Jira/Azure DevOps</p>
+         <Progress percent={70} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>JavaScript/Node.js</p>
+         <Progress percent={80} size="small" showInfo={true} /></Col>
+  </Row>
+  <Row gutter={[32, -10]}>
+    <Col flex="1 1 300px"><p>Postman/Swagger</p>
+         <Progress percent={50} size="small" showInfo={true} /></Col>
+    <Col flex="1 1 300px"><p>MongoDB</p>
+         <Progress percent={60} size="small" showInfo={true} /></Col>
+  </Row>
+  </ConfigProvider>
+
+<Divider />
 
 ## Documentation frameworks
 Around 2015, I started using markdown more as the primary format for content, mainly in Confluence and other wiki platforms. In 2018, I started using static-site generators like Jekyll, Hugo, Gatsby, Docusaurus, and DocFX as a primary authoring environment. My favorite, so far, has been Docusuarus. I like DocFX, but it's a bit more complicated to set up.
 
+| Framework | Platform | Role | Company |
+| --- | --- | --- | --- |
+| Docs-as-code   |  Docusaurus  |  Author<br />Information Architect | Beyond Identity (2022-Present)<br />Keyavi (2021-2022)<br />A Tech Startup (2020)   |
+| Docs-as-code   | DocFx   |  Author  | Microsoft (2018, 2020-2021, 2022)   |
+| Docs-as-code   | Jekyll   |  Author  | LivePerson (2019)  |
+| DITA  |  oXygen  |  Author  | Extreme Networks (2020-2021)<br />Sybase/SAP (2012-2013)  |
+| DITA  | Arbortext   | Author   | Pillar Data (2010)<br />Ericsson (2008)   |
+| DITA  | Structured Framemaker   | Author<br />Information Architect   | Covidien/Medtronic (2009-2010)<br />LSI Logic (2008-2009)   |
+| HTML/CSS   | MacCap Flare  | Author<br />Information Architect<br />Certified Trainer   | GE Healthcare (2016-2017)<br />Amazon (2015-2016)<br />SolidFire (2014)<br />Level 3 Communications (2011-2012)<br />ESM (2010-2011)   |
+| HTML/CSS   | Robohelp   | Author<br />Information Architect   | P2 Energy Solutions (2007-2008)   |
 
-<TableContainer>
-  <Table sx={{ minWidth: 650 }} aria-label="simple table">
-    <TableHead>
-      <TableRow>
-        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Framework</TableCell>
-        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Platform</TableCell>
-        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Role</TableCell>
-        <TableCell variant="th" component="p" sx={{ fontSize: 16 }}>Company</TableCell>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>Docs-as-code</TableCell>
-          <TableCell>Docusaurus</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>A Tech Security Startup (2021-2022)</Typography><Typography sx={{fontSize: 14}}>A Tech Startup (2020)</Typography>
-            
-              </TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>Docs-as-code</TableCell>
-          <TableCell>DocFx</TableCell>
-          <TableCell>Author</TableCell>
-          <TableCell>Microsoft (2018, 2020-2021, 2022)</TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>Docs-as-code</TableCell>
-          <TableCell>Jekyll</TableCell>
-          <TableCell>Author</TableCell>
-          <TableCell>LivePerson (2019)</TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>DITA</TableCell>
-          <TableCell>oXygen</TableCell>
-          <TableCell>Author</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Extreme Networks (2020-2021)</Typography><Typography sx={{fontSize: 14}}>Sybase/SAP (2012-2013)</Typography>
-</TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>DITA</TableCell>
-          <TableCell>Arbortext</TableCell>
-          <TableCell>Author</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Pillar Data (2010)</Typography><Typography sx={{fontSize: 14}}>Ericsson (2008)</Typography></TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>DITA</TableCell>
-          <TableCell>Structured Framemaker</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Covidien/Medtronic (2009-2010)</Typography><Typography sx={{fontSize: 14}}>LSI Logic (2008-2009)</Typography></TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>HTML/CSS</TableCell>
-          <TableCell>MacCap Flare</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography><Typography sx={{fontSize: 14}}>Certified Trainer</Typography></TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>GE Healthcare (2016-2017)</Typography><Typography sx={{fontSize: 14}}>Amazon (2015-2016)</Typography><Typography sx={{fontSize: 14}}>SolidFire (2014)</Typography><Typography sx={{fontSize: 14}}>Level 3 Communications (2011-2012)</Typography><Typography sx={{fontSize: 14}}>ESM (2010-2011)</Typography></TableCell>
-        </TableRow>
-        <TableRow sx={{ verticalAlign: 'top' }}>
-        <TableCell>HTML/CSS</TableCell>
-          <TableCell>Robohelp</TableCell>
-          <TableCell><Typography sx={{fontSize: 14}}>Author</Typography><Typography sx={{fontSize: 14}}>Information Architect</Typography></TableCell>
-          <TableCell>P2 Energy Solutions (2007-2008)</TableCell>
-        </TableRow>               
-    </TableBody>
-  </Table>
-</TableContainer>
-
-
-
+<Divider />
 
 ## Training and education
 
@@ -596,9 +466,9 @@ Such A Voice - Remote <br />
 Coach: [Jan Haley-Soule](https://www.linkedin.com/in/jan-haley-soule-19254710/) <br />
 March 2019 - March 2020
 
-| **Niche** | **Voice traits** |
+| **Voice traits** | **Niche** |
 |---|---|
-| <ul><li>Technical (computer networking, software, cloud storage)</li><li>Corporate (presentations, training, e-learning)</li><li>Narration (informational, textbooks)</li><li>Medical (hand/wrist anatomy and health conditions,<br />environmental health, public health)</li></ul>  | <ul><li>Confident</li><li>Educated</li><li>Intelligent</li><li>Warm</li><li>Friendly</li><li>Trusting</li><li>Honest</li><li>Sultry/playful</li></ul>  |
+| <ul><li>Confident</li><li>Educated</li><li>Intelligent</li><li>Warm</li><li>Friendly</li><li>Trusting</li><li>Honest</li><li>Sultry/playful</li></ul>  | <ul><li>Technical (computer networking, software, cloud storage)</li><li>Corporate (presentations, training, e-learning)</li><li>Narration (informational, textbooks)</li><li>Medical (hand/wrist anatomy and health conditions,<br />environmental health, public health)</li></ul>  |
 
 
 **Bachelor's in Health Science**<br />

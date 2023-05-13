@@ -4,6 +4,8 @@ description: Knowledgebase articles solve issues with products or services. Cust
 last_update: 
    date: 09/26/2022
    author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
 ---
 
 A knowledge base article is a "self-service" online document that solves issues with products or services. It also answers frequently asked questions or provides instructions for solving a problem that customers commonly experience. Article types include informational articles, how-tos, troubleshooting guides, and FAQs.

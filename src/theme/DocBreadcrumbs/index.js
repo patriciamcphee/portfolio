@@ -9,6 +9,7 @@ import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 import HomeBreadcrumbItem from '@theme/DocBreadcrumbs/Items/Home';
 import styles from './styles.module.css';
+
 // TODO move to design system folder
 function BreadcrumbsItemLink({children, href, isLast}) {
   const className = 'breadcrumbs__link';
@@ -78,7 +79,8 @@ export default function DocBreadcrumbs() {
               key={idx}
               active={isLast}
               index={idx}
-              addMicrodata={!!item.href}>
+              addMicrodata={!!item.href}
+              >
               <BreadcrumbsItemLink href={item.href} isLast={isLast}>
                 {item.label}
               </BreadcrumbsItemLink>

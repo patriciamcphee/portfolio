@@ -4,6 +4,8 @@ description: UX Writing is the production of written content that becomes part o
 last_update: 
    date: 11/13/2022
    author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
 ---
 
 UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product. Ultimately, it's about designing the conversation between a product and its user. 

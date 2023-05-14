@@ -155,7 +155,7 @@ export default function MDXContent({children}) {
     <>
       <MDXProvider components={MDXComponents}>{children}</MDXProvider>
       <Divider />
-      <FeedbackForm />
+
     </>
   );
 }

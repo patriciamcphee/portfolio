@@ -8,7 +8,11 @@ import MDXContent from '@theme/MDXContent';
 import LastUpdatedDateHeader from '../Footer/index';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-
+import { Col, Divider, Row } from "antd";
+import { LikeTwoTone, DislikeTwoTone } from '@ant-design/icons';
+const style = {
+  padding: "6px 0"
+};
 
 /**
  Title can be declared inside md content or declared through
@@ -36,7 +40,7 @@ export default function DocItemContent({children}) {
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
   const openDocIssueURL =
-    "https://github.com/patriciamcphee/next-docs/issues/new?assignees=&labels=&template=---doc-error-report.md&title=Issue with Beyond Identity Developer Docs" +
+    "https://github.com/patriciamcphee/portfolio/issues/new?assignees=&labels=&template=---doc-error-report.md&title=Issue with Beyond Identity Developer Docs" +
     `${location.pathname}`;
   const bugIconUrl = useBaseUrl("img/bug-icon.svg");
 
@@ -51,7 +55,26 @@ export default function DocItemContent({children}) {
       )}
           
       <MDXContent>{children}</MDXContent>
-
+      <Row
+      gutter={{
+        xs: 8,
+        sm: 16,
+        md: 24,
+        lg: 32
+      }}
+    >
+      <Col flex="1 1">
+        <div style={style}>
+        <h3>Want to learn more about me? Let's Chat!</h3>
+        <ul>
+          <li>Find me on <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an Email</a></li>
+          <li><a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill">Submit an inquiry</a></li>
+          <li>Chat with me on <a href="https://patriciamcphee.slack.com/archives/D03K6BRHTHN">Slack</a>!</li>
+        </ul>
+        </div>
+      </Col>
+    </Row>
     </div>
   );
 }

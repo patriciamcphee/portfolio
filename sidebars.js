@@ -36,7 +36,11 @@ const sidebars = {
         type: 'doc',
         id: 'ux-writing/ux-writing-samples',
       },          
-      items: [ 'ux-writing/ui-strings', 'ux-writing/errors-warnings-confirmations', 'ux-writing/group-policies', 'ux-writing/user-persona'     ],
+      items: [ 
+        'ux-writing/ui-strings', 
+        'ux-writing/errors-warnings-confirmations', 
+        'ux-writing/group-policies',     
+      ],
     },
 /*    {
       type: 'category',

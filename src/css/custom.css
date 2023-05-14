@@ -82,10 +82,11 @@
 
 }
 
-/* Full Size Sidebar -- fixes the height issue of the sidebar when the doc page is short (not scrollable) */
+/* Full Size Sidebar -- fixes the height issue of the sidebar when the doc page is short (not scrollable) 
 .main-wrapper > div {
   flex: 1 0
 }
+*/
 
 body {
   line-height: 1.4;
@@ -442,11 +443,12 @@ div[class^="searchBox"] {
 
 
 
-/* Docs Sidebar */
+/* Docs Sidebar 
 aside.theme-doc-sidebar-container {
   border-right: none;
   padding-top: 18px;
 }
+*/
 .menu {
   font-weight: var(--ifm-font-weight-normal);
 }
@@ -539,10 +541,12 @@ nav[class^="menu"] {
   border-radius: 0.09375rem;
   background-color: var(--ifm-color-primary);
 }
+/*
 button[class*="collapseSidebarButton"] {
   border: none;
   background: none !important;
 }
+*/
 
 /* Tooltips */
 

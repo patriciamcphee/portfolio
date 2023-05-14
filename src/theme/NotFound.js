@@ -2,6 +2,8 @@ import React from 'react';
 import Translate, {translate} from '@docusaurus/Translate';
 import {PageMetadata} from '@docusaurus/theme-common';
 import Layout from '@theme/Layout';
+import Oops from '../../static/img/oops-404.svg';
+import { Button, Space, ConfigProvider } from 'antd';
 export default function NotFound() {
   return (
     <>
@@ -15,27 +17,36 @@ export default function NotFound() {
         <main className="container margin-vert--xl">
           <div className="row">
             <div className="col col--6 col--offset-3">
-              <h1 className="hero__title">
-                <Translate
-                  id="theme.NotFound.title"
-                  description="The title of the 404 page">
-                  Page Not Found
-                </Translate>
+              <Oops />
+              <h1 class="not-found">
+                Page not found
               </h1>
-              <p>
-                <Translate
-                  id="theme.NotFound.p1"
-                  description="The first paragraph of the 404 page">
-                  We could not find what you were looking for.
-                </Translate>
+              <p class="not-found">
+              The link you clicked may be broken or the page may have been removed.
               </p>
               <p>
-                <Translate
-                  id="theme.NotFound.p2"
-                  description="The 2nd paragraph of the 404 page">
-                  Please contact the owner of the site that linked you to the
-                  original URL and let them know their link is broken.
-                </Translate>
+              <div class="intro-text-button">
+              
+        <ConfigProvider
+    theme={{
+      token: {
+          colorPrimary: '#9ecd28',
+          colorPrimaryHover: '#046b99',
+        }
+      }
+    }
+  >
+    <Space wrap>
+    <Button type="primary" shape="round" size='large' href="/portfolio/" >
+            Go Home!
+          </Button>
+    <Button type="primary" shape="round" size='large' href="mailto:hi@patriciamcphee.com?subject=Page not found error" >
+            Report error?
+          </Button>
+          </Space>
+  </ConfigProvider>
+  
+  </div>
               </p>
             </div>
           </div>

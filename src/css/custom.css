@@ -123,6 +123,18 @@ h4 {
   margin: 12px 0;
 }
 
+h1.not-found {
+  font-family: 'Oswald';
+  text-align: center;
+  font-size: 72px;
+}
+
+p.not-found {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
 
 [data-theme="dark"] .markdown img[src$='.png'] {
   background-color: DarkGray !important;
@@ -863,7 +875,7 @@ div[class^="tocCollapsibleContent"] ul li {
   background-repeat: no-repeat;
   background-image: url("../../static/img/flat-sketch.svg");
   background-position: 93% 45%; 
-  background-size: 35%;
+  background-size: 34%;
 
 }
 
@@ -1385,3 +1397,4 @@ li {
   
 
 }
+

@@ -15,9 +15,7 @@ doc_type: reference
 displayed_sidebar: secureWorkforceSidebar
 ---
 
-import ReactPlayer from 'react-player'
-import serverSetup from '../../static/videos/WDL-Password-Change-Server-Setup.mp4'
-import userSessionLog from '../../static/videos/WDL-Password-Change-User-Session-Log.mp4'
+
 
 ## Cloud
 
@@ -102,26 +100,4 @@ The details of the new solution are:
 
 - **Azure AD Only:** Currently, WDL cannot detect that a user changed their password in an Azure AD Only environment. So, in an Azure AD Only environment the user must login again or lock/unlock while still online.
 
-### Server setup
 
-In this explainer video, we cover how to set the Group Policy.
-
-<ReactPlayer
-   url={serverSetup}
-   height='auto'
-   width='600px'
-   controls='true'
-/>
-
-
-
-### Password change user session log
-
-In this explainer vide, we go over the initial problems with the old solution and why we went with the new solution.
-
-<ReactPlayer
-   url={userSessionLog}
-   height='auto'
-   width='600px'
-   controls='true'
-/>

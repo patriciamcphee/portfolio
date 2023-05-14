@@ -1,7 +1,20 @@
 .docMainContainer {
   display: flex;
   width: 100%;
+  margin-left: 0px;
+/*  box-shadow: var(--ifm-global-shadow-lw); */
 }
+
+article,
+.paper {
+  margin: 0 calc(var(--ifm-spacing-horizontal) * -0.5);
+  margin-bottom: calc(var(--ifm-paragraph-margin-bottom) * 1.5);
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+/*  box-shadow: var(--ifm-global-shadow-lw); */
+}
+
 
 @media (min-width: 997px) {
   .docMainContainer {

@@ -3,24 +3,61 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-
+const baseUrl = process.env.BASE_URL ?? '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Patricia McPhee',
-  tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
-  url: 'https://patriciamcphee.github.io',
-  baseUrl: '/portfolio/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png',
-  organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
-  projectName: 'portfolio', // Usually your repo name.
-  trailingSlash: false,
-  customFields: {
-    // Put your custom environment here
-    jobTitle: 'UX Technical Writer / Content Strategist',
+
+  plugins: [
+
+    require.resolve("docusaurus-plugin-image-zoom"),
+
+
+
+//    'plugin-image-zoom',
+//    '@chatwoot/docusaurus-plugin',
+//    [
+//      require.resolve("@easyops-cn/docusaurus-search-local"),
+//      {
+//        indexDocs: true,
+//        indexBlog: false,
+//        indexPages: true,
+//        language: "en",
+//        hashed: true
+//      }
+//    ],
+  ],
+  markdown: {
+    mermaid: true,
+  },
+themes: [
+  '@docusaurus/theme-mermaid',
+  '@docusaurus/theme-live-codeblock', 
+  'docusaurus-theme-redoc',
+],
+
+
+title: 'Patricia McPhee',
+tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
+url: 'https://patriciamcphee.github.io',
+baseUrl: '/portfolio/',
+onBrokenLinks: 'throw',
+onBrokenMarkdownLinks: 'warn',
+favicon: 'img/favicon.png',
+organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
+projectName: 'portfolio', // Usually your repo name.
+trailingSlash: false,
+customFields: {
+  // Put your custom environment here
+  jobTitle: 'UX Technical Writer / Content Strategist',
+},
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
@@ -32,16 +69,17 @@ const config = {
           sidebarCollapsed: true,
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateAuthor: false,
+          routeBasePath: '/',
           showLastUpdateTime: true,
-          // Please change this to your repo.
-          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+            'https://github.com/patriciamcphee/portfolio/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
          // editUrl:
-           // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -55,105 +93,106 @@ const config = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            spec: 'static/api/v1.yaml',
-            url: 'api/v1.yaml',
+            spec: 'static/api/v2.yaml',
+            url: 'api/v2.yaml',
             route: 'api',
           },
         ],
         // Theme Options for modifying how redoc renders them
-        //theme: {
+        theme: {
           // Change with your site colors
-          //primaryColor: '#5077c5',
-       // },
+          primaryColor: '#5077c5',
+        },
       },
     ],
   ],
 
   themeConfig:
-  
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-
-    //  colorMode: {
-       // defaultMode: 'light',
-      //  disableSwitch: true,
-      //  respectPrefersColorScheme: true,
-     // },
-      
+      // Replace with your project's social card
       docs: {
         sidebar: {
-          hideable: true,
-          autoCollapseCategories: true,
+          hideable: false,
+          autoCollapseCategories: false,
 
         }
       },
       navbar: {
-        style: 'primary',
-        title: ' ',
+        title: 'Patricia McPhee\'s Writing Portfolio',
         logo: {
           alt: '',
           src: 'img/favicon.png',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'resume',
+        items: [ 
+/*         { 
+          to: "/api/", 
+          label: "API", 
+          position: "left" 
+        },
+*/
+        {
+          type: 'doc',
+          docId: 'resume',
+          position: 'right',
+          label: 'Resume',
+        },
+        {
+          to: '/blog', 
+          label: 'Blog', 
+          position: 'right'
+        }, 
+/*
+           {
+            label: 'Support',
+            type: 'dropdown',
             position: 'left',
-            label: 'Resume',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Writing Samples',           
-          },
-          {
-            to: '/blog', 
-            label: 'Blog', 
-            position: 'left'
+            items: [
+              {
+                to: 'https://github.com/gobeyondidentity',
+                label: 'GitHub',
+               },
+               {
+                to: 'https://stackoverflow.com/questions/tagged/beyondidentity',
+                label: 'Stack Overflow',
+               },
+               {
+                to: 'https://join.slack.com/t/byndid/shared_invite/zt-1anns8n83-NQX4JvW7coi9dksADxgeBQ',
+                label: 'Slack',
+               },
+               {
+                to: 'https://twitter.com/BI_Developers',
+                label: 'Twitter',
+               },
+               {
+                to: 'https://dev.to/beyondidentity',
+                label: 'DevTo',
+               },
+            ],
           }, 
-          {
-            href: 'https://www.linkedin.com/in/patriciamcphee/',
-            position: 'right',
-            className: 'linkedin-logo',
-            'aria-label': 'Linkedin',
-           },
-          {
-            href: 'https://github.com/patriciamcphee/',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-           },
+*/
         ],
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Patricia McPhee`,
+        
+        copyright: `© ${new Date().getFullYear()} Patricia McPhee`,
       },
       prism: {
         theme: lightCodeTheme,
-       darkTheme: darkCodeTheme, 
+        darkTheme: darkCodeTheme,
       },
-    }),
-    plugins: [
-      'plugin-image-zoom',
-      [
-        require.resolve("@easyops-cn/docusaurus-search-local"),
-        {
-          indexDocs: true,
-          indexBlog: false,
-          indexPages: true,
-          language: "en",
-          hashed: true
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          }
         }
-      ],
-    ],
-    themes: [
-      '@docusaurus/theme-live-codeblock', 
-      'docusaurus-theme-redoc',
-    ],
+      }
+    }),
 };
-
-
 
 module.exports = config;

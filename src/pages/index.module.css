@@ -3,123 +3,21 @@
  * and scoped locally.
  */
 
-/* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-
- @import url(https://fonts.googleapis.com/css2?family=NTR&display=swap);
- @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap);
- @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
-
-
 .heroBanner {
   padding: 4rem 0;
-  text-align: left;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.heroBannerTitle {
-  margin-bottom: 0;
-  font-size: 96px;
-  font-family: 'Oswald';
-  font-weight: 300;
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
 }
 
-.heroBannerSubTitle {
-  margin-bottom: 20px;
-  font-family: 'NTR';
-  font-weight: 500;
-  font-size: 1.75em;
-  line-height: 120%;
-}
-
-.heroBannerContent {
-  padding: 0 0;
-}
-
-
-.heroContainer {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: row;
-  padding-bottom: 0px;
-}
-
-.heroContainerCaption {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-}
-
-.heroSvg {
-
-  justify-content: center;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-}
-
-.button {
+.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px;
 }
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 20px 0px;
-    text-align: center;
-  }
-
-  .heroContainerCaption {
-    align-items: center;
-  }
-
-  .heroBannerTitle {
-    text-align: center;
-    font-size: 76px;
-    line-height: 82px;
-  }
-
-  .heroBannerSubTitle {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 20px 0;
-  }
-
-  .heroBannerContent {
-    text-align: center;
-  }
-
-}
-
-@media (orientation:portrait) {
-  .heroSvg {
-     display: inline; /* visibility: none; */
-  }
-  .heroBanner {
-
-    text-align: center;
-  }
-
-
-
-}
-@media (orientation:landscape) and (max-width: 996px) {
-  .heroSvg {
-     display: none; /* visibility: none; */
-  }
-  h1 {
-    font-size: 42px;
-    text-align: center;
-  }
-}
-
-

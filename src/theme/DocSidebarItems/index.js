@@ -1,16 +1,37 @@
-import React, {memo} from 'react';
-import {DocSidebarItemsExpandedStateProvider} from '@docusaurus/theme-common/internal';
-import DocSidebarItem from '@theme/DocSidebarItem';
-// TODO this item should probably not receive the "activePath" props
-// TODO this triggers whole sidebar re-renders on navigation
-function DocSidebarItems({items, ...props}) {
+import Link from "@docusaurus/Link"
+import { ThemeClassNames } from "@docusaurus/theme-common"
+import { useDocsVersion } from "@docusaurus/theme-common/internal"
+import { Badge } from "@mui/material"
+// import latestRelease from "@site/latestRelease.json"
+import DocSidebarItems from "@theme-original/DocSidebarItems"
+import NavbarItem from "@theme-original/NavbarItem"
+import clsx from "clsx"
+import React from "react"
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+
+
+export default function DocSidebarItemsWrapper(props) {
+  
+
   return (
-    <DocSidebarItemsExpandedStateProvider>
-      {items.map((item, index) => (
-        <DocSidebarItem key={index} item={item} index={index} {...props} />
-      ))}
-    </DocSidebarItemsExpandedStateProvider>
-  );
+    <>
+      {props.level === 1 ? (
+        <li
+          className={clsx(
+            ThemeClassNames.docs.docSidebarItemLink,
+            "theme-doc-sidebar-item-link-level-1",
+          //  "version-selector",
+            "margin-top--sm",
+            "margin-bottom--md",
+            "margin-left--sm"
+          )}
+        >
+          <Chip label="Writing Samples" size="large" className="sidebar-version" sx={{ fontWeight: 800}} />
+
+        </li>
+      ) : null}
+      <DocSidebarItems {...props} />
+    </>
+  )
 }
-// Optimize sidebar at each "level"
-export default memo(DocSidebarItems);

@@ -4,6 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import {translate} from '@docusaurus/Translate';
 import IconHome from '@theme/Icon/Home';
 import styles from './styles.module.css';
+
 export default function HomeBreadcrumbItem() {
   const homeHref = useBaseUrl('/');
   return (
@@ -15,8 +16,8 @@ export default function HomeBreadcrumbItem() {
           description: 'The ARIA label for the home page in the breadcrumbs',
         })}
         className="breadcrumbs__link"
-        href={homeHref}>
-        <IconHome className={styles.breadcrumbHomeIcon} />
+        href={homeHref}>Home
+
       </Link>
     </li>
   );

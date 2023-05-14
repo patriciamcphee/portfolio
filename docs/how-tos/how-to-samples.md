@@ -4,7 +4,8 @@ description: How-tos are easy-to-follow instructions that explain step-by-step h
 last_update: 
    date: 10/30/2022
    author: Patricia McPhee
- 
+pagination_next: null
+pagination_prev: null 
 ---
 
 Guides cover the main use cases that we envision people using the product. It would outline a use case and then provide the steps that the user would take to accomplish their goal. It would also give some examples of how the product could be used.

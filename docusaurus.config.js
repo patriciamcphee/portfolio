@@ -119,7 +119,7 @@ customFields: {
         }
       },
       navbar: {
-        title: 'Patricia McPhee Writing Portfolio',
+        title: 'Patricia McPhee\'s Writing Portfolio',
         logo: {
           alt: '',
           src: 'img/favicon.png',

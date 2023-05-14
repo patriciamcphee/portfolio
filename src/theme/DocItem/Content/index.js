@@ -69,7 +69,7 @@ export default function DocItemContent({children}) {
         <ul>
           <li>Find me on <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">LinkedIn</a></li>
           <li><a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an Email</a></li>
-          <li><a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill">Submit an inquiry</a></li>
+          <li><a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill" target="_blank">Submit an inquiry</a></li>
           <li>Chat with me on <a href="https://patriciamcphee.slack.com/archives/D03K6BRHTHN">Slack</a>!</li>
         </ul>
         </div>

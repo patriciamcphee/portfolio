@@ -8,9 +8,9 @@ pagination_next: null
 pagination_prev: null
 ---
 
-UX writing is the practice of designing the words people see and hear when they interact with software. It's the type of writing that guides users as they interact with the product. Ultimately, it's about designing the conversation between a product and its user. 
+UX writing is the practice of designing the words people see and hear when they interact with software. 
 
-User interface text, or UI strings, appear on UI spaces and includes:
+It's the type of writing that guides users as they interact with the product. Ultimately, it's about designing the conversation between a product and its user. User interface text, or UI strings, appear on UI spaces and includes:
 
 - **Control labels** identify controls and are placed directly on or next to the controls.
 

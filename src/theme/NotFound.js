@@ -17,7 +17,9 @@ export default function NotFound() {
         <main className="container margin-vert--xl">
           <div className="row">
             <div className="col col--6 col--offset-3">
-              <Oops />
+             <div class="not-found-header">
+
+              </div>
               <h1 class="not-found">
                 Page not found
               </h1>

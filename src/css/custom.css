@@ -127,9 +127,10 @@ h4 {
 .not-found-header {
   height: 100%;
   padding: 0em;
+  margin-bottom: -10px;
+ align-items: center;
   background-repeat: no-repeat;
   background-image: url("../../static/img/oops-404.svg");
-  background-size: 100%;
 
 }
 
@@ -140,14 +141,15 @@ h4 {
 h1.not-found {
   font-family: 'Oswald';
   text-align: center;
-  font-size: 72px;
+  font-size: 56px;
   margin-top: -20px;
+
 }
 
 p.not-found {
   font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
   text-align: center;
-  font-size: 18px;
 }
 
 
@@ -158,6 +160,10 @@ p.not-found {
 [data-theme='dark'] .sidebar-version {
   color: white;
   background-color: #95a8db26;
+}
+
+.sidebar-title {
+  padding-top: 6px;
 }
 
 
@@ -1320,6 +1326,18 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   .intro-text p {
     text-align: center;
   }
+
+  .not-found-header {
+
+    margin-top: 20px;
+
+  }
+
+  h1.not-found {
+    font-size: 48px;
+  margin-top: -60px;
+  }
+
 }
 
 

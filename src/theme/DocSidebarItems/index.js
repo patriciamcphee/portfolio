@@ -1,14 +1,9 @@
-import Link from "@docusaurus/Link"
 import { ThemeClassNames } from "@docusaurus/theme-common"
-import { useDocsVersion } from "@docusaurus/theme-common/internal"
-import { Badge } from "@mui/material"
 // import latestRelease from "@site/latestRelease.json"
 import DocSidebarItems from "@theme-original/DocSidebarItems"
-import NavbarItem from "@theme-original/NavbarItem"
 import clsx from "clsx"
 import React from "react"
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
+import { Divider } from "antd"
 
 
 export default function DocSidebarItemsWrapper(props) {
@@ -24,10 +19,11 @@ export default function DocSidebarItemsWrapper(props) {
           //  "version-selector",
             "margin-top--sm",
             "margin-bottom--md",
-            "margin-left--sm"
+            "margin-left--sm",
+            "sidebar-title"
           )}
         >
-          <Chip label="Writing Samples" size="large" className="sidebar-version" sx={{ fontWeight: 800}} />
+         
 
         </li>
       ) : null}

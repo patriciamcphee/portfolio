@@ -1,5 +1,6 @@
 # Website
 
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
@@ -39,3 +40,6 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+Around 2015, I started using markdown more as the primary format for content mostly in Confluence and other wiki platforms. In 2018, I started using static-site generators like Jekyll, Hugo, Docusaurus, and DocFx as a primary authoring envinronment. I have to say, my favorite, so far, has been Docusuarus. I do like DocFx, but it's bit more complicated to set up.
+

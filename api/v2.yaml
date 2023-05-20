@@ -1,7 +1,6 @@
 openapi: 3.0.1
 info:
-  title: bFlix Movie API
-  version: 1.1.0
+
   description: |
     - **Project**: CareerFoundry assignment; write an API for a movie app
     - **Description**: Written for the b-movie app I've been developing.

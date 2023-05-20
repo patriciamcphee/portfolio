@@ -891,7 +891,7 @@ div[class^="tocCollapsibleContent"] ul li {
   background-color: #9ecd2836;
   display: flex;
 
-  border-radius: 10px;
+  border-radius: 0px;
 
   background-repeat: no-repeat;
   background-image: url("../../static/img/flat-sketch.svg");

@@ -1,7 +1,12 @@
-openapi: 3.0.0
+openapi: 3.0.1
 info:
-  title: bflix-movie-app REST API
-  version: 2.0.0
+
+  description: |
+    - **Project**: CareerFoundry assignment; write an API for a movie app
+    - **Description**: Written for the b-movie app I've been developing.
+    - **Date**: July 8, 2022
+    # Introduction
+    This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also allows them to sign up to create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
 servers:
   - url: https://my-bmovie-app.herokuapp.com
 components:

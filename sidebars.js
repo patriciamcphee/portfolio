@@ -14,7 +14,7 @@ const sidebars = {
         id: 'api/api-overview',
       },      
       items: [ 
-        'api/api-example-bflix', 
+        'api/example',
 /*        {
           type: 'link',
           label: 'bFlix API',
@@ -23,7 +23,9 @@ const sidebars = {
 */
         'how-tos/mobile-sdk', 
         'api/clone-volume-api', 
-        'api/get-async-results',   
+        'api/get-async-results',  
+        
+
       ],
     },
 

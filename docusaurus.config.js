@@ -101,7 +101,7 @@ customFields: {
         // Theme Options for modifying how redoc renders them
         theme: {
           // Change with your site colors
-          primaryColor: '#5077c5',
+          primaryColor: '#046b99',
         },
       },
     ],

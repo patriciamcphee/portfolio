@@ -13,7 +13,7 @@ last_update:
    author: Patricia McPhee
 draft: true
 doc_type: overview
-displayed_sidebar: secureWorkforceSidebar
+displayed_sidebar: mySidebar
 ---
 
 Beyond Identity authenticates users and their devices by cryptographically binding users to devices, providing complete control over who and what devices can access your SaaS apps and cloud infrastructure. 

@@ -29,6 +29,9 @@ import {
   theme 
   } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
+const style = {
+  color: '#fff',
+};
 
 **UX Technical Writer / Content Strategist**
  
@@ -43,7 +46,7 @@ import { DownloadOutlined } from '@ant-design/icons';
       }
     }
   >
-    <Button type="primary" shape="round" icon={<DownloadOutlined />} size='small' href="https://www.dropbox.com/s/1ftuqnmfi5vsjg4/resume-patricia-mcphee.pdf?dl=0" target="_blank" >
+    <Button type="primary" shape="round" icon={<DownloadOutlined />} size='medium' style={style} href="https://www.dropbox.com/s/1ftuqnmfi5vsjg4/resume-patricia-mcphee.pdf?dl=0" target="_blank" >
             Download Resume
           </Button>
   </ConfigProvider>

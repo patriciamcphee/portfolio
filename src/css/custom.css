@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=NTR&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+
+@import url("https://use.typekit.net/ndp4mcy.css");
 
 
 
@@ -94,7 +95,7 @@ body {
 /*  color: #383a3e; */
   background-color: var(--ifm-background-color);
   font-weight: 500;
-  font-size: large;
+  font-size: 16px;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
@@ -104,16 +105,28 @@ body {
 h1 {
   padding-top: 0;
   text-align: left;
-  font-family: 'Oswald';
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 400;
+  color: '#eee'
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 18px;
+  column-rule: var(--ifm-color-content-secondary);
+}
+
+h2, h3 {
+  font-family: "dunbar-tall", sans-serif;
   font-weight: 500;
 }
 
-h2, h3, h4 {
-  font-weight: 'NTR';
-  font-weight: 600;
-}
-
 h4 {
+  font-weight: 'NTR';
   font-size: 18px;
   line-height: 0.3;
   padding-top: 20px;
@@ -139,7 +152,7 @@ h4 {
 }
 
 h1.not-found {
-  font-family: 'Oswald';
+  font-family: "dunbar-tall", sans-serif;
   text-align: center;
   font-size: 56px;
   margin-top: -20px;
@@ -202,12 +215,11 @@ h6 {
 
 }
 
-/*
+
 .markdown a {
-  background-color: #bbe05f26;
-  border-radius: 4px;
+  color: var(--ifm-color-primary);
 }
-*/
+
 
 .markdown a:hover {
 
@@ -471,6 +483,10 @@ div[class^="searchBox"] {
 }
 
 [data-theme='dark'] > .sidebar-version {
+  color: 'white';
+}
+
+[data-theme='dark'] > .quick-starts {
   color: 'white';
 }
 
@@ -914,10 +930,14 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 
+.intro-text h4 {
+  font-family: 'Nunito Sans', sans-serif;
+}
 
 
 
 .intro-text p {
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 24px;
   line-height: 1.4;
   margin: 12px 0;
@@ -950,6 +970,7 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .intro-visual h5 {
+  font-family: "dunbar-tall", sans-serif;
   font-size: 64px;
   font-weight: 700;
   margin: 1rem 0;

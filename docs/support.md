@@ -13,7 +13,7 @@ last_update:
    author: Patricia McPhee
 draft: true
 doc_type: reference
-displayed_sidebar: secureWorkforceSidebar
+displayed_sidebar: mySidebar
 ---
 
 

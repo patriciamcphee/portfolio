@@ -3,7 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
-  secureWorkforceSidebar: [
+  mySidebar: [
     {
       type: 'category',
       label: 'API',
@@ -15,6 +15,7 @@ const sidebars = {
       },      
       items: [ 
         'api/example',
+//        'faq',
 /*        {
           type: 'link',
           label: 'bFlix API',
@@ -44,7 +45,7 @@ const sidebars = {
         'ux-writing/group-policies',     
       ],
     },
-/*    {
+    {
       type: 'category',
       label: 'Guides',
       collapsed: false, 
@@ -54,24 +55,13 @@ const sidebars = {
         id: 'how-tos/how-to-samples',
       },      
       items: [ 
-        {
-          type: 'category',
-          label: 'Contributor\'s guide',
-          collapsed: false, 
-          collapsible: false,   
-          link: {
-            type: 'doc',
-            id: 'how-tos/contribution-guide/contribute',
-          },      
-          items: [ 
-            'how-tos/contribution-guide/onboard',
-            'how-tos/contribution-guide/markdown-reference' ],
-        },
-        'how-tos/get-started/get-started',
+            'example-readme',
+            'how-tos/contribution-guide/contribute',
+            'how-tos/contribution-guide/markdown-reference', 
         
       ],
     },
-*/
+
     {
       type: 'category',
       label: 'KB articles',

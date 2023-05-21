@@ -1,0 +1,176 @@
+---
+title: Example content audit
+description: 'Content Strategy equals continuous discovery.'
+pagination_next: null
+pagination_prev: null
+last_update: 
+   date: 05/21/2023
+   author: Patricia McPhee
+---
+
+import Smartbear2020ApiReport from './images/smartbear-2020-report.png';
+
+## Problems found
+
+### On the surface
+
+- The flow of the content and steps weren't clear or obvious. For example, when I finished the Getting Started guide, I didn't know what to do next. Also, I found how-tos are in one topic instead of stand-alone topics.
+
+- We are not explicit about this being ProductA or ProductB. This can confuse developers who may need to learn or understand the difference.
+       
+- We use "enterprise" in the "What is SCOOBY" section. This needs to be clarified for the ProductA audience.
+
+- Information is not easily discoverable.  For example, in the ___ article, we mention SCIM and link to a topic that isn’t in the left nav (TOC). Therefore, it does not appear in the search results.
+
+### Under the hood
+
+- There are **multiple folders for images**. There should only be two core image folders:
+
+    - src/img = should store images that construct the doc site, like logos, favicon, landing page images, etc.
+
+    - docs/images = should store images for the documentation (when we version the content, we keep the correct images with the correct version; currently, that's not how it's set up)
+
+- The **sidebar.js file is being used half-heartedly**. In the markdown, we indicate where in the sidebar it resides, yet we have it in the sidebar.js file. We also have a *_category_*.json file under each category. You can add ALL the topics in the sidebar.js, so you don't have to worry about it in the topic metadata. Specifying the topic's location in multiple places can become a maintenance nightmare as more content gets added and shuffled around. Using the sidebar.js file, we can control the TOC structure in one place. We can also use the sidebar.js file for multiple sidebars rather than separate sidebar files.
+
+- The **/guides** folder and an **/images** or **/media** folder should be under the **/docs** folder. When you version the content, this content also gets versioned. For example, v0 images are currently the same as v1 because the images are outside the /docs folder.
+
+- We're **not using Google Fonts**. Instead, we have a /fonts folder, which can cause a lag in loading the page because the user must temporarily download the fonts. Using an @import url for Google Fonts will prevent or reduce the lag in loading the pages.
+
+- We DO have reusable content, but **we're not using these "include" files effectively**. For example, we have single "include" files but only use some once. These don't qualify as content reuse. We also have topics that can be reused, but we're not reusing them. For example, Create a Realm is in five different topics, which are not the same.
+
+## Goals and opportunities
+
+### Goals
+
+In today's digital age, content is king. Quality content is crucial for establishing a brand's authority and remaining competitive. Fresh, relevant, and engaging content builds long-term relationships and customer loyalty. At the same time, good documentation can lead to satisfaction, clarity, and trust in your product and brand.
+
+We must plan, create, deliver, and manage our content like any other product deliverable. A content strategy aims to create a meaningful and consistent experience for the customer. Once you have the content strategy, you can create a content model. At its core, content strategy will be the essential structure that focuses entirely on the reader.
+
+Therefore, we must understand our audience and what they want or need to know. The following four W's can help guide this thought process:
+
+- What information do readers want, and what format should we use?
+
+- When will readers need this content?
+
+- Where should content be placed to be most effective?
+
+- Why do readers need this content, and how does it solve their problems?
+
+Answering these questions can help determine what information to include and what format to use. Information should be updated and adapted as users' needs change.
+
+Also, understanding **user behavior and how users interact** with your end-user product documentation is critical. Specifically, how much time do they spend utilizing it? What do they click on the most? At what point in their journey do they decide to bounce? Analyzing your users' behavior will answer such questions and help you continuously refine the product documentation.
+
+
+
+### Opportunities
+
+Because documentation for external developers is a high priority, it should differ from content on internal wikis. 
+
+- In [Postman's 2022 State of the API Report](https://www.postman.com/state-of-api/executing-on-apis/#executing-on-apis), they found the **"lack of documentation" ranked the highest at 55%**.
+
+- When asked what would improve the documentation, 57% said, **"update-to-date documentation,"** followed by **"code samples" (55%)** and **"better examples" (53%)**.
+
+- Also, when asked how API knowledge is gained in Postman's 2022 State of the API Report, the most popular answer was **on the job or from a co-worker (63%)**, followed by **documentation (59%)**.
+
+- In the [State of API 2020 Report](https://static1.smartbear.co/smartbearbrand/media/pdf/smartbear_state_of_api_2020.pdf), Smartbear found that documentation is increasingly necessary. They found "accurate and detailed documentation" ranked second highest on the factors ranked.
+
+  <img src={Smartbear2020ApiReport} id="diagrams" alt="Example banner" />
+
+#### On the surface
+
+- **More visuals.** Use visuals such as workflow and architecture diagrams to help break up the large blocks of text in the conceptual/overview topics. For example, instead of only using text in the "What is SCOOBY" topic, simplify the text and "show" users how it works with visuals. Include images of what the sign-in, login, and recovery workflows look like without shared secrets, and demonstrate the standard flow compared to the unique one to help users understand why SCOOBY differs from other solutions.
+    
+    **Examples:**
+    
+    [https://www.onelogin.com/learn/iam](https://www.onelogin.com/learn/iam)
+    
+- **[Explainer videos](https://mowe.studio/are-explainer-videos-effective/) and Arcades should focus more on complex features** or configurations (policies are screaming for attention). Leave the simple stuff to screenshots.
+    
+    **Examples:**<br />
+    
+    - [https://www.ubisecure.com/explainer-videos/](https://www.ubisecure.com/explainer-videos/)
+    
+    - [https://auth0.com/resources/videos](https://auth0.com/resources/videos)
+    
+    - [https://www.accessplanit.com/en-gb/explainer-videos/accessplanit-workflows](https://www.accessplanit.com/en-gb/explainer-videos/accessplanit-workflows)
+    
+    - [https://www.paloaltonetworks.com/resources/videos/palo-alto-networks-and-okta-explainer-video](https://www.paloaltonetworks.com/resources/videos/palo-alto-networks-and-okta-explainer-video)
+    
+    - [https://www.onelogin.com/resource-center/videos/onelogin-cloudlock-integration](https://www.onelogin.com/resource-center/videos/onelogin-cloudlock-integration)
+    
+- **Consider A11y (Accessibility) more.** We are only considering accessibility in terms of font family, font size, and colors for visual disorders like color blindness or impaired vision. However, we should also consider those with [vestibular](https://www.a11yproject.com/posts/understanding-vestibular-disorders/) disorders. These individuals cannot handle moving objects on a page and need control over movement triggered by interactions. Non-essential movement can trigger vestibular disorder reactions, such as disorientation, dizziness, headaches, and nausea. To address this, I recommend limiting the use of Arcades to "demos" of new or complex features or tutorial topics.
+
+- Use **tooltips** for uncommon, new, or specific terms. While links to definitions may be necessary in some cases, using tooltips could be more scalable when the term is used multiple times throughout a topic. For example, the Account Setup and Applications Workflow topics repeat "realm" several times, but the links go to various topics. In this case, we could use tooltips instead.
+
+- **Chatbot**, or in this case, a Bot to enhance searching and self-support. [Chatwoot integrates with Docusaurus](https://www.chatwoot.com/docs/product/channels/live-chat/integrations/docusaurus/) and works with the Algolia Search feature. Other chatbot platforms that would work with Docusaurus include [Zaroc](https://zaroc.netlify.app/tutorials/get-your-first-parameter/), [BotStar](https://docs.botstar.com/docs/en/getting-started), and [React Chatbot Kit](https://fredrikoseberg.github.io/react-chatbot-kit-docs/) (simple and bare-bones). Users can use the bot to search, and if they get stuck, they can send a Slack message or chat with a live person (if that is an option we want). In other words, the bot gives the users a call to action and will continue to learn what questions users are asking. The difference between the default Algolia Search in Docusaurus and a chatbot is as follows:
+
+    - Algolia Search: *Basic* search with results that show a categorized list of any document. It also shows a list of recently viewed docs from your search efforts.
+
+    - Chatbot: *Intelligent* search with results that show a list of documents based on previous searches and a call-to-action. Based on the user's response, the chat session could end or continue to ask the user what they want. If they cannot find what they are looking for, they have options, such as going to Slack, chatting with support, or suggesting a topic to be added. The basic Algolia search does not have this functionality.
+
+- To enhance the effectiveness of our doc site analysis, we should **include a ratings and feedback section in the footer of every page**, in addition to using tools like Google Analytics or Vercel Web Analytics. While analytics can provide valuable data, gathering real-time feedback helps us take prompt action, mainly if the content needs to be corrected or completed.
+
+#### Under the hood
+
+- **Global variables.** As the company and product grow, variables come in handy when there's a product name change, feature name change, or even the company name—not having variables in place results in pandemonium for updating all the documentation.
+    
+    **Examples:**
+    
+    - GitHub repo link
+    
+    - Main website link
+    
+    - Support link
+    
+    - Company name
+    
+- **Content reuse for scalability.** Are there chunks of content that we can reuse? Content reuse allows you to update one file and have the other files that include it ("include" or content block) update automatically. Examples of content reuse include notes, warnings, error messages, product descriptions, and getting help. Another example is common tasks or steps/procedures. For instance, I found the steps for "Create a Realm" used in five topics, but not all were the same. While they delivered the same or similar information, they were just a copy and paste, making this a case for content reuse.
+
+- **Robust metadata** information instead of topic header titles for metadata is more efficient for SEO. For example, the titles for integration guides are often longer than necessary, like "Integrate SCOOBY Authentication into bubble.io applications." These long titles require more effort to scan and add cognitive load for the user. It's better to keep the title descriptive yet straightforward enough that it's easy to scan. In this example, the title could be "Integrate with bubble.io applications."
+
+- **Continue using Vercel to deploy the doc site** because they offer web analytics so we can obtain detailed insights into the site's visitors, including metrics like top pages, top referrers, and demographics such as countries, operating systems, and browser information. This information will allow us to determine how well a topic performs and keep the content relevant and interactive.
+    
+  Furthermore, Vercel allows non-GitHub users to comment on a page. However, in this case, we can only publish updates if a comment is marked as resolved. This is beneficial because it ensures all comments are addressed before publishing.
+    
+
+## Proposed content structure
+
+Bloom’s Taxonomy was applied to cover several levels of cognitive domain for the content structure:
+
+- Knowledge 
+
+- Comprehension
+
+- Application
+
+- Analyze
+
+- Synthesis
+
+- Evaluation
+
+
+There are numerous challenges that come with modeling the navigation that works for our readers with different levels of knowledge. Content modeling isn’t easy, but when done right, it becomes a powerful tool for both consumer and contributor. 
+Great doc sites don’t just happen overnight. Companies like Okta, Strype, and Clerk have Content Strategists, Information/Content Architects, or Content Engineers that plan and build their content into something useful for their customers. 
+
+...
+New sidebar structure
+...
+
+## Proposed next steps
+
+- [ ] Migrate and clean up existing content (5/31/2023)
+
+- [ ] Identity new content and create (Ongoing) 
+
+- [ ] Finalize new design, including landing page and content structure (5/31/2023)
+
+- [ ] Plan for and map out redirects (5/31/2023)
+
+- [ ] Doc site maintainer handbook (6/23/2023)
+
+- [ ] Contributor’s and style guides (6/23/2023)
+
+- [ ] SME review for technical accuracy and address customer experience gaps (6/29/2023)
+
+- [ ] Publish new design and reworked content (6/30/2023)

@@ -269,14 +269,7 @@ ul {
   margin-bottom: 0;
 }
 
-pre {
-  font-family: monospace, monospace;
-  font-size: 0.9em;
-  white-space: normal;
-/*  word-wrap: break-word;*/
-  overflow-wrap: break-word;
-  margin: 10px 0;
-}
+
 
 /* Glossary */
 dt {

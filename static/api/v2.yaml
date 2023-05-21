@@ -1,6 +1,5 @@
 openapi: 3.0.1
 info:
-
   description: |
     - **Project**: CareerFoundry assignment; write an API for a movie app
     - **Description**: Written for the b-movie app I've been developing.

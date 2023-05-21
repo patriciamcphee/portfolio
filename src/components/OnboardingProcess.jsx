@@ -7,9 +7,11 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { Alert, Divider } from '@mui/material';
+import { Alert } from '@mui/material';
 import AlertTitle from '@mui/material/AlertTitle';
 import Grid from '@mui/material/Grid';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
@@ -18,13 +20,11 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      light: '#b1d753',
       main: '#9ecd28',
       dark: '#046b99',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#3688ad',
       main: '#046b99',
       dark: '#024a6b',
       contrastText: '#000',
@@ -37,7 +37,6 @@ let theme = createTheme({
     ].join(','),
   },
   custom: {
-    light: '#ffa726',
     main: '#f57c00',
     dark: '#ef6c00',
     contrastText: 'rgba(0, 0, 0, 0.87)',
@@ -50,8 +49,6 @@ let theme = createTheme({
     // E.g., shift from Red 500 to Red 300 or Red 700.
     tonalOffset: 0.2,
 });
-
-
 
 
 import { Col, Row, ConfigProvider } from 'antd';
@@ -127,11 +124,16 @@ const steps = [
     label: 'Prerequisites',
     description: (
       <>
-        <Alert severity="warning" sx={{ ml: 2 }}>
+        <Alert severity="info" sx={{ ml: 2 }}>
            <AlertTitle>IMPORTANT</AlertTitle>
-             This is an info alert — <strong>check it out!</strong>
+             <p>If you're planning to make significant edits or add new content, you must set up your system with the proper tools.</p> <p>If you're planning to only make minor edits in GitHub through the browser, you can skip to the <a href="#best-practices"><b>Best practices</b></a> section below.</p>
+             <ol>
+                <li>Code editor, VS Code is recommended</li>
+                <li>Git</li>
+                <li>Node.js</li>
+                <li>Yarn</li>
+             </ol>
         </Alert>
-
 
       </>
     ),
@@ -175,7 +177,7 @@ const steps = [
           <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
           </Grid>
           <Grid item xs>
-          <p>At this point in your journey....If using macOS, you may have to authorize the global installation of packages. To do this you can use the sudo command: If using macOS, you may have to authorize the global installation of packages. To do this you can use the sudo command: If using macOS, you may have to authorize the global installation of packages. To do this you can use the sudo command:</p>
+          <p>At this point in your journey, you installed the tools needed to contribute to the documentation. Next, you'll clone and set up the GitHub repo locally on your machine. </p>
           </Grid>
         </Grid>
 
@@ -209,7 +211,7 @@ const steps = [
           <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
           </Grid>
           <Grid item xs>
-          <p>You now have the tools installed, your workspace or working directory set up, and the scooby-docs-next repo cloned. You're done!</p>
+          <p>Up to this point, you now have the tools installed, the scooby-docs-next repo cloned, and your workspace or working directory set up. Keep going. You're almost done!</p>
           </Grid>
         </Grid>            
 
@@ -226,14 +228,6 @@ const steps = [
   yarn start</code></pre></p>
         <p>The <code>http://localhost:3000</code> opens in your browser so you can see your changes reflected live.As you make changes to the source files, the preview build will be triggered automatically, and then you can refresh your browser to see the changes.</p>
 
-          <Grid container wrap="nowrap" spacing={2} sx={{ p: 2}}>
-          <Grid item>
-          <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
-          </Grid>
-          <Grid item xs>
-          <p>Up to this point, you now have your tools installed and your working directory established. Keep going. You're almost done!</p>
-          </Grid>
-        </Grid>
 
       </>
     ),

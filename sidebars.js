@@ -4,6 +4,7 @@
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
+    
     {
       type: 'category',
       label: 'API',
@@ -29,7 +30,29 @@ const sidebars = {
 
       ],
     },
-
+    {
+      type:'category',
+      label: 'Content strategy',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'content-strategy',
+      },      
+      items: [ 
+        'example-content-audit',
+        {
+          type: 'link',
+          label: 'Why content quality matters',
+          href: '/blog/2022/02/23/how-much-does-quality-content-matter',
+        },      
+        {
+          type: 'link',
+          label: 'The art of information architecture',
+          href: '/blog/2022/10/04/information-architecture',
+        }, 
+      ],
+    },
     {
       type: 'category',
       label: 'UX writing',

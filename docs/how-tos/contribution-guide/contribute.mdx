@@ -12,6 +12,8 @@ pagination_next: null
 pagination_prev: null
 ---
 
+import { Alert } from '@mui/material';
+import AlertTitle from '@mui/material/AlertTitle';
 
 [issues]: https://github.com/goscooby/scooby-docs-next/issues
 [conduct]: /docs/contributing-guide/code-of-conduct
@@ -37,19 +39,9 @@ This topic outlines the different ways that you can get involved. In addition, i
 - If the solution you are proposing is complex, prose it anyway and wait for one of the core contributors to approve it before implementing it. This helps in shorter turnaround times in merging PRs.
   
   
-## Local Git repo
-
-
-- Code editor, [VS Code](https://code.visualstudio.com) is recommended
-- [Git](https://git-scm.com)
-- [Node.js](https://nodejs.org)
-- [Yarn](https://yarnpkg.com) 
 
 
 
-import OnboardingProcessStepper from '../../../src/components/OnboardingProcess.jsx';
-
-<OnboardingProcessStepper />
 
 ## When to contribute
 
@@ -70,6 +62,11 @@ The acceptance criteria for contributing to SCOOBY developer documentation is:
 
 The Sr. Technical Writer maintains the content's quality, reduces duplication, and provides a consistent user experience. They can also strategize how to deliver complex information—for example, adding an explainer video (&#060;90 secs) can help with complex scenarios or issues.
 
+## Local Git repo
+
+import OnboardingProcessStepper from '../../../src/components/OnboardingProcess.jsx';
+
+<OnboardingProcessStepper />
 
 ### Optional editing tools
 
@@ -188,7 +185,13 @@ If you need to make substantial changes, add an image or add a section to a topi
    yarn start
    ```
 
-   This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to **http://localhost:3000/scooby-docs-next/** to view your local changes.   
+   This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to **http://localhost:3000/** to view your local changes.   
+
+   <Alert severity="info" color="success">
+      <AlertTitle>Tip!</AlertTitle>
+      It's best practice to run the following command to ensure your changes didn't introduce a breaking change.
+      <pre>npm run clear<br />yarn build</pre>
+   </Alert>
 
 
 5. Add your changes.
@@ -289,7 +292,13 @@ If you need to make substantial changes, add an image or add a section to a topi
    yarn start
    ```
 
-   This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to  **http://localhost:3000/scooby-docs-next/** to view your local changes. 
+   This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to **http://localhost:3000/** to view your local changes.   
+
+   <Alert severity="info" color="success">
+      <AlertTitle>Tip!</AlertTitle>
+      It's best practice to run the following command to ensure your changes didn't introduce a breaking change.
+      <pre>npm run clear<br />yarn build</pre>
+   </Alert>
 
 7. When ready, commit and publish your changes to the main (default) branch, add your changes.
 
@@ -329,5 +338,5 @@ Before submitting a Pull Request, review the general SCOOBY Pull Request Guideli
 
 SCOOBY requires the use of commit signoffs for each PR. Every commit to this repo must be signed off using `#approved` by the required reviewers and `#sign-off` to trigger the merge. Otherwise, the PR could not be merged.
 
-Once you've reviewed the PR and approved it, add a Signed-off-by line to your commit message. For example, `Signed-off-by: John Doe john.doe@scooby.com`.
+
 

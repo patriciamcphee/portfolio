@@ -15,17 +15,16 @@ draft: false
 hide_title: true
 hide_table_of_contents: true
 doc_type: overview
-displayed_sidebar: secureWorkforceSidebar
+displayed_sidebar: mySidebar
 ---
 
 import { Col, Divider, Row, Card, Space, Button, ConfigProvider } from "antd";
+
 import { CheckCircleFilled } from '@ant-design/icons';
 const style = {
-  padding: "6px 0",
+  padding: "6px 20px",
+  color: '#fff',
 };
-
-
-
 
 
 <div class="intro-visual">
@@ -38,24 +37,24 @@ const style = {
     </h5>
     <p class="intro-text">I'm a UX Technical Writer / Content Strategist based in Redmond, WA.
     </p>
-            <h4 class="intro-text">I'm passionate about creating content experiences that help people configure, use, and troubleshoot products. </h4>   
-                     
+    <h4 class="intro-text">I'm passionate about creating content experiences that help people configure, use, and troubleshoot products. </h4>                 
         </div>
         <div class="intro-text-button">
         <ConfigProvider
-    theme={{
-      token: {
-          colorPrimary: '#9ecd28',
-          colorPrimaryHover: '#046b99',
-        }
-      }
-    }
-  >
-    <Button type="primary" shape="round" icon={<DownloadOutlined />} size='large' href="/portfolio/resume" >
-            View My Resume!
-          </Button>
-  </ConfigProvider>
-  </div>
+            theme={{
+              token: {
+                  colorPrimary: '#9ecd28',
+                  colorPrimaryHover: '#046b99',
+                  colorTextBase: '#1890ff',
+                }
+              }
+            }
+          >
+            <Button type="primary" shape="round" size='large' style={style} href="/portfolio/resume" >
+                    View My Resume!
+                  </Button>
+          </ConfigProvider>
+      </div>
       </Col>
        <Col flex="0 1 300px">
         <div className="intro-image"></div>
@@ -87,6 +86,6 @@ I'm a word nerd who loves to explain complex concepts in simple language. I can 
 
 <h2>About this site</h2>
 
-I used [Docusaurus](https://docusaurus.io) to build this writing portfolio. I started using Docusaurus at the beginning of 2020 and continue to play around with customization. In 2018, I started using static-site generators like Jekyll, Hugo, and DocFx as my primary authoring environment. My favorite, so far, has to be Docusuarus. I like DocFx, but it's a bit more complicated to set up.
+I used [Docusaurus](https://docusaurus.io) to build this writing portfolio. I started using Docusaurus at the beginning of 2020 and continue to play around with customization. I started using other static-site generators like Jekyll, Hugo, Gatsby, and DocFx in 2018 as my primary authoring environment. My favorite, so far, has to be Docusuarus. I like DocFx, but it's a bit more complicated to set up.
 
-
+The purpose of using a docs-as-code framework to host my writing samples was to make it easier to show off my work! 

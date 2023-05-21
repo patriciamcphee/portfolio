@@ -6,15 +6,11 @@ keywords:
   - contribute
   - documentation
 last_update: 
-   date: 11/13/2022
+   date: 05/20/2023
    author: Patricia McPhee
 pagination_next: null
 pagination_prev: null
 ---
-
-[have a title](https://markdowntohtml.com "Awesome tooltip")
-
-This is a [hover text](## "your hover text") example.
 
 ## Headings
 
@@ -89,17 +85,18 @@ The example above renders as:
 
 1. This is a numbered list example (one space after the period before the letter T).
 
-  This sentence is indented three spaces.
+   This sentence is indented three spaces.
 
-  ```
-  This code block is indented three spaces.
-  ```
+   ```
+   This code block is indented three spaces.
+   ```
 
 - This is a bulleted list example (one space after the bullet before the letter T).
+ 
+   This sentence is indented two spaces.
 
-This sentence is indented two spaces.
+   This tip is indented two spaces.
 
-This tip is indented two spaces.
 - This is a second-level bullet (indented two spaces, with one space after the bullet before the letter T).
   This sentence is indented four spaces.
   > This quote block is indented four spaces.
@@ -172,7 +169,7 @@ This renders as follows:
 
 You can align the columns by using colons:
 
-```markdown
+```md
 | Fun                  | With                 | Tables          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
@@ -190,9 +187,10 @@ Renders as follows:
 | $10                  | $10                  | $10             |
 | $1                   | $1                   | $1              |
 
-:::tip
-You can also use an [online table generator](http://www.tablesgenerator.com/markdown_tables).
-:::
+
+import Alert from '@mui/material/Alert';
+
+<Alert severity="success">You can also use an <a href="http://www.tablesgenerator.com/markdown_tables">online table generator</a>.</Alert>
 
 
 ### Inconsistent column widths between tables
@@ -227,14 +225,28 @@ There are several ways to include code:
 
 * Individual elements (words) within a line.
 
-Here's an example of `code` style.
+    Here's an example of `code` style.
 
-Use code format when referring to named parameters and variables in a nearby code block in your text. Code format may also be used for properties, methods, classes, and language keywords. 
+    Use code format when referring to named parameters and variables in a nearby code block in your text. Code format may also be used for properties, methods, classes, and language keywords. 
 
 
 * Code blocks in the article Markdown file.
 
-  ```markdown
+   ```
+      ```javascript
+        module.exports = {
+          sidebar: [
+            {
+              type: 'category',
+              label: 'Overview',
+              items: ['release-notes', 'intro', 'how-it-works'],
+            };
+          ],
+      ```  
+   ```
+
+   The example renders as:
+
     ```javascript
     module.exports = {
       sidebar: [
@@ -245,20 +257,6 @@ Use code format when referring to named parameters and variables in a nearby cod
         };
       ],
     ```
-  ```
-
-The example renders as:
-
-```javascript
-module.exports = {
-  sidebar: [
-    {
-      type: 'category',
-      label: 'Overview',
-      items: ['release-notes', 'intro', 'how-it-works'],
-    };
-  ],
-```
 
 Use inline code blocks when it's impractical to display code by reference to a code file. 
 

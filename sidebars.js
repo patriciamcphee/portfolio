@@ -3,7 +3,8 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
-  secureWorkforceSidebar: [
+  mySidebar: [
+    
     {
       type: 'category',
       label: 'API',
@@ -15,6 +16,7 @@ const sidebars = {
       },      
       items: [ 
         'api/example',
+//        'faq',
 /*        {
           type: 'link',
           label: 'bFlix API',
@@ -28,7 +30,29 @@ const sidebars = {
 
       ],
     },
-
+    {
+      type:'category',
+      label: 'Content strategy',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'content-strategy',
+      },      
+      items: [ 
+        'example-content-audit',
+        {
+          type: 'link',
+          label: 'Why content quality matters',
+          href: '/blog/2022/02/23/how-much-does-quality-content-matter',
+        },      
+        {
+          type: 'link',
+          label: 'The art of information architecture',
+          href: '/blog/2022/10/04/information-architecture',
+        }, 
+      ],
+    },
     {
       type: 'category',
       label: 'UX writing',
@@ -44,7 +68,7 @@ const sidebars = {
         'ux-writing/group-policies',     
       ],
     },
-/*    {
+    {
       type: 'category',
       label: 'Guides',
       collapsed: false, 
@@ -54,24 +78,13 @@ const sidebars = {
         id: 'how-tos/how-to-samples',
       },      
       items: [ 
-        {
-          type: 'category',
-          label: 'Contributor\'s guide',
-          collapsed: false, 
-          collapsible: false,   
-          link: {
-            type: 'doc',
-            id: 'how-tos/contribution-guide/contribute',
-          },      
-          items: [ 
-            'how-tos/contribution-guide/onboard',
-            'how-tos/contribution-guide/markdown-reference' ],
-        },
-        'how-tos/get-started/get-started',
+            'example-readme',
+            'how-tos/contribution-guide/contribute',
+            'how-tos/contribution-guide/markdown-reference', 
         
       ],
     },
-*/
+
     {
       type: 'category',
       label: 'KB articles',

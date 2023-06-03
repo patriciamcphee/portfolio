@@ -41,16 +41,8 @@ const sidebars = {
       },      
       items: [ 
         'example-content-audit',
-        {
-          type: 'link',
-          label: 'Why content quality matters',
-          href: '/blog/2022/02/23/how-much-does-quality-content-matter',
-        },      
-        {
-          type: 'link',
-          label: 'The art of information architecture',
-          href: '/blog/2022/10/04/information-architecture',
-        }, 
+        'quality-content-matters',     
+        'art-of-information-architecture',
       ],
     },
     {

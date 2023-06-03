@@ -29,7 +29,7 @@
   --ifm-color-secondary-light: #0476a8;
   --ifm-color-secondary-lighter: #057bb0;
   --ifm-color-secondary-lightest: #058bc7;
-  --ifm-color-content: rgba(7, 0, 20, 0.87);
+  --ifm-color-content: #333;
   --ifm-color-content-secondary: rgba(7, 0, 20, 0.6);
   --ifm-border-color: rgba(7, 0, 19, 0.12);  
   --ifm-background-color: #faf9fb;
@@ -107,7 +107,7 @@ h1 {
   text-align: left;
   font-family: "dunbar-tall", sans-serif;
   font-weight: 400;
-  color: '#eee'
+  color: '#333'
 }
 
 h2 {
@@ -491,6 +491,8 @@ aside.theme-doc-sidebar-container {
   padding-top: 18px;
 }
 */
+
+
 .menu {
   font-weight: var(--ifm-font-weight-normal);
 }
@@ -511,7 +513,7 @@ nav[class^="menu"] {
   text-decoration: none;
   transition: none;
 }
-.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible {
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsed {
   background: none;
   margin-top: 0.25rem;
 }
@@ -583,12 +585,7 @@ nav[class^="menu"] {
   border-radius: 0.09375rem;
   background-color: var(--ifm-color-primary);
 }
-/*
-button[class*="collapseSidebarButton"] {
-  border: none;
-  background: none !important;
-}
-*/
+
 
 /* Tooltips */
 
@@ -900,7 +897,7 @@ div[class^="tocCollapsibleContent"] ul li {
   background-color: #9ecd2836;
   display: flex;
 
-  border-radius: 0px;
+  border-radius: 12px;
 
   background-repeat: no-repeat;
   background-image: url("../../static/img/flat-sketch.svg");

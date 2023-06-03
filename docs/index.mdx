@@ -20,12 +20,14 @@ displayed_sidebar: mySidebar
 
 import { Col, Divider, Row, Card, Space, Button, ConfigProvider } from "antd";
 
+
+import Grid from '@mui/material/Grid';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { CheckCircleFilled } from '@ant-design/icons';
 const style = {
   padding: "6px 20px",
   color: '#fff',
 };
-
 
 <div class="intro-visual">
 
@@ -71,21 +73,42 @@ My journey into Technical Writing started over 20 years ago on a Human-Centered 
 I'm a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.
 
 
-<Row>
-   <Col span={1}><p><CheckCircleFilled style={{ fontSize: '24px', color: '#9ecd28' }} /></p></Col>
-   <Col span={20} offset={-3}><p>I can give your product a competitive edge with powerful content targeted to any audience—novice to expert.</p></Col>
-</Row>
-<Row>
-   <Col span={1}><p><CheckCircleFilled style={{ fontSize: '24px', color: '#9ecd28' }} /></p></Col>
-   <Col span={20}><p>I develop clear and helpful text in product interfaces, content from online help systems, user onboarding, and in-app messages to push notifications and tooltips.</p></Col>
-</Row>
-<Row>
-   <Col span={1}><p><CheckCircleFilled style={{ fontSize: '24px', color: '#9ecd28' }} /></p></Col>
-   <Col span={20}><p>I can help you implement a plan that maximizes your business's online exposure.</p></Col>
-</Row>
+<Grid container wrap="nowrap" spacing={2} sx={{ pl: 2, pr: 2}}>
+  <Grid item>
+  <p><CheckCircleIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
+  </Grid>
+  <Grid item xs>
+  <p><b>Content strategy</b>: I help <i>improve</i> the quality, relevance, and effectiveness of your end-user content, leading to better user experiences, increased engagement, and better business outcomes. Information grows and changes over time in response to the users' needs. This means determining when the amount or types of information no longer fits or when there's a shift in context or users.</p>
+  </Grid>
+</Grid> 
+
+
+
+
+<Grid container wrap="nowrap" spacing={2} sx={{ pl: 2, pr: 2}}>
+  <Grid item>
+  <p><CheckCircleIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
+  </Grid>
+  <Grid item xs>
+  <p><b>Content writing</b>: I give your product a competitive edge with powerful content targeted to any audience—novice to expert. No matter how large or complex the project is, I can help you implement a plan that maximizes your business's online exposure.</p>
+  </Grid>
+</Grid>  
+
+<Grid container wrap="nowrap" spacing={2} sx={{ pl: 2, pr: 2}}>
+  <Grid item>
+  <p><CheckCircleIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
+  </Grid>
+  <Grid item xs>
+  <p><b>UX Writing</b>: I develop clear and helpful text in product interfaces to help users reach a specific goal, whether completing a form or tapping a button. This includes content from online help systems, user onboarding, and in-app messages to push notifications and tooltips.</p>
+  </Grid>
+</Grid> 
+
+
+
+
 
 <h2>About this site</h2>
 
 I used [Docusaurus](https://docusaurus.io) to build this writing portfolio. I started using Docusaurus at the beginning of 2020 and continue to play around with customization. I started using other static-site generators like Jekyll, Hugo, Gatsby, and DocFx in 2018 as my primary authoring environment. My favorite, so far, has to be Docusuarus. I like DocFx, but it's a bit more complicated to set up.
 
-The purpose of using a docs-as-code framework to host my writing samples was to make it easier to show off my work! 
+The purpose of using the Docusaurus framework to host my writing samples was to make it easier to share and show off my work! 

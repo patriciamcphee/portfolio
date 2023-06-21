@@ -71,7 +71,7 @@ const sidebars = {
       },      
       items: [ 
             'example-readme',
-            'how-tos/contribution-guide/contribute',
+            'how-tos/contribution-guide/contributor-guide',
             'how-tos/contribution-guide/markdown-reference', 
         
       ],

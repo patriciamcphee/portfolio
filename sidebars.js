@@ -4,7 +4,102 @@
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
-    
+    {
+      type: 'category',
+      label: 'Conversation Design',
+      collapsed: false, 
+      collapsible: false, 
+      items: [ 
+        {
+          type: 'category',
+          label: 'Healthcare',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/check-lab-results',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Banking',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/transfer-bank-funds',
+            'conversation-design/ivr-credit-union',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Health & Beauty',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/ivr-beauty-spa',
+
+          ]
+        }
+      ], 
+    },
+    {
+      type: 'category',
+      label: 'UX writing',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'ux-writing/ux-writing-samples',
+      },          
+      items: [ 
+        'ux-writing/ui-strings', 
+        'ux-writing/errors-warnings-confirmations', 
+        'ux-writing/group-policies',     
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Guides',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'how-tos/how-to-samples',
+      },      
+      items: [ 
+            'example-readme',
+            'how-tos/contribution-guide/contributor-guide',
+            'how-tos/contribution-guide/markdown-reference', 
+        
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Voiceover scripts',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'voiceover-scripts/intro',
+      },       
+      items: [ 'voiceover-scripts/tech-software-training',
+        {
+          type: 'link',
+          label: 'Professional demos',
+          href: 'https://patriciamcphee.github.io/pmcphee-voiceover/',
+        }, 
+      ],
+    },
+    {
+      type: 'category',
+      label: 'KB articles',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'kb-articles/kb-article-samples',
+      },         
+      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
+    },
     {
       type: 'category',
       label: 'API',
@@ -45,66 +140,7 @@ const sidebars = {
         'art-of-information-architecture',
       ],
     },
-    {
-      type: 'category',
-      label: 'UX writing',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'ux-writing/ux-writing-samples',
-      },          
-      items: [ 
-        'ux-writing/ui-strings', 
-        'ux-writing/errors-warnings-confirmations', 
-        'ux-writing/group-policies',     
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Guides',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'how-tos/how-to-samples',
-      },      
-      items: [ 
-            'example-readme',
-            'how-tos/contribution-guide/contributor-guide',
-            'how-tos/contribution-guide/markdown-reference', 
-        
-      ],
-    },
 
-    {
-      type: 'category',
-      label: 'KB articles',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'kb-articles/kb-article-samples',
-      },         
-      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
-    },
-    {
-      type: 'category',
-      label: 'Voiceover scripts',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'voiceover-scripts/intro',
-      },       
-      items: [ 'voiceover-scripts/tech-software-training',
-        {
-          type: 'link',
-          label: 'Professional demos',
-          href: 'https://patriciamcphee.github.io/pmcphee-voiceover/',
-        }, 
-      ],
-    },
 
   ],
 

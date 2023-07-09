@@ -7,7 +7,7 @@ keywords:
   - contribute
   - documentation
 last_update: 
-   date: 07/08/2023
+   date: 07/09/2023
    author: Patricia McPhee
 pagination_next: null
 pagination_prev: null
@@ -15,10 +15,8 @@ pagination_prev: null
 
 <h4>Sample details</h4>
 
-- **Project:** Chatbot for a ficticious airline (certificate project)
-- **Company:** N/A
+- **Project:** Chatbot for a fictitious airline (certificate project)
 - **My Role:** Conversation Designer/Conversational Copywriter
-- **Date:** TBD
 - **Tools:** Figma, VoiceFlow
 
 <Divider />
@@ -28,12 +26,13 @@ import PogoAirlineLogo from '../../static/img/pogo-airlines-logo-transparent.png
 <img src={PogoAirlineLogo} width="30%" id="diagrams" alt="Example banner" />
 
 
-Pogo Airlines offers highly competitive and affordable pricing options, ensuring fares remain attractive to budget-conscious millennials. They’re called "Pogo" because you can quickly hop wherever you need to go. As a growing airline in the millennial travel space, Pogo recognizes the importance of fast, 24/7 support and differentiates themselves from competitors by offering a chatbot on their website and social media channels. 
+Pogo Airlines offers highly competitive and affordable pricing options, ensuring fares remain attractive to budget-conscious millennials. They're called "Pogo" because you can quickly hop wherever you need to go. As a growing airline in the millennial travel space, Pogo recognizes the importance of fast, 24/7 support and differentiates themselves from competitors by offering a chatbot on their website and social media channels. 
 
-The chatbot provides quick and accurate answers to common questions, build trust in the brand, and positions Pogo Airlines as a travel company that always has their customers' backs. In addition to common questions, customers can things like: 
+The chatbot provides quick and accurate answers to common questions, builds trust in the brand, and positions Pogo Airlines as a travel company that always has their customers' backs. In addition to common questions, customers can do things like: 
 
-- Book a flight
-- Check flight times
+- Find lesser-known gems and last-minute deals
+- Book a flight 
+- Check flight times and details
 - Check the weather at their destination
 - Discover what to do when they get there
 
@@ -54,19 +53,19 @@ import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
 import FavoriteSharpIcon from '@mui/icons-material/FavoriteSharp';
 import SchoolSharpIcon from '@mui/icons-material/SchoolSharp';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import Circle from '@mui/icons-material/CircleOutlined';
 
+import { FireFilled,  DownloadOutlined } from '@ant-design/icons';
 import { 
   Tag, 
   ConfigProvider,
   Progress,
   Space, 
   theme,
-  Divider 
+  Divider,
+  Slider,
+  Rate 
   } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
-const style = {
-  color: '#fff',
-}; 
 
 
 
@@ -76,7 +75,7 @@ const style = {
       <div class="col-demo">
         <img src={AlexUserPersona} width="90%" id="personas" alt="Example banner" />
         <ul className="text-sm no-style">
-        <li class="no-style persona-demographic"><CakeSharpIcon fontSize="small" />&nbsp;&nbsp;27</li>
+        <li class="no-style persona-demographic"><span class="icon-position"><CakeSharpIcon fontSize="small" /></span>&nbsp;&nbsp;27</li>
         <li class="no-style persona-demographic"><BusinessCenterSharpIcon fontSize="small" />&nbsp;&nbsp;Freelance Graphic Designer</li>
         <li class="no-style persona-demographic"><SchoolSharpIcon fontSize="small" />&nbsp;&nbsp;Bachelor of Visual Arts</li>
         <li class="no-style persona-demographic"><FavoriteSharpIcon fontSize="small" />&nbsp;&nbsp;Single</li>
@@ -94,9 +93,10 @@ const style = {
     >
     <Space size={[0, 'small']} wrap>
       <Tag bordered={false} color="#25517E">Spontaneous</Tag>
+      <Tag bordered={false} color="#25517E">Curious</Tag>
+      <Tag bordered={false} color="#25517E">Witty</Tag>
       <Tag bordered={false} color="#25517E">Passionate</Tag>
       <Tag bordered={false} color="#25517E">Adventurous</Tag>
-      <Tag bordered={false} color="#25517E">Curious</Tag>
       <Tag bordered={false} color="#25517E">Energetic</Tag>
     </Space>
     </ConfigProvider>
@@ -107,21 +107,22 @@ const style = {
       <div class="col-demo">
         <div class="persona-bio-container">
         <h2>Kevin Miller</h2>
-        <p class="persona-bio">Kevin is a 27-year-old freelance graphic designer from Los Angeles. He studied at California College of the Arts (CCA), specializing in typography, color theory, and digital media. He runs a design studio in Los Angeles and works for various industries, including fashion, technology, and entertainment.</p><p class="persona-bio">He loves surfing and traveling, and his global experiences inspire his art. He has a tight budget due to his freelance work but doesn’t want to compromise on his wanderlust. He’s always looking for last-minute travel deals and affordable flights to make spontaneous trips. Kevin enjoys experiencing different cultures, trying local cuisine, and capturing moments through their photography.</p>
+        <p class="persona-bio">Kevin is a 27-year-old freelance graphic designer from Los Angeles. He studied at California College of the Arts (CCA), specializing in typography, color theory, and digital media. He runs a design studio in Los Angeles and works for various industries, including fashion, technology, and entertainment.</p><p class= "persona-bio">He loves surfing and traveling, and his global experiences inspire his art. He has a tight budget due to his freelance work but wants to maintain his wanderlust. He's always looking for last-minute travel deals and affordable flights to make spontaneous trips. Kevin enjoys experiencing different cultures, trying local cuisine, and capturing moments through their photography.</p>
       </div>
-      <div class="persona-quote"><span class="quotes-large">"Every great design begins with an even better story."</span> </div>
+      <div class= "persona-quote"><span class= "quotes-large"> "Every great design begins with an even better story." </span> </div>
       </div>
     </div>
   </div>
-  <div class="row persona-row">
+  <div class= "row persona-row">
     <div class="col">
       <div class="col-demo">
         <h4>Goals</h4>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Open to exploring unconventional destinations.</li>
+          <li>Enjoys meeting new people and sharing travel experiences.</li>
+          <li>Can travel on short notice because of a flexible schedule.</li>
+          <li>Various destinations and flight times, including lesser-known gems and last-minute deals. </li>
+          <li>Low-cost fairs and budget-friendly travel options. </li>
         </ul>
       </div>
     </div>
@@ -129,39 +130,29 @@ const style = {
       <div class="col-demo">
         <h4>Needs</h4>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Affordable last-minute deals</li>
+          <li>Diverse destination options</li>
+          <li>User-friendly digital experience</li>
+          <li>Community building</li>
+          <li>Flexible scheduling</li>
+          <li>Seamless and hassle-free experience</li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="row persona-row">
+  <div class= "row persona-row">
     <div class="col">
       <div class="col-demo">
-        <h4>Pain points</h4>
+        <h4>Frustrations</h4>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-   <div class="col">
-      <div class="col-demo">
-        <h4>Preferences</h4>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Often struggles to find affordable flights, especially for last-minute trips.</li>
+          <li>Limited flight options and availability can hinder spontaneous travel plans.</li>
+          <li>Complicated booking processes or a lack of user-friendly interfaces can be frustrating.</li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="row persona-row">
+  <div class= "row persona-row">
     <div class="col">
       <div class="col-demo">
       <h4>Personality</h4>
@@ -174,11 +165,11 @@ const style = {
           theme={{
             token: {
               colorInfo: '#25517E',
-              colorFillSecondary: '#cecece',
+              colorFillSecondary: '#cecece66',
             },
           }}
         >
-        <Progress percent={70} size="small" showInfo={false} />
+        <Progress percent={90} size="small" showInfo={false} />
         </ConfigProvider>
         </div>
         <div class="tech-3 clip-contents">
@@ -190,7 +181,7 @@ const style = {
           theme={{
             token: {
               colorInfo: '#25517E',
-              colorFillSecondary: '#cecece',
+              colorFillSecondary: '#cecece66',
             },
           }}
         >
@@ -206,7 +197,7 @@ const style = {
           theme={{
             token: {
               colorInfo: '#25517E',
-              colorFillSecondary: '#cecece',
+              colorFillSecondary: '#cecece66',
             },
           }}
         >
@@ -222,7 +213,7 @@ const style = {
           theme={{
             token: {
               colorInfo: '#25517E',
-              colorFillSecondary: '#cecece',
+              colorFillSecondary: '#cecece66',
             },
           }}
         >
@@ -238,66 +229,74 @@ const style = {
           theme={{
             token: {
               colorInfo: '#25517E',
-              colorFillSecondary: '#cecece',
+              colorFillSecondary: '#cecece66',
             },
           }}
         >
-        <Progress percent={40} size="small" showInfo={false} />
+        <Progress percent={30} size="small" showInfo={false} />
         </ConfigProvider>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="col-demo">
-        <h4>Motivations</h4>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row persona-row">
-    <div class="col">
-      <div class="col-demo">
-      <h4>Brands and influencers</h4>
-      <div class="row">
-    <div class="col">
-      <div class="col-demo"><img src={TripAdvisorLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={AirbnbLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={TikTokLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={InstagramLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={AdobeLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={SpotifyLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={FacebookLogo} id="diagrams" alt="Example banner" /></div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={RedditLogo} id="diagrams" alt="Example banner" />
-      </div>
-    </div>
-    <div class="col">
-      <div class="col-demo"><img src={WhatsAppLogo} id="diagrams" alt="Example banner" />
-      </div>
-    </div>
-  </div>
+      <h4>Technical skills</h4>
+        <div class="row">
+          <div class="col">
+            <div class="tech-3 clip-contents">
+              <div className="frame-2143">
+                <p className="introvert">Social networks</p>
+              </div>
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorFillContent: '#cecece66',
+                  },
+                }}
+              >
+              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E' }} count={10} disabled defaultValue={8} />
+              </ConfigProvider>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="tech-3 clip-contents">
+              <div className="frame-2143">
+                <p className="introvert">Online shopping</p>
+              </div>
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorFillContent: '#cecece66',
+                  },
+                }}
+              >
+              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E' }} count={10} disabled defaultValue={6} />
+              </ConfigProvider>
+            </div>
+          </div>
+        </div>
+        <h4>Brands and influencers</h4>
+        <div class="row">
+          <div class="col">
+            <div id="grid">
+              <div id="item1"><img src={TripAdvisorLogo} id="diagrams" alt="Example banner" /></div>
+              <div id="item2"><img src={AirbnbLogo} id="brands" alt="Example banner" /></div>
+              <div id="item3"><img src={TikTokLogo} id="brands" alt="Example banner" /></div>
+              <div id="item4"><img src={InstagramLogo} id="brands" alt="Example banner" /></div>
+              <div id="item5"><img src={SpotifyLogo} id="brands" alt="Example banner" /></div>
+              <div id="item6"><img src={FacebookLogo} id="brands" alt="Example banner" /></div>
+              <div id="item7"><img src={RedditLogo} id="brands" alt="Example banner" /></div>
+              <div id="item8"><img src={WhatsAppLogo} id="brands" alt="Example banner" /></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 import SpotifyLogo from '../../static/img/Spotify.png';
 import AdobeLogo from '../../static/img/adobe.png';
@@ -315,8 +314,6 @@ import WhatsAppLogo from '../../static/img/whatsapp.png';
 
 import BotPersonality from '../../static/img/pogobot.png';
 
-
-
 <div class="container">
   <div class="row">
     <div class="col col--5">
@@ -327,7 +324,7 @@ import BotPersonality from '../../static/img/pogobot.png';
     <div class="col">
       <div class="col-demo">
       <h2>PogoBot</h2>
-      <p>PogoBot is a friendly and energetic chatbot with a youthful and enthusiastic personality. It is designed to resonate with millennials and provide a personalized and engaging experience. PogoBot understands the needs and preferences of budget-conscious travelers seeking last-minute deals and aims to be helpful, informative, and fun to interact with.</p>
+      <p>PogoBot is a friendly and energetic chatbot with a youthful and enthusiastic personality. It's designed to resonate with millennials and provide a personalized and engaging experience. PogoBot understands the needs and preferences of budget-conscious travelers seeking last-minute deals and aims to be helpful, informative, and fun to interact with.</p>
       </div>
     </div>
   </div>
@@ -343,10 +340,92 @@ import BotPersonality from '../../static/img/pogobot.png';
 6. **Tech-Savvy:** PogoBot is proficient in navigating digital platforms and understands the importance of a seamless user experience. It can guide users through the booking process, assist with online transactions, and provide support for any technical issues.
 7. **Adventurous:** PogoBot embodies the spirit of adventure and encourages users to explore new destinations and embrace spontaneous travel. It shares stories and travel tips to inspire users and create a sense of wanderlust.
 
+## Use case - Book a flight
+
+--In progress--
+
+### User needs
+
+--In progress--
+
+<table>
+  <tr>
+  <td><b>Goal</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Demands/preferences</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Motivations/underlying needs</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Information needs</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Anxieties</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Expectations</b></td>
+  <td></td>
+  </tr>
+  <tr>
+  <td><b>Other assumptions</b></td>
+  <td></td>
+  </tr>
+</table>
+
+### Bot needs
+
+--In progress--
+
+<table>
+  <tr>
+  <td><b>Fulfillment capability</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Can provide this info</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Limitations</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Must ask this info</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Has this info already</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Must provide this info</b></td>
+  <td></td>
+  </tr>
+  <tr>
+  <td><b>User behavior</b></td>
+  <td></td>
+  </tr>
+</table>
+
 ## Main flow
 
 --In progress--
 
-## Prototype
+- Enter flight details
+- Choose flight
+- Choose options
+- Confirm flight
+- Enter payment details
+
+## Prototypes
 
 --In progress--
+
+*To include both Figma and Voiceflow prototypes.*

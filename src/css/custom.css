@@ -253,6 +253,64 @@ font-weight: 600;
   font-size: 15px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+.luxury-villas-logo {
+
+}
+
+.luxury-villas-logo p {
+  font-family: 'Cinzel', serif;
+  color: #024959;
+  font-size: 32px;
+  margin-top: -18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.flex-container{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.flex-container p {
+  font-family: 'Cinzel', serif;
+  color: #024959;
+  font-size: 32px;
+  margin-top: -18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+[data-theme='dark'] .flex-container p {
+  color: #126578;
+}
+
+.persona-brands {
+  
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*
+#grid > div {
+  background-color: lime;
+  border: 1px solid var(--ifm-color-content);
+}
+*/
+
+
+
 #personas {
   border: none;
   margin: 0px;
@@ -264,7 +322,7 @@ font-weight: 600;
 
 .quotes-large {
   font-family: 'Sorts Mill Goudy', serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   line-height: 1.2;
   font-style: italic;
 }
@@ -275,7 +333,7 @@ font-weight: 600;
 }
 
 .persona-bio {
-
+  font-size: 15px;
 }
 
 .persona-bio-container {
@@ -292,11 +350,13 @@ font-weight: 600;
 }
 
 .icon-position {
-  font-variant-position: sub;
+  display: inline;
+  font-variant-position: sub; /* enable */
+  font-feature-settings: 'subs' 1; /* low-level enable */
 }
 
-.persona-row {
-  padding: 20px 0;
+.persona-row h4 {
+  padding: 40px 0 0 0;
 }
 
 .tech-3 {
@@ -325,8 +385,12 @@ font-weight: 600;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
-  margin: 12px 0;
+  margin: 20px 0;
   font-weight: 600;
+}
+
+[data-theme='dark'] .persona-quote {
+  background-color: #cecece66;
 }
 
 
@@ -441,6 +505,15 @@ img.no-border {
   background-color: none;
 }
 
+#brands {
+  display: block;
+  border: none;
+  margin: 16px auto;
+  max-width: 100%;
+  background-color: none;
+}
+
+/*
 img.diagrams {
   display: block;
   border: none;
@@ -448,6 +521,7 @@ img.diagrams {
   max-width: 100%;
   background-color: none;
 }
+*/
 
 .footer {
   background-color: var(--ifm-color-secondary-darkest);
@@ -1370,6 +1444,7 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
 }
 
 
@@ -1380,7 +1455,6 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     margin-top: -0.5rem;
   }
 
-  
 
 }
 
@@ -1388,6 +1462,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
 
   body {
 
+  }
+
+  .flex-container p {
+    color: #024959;
+    font-size: 24px;
   }
 
   .pagination-nav {

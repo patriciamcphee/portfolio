@@ -17,9 +17,20 @@ const sidebars = {
           collapsible: true, 
           items: [
             'conversation-design/check-lab-results',
+            'conversation-design/ivr-medical-office',
+          ]
+        },       
+        {
+          type: 'category',
+          label: 'Travel',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/luxury-villa-concierge',
+            'conversation-design/pogo-airlines-book-flight',
           ]
         },
-        {
+/*        {
           type: 'category',
           label: 'Banking',
           collapsed: true, 
@@ -29,16 +40,7 @@ const sidebars = {
             'conversation-design/ivr-credit-union',
           ]
         },
-        {
-          type: 'category',
-          label: 'Health & Beauty',
-          collapsed: true, 
-          collapsible: true, 
-          items: [
-            'conversation-design/ivr-beauty-spa',
-
-          ]
-        }
+*/
       ], 
     },
     {

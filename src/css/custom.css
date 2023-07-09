@@ -116,7 +116,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   column-rule: var(--ifm-color-content-secondary);
 }
 
@@ -126,8 +126,8 @@ h2, h3 {
 }
 
 h4 {
-  font-weight: 'NTR';
-  font-size: 18px;
+  font-family: "dunbar-tall", sans-serif;
+  font-size: 16px;
   line-height: 0.3;
   padding-top: 20px;
 }
@@ -165,10 +165,11 @@ p.not-found {
   text-align: center;
 }
 
-
+/*
 [data-theme="dark"] .markdown img[src$='.png'] {
   background-color: DarkGray !important;
 } 
+*/
 
 [data-theme='dark'] .sidebar-version {
   color: white;
@@ -244,7 +245,89 @@ font-weight: 600;
 
 }
 
+.card {
+  margin: 10px 0;
+}
 
+.card__body {
+  font-size: 15px;
+}
+
+#personas {
+  border: none;
+  margin: 0px;
+  max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+
+.quotes-large {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.persona-personality {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.persona-bio {
+
+}
+
+.persona-bio-container {
+  padding-top: 20px;
+}
+
+.persona-tags {
+  margin: 20px 0;
+}
+
+.persona-demographic {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.icon-position {
+  font-variant-position: sub;
+}
+
+.persona-row {
+  padding: 20px 0;
+}
+
+.tech-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+.frame-2143 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+/*  box-sizing: border-box;*/
+  margin-bottom: -14px;
+}
+.introvert, .extrovert {
+  font-size: 15px;
+  margin: 0;
+}
+
+.persona-quote {
+  background-color: rgba(5, 5, 5, 0.06);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  margin: 12px 0;
+  font-weight: 600;
+}
 
 
 .no-padding {
@@ -307,14 +390,11 @@ ul li ol li{
 
 li.no-style {
   list-style-type: none;
-  margin-left: -12px;
+  margin-left: -32px;
 
 }
 
-div.indent {
-  margin-left: -12px;
-  margin-top: 6px;
-}
+
 
 div.indent > ul {
   list-style-type: disc;
@@ -358,6 +438,7 @@ img.no-border {
   border: none;
   margin: 16px auto;
   max-width: 100%;
+  background-color: none;
 }
 
 img.diagrams {
@@ -365,8 +446,8 @@ img.diagrams {
   border: none;
   margin: 16px auto;
   max-width: 100%;
+  background-color: none;
 }
-
 
 .footer {
   background-color: var(--ifm-color-secondary-darkest);
@@ -660,7 +741,7 @@ nav[class^="menu"] {
 /***** Tables *****/
 table {
   border-collapse: collapse;
-  width: 100%;
+  max-width: 100%;
   table-layout: fixed;
   font-size: 0.875rem;
   text-align: left;
@@ -671,7 +752,7 @@ table {
 
 table tr,
 table thead tr:first-child th {
-  border-top: 1;
+  border-top: 1px solid var(--dark-gray);
 }
 th {
   text-align: left;
@@ -693,8 +774,8 @@ td:last-child {
 }
 table th,
 table td {
-  border: 1;
 
+  border: 1px solid var(--dark-gray);
 }
 
 /*.vertical { 
@@ -722,9 +803,12 @@ th.do-not {
   background-color: #ffebe6;
 }
 
+th {
+  border: 1px solid var(--dark-gray);
+}
+
 th, td {
   vertical-align: top;
-
 }
 
 td ul {
@@ -743,7 +827,7 @@ td li {
 
 
 .markdown tr > :nth-child(1) {
-  width: 15%;
+  width: 25%;
 }
 .markdown tr > :nth-child(2) {
 

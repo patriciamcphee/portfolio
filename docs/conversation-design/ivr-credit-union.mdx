@@ -2,7 +2,7 @@
 title: "IVR: Credit Union"
 id: ivr-credit-union
 slug: '/ivr-credit-union'
-description: Conversation design sample an IVR.
+description: Conversation design sample and IVR.
 keywords:
   - contribute
   - documentation
@@ -14,9 +14,18 @@ pagination_prev: null
 ---
 
 import { SmileOutlined } from '@ant-design/icons';
-import { Result } from 'antd';
+import { Result, ConfigProvider } from 'antd';
 
-<Result
-  icon={<SmileOutlined />}
-  title="Coming soon!"
-/>
+<ConfigProvider
+            theme={{
+              token: {
+                  colorInfo: '#9ecd28',
+                }
+              }
+            }
+          >
+            <Result
+              icon={<SmileOutlined />}
+              title="Coming soon!"
+            />
+</ConfigProvider>

@@ -6447,6 +6447,11 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.npmjs.org/markdown-escapes/-/markdown-escapes-1.0.4.tgz"
   integrity sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==
 
+marked@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.1.tgz#156a3b803cc54c59290e60354b83baaa7d66c074"
+  integrity sha512-5j0gQzJggGbyJrK0e8T9Wf3GRsHjP7ZcoXp2Q5tfU/o44haXY9n+pECDWgrsKixqIwT/oHxygHWTV1j1RExIxw==
+
 marked@^4.0.15:
   version "4.3.0"
   resolved "https://registry.npmjs.org/marked/-/marked-4.3.0.tgz"
@@ -8770,6 +8775,13 @@ remark-rehype@^10.0.0:
     "@types/mdast" "^3.0.0"
     mdast-util-to-hast "^12.1.0"
     unified "^10.0.0"
+
+remark-slide@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/remark-slide/-/remark-slide-0.14.0.tgz#16f8ce94c6eceeba36a31f0b92f747e955b989fd"
+  integrity sha512-m3Dv0dSNyvhoXWlswdMXAlgGqowU0XcmuCCeUqcWYXe+B2bVXMjFiN0TfFHoWmCncwrzsEI1i3WdHH+4dAia3w==
+  dependencies:
+    marked "0.3.1"
 
 remark-squeeze-paragraphs@4.0.0:
   version "4.0.0"

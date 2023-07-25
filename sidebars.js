@@ -4,45 +4,7 @@
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
-    {
-      type: 'category',
-      label: 'Conversation Design',
-      collapsed: false, 
-      collapsible: false, 
-      items: [ 
-        {
-          type: 'category',
-          label: 'Healthcare',
-          collapsed: true, 
-          collapsible: true, 
-          items: [
-            'conversation-design/check-lab-results',
-            'conversation-design/ivr-medical-office',
-          ]
-        },       
-        {
-          type: 'category',
-          label: 'Travel',
-          collapsed: true, 
-          collapsible: true, 
-          items: [
-            'conversation-design/luxury-villa-concierge',
-            'conversation-design/pogo-airlines-book-flight',
-          ]
-        },
-/*        {
-          type: 'category',
-          label: 'Banking',
-          collapsed: true, 
-          collapsible: true, 
-          items: [
-            'conversation-design/transfer-bank-funds',
-            'conversation-design/ivr-credit-union',
-          ]
-        },
-*/
-      ], 
-    },
+
     {
       type: 'category',
       label: 'UX writing',
@@ -58,6 +20,7 @@ const sidebars = {
         'ux-writing/group-policies',     
       ],
     },
+
     {
       type: 'category',
       label: 'Guides',
@@ -73,6 +36,74 @@ const sidebars = {
             'how-tos/contribution-guide/markdown-reference', 
         
       ],
+    },
+    {
+      type: 'category',
+      label: 'API',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'api/api-overview',
+      },      
+      items: [ 
+        'api/example',
+//        'faq',
+/*        {
+          type: 'link',
+          label: 'bFlix API',
+          href: '/portfolio/api',
+        }, 
+*/
+        'how-tos/mobile-sdk', 
+        'api/clone-volume-api', 
+        'api/get-async-results',  
+        
+
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Conversation Design',
+      collapsed: false, 
+      collapsible: false, 
+      link: {
+        type: 'doc',
+        id: 'conversation-design/conversation-design',
+      },
+      items: [ 
+        {
+          type: 'category',
+          label: 'Travel',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/luxury-villa-concierge',
+            'conversation-design/pogo-airlines-book-flight',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Healthcare',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/check-lab-results',
+            'conversation-design/ivr-medical-office',
+          ]
+        },       
+/*        {
+          type: 'category',
+          label: 'Banking',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/transfer-bank-funds',
+            'conversation-design/ivr-credit-union',
+          ]
+        },
+*/
+      ], 
     },
     {
       type: 'category',
@@ -102,31 +133,8 @@ const sidebars = {
       },         
       items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
-    {
-      type: 'category',
-      label: 'API',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'api/api-overview',
-      },      
-      items: [ 
-        'api/example',
-//        'faq',
-/*        {
-          type: 'link',
-          label: 'bFlix API',
-          href: '/portfolio/api',
-        }, 
-*/
-        'how-tos/mobile-sdk', 
-        'api/clone-volume-api', 
-        'api/get-async-results',  
-        
 
-      ],
-    },
+    /* need to improve this content so it's a real project */
     {
       type:'category',
       label: 'Content strategy',

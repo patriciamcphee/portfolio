@@ -45,6 +45,7 @@
     "react-lazy-load-image-component": "^1.5.6",
     "react-markdown": "^8.0.5",
     "react-player": "^2.9.0",
+    "remark-slide": "^0.14.0",
     "redocusaurus": "^1.6.2",
     "remark-markdown": "^0.0.0",
     "video-react": "^0.16.0"

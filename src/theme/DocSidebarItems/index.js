@@ -17,8 +17,6 @@ export default function DocSidebarItemsWrapper(props) {
             ThemeClassNames.docs.docSidebarItemLink,
             "theme-doc-sidebar-item-link-level-1",
           //  "version-selector",
-            "margin-top--sm",
-            "margin-bottom--md",
             "margin-left--sm",
             "sidebar-title"
           )}

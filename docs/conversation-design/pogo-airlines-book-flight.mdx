@@ -1,5 +1,5 @@
 ---
-title: "Chatbot: Book a flight"
+title: "Book a flight (Chatbot)"
 id: pogo-airlines-book-flight
 slug: '/pogo-airlines-book-flight'
 description: Conversation design sample for airline chatbot.
@@ -17,13 +17,15 @@ pagination_prev: null
 
 - **Project:** Chatbot for a fictitious airline (certificate project)
 - **My Role:** Conversation Designer/Conversational Copywriter
-- **Tools:** Figma, VoiceFlow
+- **Tools:** Figma, Voiceflow, Google Sheets
 
 <Divider />
 
 import PogoAirlineLogo from '../../static/img/pogo-airlines-logo-transparent.png';
 
+<div class="pogo-logo">
 <img src={PogoAirlineLogo} width="30%" id="diagrams" alt="Example banner" />
+</div>
 
 
 Pogo Airlines offers highly competitive and affordable pricing options, ensuring fares remain attractive to budget-conscious millennials. They're called "Pogo" because you can quickly hop wherever you need to go. As a growing airline in the millennial travel space, Pogo recognizes the importance of fast, 24/7 support and differentiates themselves from competitors by offering a chatbot on their website and social media channels. 
@@ -153,7 +155,7 @@ import {
     </div>
   </div>
   <div class= "row persona-row">
-    <div class="col">
+    <div class="col col--7">
       <div class="col-demo">
       <h4>Personality</h4>
         <div class="tech-3 clip-contents">
@@ -254,7 +256,7 @@ import {
                   },
                 }}
               >
-              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E' }} count={10} disabled defaultValue={8} />
+              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E', }} count={10} disabled defaultValue={8} />
               </ConfigProvider>
             </div>
           </div>
@@ -281,7 +283,7 @@ import {
         <div class="row">
           <div class="col">
             <div id="grid">
-              <div id="item1"><img src={TripAdvisorLogo} id="diagrams" alt="Example banner" /></div>
+              <div id="item1"><img src={TripAdvisorLogo} id="brands" alt="Example banner" /></div>
               <div id="item2"><img src={AirbnbLogo} id="brands" alt="Example banner" /></div>
               <div id="item3"><img src={TikTokLogo} id="brands" alt="Example banner" /></div>
               <div id="item4"><img src={InstagramLogo} id="brands" alt="Example banner" /></div>
@@ -323,8 +325,8 @@ import BotPersonality from '../../static/img/pogobot.png';
     </div>
     <div class="col">
       <div class="col-demo">
-      <h2>PogoBot</h2>
-      <p>PogoBot is a friendly and energetic chatbot with a youthful and enthusiastic personality. It's designed to resonate with millennials and provide a personalized and engaging experience. PogoBot understands the needs and preferences of budget-conscious travelers seeking last-minute deals and aims to be helpful, informative, and fun to interact with.</p>
+      <h2>Zac</h2>
+      <p>Zac is a friendly and energetic virtual travel assistant with a youthful and enthusiastic personality. He's designed to resonate with millennials and provide a personalized and engaging experience. Zac understands the needs and preferences of budget-conscious travelers seeking last-minute deals and aims to be helpful, informative, and fun to interact with.</p>
       </div>
     </div>
   </div>
@@ -332,17 +334,18 @@ import BotPersonality from '../../static/img/pogobot.png';
 
 <br />
 
-1. **Friendly:** PogoBot greets users with a warm and welcoming tone, instantly putting them at ease. It aims to create a friendly and approachable atmosphere throughout the conversation.
-2. **Energetic:** PogoBot exudes positive energy and enthusiasm, injecting a sense of excitement into the interaction. It encourages users to embrace spontaneity and adventure in their travel plans.
-3. **Knowledgeable:** PogoBot is well-informed about Pogo Airlines' offerings, including the latest deals, promotions, and destinations. It can provide accurate and up-to-date information to assist users in making informed decisions.
-4. **Playful:** PogoBot incorporates playful elements into its responses to make the conversation enjoyable. It may use emojis, puns, or clever wordplay to engage users and add a touch of lightheartedness.
-5. **Helpful:** PogoBot is committed to providing excellent customer service. It actively listens to users' queries, understands their needs, and offers personalized suggestions and solutions to help them find the best travel options within their budget.
-6. **Tech-Savvy:** PogoBot is proficient in navigating digital platforms and understands the importance of a seamless user experience. It can guide users through the booking process, assist with online transactions, and provide support for any technical issues.
-7. **Adventurous:** PogoBot embodies the spirit of adventure and encourages users to explore new destinations and embrace spontaneous travel. It shares stories and travel tips to inspire users and create a sense of wanderlust.
+1. **Friendly:** Zac greets users with a warm and welcoming tone, instantly putting them at ease. It aims to create a friendly and approachable atmosphere throughout the conversation.
+2. **Energetic:** Zac exudes positive energy and enthusiasm, injecting a sense of excitement into the interaction. It encourages users to embrace spontaneity and adventure in their travel plans.
+3. **Knowledgeable:** Zac is well-informed about Pogo Airlines' offerings, including the latest deals, promotions, and destinations. It can provide accurate and up-to-date information to assist users in making informed decisions.
+4. **Playful:** Zac incorporates playful elements into its responses to make the conversation enjoyable. It may use emojis, puns, or clever wordplay to engage users and add a touch of lightheartedness.
+5. **Helpful:** Zac is committed to providing excellent customer service. It actively listens to users' queries, understands their needs, and offers personalized suggestions and solutions to help them find the best travel options within their budget.
+6. **Tech-Savvy:** Zac is proficient in navigating digital platforms and understands the importance of a seamless user experience. It can guide users through the booking process, assist with online transactions, and provide support for any technical issues.
+7. **Adventurous:** Zac embodies the spirit of adventure and encourages users to explore new destinations and embrace spontaneous travel. It shares stories and travel tips to inspire users and create a sense of wanderlust.
 
 ## Use case - Book a flight
 
---In progress--
+Kevin, a millennial, just finished a sizeable design project and is ready for a 2-week adventure in unlikely or lesser-known destinations. He's seeking affordable last-minute deals and a user-friendly digital, seamless, hassle-free experience. It's early summer, and he wants to leave tomorrow or the following day.
+
 
 ### User needs
 
@@ -428,4 +431,4 @@ import BotPersonality from '../../static/img/pogobot.png';
 
 --In progress--
 
-*To include both Figma and Voiceflow prototypes.*
+*To include both Figma and VoiceFlow prototypes.*

@@ -142,6 +142,10 @@ customFields: {
           label: 'Blog', 
           position: 'right'
         }, 
+        {
+          type: 'search',
+          position: 'right',
+        },
 /*
            {
             label: 'Support',

@@ -4,7 +4,26 @@
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
-    
+
+
+
+    {
+      type: 'category',
+      label: 'Guides',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'how-tos/how-to-samples',
+      },      
+      items: [ 
+            'example-readme',
+            'how-tos/contribution-guide/contributor-guide',
+            'how-tos/contribution-guide/markdown-reference', 
+//            'how-tos/contribution-guide/style-guide',
+        
+      ],
+    },
     {
       type: 'category',
       label: 'API',
@@ -31,23 +50,51 @@ const sidebars = {
       ],
     },
     {
-      type:'category',
-      label: 'Content strategy',
+      type: 'category',
+      label: 'Conversation Design',
       collapsed: false, 
-      collapsible: false,   
+      collapsible: false, 
       link: {
         type: 'doc',
-        id: 'content-strategy',
-      },      
+        id: 'conversation-design/conversation-design',
+      },
       items: [ 
-        'example-content-audit',
-        'quality-content-matters',     
-        'art-of-information-architecture',
-      ],
+        {
+          type: 'category',
+          label: 'Travel',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/luxury-villa-concierge',
+            'conversation-design/pogo-airlines-book-flight',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Healthcare',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/check-lab-results',
+            'conversation-design/ivr-medical-office',
+          ]
+        },       
+/*        {
+          type: 'category',
+          label: 'Banking',
+          collapsed: true, 
+          collapsible: true, 
+          items: [
+            'conversation-design/transfer-bank-funds',
+            'conversation-design/ivr-credit-union',
+          ]
+        },
+*/
+      ], 
     },
     {
       type: 'category',
-      label: 'UX writing',
+      label: 'UX Writing',
       collapsed: false, 
       collapsible: false,   
       link: {
@@ -60,37 +107,9 @@ const sidebars = {
         'ux-writing/group-policies',     
       ],
     },
-    {
+/*    {
       type: 'category',
-      label: 'Guides',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'how-tos/how-to-samples',
-      },      
-      items: [ 
-            'example-readme',
-            'how-tos/contribution-guide/contribute',
-            'how-tos/contribution-guide/markdown-reference', 
-        
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'KB articles',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'kb-articles/kb-article-samples',
-      },         
-      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
-    },
-    {
-      type: 'category',
-      label: 'Voiceover scripts',
+      label: 'Voiceover Scripts',
       collapsed: false, 
       collapsible: false,   
       link: {
@@ -105,6 +124,36 @@ const sidebars = {
         }, 
       ],
     },
+*/
+    {
+      type: 'category',
+      label: 'KB Articles',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'kb-articles/kb-article-samples',
+      },         
+      items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
+    },
+
+    /* need to improve this content so it's a real project */
+    {
+      type:'category',
+      label: 'Content Audit',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'content-strategy',
+      },      
+      items: [ 
+        'example-content-audit',
+        'quality-content-matters',     
+        'art-of-information-architecture',
+      ],
+    },
+
 
   ],
 

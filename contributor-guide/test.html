@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>EGDS Federation Documentation | Deep Dive</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is somewhat of a deep dive into the EGDS federated documentation and current content audit.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Patricia McPhee">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+![](img/BYD_ID-Y-LOGO_FINAL_WHITE_RGB.png)
+#developer-docs 
+##Contributor onboarding
+####[GitHub | Docusaurus]
+
+.pull-right-footnote[
+
+
+]
+
+???
+
+
+---
+ 
+
+#### We aim to make it possible for you to become a contributor. This contributor onboarding outlines the different ways that you can get involved.
+
+???
+
+
+
+---
+layout: false
+.left-column[
+  ## Objectives
+]
+.right-column[
+- Know when to contribute and the different ways to contribute
+
+- Learn the project and organization structure
+
+- Understand the Pull Request process
+
+- Be aware of the documentation style and writing guidelines
+
+- Understand the content development and review process
+
+
+]
+
+???
+
+
+---
+template: inverse
+
+## CONTENT AUDIT.
+---
+.left-column[
+  ## Content audit
+]
+.right-column[
+Over the summer, a [content audit](https://confluence.expedia.biz/display/EGDesignSystem/EGDS+single+site+docs+project) was done to help plan the new single-doc site for EGDS-related end-user content. 
+
+- We currently have **~12 sites (or locations)** for EGDS end-user documentation built in various frameworks. 
+
+- The different frameworks include headless CMS (Docusaurus and Gatsby), homegrown React Typescript, plain HTML, or Confluence.
+
+There are likely smaller bits of EGDS-related content that haven't been discovered.
+
+
+
+.pull-right-footnote[
+### Let's see what we have! >>
+
+]
+
+]
+
+???
+
+This audit has been a moving target. When I started working on the audit in May of this year, I did not have Shared UI content for Android because they were shuffling the content around. And I discovered a few proofs of concepts for documentation, like the doc site with all the Blocks information. It is more technical and is more around the architecture of Blocks.  
+---
+
+.left-column[
+  ## Content audit
+  ## Components
+]
+.right-column[
+
+This list doesn't include the various smaller pieces of content that might live in a README file in a GitHub repo.
+
+| What is it? | Dev or Design? | OS/Tool |
+| --- | --- | --- |
+| [UITK](https://uitk.expedia.biz/expedia/en_US/components/)  | Dev  | React |
+| [Usage docs](https://www.figma.com/files/639936565468671000/project/12594923/Components---EGDS?fuid=1108408490962901297)  | Dev<br />Design  | Figma  |
+| [Shared UI](https://shared-ui-web-docs.rcp.partnerexperiences.test.exp-aws.net/)*  | Dev  | React  |
+| [Shared UI](https://pages.github.expedia.biz/native-foundations/native-docs-portal/guide/shared/egds/components-android/introduction)*  | Dev  | Android  |
+| [Shared UI](https://pages.github.expedia.biz/native-foundations/native-docs-portal/guide/shared/egds/components-ios/introduction)*  | Dev  | iOS  |
+
+
+
+
+
+.footnote[.red.bold[*] Shared UI is not in scope for us in the doc site.]
+]
+
+???
+
+
+
+
+---
+.left-column[
+  ## Content audit
+  ## Tokens
+]
+.right-column[
+
+I believe this is the complete list, but there may be smaller bits of information elsewhere.
+
+| What is it? | Dev or Design? | OS/Tool |
+| --- | --- | --- |
+| [Tokens library](http://egds.expedia.biz/latest/tokens/default)  | Dev  | React  |
+| [Tokens (default)](https://github.expedia.biz/egds/tokens/tree/master/packages/default-tokens)  | Dev  |   |
+| [Tokens (raw unformatted)](https://github.expedia.biz/egds/tokens-web)  | Dev  |   |
+| [Tokens Web](https://github.expedia.biz/egds/tokens-web)  | Dev  |   |
+| [Tokens iOS](https://pages.github.expedia.biz/native-foundations/native-docs-portal/guide/shared/egds/tokens-ios/introduction)  | Dev  | iOS  |
+| [Tokens Android](https://pages.github.expedia.biz/native-foundations/native-docs-portal/guide/shared/egds/tokens-android/introduction)  | Dev  | Android  |
+| [Token assets](https://github.expedia.biz/egds/tokens/tree/master/packages/token-assets)  | Dev  | --  |
+| [GitHub](https://github.expedia.biz/egds/tokens)  | Dev  | --  |
+| [Resource Guide](https://www.figma.com/files/639936565468671000/project/12594923/Components---EGDS?fuid=1108408490962901297)  | Dev<br />Design  | Confluence  |
+
+The [@egds/tokens](https://github.expedia.biz/egds/tokens) GitHub README file and [Understanding EGDS Tokens](https://confluence.expedia.biz/display/EGDesignSystem/Understanding+EGDS+Tokens) Confluence page breaks these repos down. 
+
+]
+
+???
+
+I've seen other EGDS tokens content in the Bernie and Ferris documentation. I am concerned about some of these repos because there's no context around the code sample. For example, the tokens assets repo doesn't give me much context.
+
+
+---
+.left-column[
+  ## Content audit
+  ## EGDS
+]
+.right-column[
+
+We have a lot of "high-level" overviews and self-serve content for EGDS, which we've used in blogs, announcements, and training. 
+
+The EGDS content on the [EG Design System Confluence page](https://confluence.expedia.biz/display/EGDesignSystem/EG+Design+System) is a great start. However, a few of these categories aren't relevant to *using* &nbsp;EGDS.
+
+
+![EG Design System Confluence page tree](./img/page-tree.png)
+
+]
+
+???
+
+We'll review the proposed structure for this particular content later in the deep dive. We'll also review the list of topics we can start adding or writing if needed.
+
+For example, the bottom two don't really apply to using EGDS.
+
+---
+.left-column[
+  ## Content audit
+  ## Other
+]
+.right-column[
+
+We have other documentation crafted around topics like **Blocks**, **Templates**, **Accessibility**, and more.  
+
+- [Weaver API](https://pages.github.expedia.biz/weaver/weaver-docs/docs/home)
+
+- [Experience API](https://go/experience-api)
+
+- [Blocks (Architecture)](https://pages.github.expedia.biz/Expedia-UI/experience-platform-docs/#/experience-platform/blocks)
+
+- [Blocks (Overview)](https://confluence.expedia.biz/display/EPPC/Blocks)
+
+- [Templates](https://pages.github.expedia.biz/Expedia-UI/experience-platform-docs/#/experience-platform/view-templates)
+
+- [Layouts and Sections](https://pages.github.expedia.biz/Expedia-UI/experience-platform-docs/#/system-parts?id=layouts)
+
+- [Layout and Sections (Overview)](https://confluence.expedia.biz/display/EPPC/Layout+basics)
+
+- [EGDS Accessibility Guidelines](https://confluence.expedia.biz/display/EGDesignSystem/EGDS+Accessibility+Guidelines)*
+
+- [EG Accessibility Documentation](https://a11y-demos-web.us-west-2.test.eginternaltools.expedia.com/) (Main EG documentation)
+
+.footnote[.red.bold[*] Content recently moved from Figma to Confluence.]
+
+]
+
+
+
+???
+
+Most of these are in Confluence, but a few look like doc site proof of concepts.
+
+
+
+
+---
+template: inverse
+
+## USER RESEARCH.
+---
+.left-column[
+  ## User research
+
+]
+.right-column[
+
+
+- Formal
+
+    - 2021 EG journey mapping exercise and outcomes (designer-focused)
+
+    - [2022 EG journey mapping exercise and outcomes](https://miro.com/app/board/uXjVOgGO6J0=/?share_link_id=862413806641) (developer-focused)
+
+- Informal
+
+    - Monitor and sweep Slack channels at regular intervals
+
+    - Casual conversations with various users and creators of EGDS
+
+
+]
+
+???
+
+I've been monitoring Slack daily and started building an FAQ because of some questions. For example, "When should I leverage Shared-UI vs. developing pages with EGDS components? And why are some elements Shared-UI and some not?" I don't remember who answered the question, but their answer was clear, so I put it in the FAQ. So I'm saying there's confusion on whether or not they use it. 
+
+In addition to the formal research and monitoring of Slack channels, I've had casual conversations to understand the user's thinking, what problems they encounter, and so on. It's very casual. I found that I can discover more through these casual conversations.  
+
+---
+.left-column[
+  ## User research
+  ## Audience
+]
+.right-column[
+
+
+
+### Content consumers
+
+- EGDS Engineers (Web, iOS, and Android) 
+- Product Engineers (Web, iOS, and Android) 
+- Engineering Managers 
+- EGDS Designers
+- Product Designers 
+- Product Managers (Traveler and Partner facing products) 
+- Program Managers 
+- Content Designers
+
+
+### Content creators
+
+- EGDS Team
+- Content guideline authors
+- UI Engineers
+
+
+
+
+
+]
+
+???
+
+
+
+
+
+---
+.left-column[
+  ## User research
+  ## Audience
+]
+.right-column[
+
+**Designers** and **Engineers** are the primary users of design system documentation. 
+
+**Content Designers** might reference components and usage patterns so they can write content accordingly.  
+
+**Product Managers** will reference the documentation to ensure the product and design system alignment. 
+
+**User Researchers** might review the design system documentation to understand how teams use components and patterns in a feature. 
+
+
+
+
+
+
+]
+
+???
+
+
+ 
+---
+.left-column[
+  ## User research
+  ## Outcomes
+]
+.right-column[
+
+The following lists the most common pain points found:
+
+- It isn't easy to navigate Figma. Finding information or the correct design can be overwhelming, confusing, and challenging.
+
+- There is no way to search all EGDS-related docs at once because content resides in different locations and is maintained by many people.
+
+- It's challenging to find the correct documentation because there is duplication and outdated documentation.
+
+- The big picture overview and the full scope of what can be possible (do's and dont's) and what is forbidden are often missing.
+
+- Changes to a component can cause problems for other teams because use cases haven't been tested, and the adjustment is based on one use case.
+
+.pull-right-footnote[
+Plus more! >>
+
+]
+
+
+]
+
+???
+
+Last year's onboarding research and the recent user journey mapping identified several pain points regarding the design system documentation. The main problem identified is too many doc sites/locations with multiple owners and contributors. 
+---
+.left-column[
+  ## User research
+  ## Outcomes
+]
+.right-column[
+
+
+
+- It's challenging to find best practices for Accessibility and the rationale behind decisions. The content either exists or doesn't.
+
+- It isn't easy to decide which typography style to use because there are a lot of styles.
+
+- As an engineer, I understand tokens but am unclear on how to use them.
+
+- As a designer, it's unclear how to find and adapt components.
+
+- As an engineer, it is not always clear from designers during the Figma file handoff what corresponding EGDS tokens were used.
+
+- As an engineer, it is challenging to use tokens outside of Bernie (BEX platform for building web applications) and BEX API.
+
+
+The big ask is to **have the ability to find answers faster!**
+
+]
+
+???
+
+
+
+---
+template: inverse
+
+## COMPETITOR ANALYSIS.
+---
+.left-column[
+## Doc sites
+]
+.right-column[
+
+
+The analysis looks at some public-facing design system doc sites. The purpose was to evaluate the information architecture of these doc sites to see what they have in terms of:
+
+- Content structure<br />
+  *Everything is where they need it when they need it!*
+- Code snippets or sandbox
+- Easy navigation
+- Searchable
+- Usage guidelines (Best practices - Can and Cannot; Do's and Don'ts)
+- Style guidelines
+- UX microcopy guidelines
+- Accessibility guidelines
+- Content/writing guidelines
+
+What pieces and parts do they have in their doc site that would work in the EGDS doc site? In other words, what can we leverage from them to make our design system doc site world-class?
+
+For more details, see [Design system doc site competitive analysis](https://confluence.expedia.biz/display/EGDesignSystem/Design+system+doc+site+competitive+analysis) on Confluence.
+
+
+]
+
+???
+
+What I found was that each doc site had its differences. For example, one site would group its content based on DESIGNER and DEVELOPER. In comparison, another site would break this down further, such as USAGE, STYLES, CODE, and ACCESSIBILITY.  
+
+Even the landing pages had differences. Some were just simple with a hero banner, a message or tagline, and a button to "get started." Others had that, plus more.
+
+---
+.left-column[
+## Doc sites
+## Things worth calling out
+]
+.right-column[
+
+### Landing page
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** The landing page is unique. It's interesting how IBM put their TOC as part of the landing page experience. I'm not confident this would work for a federated doc site, especially since EGDS will have multiple TOCs depending on the Tier selected. 
+
+- **[Atlassian Design:](https://atlassian.design/)** The landing page isn't a simple one like Google's MUI React doc site.  It provides the content in categories, which makes finding information easy. 
+
+- **[Uniform (Hudl):](https://uniform.hudl.com/)** The landing pages for versions 3 and 4 are vastly different. The earlier version has a simple landing page, whereas their latest version incorporates the TOC as part of the landing page experience, like Carbon and [Elastic UI](https://elastic.github.io/eui/#/).
+
+
+
+
+]
+
+???
+
+
+
+
+
+---
+.left-column[
+## Doc sites
+## Things worth calling out
+]
+.right-column[
+
+
+
+### Components pages
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** Honestly, IBM did a great job with their doc site's Information Architecture (IA). The user journey and overall user experience are front and center. 
+
+- **[Uniform (Hudl):](https://uniform.hudl.com/)** They present the component information for designers and developers with a toggle at the top of the page to switch between code and design content.  
+
+- **[Sprectrum (Adobe):](https://spectrum.adobe.com/page/action-button/)*** A design checklist, behaviors, keyboard interactions, and change log are included with each component.  Honestly, that's brilliant! 
+
+- **[Atlassian Design:](https://atlassian.design/components/button/examples)** Easy to scan, and the presentation is similar to how Ferris presents theirs. They split up their content: **Examples** and **Code**, or **Upgrade** guide if it applies.  
+
+- **[Orbit (Kiwi):](https://orbit.kiwi/components/action/button/)** Orbit is worth calling out because they use callouts to present the usage guidelines for a component. 
+
+.footnote[.red.bold[*] Two separate doc sites.]
+
+]
+
+???
+
+
+**Uniform** vs. **Carbon** vs. **Spectrum**: Is grouping the components by "Design" and "Code" enough for our audience? Do we break it out as IBM did with Carbon? I'm inclined to say yes because users consume information better when presented in small chunks or logical categories. 
+
+**Spectrum**: I like the idea of an independent change log for the component because, if you've read through Release Notes, you know information can get lost in the sea of changes. Overall, there are some things about Spectrum's component documentation that we could leverage or mimic in our documentation.
+
+**Orbit**: is another design system doc site that provides clever ways to help visually explain the components. 
+
+
+
+
+---
+.left-column[
+## Doc sites
+## Things worth calling out
+]
+.right-column[
+
+
+
+### Tokens
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** Interestingly enough, IBM was strategic and put the token details with the component content.  They do not have a dedicated section. 
+
+- **[Sprectrum (Adobe):](https://spectrum.adobe.com/page/action-button/)*** Adobe has an entire section dedicated to explaining, at a high level, design tokens and providing general usage guidelines. It's missing the granular details; otherwise, the level of detail they give here is acceptable for the conceptual piece of the pie.
+
+- **[Momentum (Cisco):](https://spectrum.adobe.com/page/action-button/)** It's small, but they did a great job displaying or serving up their token content. React Spectrum also has a dedicated section for design tokens. 
+
+- **[Material Design 3](https://material.io/) / [MUI:](https://mui.com/)*** Google for the win for design tokens! They simplified the presentation of design tokens in documentation by putting the content into three categories or sections: **Overview**, **How to read tokens**, and **How to use tokens**.
+
+.footnote[.red.bold[*] Two separate doc sites.]
+
+]
+
+???
+
+**Carbon**: I like the idea of including the token information in the component-specific content and having an overview and how to read and use tokens information elsewhere.
+
+**Momentum**: Honestly, putting Spectrum and Momentum together would make for great EGDS token content because Spectrum is missing the smaller details, like color, spacing, or elevation, while Momentum is missing the general "what are design tokens" and the usage guidelines.
+
+**Material/MUI**: To be honest, there's not a lot of "noise" in the token content. It's, by far, the best content layout for design tokens. 
+
+---
+.left-column[
+## Doc sites
+## Things worth calling out
+]
+.right-column[
+
+
+
+### Writing guidelines
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** IBM does it again!  They provide enough guidelines without a wall of text overwhelming the designer or developer.
+
+- **[Sprectrum (Adobe):](https://spectrum.adobe.com/page/action-button/)*** Adobe, hands down, knows content. There's so much to say about how Adobe presented its Content guidelines. They provide so much information, but it's not a wall of text. It's laid out in a way that users tend to "look" at content on a page – it's scannable!  
+
+
+- **[Elastic UI:](https://elastic.github.io/eui/#/)** The examples provided weren't too content-heavy but provided enough in the visual to "get it," plus their examples categorized by components, such as buttons, modals, and links.
+
+- **[Atlassian Design:](https://atlassian.design/components/button/examples)** They not only provide the general writing guidelines (inclusive language, language and grammar, voice and tone, and style), they beef up the writing guidelines for things like date and time, messages, and empty state.
+
+.footnote[.red.bold[*] Two separate doc sites.]
+
+]
+
+???
+
+**Carbon**: The one thing that stood out was how IBM added a section for Action Labels in alphabetical order. The list has words like "Add," "Apply," and so on for consistent labels on common actions to predict how to interact with the UI.
+
+
+
+---
+.left-column[
+## Doc sites
+## Things worth calling out
+]
+.right-column[
+
+
+
+### Visual guidelines
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** IBM for the win!  They did a fantastic job on the visual aspect of the guidelines. Well done, IBM.
+
+- **[Elastic UI:](https://elastic.github.io/eui/#/)** The best practices were presented clearly and with a color-coded background so you know what can and cannot be done. 
+
+- **[Material Design 3](https://material.io/) / [MUI:](https://mui.com/)*** The Material Design 3 documentation is thorough and loaded with A LOT of information and guidance. 
+
+
+### Accessibility guidelines
+
+- **[Carbon (IBM):](https://carbondesignsystem.com/)** Not only do they include accessibility guidelines with the component, but there's a dedicated section for the general guidelines. 
+
+- **[Elastic UI:](https://elastic.github.io/eui/#/)** Dedicate section for the general guidelines only.
+
+
+
+.footnote[.red.bold[*] Two separate doc sites.]
+
+]
+
+???
+
+
+
+---
+.left-column[
+## Docs framework
+
+]
+.right-column[
+
+A doc site framework contains recommended document management features that make it easier and more efficient to create and manage large sets of documents. 
+
+Doc sites used to be built using an HTML or DITA/XML framework. There are specific uses for each, as well as pros and cons. For example, most product and design system documentation are built using Node/React. 
+
+- HTML
+- DITA/XML
+- Node/React (most common in today's world)  
+
+#### Not all doc site frameworks are created equally! 
+
+In the following slides, we'll take a look at a few of the options:
+
+- Docusaurus
+- Gatsby
+- Gitbook
+- Zeroheight
+- Specifyapp
+- Storybook
+
+
+
+
+]
+
+???
+
+
+
+
+
+
+
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+### [Docusaurus](https://docusaurus.io/)*
+Docusaurus has a unique focus on documentation sites and has many out-of-the-box features. Plus, it supports Storybook and WCAG 2 requirements. They try to do one thing super well - be the best tool for writing and publishing content!  
+
+| Pros | Cons |
+| --- | --- |
+| <ul><li>Easy to implement</li><li>Open source</li><li>Integrates with Storybook</li><li>Low learning curve</li><li>Highly customizable</li></ul>  | Nothing off the top of my head so far  |
+
+
+
+
+
+.footnote[.red.bold[*] Node/React]  
+
+]
+
+???
+
+Site features are important because any extra configuration to get basic features for a doc site eventually slows down the implementation of the site. It could also hinder the maintenance of the site. 
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+
+
+### [Gatsby](https://www.gatsbyjs.com/)*
+Gatsby has many features, a rich ecosystem of plugins, and can do everything that Docusaurus does. Naturally, that comes at the cost of a higher learning curve. Nevertheless, Gatsby does many things well and is suitable for building many types of websites.
+
+| Pros | Cons |
+| --- | --- |
+| <ul><li>Open source</li><li>Integrates with Storybook</li><li>Customizable</li></ul>  | <ul><li>HUGE learning curve</li><li>Not as feature rich</li></ul>  |
+
+
+.footnote[.red.bold[*] Node/React]  
+
+]
+
+???
+
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+
+
+### [Gitbook](https://docs.gitbook.com/getting-started/quick-start)
+
+GitBook has a clean design and has been used by many open-source projects. However, with its focus shifting towards a commercial product rather than an open-source tool, many of its requirements no longer fit the needs of open-source projects' documentation sites. 
+
+| Pros | Cons |
+| --- | --- |
+| No-code (browser)  | <ul><li>Easy to use (authoring)</li><li>Browser has limitations</li><li>MDX is not supported</li><li>Not easily customizable</li></ul>  |
+
+Currently, GitBook is only free for open-source and non-profit teams. However, Docusaurus is free for everyone. 
+
+[Live demo - content consumer](https://patricia-mcphee.gitbook.io/untitled-3/hah-whats-this/some-new-page)
+
+[Video - content creator](https://www.youtube.com/watch?v=SxQG7qS6gDQ&t=5s)
+
+]
+
+???
+
+For more details, see [Enabling GitHub Codespaces for your organization](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/enabling-github-codespaces-for-your-organization#choose-who-can-create-codespaces-that-are-billed-to-your-organization). 
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+
+
+### [Zeroheight](https://zeroheight.com/)
+
+It's a hub for hosting design system documentation, and it allows you to sync your designs from Sketch or Figma and very easily extract styles, so you can use them to document your style guide. It goes beyond that, as you can also upload any artboard or frame and symbols and components to document them. You can even add static pages to have a complete wiki. It's also integrated with Storybook allowing you to have design and code examples in the same place. You can embed your design system's components from Storybook with code snippets.
+
+| Pros | Cons |
+| --- | --- |
+| <ul><li>Low-code/no-code platform</li><li>Integrates with Storybook</li></ul>  | <ul><li>Browser has limitations</li><li>Still a fairly new product</li><li>Not easily customizable</li></ul>  |
+  
+
+[Live demo](https://zeroheight.com/7b7b5b687/p/1078fe)
+
+]
+
+???
+
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+
+
+### [Storybook](https://specifyapp.com/)
+  
+Storybook is packaged as a small, development-only workshop that lives alongside your app. It provides an isolated iframe to render components without interference from app business logic and context. That helps you focus development on each variation of a component, even the hard-to-reach edge cases.
+
+| Pros | Cons |
+| --- | --- |
+| Lots of integrations, like tokens, Figma, and Docs add-ons. | Is it really a doc site or a UI coding tool with a doc element?  |
+
+[Live demo](https://style.monday.com/?path=/docs/welcome--page)
+
+[Live demo](https://gemini.opensesame.com/latest/?path=/story/home--page)
+
+]
+
+???
+
+I have been contacted regularly by someone at Storybook who has suggested trying the [Story.to.design plugin](https://www.figma.com/community/plugin/1075741140914731351/story.to.design).
+
+
+I'm hesitant and not confident this would work for a complete design system doc site like Carbon, Polaris, etc.
+
+Are there browser limitations?  
+
+Are there design constraints and limitations?
+
+How easy is it to customize the look and feel?  
+
+
+---
+.left-column[
+## Docs framework
+##Options
+]
+.right-column[
+
+
+
+### [Specifyapp](https://specifyapp.com/)
+  
+A low-code/no-code platform is on its way to becoming a design API that helps keep design and code in sync, having a central hub where design assets and tokens will be stored.
+
+| Pros | Cons |
+| --- | --- |
+| Low-code/no-code  | Still a fairly new product  |
+
+There is no live demo like the other low-code/no-code options. 
+
+]
+
+???
+
+---
+.left-column[
+## Docs framework
+##Prototype
+]
+.right-column[
+
+The prototype is built using [Docusaurus 2.1](https://docusaurus.io/) and hosted on GitHub.  
+
+#### Why was Docusaurus chosen and not Gatsby or another framework? 
+
+Docusaurus tries to do one thing better than its competitors - be the best tool for writing and publishing end-user content!
+
+The goal is to use a docs framework that is easy to implement, customizable, scalable, and has a low learning curve. We also want to start encouraging non-developers to contribute efficiently to the content. 
+
+Plus, the latest version of Docusaurus was inspired by the best things about Gatsby minus the learning curve. 
+
+ 
+
+]
+
+???
+
+Some frameworks are harder for a non-dev to use. We're not expecting Product Managers and Content Designers to learn how to code if they want to contribute to the EGDS content.  
+
+---
+template: inverse
+
+## PROPOSED CONTENT STRUCTURE (IA).
+---
+.left-column[
+## Proposed structure
+]
+.right-column[
+
+There are a few crucial factors when it comes to proper design system documentation:
+
+- Should be easy to **use** and **searchable**, or people won't bother using it. 
+
+- Should be **effective** and **useful** as it's an integral part of a design system. 
+
+- Contribution process must be **consistent** and have a **clear** structure. 
+
+The challenge is helping people understand how to use the system by presenting it **organized** and **succinctly**. Information architecture is a journey of continuous discovery. 
+
+Even more challenging, design system documentation is a moving target. Standards and guidelines evolve with the products they serve. 
+
+***You don't write it once and move on; you write it once and maintain it forever.***  
+
+ 
+
+
+
+]
+
+???
+
+A well-crafted doc site helps design teams access a single source of truth to build experiences more efficiently. It's also great for design system evangelists to encourage others to contribute. A single, centralized doc site is fundamental to successfully delivering a product, providing the rationale behind design decisions, and translating the interaction model.
+
+An effective documentation IA lets people efficiently and confidently find information. IAs seem simple enough, but there are a number of factors that can influence how you structure them. These factors include: 
+
+- The number of brands within the company - and your organization's scope of impact
+- Which teams are involved in contributing, consuming, and maintaining the system(s)
+- Short and long-term company goals around the product portfolio
+
+Nowadays, documents can be accessed with one click and searched with another. Take advantage of that.
+
+People who add anything to the documentation must use this structure. By doing so, you'll ensure that it remains easy to use.
+
+
+
+---
+.left-column[
+## Proposed structure
+]
+.right-column[
+
+How did I come up with this structure?
+
+![EGDS doc site Intro TOC structure.](./img/egds-intro-toc.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![EGDS doc site Resources TOC structure.](./img/egds-resources-toc.png)
+
+
+
+
+.pull-right-footnote[
+[EGDS prototype](https://pages.github.expedia.biz/egds/docs-next/)
+
+]
+
+]
+
+???
+
+Great question. Let's step back and remember how much we saw in the various design system doc sites earlier in the presentation. I took the things worth noting and implemented them to get a feel for them. In other words, I'm taking what's common with the other design system doc sites and structuring them in a way that works for EGDS users. I'm also analyzing what might be cumbersome regarding navigating the site or deciphering information.
+
+The initial structure will help us understand user behavior and determine how to make navigation and finding information easier. With this information, we can adjust the content as necessary for a better experience. This is why I say IA is a journey of continuous discovery.
+
+Plus, all design system doc sites have many things in common: landing pages, components pages, visual guidelines, and UX writing guidelines, to name a few. 
+
+
+
+---
+
+
+template: inverse
+
+## REACHING THE NORTH STAR!
+---
+
+.left-column[
+## Areas completed
+]
+.right-column[
+
+The areas that we've completed are:
+
+- EGDS GitHub repo created
+
+- Doc site published to GitHub Pages
+
+- [Doc site onboarding documentation](https://github.expedia.biz/egds/docs-next/blob/main/ONBOARDING.md)* 
+
+- [Doc site contributing documentation](https://github.expedia.biz/egds/docs-next/blob/main/CONTRIBUTING.MD)
+
+- Slack channel created ([#egds-docs](https://expedia.slack.com/archives/C02U44U2197))
+
+.footnote[.red.bold[*] Updated with mac OS instructions.]
+
+]
+
+---
+.left-column[
+## Areas in progress
+]
+.right-column[
+
+The work-in-progress areas are:
+
+- Doc site onboarding* 
+
+- GitHub Actions for PRs
+
+- Slack channel rules + office hours
+
+- Design of the frontend and development of the site
+
+- Refactoring doc site to Typescript to start using UITK components
+
+
+.footnote[.red.bold[*] Onboarded three non-devs (mac OS users) on 10/18/2022.]
+]
+
+???
+
+
+
+---
+.left-column[
+## Areas to dive into
+]
+.right-column[
+
+We have areas that will need further discussion and a plan of action. 
+
+But where do we start? The following are the top three areas that can be worked on simultaneously:
+
+- Endpoints for components
+  
+  The idea is to reuse content or data authored elsewhere.
+
+- Content structure (left nav and navbar)
+
+  The idea is to reduce noise while making it easy to navigate the site that will have multiple TOCs (left nav). This would involve regular usability testing as the site grows and evolves.
+
+- Map out "Intro content" on Confluence with the proposed structure and start reworking (for voice and tone) to add to the doc site.
+
+  I say "rework" because we want to simplify, restructure, and clarify the content that aligns with the EG voice and tone. 
+
+
+
+]
+
+???
+
+My opinion on finalizing the left nav and navbar evolves around the continuous discovery of IA.  
+
+---
+
+.left-column[
+## Areas to dive into
+## Questions
+]
+.right-column[
+
+Other discussions and decisions are needed for the following questions:
+
+- How will the doc site be published (gh-pages or S3)?
+- What mechanism will we implement for feedback from the doc site?
+- How will we implement analytics on page views, abandon rates, and so on?
+- SSO login for the doc site (? do we need something like this?)
+- Who are the identified content contributors/reviewers/approvers?
+- Are we planning to open the doc site up publicly?
+- Will there be a specific domain name for the doc site?
+
+For context and current conversation around these questions, see [Federated Docs - Questions](https://confluence.expedia.biz/display/~pmcphee/Federated+Docs+-+Questions).
+
+
+]
+
+???
+
+On the topic of public doc site, I would suggest that if we decide not to have it publicly available, we should design it as though it will be publicly available. I say this because I've been in large online doc projects that didn't plan for public availability. The result was a huge and lengthy "lift and shift" to remove the INTERNAL ONLY content and rework it, so it's more formal for an external audience. 
+
+---
+.left-column[
+## Areas to dive into
+## Where do we start?
+]
+.right-column[
+
+
+- Do we identify content authors to start contributing while we finalize the design and structure? 
+
+  I'm inclined to say **Yes** because the frontend/backend development won't conflict with the content development. We currently have Content and Accessibility content being added to the site. 
+
+- Do we go deeper into a content audit by topic, description, purpose, and audience? 
+
+  I'm inclined to say **Yes** as long as we have come to a consensus on the left nav structure for our starting point. We have a lot of the content for the **Introduction**, **Get Started**, and **Resources and Tools** sections, which we can start mapping out.
+
+- Do we define an area to focus on for usability regarding navigation and findability, or is it too soon? 
+
+  IA is a journey of continuous discovery, so small focus groups and anonymous feedback are great ways to adjust the IA.
+
+
+
+
+
+]
+
+???
+
+My suggestion for the existing content is to simplify the content (brevity) and have it go through a Content QA for voice and tone as they are refining it.
+
+---
+.left-column[
+## Referenced links
+]
+.right-column[
+
+- [EGDS content audit](https://confluence.expedia.biz/display/EGDesignSystem/EGDS+single+site+docs+project)
+
+- [Design system doc site competitive analysis](https://confluence.expedia.biz/display/EGDesignSystem/Design+system+doc+site+competitive+analysis)
+
+- [Federated Docs - Questions](https://confluence.expedia.biz/display/~pmcphee/Federated+Docs+-+Questions)
+
+- [EGDS prototype](https://pages.github.expedia.biz/egds/docs-next/)
+
+- [Proposed left nav structure](https://expediacorp-my.sharepoint.com/:x:/g/personal/pmcphee_sea_corp_expecn_com/Ee4-nqNe9gJNrv77YSeVaeQBe1VDOqBvJ_5PUPVaGLhGew)
+
+- [Trello board of doc site tasks](https://trello.com/invite/b/j1osxpO4/1729cec0f8dbfc47cbba634fb95d1ea1/egds-doc-site-development)
+
+- [Docusaurus 2.1](https://docusaurus.io/)
+
+  - [Docusaurus showcase](https://docusaurus.io/showcase)*
+
+  - [Docusaurus competitor analysis](https://docusaurus.io/docs#comparison-with-other-tools)
+
+- [Doc site onboarding guide](https://github.expedia.biz/egds/docs-next/blob/main/ONBOARDING.md)
+
+- [Doc site contributor guide](https://github.expedia.biz/egds/docs-next/blob/main/CONTRIBUTING.MD)
+
+- [User research outcomes by category](https://www.figma.com/file/OFE8LUsTpK7qApzqB0KU1w/WIP%3A-EGDS-Docs-%26-Onboarding---Opportunity-Solution-Tree?node-id=1215%3A671)
+
+  .footnote[.red.bold[*] Showcase of doc sites built with Docusaurus.]
+
+]
+
+???
+
+
+
+---
+name: last-page
+template: inverse
+
+## Thank you!
+
+Slideshow created using [remark](http://github.com/gnab/remark).
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://unpkg.com/@excalidraw/utils@0.1.0-temp/dist/excalidraw-utils.min.js"></script>
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

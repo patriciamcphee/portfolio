@@ -1,0 +1,434 @@
+---
+title: "Book a flight (Chatbot)"
+id: pogo-airlines-book-flight
+slug: '/pogo-airlines-book-flight'
+description: Conversation design sample for airline chatbot.
+keywords:
+  - contribute
+  - documentation
+last_update: 
+   date: 07/09/2023
+   author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
+---
+
+<h4>Sample details</h4>
+
+- **Project:** Chatbot for a hypothetical project (certificate project)
+- **My Role:** Conversation Designer/Conversational Copywriter
+- **Tools:** Figma, Voiceflow, Google Sheets
+
+<Divider />
+
+import PogoAirlineLogo from '../../static/img/pogo-airlines-logo-transparent.png';
+
+<div class="pogo-logo">
+<img src={PogoAirlineLogo} width="30%" id="diagrams" alt="Example banner" />
+</div>
+
+
+Pogo Airlines offers highly competitive and affordable pricing options, ensuring fares remain attractive to budget-conscious millennials. They're called "Pogo" because you can quickly hop wherever you need to go. As a growing airline in the millennial travel space, Pogo recognizes the importance of fast, 24/7 support and differentiates themselves from competitors by offering a chatbot on their website and social media channels. 
+
+The chatbot provides quick and accurate answers to common questions, builds trust in the brand, and positions Pogo Airlines as a travel company that always has their customers' backs. In addition to common questions, customers can do things like: 
+
+- Find lesser-known gems and last-minute deals
+- Book a flight 
+- Check flight times and details
+- Check the weather at their destination
+- Discover what to do when they get there
+
+<Divider />
+
+## Personas
+
+### Customer
+
+import AlexUserPersona from '../../static/img/alex-user-persona.png';
+import QuoteUp from '../../static/img/quote-up.png';
+import QuoteDown from '../../static/img/quote-down.png';
+
+
+import FmdGoodSharpIcon from '@mui/icons-material/FmdGoodSharp';
+import CakeSharpIcon from '@mui/icons-material/CakeSharp';
+import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
+import FavoriteSharpIcon from '@mui/icons-material/FavoriteSharp';
+import SchoolSharpIcon from '@mui/icons-material/SchoolSharp';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import Circle from '@mui/icons-material/CircleOutlined';
+
+import { FireFilled,  DownloadOutlined } from '@ant-design/icons';
+import { 
+  Tag, 
+  ConfigProvider,
+  Progress,
+  Space, 
+  theme,
+  Divider,
+  Slider,
+  Rate 
+  } from 'antd';
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+      <div class="col-demo">
+        <img src={AlexUserPersona} width="90%" id="personas" alt="Example banner" />
+        <ul className="text-sm no-style">
+        <li class="no-style persona-demographic"><span class="icon-position"><CakeSharpIcon fontSize="small" /></span>&nbsp;&nbsp;27</li>
+        <li class="no-style persona-demographic"><BusinessCenterSharpIcon fontSize="small" />&nbsp;&nbsp;Freelance Graphic Designer</li>
+        <li class="no-style persona-demographic"><SchoolSharpIcon fontSize="small" />&nbsp;&nbsp;Bachelor of Visual Arts</li>
+        <li class="no-style persona-demographic"><FavoriteSharpIcon fontSize="small" />&nbsp;&nbsp;Single</li>
+        <li class="no-style persona-demographic"><FmdGoodSharpIcon fontSize="small" />&nbsp;&nbsp;Los Angeles, CA</li>
+      </ul>
+      <div class="persona-tags">
+      <ConfigProvider
+      theme={{
+        token: {
+          colorSuccess: '#25517E',
+          colorSuccessBg: '#25517E26',
+          colorSuccessBorder: '#25517E26',
+        },
+      }}
+    >
+    <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="#25517E">Spontaneous</Tag>
+      <Tag bordered={false} color="#25517E">Curious</Tag>
+      <Tag bordered={false} color="#25517E">Witty</Tag>
+      <Tag bordered={false} color="#25517E">Passionate</Tag>
+      <Tag bordered={false} color="#25517E">Adventurous</Tag>
+      <Tag bordered={false} color="#25517E">Energetic</Tag>
+    </Space>
+    </ConfigProvider>
+      </div>
+      </div> 
+    </div>
+    <div class="col">
+      <div class="col-demo">
+        <div class="persona-bio-container">
+        <h2>Kevin Miller</h2>
+        <p class="persona-bio">Kevin is a 27-year-old freelance graphic designer from Los Angeles. He studied at California College of the Arts (CCA), specializing in typography, color theory, and digital media. He runs a design studio in Los Angeles and works for various industries, including fashion, technology, and entertainment.</p><p class= "persona-bio">He loves surfing and traveling, and his global experiences inspire his art. He has a tight budget due to his freelance work but wants to maintain his wanderlust. He's always looking for last-minute travel deals and affordable flights to make spontaneous trips. Kevin enjoys experiencing different cultures, trying local cuisine, and capturing moments through their photography.</p>
+      </div>
+      <div class= "persona-quote"><span class= "quotes-large"> "Every great design begins with an even better story." </span> </div>
+      </div>
+    </div>
+  </div>
+  <div class= "row persona-row">
+    <div class="col">
+      <div class="col-demo">
+        <h4>Goals</h4>
+        <ul>
+          <li>Open to exploring unconventional destinations.</li>
+          <li>Enjoys meeting new people and sharing travel experiences.</li>
+          <li>Can travel on short notice because of a flexible schedule.</li>
+          <li>Various destinations and flight times, including lesser-known gems and last-minute deals. </li>
+          <li>Low-cost fairs and budget-friendly travel options. </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-demo">
+        <h4>Needs</h4>
+        <ul>
+          <li>Affordable last-minute deals</li>
+          <li>Diverse destination options</li>
+          <li>User-friendly digital experience</li>
+          <li>Community building</li>
+          <li>Flexible scheduling</li>
+          <li>Seamless and hassle-free experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class= "row persona-row">
+    <div class="col">
+      <div class="col-demo">
+        <h4>Frustrations</h4>
+        <ul>
+          <li>Often struggles to find affordable flights, especially for last-minute trips.</li>
+          <li>Limited flight options and availability can hinder spontaneous travel plans.</li>
+          <li>Complicated booking processes or a lack of user-friendly interfaces can be frustrating.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class= "row persona-row">
+    <div class="col col--7">
+      <div class="col-demo">
+      <h4>Personality</h4>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Introvert</p>
+            <p className="extrovert">Extrovert</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={90} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Independent</p>
+            <p className="extrovert">Team player</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={50} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Analytical</p>
+            <p className="extrovert">Creative</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={80} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Intuitive</p>
+            <p className="extrovert">Observant</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={70} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Messy</p>
+            <p className="extrovert">Organized</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={30} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-demo">
+      <h4>Technical skills</h4>
+        <div class="row">
+          <div class="col">
+            <div class="tech-3 clip-contents">
+              <div className="frame-2143">
+                <p className="introvert">Social networks</p>
+              </div>
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorFillContent: '#cecece66',
+                  },
+                }}
+              >
+              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E', }} count={10} disabled defaultValue={8} />
+              </ConfigProvider>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="tech-3 clip-contents">
+              <div className="frame-2143">
+                <p className="introvert">Online shopping</p>
+              </div>
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorFillContent: '#cecece66',
+                  },
+                }}
+              >
+              <Rate character={<FireFilled />} style={{ fontSize: '18px', color: '#25517E' }} count={10} disabled defaultValue={6} />
+              </ConfigProvider>
+            </div>
+          </div>
+        </div>
+        <h4>Brands and influencers</h4>
+        <div class="row">
+          <div class="col">
+            <div id="grid">
+              <div id="item1"><img src={TripAdvisorLogo} id="brands" alt="Example banner" /></div>
+              <div id="item2"><img src={AirbnbLogo} id="brands" alt="Example banner" /></div>
+              <div id="item3"><img src={TikTokLogo} id="brands" alt="Example banner" /></div>
+              <div id="item4"><img src={InstagramLogo} id="brands" alt="Example banner" /></div>
+              <div id="item5"><img src={SpotifyLogo} id="brands" alt="Example banner" /></div>
+              <div id="item6"><img src={FacebookLogo} id="brands" alt="Example banner" /></div>
+              <div id="item7"><img src={RedditLogo} id="brands" alt="Example banner" /></div>
+              <div id="item8"><img src={WhatsAppLogo} id="brands" alt="Example banner" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+import SpotifyLogo from '../../static/img/Spotify.png';
+import AdobeLogo from '../../static/img/adobe.png';
+import TripAdvisorLogo from '../../static/img/tripadvisor.png';
+import AirbnbLogo from '../../static/img/airbnb.png';
+import TikTokLogo from '../../static/img/tiktok.png';
+import InstagramLogo from '../../static/img/Instagram.png';
+import RedditLogo from '../../static/img/reddit.png';
+import FacebookLogo from '../../static/img/Facebook.png';
+import WhatsAppLogo from '../../static/img/whatsapp.png';
+
+<Divider />
+
+### Bot personality
+
+import BotPersonality from '../../static/img/pogobot.png';
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+      <div class="col-demo">
+        <img src={BotPersonality} width="100%" id="personas" alt="Example banner" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-demo">
+      <h2>Zac</h2>
+      <p>Zac is a friendly and energetic virtual travel assistant with a youthful and enthusiastic personality. He's designed to resonate with millennials and provide a personalized and engaging experience. Zac understands the needs and preferences of budget-conscious travelers seeking last-minute deals and aims to be helpful, informative, and fun to interact with.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+1. **Friendly:** Zac greets users with a warm and welcoming tone, instantly putting them at ease. It aims to create a friendly and approachable atmosphere throughout the conversation.
+2. **Energetic:** Zac exudes positive energy and enthusiasm, injecting a sense of excitement into the interaction. It encourages users to embrace spontaneity and adventure in their travel plans.
+3. **Knowledgeable:** Zac is well-informed about Pogo Airlines' offerings, including the latest deals, promotions, and destinations. It can provide accurate and up-to-date information to assist users in making informed decisions.
+4. **Playful:** Zac incorporates playful elements into its responses to make the conversation enjoyable. It may use emojis, puns, or clever wordplay to engage users and add a touch of lightheartedness.
+5. **Helpful:** Zac is committed to providing excellent customer service. It actively listens to users' queries, understands their needs, and offers personalized suggestions and solutions to help them find the best travel options within their budget.
+6. **Tech-Savvy:** Zac is proficient in navigating digital platforms and understands the importance of a seamless user experience. It can guide users through the booking process, assist with online transactions, and provide support for any technical issues.
+7. **Adventurous:** Zac embodies the spirit of adventure and encourages users to explore new destinations and embrace spontaneous travel. It shares stories and travel tips to inspire users and create a sense of wanderlust.
+
+## Use case - Book a flight
+
+Kevin, a millennial, just finished a sizeable design project and is ready for a 2-week adventure in unlikely or lesser-known destinations. He's seeking affordable last-minute deals and a user-friendly digital, seamless, hassle-free experience. It's early summer, and he wants to leave tomorrow or the following day.
+
+
+### User needs
+
+--In progress--
+
+<table>
+  <tr>
+  <td><b>Goal</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Demands/preferences</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Motivations/underlying needs</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Information needs</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Anxieties</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Expectations</b></td>
+  <td></td>
+  </tr>
+  <tr>
+  <td><b>Other assumptions</b></td>
+  <td></td>
+  </tr>
+</table>
+
+### Bot needs
+
+--In progress--
+
+<table>
+  <tr>
+  <td><b>Fulfillment capability</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Can provide this info</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Limitations</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Must ask this info</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Has this info already</b></td>
+  <td></td>
+  </tr>
+    <tr>
+  <td><b>Must provide this info</b></td>
+  <td></td>
+  </tr>
+  <tr>
+  <td><b>User behavior</b></td>
+  <td></td>
+  </tr>
+</table>
+
+## Main flow
+
+--In progress--
+
+- Enter flight details
+- Choose flight
+- Choose options
+- Confirm flight
+- Enter payment details
+
+## Prototypes
+
+--In progress--
+
+*To include both Figma and VoiceFlow prototypes.*

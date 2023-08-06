@@ -481,7 +481,7 @@ div.indent li {
 }
 
 .markdown img { 
-  border: 0px solid #ccc; 
+  border: 1px solid #ccc; 
   border-radius:5px;
   max-width: 60%;
   height: auto;
@@ -1066,8 +1066,8 @@ div[class^="tocCollapsibleContent"] ul li {
 
   background-repeat: no-repeat;
   background-image: url("../../static/img/flat-sketch.svg");
-  background-position: 90% 50%; 
-  background-size: 28%;
+  background-position: 94% 50%; 
+  background-size: 26%;
 
 }
 

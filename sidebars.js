@@ -5,21 +5,7 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
 
-    {
-      type: 'category',
-      label: 'UX writing',
-      collapsed: false, 
-      collapsible: false,   
-      link: {
-        type: 'doc',
-        id: 'ux-writing/ux-writing-samples',
-      },          
-      items: [ 
-        'ux-writing/ui-strings', 
-        'ux-writing/errors-warnings-confirmations', 
-        'ux-writing/group-policies',     
-      ],
-    },
+
 
     {
       type: 'category',
@@ -34,6 +20,7 @@ const sidebars = {
             'example-readme',
             'how-tos/contribution-guide/contributor-guide',
             'how-tos/contribution-guide/markdown-reference', 
+//            'how-tos/contribution-guide/style-guide',
         
       ],
     },
@@ -107,7 +94,22 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Voiceover scripts',
+      label: 'UX Writing',
+      collapsed: false, 
+      collapsible: false,   
+      link: {
+        type: 'doc',
+        id: 'ux-writing/ux-writing-samples',
+      },          
+      items: [ 
+        'ux-writing/ui-strings', 
+        'ux-writing/errors-warnings-confirmations', 
+        'ux-writing/group-policies',     
+      ],
+    },
+/*    {
+      type: 'category',
+      label: 'Voiceover Scripts',
       collapsed: false, 
       collapsible: false,   
       link: {
@@ -122,9 +124,10 @@ const sidebars = {
         }, 
       ],
     },
+*/
     {
       type: 'category',
-      label: 'KB articles',
+      label: 'KB Articles',
       collapsed: false, 
       collapsible: false,   
       link: {
@@ -137,7 +140,7 @@ const sidebars = {
     /* need to improve this content so it's a real project */
     {
       type:'category',
-      label: 'Content strategy',
+      label: 'Content Audit',
       collapsed: false, 
       collapsible: false,   
       link: {

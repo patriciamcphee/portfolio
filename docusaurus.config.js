@@ -38,8 +38,8 @@ themes: [
 
 title: 'Patricia McPhee',
 tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
-url: 'https://www.patriciamcphee.com',
-baseUrl: '/',
+url: 'https://patriciamcphee.github.io',
+baseUrl: '/portfolio',
 onBrokenLinks: 'throw',
 onBrokenMarkdownLinks: 'warn',
 favicon: 'img/favicon.png',

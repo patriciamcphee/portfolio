@@ -1071,6 +1071,11 @@ div[class^="tocCollapsibleContent"] ul li {
 
 }
 
+.intro-visual h1 {
+  padding: 0em;
+
+}
+
 [data-theme='dark'] .intro-visual {
   background-color: var(--ifm-color-secondary);
 }

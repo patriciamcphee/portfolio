@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclean_deploy=self.webpackChunkclean_deploy||[]).push([[3283],{24039:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/scriptwriting","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

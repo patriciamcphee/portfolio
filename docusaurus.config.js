@@ -118,7 +118,7 @@ customFields: {
         }
       },
       navbar: {
-        title: 'Patricia McPhee\'s Writing Portfolio',
+        title: 'Patricia McPhee',
         logo: {
           alt: '',
           src: 'img/favicon.png',
@@ -133,18 +133,15 @@ customFields: {
         {
           type: 'doc',
           docId: 'resume-functional',
-          position: 'right',
+          position: 'left',
           label: 'Resume',
         },
         {
           to: '/blog', 
           label: 'Blog', 
-          position: 'right'
+          position: 'left'
         }, 
-        {
-          type: 'search',
-          position: 'right',
-        },
+
 /*
            {
             label: 'Support',

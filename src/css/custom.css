@@ -1056,18 +1056,17 @@ div[class^="tocCollapsibleContent"] ul li {
 
 
 .intro-visual {
-  padding: 2em 4em;
+  padding: 4em;
   margin: 0;
   width: 100%;
   background-color: #9ecd2836;
   display: flex;
-
   border-radius: 0px;
-
   background-repeat: no-repeat;
+
   background-image: url("../../static/img/flat-sketch.svg");
-  background-position: 94% 50%; 
-  background-size: 26%;
+  background-position: 93% 50%; 
+  background-size: 24%;
 
 }
 
@@ -1094,6 +1093,10 @@ div[class^="tocCollapsibleContent"] ul li {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.intro-text {
+
+}
+
 
 
 .intro-text p {
@@ -1117,17 +1120,18 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .intro-image {
-  width: 35%;
- 
+
+
 
 }
 
 .intro-image img {
-  max-inline-size: 100%;
+  max-width: 80%;
   border: none;
-
   object-position: -80% 0;
+  object-fit: contain;
 }
+
 
 .intro-visual h5 {
   font-family: "dunbar-tall", sans-serif;
@@ -1140,7 +1144,7 @@ div[class^="tocCollapsibleContent"] ul li {
   color: var(--ifm-color-secondary-darkest);
 }
 
-.intro-visual h4 {
+.intro-text h4 {
   font-size: 18px;
   font-weight: 400;
   margin: 1rem 0;

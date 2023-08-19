@@ -92,7 +92,7 @@
 
 body {
   line-height: 1.4;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   font-family: 'Nunito Sans', sans-serif;
   background-color: var(--ifm-background-color);
@@ -243,21 +243,44 @@ font-weight: 600;
 }
 
 .card {
-  margin: 10px 0;
+  margin: 0px;
+  padding: 0.975em;
+
 }
 
 .card__image {
-  margin-top: 1rem;
+  margin: 1em 1em 0em 1em;
+  padding: 0.5em;
+  width: 160px;
+  height: auto;
+  align-self: center;
+}
+
+.card__image-2 {
+  margin: 0 0em;
+  padding: 0em;
+  width: 140px;
+  height: auto;
+  align-self: center;
+}
+
+.card__header {
+  text-align: center;
+  margin-bottom: -10px;
 }
 
 .card__body {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
 }
 
 .card__body h4 {
   margin-top: -32px;
   line-height: 1.3;
+}
+
+.container {
+  padding: 0em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
@@ -412,6 +435,7 @@ p,
 li {
   margin: 0;
   padding: 0;
+  font-weight: 500;
 }
 
 ul {
@@ -1056,7 +1080,7 @@ div[class^="tocCollapsibleContent"] ul li {
 
 
 .intro-visual {
-  padding: 4em;
+  padding: 4em 6em;
   margin: 0;
   width: 100%;
   background-color: #9ecd2836;
@@ -1065,15 +1089,81 @@ div[class^="tocCollapsibleContent"] ul li {
   background-repeat: no-repeat;
 
   background-image: url("../../static/img/flat-sketch.svg");
-  background-position: 93% 50%; 
+  background-position: 88% 50%; 
   background-size: 24%;
 
 }
+
+.features-visual {
+  padding: 0em 4em;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+
+  background-image: url("../../static/img/Grid.svg");
+  background-position: 93% 50%; 
+  background-size: 24%;
+}
+
+.features-visual-reverse {
+  padding: 0em 2em;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+
+  background-image: url("../../static/img/Grid.svg");
+  background-position: 5% 50%; 
+  background-size: 24%;
+}
+
+.features-visual-one-col {
+  padding: 2em 6em;
+  width: 100%;
+  display: flex;
+}
+
+.features-visual-one-col p {
+  padding-top: 1em;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.features-visual-two-col {
+  padding: 0em 6em;
+  width: 100%;
+}
+
+.features-visual-nutshell {
+  padding: 2em 0em;
+  width: 100%;
+}
+
+.features-visual-two-col p {
+  margin-right: 2em;
+}
+
+.features-visual-one-col h4 {
+  padding: 0em;
+  width: 100%;
+}
+
+.features-visual-3-col {
+  padding: 0 6em 4em 6em;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+
 
 .intro-visual h1 {
   padding: 0em;
 
 }
+
+
 
 [data-theme='dark'] .intro-visual {
   background-color: var(--ifm-color-secondary);
@@ -1089,9 +1179,7 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 
-.intro-text h4 {
-  font-family: 'Nunito Sans', sans-serif;
-}
+
 
 .intro-text {
 
@@ -1100,10 +1188,11 @@ div[class^="tocCollapsibleContent"] ul li {
 
 
 .intro-text p {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 24px;
+  font-family: "dunbar-tall", sans-serif;
+  font-size: 28px;
   line-height: 1.4;
-  margin: 12px 0;
+  margin: 0px 0;
+  font-weight: 600;
 }
 
 
@@ -1145,7 +1234,8 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .intro-text h4 {
-  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 22px;
   font-weight: 400;
   margin: 1rem 0;
 /*  letter-spacing: -0.04em; */
@@ -1153,11 +1243,22 @@ div[class^="tocCollapsibleContent"] ul li {
 
 }
 
-.intro-cards {
-  margin-top: 20px;
 
+.intro-cards {
+  margin: 20px 0;
+  
   padding: 10px 0;
 
+}
+
+h2.projects-header {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  color: var(--ifm-color-secondary-darkest);
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: -0.035em;
+  line-height: 110%;
 }
 
 .index-container {
@@ -1189,15 +1290,13 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .intro-card {
-
+  background-color: #9ecd2836;
 
 }
 
 .intro-card h3 {
-  color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-secondary);
   font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 8px;
 }
 
 .intro-card img {
@@ -1217,7 +1316,7 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .intro-card p {
-  font-size: 0.5rem;
+
   line-height: 1.4rem;
   color: #434e4e;
 }
@@ -1493,12 +1592,24 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     text-align: left;
   }
 
-  .intro-visual {
-    padding: 1.5em;
+ .card {
+    margin: 10px;
 
+  }
+
+  .intro-visual,
+  .features-visual-reverse,
+  .features-visual,
+  .features-visual-one-col,
+  .features-visual-nutshell,
+  .features-visual-3-col,
+  .features-visual-two-col {
+    padding: 1.5em;
+    margin: 10px;
     background-image: none;
  
   }
+
   .intro-visual h5 {
     font-size: 54px;
     text-align: center;

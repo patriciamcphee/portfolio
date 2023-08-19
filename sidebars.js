@@ -17,9 +17,9 @@ const sidebars = {
         id: 'how-tos/how-to-samples',
       },      
       items: [ 
-            'example-readme',
-            'how-tos/contribution-guide/contributor-guide',
-            'how-tos/contribution-guide/markdown-reference', 
+//            'example-readme',
+//            'how-tos/contribution-guide/contributor-guide',
+//            'how-tos/contribution-guide/markdown-reference', 
 //            'how-tos/contribution-guide/style-guide',
         
       ],
@@ -65,7 +65,7 @@ const sidebars = {
           collapsed: true, 
           collapsible: true, 
           items: [
-            'conversation-design/luxury-villa-concierge',
+//            'conversation-design/luxury-villa-concierge',
             'conversation-design/pogo-airlines-book-flight',
           ]
         },
@@ -103,7 +103,7 @@ const sidebars = {
       },          
       items: [ 
         'ux-writing/ui-strings', 
-        'ux-writing/errors-warnings-confirmations', 
+//        'ux-writing/errors-warnings-confirmations', 
         'ux-writing/group-policies',     
       ],
     },
@@ -137,7 +137,7 @@ const sidebars = {
       items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
 
-    /* need to improve this content so it's a real project */
+    /* need to improve this content so it's a real project 
     {
       type:'category',
       label: 'Content Audit',
@@ -153,7 +153,7 @@ const sidebars = {
         'art-of-information-architecture',
       ],
     },
-
+*/
 
   ],
 

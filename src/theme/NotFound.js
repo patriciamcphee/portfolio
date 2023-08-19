@@ -50,7 +50,7 @@ export default function NotFound() {
     }
   >
     <Space wrap>
-    <Button type="primary" shape="round" size='large' href="/portfolio/" >
+    <Button type="primary" shape="round" size='large' href="/" >
             Go Home!
           </Button>
     <Button type="primary" shape="round" size='large' href="mailto:hi@patriciamcphee.com?subject=Page not found error" >

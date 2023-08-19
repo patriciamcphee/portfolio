@@ -1,7 +1,7 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 0rem 6em;
   width: 100%;
 }
 
@@ -9,4 +9,12 @@
   height: 200px;
   width: 200px;
   align-self: center;
+}
+
+.carousel {
+  height: '160px';
+  color: '#fff';
+  line-height: '160px';
+  text-align: 'center';
+  background: '#364d79';
 }

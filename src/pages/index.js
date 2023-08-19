@@ -3,16 +3,19 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
+import TheTechMaestrosSymphony from '@site/src/components/HomepageFeatures/TheTechMaestrosSymphony.js';
+import TheSymphony from '@site/src/components/HomepageFeatures/TheSymphony.js';
+import ToolkitAndEvolution from '@site/src/components/HomepageFeatures/ToolkitAndEvolution.js';
+import ForeverEvolving from '../components/HomepageFeatures/ForeverEvolving';
+import Nutshell from '../components/HomepageFeatures/Nutshell';
 
 import styles from './index.module.css';
-
-import Hero from '../../static/img/flat-sketch.svg';
-
 
 import { Col, Divider, Row, Card, Space, Button, ConfigProvider } from "antd";
 const style = {
   padding: "6px 20px",
+  margin: '0 10px',
   color: '#fff',
 };
 
@@ -23,14 +26,13 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div class="intro-visual">
         <Row wrap={false}>
-        <Col flex="1 0 750px">
+        <Col flex="1 0 600px">
             <div class="intro-text">
               <h5 class="intro-visual-header">
-              Hi! I'm Patricia.
+              Patricia McPhee
               </h5>
-              <p class="intro-text"> I'm a Technical Writer / Content Designer based in Redmond, WA.
-              </p>
-              <h4 class="intro-text">I craft meaningful content experiences to help users achieve more with the software products and technologies they use.</h4>                 
+              <p class="intro-text">Sr. Technical Writer | Orchestrating Technical Content Mastery</p>
+              <h4 class="intro-text">Dive into the universe of Patricia McPhee, where every piece of technical content is a masterful symphony.</h4>                 
             </div>
             <div class="intro-text-button">
               <ConfigProvider
@@ -43,13 +45,16 @@ function HomepageHeader() {
                   }
                 }
               >
-                <Button type="primary" shape="round" size='large' style={style} href="#" >
-                        View My Resume!
+                <Button type="primary" shape="round" size='large' style={style} href="/writing-samples" >
+                        Projects
+                      </Button>
+                      <Button type="primary" shape="round" size='large' style={style} href="/resume-functional" >
+                        Resume
                       </Button>
               </ConfigProvider>
           </div>
           </Col>
-          <Col flex="0 1 100px">
+          <Col flex="0 1 250px">
               <div className="intro-image">
                 
               </div>  
@@ -68,7 +73,15 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+      <TheTechMaestrosSymphony />
+      <TheSymphony />
+
+        <Divider />
+        <ToolkitAndEvolution />
+        <Divider />
+        <ForeverEvolving />
+        <Divider />
+        <Nutshell />
       </main>
     </Layout>
   );

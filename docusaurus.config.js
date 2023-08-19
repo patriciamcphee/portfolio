@@ -124,12 +124,12 @@ customFields: {
           src: 'img/favicon.png',
         },
         items: [ 
-/*         { 
-          to: "/api/", 
-          label: "API", 
+        { 
+          to: "writing-samples", 
+          label: "Projects", 
           position: "left" 
         },
-*/
+
         {
           type: 'doc',
           docId: 'resume-functional',

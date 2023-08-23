@@ -182,7 +182,7 @@ const App = () => {
       <Steps size="small" onChange={onChange} current={current} items={items} />
       <div style={contentStyle}>{steps[current].content}</div>
       
-      <Divider />
+      <hr />
       <div
         style={{
           marginBottom: 36,

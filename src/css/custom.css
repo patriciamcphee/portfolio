@@ -65,7 +65,7 @@
   --adam-blue: #2c355b;
   --yellow: #ffc107;
   --neptune: #73bfbf;
-  --beyond-blue: #3727d6;
+
 
 }
 
@@ -132,7 +132,7 @@ h4 {
   font-family: "dunbar-tall", sans-serif;
   font-size: 16px;
   line-height: 0.3;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 .markdown p {
@@ -248,10 +248,22 @@ font-weight: 600;
 
 }
 
+.card-demo a:hover {
+  text-decoration: none;
+}
+
 .card__image {
   margin: 1em 1em 0em 1em;
   padding: 0.5em;
   width: 160px;
+  height: auto;
+  align-self: center;
+}
+
+.svg-image {
+  margin: 1em 1em 0em 1em;
+  padding: 0.5em;
+  width: 125px;
   height: auto;
   align-self: center;
 }
@@ -266,8 +278,14 @@ font-weight: 600;
 
 .card__header {
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
 }
+
+.card__header h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 
 .card__body {
   font-size: 18px;
@@ -282,6 +300,12 @@ font-weight: 600;
 .container {
   padding: 0em;
 }
+
+.pogo-logo {
+  margin: 24px;
+
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 
@@ -384,7 +408,7 @@ font-weight: 600;
 }
 
 .persona-row h4 {
-  padding: 40px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .tech-3 {
@@ -402,6 +426,7 @@ font-weight: 600;
   width: 100%;
 /*  box-sizing: border-box;*/
   margin-bottom: -14px;
+  margin-top: -6px;
 }
 .introvert, .extrovert {
   font-size: 15px;
@@ -506,7 +531,6 @@ div.indent li {
 
 .markdown img { 
   border: 1px solid #ccc; 
-  border-radius:5px;
   max-width: 60%;
   height: auto;
   margin: 0px 0;
@@ -1006,6 +1030,29 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #000;
+  opacity: 0.1;
+}
+
+.hr-50 {
+  width: 50%;
+  margin: auto;
+  border: 0;
+  height: 1px;
+  background: #000;
+  opacity: 0.1;
+}
+
+.div-hr-container {
+  align-self: center;  
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+
 /***** Admonition *****/
 
 .note-message {
@@ -1150,7 +1197,7 @@ div[class^="tocCollapsibleContent"] ul li {
 }
 
 .features-visual-3-col {
-  padding: 0 6em 4em 6em;
+  padding: 0 6em 2em 6em;
   width: 100%;
   display: flex;
   text-align: center;
@@ -1259,6 +1306,17 @@ h2.projects-header {
   font-size: 38px;
   letter-spacing: -0.035em;
   line-height: 110%;
+}
+
+h3.projects-header {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  color: var(--ifm-color-secondary-darkest);
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.035em;
+  line-height: 120%;
+  margin: 1em 0;
 }
 
 .index-container {

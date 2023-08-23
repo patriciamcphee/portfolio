@@ -37,7 +37,7 @@ themes: [
 
 
 title: 'Patricia McPhee',
-tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
+tagline: 'I\'m not your typical technical writer; I\'m a storyteller for the digital age. In my role as The Analyzer, I examine every facet of content to make sure each word hits the mark. As The Innovator, I shape digital experiences that capture attention. As The Collaborative Spirit, I unite teams to produce content that genuinely connects. As The Efficiency Expert, I streamline workflows to ensure everything runs as smoothly as the finished product. And as The Multimedia Maven, I know that sometimes stories extend beyond mere words.',
 url: 'https://www.patriciamcphee.com',
 baseUrl: '/',
 onBrokenLinks: 'throw',
@@ -118,59 +118,34 @@ customFields: {
         }
       },
       navbar: {
-        title: 'Patricia McPhee',
+        title: '',
         logo: {
           alt: '',
           src: 'img/favicon.png',
         },
         items: [ 
-        { 
-          to: "writing-samples", 
-          label: "Projects", 
-          position: "left" 
-        },
+          {
+            to: "/",
+            label: "Home",
+            position: "left",
+          },
+          { 
+            to: "writing-samples", 
+            label: "Projects", 
+            position: "left" 
+          },
 
-        {
-          type: 'doc',
-          docId: 'resume-functional',
-          position: 'left',
-          label: 'Resume',
-        },
-        {
-          to: '/blog', 
-          label: 'Blog', 
-          position: 'left'
-        }, 
-
-/*
-           {
-            label: 'Support',
-            type: 'dropdown',
+          {
+            type: 'doc',
+            docId: 'resume-functional',
             position: 'left',
-            items: [
-              {
-                to: 'https://github.com/gobeyondidentity',
-                label: 'GitHub',
-               },
-               {
-                to: 'https://stackoverflow.com/questions/tagged/beyondidentity',
-                label: 'Stack Overflow',
-               },
-               {
-                to: 'https://join.slack.com/t/byndid/shared_invite/zt-1anns8n83-NQX4JvW7coi9dksADxgeBQ',
-                label: 'Slack',
-               },
-               {
-                to: 'https://twitter.com/BI_Developers',
-                label: 'Twitter',
-               },
-               {
-                to: 'https://dev.to/beyondidentity',
-                label: 'DevTo',
-               },
-            ],
+            label: 'Resume',
+          },
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left'
           }, 
-*/
         ],
       },
       footer: {

@@ -9,6 +9,7 @@ import TheSymphony from '@site/src/components/HomepageFeatures/TheSymphony.js';
 import ToolkitAndEvolution from '@site/src/components/HomepageFeatures/ToolkitAndEvolution.js';
 import ForeverEvolving from '../components/HomepageFeatures/ForeverEvolving';
 import Nutshell from '../components/HomepageFeatures/Nutshell';
+import Projects from '../components/HomepageFeatures/WritingSamples';
 
 import styles from './index.module.css';
 
@@ -26,13 +27,13 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div class="intro-visual">
         <Row wrap={false}>
-        <Col flex="1 0 600px">
+        <Col flex="1 0 700px">
             <div class="intro-text">
               <h5 class="intro-visual-header">
-              Patricia McPhee
+              Hi! I'm Patricia McPhee.
               </h5>
-              <p class="intro-text">Sr. Technical Writer | Orchestrating Technical Content Mastery</p>
-              <h4 class="intro-text">Dive into the universe of Patricia McPhee, where every piece of technical content is a masterful symphony.</h4>                 
+              <p class="intro-text">Sr. Technical Writer | Crafting Technical Content Excellence</p>
+              <h4 class="intro-text">Dive deeper into my universe, where precision and narrative meet.</h4>                 
             </div>
             <div class="intro-text-button">
               <ConfigProvider
@@ -45,7 +46,7 @@ function HomepageHeader() {
                   }
                 }
               >
-                <Button type="primary" shape="round" size='large' style={style} href="/writing-samples" >
+                <Button type="primary" shape="round" size='large' style={style} href="#projects" >
                         Projects
                       </Button>
                       <Button type="primary" shape="round" size='large' style={style} href="/resume-functional" >
@@ -54,7 +55,7 @@ function HomepageHeader() {
               </ConfigProvider>
           </div>
           </Col>
-          <Col flex="0 1 250px">
+          <Col flex="0 1 100px">
               <div className="intro-image">
                 
               </div>  
@@ -69,18 +70,15 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Crafting Technical Content Excellence`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
       <TheTechMaestrosSymphony />
       <TheSymphony />
-
-        <Divider />
-        <ToolkitAndEvolution />
-        <Divider />
-        <ForeverEvolving />
-        <Divider />
+      <hr />
+      <Projects />
+        <hr />
         <Nutshell />
       </main>
     </Layout>

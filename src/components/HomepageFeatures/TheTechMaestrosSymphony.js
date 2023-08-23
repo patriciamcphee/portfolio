@@ -19,8 +19,8 @@ export default function TheTechMaestrosSymphony() {
   <div class="row">
     <div class="col">
       <div class="intro-text">
-              <p class="intro-text">The Tech Maestro's Symphony</p>
-              <h4 class="intro-text">Patricia isn't just another technical writer; she's a storyteller for the modern tech age. As <i>The Analyzer</i>, she scrutinizes every content dimension, ensuring every word resonates. As <i>The Innovator</i>, she crafts digital experiences that captivate. As <i>The Collaborative Spirit</i>, she brings teams together, producing content that truly connects. As <i>The Efficiency Expert</i>, Patricia guarantees the workflow is as seamless as the final product. And as <i>The Multimedia Maven</i>, Patricia knows that sometimes, the story goes beyond words.</h4>                 
+              <p class="intro-text">More Than Just Words</p>
+              <h4 class="intro-text">I'm not your typical technical writer; I'm a storyteller for the digital age. In my role as The Analyzer, I examine every facet of content to make sure each word hits the mark. As The Innovator, I shape digital experiences that capture attention. As The Collaborative Spirit, I unite teams to produce content that genuinely connects. As The Efficiency Expert, I streamline workflows to ensure everything runs as smoothly as the finished product. And as The Multimedia Maven, I know that sometimes stories extend beyond mere words.</h4>                 
             </div>
     </div>
   </div>

@@ -46,7 +46,7 @@ const TheSymphony = () => (
             </div>
             <div class="card__body">
               <p>
-              I'm a firm believer that impactful content is born from teamwork. My rich experience, from partnering with Oculus's VR experts to Microsoft's networking professionals, ensures our documentation is comprehensive and resonates with both tech experts and end-users.
+              I'm a firm believer that impactful content is born from teamwork. My rich experience, from partnering with Oculus's VR experts to Microsoft's Azure and networking professionals, ensures the documentation is comprehensive and resonates with both tech experts and end-users.
               </p>
             </div>
           </div>

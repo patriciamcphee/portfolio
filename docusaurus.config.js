@@ -121,30 +121,30 @@ customFields: {
         title: '',
         logo: {
           alt: '',
-          src: 'img/favicon.png',
+          src: 'img/test-navbar.png',
         },
         items: [ 
           {
             to: "/",
             label: "Home",
-            position: "left",
+            position: "right",
           },
           { 
             to: "writing-samples", 
-            label: "Projects", 
-            position: "left" 
+            label: "Portfolio", 
+            position: "right" 
           },
 
           {
             type: 'doc',
             docId: 'resume-functional',
-            position: 'left',
+            position: 'right',
             label: 'Resume',
           },
           {
             to: '/blog', 
             label: 'Blog', 
-            position: 'left'
+            position: 'right'
           }, 
         ],
       },

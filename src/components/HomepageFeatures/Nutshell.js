@@ -3,13 +3,7 @@ import React from 'react';
 const Nutshell = () => (
 <div class="container features-visual-nutshell">
   <div class="row">
-    <div class="col col--6">
-      <div class="col-demo">
-      <br />
-      I go beyond the traditional confines of a technical writer by melding technical expertise with a human touch. If you're looking for a developer documentation site that genuinely stands apart, my expertise is here to guide you.<br /><br />
-      </div>
-    </div>
-    <div class="col col--5 col--offset-1">
+    <div class="col">
       <div class="col-demo">
       <h3>Want to learn more about me?</h3>
         <ul>

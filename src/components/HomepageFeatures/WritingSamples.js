@@ -14,12 +14,10 @@ export default function Projects() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <section class="container">
+            <h3 class="projects-header">As a seasoned technical writer passionate about user-centric content development, I'm on a mission to create clear, efficient, and impactful communications.</h3>           
+
       <div class="intro-cards">
-      <h1 class="intro-text"><a name="projects"></a>Projects</h1>
-      <h3 class="projects-header"><i>As a seasoned technical writer passionate about user-centric content development, I'm on a mission to create clear, efficient, and impactful communications.</i></h3>           
 
-
-      <p></p>
   <div class="row">
     <div class="col col--4">
       <div class="col-demo">
@@ -88,7 +86,7 @@ export default function Projects() {
             <h3>UX Writing</h3>           
           </div>
           <div class="card__body">
-          <p><strong>Error Messages - Tech Security Startup</strong></p>
+          <p><strong>Error Messages</strong></p>
             <p>Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem.
             </p>
           </div>

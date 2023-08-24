@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=NTR&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fjalla+One&family=Khula:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Tulpen+One&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Homenaje&family=Ropa+Sans:ital@0;1&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Basic&family=Hind+Madurai:wght@300;400;500;600;700&family=IM+Fell+French+Canon:ital@0;1&display=swap);
+
+
 
 @import url("https://use.typekit.net/ndp4mcy.css");
 
@@ -7,7 +13,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #9ecd28;
+  --ifm-color-primary: #244651;
   --ifm-color-primary-dark: #8eb924;
   --ifm-color-primary-darker: #86ae22;
   --ifm-color-primary-darkest: #6f901c;
@@ -22,7 +28,7 @@
   --ifm-color-background-lighter: #c3c3c3;
   --ifm-color-background-lightest: #dddddd;
   --ifm-code-font-size: 95%;
-  --ifm-color-secondary: #046b99;
+  --ifm-color-secondary: #647555;
   --ifm-color-secondary-dark: #04608a;
   --ifm-color-secondary-darker: #035b82;
   --ifm-color-secondary-darkest: #034b6b;
@@ -43,7 +49,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-leading-desktop: 1;
 
-  --ifm-navbar-height: 56px;
+  --ifm-navbar-height: 118px;
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-shadow: none;
 
@@ -94,11 +100,12 @@ body {
   line-height: 1.4;
   font-size: 17px;
   font-weight: 600;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Khula', sans-serif;
   background-color: var(--ifm-background-color);
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  color: #000;
 }
 
 b, strong {
@@ -109,8 +116,8 @@ b, strong {
 h1 {
   padding-top: 0;
   text-align: left;
-  font-family: "dunbar-tall", sans-serif;
-  font-weight: 400;
+  font-family: 'Homenaje', sans-serif;
+  font-weight: 300;
 }
 
 h2 {
@@ -124,12 +131,12 @@ h3 {
 }
 
 h2, h3 {
-  font-family: "dunbar-tall", sans-serif;
+  font-family: 'Homenaje', sans-serif;
   font-weight: 500;
 }
 
 h4 {
-  font-family: "dunbar-tall", sans-serif;
+  font-family: 'Homenaje', sans-serif;
   font-size: 16px;
   line-height: 0.3;
   padding-top: 0px;
@@ -155,7 +162,7 @@ h4 {
 }
 
 h1.not-found {
-  font-family: "dunbar-tall", sans-serif;
+  font-family: 'Homenaje', sans-serif;
   text-align: center;
   font-size: 56px;
   margin-top: -20px;
@@ -205,7 +212,8 @@ h6 {
   font-size: 0.9em;
 }
 .markdown h1:first-child {
-  --ifm-h1-font-size: 2.618rem;
+  --ifm-h1-font-size: 2.7rem;
+  font-weight: 500;
 }
 
 .markdown h3 {
@@ -290,6 +298,12 @@ font-weight: 600;
 .card__body {
   font-size: 18px;
   text-align: center;
+
+}
+
+.card__body p {
+  margin-top: 6px;
+  font-weight: 600;
 }
 
 .card__body h4 {
@@ -451,9 +465,10 @@ font-weight: 600;
 }
 
 .markdown header:first-child + p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: calc(var(--ifm-leading) * -1);
   margin-bottom: calc(var(--ifm-leading) * 1);
+  
 }
 
 p,
@@ -606,7 +621,8 @@ img.diagrams {
 .navbar__logo,
 .navbar__logo img,
 a[class^="sidebarLogo"] img {
-  height: 39px;
+  height: 82px;
+  padding: 0.25em;
 }
 .navbar__link {
   text-decoration: none;
@@ -1127,17 +1143,17 @@ hr {
 
 
 .intro-visual {
-  padding: 4em 6em;
+  padding: 3em 6em 2em 6em;
   margin: 0;
   width: 100%;
-  background-color: #9ecd2836;
+/*  background-color: #24465146; */
   display: flex;
   border-radius: 0px;
   background-repeat: no-repeat;
 
-  background-image: url("../../static/img/flat-sketch.svg");
-  background-position: 88% 50%; 
-  background-size: 24%;
+  background-image: url("../../static/img/new-hero-animation.svg");
+  background-position: 93% 5%; 
+  background-size: 26%;
 
 }
 
@@ -1149,8 +1165,8 @@ hr {
   background-repeat: no-repeat;
 
   background-image: url("../../static/img/Grid.svg");
-  background-position: 93% 50%; 
-  background-size: 24%;
+  background-position: 90% 20%; 
+  background-size: 25%;
 }
 
 .features-visual-reverse {
@@ -1166,7 +1182,7 @@ hr {
 }
 
 .features-visual-one-col {
-  padding: 2em 6em;
+  padding: 0em 6em;
   width: 100%;
   display: flex;
 }
@@ -1221,7 +1237,7 @@ hr {
 }
 
 .intro-text-button {
-  margin: 40px 0 20px 0;
+  margin: 40px 0 0px 0;
   text-align: center;
 }
 
@@ -1235,11 +1251,11 @@ hr {
 
 
 .intro-text p {
-  font-family: "dunbar-tall", sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 28px;
   line-height: 1.4;
-  margin: 0px 0;
-  font-weight: 600;
+  margin: 40px 0;
+  font-weight: 400;
 }
 
 
@@ -1270,21 +1286,21 @@ hr {
 
 
 .intro-visual h5 {
-  font-family: "dunbar-tall", sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  margin: 1rem 0;
-  padding: 12px 0;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 84px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 /*  letter-spacing: -0.04em; */
-  line-height: 64px;
-  color: var(--ifm-color-secondary-darkest);
+  line-height: 88px;
+  color: var(--ifm-color-primary);
 }
 
 .intro-text h4 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 22px;
+  font-family: 'Khula', sans-serif;
+  font-size: 20px;
   font-weight: 400;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 /*  letter-spacing: -0.04em; */
   line-height: 1.4;
 
@@ -1293,13 +1309,9 @@ hr {
 
 .intro-cards {
   margin: 20px 0;
-  
-  padding: 10px 0;
-
 }
 
 h2.projects-header {
-  font-family: 'Nunito Sans', sans-serif;
   text-align: center;
   color: var(--ifm-color-secondary-darkest);
   font-weight: 600;
@@ -1308,14 +1320,16 @@ h2.projects-header {
   line-height: 110%;
 }
 
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap);
+
 h3.projects-header {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Khula', sans-serif;
   text-align: center;
   color: var(--ifm-color-secondary-darkest);
-  font-weight: 600;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 32px;
   letter-spacing: -0.035em;
-  line-height: 120%;
+
   margin: 1em 0;
 }
 
@@ -1348,13 +1362,14 @@ h3.projects-header {
 }
 
 .intro-card {
-  background-color: #9ecd2836;
+  background-color: #a4a35946;
 
 }
 
 .intro-card h3 {
   color: var(--ifm-color-secondary);
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .intro-card img {

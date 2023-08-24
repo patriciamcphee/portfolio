@@ -10,6 +10,8 @@ import ToolkitAndEvolution from '@site/src/components/HomepageFeatures/ToolkitAn
 import ForeverEvolving from '../components/HomepageFeatures/ForeverEvolving';
 import Nutshell from '../components/HomepageFeatures/Nutshell';
 import Projects from '../components/HomepageFeatures/WritingSamples';
+import ExperienceCareerMilestones from '@site/src/components/HomepageFeatures/ExperienceCareerMilestones';
+import HowIHelp from '@site/src/components/HomepageFeatures/HowIHelp';
 
 import styles from './index.module.css';
 
@@ -27,35 +29,38 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div class="intro-visual">
         <Row wrap={false}>
-        <Col flex="1 0 700px">
+        <Col flex="1 1 70%">
             <div class="intro-text">
               <h5 class="intro-visual-header">
-              Hi! I'm Patricia McPhee.
+              Your Solution to Complex Technical Challenges
               </h5>
-              <p class="intro-text">Sr. Technical Writer | Crafting Technical Content Excellence</p>
-              <h4 class="intro-text">Dive deeper into my universe, where precision and narrative meet.</h4>                 
+              <p class="intro-text">Transforming Complex Information Into User-Friendly Experiences.</p>
+              <h4 class="intro-text">Hi! I'm Patricia McPhee. I'm a highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly and believe in the power of clear, intuitive user experiences, incorporating this belief into every project.</h4>    
+              <h4 class="intro-text">Over the years, I've showcased my skills in content development, from thorough content audits to mastering tools like Docusaurus and MadCap Flare. Whether I'm refining content for budding tech startups or enhancing platforms for industry titans like Microsoft or GE Healthcare, I prioritize a user-centric approach.</h4>        
+              <h4 class="intro-text">I'm a firm believer that impactful content is born from teamwork. My rich experience, from partnering with Oculus's VR experts to Microsoft's Azure and networking professionals, ensures the documentation is comprehensive and resonates with both tech experts and end-users.</h4>    
+              <h4 class="intro-text">The tech realm is ever-evolving, and so am I. I bring more than two decades of technical writing experience to the table, but I'm also committed to continuous growth and adaptation. Presently, I'm immersing myself in Conversation Design.</h4>      
             </div>
             <div class="intro-text-button">
               <ConfigProvider
                 theme={{
                   token: {
-                      colorPrimary: '#86ae22',
-                      colorPrimaryHover: '#0476a8',
-                      colorTextBase: '#1890ff',
+                      colorPrimary: '#a4a359',
+                      colorPrimaryHover: '#244651',
+                      colorTextBase: '#fff',
                     }
                   }
                 }
               >
                 <Button type="primary" shape="round" size='large' style={style} href="#projects" >
-                        Projects
+                        See My Portfolio
                       </Button>
                       <Button type="primary" shape="round" size='large' style={style} href="/resume-functional" >
-                        Resume
+                        View My Resume
                       </Button>
               </ConfigProvider>
           </div>
           </Col>
-          <Col flex="0 1 100px">
+          <Col flex="0 1 30%">
               <div className="intro-image">
                 
               </div>  
@@ -74,10 +79,18 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-      <TheTechMaestrosSymphony />
-      <TheSymphony />
+      <Divider />
+      <HowIHelp />
+      <Divider />
+      <ExperienceCareerMilestones />
       <hr />
+      <section class="container">
+      <div class="intro-cards">
+      <h1 class="intro-text"><a name="projects"></a>Portfolio</h1>
+      </div>
       <Projects />
+      </section>
+      
         <hr />
         <Nutshell />
       </main>

@@ -10,6 +10,10 @@ import EducationCourses from '@site/src/components/HomepageFeatures/EducationCou
 import PortfolioAndProjects from '@site/src/components/PortfolioAndProjects/PortfolioAndProjects';
 import SkillsSection from '@site/src/components/HomepageFeatures/SkillsList';
 
+import LinkedInIcon from '@site/static/img/Linkedin.svg';
+import EmailIcon from '@site/static/img/email.svg';
+import SendIcon from '@site/static/img/Send.svg';
+
 import styles from './index.module.css';
 
 import { Col, Divider, Row, Card, Space, Button, ConfigProvider } from "antd";
@@ -26,7 +30,7 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div class="intro-visual">
         <Row wrap={false}>
-        <Col flex="1 0 450px">
+        <Col flex="1 0 650px">
             <div class="intro-text">
               <h5 class="intro-visual-header">
               Your Technical Writing Expert
@@ -73,7 +77,7 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-      <Divider />
+
       <HowIHelp />
       <Divider />
       <ExperienceCareerMilestones />
@@ -81,7 +85,53 @@ export default function Home() {
       <Divider />
       <EducationCourses />     
       <Divider />
-      <Nutshell />
+      <div class="features-visual-nutshell-index-container">
+      <div class="row">
+    <div class="col">
+      <div class="col-demo cta-footer">
+      <h3>Interested in enhancing your project with user-centric technical writing and content design?</h3>
+        
+      </div>
+    </div>
+    <div class="col col--3 col--offset-1">
+      <div class="col-demo">
+      <h3>Let's talk.</h3>
+        <ul>
+          <li class="no-style-footer"><sub><LinkedInIcon /></sub> <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">Find me on <span class="list-bold-item-plain">LinkedIn</span></a></li>
+          <li class="no-style-footer"><sub><EmailIcon /></sub> <a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an Email</a></li>
+          <li class="no-style-footer"><sub><SendIcon /></sub> <a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill" target="_blank">Submit an inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col col--4">
+      <div class="col-demo">
+      <h3>Helpful links.</h3>
+      <div class="row">
+        <div class="col">
+          <div class="col-demo">
+          <ul>
+            <li class="no-style-footer-helpful-links"><a href="/about">About</a></li>
+            <li class="no-style-footer-helpful-links"><a href="/resume-functional">Resume</a></li>
+            <li class="no-style-footer-helpful-links"><a href="/writing-samples">Portfolio</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-demo">
+          <ul>
+            <li class="no-style-footer-helpful-links"><a href="/blog">Blog</a></li>
+            <li class="no-style-footer-helpful-links"><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+      </div>
+      <br />
+      <br />
       </main>
     </Layout>
   );

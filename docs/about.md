@@ -23,3 +23,5 @@ Over the years, I've showcased my skills in content development, from thorough c
 I'm a firm believer that impactful content is born from teamwork. My rich experience, from partnering with Oculus's VR experts to Microsoft's Azure and networking professionals, ensures the documentation is comprehensive and resonates with both tech experts and end-users.
 
 The tech realm is ever-evolving, and so am I. I bring more than two decades of technical writing experience to the table, but I'm also committed to continuous growth and adaptation. Presently, I'm immersing myself in Conversation Design.
+
+<br />

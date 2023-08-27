@@ -10,6 +10,8 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { Col, Divider, Row } from "antd";
 import { LikeTwoTone, DislikeTwoTone } from '@ant-design/icons';
+
+import NutShell from '@site/src/components/HomepageFeatures/Nutshell';
 const style = {
   padding: "6px 0"
 };
@@ -50,26 +52,10 @@ export default function DocItemContent({children}) {
         <header>
           <Heading as="h1">{syntheticTitle}</Heading>
           <LastUpdatedDateHeader />
-        </header>
-        
-      )}
-          
+        </header>        
+      )}          
       <MDXContent>{children}</MDXContent>
-      <div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="col-demo">
-      <h3>Want to learn more about me? Let's Chat!</h3>
-        <ul>
-          <li>Find me on <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">LinkedIn</a></li>
-          <li><a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an Email</a></li>
-          <li><a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill" target="_blank">Submit an inquiry</a></li>
-          <li>Chat with me on <a href="https://patriciamcphee.slack.com/archives/D03K6BRHTHN">Slack</a>!</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+       <NutShell />
     </div>
   );
 }

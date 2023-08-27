@@ -32,7 +32,7 @@ export default function EducationCourses() {
           <li class="homepage-no-style"><b>Conversation Design for Chatbots</b><br />UX Content Collective</li>
           <li class="homepage-no-style"><b>Conversation Design</b><br />Conversation Design Institute</li>
           <li class="homepage-no-style"><b>Designing Conversations with Voiceflow</b><br />Conversation Design Institute</li>
-          <li class="homepage-no-style"><b>Front-end Web Development</b><br />CareerFoundry<br />Date issued: March 2022</li>
+          <li class="homepage-no-style"><b>Front-end Web Development</b><br />CareerFoundry<br />Certificate issued: March 2022</li>
           </ul>             
       </div>
       </div>

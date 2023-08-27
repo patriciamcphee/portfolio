@@ -53,7 +53,89 @@ export default function ExperienceCareerMilestones() {
 
         <div class="col col--8">
         <div class="how-i-can-help">
-        <p><b>Content Development & Management</b>: I spearheaded content audits for Beyond Identity and Expedia. Took the lead developer role for Beyond Identity's developer doc site.</p>                         
+        
+        <div class="Yearly-timeline">
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-instagram"></i></div>
+                    <h3 class="title">Software</h3>
+                    <p class="description">
+                      <ul>
+                        <li><span class="list-bold-item-plain">Beyond Identity</span> <br /><i>Sr. Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">Expedia Group</span> <br /><i>Contract Content Designer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">Keyavi Data</span> <br /><i>Sr. Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">Extreme Networks</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">Microsoft</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">LivePerson</span> <br /><i>Technical Writer II</i>, SEATTLE WA</li>    
+                        <li><span class="list-bold-item-plain">Microsoft</span> <br /><i>Technical Writer II</i>, REDMOND WA</li>
+                        <li><span class="list-bold-item-plain">GE Healthcare</span><br /><i>Technical Writer</i>, SEATTLE WA</li>  
+                      </ul>
+                  </p>
+                </a>
+            </div>
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-twitter"></i></div>    
+                    <h3 class="title">Computer Hardware</h3>
+                    <p class="description">
+                        <ul>
+                        <li><span class="list-bold-item-plain">Extreme Networks</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">ZPE Systems</span> <br /><i>Contract Copywriter</i>, REMOTE</li> 
+                        <li><span class="list-bold-item-plain">LSI Logic</span> <br /><i>Contract Technical Writer</i>, BOULDER CO</li>                                 
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-facebook"></i></div>    
+                    <h3 class="title">Healthcare</h3>
+                    <p class="description">
+                        <ul>
+                        <li><span class="list-bold-item-plain">GE Healthcare</span><br /><i>Technical Writer</i>, SEATTLE WA</li>
+                        <li><span class="list-bold-item-plain"><a href="https://www.medtronic.com/covidien/en-us/products.html">Covidien</a> </span>(Medtronic)<br /><i> Contract Technical Writer</i>, BOULDER CO</li>                                    
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-linkedin"></i></div>    
+                    <h3 class="title">Manufacturing</h3>
+                    <p class="description">
+                        <ul>
+                        <li><span class="list-bold-item-plain">Oculus AR/VR</span> <br /><i>Contract Technical Writer</i>, REDMOND WA</li>
+                        <li><span class="list-bold-item-plain"><a href="https://www.medtronic.com/covidien/en-us/products.html">Covidien</a> </span>(Medtronic)<br /><i> Contract Technical Writer</i>, BOULDER CO</li>                                    
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-linkedin"></i></div>    
+                    <h3 class="title">Retail</h3>
+                    <p class="description">
+                        <ul>
+                        <li><span class="list-bold-item-plain">Amazon</span><br /><i>Technical Writer II</i>, SEATTLE WA</li>      
+                        <li><span class="list-bold-item-plain">Sports Authority</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>                                                           
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="timeline">
+                <a href="" class="timeline-content">
+                    <div class="timeline-icon"><i class="fa fa-linkedin"></i></div>    
+                    <h3 class="title">Telecommunications</h3>
+                    <p class="description">
+
+                        <ul>
+                        <li><span class="list-bold-item-plain">Charter Communications</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>
+                        <li><span class="list-bold-item-plain">Level 3 Communications</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>                                                                
+                        </ul>
+                    </p>
+                </a>
+            </div>
+        </div>                       
       </div>
     </div>
   </div>

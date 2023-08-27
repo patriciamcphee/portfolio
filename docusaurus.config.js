@@ -121,12 +121,17 @@ customFields: {
         title: '',
         logo: {
           alt: '',
-          src: 'img/test-navbar.png',
+          src: 'img/navbar-4.png',
         },
         items: [ 
           {
             to: "/",
             label: "Home",
+            position: "right",
+          },
+          {
+            to: "about",
+            label: "About",
             position: "right",
           },
           { 

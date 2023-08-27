@@ -55,7 +55,7 @@ export default function DocItemContent({children}) {
       )}
           
       <MDXContent>{children}</MDXContent>
-      <div class="container container-margin">
+      <div class="container">
   <div class="row">
     <div class="col">
       <div class="col-demo">

@@ -43,8 +43,8 @@ export default function NotFound() {
         <ConfigProvider
     theme={{
       token: {
-          colorPrimary: '#9ecd28',
-          colorPrimaryHover: '#046b99',
+        colorPrimary: '#6e815e',
+        colorPrimaryHover: '#244651',
         }
       }
     }

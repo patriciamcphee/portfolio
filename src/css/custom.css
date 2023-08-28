@@ -423,8 +423,15 @@ font-weight: 600;
 
 #personas {
   border: none;
-  margin: 0px;
-  max-width: 100%;
+  margin: 0;
+  max-width: 80%;
+}
+
+.div-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
@@ -1850,7 +1857,7 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
 
   .intro-visual {
     background-position: 90% 30%; 
-    background-size: 20%;
+    background-size: 22%;
   
   }
   
@@ -1861,7 +1868,6 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
 
   .intro-visual {
     background-image: none;
-  
   }
   
 }
@@ -1871,6 +1877,13 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   .intro-visual {
     background-image: none;
   
+  }
+
+  .div-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
   .features-visual-nutshell-index-container {
@@ -2088,7 +2101,7 @@ li {
 /* Portfolio */
 
 .block-head {
-  opacity: .55;
+  opacity: .60;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 17px;

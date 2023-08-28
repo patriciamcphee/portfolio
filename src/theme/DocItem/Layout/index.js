@@ -44,7 +44,7 @@ export default function DocItemLayout({children}) {
             <DocItemContent>{children}</DocItemContent>
 
           </article>
-          <DocItemPaginator />
+
 
         </div>
       </div>

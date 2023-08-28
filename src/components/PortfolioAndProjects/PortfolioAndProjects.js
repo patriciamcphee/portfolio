@@ -24,7 +24,7 @@ export default function PortfolioAndProjects() {
   <div class="column portfolio-content">
     <div class="portfolio-card portfolio-card-blue-dark">
     <div class="block-head">Conversation Design</div>
-    <h3>Certification Project</h3>
+    <h3>Personalized Workout (Chatbot)</h3>
       <p>Sarah wants to make lifestyle changes in retirement. She considers incorporating tailored exercises into her daily routine.</p>
       <div class="portfolio-pad-top"><a href="/fitfuel-personalized-workout-plan" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
     </div>

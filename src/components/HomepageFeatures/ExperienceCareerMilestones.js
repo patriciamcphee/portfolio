@@ -65,10 +65,10 @@ export default function ExperienceCareerMilestones() {
                         <li><span class="list-bold-item-plain">Expedia Group</span> <br /><i>Contract Content Designer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">Keyavi Data</span> <br /><i>Sr. Technical Writer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">Extreme Networks</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
-                        <li><span class="list-bold-item-plain">Microsoft</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
+                        <li><span class="list-bold-item-plain">Microsoft</span> <br /><i>Technical Writer II</i>, REDMOND WA<br /><i>Contract Technical Writer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">LivePerson</span> <br /><i>Technical Writer II</i>, SEATTLE WA</li>    
-                        <li><span class="list-bold-item-plain">Microsoft</span> <br /><i>Technical Writer II</i>, REDMOND WA</li>
                         <li><span class="list-bold-item-plain">GE Healthcare</span><br /><i>Technical Writer</i>, SEATTLE WA</li>  
+                        <li><span class="list-bold-item-plain">Sybase/SAP</span> <br /><i>Contract Technical Writer</i>, BROOMFIELD CO</li>
                       </ul>
                   </p>
                 </a>
@@ -81,6 +81,7 @@ export default function ExperienceCareerMilestones() {
                         <ul>
                         <li><span class="list-bold-item-plain">Extreme Networks</span> <br /><i>Contract Technical Writer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">ZPE Systems</span> <br /><i>Contract Copywriter</i>, REMOTE</li> 
+                        <li><span class="list-bold-item-plain">Pillar Data (an Oracle company)</span> <br /><i>Contract Technical Writer</i>, LONGMONT CO</li>
                         <li><span class="list-bold-item-plain">LSI Logic</span> <br /><i>Contract Technical Writer</i>, BOULDER CO</li>                                 
                         </ul>
                     </p>
@@ -93,6 +94,7 @@ export default function ExperienceCareerMilestones() {
                     <p class="description">
                         <ul>
                         <li><span class="list-bold-item-plain">GE Healthcare</span><br /><i>Technical Writer</i>, SEATTLE WA</li>
+                        <li><span class="list-bold-item-plain">GHX</span><br /><i>Contract Technical Writer</i>, LOUISVILLE CO</li>
                         <li><span class="list-bold-item-plain"><a href="https://www.medtronic.com/covidien/en-us/products.html">Covidien</a> </span>(Medtronic)<br /><i> Contract Technical Writer</i>, BOULDER CO</li>                                    
                         </ul>
                     </p>
@@ -130,7 +132,8 @@ export default function ExperienceCareerMilestones() {
 
                         <ul>
                         <li><span class="list-bold-item-plain">Charter Communications</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>
-                        <li><span class="list-bold-item-plain">Level 3 Communications</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>                                                                
+                        <li><span class="list-bold-item-plain">Level 3 Communications</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>  
+                        <li><span class="list-bold-item-plain">AT&T Broadband</span><br /><i>Contract Technical Writer</i>, DENVER CO</li>                                                              
                         </ul>
                     </p>
                 </a>

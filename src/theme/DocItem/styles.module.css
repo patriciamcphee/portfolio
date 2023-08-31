@@ -1,8 +1,10 @@
-@media only screen and (min-width: 997px) {
+@media only screen and (min-width: 599px) {
     .docItemCol {
       max-width: 75% !important;
     }
   }
+
+  
   
   .docItemContainer {
     margin: 0 auto;

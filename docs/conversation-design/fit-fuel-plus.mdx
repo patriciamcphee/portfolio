@@ -1,0 +1,426 @@
+---
+title: "Personalized Workout (Chatbot)"
+id: fitfuel-personalized-workout-plan
+slug: '/fitfuel-personalized-workout-plan'
+description: Conversation design sample for airline chatbot.
+keywords:
+  - contribute
+  - documentation
+last_update: 
+   date: 08/23/2023
+   author: Patricia McPhee
+pagination_next: null
+pagination_prev: null
+---
+
+<h2>Sample details</h2>
+
+- **Project:** Certificate project
+- **My Role:** Conversation Designer/Conversational Copywriter
+- **Tools:** Voiceflow, Google Docs, Google Sheets, Notion
+
+<hr />
+
+
+import FitFuelLogo from '../../static/img/fitfuel_transparent_nobuffer.png';
+
+<div class="pogo-logo">
+<img src={FitFuelLogo} width="20%" id="diagrams" alt="Example banner" />
+</div>
+
+
+FitFuel+ is a lifestyle brand that aims to be a comprehensive fitness partner providing personalized support, guidance, nutrition advice, and plant-based protein powder to elevate users' performance. 
+
+FitFuel+ aims to address the challenge of individuals seeking effective fitness support and guidance to achieve their fitness goals:
+
+- Many individuals struggle to create personalized workout routines that align with their fitness goals, abilities, and preferences.
+- Finding high-quality protein powder products that complement their workout routines can be challenging, leading to confusion and potentially choosing products that don't meet their needs.
+
+To address these challenges, FitFuel+ can empower individuals to take charge of their fitness aspirations with a chatbot. The bot's purpose is to provide personalized workout routines to each user's fitness level, preferences, and goals. It can create dynamic and adaptive workout plans that can evolve with the user's progress. Additionally, it aims to promote the sale of protein powder as a supplement to support their fitness journey.
+
+<hr />
+
+## Personas
+
+
+### Senior Sarah
+
+import SeniorSarahUserPersona from '../../static/img/Senior-Sarah-65.png';
+import QuoteUp from '../../static/img/quote-up.png';
+import QuoteDown from '../../static/img/quote-down.png';
+
+
+import FmdGoodSharpIcon from '@mui/icons-material/FmdGoodSharp';
+import CakeSharpIcon from '@mui/icons-material/CakeSharp';
+import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
+import FavoriteSharpIcon from '@mui/icons-material/FavoriteSharp';
+import SchoolSharpIcon from '@mui/icons-material/SchoolSharp';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import Circle from '@mui/icons-material/CircleOutlined';
+
+import { FireFilled,  DownloadOutlined } from '@ant-design/icons';
+import { 
+  Tag, 
+  ConfigProvider,
+  Progress,
+  Space, 
+  theme,
+  Divider,
+  Slider,
+  Rate 
+  } from 'antd';
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+      <div class="col-demo">
+        <img src={SeniorSarahUserPersona} width="90%" id="personas" alt="Example banner" />
+        <ul className="text-sm no-style persona-demographic-container">
+        <li class="no-style persona-demographic"><span class="icon-position"><CakeSharpIcon fontSize="small" /></span>&nbsp;&nbsp;65</li>
+        <li class="no-style persona-demographic"><BusinessCenterSharpIcon fontSize="small" />&nbsp;&nbsp;Retired Accountant</li>
+        <li class="no-style persona-demographic"><SchoolSharpIcon fontSize="small" />&nbsp;&nbsp;Bachelor of Business Administration</li>
+        <li class="no-style persona-demographic"><FavoriteSharpIcon fontSize="small" />&nbsp;&nbsp;Widow</li>
+        <li class="no-style persona-demographic"><FmdGoodSharpIcon fontSize="small" />&nbsp;&nbsp;Clearwater, FL</li>
+      </ul>
+      <div class="persona-tags">
+      <ConfigProvider
+      theme={{
+        token: {
+          colorSuccess: '#25517E',
+          colorSuccessBg: '#25517E26',
+          colorSuccessBorder: '#25517E26',
+        },
+      }}
+    >
+    <Space size={[0, 'small']} wrap>
+      <Tag bordered={false} color="#25517E">Spontaneous</Tag>
+      <Tag bordered={false} color="#25517E">Curious</Tag>
+      <Tag bordered={false} color="#25517E">Witty</Tag>
+      <Tag bordered={false} color="#25517E">Passionate</Tag>
+      <Tag bordered={false} color="#25517E">Adventurous</Tag>
+      <Tag bordered={false} color="#25517E">Energetic</Tag>
+    </Space>
+    </ConfigProvider>
+      </div>
+      </div> 
+    </div>
+    <div class="col">
+      <div class="col-demo">
+        <div class="persona-bio-container">
+        
+        <p class="persona-bio"><b>Fitness Level:</b> Beginner<br /><br />
+<b>Goals:</b> Sarah wants to improve her mobility, maintain bone health, and increase energy levels to lead an active and independent life as a senior.<br /><br />
+<b>Exercise Preference:</b> She prefers low-impact exercises like walking, gentle yoga, and chair exercises to cater to her age and physical abilities.<br /><br />
+<b>Protein Powder Preference:</b> Sarah is unfamiliar with protein powder and seeks information on whether it suits seniors and its potential benefits.<br /><br />
+<b>Needs:</b> Sarah needs a gentle and progressive workout routine that considers her age-related limitations and focuses on functional movements. </p>
+      </div>
+      <div class="persona-quote"><span class="quotes-large">"You had the power all along my dear." </span> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row persona-row">
+    <div class="col">
+      <div class="col-demo">
+      <h4>Personality</h4>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Introvert</p>
+            <p className="extrovert">Extrovert</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={20} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Independent</p>
+            <p className="extrovert">Team player</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={40} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Analytical</p>
+            <p className="extrovert">Creative</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={30} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Intuitive</p>
+            <p className="extrovert">Observant</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={50} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+        <div class="tech-3 clip-contents">
+          <div className="frame-2143">
+            <p className="introvert">Messy</p>
+            <p className="extrovert">Organized</p>
+          </div>
+          <ConfigProvider
+          theme={{
+            token: {
+              colorInfo: '#25517E',
+              colorFillSecondary: '#cecece66',
+            },
+          }}
+        >
+        <Progress percent={80} size="small" showInfo={false} />
+        </ConfigProvider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div-hr-container">
+<hr class="hr-50" />
+</div>
+
+### Ryan, Your Fitness Ally!
+
+import BotPersonality from '../../static/img/fitness-bot-avatar.png';
+
+<div class="container persona-bio-container">
+  <div class="row">
+    <div class="col">
+      <div class="col-demo">      
+      <p class="persona-bio">Ryan's purpose is to simplify and enhance the fitness and nutrition journey for users, making it more accessible, enjoyable, and effective. By providing expert guidance, motivation, and accountability for custom workout plans and protein powder recommendations, Ryan aims to be a reliable and indispensable fitness companion for anyone striving to achieve their health and fitness goals. 🏋️‍♂️💪</p><p class="persona-bio">Additionally, Ryan's holistic approach prioritizes both physical and mental well-being, and is available 24/7 for convenience. Ryan fosters an inclusive and judgment-free environment to encourage a positive mindset. </p>      
+      </div>
+    </div>
+    <div class="col col--3">
+      <div class="col-demo">
+        <img src={BotPersonality} width="100%" id="personas" alt="Example banner" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+## Use case - Personalized workout routine
+
+Sarah, a retired accountant, is at home, comfortably settled in her reading nook with a cup of herbal tea. Her computer is open before her, displaying a health blog focused on senior fitness. She's reading an article about the importance of exercise for seniors. The article highlights various concerns that she's been thinking about lately, such as maintaining bone health and improving overall mobility.
+
+As she scrolls through the article, Sarah can't help but think about how she's feeling sluggish lately. Her energy levels have dipped, and she's keen to make lifestyle changes to allow her to live her retirement years to the fullest. She wonders, "What if there was a way to incorporate simple, tailored exercises into my daily routine? What would be the most effective yet gentle approach?"
+
+As Sarah scrolls down the article, she notices an advertisement for FitFuel+ that catches her eye. It talks about personalized fitness guidance and plant-based protein powder. She clicks on it out of curiosity.
+
+
+### User needs
+
+<table>
+  <tr>
+    <td><b>Goals and objectives</b></td>
+    <td>
+      <ul>
+        <li>Improve overall mobility to navigate day-to-day life more comfortably.</li>
+        <li>Maintain and improve bone health to prevent osteoporosis or fractures.</li>
+        <li>Boost energy levels to remain active and independent in her senior years.</li>
+        <li>Desire to maintain an active lifestyle as she ages.</li>
+        <li>Importance of independence; doesn't want to rely on others for basic activities.</li>
+      </ul>
+    </td>
+  </tr>
+    <tr>
+      <td><b>Demands/preferences</b></td>
+      <td>
+        <ul>
+          <li>Preferably, a program with low-impact, easy-to-follow exercises like walking routines, chair exercises, and gentle yoga.</li>
+          <li>Would appreciate a protein powder mix that is plant-based, easy to digest, and specifically formulated for seniors.</li>
+          <li>Prefers communication methods that she is comfortable with, like email and phone support, instead of newer tech platforms.</li>
+        </ul>
+      </td>
+  </tr>
+  <tr>
+    <td><b>Information needs</b></td>
+      <td>
+        <ul>
+          <li>Information on low-impact exercises that can help her achieve her fitness goals.</li>
+          <li>Guidance on the type and amount of protein powder suitable for seniors.</li>
+          <li>Diet tips that focus on her specific nutritional needs as a senior citizen.</li>
+          <li>Simple and straightforward instructions for any technical products or services.</li>
+        </ul>
+      </td>
+  </tr>
+  <tr>
+    <td><b>Anxieties and concerns</b></td>
+      <td>
+        <ul>
+          <li>Wary of injury or strain; wants a fitness routine tailored to seniors.</li>
+          <li>Skeptical about the need for protein powder at her age and how it might affect her health.</li>
+          <li>Fear of adopting a routine that might exacerbate age-related health conditions.</li>
+          <li>Concerns about the complexity of using tech-based solutions and the risk of feeling overwhelmed.</li>
+          <li>Uncertainty about the safety and benefits of using protein powder at her age.</li>
+        </ul>
+      </td>
+  </tr>
+  <tr>
+    <td><b>Expectations</b></td>
+      <td>
+        <ul>
+          <li>Personalized workout routines that are tailored to her fitness level and limitations.</li>
+          <li>Nutritional guidance backed by scientific research and specifically designed for seniors.</li>
+          <li>Easily accessible customer support that can guide her through the technical aspects if needed.</li>
+        </ul>
+      </td>
+  </tr>
+    <tr>
+    <td><b>Technical proficiency</b></td>
+      <td>
+        <ul>
+          <li>Limited technical skills; can operate basic apps on her smartphone but is not overly comfortable with technology.</li>
+          <li>Would prefer simplified, straightforward user interfaces and step-by-step guidance for any tech-related fitness solutions.</li>
+          <li>Limited experience with chatbots or voice assistance. Finds them confusing and would prefer human interaction for more personalized and empathetic support.</li>
+        </ul>
+      </td>
+  </tr>
+  <tr>
+    <td><b>Other assumptions</b></td>
+      <td>
+        <ul>
+          <li>Likely has more free time to commit to a fitness routine but less willingness to spend that time learning complex systems or exercises.</li>
+          <li>May has some basic nutrition understanding but needs guidance on newer concepts like protein supplementation.</li>
+        </ul>
+      </td>
+  </tr>
+</table>
+
+<div class="div-hr-container">
+<hr class="hr-50" />
+</div>
+
+### Bot needs
+
+<table>
+  <tr>
+  <td><b>Fulfillment capability</b></td>
+  <td>
+    <ul>
+      <li>Provides knowledge on exercises and routines catered to individual fitness levels.</li>
+      <li>Offers protein shake recommendations for post-workout recovery.</li>
+      <li>Emphasizes mental and emotional well-being.</li>
+      <li>Delivers advice and suggestions on self-care and celebrates user milestones.</li>
+    </ul>
+  </td>
+  </tr>
+    <tr>
+  <td><b>Can provide this info</b></td>
+  <td>
+    <ul>
+      <li>Benefits of protein shakes for different ages and fitness levels.</li>
+      <li>Suitable low-impact exercises for seniors.</li>
+      <li>Emotional support, self-care tips, and motivational encouragement.</li>
+      <li>Knowledge on health, human performance, and applied exercise physiology.</li>
+    </ul>
+  </td>
+  </tr>
+    <tr>
+  <td><b>Limitations</b></td>
+  <td>
+    <ul>
+      <li>Might not have specific medical advice or recommendations for certain conditions (unless programmed).</li>
+      <li>Doesn't replace human therapists or personal trainers in certain complex fitness scenarios.</li>
+    </ul>
+  </td>
+  </tr>
+    <tr>
+  <td><b>Must ask this info</b></td>
+  <td>
+    <ul>
+      <li>Any existing health conditions or injuries.</li>
+      <li>Frequency of workouts preferred per week.</li>
+      <li>User's comfort level with different exercises.</li>
+      <li>Dietary restrictions if any, before recommending protein powders.</li>
+    </ul>
+  </td>
+  </tr>
+    <tr>
+  <td><b>Has this info already</b></td>
+  <td>
+    <ul>
+      <li>Benefits of protein shakes for post-workout recovery.</li>
+      <li>A wide range of exercises suitable for different age groups, including seniors.</li>
+      <li>Information related to emotional well-being and mental health in the context of fitness.</li>
+    </ul>
+  </td>
+  </tr>
+    <tr>
+  <td><b>Must provide this info</b></td>
+  <td>
+    <ul>
+      <li>Personalized workout routine based on Sarah's preferences and needs.</li>
+      <li>Recommendations on how and when to use protein powders, especially for seniors.</li>
+      <li>Motivational quotes or encouragement after each workout session.</li>
+      <li>Celebratory messages upon achieving milestones.</li>
+    </ul>
+  </td>
+  </tr>
+  <tr>
+  <td><b>User behavior</b></td>
+  <td>
+    <ul>
+      <li>Sarah will likely approach Ryan with questions about low-impact exercises suitable for her age and fitness level.</li>
+      <li>She may inquire about the benefits of protein powder for seniors and how to incorporate it into her diet.</li>
+      <li>Sarah will value the emotional support and empathetic responses from Ryan, especially considering her beginner status.</li>
+      <li>She might need repetitive guidance, step-by-step instructions, and consistent motivation.</li>
+    </ul>
+  </td>
+  </tr>
+</table>
+
+<br />
+
+<hr />
+
+## Main flow
+
+import MainFlow from '../../static/img/create-custom-workout-senior-sarah.png'
+
+<div class="div-center">
+<img src={MainFlow} class="flow" id="personas" alt="Example banner" />
+</div>
+
+<hr />
+
+## Prototype (Voiceflow)
+
+--In progress--
+
+<br />

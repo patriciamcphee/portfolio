@@ -6,7 +6,7 @@
 
 .docItemContainer {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0.5rem;
 }
 
 @media only screen and (max-width: 996px) {
@@ -53,8 +53,4 @@ summary::-webkit-details-marker {
 summary::-moz-list-bullet {
   list-style-type: none;
   display: block;
-}
-
-.container-margin {
-  padding-left: -40px;
 }

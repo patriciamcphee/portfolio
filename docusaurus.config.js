@@ -12,7 +12,6 @@ const config = {
     require.resolve("docusaurus-plugin-image-zoom"),
 
 
-
 //    'plugin-image-zoom',
 //    '@chatwoot/docusaurus-plugin',
 //    [
@@ -37,7 +36,7 @@ themes: [
 
 
 title: 'Patricia McPhee',
-tagline: 'I\'m passionate about creating content experiences that help people configure, use, and troubleshoot products. Relentlessly curious and fueled by strong coffee, I\'m a word nerd who loves to explain complex concepts in simple language. I can spot ambiguities and logical inconsistencies from a mile away, and I get a kick out of style guides and know when to follow the rules and when to break them.',
+tagline: 'Empowering Users Through Well-Crafted Content and Design.',
 url: 'https://www.patriciamcphee.com',
 baseUrl: '/',
 onBrokenLinks: 'throw',
@@ -64,14 +63,20 @@ customFields: {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        sitemap: {
+          changefreq: 'hourly',
+          priority: 1.0,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarCollapsed: true,
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           showLastUpdateTime: true,
-          editUrl:
-            'https://github.com/patriciamcphee/portfolio/edit/main/',
+//          editUrl:
+//            'https://github.com/patriciamcphee/portfolio/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -110,6 +115,7 @@ customFields: {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      metadata: [{name: 'keywords', content: 'sr. technical writer, senior technical writer, hire a senior technical writer, docusaurus technical writer website, technical writer website, technical writer portfolio, technical writing rates, technical writing contract rates, resume for technical writer, madcap flare online help, writer portfolio online, writer portfolio, technical writer portfolio examples, writer portfolio examples, content writer portfolio sample, hire a technical writer, writers portfolio website, technical writer portfolio website, writing portfolio examples, portfolio sites for writers, portfolio sites for technical writers '}],
       docs: {
         sidebar: {
           hideable: false,
@@ -118,59 +124,39 @@ customFields: {
         }
       },
       navbar: {
-        title: 'Patricia McPhee',
+        title: '',
         logo: {
           alt: '',
-          src: 'img/favicon.png',
+          src: 'img/navbar-4.png',
         },
         items: [ 
-        { 
-          to: "writing-samples", 
-          label: "Projects", 
-          position: "left" 
-        },
+          {
+            to: "/",
+            label: "Home",
+            position: "right",
+          },
+          {
+            to: "about",
+            label: "About",
+            position: "right",
+          },
+          { 
+            to: "writing-samples", 
+            label: "Portfolio", 
+            position: "right" 
+          },
 
-        {
-          type: 'doc',
-          docId: 'resume-functional',
-          position: 'left',
-          label: 'Resume',
-        },
-        {
-          to: '/blog', 
-          label: 'Blog', 
-          position: 'left'
-        }, 
-
-/*
-           {
-            label: 'Support',
-            type: 'dropdown',
-            position: 'left',
-            items: [
-              {
-                to: 'https://github.com/gobeyondidentity',
-                label: 'GitHub',
-               },
-               {
-                to: 'https://stackoverflow.com/questions/tagged/beyondidentity',
-                label: 'Stack Overflow',
-               },
-               {
-                to: 'https://join.slack.com/t/byndid/shared_invite/zt-1anns8n83-NQX4JvW7coi9dksADxgeBQ',
-                label: 'Slack',
-               },
-               {
-                to: 'https://twitter.com/BI_Developers',
-                label: 'Twitter',
-               },
-               {
-                to: 'https://dev.to/beyondidentity',
-                label: 'DevTo',
-               },
-            ],
+          {
+            type: 'doc',
+            docId: 'resume-functional',
+            position: 'right',
+            label: 'Resume',
+          },
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'right'
           }, 
-*/
         ],
       },
       footer: {

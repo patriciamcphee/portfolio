@@ -1,7 +1,7 @@
 .docMainContainer {
   display: flex;
   width: 100%;
-  margin-left: 0px;
+  margin: 0 10px;
 /*  box-shadow: var(--ifm-global-shadow-lw); */
 }
 
@@ -21,6 +21,7 @@ article,
     flex-grow: 1;
     max-width: calc(100% - var(--doc-sidebar-width));
   }
+
 
   .docMainContainerEnhanced {
     max-width: calc(100% - var(--doc-sidebar-hidden-width));

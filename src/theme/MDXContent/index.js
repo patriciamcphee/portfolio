@@ -154,7 +154,7 @@ export default function MDXContent({children}) {
   return (
     <>
       <MDXProvider components={MDXComponents}>{children}</MDXProvider>
-      <Divider />
+      <hr />
 
     </>
   );

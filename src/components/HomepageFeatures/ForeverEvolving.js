@@ -20,8 +20,8 @@ export default function ForeverEvolving() {
         <Row wrap={true}>
         <Col flex="1 1 800px">
             <div class="intro-text">
-              <p>Ever-Evolving, Forever Adapting</p>
-              <h4>Patricia's dedication goes beyond her current accolades. As a continuous learner, she's always expanding her horizons, ensuring she remains at the vanguard of her field. Her current exploration into Conversation Design is a testament to her relentless pursuit of excellence.</h4>                 
+              <p>Pushing Boundaries, Pursuing Excellence</p>
+              <h4>My commitment isn't confined to my current achievements. Being a lifelong learner, I'm ceaselessly broadening my horizons to stay ahead in the industry. My recent foray into Conversation Design stands testament to my never-ending quest for knowledge and improvement.</h4>                 
             </div>
            
           </Col>

@@ -1,9 +1,13 @@
 openapi: 3.0.1
 info:
   description: |
-    - **Project**: CareerFoundry assignment; write an API for a movie app
-    - **Description**: Written for the b-movie app I've been developing.
+    - **Project**: CareerFoundry assignment
+    - **Description**: Write an API for a movie app, which is the final project.
+    - **My Role**: Fullstack Web Developer, Technical Writer
     - **Date**: July 8, 2022
+
+    <hr />
+    
     # Introduction
     This API lets users access information about different b-movies, such as directors, actors, genre, and year of release. It also allows them to sign up to create a list of their favorite b-movies. They can also remove movies from their favorites and even unregister from the movie app if they'd like.
 servers:

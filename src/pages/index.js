@@ -73,8 +73,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Crafting Technical Content Excellence`}
-      description="Description will go into a meta tag in <head />">
+      title={`Your Technical Writing Expert`}
+      description="Highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly. I firmly believe in the power of clear, intuitive user experiences and incorporate this belief into every project.">
       <HomepageHeader />
       <main>
 

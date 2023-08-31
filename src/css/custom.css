@@ -253,7 +253,7 @@ h6 {
   font-size: 22px;
   color: var(--ifm-color-primary-lightest);
 /*  background:#6e815e26;*/
-  letter-spacing: .065rem;
+  letter-spacing: .05rem;
 
 }
 
@@ -423,16 +423,21 @@ font-weight: 600;
 
 #personas {
   border: none;
-  margin: 0;
-  max-width: 80%;
+  background-color: none;
+  max-width: 70%;
 }
 
-.div-center {
+img.flows {
+  margin: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
 }
+
+
+.div-center {
+  text-align: center;
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
@@ -797,16 +802,16 @@ div[class^="searchBox"] {
 
 .sidebar-version {
   background-color: var(--ifm-color-secondary); 
-  color: 'black'; 
+  color: '#000'; 
   text-decoration: 'none';
 }
 
 [data-theme='dark'] > .sidebar-version {
-  color: 'white';
+  color: '#fff';
 }
 
 [data-theme='dark'] > .quick-starts {
-  color: 'white';
+  color: '#fff';
 }
 
 
@@ -1845,6 +1850,8 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  
 }
 
 
@@ -1860,7 +1867,10 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     background-size: 22%;
   
   }
-  
+
+  #personas {
+    max-width: 65%;
+  }
 
 }
 
@@ -1869,6 +1879,8 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   .intro-visual {
     background-image: none;
   }
+
+
   
 }
 
@@ -1877,13 +1889,6 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   .intro-visual {
     background-image: none;
   
-  }
-
-  .div-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
   }
 
   .features-visual-nutshell-index-container {
@@ -1901,7 +1906,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
     margin: 0.75em 0em 0em 0em;
   }
 
-  
+  #personas {
+    max-width: 95%;
+  }
+
+
 }
 
 @media (max-width: 599px) {

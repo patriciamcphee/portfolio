@@ -12,7 +12,6 @@ const config = {
     require.resolve("docusaurus-plugin-image-zoom"),
 
 
-
 //    'plugin-image-zoom',
 //    '@chatwoot/docusaurus-plugin',
 //    [
@@ -37,7 +36,7 @@ themes: [
 
 
 title: 'Patricia McPhee',
-tagline: 'I\'m not your typical technical writer; I\'m a storyteller for the digital age. In my role as The Analyzer, I examine every facet of content to make sure each word hits the mark. As The Innovator, I shape digital experiences that capture attention. As The Collaborative Spirit, I unite teams to produce content that genuinely connects. As The Efficiency Expert, I streamline workflows to ensure everything runs as smoothly as the finished product. And as The Multimedia Maven, I know that sometimes stories extend beyond mere words.',
+tagline: 'Empowering Users Through Well-Crafted Content and Design.',
 url: 'https://www.patriciamcphee.com',
 baseUrl: '/',
 onBrokenLinks: 'throw',
@@ -64,14 +63,20 @@ customFields: {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        sitemap: {
+          changefreq: 'hourly',
+          priority: 1.0,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarCollapsed: true,
           breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           showLastUpdateTime: true,
-          editUrl:
-            'https://github.com/patriciamcphee/portfolio/edit/main/',
+//          editUrl:
+//            'https://github.com/patriciamcphee/portfolio/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -110,6 +115,7 @@ customFields: {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      metadata: [{name: 'keywords', content: 'sr. technical writer, senior technical writer, hire a senior technical writer, docusaurus technical writer website, technical writer website, technical writer portfolio, technical writing rates, technical writing contract rates, resume for technical writer, madcap flare online help, writer portfolio online, writer portfolio, technical writer portfolio examples, writer portfolio examples, content writer portfolio sample, hire a technical writer, writers portfolio website, technical writer portfolio website, writing portfolio examples, portfolio sites for writers, portfolio sites for technical writers '}],
       docs: {
         sidebar: {
           hideable: false,

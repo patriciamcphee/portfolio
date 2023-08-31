@@ -16,12 +16,14 @@ doc_type: overview
 hide_table_of_contents: true
 ---
 
-I'm a highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly and believe in the power of clear, intuitive user experiences, incorporating this belief into every project.
+Hello, I'm Patricia McPhee, based in Redmond, WA. I'm not just a Senior Technical Writer; I'm also passionate about optimizing your user experience. You see, writing is just the tip of the iceberg for me—I also consider myself a strategist. I put together product documentation that you can sail through effortlessly. I sincerely believe in the transformative power of clear, intuitive user interfaces. I bring this conviction into every project I touch.
 
-Over the years, I've showcased my skills in content development, from thorough content audits to mastering tools like Docusaurus and MadCap Flare. Whether I'm refining content for budding tech startups or enhancing platforms for industry titans like Microsoft or GE Healthcare, I prioritize a user-centric approach.
+Over the years, I've honed my skills in content development, carrying out meticulous content audits and mastering tools like Docusaurus and MadCap Flare. Whether I'm polishing content for emerging tech startups or ramping up platforms for industry giants like Microsoft and GE Healthcare, my approach is always user-centric.
 
-I'm a firm believer that impactful content is born from teamwork. My rich experience, from partnering with Oculus's VR experts to Microsoft's Azure and networking professionals, ensures the documentation is comprehensive and resonates with both tech experts and end-users.
+But here's the thing: I know that truly impactful content is a team sport. I've had the privilege of collaborating with top-tier experts—be it the VR magicians at Oculus or the cloud and networking wizards at Microsoft Azure. These partnerships ensure that my documentation isn't just thorough—it resonates with tech experts and casual users alike.
 
-The tech realm is ever-evolving, and so am I. I bring more than two decades of technical writing experience to the table, but I'm also committed to continuous growth and adaptation. Presently, I'm immersing myself in Conversation Design.
+In a realm as dynamic as technology, I understand the value of staying ahead of the curve. With over two decades of technical writing under my belt, I'm still committed to growing and adapting. Right now, I'm diving headfirst into the fascinating world of Conversation Design.
+
+That's a little bit about me. I'm excited about what we can achieve together!
 
 <br />

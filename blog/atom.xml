@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.patriciamcphee.com/blog</id>
-    <title>Patricia McPhee Blog</title>
+    <title>Portfolio - Patricia McPhee - Your Technical Writing Expert Blog</title>
     <updated>2022-10-04T11:29:21.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.patriciamcphee.com/blog"/>
-    <subtitle>Patricia McPhee Blog</subtitle>
+    <subtitle>Portfolio - Patricia McPhee - Your Technical Writing Expert Blog</subtitle>
     <icon>https://www.patriciamcphee.com/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Information architecture and why it's important]]></title>

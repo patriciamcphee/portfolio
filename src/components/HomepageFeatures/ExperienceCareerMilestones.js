@@ -40,7 +40,7 @@ export default function ExperienceCareerMilestones() {
           }
         >
           <Button type="primary" shape="round" size='large' style={style} href="/resume-functional">
-            Learn more &#062;
+          Explore Further &#062;
           </Button>
         </ConfigProvider>
         </div>

@@ -36,7 +36,7 @@ function HomepageHeader() {
               Your Technical Writing Expert
               </h5>
               <p class="intro-text">Empowering Users Through Well-Crafted Content and Design.</p>
-              <h4 class="intro-text">Hi! I'm Patricia McPhee. I'm a highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly. I firmly believe in the power of clear, intuitive user experiences and incorporate this belief into every project.</h4>        
+              <h4 class="intro-text">Hi! I'm Patricia McPhee. I'm a highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly. I firmly believe in the power of clear, intuitive user experiences and incorporate this belief into every project. I'm brimming with untapped potential, just waiting to be unleashed. </h4>        
             </div>
             <div class="intro-text-button">
               <Space wrap align='center' direction="vertical">
@@ -52,7 +52,7 @@ function HomepageHeader() {
                 }
               >
                 <Button type="primary" shape="round" size='large' style={style} href="/writing-samples">
-                  See My Portfolio
+                Get to Know My Work
                 </Button>
               </ConfigProvider>
               </Space>
@@ -73,7 +73,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Your Technical Writing Expert`}
+      title={`Technical Writing Expert`}
       description="Highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly. I firmly believe in the power of clear, intuitive user experiences and incorporate this belief into every project.">
       <HomepageHeader />
       <main>
@@ -99,7 +99,7 @@ export default function Home() {
         <ul>
           <li class="no-style-footer"><sub><LinkedInIcon /></sub> <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">Find me on <span class="list-bold-item-plain">LinkedIn</span></a></li>
           <li class="no-style-footer"><sub><EmailIcon /></sub> <a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an Email</a></li>
-          <li class="no-style-footer"><sub><SendIcon /></sub> <a href="https://docs.google.com/forms/d/1RzV2SOVuTysVw2HMzprRnDQ-rAiAwP2t-6vsmjVG-Xs/prefill" target="_blank">Submit an inquiry</a></li>
+          <li class="no-style-footer"><sub><SendIcon /></sub> <a href="/contact">Submit an inquiry</a></li>
         </ul>
       </div>
     </div>

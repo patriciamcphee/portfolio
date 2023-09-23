@@ -1,11 +1,25 @@
 ---
 title: About me
-description: I'm a highly skilled Senior Technical Writer passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly and believe in the power of clear, intuitive user experiences, incorporating this belief into every project.
+description: As a highly skilled and motivated Sr. Technical Writer, I excel in crafting user-friendly experiences. With expertise in technical writing, product documentation, and optimizing content delivery through CI/CD, I am determined to leverage emerging technologies and industry standards to elevate customer experiences.
 id: 'about'
 slug: /about
 keywords: 
- - faq
- - help
+- technical writing expert
+- tech writing expert
+- sr. technical writer
+- senior technical writer
+- hire a senior technical writer
+- docusaurus technical writer website
+- technical writer website
+- technical writer portfolio
+- technical writing rates
+- resume for technical writer
+- madcap flare online help
+- writer portfolio online
+- technical writer portfolio examples
+- hire a technical writer
+- technical writer portfolio website
+- portfolio sites for technical writers
 pagination_next: null
 pagination_prev: null
 last_update: 

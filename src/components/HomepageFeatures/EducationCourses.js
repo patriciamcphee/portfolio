@@ -60,15 +60,31 @@ export default function EducationCourses() {
         <h3 class="intro-text">Equipped to navigate the complexities of technical documentation with skill and agility.</h3>
         <ul>
           <li class="homepage-no-style"><b>Technical Writing</b>: Expert</li>
-          <li class="homepage-no-style"><b>Content Design</b>: 80%</li>
+          <li class="homepage-no-style"><b>Content Strategy</b>: 80%</li>
           <li class="homepage-no-style"><b>Figma</b>: 80%</li>
           <li class="homepage-no-style"><b>Docusaurus</b>: 95%</li>
-          <li class="homepage-no-style"><b>MadCap Flare</b>: 90%</li>
           <li class="homepage-no-style"><b>JavaScript/Node.js</b>: 80%</li>
           <li class="homepage-no-style"><b>Markdown</b>: 90%</li>
           <li class="homepage-no-style"><b>Git/GitHub</b>: 90%</li>
           </ul> 
       </div> 
+      <div class="uncover-more-button">
+        <ConfigProvider
+        
+          theme={{
+            token: {
+                colorPrimary: '#6e815e',
+                colorPrimaryHover: '#244651',
+                colorTextBase: '#fff',
+              }
+            }
+          }
+        >
+          <Button type="primary" shape="round" size='large' style={style} href="/resume-functional#skills">
+          Uncover More &#062;
+          </Button>
+        </ConfigProvider>
+        </div>
   </div>
 </div>
   </div>

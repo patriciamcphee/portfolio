@@ -2,12 +2,12 @@
 title: Contributor's guide
 id: contributor-guide
 slug: '/contributor-guide'
-description: Contributor's guide to a doc site.
+description: A Contributor's Guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.
 keywords:
   - contribute
   - documentation
 last_update: 
-   date: 05/20/2023
+   date: 09/11/2023
    author: Patricia McPhee
 pagination_next: null
 pagination_prev: null
@@ -20,6 +20,7 @@ import AlertTitle from '@mui/material/AlertTitle';
 [conduct]: /docs/contributing-guide/code-of-conduct
 [repo]: https://github.com/goscooby/scooby-docs-next.git
 [pr]: https://github.com/goscooby/scooby-docs-next/pulls
+[markdown]: /markdown-reference
 
 
 Thank you for taking an interest in contributing to the SCOOBY Developer Documentation. 
@@ -28,11 +29,13 @@ We've built the documentation with [Docusaurus](https://docusaurus.io) and you c
 
 You're welcome to contribute to the documentation to help make it better and we want to make it possible for you to become a contributor. Additionally, anyone can open an issue about documentation or suggest a change with a [pull request (PR)][pr] to the [GitHub repository][repo]. 
 
-This topic outlines the different ways that you can get involved. In addition, it provides some of the resources that are available to help you get started. All feedback is welcome. 
+This guide outlines the different ways that you can get involved. In addition, it provides some of the resources that are available to help you get started.
+
+If you plan to contribute, make sure to [set up your environment](#local-git-repo).
 
 ## Before you start
 
-- You are familiar with Git and GitHub, and [markdown](/markdown-reference). We use basic markdown, extended markdown, and Docusaurus-specific markdown.
+- You are familiar with Git and GitHub, and [markdown][markdown]. We use basic markdown, extended markdown, and Docusaurus-specific markdown.
 - Review the [documentation repo's][repo] organization and structure. 
 - Familiarize yourself with our style guide.
 - Verify that you can open a [pull request][pr] and review changes.
@@ -40,28 +43,102 @@ This topic outlines the different ways that you can get involved. In addition, i
 - If the solution you are proposing is complex, prose it anyway and wait for one of the core contributors to approve it before implementing it. This helps in shorter turnaround times in merging PRs.
   
   
+## When to contribute vs. provide feedback
 
+Our docs are a continuous work in progress. You're welcome to contribute to the documentation to help improve it, and we want to make it possible for you to become a contributor.
 
+### Provide us feedback
 
+If you're not ready to contribute, you can provide us with feedback. Your feedback is essential in shaping the customer content experience. The team will track these ideas and issues to address your feedback. There are several ways to provide feedback:
 
-## When to contribute
+- Submit an enhancement idea to make the docs better.
+- Open a GitHub issue to report an issue with the content (something is incorrect or confusing).
 
-When relying on others to draft and review documentation, it makes sense to have a process to make it more productive and encouraging for everyone. 
+### Contribute
 
-The acceptance criteria for contributing to SCOOBY developer documentation is:
+As a contributor, you’ll need to understand the different ways to contribute and which is best based on your changes.
 
-### Does the topic or doc exist?
+**Does the topic or document exist?**
 
-- If yes, update the doc! Contribute to your heart's content. But first, determine which use case best fits your update:
+- If YES, update the doc! Contribute to your heart's content. But first, determine which use case best fits your update:
+    - **Minor changes: (use case \#1)** If you only need to fix a typo or clarify a sentence or section, this option is your ideal choice. However, you cannot upload files, such as an image, in this use case, and you can update only one file.
+    - **Significant changes: (use case \#2)** Suppose you must make substantial changes, such as adding an image or editing multiple topics. In that case, this method is your best friend, as you'll have one pull request to manage. Consult with the Sr. Technical Writer first before making changes.
+- If NO, should it? If so, consider **adding it (use case \#3)**, but don't add a topic or doc just because you can. Consult with the Sr. Technical Writer first before adding. For example, your new topic could be added to an existing one, consolidating and clarifying the information. It's also possible that someone else is working on a similar topic.
+- If you're **uncomfortable using GitHub or VS Code or don't have access to GitHub (use case \#4)**, you can provide the Technical Writer a document (Google Docs, Microsoft Word, text file, or Confluence page). The document can be converted to markdown. So don't fret! We'll get your content published.
 
-  - **[Minor changes:](#edit-content-minor-changes) (use case #1)** If you only need to fix a typo or make a clarification to a sentence or section, this option is your ideal choice. However, in this use case, you cannot upload files, such as an image, and you can update only one file.
-    
-  - **[Significant changes:](#edit-content-significant-changes) (use case #2)** Suppose you need to make substantial changes, such as adding an image or editing multiple topics. In that case, this method is your best friend, as you'll have one pull request to manage. Consult with the Sr. Technical Writer first before making changes.
+## Best practices
 
-- If not, should it? If so, consider **[adding it](#add-new-content) (use case #3)**, but don't add a topic or doc just because you can. Consult with the Sr. Technical Writer first before adding. For example, your new topic could be added to an existing one, consolidating and clarifying the information. It's also possible that someone else is working on a similar topic. 
+To promote consistency, follow the guidelines below and mentioned throughout to keep the process productive and beneficial for all involved.
 
+### Content development
 
-The Sr. Technical Writer maintains the content's quality, reduces duplication, and provides a consistent user experience. They can also strategize how to deliver complex information—for example, adding an explainer video (&#060;90 secs) can help with complex scenarios or issues.
+- [ ] Verify your content for technical accuracy before submitting your Pull Request.
+- [ ] Consult with the Sr. Technical Writer when adding topics or wanting to propose changes to the content structure. The Sr. Technical Writer maintains the content's quality, reduces duplication, and provides a consistent user experience. They can also strategize how to deliver complex information—for example, adding an explainer video (&#060;90 secs) can help with complex scenarios or issues.
+
+### GitHub
+
+- [ ] Create a *working branch* when introducing logically related changes. This helps you manage your changes through the workflow. We refer to it here as a working branch because it's a workspace to iterate or refine your changes until they can be integrated into the default branch.
+- [ ] Keep your branch up-to-date.
+- [ ] Check and remove unused personal branches periodically for easy maintenance. Usually, when your branch is merged, you can safely delete it.
+
+### Commit messages
+
+Ensure that your commit message is a proper sentence. Refer to this [guide on writing good commit messages](https://cbea.ms/git-commit/).
+
+A properly formed git commit subject line should always be able to complete the following sentence:
+
+**If applied, this commit will ....**
+
+### Pull Requests
+
+- [ ] Try to make the review cycle short.
+- [ ] Make sure the markdown follows the style guidelines of this project.
+- [ ] Perform a self-review of your markdown, especially spelling errors.
+- [ ] Verify that the PR does not generate new warnings before pushing your changes. The best way is to run the clear command.
+
+```nodejs
+npm run clear
+yarn build
+```
+
+## Site organization and files
+
+### Content files
+
+- `/docs/` - Contains the Markdown files for the docs. Customize the order of the docs sidebar in `sidebars.js`.
+    - `/docs/images` - Images used in the documentation.
+    - `/docs/includes` - Reusable content such as feature descriptions, notes, common steps, etc.
+- `versioned_docs` - Contains the markdown files for the previously supported versions.
+- `versioned_sidebars` - Contains the sidebar files for the previous versions.
+- `/sidebar.js` - Specify the order of documents in the sidebar. If you have a new file to add to the site, modify this file.
+- `static/api` - Contains the API documentation for v0 and v1.
+
+### Site config files
+
+- `/docusaurus.config.js` - A config file containing the site configuration.
+- `/src/` - Non-documentation files like pages, custom React components, or Docaurus native components.
+    - `/src/components` - Custom react components used for the website or included in the documentation, such as the Try It Out!
+    - `/src/pages` - Any files within this directory will be converted into a website page. Currently, we don't use this directory.
+    - `/src/theme` - Docusausus native components such as the sidebar, content page, and content page footer designs.
+- `/static/` - Static directory. Any contents inside here will be copied into the root of the final `build` directory.
+    - `/static/img` - Website images such as Beyond Identity logos and other assets.
+- `/package.json` - A Docusaurus website is a React app. You can install and use any npm packages you like in them.
+
+## Doc site branches
+
+Before starting the authoring work, you must understand the different branches to work on. You'll use your branch to work on content for a certain issue or feature, but you'll submit your Pull Request against one of the branches listed below:
+
+- `main` - protected branch
+
+    Docs for https://{*domain*}. This branch contains the most recent stable release content.
+
+- `docs-staging` - protected branch
+
+    Docs for the upcoming release. When Secure Customer has a release, its `docs-staging` branch will be merged into `main`.
+
+- Branches starting with `release-` contain archived release documentation for historical tracking, such as `release-xx`.
+- `active-development` - protected branch (used for front-end and back-end development).
+
 
 ## Local Git repo
 
@@ -69,45 +146,37 @@ import OnboardingProcessStepper from '../../../src/components/OnboardingProcess.
 
 <OnboardingProcessStepper />
 
-### Optional editing tools
-
-If you want the WYSIWYG experience, you can install one of the VS Code extensions:
-
-- [Rich Markdown Editor](https://marketplace.visualstudio.com/items?itemName=patmood.rich-markdown-editor)
-- [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor)
-- [UNOTES](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes)
-
-Other helpful VS Code extensions:
-
-- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-
-Non VS Code markdown editors:
-
-- [StackEdit](https://stackedit.io/)
-- [Dillinger](https://dillinger.io/)
-- [Pandeo MEditor.md](https://pandao.github.io/editor.md/en.html)
-
-
-
-### Best practices
-
-To promote consistency, follow the guidelines below and mentioned throughout to keep the process productive and beneficial for all involved.
-
-- [ ] Always create a *working branch* whenever you introduce a set of logically related changes. This helps you manage your changes through the workflow. We refer to it here as a working branch because it's a workspace to iterate or refine your changes until they can be integrated into the default branch. 
-
-- [ ] The in-browser editing experience is best for minor or infrequent changes. 
-
-- [ ] Always consult with the Sr. Technical Writer when adding topics or want to propose changes to the content structure. The Sr. Technical Writer maintains the content's quality, reduces duplication, and provides a consistent user experience. They can also strategize how to deliver complex information—for example, adding an explainer video (&#060;90 secs) can help with complex scenarios or issues.
-
-- [ ] Always keep your branch up-to-date. 
-
+<details>
+  <summary><sub>Optional editing tools</sub></summary>
+  <div>
+   <p>If you want the WYSIWYG experience, you can install one of the VS Code extensions:
+   <ul>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=patmood.rich-markdown-editor">Rich Markdown Editor</a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor">Markdown Editor</a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes">UNOTES</a></li>
+   </ul>
+   </p>
+   <p>Other helpful VS Code extensions:
+   <ul>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></li>
+   </ul>
+   </p>
+   <p>Non VS Code markdown editors:
+   <ul>
+      <li><a href="https://stackedit.io/">StackEdit</a></li>
+      <li><a href="https://dillinger.io/">Dillinger</a></li>
+      <li><a href="https://pandao.github.io/editor.md/en.html">Pandeo MEditor.md</a></li>
+   </ul>
+   </p>
+  </div>
+</details>
 
 ## Edit content (minor changes)
 
 If you only need to fix a typo or clarify a sentence or section, this option is your best choice. It streamlines the process of reporting and correcting minor errors and omissions in the documentation.  
 
-Despite all efforts, small grammar and spelling errors _do_ make their way into our published documents. While you can create GitHub issues to report mistakes, creating a PR to fix the issue is faster and easier when the option is available.
+Despite all efforts, small grammar and spelling errors *do* make their way into our published documents. While you can create GitHub issues to report mistakes, creating a PR to fix the issue is faster and easier when the option is available.
 
 1. In the [repo][repo], navigate to the /docs folder and locate the file you want to edit. Then, select the pencil icon to edit the article. 
 
@@ -139,73 +208,80 @@ That's it! Team members will review your PR and merge it when approved. You may 
 
 If you need to make substantial changes, add an image or add a section to a topic. On the other hand, if your change is minor that doesn't involve uploading a file or making changes to multiple files, follow the [Edit content - minor change](#edit-content-minor-changes) instructions.
 
-1. Make sure you're back on the main (default) branch so you can sync your local working branch.
+1. Ensure you have [your environment set up](#local-git-repo).
+
+1. Ensure you're back on the `main` (default) branch to sync your local working branch.
 
    ```
    git checkout main
    git pull origin main
    ```
 
-2. Create a working branch for your proposed changes. For example, **content-dev-faqs** or **update-visual-guidelines**.
+2. Create a working branch for your proposed changes. For example, **content-dev-faqs** or **release-notes-v25-1**.
 
    ```
    git checkout -b {branch-name}
    ```
 
-3. Navigate to /docs and locate the topic you want to change. 
+3. Navigate to `/docs` and locate the topic you want to change. 
 
-4. Change the date in the metadata and ensure the title, description, and author are correct. Add any additional keywords if they are missing.
+4. Change the **date** in the metadata and ensure the **title**, **description**, and **author** are correct. Add any additional keywords if they are missing.
 
    ```markdown
    ---
-   title: Welcome to Scooby AI
-    id: welcome
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim sit amet venenatis. Nulla at volutpat diam ut venenatis. Non nisi est sit amet facilisis magna etiam tempor orci. Hendrerit dolor magna eget est lorem ipsum dolor. '
-    slug: /
-    keywords: 
-     - welcome
-     - intro
-     - about
-     - services
-    pagination_next: null
-    pagination_prev: null
-    last_update: 
-       date: 03/29/2023
-       author: Bambam McGee
-    draft: true
-    doc_type: overview
-    product: scoobyAi
-    hide_table_of_contents: false
-    displayed_sidebar: mySidebar
+   title: Getting Started with React
+   sidebar_label: React
+   id: get-started-react
+   description: 'Create a free developer account and connect it to our sample application. This application demonstrates common workflows, like creating realms, applications, and passkeys (public-private key pairs) for user authentication.'
+   slug: /get-started-react
+   keywords: 
+   - get started
+   - react
+   pagination_next: null
+   pagination_prev: null
+   last_update: 
+      date: 06/01/2023
+      author: Patricia McPhee
+   draft: false
+   doc_type: get-started
+   displayed_sidebar: mainSidebar
    ---
    ```
 
 4. Make your changes to the content and run the following command to build and review your changes.
 
-   ```
+   ```bash
    yarn start
    ```
 
    This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to **http://localhost:3000/** to view your local changes.   
 
-   <Alert severity="info" color="success">
-      <AlertTitle>Tip!</AlertTitle>
-      It's best practice to run the following command to ensure your changes didn't introduce a breaking change.
-      <pre>npm run clear<br />yarn build</pre>
-   </Alert>
+1. Perform a self-review of your markdown and make sure your changes or additions follow the [style guidelines](./style-guide.md).
 
+2. Verify that the PR won't generate warnings or errors, such as broken links. If so, address them and ensure it builds without issues.
 
-5. Add your changes.
+  ```bash
+  npm run clear
+  yarn build
+  ```
+
+5. When you're ready to submit a pull request, add your changes.
 
    ```
    git add --all
    ```
 
-6. Commit your changes.
+6. Commit your changes with a descriptive summary, for example, *Add clarity to the data table component usage examples*.
 
    ```
    git commit -m "short description of the change"
    ```
+
+   Ensure that your commit message is a proper sentence. Refer to this [guide on writing good commit messages](https://cbea.ms/git-commit/).
+
+   A properly formed git commit subject line should always be able to complete the following sentence:
+
+   **If applied, this commit will ....**
 
 7. Publish, or push, your changes to the main repo for merging. 
 
@@ -213,29 +289,20 @@ If you need to make substantial changes, add an image or add a section to a topi
    git push --set-upstream origin {branch name}
    ```
 
-8. From the main (default) branch, select **Compare & pull request**.
-
-9. Provide additional information, add reviewers, and select **Create pull request**.
-
-   Alternatively, you can select **Create draft pull request**.
-
-10. After going through the review process for technical accuracy and a copy edit from a Content Designer, enter `#sign-off` and select **Comment**.
-
-   Your changes get merged into the default branch (`main`).  After each merge, the Sr. Technical Writer reviews all merges, fixes any merge conflicts, and publishes all changes.
-
-
-
+1. [Create a pull request](#create-a-pull-request).
 
 ## Add new content
 
-1. Make sure you're back on the main (default) branch so you can sync your local working branch.
+1. Ensure you have [your environment set up](#local-git-repo).
+
+1. Ensure you're back on the `main` (default) branch to sync your local working branch.
 
    ```
    git checkout main
    git pull origin main
    ```
 
-2. Create a working branch for your proposed changes. For example, **content-dev-faqs** or **update-visual-guidelines**.
+2. Create a working branch for your proposed changes. For example, **content-dev-faqs** or **release-notes-v25-1**.
 
    ```
    git checkout -b {branch-name}
@@ -247,47 +314,46 @@ If you need to make substantial changes, add an image or add a section to a topi
 
    Keywords are optional but helpful. All other metadata is required.
 
-    ```markdown
-    ---
-    title: Welcome to Scooby AI
-    id: welcome
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim sit amet venenatis. Nulla at volutpat diam ut venenatis. Non nisi est sit amet facilisis magna etiam tempor orci. Hendrerit dolor magna eget est lorem ipsum dolor. '
-    slug: /
-    keywords: 
-     - welcome
-     - intro
-     - about
-     - services
-    pagination_next: null
-    pagination_prev: null
-    last_update: 
-       date: 03/29/2023
-       author: Bambam McGee
-    draft: true
-    doc_type: overview
-    product: scoobyAi
-    hide_table_of_contents: false
-    displayed_sidebar: mySidebar
-    ---
-    ```
+   ```markdown
+   ---
+   title: Getting Started with React
+   sidebar_label: React
+   id: get-started-react
+   description: 'Create a free Beyond Identity developer account and connect it to our sample application. This application demonstrates common workflows, like creating realms, applications, and passkeys (public-private key pairs) for user authentication.'
+   slug: /get-started-react
+   keywords: 
+   - get started
+   - react
+   pagination_next: null
+   pagination_prev: null
+   last_update: 
+      date: 06/01/2023
+      author: Patricia McPhee
+   draft: false
+   doc_type: get-started
+   displayed_sidebar: mainSidebar
+   ---
+   ```
 
 5. Add the new markdown file in the sidebar.js file.
 
    ```javascript
    {
-     type: 'category',
-     label: 'Content',
-     link: {
-       type: 'doc',
-       id: 'content/content-overview',
-     },      
-     items: [ 
-      'content/language-inclusivity', 
-      'content/grammar-mechanics', 
-      'content/voice-tone-principles', 
-      'content/in-product-word-list', 
-      'content/writing-for-errors', 
-      'content/writing-guidelines' 
+      type: 'category',
+      label: 'Foundations',  
+      collapsed: false, 
+      collapsible: false,     
+      link: {
+         type: 'doc',
+         id: 'foundations/foundations',
+      },  
+      items: [ 
+         'foundations/overview', 
+         'foundations/architecture',
+         'foundations/passkeys',
+         'foundations/configuration',
+         'foundations/api-endpoints',
+         'foundations/passwordless-connections',
       ],
    },
    ```
@@ -302,49 +368,45 @@ If you need to make substantial changes, add an image or add a section to a topi
 
    This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server. If a browser window doesn't open, go to **http://localhost:3000/** to view your local changes.   
 
-   <Alert severity="info" color="success">
-      <AlertTitle>Tip!</AlertTitle>
-      It's best practice to run the following command to ensure your changes didn't introduce a breaking change.
-      <pre>npm run clear<br />yarn build</pre>
-   </Alert>
+1. Perform a self-review of your markdown and make sure your changes or additions follow the [style guidelines](./style-guide.md).
 
-7. When ready, commit and publish your changes to the main (default) branch, add your changes.
+2. Verify that the PR won't generate warnings or errors, such as broken links. If so, address them and ensure it builds without issues.
+
+  ```bash
+  npm run clear
+  yarn build
+  ```
+
+5. When you're ready to submit a pull request, add your changes.
 
    ```
    git add --all
    ```
 
-8. Commit your changes with a descriptive summary, for example, *add clarity to the data table component usage examples*.
+6. Commit your changes with a descriptive summary, for example, *Add clarity to the data table component usage examples*.
 
    ```
    git commit -m "short description of the change"
    ```
 
-9. Publish, or push, your changes to the main repo for merging. 
+   Ensure that your commit message is a proper sentence. Refer to this [guide on writing good commit messages](https://cbea.ms/git-commit/).
+
+   A properly formed git commit subject line should always be able to complete the following sentence:
+
+   **If applied, this commit will ....**
+
+7. Publish, or push, your changes to the main repo for merging. 
 
    ```
    git push --set-upstream origin {branch name}
    ```
 
-10. From the main (default) branch, select **Compare & pull request**.
+1. [Create a pull request](#create-a-pull-request).
 
+## Create a pull request
 
-11. Provide additional information, add reviewers, and select **Create pull request**.
+import CreatePullRequest from './_pull-request.mdx';
 
-    Alternatively, you can select **Create draft pull request**.
-
-12. After going through the review process for technical accuracy and a copy edit from a Content Designer, enter `#sign-off` and select **Comment**.
-
-    Your changes get merged into the default branch (`main`).  After each merge, the Sr. Technical Writer reviews all merges, fixes any merge conflicts, and publishes all changes.
-
-## Submit a Pull Request
-
-All code in SCOOBY aligns with the established licensing and copyright notice guidelines.
-
-Before submitting a Pull Request, review the general SCOOBY Pull Request Guidelines and make sure that you provide the information that is required in the Pull Request template in that specific repo. 
-
-
-SCOOBY requires the use of commit signoffs for each PR. Every commit to this repo must be signed off using `#approved` by the required reviewers and `#sign-off` to trigger the merge. Otherwise, the PR could not be merged.
-
+<CreatePullRequest />
 
 

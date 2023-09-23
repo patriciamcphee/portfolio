@@ -36,7 +36,7 @@ themes: [
 
 
 title: 'Patricia McPhee',
-tagline: 'Empowering Users Through Well-Crafted Content and Design.',
+tagline: 'Your Technical Writing Expert',
 url: 'https://www.patriciamcphee.com',
 baseUrl: '/',
 onBrokenLinks: 'throw',
@@ -48,6 +48,7 @@ trailingSlash: false,
 customFields: {
   // Put your custom environment here
   jobTitle: 'Sr. Technical Writer | Content Designer',
+  keywords: ['technical writing expert, tech writing expert, sr. technical writer, senior technical writer, hire a senior technical writer, docusaurus technical writer website, technical writer website, technical writer portfolio, technical writing rates, technical writing contract rates, resume for technical writer, madcap flare online help, writer portfolio online, writer portfolio, technical writer portfolio examples, writer portfolio examples, content writer portfolio sample, hire a technical writer, writers portfolio website, technical writer portfolio website, writing portfolio examples, portfolio sites for writers, portfolio sites for technical writers'],
 },
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -88,6 +89,10 @@ customFields: {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-JN0H6J9GGZ',
+          anonymizeIP: true,
+        },
       }),
     ],
     [
@@ -115,7 +120,7 @@ customFields: {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      metadata: [{name: 'keywords', content: 'sr. technical writer, senior technical writer, hire a senior technical writer, docusaurus technical writer website, technical writer website, technical writer portfolio, technical writing rates, technical writing contract rates, resume for technical writer, madcap flare online help, writer portfolio online, writer portfolio, technical writer portfolio examples, writer portfolio examples, content writer portfolio sample, hire a technical writer, writers portfolio website, technical writer portfolio website, writing portfolio examples, portfolio sites for writers, portfolio sites for technical writers '}],
+      metadata: [{name: 'keywords', content: 'technical writing expert, tech writing expert, sr. technical writer, senior technical writer, hire a senior technical writer, docusaurus technical writer website, technical writer website, technical writer portfolio, technical writing rates, technical writing contract rates, resume for technical writer, madcap flare online help, writer portfolio online, writer portfolio, technical writer portfolio examples, writer portfolio examples, content writer portfolio sample, hire a technical writer, writers portfolio website, technical writer portfolio website, writing portfolio examples, portfolio sites for writers, portfolio sites for technical writers, Where can I hire a senior technical writer for my project?, Where can I find a writer portfolio online examples?, How to design a captivating writer portfolio?, Can you show me some technical writer portfolio examples?, What makes writer portfolio examples stand out?, How do I hire the right technical writer for my company?, What are the features of the best writers\' portfolio websites?, Are there any exemplary writing portfolio examples I should look at?, What are the best portfolio sites for writers in general?, Which portfolio sites are preferred by technical writers?, How do I go about hiring a Senior Technical Writer for my project?, How can I find reputable Technical Writer websites?, Where can I find a Writer\'s Portfolio online?, Can you provide examples of a high-quality Technical Writer portfolio?, What are some inspiring Writer Portfolio examples across industries?, How do I find the best technical writer to hire?, Where can I hire freelance technical writers online?, How much does it cost to hire a professional technical writer?, What are the benefits of hiring an experienced technical writer?, How to find a qualified freelance technical writer?, What skills should I look for in a freelance technical writer?, How do I find a qualified technical writer for my software company?, How can a technical writer improve my product documentation?, How to find a technical writer to create user manuals?, How to hire a technical writer for medical device documentation?, Can a technical writer also produce video tutorials?, Where can I find a technical writer who understands DevOps methodologies?, How to hire a technical writer for SaaS products?, How do I find a technical writer who can work on a tight deadline? '}],
       docs: {
         sidebar: {
           hideable: false,
@@ -157,12 +162,17 @@ customFields: {
             label: 'Blog', 
             position: 'right'
           }, 
+          {
+            to: 'contact', 
+            label: 'Contact', 
+            position: 'right'
+          }, 
         ],
       },
       footer: {
         style: 'dark',
         
-        copyright: `© ${new Date().getFullYear()} Patricia McPhee`,
+        copyright: `© ${new Date().getFullYear()} Patricia McPhee | Powered by <a href="https://www.docusaurus.io" target="_blank">Docusaurus</a>`,
       },
       prism: {
         theme: lightCodeTheme,

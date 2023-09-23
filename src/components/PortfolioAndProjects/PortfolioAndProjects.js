@@ -10,7 +10,15 @@ export default function PortfolioAndProjects() {
     <div class="block-head">Technical Writing</div>
       <h3>Movie App API</h3>
       <p>This API lets users access information about different B-movies, such as directors, actors, genre, and year of release.</p>
-      <div class="portfolio-pad-top"><a href="/api/" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
+      <div class="portfolio-pad-top"><a href="/api" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
+    </div>
+  </div>
+  <div class="column portfolio-content">
+    <div className="portfolio-card portfolio-card-blue-light">
+    <div class="block-head">Technical Writing</div>
+      <h3>Contributor's Guide</h3>
+      <p>A Contributor's Guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.</p>
+      <div class="portfolio-pad-top"><a href="/contributor-guide" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
     </div>
   </div>
   <div class="column portfolio-content">

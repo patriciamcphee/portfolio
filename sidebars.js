@@ -5,7 +5,7 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   mySidebar: [
 
-
+/*
 
     {
       type: 'category',
@@ -17,10 +17,10 @@ const sidebars = {
         id: 'how-tos/how-to-samples',
       },      
       items: [ 
-//            'example-readme',
-//            'how-tos/contribution-guide/contributor-guide',
-//            'how-tos/contribution-guide/markdown-reference', 
-//            'how-tos/contribution-guide/style-guide',
+            'example-readme',
+            'how-tos/contribution-guide/contributor-guide',
+            'how-tos/contribution-guide/markdown-reference', 
+            'how-tos/contribution-guide/style-guide',
         
       ],
     },
@@ -35,13 +35,13 @@ const sidebars = {
       },      
       items: [ 
         'api/example',
-//        'faq',
-/*        {
+        'faq',
+       {
           type: 'link',
           label: 'bFlix API',
           href: '/portfolio/api',
         }, 
-*/
+
         'how-tos/mobile-sdk', 
         'api/clone-volume-api', 
         'api/get-async-results',  
@@ -65,7 +65,7 @@ const sidebars = {
           collapsed: true, 
           collapsible: true, 
           items: [
-//            'conversation-design/luxury-villa-concierge',
+            'conversation-design/luxury-villa-concierge',
             'conversation-design/pogo-airlines-book-flight',
           ]
         },
@@ -79,7 +79,7 @@ const sidebars = {
             'conversation-design/ivr-medical-office',
           ]
         },       
-/*        {
+        {
           type: 'category',
           label: 'Banking',
           collapsed: true, 
@@ -89,7 +89,7 @@ const sidebars = {
             'conversation-design/ivr-credit-union',
           ]
         },
-*/
+
       ], 
     },
     {
@@ -103,11 +103,11 @@ const sidebars = {
       },          
       items: [ 
         'ux-writing/ui-strings', 
-//        'ux-writing/errors-warnings-confirmations', 
+        'ux-writing/errors-warnings-confirmations', 
         'ux-writing/group-policies',     
       ],
     },
-/*    {
+    {
       type: 'category',
       label: 'Voiceover Scripts',
       collapsed: false, 
@@ -124,7 +124,7 @@ const sidebars = {
         }, 
       ],
     },
-*/
+
     {
       type: 'category',
       label: 'KB Articles',
@@ -136,7 +136,7 @@ const sidebars = {
       },         
       items: [ 'kb-articles/slow-logon-issue', 'kb-articles/routing-error-outbound-shipment' ],
     },
-
+*/
     /* need to improve this content so it's a real project 
     {
       type:'category',

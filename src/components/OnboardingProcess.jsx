@@ -20,13 +20,13 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#9ecd28',
-      dark: '#046b99',
+      main: '#647555',
+      dark: '#244651',
       contrastText: '#fff',
     },
     secondary: {
-      main: '#046b99',
-      dark: '#024a6b',
+      main: '#244651',
+      dark: '#5b495d',
       contrastText: '#000',
     },
   },
@@ -37,8 +37,8 @@ let theme = createTheme({
     ].join(','),
   },
   custom: {
-    main: '#f57c00',
-    dark: '#ef6c00',
+    main: '#647555',
+    dark: '#244651',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
       // Used by `getContrastText()` to maximize the contrast between
@@ -174,7 +174,7 @@ const steps = [
         
         <Grid container wrap="nowrap" spacing={2} sx={{ px: 2}}>
           <Grid item>
-          <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
+          <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#647555' }} /></p>
           </Grid>
           <Grid item xs>
           <p>At this point in your journey, you installed the tools needed to contribute to the documentation. Next, you'll clone and set up the GitHub repo locally on your machine. </p>
@@ -208,7 +208,7 @@ const steps = [
             
               <Grid container wrap="nowrap" spacing={2} sx={{ p: 2}}>
           <Grid item>
-          <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#9ecd28' }} /></p>
+          <p><CheckCircleOutlineIcon style={{ fontSize: '24px', color: '#647555' }} /></p>
           </Grid>
           <Grid item xs>
           <p>Up to this point, you now have the tools installed, the scooby-docs-next repo cloned, and your workspace or working directory set up. Keep going. You're almost done!</p>
@@ -251,7 +251,7 @@ export default function OnboardingProcessStepper() {
 
   return (
     <ThemeProvider theme={theme}>
-    <Box sx={{ maxWidth: '100%', mb: 2 }}>
+    <Box sx={{ maxWidth: '100%', mb: 3 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
@@ -267,7 +267,7 @@ export default function OnboardingProcessStepper() {
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
-              <Box sx={{ mb: 2, ml: 2, alignItems: 'center' }}>
+              <Box sx={{ mb: 3, ml: 2, alignItems: 'center' }}>
                 <div>
                   <Button
                     variant="contained"
@@ -279,7 +279,7 @@ export default function OnboardingProcessStepper() {
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
+                    sx={{ mt: 3, mr: 1 }}
                   >
                     Back
                   </Button>
@@ -294,7 +294,7 @@ export default function OnboardingProcessStepper() {
         <Paper square elevation={0} sx={{ p: 3 }}>
           <Typography variant="h5" align="center" sx={{ py: 1 }}>You&apos;re finished!</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
+            <b>Reset</b>
           </Button>
         </Paper>
       )}

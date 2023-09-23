@@ -26,7 +26,7 @@ export default function Layout(props) {
   useKeyboardNavigation();
   return (
     <LayoutProvider>
-      <PageMetadata title={title} description={description} />
+      <PageMetadata description={description}  />
 
       <SkipToContent />
 

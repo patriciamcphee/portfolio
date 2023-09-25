@@ -28,7 +28,7 @@ function ContactUs() {
                 console.log(result.text);
                 setStatus("sent");
                 form.current.reset(); // Reset the form
-                setTimeout(() => setStatus(null), 5000); // Clear the status message after 5 seconds
+                setTimeout(() => setStatus(null), 3000); // Clear the status message after 5 seconds
             }, (error) => {
                 console.log(error.text);
                 setStatus("error");

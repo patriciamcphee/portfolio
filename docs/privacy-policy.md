@@ -184,5 +184,5 @@ last_update:
 <h1>Contact Us</h1>
 <p>If you have any questions about this Privacy Policy, you can contact us:</p>
 <ul>
-<li>By email: <a href="mailto:hi@patriciamcphee.com">hi@patriciamcphee.com</a></li>
+<li>By email: <a href="mailto:contact@patriciamcphee.com">contact@patriciamcphee.com</a></li>
 </ul>

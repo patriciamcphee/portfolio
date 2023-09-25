@@ -53,7 +53,7 @@ export default function NotFound() {
     <Button type="primary" shape="round" size='large' href="/" >
             Go Home!
           </Button>
-    <Button type="primary" shape="round" size='large' href="mailto:hi@patriciamcphee.com?subject=Page not found error" >
+    <Button type="primary" shape="round" size='large' href="mailto:contact@patriciamcphee.com?subject=Page not found error" >
             Report error?
           </Button>
           </Space>

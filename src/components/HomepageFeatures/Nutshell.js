@@ -21,7 +21,7 @@ const Nutshell = () => (
       <h3>Let's talk.</h3>
         <ul>
           <li class="no-style-footer"><sub><LinkedInIcon /></sub> <a href="https://www.linkedin.com/in/patriciamcphee/" target="_blank">Find me on <span class="list-bold-item-plain">LinkedIn</span></a></li>
-          <li class="no-style-footer"><sub><EmailIcon /></sub> <a href="mailto:hi@patriciamcphee.com?subject=Mail from portfolio website">Send an email</a></li>
+          <li class="no-style-footer"><sub><EmailIcon /></sub> <a href="mailto:contact@patriciamcphee.com?subject=Mail from portfolio website">Send an email</a></li>
           <li class="no-style-footer"><sub><SendIcon /></sub> <a href="/contact">Submit an inquiry</a></li>
         </ul>
       </div>

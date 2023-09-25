@@ -16,18 +16,19 @@ function ContactUs() {
     const [contactNumber, setContactNumber] = useState('1000');
 
     const generateNumber = () => {
-        // Generate a random five-digit number between 10000 and 99999
+        // Generate a five-digit number between 10000 and 99999
         setContactNumber(prevNumber => prevNumber + 1);
     };
 
     const sendEmail = (e) => {
         e.preventDefault();
         generateNumber(); // Generate a contact number right before sending
-
         emailjs.sendForm('service_0ap10ki', 'contact_form', form.current, 'rm4FS8yjBRKcxbYQX')
             .then((result) => {
                 console.log(result.text);
                 setStatus("sent");
+                form.current.reset(); // Reset the form
+                setTimeout(() => setStatus(null), 5000); // Clear the status message after 5 seconds
             }, (error) => {
                 console.log(error.text);
                 setStatus("error");
@@ -87,9 +88,11 @@ function ContactUs() {
                                     
                                 </div>
                             </form>
-                            {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-                            {status === "sent" && <div style={{ color: "green" }}>Message sent!</div>}
-                            {status === "error" && <div style={{ color: "red" }}>Message failed to send.</div>}
+                            <div style={{ color: status === "sending" ? "blue" : status === "sent" ? "green" : status === "error" ? "red" : "" }}>
+                                {status === "sending" && "sending..."}
+                                {status === "sent" && "Message sent!"}
+                                {status === "error" && "Message failed to send."}
+                            </div>
                         </div>
                     </div>
                 </div>

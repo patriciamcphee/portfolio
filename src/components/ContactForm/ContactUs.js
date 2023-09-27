@@ -1,23 +1,14 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './styles.module.css';
-import { 
-  ConfigProvider,
-  Button,
-  theme 
-  } from 'antd';
-  const style = {
-    color: '#fff',
-  };
 
 function ContactUs() {
     const form = useRef();
     const [status, setStatus] = useState(null);
-    const [contactNumber, setContactNumber] = useState('1000');
+    const [contactNumber, setContactNumber] = useState('10');
 
     const generateNumber = () => {
-        // Generate a five-digit number between 10000 and 99999
-        setContactNumber(prevNumber => prevNumber + 1);
+        setContactNumber(prevNumber => (parseInt(prevNumber, 10) + 1).toString());
     };
 
     const sendEmail = (e) => {
@@ -28,7 +19,7 @@ function ContactUs() {
                 console.log(result.text);
                 setStatus("sent");
                 form.current.reset(); // Reset the form
-                setTimeout(() => setStatus(null), 3000); // Clear the status message after 5 seconds
+                setTimeout(() => setStatus(null), 5000); // Clear the status message after 5 seconds
             }, (error) => {
                 console.log(error.text);
                 setStatus("error");
@@ -53,15 +44,12 @@ function ContactUs() {
                             <br />
                             <h2>Worried about costs?</h2>
                             <p>I understand that budgeting is crucial. Rest assured, after our free consultation, you'll have a clear picture of service costs, ensuring no surprises down the road.</p>
-                            
                         </div>
                     </div>
                     <div className="col col--5 col--offset-1">
                         <div className="col-demo">
-                        <h2>Ready to dive in?</h2>
+                            <h2>Ready to dive in?</h2>
                             <p>Fill out the form below, and let's embark on this content journey together. </p>
-                            
-                            
                             <form name="contact-form" id="contact-form" ref={form} onSubmit={sendEmail}>
                                 <div className="form-group">
                                     <label className="input-field-icon icon-user" htmlFor="user_name"></label>
@@ -79,13 +67,9 @@ function ContactUs() {
                                     <label className="input-field-icon icon-message" htmlFor="contact-message"></label>
                                     <textarea required className="form-control" placeholder="Message" id="contact-message" name="message" rows="5"></textarea>
                                 </div>
-
                                 <div className="form-group margin-bottom--lg">
-                                    {/* Hidden field to hold the contact number */}
                                     <input type="hidden" name="contact_number" value={contactNumber} />
-                                    
-                                    <input type="submit" onClick={generateNumber} className="btn-primary" value="Send" />
-                                    
+                                    <input type="submit" className="btn-primary" value="Send" />
                                 </div>
                             </form>
                             <div style={{ color: status === "sending" ? "blue" : status === "sent" ? "green" : status === "error" ? "red" : "" }}>

@@ -1337,6 +1337,12 @@ hr {
   width: 100%;
 }
 
+.features-visual-nutshell h3 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  margin: 0px;
+}
+
 .features-visual-nutshell-index-container {
   padding: 2em 6em 0 6em;
   margin-bottom: 0px;
@@ -1901,6 +1907,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   
   }
 
+  .features-visual-nutshell {
+    padding: 1em 0em;
+    margin: 0px;
+  }
+
   .features-visual-nutshell-index-container {
     padding: 0em 2em;
     margin-bottom: 0px;
@@ -1970,8 +1981,8 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   .features-visual-nutshell,
   .features-visual-3-col,
   .features-visual-two-col {
-    padding: 1em;
-    margin: 10px;
+    padding: 1em 0em;
+    margin: 0px;
     background-image: none;
  
   }

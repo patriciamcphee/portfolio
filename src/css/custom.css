@@ -1304,6 +1304,17 @@ hr {
   display: flex;
 }
 
+.portfolio-help-cta {
+  width: 100%;
+  background-color: '#2f5b6936';
+  border-radius: '6px';
+  padding: '20px';
+}
+
+.portfolio-help-cta h2, h3 {
+  text-align: 'center';
+}
+
 .features-visual-one-col-top-margin {
   margin: 40px 0 0px 0;
 }

@@ -66,7 +66,7 @@ customFields: {
       ({
         sitemap: {
           changefreq: 'hourly',
-          priority: 1.0,
+          priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
         },

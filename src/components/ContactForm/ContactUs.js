@@ -53,7 +53,7 @@ function ContactUs() {
                             <form name="contact-form" id="contact-form" ref={form} onSubmit={sendEmail}>
                                 <div className="form-group">
                                     <label className="input-field-icon icon-user" htmlFor="user_name"></label>
-                                    <input type="text" className="form-control" placeholder="Name" name="user_name" />
+                                    <input type="text" required className="form-control" placeholder="Name" name="user_name" />
                                 </div>
                                 <div className="form-group">
                                     <label className="input-field-icon icon-email" htmlFor="user_email"></label>

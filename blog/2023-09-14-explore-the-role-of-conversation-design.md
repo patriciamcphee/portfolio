@@ -1,5 +1,5 @@
 ---
-title: 'The critical role of Conversation Design in an AI-driven world'
+title: 'The critical role of conversation design in an AI-driven world'
 description: In this digital age, communication has significantly evolved thanks to the advancements in artificial intelligence (AI). As we embrace the future, conversation design is emerging as a crucial aspect of communication. So, what exactly is conversation design, and how does it fit into the AI landscape?
 date:   2023-09-14 11:29:21 -0800
 authors: [ patriciamcphee ]
@@ -18,13 +18,13 @@ By embodying the right brand voice and tone, conversation designers can foster p
 
 In this comprehensive guide, we will journey through the future of communication, investigating the boundless potential of conversation design in the AI era. You'll learn how it's revolutionizing customer engagement, heightening user satisfaction, and fueling business growth. So fasten your seat belts and get ready to explore the immense potential that lies at the intersection of conversation design and AI.
 
-## Unpacking Conversation Design
+## Unpacking conversation design
 
 AI has drastically revolutionized our communication paradigms. From Siri and Alexa to the ubiquitous chatbots on websites and social media platforms, AI-powered systems have infiltrated our daily lives. These marvels of technology process colossal volumes of data, continually adapt through machine learning, and deliver hyper-personalized responses.
 
 While AI brings unparalleled efficiency and accessibility to customer interactions, it is not a silver bullet for replicating the nuances of human conversation. That's where conversation design bridges the gap. It marries the analytical prowess of AI with the human art of crafting dialogues that echo with relevance and empathy.
 
-## Why Conversation Design matters in the AI epoch
+## Why conversation design matters in the AI epoch
 
 Conversation design is a confluence of psychology, linguistics, and user experience design, tasked with crafting not just functional but also engaging and delightful user dialogues.
 
@@ -32,7 +32,7 @@ Fundamentally, the focus is on creating interactions that mimic human conversati
 
 In this equation, variables like the user's intent, their emotional state, and the brand's tone need to be keenly balanced to offer a harmonious interaction.
 
-## Principles for crafting stellar Conversation Designs
+## Principles for crafting stellar conversation designs
 
 Effective conversation design isn't accidental; it's a fine art guided by distinct principles:
 
@@ -42,7 +42,7 @@ Effective conversation design isn't accidental; it's a fine art guided by distin
 4. **Emotional Intelligence:** Conversations must connect emotionally, requiring designers to build empathy into AI responses.
 5. **Iterative Feedback:** Conversation design is a living, breathing entity that must continually evolve based on user feedback and emerging trends.
 
-## Case studies: Conversation Design in action
+## Case studies: Conversation design in action
 
 A host of companies have successfully leveraged conversation design to enhance their customer interactions. Here are some insightful case studies:
 

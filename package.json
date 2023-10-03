@@ -50,6 +50,7 @@
     "react-lazy-load-image-component": "^1.5.6",
     "react-markdown": "^9.0.0",
     "react-player": "^2.9.0",
+    "react-timeline-scribble": "1.0.12",
     "redocusaurus": "^1.6.2",
     "remark-markdown": "^0.0.0",
     "remark-slide": "^0.14.0",

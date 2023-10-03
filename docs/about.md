@@ -41,3 +41,5 @@ In a realm as dynamic as technology, I understand the value of staying ahead of 
 That's a little bit about me. I'm excited about what we can achieve together!
 
 <br />
+
+ 

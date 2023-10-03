@@ -44,7 +44,7 @@ onBrokenMarkdownLinks: 'warn',
 favicon: 'img/favicon.png',
 organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
 projectName: 'portfolio', // Usually your repo name.
-trailingSlash: false,
+trailingSlash: true,
 customFields: {
   // Put your custom environment here
   jobTitle: 'Sr. Technical Writer | Content Designer',
@@ -172,7 +172,7 @@ customFields: {
       footer: {
         style: 'dark',
         
-        copyright: `© ${new Date().getFullYear()} Patricia McPhee | Powered by <a href="https://www.docusaurus.io" target="_blank">Docusaurus</a>`,
+        copyright: `© ${new Date().getFullYear()} Patricia McPhee | Development & content by Patricia McPhee | Powered by <a href="https://www.docusaurus.io" target="_blank">Docusaurus</a>`,
       },
       prism: {
         theme: lightCodeTheme,

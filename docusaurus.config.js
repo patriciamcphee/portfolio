@@ -44,7 +44,7 @@ onBrokenMarkdownLinks: 'warn',
 favicon: 'img/favicon.png',
 organizationName: 'patriciamcphee', // Usually your GitHub org/user name.
 projectName: 'portfolio', // Usually your repo name.
-trailingSlash: false,
+trailingSlash: true,
 customFields: {
   // Put your custom environment here
   jobTitle: 'Sr. Technical Writer | Content Designer',

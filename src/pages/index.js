@@ -10,6 +10,8 @@ import EducationCourses from '@site/src/components/HomepageFeatures/EducationCou
 import PortfolioAndProjects from '@site/src/components/PortfolioAndProjects/PortfolioAndProjects';
 import SkillsSection from '@site/src/components/HomepageFeatures/SkillsList';
 
+import YouNeedATechWriterIf from '@site/src/components/HomepageFeatures/YouNeedATechWriterIf.js';
+
 import LinkedInIcon from '@site/static/img/Linkedin.svg';
 import EmailIcon from '@site/static/img/email.svg';
 import SendIcon from '@site/static/img/Send.svg';
@@ -79,6 +81,7 @@ export default function Home() {
       <main>
 
       <HowIHelp />
+
       <Divider />
       <ExperienceCareerMilestones />
 

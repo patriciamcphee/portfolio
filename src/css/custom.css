@@ -678,6 +678,11 @@ img.no-border {
   background-color: none;
 }
 
+.image-container {
+  padding: 20px 0;
+  margin: 30px 0;
+}
+
 #brands {
   display: block;
   border: none;

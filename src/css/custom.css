@@ -678,11 +678,6 @@ img.no-border {
   background-color: none;
 }
 
-.image-container {
-  padding: 20px 0;
-  margin: 30px 0;
-}
-
 #brands {
   display: block;
   border: none;
@@ -2276,8 +2271,8 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
 }
 
 .blog-2col-container {
-  height: 12em;
-  margin: 12px 0;
+  height: auto;
+  padding: 20px 0;
   border-bottom: 1px solid #ccc;
   justify-content: middle;
  }
@@ -2324,6 +2319,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   margin: 2px 24px;
 
  }
+
+ .space-align-container {
+  position: absolute;
+  display: block;
+}
 
 .blog-2col-number1-background {
   background-image: url('../../static/img/number-1.png');

@@ -38,6 +38,14 @@ export default function PortfolioAndProjects() {
     </div>
   </div>
   <div class="column portfolio-content">
+    <div class="portfolio-card portfolio-card-blue-dark">
+    <div class="block-head">Conversation Design</div>
+    <h3>Check Lab Results (Chatbot)</h3>
+      <p>Megan, a Marketing Executive, checks her lab results using the patient portal chatbot in her office.</p>
+      <div class="portfolio-pad-top"><a href="/check-lab-results" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
+    </div>
+  </div>
+  <div class="column portfolio-content">
     <div class="portfolio-card portfolio-card-red">
     <div class="block-head">UX Writing</div>
       <h3>Error Messages</h3>

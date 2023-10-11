@@ -23,14 +23,14 @@ keywords:
 pagination_next: null
 pagination_prev: null
 last_update: 
-   date: 08/25/2023
+   date: 10/11/2023
    author: Patricia McPhee
 draft: false
 doc_type: overview
 hide_table_of_contents: true
 ---
 
-Hello, I'm Patricia McPhee, based in Redmond, WA. I'm not just a Senior Technical Writer; I'm also passionate about optimizing your user experience. You see, writing is just the tip of the iceberg for me—I also consider myself a strategist. I put together product documentation that you can sail through effortlessly. I sincerely believe in the transformative power of clear, intuitive user interfaces. I bring this conviction into every project I touch.
+Hello, I'm Patricia McPhee. I'm a highly skilled Technical Content Manager passionate about optimizing user experiences. You see, writing is just the tip of the iceberg for me—I also consider myself a strategist. I put together product documentation that you can sail through effortlessly. I sincerely believe in the transformative power of clear, intuitive user interfaces. I bring this conviction into every project I touch.
 
 Over the years, I've honed my skills in content development, carrying out meticulous content audits and mastering tools like Docusaurus and MadCap Flare. Whether I'm polishing content for emerging tech startups or ramping up platforms for industry giants like Microsoft and GE Healthcare, my approach is always user-centric.
 

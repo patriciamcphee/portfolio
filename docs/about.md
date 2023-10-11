@@ -1,6 +1,6 @@
 ---
 title: About me
-description: As a highly skilled and motivated Sr. Technical Writer, I excel in crafting user-friendly experiences. With expertise in technical writing, product documentation, and optimizing content delivery through CI/CD, I am determined to leverage emerging technologies and industry standards to elevate customer experiences.
+description: As a highly skilled and motivated Technical Content Manager, I excel in crafting user-friendly experiences. With expertise in technical writing, product documentation, and optimizing content delivery through CI/CD, I am determined to leverage emerging technologies and industry standards to elevate customer experiences.
 id: 'about'
 slug: /about
 keywords: 

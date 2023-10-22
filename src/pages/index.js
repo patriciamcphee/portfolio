@@ -37,7 +37,7 @@ function HomepageHeader() {
               <h5 class="intro-visual-header">
               Your Technical Writing Expert
               </h5>
-              <p class="intro-text">Empowering Users Through Well-Crafted Content and Design.</p>
+              <p class="intro-text">Empowering Users Through Well-Crafted Content.</p>
               <h4 class="intro-text">Hi! I'm Patricia McPhee. I'm a highly skilled Technical Content Manager passionate about optimizing user experiences. Writing is just the tip of the iceberg; I'm also a strategist. I create product documentation that users can navigate effortlessly. I firmly believe in the power of clear, intuitive user experiences and incorporate this belief into every project. I'm brimming with untapped potential, just waiting to be unleashed. </h4>        
             </div>
             <div class="intro-text-button">

@@ -4,7 +4,6 @@ description: The quality of your input profoundly influences the quality of the 
 date:   2023-09-18 11:29:21 -0800
 authors: [ patriciamcphee ]
 categories: feature development
-tags: [ feature development, project management ] 
 ---
 
 Crafting high-quality features requires precision and clarity. The Feature Writing Canvas provides a structured approach, including identifying beneficiaries, creating a benefit hypothesis, and setting acceptance criteria. This ensures that features fulfill their purpose and deliver value to both the business and end users. Emphasizing user engagement and hypothesis validation, this approach streamlines prioritization, implementation, and testing for product success.

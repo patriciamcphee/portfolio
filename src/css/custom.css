@@ -2325,6 +2325,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
   display: block;
 }
 
+.blog-container-mdx {
+  margin: 0 -10px;
+  padding: 0 0;
+}
+
 .blog-2col-number1-background {
   background-image: url('../../static/img/number-1.png');
   background-position: 110% 10%;

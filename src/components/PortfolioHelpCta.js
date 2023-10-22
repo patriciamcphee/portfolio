@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useRef, useEffect} from "react";
 import { Col, Row, Button, ConfigProvider, Space, Card } from 'antd';
 import CtaImage from '@site/static/img/cta-image.png';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const style = {
   textAlign: 'center',
@@ -13,6 +14,8 @@ const style = {
 };
 
 const PortfolioHelpCta = () => (
+<BrowserOnly>{() => 
+(
   <>
     <div style={style}>
     <div class="container">
@@ -47,5 +50,7 @@ const PortfolioHelpCta = () => (
     </div>
     </div>
   </>
+)}
+</BrowserOnly>
 );
 export default PortfolioHelpCta;

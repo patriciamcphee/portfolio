@@ -3,7 +3,6 @@ title: "4 Qualities of a Great How-To Video"
 date:   2020-01-04 11:41:21 -0800
 authors: [ patriciamcphee ]
 categories: creative writing
-tags: [ video-production, scriptwriting, voiceover ] 
 ---
 
 Let's face it, everyone likes learning something new. Your audience is a curious bunch, no matter who they are, which is why how-to/explainer videos are perfect for any target audience. These videos are short, engaging breakdowns of broader concepts or tasks. They are also one of the most effective ways to quickly show viewers a big idea or how to do something. How-to/explainer videos must be easy to consume and to achieve this, the information delivered must be clear.

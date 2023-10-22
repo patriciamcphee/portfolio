@@ -190,7 +190,7 @@ h1.not-found {
   font-family: 'Homenaje', sans-serif;
   text-align: center;
   font-size: 56px;
-  margin-top: -10px;
+  margin-top: 14px;
 
 }
 
@@ -2323,6 +2323,11 @@ html[data-theme="dark"] .changelog-tag[data-tag="Removed"] {
  .space-align-container {
   position: absolute;
   display: block;
+}
+
+.blog-container-mdx {
+  margin: 0 -10px;
+  padding: 0 0;
 }
 
 .blog-2col-number1-background {

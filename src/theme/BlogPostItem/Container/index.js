@@ -10,7 +10,26 @@ export default function BlogPostItemContainer({children, className}) {
   const {withBaseUrl} = useBaseUrlUtils();
   const image = assets.image ?? frontMatter.image;
   const keywords = frontMatter.keywords ?? [];
+
+
+  window.erxesSettings = {
+    messenger: {
+      brand_id: "_-LCq3",
+    },
+  };
+  
+  (() => {
+    const script = document.createElement('script');
+    script.src = "https://pscmdesigns.app.erxes.io/widgets/build/messengerWidget.bundle.js";
+    script.async = true;
+
+    const entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  })();
+
+
   return (
+    
     <article
       className={className}
       itemProp="blogPost"

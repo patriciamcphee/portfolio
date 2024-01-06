@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclean_deploy=self.webpackChunkclean_deploy||[]).push([[9550],{73923:e=>{e.exports=JSON.parse('{"label":"content design","permalink":"/blog/tags/content-design","allTagsPath":"/blog/tags","count":2}')}}]);

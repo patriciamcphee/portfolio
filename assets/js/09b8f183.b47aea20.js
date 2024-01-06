@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkclean_deploy=self.webpackChunkclean_deploy||[]).push([[6498],{82509:e=>{e.exports=JSON.parse('{"label":"information architecture","permalink":"/blog/tags/information-architecture","allTagsPath":"/blog/tags","count":1}')}}]);

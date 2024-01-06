@@ -32,7 +32,7 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div class="intro-visual">
         <Row wrap={false}>
-        <Col flex="1 0 650px">
+        <Col flex="1 0 600px">
             <div class="intro-text">
               <h5 class="intro-visual-header">
               Your Technical Writing Expert
@@ -55,6 +55,9 @@ function HomepageHeader() {
               >
                 <Button type="primary" shape="round" size='large' style={style} href="/writing-samples">
                 Get to Know My Work
+                </Button>
+                <Button type="primary" shape="round" size='large' style={style} href="/tech-writer-pro-gpt">
+                Try Out Tech Writer Pro GPT
                 </Button>
               </ConfigProvider>
               </Space>

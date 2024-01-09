@@ -216,7 +216,7 @@ Show results of actions in the same step as the task and be clear about where in
 
 ### Links
 
-Links need to be clear and predictable. Merchants should be able to anticipate what will happen when they select a link. Never mislead someone by mislabeling a link.
+Links need to be clear and predictable. Users should be able to anticipate what happens when they select a link. Never mislead someone by mislabeling a link.
 
 | :white_check_mark: **DO** | :no_entry_sign: **DON'T** |
 | --- | --- |
@@ -224,7 +224,7 @@ Links need to be clear and predictable. Merchants should be able to anticipate w
 
 #### Links in a sentence
 
-Links in full sentences shouldn't link the entire sentence, only the text that describes where merchants go when they select the link.
+Links in full sentences shouldn't link the entire sentence, only the text that describes where users go when they select the link.
 
 | :white_check_mark: **DO** | :no_entry_sign: **DON'T** |
 | --- | --- |

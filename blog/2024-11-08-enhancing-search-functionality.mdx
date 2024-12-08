@@ -57,45 +57,36 @@ To enable the plugin, add and configure it in your `docusaurus.config.js` file. 
 ```jsx
   const path = require('path');
 
-  staticDirectories: ['static'],
+  staticDirectories: ['static'], // Required for search index
 
   plugins: [
-  path.resolve(__dirname, 'node_modules/smart-search-plugin'),
-],
+    path.resolve(__dirname, 'node_modules/smart-search-plugin')
+  ],
 
-  // presets configuration
-
-  `themeConfig: {
-    navbar: {
-        title: '',
-        logo: {
-          alt: 'Logo',
-          src: 'img/favicon.svg',
-          className: 'header-logo',
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          routeBasePath: '/',  // Required
+          path: 'docs', // Required for the correct linking of topics
+          showLastUpdateTime: true, // Enables last update display
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'mainSidebar',
-            position: 'left',
-            label: 'Style Guide',
-          },
-          {
-            type: 'html',
-            value: `v${version}`,
-            position: 'left',
-            className: 'sidebar-version',
-          },
-          {
-            type: 'search',
-            position: 'right',
-          },
-        ],
       },
-    // footer configuration
-  };
+    ],
+  ],
 
-module.exports = config;
+  themeConfig: {
+       navbar: {
+      items: [
+        {
+          type: 'search',
+          position: 'right',
+        },
+      ],
+    },
+  },
+};
 
 ```
 

@@ -172,7 +172,7 @@ customFields: {
       footer: {
         style: 'dark',
         
-        copyright: `© ${new Date().getFullYear()} Patricia McPhee&nbsp;&nbsp; | &nbsp;&nbsp;Development & content by Patricia McPhee&nbsp;&nbsp; | &nbsp;&nbsp;Powered by <a href="https://www.docusaurus.io" target="_blank">Docusaurus</a>`,
+        copyright: `© ${new Date().getFullYear()} Patricia McPhee&nbsp;&nbsp; | &nbsp;&nbsp;Development & content by Patricia McPhee&nbsp;&nbsp; | &nbsp;&nbsp;Powered by <a href="https://www.docusaurus.io" target="_blank">Docusaurus 2.4.1</a>`,
       },
       prism: {
         theme: lightCodeTheme,

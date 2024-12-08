@@ -56,9 +56,6 @@ function HomepageHeader() {
                 <Button type="primary" shape="round" size='large' style={style} href="/writing-samples">
                 Get to Know My Work
                 </Button>
-                <Button type="primary" shape="round" size='large' style={style} href="/tech-writing-pro-gpt">
-                Try Out Tech Writing Pro GPT
-                </Button>
               </ConfigProvider>
               </Space>
           </div>

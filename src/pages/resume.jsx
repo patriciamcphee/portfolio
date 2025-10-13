@@ -167,7 +167,7 @@ export default function Resume() {
         {/* Navigation */}
         <nav className={styles.navigation}>
           <div className={styles.navContent}>
-            {['about', 'timeline', 'skills', 'achievements'].map((section) => (
+            {['about', 'timeline', 'skills', 'achievements', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}

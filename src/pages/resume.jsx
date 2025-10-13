@@ -11,7 +11,7 @@ export default function Resume() {
   const form = useRef();
 
   // Your Dropbox PDF link - replace this with your actual link
-  const RESUME_PDF_LINK = 'YOUR_DROPBOX_LINK_HERE';
+  const RESUME_PDF_LINK = 'https://drive.google.com/file/d/18aVT2suZCcdOBzXgEMPaFrlPsND51le9/view?usp=drive_link';
 
   const skills = [
     { name: 'Technical Writing', level: 100 },

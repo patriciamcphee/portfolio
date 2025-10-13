@@ -16,9 +16,9 @@ export default function PortfolioAndProjects() {
   <div class="column portfolio-content">
     <div className="portfolio-card portfolio-card-blue-light">
     <div class="block-head">Technical Writing</div>
-      <h3>Contributor's Guide</h3>
-      <p>A Contributor's Guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.</p>
-      <div class="portfolio-pad-top"><a href="/contributor-guide" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
+      <h3>Style Guide</h3>
+      <p>A style guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.</p>
+      <div class="portfolio-pad-top"><a href="https://demos.pixlngrid.com/welcome/" class="portfolio-button"><span class="button-white-text">Learn More</span></a></div>
     </div>
   </div>
   <div class="column portfolio-content">

@@ -113,7 +113,7 @@ export default function Resume() {
     setStatus("sending");
     generateNumber();
     
-    emailjs.sendForm('service_0ap10ki', 'contact_form', form.current, 'rm4FS8yjBRKcxbYQX')
+    emailjs.sendForm('service_0ap10ki', 'contact_form', form.current, '9Jku87kluzzoQAmJv')
       .then((result) => {
         console.log(result.text);
         setStatus("sent");

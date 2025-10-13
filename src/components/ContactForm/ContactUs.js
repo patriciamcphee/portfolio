@@ -14,7 +14,7 @@ function ContactUs() {
     const sendEmail = (e) => {
         e.preventDefault();
         generateNumber(); // Generate a contact number right before sending
-        emailjs.sendForm('service_0ap10ki', 'contact_form', form.current, 'rm4FS8yjBRKcxbYQX')
+        emailjs.sendForm('service_0ap10ki', 'contact_form', form.current, '9Jku87kluzzoQAmJv')
             .then((result) => {
                 console.log(result.text);
                 setStatus("sent");

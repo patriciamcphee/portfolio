@@ -152,8 +152,7 @@ customFields: {
           },
 
           {
-            type: 'doc',
-            docId: 'resume-functional',
+            to: '/resume',
             position: 'right',
             label: 'Resume',
           },
@@ -161,12 +160,7 @@ customFields: {
             to: '/blog', 
             label: 'Blog', 
             position: 'right'
-          }, 
-          {
-            to: 'contact', 
-            label: 'Contact', 
-            position: 'right'
-          }, 
+          },  
         ],
       },
       footer: {

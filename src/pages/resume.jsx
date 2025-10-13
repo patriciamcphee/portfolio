@@ -96,7 +96,7 @@ export default function Resume() {
     },
     {
       title: 'Developer Portal UX',
-      description: 'Redesigned Backstage navigation reducing clicks by 66% and improved Create page discoverability',
+      description: 'Redesigned Backstage navigation reducing clicks by 66%',
       icon: Briefcase
     },
     {
@@ -338,10 +338,6 @@ export default function Resume() {
                   <li>
                     <span className={styles.checkmark}>✓</span>
                     <span>Successfully built and deployed multiple Docusaurus-based documentation platforms, implementing modern docs-as-code workflows</span>
-                  </li>
-                  <li>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>Adopted by 10-member team and multiple external DevOps teams across Enterprise organization</span>
                   </li>
                   <li>
                     <span className={styles.checkmark}>✓</span>

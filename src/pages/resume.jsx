@@ -213,13 +213,13 @@ export default function Resume() {
                     <p className={styles.educationDate}>1999 – 2001</p>
                   </div>
                   <div className={styles.educationItemGreen}>
-                    <h4 className={styles.educationSchool}>Front-End Development</h4>
-                    <p className={styles.educationDegree}>CareerFoundary</p>
+                    <h4 className={styles.educationSchool}>CareerFoundary</h4>
+                    <p className={styles.educationDegree}>Front-End Development</p>
                     <p className={styles.educationDate}>2022 – 2023</p>
                   </div>
                   <div className={styles.educationItemGreen}>
-                    <h4 className={styles.educationSchool}>Prompt Engineer</h4>
-                    <p className={styles.educationDegree}>Blockchain Council</p>
+                    <h4 className={styles.educationSchool}>Blockchain Council</h4>
+                    <p className={styles.educationDegree}>Certified Prompt Engineer</p>
                     <p className={styles.educationDate}>2024</p>
                   </div>
                 </div>

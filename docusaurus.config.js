@@ -161,6 +161,11 @@ customFields: {
             label: 'Blog', 
             position: 'right'
           },  
+          {
+            to: 'contact', 
+            label: 'Contact', 
+            position: 'right'
+          }, 
         ],
       },
       footer: {

@@ -337,6 +337,110 @@ export default function Resume() {
             </div>
           )}
 
+          {/* Contact Section */}
+          {activeSection === 'contact' && (
+            <div className={styles.section}>
+              <h2 className={styles.sectionTitle}>
+                <Send className={styles.sectionIcon} />
+                Get In Touch
+              </h2>
+              
+              <p className={styles.contactIntro}>
+                Ready to dive in? Fill out the form below, and let's embark on this content journey together.
+              </p>
+              
+              <form name="contact-form" id="contact-form" ref={form} onSubmit={sendEmail} className={styles.contactForm}>
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Your Name</label>
+                  <input 
+                    type="text" 
+                    required 
+                    className={styles.formInput}
+                    placeholder="Name" 
+                    name="user_name" 
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Your Email</label>
+                  <input 
+                    type="email" 
+                    required 
+                    className={styles.formInput}
+                    placeholder="Email" 
+                    name="user_email" 
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Phone (Optional)</label>
+                  <input 
+                    type="tel" 
+                    pattern="\d{3}[\-]\d{3}[\-]\d{4}" 
+                    name="Phone" 
+                    className={styles.formInput}
+                    placeholder="Phone # (xxx-xxx-xxxx)" 
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Message</label>
+                  <textarea 
+                    required 
+                    className={styles.formTextarea}
+                    placeholder="Tell me about your opportunity or project..." 
+                    name="message" 
+                    rows="6"
+                  ></textarea>
+                </div>
+                
+                <input type="hidden" name="contact_number" value={contactNumber} />
+                
+                <button type="submit" className={styles.submitButton} disabled={status === "sending"}>
+                  <Send size={20} />
+                  {status === "sending" ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+              
+              {status && (
+                <div className={`${styles.statusMessage} ${
+                  status === "sending" ? styles.statusSending : 
+                  status === "sent" ? styles.statusSent : 
+                  styles.statusError
+                }`}>
+                  {status === "sending" && "Sending your message..."}
+                  {status === "sent" && "✓ Message sent successfully!"}
+                  {status === "error" && "✗ Message failed to send. Please try again."}
+                </div>
+              )}
+              
+              <div className={styles.contactMethods}>
+                <h3 className={styles.contactMethodsTitle}>Other Ways to Connect</h3>
+                <div className={styles.contactMethodsGrid}>
+                  <a href="mailto:contact@patriciamcphee.com" className={styles.contactMethod}>
+                    <Mail className={styles.contactMethodIcon} size={24} />
+                    <div>
+                      <p className={styles.contactMethodLabel}>Email</p>
+                      <p className={styles.contactMethodValue}>contact@patriciamcphee.com</p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/patriciamcphee/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.contactMethod}
+                  >
+                    <Linkedin className={styles.contactMethodIcon} size={24} />
+                    <div>
+                      <p className={styles.contactMethodLabel}>LinkedIn</p>
+                      <p className={styles.contactMethodValue}>Connect with me</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+
 
         </main>
       </div>

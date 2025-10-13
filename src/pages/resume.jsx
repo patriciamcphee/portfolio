@@ -21,14 +21,15 @@ export default function Resume() {
     { name: 'HTML/CSS', level: 90 },
     { name: 'Confluence', level: 90 },
     { name: 'Visual Studio', level: 90 },
+    { name: 'Docs-as-Code/JAMstack', level: 90 },
     { name: 'JavaScript', level: 80 },
     { name: 'Content Strategy', level: 80 },
     { name: 'Information Architecture', level: 80 },
     { name: 'NodeJS/React', level: 80 },
     { name: 'Figma', level: 80 },
-    { name: 'Docs-as-Code/JAMstack', level: 90 },
     { name: 'Postman', level: 70 },
     { name: 'Instructional Design', level: 70 },
+    { name: 'Backstage', level: 60 },
   ];
 
   const timeline = [
@@ -39,6 +40,7 @@ export default function Resume() {
       location: 'Remote',
       highlights: [
         'Developed GenAI toolkit reducing JIRA Feature writing time by 75%',
+        'Redesigned Backstage developer portal navigation, reducing clicks by 66%',
         'Created ContentOps Playbook and style guide',
         'Led technical documentation for internal development teams'
       ]
@@ -93,6 +95,11 @@ export default function Resume() {
       icon: Award
     },
     {
+      title: 'Developer Portal UX',
+      description: 'Redesigned Backstage navigation reducing clicks by 66% and improved Create page discoverability',
+      icon: Briefcase
+    },
+    {
       title: 'API Automation',
       description: 'Reduced API/SDK documentation curation time by 40% through shell script automation',
       icon: Code
@@ -100,7 +107,7 @@ export default function Resume() {
     {
       title: 'Documentation Optimization',
       description: 'Reduced Azure VMware Solution implementation time by 60%',
-      icon: Briefcase
+      icon: Award
     }
   ];
 
@@ -326,7 +333,15 @@ export default function Resume() {
                 <ul className={styles.additionalList}>
                   <li>
                     <span className={styles.checkmark}>✓</span>
+                    <span>Redesigned Backstage Create page with dynamic filters and clickable tags, improving template discoverability and creating a more intuitive developer experience</span>
+                  </li>
+                  <li>
+                    <span className={styles.checkmark}>✓</span>
                     <span>Successfully built and deployed multiple Docusaurus-based documentation platforms, implementing modern docs-as-code workflows</span>
+                  </li>
+                  <li>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>Adopted by 10-member team and multiple external DevOps teams across Enterprise organization</span>
                   </li>
                   <li>
                     <span className={styles.checkmark}>✓</span>
@@ -440,9 +455,8 @@ export default function Resume() {
               </div>
             </div>
           )}
-
-
         </main>
+
       </div>
     </Layout>
   );

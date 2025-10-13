@@ -39,10 +39,9 @@ export default function Resume() {
       period: '11/2023 – Present',
       location: 'Remote',
       highlights: [
-        'Developed GenAI toolkit reducing JIRA Feature writing time by 75%',
+        'Developed GenAI toolkit reducing JIRA Feature writing time by 75% (from 2 hours to 30 minutes)',
         'Redesigned Backstage developer portal navigation, reducing clicks by 66%',
-        'Created ContentOps Playbook and style guide',
-        'Led technical documentation for internal development teams'
+        'Led creation of ContentOps Playbook and style guide for Enterprise DevOps teams'
       ]
     },
     {
@@ -51,18 +50,17 @@ export default function Resume() {
       period: '12/2022 – 08/2023',
       location: 'Remote',
       highlights: [
-        'Built Docusaurus markdown-based doc site',
-        'Increased content accessibility by 30%',
-        'Developed user-centric developer documentation'
+        'Conducted content audit and analysis leading to user-centric developer documentation',
+        'Built Docusaurus markdown-based doc site, increasing content accessibility by 30%'
       ]
     },
     {
       company: 'Expedia Group/Braintrust',
-      role: 'Content Strategist',
+      role: 'Content Strategist, Contractor',
       period: '05/2022 – 11/2022',
       location: 'Remote',
       highlights: [
-        'Conducted content audit and analysis',
+        'Conducted content audit and analysis of design system documentation for designers and developers',
         'Crafted UI text and conversation copy for chatbots'
       ]
     },
@@ -72,21 +70,103 @@ export default function Resume() {
       period: '10/2021 – 03/2022',
       location: 'Remote',
       highlights: [
-        'Improved content accessibility by 30%',
-        'Built Docusaurus markdown-based online help'
+        'Collaborated with product engineering to create user-centric deployment guides',
+        'Built Docusaurus markdown-based online help, improving content accessibility by 30%'
       ]
     },
     {
       company: 'Microsoft/Kforce',
-      role: 'Technical Writer',
+      role: 'Technical Writer, Contractor',
       period: '05/2020 – 10/2021',
       location: 'Remote',
       highlights: [
-        'Reduced Azure VMware implementation time by 60%',
-        'Developed markdown-based learning modules'
+        'Developed Azure VMware Solution learning modules, reducing implementation time by 60%',
+        'Collaborated with Azure engineering and UX Research teams on goal-oriented content',
+        'Conducted content audits and developed in-platform UI microcopy'
+      ]
+    },
+    {
+      company: 'PSCM Designs LLC',
+      role: 'Freelance Technical Writer',
+      period: '07/2019 – 06/2021',
+      location: 'Remote',
+      highlights: [
+        'Extreme Networks: Automated API content publishing using shell scripts, reducing curation time by 40%',
+        'ZPE Systems: Wrote marketing eBook and learning materials; produced how-to videos with voiceover'
+      ]
+    },
+    {
+      company: 'LivePerson',
+      role: 'Technical Writer II',
+      period: '03/2019 – 06/2019',
+      location: 'Seattle, WA',
+      highlights: [
+        'Wrote markdown-based SDK and API guides for mobile chatbot and live agent messaging',
+        'Contributed to chatbot and virtual assistant development with mobile app team'
+      ]
+    },
+    {
+      company: 'Microsoft',
+      role: 'Technical Writer II',
+      period: '01/2018 – 01/2019',
+      location: 'Redmond, WA',
+      highlights: [
+        'Collaborated with Microsoft Edge and Windows networking teams on markdown-based learning modules',
+        'Wrote and edited UX microcopy and UI strings based on data-driven content audit insights'
+      ]
+    },
+    {
+      company: 'Oculus/Facebook',
+      role: 'Technical Writer, Contractor',
+      period: '07/2017 – 12/2017',
+      location: 'Redmond, WA',
+      highlights: [
+        'Developed internal cross-functional workflows and process documentation for VR R&D teams',
+        'Created technical documentation supporting virtual reality development initiatives'
+      ]
+    },
+    {
+      company: 'GE Healthcare',
+      role: 'Software Technical Writer',
+      period: '08/2016 – 05/2017',
+      location: 'Seattle, WA',
+      highlights: [
+        'Updated outdated installation and upgrade guides using MadCap Flare and DITA/XML',
+        'Improved customer experience through collaboration with customers and support teams'
+      ]
+    },
+    {
+      company: 'Amazon',
+      role: 'Technical Writer II',
+      period: '09/2015 – 07/2016',
+      location: 'Seattle, WA',
+      highlights: [
+        'Wrote internal feature announcements and task-oriented procedure guides',
+        'Created documentation for warehouse operations and employee training materials'
+      ]
+    },
+    {
+      company: 'Charter Communications',
+      role: 'Technical Writer, Contractor',
+      period: '03/2015 – 09/2015',
+      location: 'Denver, CO',
+      highlights: [
+        'Collaborated with video-on-demand and networking engineers on standard procedures',
+        'Developed Python scripts for system administration and automation tasks'
+      ]
+    },
+    {
+      company: 'SolidFire',
+      role: 'Technical Writer, Contractor',
+      period: '01/2014 – 10/2014',
+      location: 'Boulder, CO',
+      highlights: [
+        'Created release notes, configuration guides, troubleshooting documentation, and white papers',
+        'Wrote technical marketing content including solution briefs for cloud storage platform'
       ]
     }
   ];
+
 
   const achievements = [
     {

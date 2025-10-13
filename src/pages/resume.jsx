@@ -96,7 +96,7 @@ export default function Resume() {
     },
     {
       title: 'Developer Portal UX',
-      description: 'Redesigned Backstage navigation reducing clicks by 66%',
+      description: 'Redesigned Backstage navigation reducing clicks by 66% and improved Create page discoverability',
       icon: Briefcase
     },
     {
@@ -142,10 +142,6 @@ export default function Resume() {
         {/* Header */}
         <header className={styles.header}>
           <div className={styles.headerContent}>
-            <div className={styles.headerText}>
-              <h1 className={styles.headerTitle}>Patricia McPhee</h1>
-              <p className={styles.headerSubtitle}>Technical Content Manager | Developer Relations</p>
-            </div>
             <div className={styles.contactInfo}>
               <a href="mailto:contact@patriciamcphee.com" className={styles.contactLink}>
                 <Mail size={16} />
@@ -338,6 +334,10 @@ export default function Resume() {
                   <li>
                     <span className={styles.checkmark}>✓</span>
                     <span>Successfully built and deployed multiple Docusaurus-based documentation platforms, implementing modern docs-as-code workflows</span>
+                  </li>
+                  <li>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>Adopted by 10-member team and multiple external DevOps teams across Enterprise organization</span>
                   </li>
                   <li>
                     <span className={styles.checkmark}>✓</span>

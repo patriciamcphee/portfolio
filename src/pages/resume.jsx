@@ -218,9 +218,9 @@ export default function Resume() {
                     <p className={styles.educationDate}>2022 – 2023</p>
                   </div>
                   <div className={styles.educationItemGreen}>
-                    <h4 className={styles.educationSchool}>Conversation Designer</h4>
-                    <p className={styles.educationDegree}>Conversation Design Institute</p>
-                    <p className={styles.educationDate}>2023 – 2024</p>
+                    <h4 className={styles.educationSchool}>Prompt Engineer</h4>
+                    <p className={styles.educationDegree}>Blockchain Council</p>
+                    <p className={styles.educationDate}>2024</p>
                   </div>
                 </div>
               </div>

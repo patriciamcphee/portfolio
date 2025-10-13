@@ -330,10 +330,6 @@ export default function Resume() {
                   </li>
                   <li>
                     <span className={styles.checkmark}>✓</span>
-                    <span>Adopted by 10-member team and multiple external DevOps teams across Enterprise organization</span>
-                  </li>
-                  <li>
-                    <span className={styles.checkmark}>✓</span>
                     <span>Improved developer experience and content maintainability across multiple organizations</span>
                   </li>
                 </ul>

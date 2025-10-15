@@ -1,0 +1,871 @@
+/* CSS Variables - Define your color scheme */
+:root {
+  --primary: #244651;
+  --primary-dark: #1a3139;
+  --primary-light: #2f5965;
+  --secondary: #647555;
+  --secondary-light: #7a8c68;
+  --background-lightest: #f1f5f9;
+  --background-lighter: #e2e8f0;
+  --background: #cbd5e1;
+  --background-dark: #94a3b8;
+}
+
+/* Container */
+.resumeContainer {
+  min-height: 100vh;
+
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #244651, #1a3238);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.headerContent {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  font-size: 1.1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .contactInfo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 900px) {
+  .contactInfo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 2.5rem;
+    max-width: 900px;
+  }
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.contactLink svg {
+  flex-shrink: 0;
+}
+
+.contactLink:hover {
+  color: #f1f5f9;
+}
+
+/* Navigation */
+.navigation {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+[data-theme='dark'] .navigation {
+  background: #1a1a1a;
+}
+
+.navContent {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navButton {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  background: #faf9fb;
+  color: #334155;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+[data-theme='dark'] .navButton {
+  background: #404040;
+  color: white;
+}
+
+.navButton:hover {
+  background: #24465136;
+}
+
+[data-theme='dark'] .navButton:hover {
+  background: #575757;
+}
+
+.navButtonActive {
+  background: #244651;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .navButtonActive {
+  background: #244651;
+}
+
+/* Main Content */
+.mainContent {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mainSection {
+  padding: 4rem;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+
+[data-theme='dark'] .mainSection {
+  background-color: #1a1a1a;
+}
+
+.section {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionTitle-h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionIcon {
+  color: var(--text-primary);
+}
+
+/* About Section */
+.aboutText {
+  font-size: 1.125rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* About section */
+.about-content {
+  color: #333;
+}
+
+.about-content p {
+  color: #666;
+}
+
+
+.education {
+  margin-top: 2rem;
+}
+
+.educationTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2rem 0;
+}
+
+.educationGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .educationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.educationItem {
+  border-left: 4px solid #244651;
+  padding-left: 1rem;
+}
+
+.educationItemGreen {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+}
+
+.educationSchool {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.educationDegree {
+  color: var(--text-secondary);
+  margin: 0 0 0.25rem 0;
+}
+
+.educationDate {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.downloadButtonContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-cta {
+  text-align: center;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #244651;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.downloadButton:hover {
+  background: #1a3238;
+  color: white;
+}
+
+/* Timeline Section */
+.timeline {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #cbd5e1;
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -3.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: #244651;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #cbd5e1;
+}
+
+.timelineCard {
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+[data-theme='dark'] .timelineCard {
+  background: #2a2a2a;
+}
+
+.timelineCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timelineRole {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.timelineCompany {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.timelineMeta {
+  text-align: right;
+}
+
+.timelinePeriod {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.timelineLocation {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.timelineHighlights {
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.timelineHighlights li {
+  color: var(--text-primary);
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.timelineHighlights li::before {
+  content: '•';
+  color: var(--text-primary);
+  position: absolute;
+  left: 0;
+}
+
+/* Skills Section */
+.skillsGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skillLevel {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.skillBar {
+  height: 0.75rem;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .skillBar {
+  background: #404040;
+}
+
+.skillBarFill {
+  height: 100%;
+  background: linear-gradient(to right, #2f5965, #244651);
+  border-radius: 9999px;
+  transition: width 1s ease-out;
+}
+
+/* Achievements Section */
+.achievementsGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .achievementsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.achievementCard {
+  background: linear-gradient(to bottom right, #dddddd, #f8fafc);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+[data-theme='dark'] .achievementCard {
+  background: linear-gradient(to bottom right, #2a2a2a, #333);
+}
+
+.achievementCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.achievementIcon {
+  background: var(--primary);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.achievementTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.achievementDescription {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.additionalAchievements {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+[data-theme='dark'] .additionalAchievements {
+  background: #2a2a2a;
+}
+
+.additionalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.additionalList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.additionalList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.additionalList li:last-child {
+  margin-bottom: 0;
+}
+
+.checkmark {
+  color: var(--text-primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Contact Section */
+.contactIntro {
+  font-size: 1.125rem;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.successMessage {
+  background: #dcfce7;
+  border: 2px solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.successIcon {
+  color: var(--secondary);
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.successText {
+  color: var(--secondary);
+  margin: 0;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #244651;
+  box-shadow: 0 0 0 3px rgba(36, 70, 81, 0.1);
+}
+
+.formTextarea {
+  resize: none;
+}
+
+.submitButton {
+  width: 100%;
+  background: #244651;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+
+.submitButton:hover {
+  background: #1a3238;
+}
+
+.submitButton:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.statusMessage {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statusSending {
+  background: #dbeafe;
+  color: #1a3238;
+  border: 1px solid #2f5965;
+}
+
+.statusSent {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #22c55e;
+}
+
+.statusError {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.formNote {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+}
+
+.contactMethods {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.contactMethodsTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+}
+
+.contactMethodsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contactMethodsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.contactMethod:hover {
+  background: #f1f5f9;
+}
+
+.contactMethodIcon {
+  color: #244651;
+  flex-shrink: 0;
+}
+
+.contactMethodLabel {
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.contactMethodValue {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footerContent {
+  max-width: 1152px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footerText {
+  color: #e2e8f0;
+  margin: 0 0 0.5rem 0;
+}
+
+.footerSubtext {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Add at the end of Resume.css */
+
+/* Dark mode overrides for resume */
+body.dark-mode .resumeContainer {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .section {
+  background: #2a2a2a;
+}
+
+body.dark-mode .sectionTitle,
+body.dark-mode .sectionTitle-h3,
+body.dark-mode .educationSchool,
+body.dark-mode .timelineRole,
+body.dark-mode .achievementTitle,
+body.dark-mode .additionalTitle {
+  color: #e5e5e5;
+}
+
+body.dark-mode .aboutText,
+body.dark-mode .educationDegree,
+body.dark-mode .timelinePeriod,
+body.dark-mode .timelineHighlights li,
+body.dark-mode .skillName,
+body.dark-mode .contactIntro,
+body.dark-mode .additionalList li {
+  color: #b3b3b3;
+}
+
+body.dark-mode .educationDate,
+body.dark-mode .timelineLocation,
+body.dark-mode .skillLevel,
+body.dark-mode .achievementDescription {
+  color: #888;
+}
+
+body.dark-mode .navigation {
+  background: #2a2a2a;
+}
+
+body.dark-mode .navButton {
+  background: #1a1a1a;
+  color: #e5e5e5;
+}
+
+body.dark-mode .navButton:hover {
+  background: #404040;
+}
+
+body.dark-mode .timelineCard {
+  background: #2a2a2a;
+}
+
+body.dark-mode .achievementCard {
+  background: linear-gradient(to bottom right, #2a2a2a, #333);
+}
+
+body.dark-mode .additionalAchievements {
+  background: #2a2a2a;
+}
+
+body.dark-mode .formInput,
+body.dark-mode .formTextarea {
+  background: #2a2a2a;
+  border-color: #404040;
+  color: #e5e5e5;
+}
+
+body.dark-mode .formLabel {
+  color: #b3b3b3;
+}
+
+body.dark-mode .contactMethod {
+  background: #2a2a2a;
+}
+
+body.dark-mode .contactMethod:hover {
+  background: #404040;
+}
+
+body.dark-mode .contactMethodLabel {
+  color: #e5e5e5;
+}
+
+body.dark-mode .contactMethodValue {
+  color: #888;
+}

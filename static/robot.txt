@@ -1,7 +1,0 @@
-User-agent: *
-Disallow:
-
-User-agent: Googlebot-Image
-Disallow: /assets/images/
-
-Sitemap: https://www.patriciamcphee.com/sitemap.xml

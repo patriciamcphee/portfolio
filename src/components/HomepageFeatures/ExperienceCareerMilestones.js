@@ -61,7 +61,6 @@ export default function ExperienceCareerMilestones() {
                     <h3 class="title">Software</h3>
                     <p class="description">
                       <ul>
-                        <li><span class="list-bold-item-plain">Cigna</span> <br /><i>Technical Content Manager</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">Beyond Identity</span> <br /><i>Sr. Technical Writer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">Expedia Group</span> <br /><i>Contract Content Designer</i>, REMOTE</li>
                         <li><span class="list-bold-item-plain">Keyavi Data</span> <br /><i>Sr. Technical Writer</i>, REMOTE</li>

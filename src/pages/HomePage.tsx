@@ -283,7 +283,7 @@ const HomePage: React.FC = () => {
                   <div className="block-head">{getCategoryLabel(project.category)}</div>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <Link to={project.link} className="portfolio-button">
+                  <Link to={project.link} className="portfolio-button" target='_blank' rel='noopener noreferrer'>
                     <span className="button-white-text">View Project</span>
                   </Link>
                 </div>

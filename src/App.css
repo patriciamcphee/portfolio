@@ -433,6 +433,29 @@ a {
   display: none;
 }
 
+/* Back Link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #244651;
+}
+
+[data-theme='dark'] .back-link {
+  color: var(--primary-lighter);
+}
+
+[data-theme='dark'] .back-link:hover {
+  color: var(--orange);
+}
+
 @media (min-width: 768px) {
   .desktop-menu {
     display: flex;

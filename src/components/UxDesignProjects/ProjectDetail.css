@@ -8,28 +8,7 @@
    Orange: #e68342
 */
 
-/* Back Link */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #244651;
-  text-decoration: none;
-  margin-bottom: 2rem;
-  transition: color 0.3s ease;
-}
 
-.back-link:hover {
-  color: #244651;
-}
-
-[data-theme='dark'] .back-link {
-  color: #3d7689;
-}
-
-[data-theme='dark'] .back-link:hover {
-  color: #e68342;
-}
 
 /* Project Hero */
 .project-hero {

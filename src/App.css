@@ -193,6 +193,7 @@ body {
 /* Default image for light mode */
 .hero-img {
   width: 800px;
+  padding-top: 80px;
   align-items: center;
   max-width: 100%;
   content: url('./assets/navbar-4.png');

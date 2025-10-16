@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
       link: "/project/backstage-create-page-redesign"
     },
     {
-      id: 10,
+      id: 11,
       title: "Writing Release Notes",
       category: "technical-writing",
       description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",

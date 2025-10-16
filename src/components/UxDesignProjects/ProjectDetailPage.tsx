@@ -58,7 +58,7 @@ const ProjectDetailPage: React.FC = () => {
       client: 'Backstage Platform',
       duration: '3 months',
       team: '4 members (1 UX, 2 Dev, 1 PM)',
-      heroImage: '../assets/Backstage.png',
+      heroImage: SidebarBackstage,
       overview: 'Led a comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls, transforming a cluttered flyout-based system into an intuitive inline navigation experience.',
       challenge: 'The Backstage sidebar had critical UX issues: catalog navigation opened in right-side flyouts creating additional layers, Light/Dark mode toggles and sidebar controls were buried 3 clicks deep in Settings, and the interface didn\'t efficiently use vertical space. Support tickets were increasing due to hidden functionality.',
       solution: 'Completely restructured the sidebar architecture: converted catalog flyouts to inline accordion-style expandable menus directly beneath labels, relocated theme toggle and collapse controls to prominent sidebar positions (bottom and top respectively), and implemented smooth animations with proper accessibility standards including ARIA labels and keyboard navigation.',

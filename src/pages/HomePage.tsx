@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
       category: "ux-writing",
       description: "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem.",
       tags: ["UX Writing", "Error Messages", "User Experience"],
-      link: "https://demos.pixlngrid.com/ux-writing/errors-warnings-confirmations/"
+      link: "https://demos.pixlngrid.com/style-guide/writing-effective-error-messages/"
     }
   ];
 

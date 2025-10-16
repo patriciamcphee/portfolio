@@ -15,6 +15,7 @@ export type ProjectCategory =
   | 'prompt-engineering' 
   | 'web-design' 
   | 'ux-writing'
+  | 'blog-writing'
   | 'coding';
 
 export interface Category {

@@ -27,6 +27,7 @@ const HomePage: React.FC = () => {
       'prompt-engineering': 'portfolio-card-purple',
       'web-design': 'portfolio-card-blue-dark',
       'coding': 'portfolio-card-orange',
+      'blog-writing': 'portfolio-card-gold',
     };
     return colorMap[category] || 'portfolio-card-blue-light';
   };
@@ -39,6 +40,7 @@ const HomePage: React.FC = () => {
       'prompt-engineering': 'Prompt Engineering',
       'web-design': 'Web Design',
       'coding': 'Coding',
+      'blog-writing': 'Blog Writing',
     };
     return labelMap[category] || category;
   };
@@ -84,7 +86,14 @@ const HomePage: React.FC = () => {
       tags: ["Style Guide", "Technical Writing", "Technical Documents"],
       link: "https://demos.pixlngrid.com/welcome/"
     },
-
+    {
+      id: 2,
+      title: "Enhancing Content Search",
+      category: "blog-writing",
+      description: "The Smart Search Plugin makes it easier for users to find content quickly and boosts engagement.",
+      tags: ["Technical Writing", "Blog", "Writing"],
+      link: "https://demos.pixlngrid.com/blog/2024/11/08/enhancing-search-functionality/"
+    },
     {
       id: 7,
       title: "Movie App API",
@@ -115,6 +124,7 @@ const HomePage: React.FC = () => {
      { id: 'ux-design', label: 'UX/UI Design' },
     { id: 'web-design', label: 'Web Design' },
     { id: 'coding', label: 'Coding' },
+    { id: 'blog-writing', label: 'Blog Writing' }
 
   ];
 

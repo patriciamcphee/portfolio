@@ -65,6 +65,50 @@
   }
 }
 
+/* Remove any default link borders/underlines in project navigation */
+.project-detail-page .project-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none; /* Add this */
+  outline: none; /* Add this */
+}
+
+/* Remove focus outline that might appear as a border */
+.project-detail-page .project-nav-link:focus {
+  outline: none;
+}
+
+/* Make sure the project-nav section has no borders */
+.project-nav {
+  padding: 3rem 0;
+  margin-top: 0; /* Change from 4rem to 0 */
+  background-color: #ffffff;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
+  border-top: none; /* Add this */
+}
+
+[data-theme='dark'] .project-nav {
+  background-color: #1a1a1a;
+  box-shadow: none;
+  border: none;
+}
+
+/* Remove border from the grid container */
+.project-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  border: none; /* Add this */
+}
+
 .project-detail-page .project-subtitle {
   font-size: 1.25rem;
   color: #444444;
@@ -580,11 +624,12 @@
 
 .tech-tag {
   padding: 0.5rem 1.25rem;
-  background: #f8f9fa;
-  border: 2px solid #244651;
+  background: #3d7689;
+  border: 0.5px solid #244651;
   color: #244651;
   border-radius: 50px;
   font-weight: 500;
+  align-items: center;
   transition: all 0.3s ease;
 }
 
@@ -592,17 +637,6 @@
   background: #252525;
   border-color: #3d7689;
   color: #3d7689;
-}
-
-.tech-tag:hover {
-  background: #244651;
-  color: white;
-  transform: translateY(-2px);
-}
-
-[data-theme='dark'] .tech-tag:hover {
-  background: #3d7689;
-  color: white;
 }
 
 /* Project Links */
@@ -616,13 +650,11 @@
 /* Project Navigation */
 .project-nav {
   padding: 3rem 0;
-  border-top: 1px solid #e0e0e0;
   margin-top: 4rem;
   background-color: #ffffff;
 }
 
 [data-theme='dark'] .project-nav {
-  border-top-color: #404040;
   background-color: #1a1a1a;
 }
 
@@ -634,7 +666,11 @@
 }
 
 .tech-section {
-  margin-bottom: -3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
+  border-bottom: none; /* Add this */
 }
 
 @media (max-width: 768px) {
@@ -716,18 +752,26 @@
 .section {
   padding: 4rem 2rem;
   background-color: #ffffff;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
 }
 
 [data-theme='dark'] .section {
   background-color: #1a1a1a;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
 }
 
 .section-alt {
   background-color: #f8f9fa;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
 }
 
 [data-theme='dark'] .section-alt {
   background-color: #2d2d2d;
+  box-shadow: none; /* Add this */
+  border: none; /* Add this */
 }
 
 .container {

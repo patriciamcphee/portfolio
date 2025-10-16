@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, ArrowRight, 
   FileText, PenTool, Monitor, Code, Mail, Linkedin, Github} from 'lucide-react';
@@ -11,8 +11,23 @@ import HeroImage from '../components/HeroImage';
 
 const HomePage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string): void => {
+    // Scroll to section based on hash in URL
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+    const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -110,13 +125,21 @@ const HomePage: React.FC = () => {
       tags: ["UX Writing", "Error Messages", "User Experience"],
       link: "https://demos.pixlngrid.com/style-guide/writing-effective-error-messages/"
     },
-    {
+        {
       id: 9,
       title: "Backstage Sidebar Redesign",
       category: "ux-design",
       description: "A comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls.",
-      tags: ["UX Design", "Accessibility", "Navigation"],
+      tags: ["UX Design", "Navigation"],
       link: "/project/backstage-sidebar-redesign"
+    },
+    {
+      id: 10,
+      title: "Backstage Create Page Redesign",
+      category: "ux-design",
+      description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
+      tags: ["UX Design", "Navigation"],
+      link: "/project/backstage-create-page-redesign"
     }
   ];
 

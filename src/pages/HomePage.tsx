@@ -109,14 +109,6 @@ const HomePage: React.FC = () => {
       description: "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem.",
       tags: ["UX Writing", "Error Messages", "User Experience"],
       link: "https://demos.pixlngrid.com/style-guide/writing-effective-error-messages/"
-    },
-    {
-      id: 9,
-      title: "Backstage Sidebar Redesign",
-      category: "ux-design",
-      description: "A comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls.",
-      tags: ["UX Design", "Accessibility", "Navigation"],
-      link: "/project/backstage-sidebar-redesign"
     }
   ];
 

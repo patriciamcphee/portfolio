@@ -84,14 +84,7 @@ const HomePage: React.FC = () => {
       tags: ["Style Guide", "Technical Writing", "Technical Documents"],
       link: "https://demos.pixlngrid.com/welcome/"
     },
-    {
-      id: 2,
-      title: "Enhancing Content Search",
-      category: "technical-writing",
-      description: "The Smart Search Plugin makes it easier for users to find content quickly and boosts engagement.",
-      tags: ["Technical Writing", "Blog", "Writing"],
-      link: "https://www.patriciamcphee.com/blog/2024/11/08/enhancing-search-functionality/"
-    },
+
     {
       id: 7,
       title: "Movie App API",

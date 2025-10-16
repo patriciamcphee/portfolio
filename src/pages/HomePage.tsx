@@ -140,6 +140,14 @@ const HomePage: React.FC = () => {
       description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
       tags: ["UX Design", "Navigation"],
       link: "/project/backstage-create-page-redesign"
+    },
+    {
+      id: 10,
+      title: "Writing Release Notes",
+      category: "technical-writing",
+      description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
+      tags: ["Technical Writing"],
+      link: "https://demos.pixlngrid.com/style-guide/writing-effective-release-notes/"
     }
   ];
 

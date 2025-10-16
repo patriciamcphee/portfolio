@@ -704,6 +704,18 @@ select:focus {
   color: var(--text-primary);
 }
 
+.project-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .project-title {
+  color: var(--text-primary);
+}
+
 /* About Section */
 .about-grid {
   display: grid;

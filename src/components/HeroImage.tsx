@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTheme } from '../context/ThemeContext.tsx'; // You'll need a theme context
 import lightImage from '../assets/navbar-4.png';
 import darkImage from '../assets/navbar-4-dark.png';

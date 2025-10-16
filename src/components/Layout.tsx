@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext'; // Import the hook
 
 const Layout: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const { theme, toggleTheme } = useTheme(); // Use the context instead of local state
   const location = useLocation();
 
   useEffect(() => {
@@ -13,28 +14,6 @@ const Layout: React.FC = () => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
   }, [location]);
-
-  const toggleDarkMode = (): void => {
-  setIsDarkMode(!isDarkMode);
-  // Change from class to data attribute
-  document.documentElement.setAttribute('data-theme', !isDarkMode ? 'dark' : 'light');
-};
-
-// Also update the useEffect to set initial theme
-useEffect(() => {
-  // Get saved theme or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  const isDark = savedTheme === 'dark';
-  setIsDarkMode(isDark);
-  document.documentElement.setAttribute('data-theme', savedTheme);
-}, []);
-
-// Update useEffect to save theme preference
-useEffect(() => {
-  const theme = isDarkMode ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-}, [isDarkMode]);
 
   const isHomePage = location.pathname === '/';
 
@@ -76,8 +55,8 @@ useEffect(() => {
                   <Link to="/contact" className="nav-link">Contact</Link>
                 </>
               )}
-              <button onClick={toggleDarkMode} className="theme-toggle">
-                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              <button onClick={toggleTheme} className="theme-toggle">
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             </div>
 

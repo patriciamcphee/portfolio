@@ -1,4 +1,4 @@
-import React, { useState, useRef, FormEvent } from 'react';
+import { useState, useRef, FormEvent } from 'react';
 import { Mail, Phone, Linkedin, Globe, MapPin, Calendar, Briefcase, Award, Code, Send, LucideIcon, Download } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import './Resume.css';

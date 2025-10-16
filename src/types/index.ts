@@ -11,7 +11,7 @@ export interface Project {
 
 export type ProjectCategory = 
   | 'technical-writing' 
-//  | 'ux-design' 
+  | 'ux-design' 
   | 'prompt-engineering' 
   | 'web-design' 
   | 'ux-writing'

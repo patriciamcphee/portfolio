@@ -5,6 +5,7 @@ import ProjectDetailPage from './components/UxDesignProjects/ProjectDetailPage';
 import { AboutPage } from './pages/AboutPage';
 import ContactForm from './components/ContactForm/ContactForm';
 import { NotFoundPage } from './pages/NotFoundPage';
+import JiraToolkit from './components/JiraToolkit/JiraToolkit';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="contact" element={<ContactForm />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/jira-toolkit" element={<JiraToolkit />} />
       </Route>
     </Routes>
   );

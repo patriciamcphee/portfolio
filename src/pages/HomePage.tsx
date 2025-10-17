@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
       category: "prompt-engineering",
       description: "Pre-made AI prompts to turn technical notes into clear, user-friendly JIRA feature descriptions with validation tools.",
       tags: ["AI", "Prompt Engineering", "JIRA"],
-      link: "https://demos.pixlngrid.com/jira-toolkit"
+      link: "/jira-toolkit"
     },
     {
       id: 4,

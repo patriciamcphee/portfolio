@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
       tags: ["Technical Writing"],
-      link: "https://demos.pixlngrid.com/style-guide/writing-effective-release-notes/"
+      link: "https://demos.pixlngrid.com/style-guide/writing-release-notes/"
     }
   ];
 

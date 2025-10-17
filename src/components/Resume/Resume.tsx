@@ -62,7 +62,8 @@ export default function Resume(): JSX.Element {
       highlights: [
         'Developed GenAI toolkit reducing JIRA Feature writing time by 75% (from 2 hours to 30 minutes)',
         'Redesigned Backstage developer portal navigation, reducing clicks by 66%',
-        'Led creation of ContentOps Playbook and style guide for Enterprise DevOps teams'
+        'Led creation of ContentOps Playbook and style guide for Enterprise DevOps teams',
+        'Built Docusaurus markdown-based doc site for a Backstage internal developer platform documentation'
       ]
     },
     {
@@ -72,7 +73,7 @@ export default function Resume(): JSX.Element {
       location: 'Remote',
       highlights: [
         'Conducted content audit and analysis leading to user-centric developer documentation',
-        'Built Docusaurus markdown-based doc site, increasing content accessibility by 30%'
+        'Built Docusaurus markdown-based doc site, adopting a user-centric approach enhancing content management and increasing content accessibility by 30%'
       ]
     },
     {
@@ -92,7 +93,8 @@ export default function Resume(): JSX.Element {
       location: 'Remote',
       highlights: [
         'Collaborated with product engineering to create user-centric deployment guides',
-        'Built Docusaurus markdown-based online help, improving content accessibility by 30%'
+        'Built Docusaurus markdown-based online help, improving content accessibility by 30%',
+        'Developed in-platform UI microcopy helping users navigate complex data encryption software'
       ]
     },
     {
@@ -113,7 +115,7 @@ export default function Resume(): JSX.Element {
       location: 'Remote',
       highlights: [
         'Extreme Networks: Automated API content publishing using shell scripts, reducing curation time by 40%',
-        'ZPE Systems: Wrote marketing eBook and learning materials; produced how-to videos with voiceover'
+        'ZPE Systems: Wrote marketing eBook and learning materials for data center automation; produced how-to videos with voiceover'
       ]
     },
     {
@@ -173,7 +175,7 @@ export default function Resume(): JSX.Element {
       location: 'Denver, CO',
       highlights: [
         'Collaborated with video-on-demand and networking engineers on standard procedures',
-        'Developed Python scripts for system administration and automation tasks'
+        'Developed Python scripts for system administration and automation tasks, demonstrating versatility beyond writing'
       ]
     },
     {

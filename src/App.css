@@ -790,7 +790,7 @@ select:focus {
   color: var(--text-primary);
 }
 
-/* About Section */
+/* About Section - Original */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -798,9 +798,27 @@ select:focus {
   align-items: start;
 }
 
+/* Mobile Responsive Fixes */
 @media (max-width: 768px) {
+  /* About Grid - Remove excessive gap */
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  /* Optional: Add controlled spacing between content divs */
+  .about-content:first-child {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Experience Section - Reduce horizontal padding */
+  #experience .container {
+    padding: 0 0.5rem; /* Reduced from 0 1rem */
+  }
+  
+  /* Alternative: Reduce container padding for all sections on mobile */
+  .container {
+    padding: 0 0.5rem; /* Reduced from 0 1rem */
   }
 }
 

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Copy, Check, ArrowLeft } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 import '../UxDesignProjects/ProjectDetail.css';
 interface CodeBlockProps {
   code: string;

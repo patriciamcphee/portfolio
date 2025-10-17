@@ -32,7 +32,7 @@ export default function Resume(): JSX.Element {
   const form = useRef<HTMLFormElement>(null);
 
    // Your PDF link - replace this with your actual link
-  const RESUME_PDF_LINK = 'https://drive.google.com/file/d/18aVT2suZCcdOBzXgEMPaFrlPsND51le9/view?usp=drive_link';
+  const RESUME_PDF_LINK = 'https://www.dropbox.com/scl/fi/ayt86ufp2dwtnj8sj304o/resume-patricia-mcphee.pdf?rlkey=a8g03un3skrqtshd90fp96pwt&st=j88lwh7o&dl=0';
 
   const skills: Skill[] = [
     { name: 'Technical Writing', level: 100 },

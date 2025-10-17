@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, ArrowRight, 
   FileText, PenTool, Monitor, Code, Mail, Linkedin, Github} from 'lucide-react';
@@ -11,8 +11,23 @@ import HeroImage from '../components/HeroImage';
 
 const HomePage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string): void => {
+    // Scroll to section based on hash in URL
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+    const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -27,6 +42,7 @@ const HomePage: React.FC = () => {
       'prompt-engineering': 'portfolio-card-purple',
       'web-design': 'portfolio-card-blue-dark',
       'coding': 'portfolio-card-orange',
+      'blog-writing': 'portfolio-card-gold',
     };
     return colorMap[category] || 'portfolio-card-blue-light';
   };
@@ -39,6 +55,7 @@ const HomePage: React.FC = () => {
       'prompt-engineering': 'Prompt Engineering',
       'web-design': 'Web Design',
       'coding': 'Coding',
+      'blog-writing': 'Blog Writing',
     };
     return labelMap[category] || category;
   };
@@ -50,7 +67,7 @@ const HomePage: React.FC = () => {
       category: "prompt-engineering",
       description: "Pre-made AI prompts to turn technical notes into clear, user-friendly JIRA feature descriptions with validation tools.",
       tags: ["AI", "Prompt Engineering", "JIRA"],
-      link: "https://demos.pixlngrid.com/jira-toolkit"
+      link: "/jira-toolkit"
     },
     {
       id: 4,
@@ -87,10 +104,10 @@ const HomePage: React.FC = () => {
     {
       id: 2,
       title: "Enhancing Content Search",
-      category: "technical-writing",
+      category: "blog-writing",
       description: "The Smart Search Plugin makes it easier for users to find content quickly and boosts engagement.",
       tags: ["Technical Writing", "Blog", "Writing"],
-      link: "https://www.patriciamcphee.com/blog/2024/11/08/enhancing-search-functionality/"
+      link: "https://demos.pixlngrid.com/blog/2024/11/08/enhancing-search-functionality/"
     },
     {
       id: 7,
@@ -107,6 +124,30 @@ const HomePage: React.FC = () => {
       description: "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem.",
       tags: ["UX Writing", "Error Messages", "User Experience"],
       link: "https://demos.pixlngrid.com/style-guide/writing-effective-error-messages/"
+    },
+        {
+      id: 9,
+      title: "Backstage Sidebar Redesign",
+      category: "ux-design",
+      description: "A comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls.",
+      tags: ["UX Design", "Navigation"],
+      link: "/project/backstage-sidebar-redesign"
+    },
+    {
+      id: 10,
+      title: "Backstage Create Page Redesign",
+      category: "ux-design",
+      description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
+      tags: ["UX Design", "Navigation"],
+      link: "/project/backstage-create-page-redesign"
+    },
+    {
+      id: 11,
+      title: "Writing Release Notes",
+      category: "technical-writing",
+      description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
+      tags: ["Technical Writing"],
+      link: "https://demos.pixlngrid.com/style-guide/writing-release-notes/"
     }
   ];
 
@@ -119,9 +160,10 @@ const HomePage: React.FC = () => {
     { id: 'technical-writing', label: 'Technical Writing' },
     { id: 'ux-writing', label: 'UX Writing' },
     { id: 'prompt-engineering', label: 'Prompt Engineering' },
-     { id: 'ux-design', label: 'UX/UI Design' },
+    { id: 'ux-design', label: 'UX/UI Design' },
     { id: 'web-design', label: 'Web Design' },
     { id: 'coding', label: 'Coding' },
+    { id: 'blog-writing', label: 'Blog Writing' }
 
   ];
 

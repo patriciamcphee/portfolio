@@ -51,7 +51,9 @@ const Layout: React.FC = () => {
                 <>
                   <Link to="/" className="nav-link">Home</Link>
                   <Link to="/about" className="nav-link">About</Link>
+                  <Link to="/#services" className="nav-link">Services</Link>
                   <Link to="/#portfolio" className="nav-link">Portfolio</Link>
+                  <Link to="/#experience" className="nav-link">Experience</Link>
                   <Link to="/contact" className="nav-link">Contact</Link>
                 </>
               )}
@@ -91,10 +93,12 @@ const Layout: React.FC = () => {
               </>
             ) : (
               <>
-                <Link to="/" className="mobile-nav-link">Home</Link>
-                <Link to="/about" className="mobile-nav-link">About</Link>
-                <Link to="/#portfolio" className="mobile-nav-link">Portfolio</Link>
-                <Link to="/contact" className="mobile-nav-link">Contact</Link>
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/about" className="nav-link">About</Link>
+                <Link to="/#services" className="nav-link">Services</Link>
+                <Link to="/#portfolio" className="nav-link">Portfolio</Link>
+                <Link to="/#experience" className="nav-link">Experience</Link>
+                <Link to="/contact" className="nav-link">Contact</Link>
               </>
             )}
           </div>

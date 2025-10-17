@@ -869,3 +869,51 @@ body.dark-mode .contactMethodLabel {
 body.dark-mode .contactMethodValue {
   color: #888;
 }
+
+/* Add this to the end of your Resume.css file */
+
+/* Mobile responsive fixes for Resume component */
+@media (max-width: 768px) {
+  /* Reduce padding in main section for mobile */
+  .mainSection {
+    padding: 2rem 1rem; /* Reduced from 4rem to 2rem vertical, 1rem horizontal */
+  }
+  
+  /* Reduce padding in navigation */
+  .navContent {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Reduce padding in header */
+  .headerContent {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Timeline adjustments for mobile */
+  .timeline {
+    padding-left: 2.5rem; /* Reduced from 5rem */
+  }
+  
+  .timeline::before {
+    left: 0.75rem; /* Adjusted to match new padding */
+  }
+  
+  .timelineDot {
+    left: -1.25rem; /* Adjusted to match new padding */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .mainSection {
+    padding: 1.5rem 0.75rem; /* Even less padding for very small screens */
+  }
+  
+  .navContent {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .headerContent {
+    padding: 1rem 0.75rem;
+  }
+}

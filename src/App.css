@@ -65,6 +65,51 @@
   --moss-green-lighter: #b2b171;
   --moss-green-lightest: #bfbf8a;
 
+  /* Coral/Salmon - complements your teal primary */
+  --coral: #e8917a;
+  --coral-dark: #d67f68;
+  --coral-darker: #c9705c;
+  --coral-darkest: #a75c4a;
+  --coral-light: #eda088;
+  --coral-lighter: #f0ab96;
+  --coral-lightest: #f5c4b4;
+
+  /* Warm Gold/Honey - complements your purples and adds warmth */
+  --gold: #d4a574;
+  --gold-dark: #c29568;
+  --gold-darker: #b6895f;
+  --gold-darkest: #96714d;
+  --gold-light: #ddb184;
+  --gold-lighter: #e3b990;
+  --gold-lightest: #eecaa9;
+
+  /* Deep Slate/Navy - adds depth, complements orange */
+  --slate: #3d5467;
+  --slate-dark: #354a5c;
+  --slate-darker: #2f4252;
+  --slate-darkest: #253642;
+  --slate-light: #4d6477;
+  --slate-lighter: #5a7080;
+  --slate-lightest: #758a99;
+
+  /* Sage Green - softer green that bridges your palette */
+  --sage: #8b9d7f;
+  --sage-dark: #7d8e72;
+  --sage-darker: #74856a;
+  --sage-darkest: #5f6e57;
+  --sage-light: #99aa8e;
+  --sage-lighter: #a4b39a;
+  --sage-lightest: #b8c4b0;
+
+  /* Rust/Terracotta - earthy bridge between orange and purple */
+  --rust: #b86f50;
+  --rust-dark: #a66348;
+  --rust-darker: #9b5c43;
+  --rust-darkest: #7f4b36;
+  --rust-light: #c47f61;
+  --rust-lighter: #cc8c6f;
+  --rust-lightest: #dba58d;
+
     /* Light mode colors (default) */
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
@@ -148,6 +193,7 @@ body {
 /* Default image for light mode */
 .hero-img {
   width: 800px;
+  padding-top: 40px;
   align-items: center;
   max-width: 100%;
   content: url('./assets/navbar-4.png');
@@ -362,6 +408,11 @@ a {
 
 .portfolio-card-orange {
   background: var(--orange);
+  color: white;
+}
+
+.portfolio-card-gold {
+  background: var(--gold);
   color: white;
 }
 
@@ -631,7 +682,7 @@ select:focus {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin: 4rem;
+  margin: 3rem;
 }
 
 .hero-social {
@@ -651,7 +702,7 @@ select:focus {
 
 .hero-scroll {
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   color: var(--secondary);
@@ -739,7 +790,7 @@ select:focus {
   color: var(--text-primary);
 }
 
-/* About Section */
+/* About Section - Original */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -747,9 +798,27 @@ select:focus {
   align-items: start;
 }
 
+/* Mobile Responsive Fixes */
 @media (max-width: 768px) {
+  /* About Grid - Remove excessive gap */
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  /* Optional: Add controlled spacing between content divs */
+  .about-content:first-child {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Experience Section - Reduce horizontal padding */
+  #experience .container {
+    padding: 0 0.5rem; /* Reduced from 0 1rem */
+  }
+  
+  /* Alternative: Reduce container padding for all sections on mobile */
+  .container {
+    padding: 0 0.5rem; /* Reduced from 0 1rem */
   }
 }
 

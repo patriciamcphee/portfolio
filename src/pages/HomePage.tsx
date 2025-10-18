@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, ArrowRight, 
-  FileText, PenTool, Monitor, Code, Mail, Linkedin, Github} from 'lucide-react';
+  FileText, PenTool, Monitor, Code, Mail, Linkedin, Github,
+  Globe} from 'lucide-react';
 import type { Project, Category, Service } from '../types';
 import Resume from '../components/Resume/Resume';
 import ContactForm from '../components/ContactForm/ContactForm';
@@ -75,7 +76,8 @@ const HomePage: React.FC = () => {
       category: "web-design",
       description: "Branding, website design, logo, mobile responsiveness, and lead-generating contact system for a landscaping business.",
       tags: ["Branding", "Web Development", "Logo Design", "React", "Mobile-First"],
-      link: "https://www.leaflinegarden.design/"
+      link: "https://www.leaflinegarden.design/",
+      githubLink: "https://github.com/patriciamcphee/leafline"
     },
     {
       id: 6,
@@ -99,7 +101,8 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "A style guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.",
       tags: ["Technical Writing", "Technical Documents"],
-      link: "https://demos.pixlngrid.com/welcome/"
+      link: "https://demos.pixlngrid.com/welcome/",
+      githubLink: "https://github.com/patriciamcphee/smart-search-plugin-demo"
     },
     {
       id: 2,
@@ -115,7 +118,8 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "This API provides access to information about various B-movies, including details about directors, actors, genres, and release years.",
       tags: ["Technical Writing", "API", "Documentation"],
-      link: "https://demos.pixlngrid.com/api/"
+      link: "https://demos.pixlngrid.com/api/",
+      githubLink: "https://github.com/patriciamcphee/bflix-api"
     },
     {
       id: 8,
@@ -139,7 +143,9 @@ const HomePage: React.FC = () => {
       category: "ux-design",
       description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
       tags: ["UX Design", "Navigation"],
-      link: "/project/backstage-create-page-redesign"
+      link: "/project/backstage-create-page-redesign",
+      githubLink: "https://github.com/patriciamcphee/template-catalog",
+      viteLink: "https://patriciamcphee.github.io/template-catalog/"
     },
     {
       id: 11,
@@ -326,16 +332,43 @@ const HomePage: React.FC = () => {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                   
-                  {/* Add tags here */}
                   <div className="project-tags">
                     {project.tags.map((tag, index) => (
                       <span key={index} className="tag">{tag}</span>
                     ))}
                   </div>
                   
+                  <div className="portfolio-card-footer">
                   <Link to={project.link} className="portfolio-button" target='_blank' rel='noopener noreferrer'>
                     <span className="button-white-text">View Project &#x2192;</span>
                   </Link>
+                  <div className="portfolio-card-links">
+                    {project.githubLink && (
+                      <a 
+                        href={project.githubLink} 
+                        className="portfolio-icon-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title="View GitHub Repository"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.viteLink && (
+                      <a 
+                        href={project.viteLink} 
+                        className="portfolio-icon-link vite-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title="View Live Prototype"
+                      >
+                        <Globe size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
                 </div>
               </div>
             ))}

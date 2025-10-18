@@ -331,7 +331,6 @@ a {
 }
 
 .portfolio-card:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 10px 0 rgba(3,6,26,0.25);
 }
 
@@ -384,17 +383,29 @@ a {
   padding-bottom: 20px;
 }
 
-/* Portfolio Button - centered text */
-.portfolio-button {
+/* Portfolio Card Footer - contains button and icon links */
+.portfolio-card-footer {
   position: absolute;
   left: 30px;
+  right: 30px;
   bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Portfolio Button - remove absolute positioning */
+.portfolio-button {
+  position: relative; /* Changed from absolute */
+  left: auto;
+  bottom: auto;
   font-size: 14px;
   color: white;
   background: rgba(0,0,0,.2);
   text-decoration: none;
   text-transform: uppercase;
-  padding: 14px 20px 8px 20px; /* Reduced top/bottom padding */
+  padding: 14px 20px 8px 20px;
   border-radius: 10000px;
   transition: .3s all;
   line-height: 1;
@@ -406,6 +417,31 @@ a {
 .portfolio-button:hover {
   background: rgba(255,255,255,.8);
   color: #2e2e2e;
+}
+
+/* Container for GitHub and Vite links */
+.portfolio-card-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Shared styles for all icon links */
+.portfolio-icon-link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-icon-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 .button-white-text {

@@ -342,11 +342,35 @@ a {
 }
 
 .portfolio-card p {
-  margin-bottom: 60px;
+  margin-bottom: 1rem; /* Reduced from 60px */
   flex-grow: 1;
   line-height: 1.6;
 }
 
+/* Portfolio card tags - better contrast on colored backgrounds */
+.portfolio-card .project-tags {
+  margin-bottom: 60px; /* Space for the button */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.portfolio-card .tag {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* Optional: Add hover effect */
+.portfolio-card .tag:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+}
 .block-head {
   opacity: .60;
   font-weight: 600;
@@ -1011,6 +1035,7 @@ select:focus {
   box-shadow: 0 8px 16px var(--shadow-hover);
 }
 
+
 .project-0 { border-top-color: var(--primary); }
 .project-1 { border-top-color: var(--secondary); }
 .project-2 { border-top-color: var(--eggplant); }
@@ -1055,6 +1080,7 @@ select:focus {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .tag {

@@ -51,11 +51,11 @@ const HomePage: React.FC = () => {
     const labelMap: { [key: string]: string } = {
       'technical-writing': 'Technical Writing',
       'ux-writing': 'UX Writing',
+      'blog-writing': 'Blog Writing',
       'ux-design': 'UX/UI Design',
-      'prompt-engineering': 'Prompt Engineering',
       'web-design': 'Web Design',
       'coding': 'Coding',
-      'blog-writing': 'Blog Writing',
+      'prompt-engineering': 'Prompt Engineering',   
     };
     return labelMap[category] || category;
   };
@@ -325,6 +325,14 @@ const HomePage: React.FC = () => {
                   <div className="block-head">{getCategoryLabel(project.category)}</div>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  
+                  {/* Add tags here */}
+                  <div className="project-tags">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  
                   <Link to={project.link} className="portfolio-button" target='_blank' rel='noopener noreferrer'>
                     <span className="button-white-text">View Project</span>
                   </Link>

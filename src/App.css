@@ -1740,3 +1740,41 @@ select:focus {
     justify-self: center;
   }
 }
+
+@media (max-width: 768px) {
+
+.nav-container {
+    backdrop-filter: blur(8px);
+    padding: 0 1.125rem;
+  }
+
+  .hero-img {
+  width: 100%;
+  padding: 1.5rem 0;
+  align-items: center;
+  max-width: 100%;
+  content: url('./assets/navbar-4.png');
+}
+
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-theme-toggle {
+    display: block;
+  }
+  
+  .theme-toggle.mobile-theme-toggle {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-toggle,
+  .mobile-theme-toggle {
+    display: none;
+  }
+}

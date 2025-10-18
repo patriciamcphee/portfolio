@@ -137,7 +137,7 @@ const JiraToolkit: React.FC = () => {
 
         .jt-page-title {
           font-family: 'Homenaje', sans-serif;
-          font-size: clamp(1.5rem, 5vw, 3rem);
+          font-size: 3rem;
           font-weight: 800;
           color: #244651;
           margin: 0 0 0.5rem 0;
@@ -300,7 +300,7 @@ const JiraToolkit: React.FC = () => {
         }
 
         .jt-subsection-title {
-          font-size: clamp(1rem, 3vw, 1.25rem);
+          font-size: clamp(1rem, 3vw, 1.5rem);
           font-weight: 600;
           color: #1f2937;
           margin: 0 0 0.75rem 0;
@@ -361,7 +361,7 @@ const JiraToolkit: React.FC = () => {
         }
 
         .jt-column-title {
-          font-size: clamp(1rem, 2.5vw, 1.125rem);
+          font-size: clamp(1rem, 2.5vw, 1.25rem);
           font-weight: 600;
           margin: 0 0 0.75rem 0;
         }
@@ -472,7 +472,7 @@ const JiraToolkit: React.FC = () => {
           font-weight: 600;
           color: #1f2937;
           margin: 0 0 0.75rem 0;
-          font-size: clamp(1rem, 2.5vw, 1.125rem);
+          font-size: clamp(1rem, 2.5vw, 1.5rem);
         }
 
         /* Mobile Responsiveness */

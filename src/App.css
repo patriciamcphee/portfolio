@@ -1,14 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=NTR&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Fjalla+One&family=Khula:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Tulpen+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fjalla+One&family=Khula:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap);
 
 @import url(https://fonts.googleapis.com/css2?family=Homenaje&family=Ropa+Sans:ital@0;1&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Basic&family=Hind+Madurai:wght@300;400;500;600;700&family=IM+Fell+French+Canon:ital@0;1&display=swap);
 
-
-
 @import url("https://use.typekit.net/ndp4mcy.css");
-
 
 /* Root Variables */
 :root {
@@ -110,7 +107,7 @@
   --rust-lighter: #cc8c6f;
   --rust-lightest: #dba58d;
 
-    /* Light mode colors (default) */
+  /* Light mode colors (default) */
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --bg-alt: #f0f2f5;
@@ -125,6 +122,10 @@
   --button-primary: #2563eb;
   --button-hover: #1d4ed8;
   --shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Override specific color values used in components */
+  --heading-color: #333;
+  --card-text: #666;
 }
 
 [data-theme='dark'] {
@@ -133,20 +134,17 @@
   --bg-secondary: #2d2d2d;
   --bg-alt: #252525;
   --text-primary: #ffffff;
-
   --text-secondary: #b0b0b0;
   --text-muted: #808080;
   --border-color: #404040;
   --card-bg: #2d2d2d;
   --nav-bg: #1a1a1a;
-  --footer-bg: ##244651;
+  --footer-bg: #244651;
   --button-primary: #3b82f6;
   --button-hover: var(--primary-lighter);
   --shadow: rgba(0, 0, 0, 0.3);
-}
-
-/* Dark Mode Variables */
-body.dark-mode {
+  
+  /* Dark mode specific overrides */
   --background: #1a1a1a;
   --background-alt: #2a2a2a;
   --text-dark: #e5e5e5;
@@ -155,10 +153,7 @@ body.dark-mode {
   --border: #404040;
   --shadow: rgba(255, 255, 255, 0.05);
   --shadow-hover: rgba(255, 255, 255, 0.1);
-  
-  /* Override specific color values used in components */
   --heading-color: #e5e5e5;
-  --card-bg: #2a2a2a;
   --card-text: #b3b3b3;
 }
 
@@ -185,7 +180,10 @@ body {
   hyphens: none;
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
-  @media screen and (max-width: 820px) {
+}
+
+@media screen and (max-width: 820px) {
+  body {
     font-size: 16px;
   }
 }
@@ -206,7 +204,6 @@ body {
 
 h2, h3 {
   font-family: 'Homenaje', sans-serif;
-
 }
 
 h4 {
@@ -216,17 +213,10 @@ h4 {
   padding-top: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-/*
-  letter-spacing: -0.01em;
-*/
+h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
+
 :is(h1, h2, h3, h4, h5, h6) code {
   font-size: 0.9em;
 }
@@ -252,7 +242,6 @@ a {
 .container-small {
   max-width: 800px;
 }
-
 
 /* Portfolio Container */
 .portfolio-container {
@@ -341,7 +330,7 @@ a {
 }
 
 .portfolio-card p {
-  margin-bottom: 1rem; /* Reduced from 60px */
+  margin-bottom: 1rem;
   flex-grow: 1;
   line-height: 1.6;
 }
@@ -355,7 +344,7 @@ a {
 }
 
 .portfolio-card .tag {
-  padding: 0.5rem 0.85rem 0.25rem 0.875rem; /* Reduced top/bottom padding */
+  padding: 0.5rem 0.85rem 0.25rem 0.875rem;
   font-size: 0.8rem;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.25);
@@ -395,9 +384,9 @@ a {
   gap: 1rem;
 }
 
-/* Portfolio Button - remove absolute positioning */
+/* Portfolio Button */
 .portfolio-button {
-  position: relative; /* Changed from absolute */
+  position: relative;
   left: auto;
   bottom: auto;
   font-size: 14px;
@@ -484,7 +473,6 @@ a {
   color: white;
 }
 
-
 /* Navigation */
 .navbar {
   position: fixed;
@@ -508,7 +496,7 @@ a {
 }
 
 [data-theme='dark'] .nav-link {
-  color: var(--card-text);
+  color: #e5e5e5;
 }
 
 .nav-link:hover {
@@ -633,8 +621,6 @@ select:focus {
   outline: none;
 }
 
-
-
 /* Theme toggle button */
 .theme-toggle {
   background: transparent;
@@ -657,6 +643,16 @@ select:focus {
   color: var(--text-dark);
 }
 
+/* Dark mode fix for mobile menu toggle */
+[data-theme='dark'] .mobile-menu-toggle {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .mobile-menu-toggle svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
+
 /* Mobile Menu */
 .mobile-menu {
   display: flex;
@@ -664,6 +660,11 @@ select:focus {
   background: var(--background);
   border-top: 1px solid var(--border);
   padding: 1rem;
+}
+
+[data-theme='dark'] .mobile-menu {
+  background: #1a1a1a;
+  border-top-color: #404040;
 }
 
 .mobile-nav-link {
@@ -683,6 +684,15 @@ select:focus {
 
 .mobile-nav-link:hover {
   background: var(--background-alt);
+}
+
+[data-theme='dark'] .mobile-nav-link {
+  color: #e5e5e5;
+}
+
+[data-theme='dark'] .mobile-nav-link:hover {
+  background: #2a2a2a;
+  color: #ffffff;
 }
 
 /* Hero Section */
@@ -858,7 +868,7 @@ select:focus {
   color: var(--text-primary);
 }
 
-/* About Section - Original */
+/* About Section */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -868,26 +878,31 @@ select:focus {
 
 /* Mobile Responsive Fixes */
 @media (max-width: 768px) {
-  /* About Grid - Remove excessive gap */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
   
-  /* Optional: Add controlled spacing between content divs */
   .about-content:first-child {
     margin-bottom: 1.5rem;
   }
   
-  /* Experience Section - Reduce horizontal padding */
   #experience .container {
-    padding: 0 0.5rem; /* Reduced from 0 1rem */
+    padding: 0 1.125rem;
   }
   
-  /* Alternative: Reduce container padding for all sections on mobile */
   .container {
-    padding: 0 0.5rem; /* Reduced from 0 1rem */
+    padding: 0 1.125rem;
   }
+
+  .portfolio-container .portfolio-filter {
+    padding: 0 1.125rem;
+  }
+
+  .portfolio-content {
+    padding: 0 1.125rem;
+  }
+
 }
 
 .about-content p {
@@ -966,37 +981,34 @@ select:focus {
 }
 
 /* Dark mode specific overrides */
-.dark-mode .service-card h3,
-.dark-mode .project-content h3,
-.dark-mode .timeline-content h3,
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6 {
-  color: var(--text-secondary);
+[data-theme='dark'] .service-card h3,
+[data-theme='dark'] .project-content h3,
+[data-theme='dark'] .timeline-content h3,
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: var(--text-primary);
 }
 
-.dark-mode .timeline-content {
+[data-theme='dark'] .timeline-content {
   background: #2a2a2a;
 }
 
-.dark-mode .filter-btn {
+[data-theme='dark'] .filter-btn {
   background: #2a2a2a;
   color: var(--text-dark);
 }
 
-.dark-mode .filter-btn:hover {
+[data-theme='dark'] .filter-btn:hover {
   background: #404040;
 }
 
-
-.dark-mode .service-card {
+[data-theme='dark'] .service-card {
   background: #1a1a1a;
 }
-
-
 
 .service-0 { border-top-color: var(--primary); }
 .service-1 { border-top-color: var(--secondary); }
@@ -1011,8 +1023,6 @@ select:focus {
 .service-0 { border-top-color: var(--primary-lighter); }
 
 [data-theme='dark'] .service-0 .service-icon { color: var(--primary-lighter); }
-
-
 
 /* Portfolio Section */
 .portfolio-filter {
@@ -1048,7 +1058,6 @@ select:focus {
   background: #575757;
 }
 
-
 .filter-btn.active {
   background: var(--secondary);
   color: white;
@@ -1070,7 +1079,7 @@ select:focus {
   border-top: 4px solid;
 }
 
-.dark-mode .project-card {
+[data-theme='dark'] .project-card {
   background: #1a1a1a;
 }
 
@@ -1078,7 +1087,6 @@ select:focus {
   transform: translateY(-8px);
   box-shadow: 0 8px 16px var(--shadow-hover);
 }
-
 
 .project-0 { border-top-color: var(--primary); }
 .project-1 { border-top-color: var(--secondary); }
@@ -1236,7 +1244,7 @@ select:focus {
   transform: none;
 }
 
-.dark-mode .timeline-content {
+[data-theme='dark'] .timeline-content {
   background: #1a1a1a;
 }
 
@@ -1398,10 +1406,9 @@ select:focus {
   box-shadow: 0 8px 16px var(--shadow);
 }
 
-.dark-mode .contact-card {
+[data-theme='dark'] .contact-card {
   background: #1a1a1a;
 }
-
 
 /* Footer */
 .footer {
@@ -1595,7 +1602,7 @@ select:focus {
   padding-left: 4rem;
 }
 
-.dark-mode .result-card {
+[data-theme='dark'] .result-card {
   background: #1a1a1a;
 }
 
@@ -1733,5 +1740,3 @@ select:focus {
     justify-self: center;
   }
 }
-
-

@@ -883,10 +883,22 @@ body.dark-mode .contactMethodValue {
   .navContent {
     padding: 1rem 0.5rem;
   }
+
+  .about-content .sectionTitle {
+    margin: 0 1rem;
+  }
+
+  .education {
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  .navigation {
+    padding: 1.25rem 1rem 0.75rem 1rem; 
+  }
   
   /* Reduce padding in header */
   .headerContent {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
   }
   
   /* Timeline adjustments for mobile */

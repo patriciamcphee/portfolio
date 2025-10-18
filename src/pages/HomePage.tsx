@@ -334,7 +334,7 @@ const HomePage: React.FC = () => {
                   </div>
                   
                   <Link to={project.link} className="portfolio-button" target='_blank' rel='noopener noreferrer'>
-                    <span className="button-white-text">View Project</span>
+                    <span className="button-white-text">View Project &#x2192;</span>
                   </Link>
                 </div>
               </div>

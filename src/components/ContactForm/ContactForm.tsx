@@ -80,7 +80,7 @@ function ContactForm() {
                     <input type="email" required className="form-control" placeholder="Email" name="user_email" />
                 </div>
                 <div className="form-group">
-                    <input id="form-phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" name="Phone" className="form-control" placeholder="Phone #" />
+                    <input id="form-phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" name="Phone" className="form-control" placeholder="Phone # (xxx-xxx-xxxx)" />
                 </div>
                 <div className="form-group">
                     <textarea required className="form-control" placeholder="Message" id="contact-message" name="message" rows={5}></textarea>

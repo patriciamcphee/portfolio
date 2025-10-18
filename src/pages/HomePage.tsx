@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
       id: 12,
       title: "Backstage Template Editor",
       category: "technical-writing",
-      description: "The Template Editor is a browser-based sandbox for experimenting with templates offering a live preview and an interactive environment to prototype ideas.",
+      description: "The Template Editor is a browser-based sandbox for experimenting with templates. It offers a live preview and an interactive environment to prototype ideas.",
       tags: ["Technical Writing", "Backstage"],
       link: "https://demos.pixlngrid.com/template-editor/using-template-editor/"
     },

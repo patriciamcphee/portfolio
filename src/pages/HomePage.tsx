@@ -259,8 +259,8 @@ const HomePage: React.FC = () => {
               <p>
                 But documentation is just one part of the story. I approach every project 
                 as a strategist and developer advocate—someone who understands that great 
-                content doesn't just explain <em>how</em> something works, but shows developers 
-                <em>why</em> it matters and how it solves their problems.
+                content doesn't just explain <em>how</em> something works, but shows developers&nbsp; 
+                <em>why</em> &nbsp;it matters and how it solves their problems.
               </p>
             </div>
 

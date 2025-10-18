@@ -277,7 +277,7 @@ const HomePage: React.FC = () => {
                 turning complex platforms into accessible, compelling stories.
               </p>
               <p>
-                Currently, I am diving deeper into AI and TypeScript to better support the developer community—because in this field, 
+                Currently, I am diving deeper into AI, prompt engineering, and TypeScript to better support the developer community—because in this field, 
                 learning never stops.
               </p>
             </div>

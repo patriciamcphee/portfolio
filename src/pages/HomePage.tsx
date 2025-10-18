@@ -154,7 +154,15 @@ const HomePage: React.FC = () => {
       description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
       tags: ["Technical Writing"],
       link: "https://demos.pixlngrid.com/style-guide/writing-release-notes/"
-    }
+    },
+    {
+      id: 12,
+      title: "Backstage Template Editor",
+      category: "technical-writing",
+      description: "The Template Editor is a browser-based sandbox for experimenting with templates offering a live preview and an interactive environment to prototype ideas.",
+      tags: ["Technical Writing", "Backstage"],
+      link: "https://demos.pixlngrid.com/template-editor/using-template-editor/"
+    },
   ];
 
   const filteredProjects: Project[] = selectedCategory === 'all' 

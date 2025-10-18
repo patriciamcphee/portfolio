@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
       title: "Style Guide",
       category: "technical-writing",
       description: "A style guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.",
-      tags: ["Style Guide", "Technical Writing", "Technical Documents"],
+      tags: ["Technical Writing", "Technical Documents"],
       link: "https://demos.pixlngrid.com/welcome/"
     },
     {

@@ -462,33 +462,6 @@ if (projectId === 'backstage-create-page-redesign') {
           </div>
         </div>
       </section>
-
-      {/* Project Navigation */}
-      <section className="project-nav">
-        <div className="container">
-          <div className="project-nav-grid">
-            {project.prevProject ? (
-              <Link to={`/project/${project.prevProject}`} className="project-nav-link prev">
-                <ArrowLeft size={20} />
-                <span>Previous Project</span>
-              </Link>
-            ) : (
-              <div></div>
-            )}
-            <Link to="/#portfolio" className="project-nav-link center">
-              All Projects
-            </Link>
-            {project.nextProject ? (
-              <Link to={`/project/${project.nextProject}`} className="project-nav-link next">
-                <span>Next Project</span>
-                <ArrowLeft size={20} className="arrow-right" />
-              </Link>
-            ) : (
-              <div></div>
-            )}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

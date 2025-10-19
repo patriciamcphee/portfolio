@@ -63,7 +63,7 @@ export default function Resume(): JSX.Element {
         'Developed GenAI toolkit reducing JIRA Feature writing time by 75% (from 2 hours to 30 minutes)',
         'Redesigned Backstage developer portal navigation, reducing clicks by 66%',
         'Led creation of ContentOps Playbook and style guide for Enterprise DevOps teams',
-        'Built Docusaurus markdown-based doc site for a Backstage internal developer platform documentation'
+        'Built Docusaurus markdown-based doc site for the Backstage internal developer platform documentation'
       ]
     },
     {

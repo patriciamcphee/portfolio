@@ -24,6 +24,7 @@
 /* Container */
 .resumeContainer {
   min-height: 100vh;
+  border-radius: 16px 16px 0 0;
 }
 
 [data-theme='dark'] .resumeContainer {

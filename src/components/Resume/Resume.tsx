@@ -92,9 +92,10 @@ export default function Resume(): JSX.Element {
       period: '10/2021 – 03/2022',
       location: 'Remote',
       highlights: [
-        'Collaborated with product engineering to create user-centric deployment guides',
-        'Built Docusaurus markdown-based online help, improving content accessibility by 30%',
-        'Developed in-platform UI microcopy helping users navigate complex data encryption software'
+        'Developed user-friendly deployment guides for support teams and customers.',
+        'Built Docusaurus markdown-based online help, improving content accessibility by 30%.',
+        'Developed in-platform UI microcopy helping users navigate complex data encryption software.'
+
       ]
     },
     {

@@ -7,6 +7,8 @@ export interface Project {
   description: string;
   tags: string[];
   link: string;
+  githubLink?: string;
+  viteLink?: string; // Add this line
 }
 
 export type ProjectCategory = 

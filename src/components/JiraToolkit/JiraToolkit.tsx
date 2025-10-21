@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { Copy, Check } from 'lucide-react';
-import '../UxDesignProjects/ProjectDetail.css';
+
 interface CodeBlockProps {
   code: string;
   id: string;
@@ -88,11 +88,476 @@ const JiraToolkit: React.FC = () => {
   );
 
   return (
-<div className="project-detail-page">
+    <div className="jira-toolkit-page">
+      <style>{`
+        /* ==================== JIRA TOOLKIT PAGE STYLES ==================== */
+        .jira-toolkit-page {
+          background-color: #ffffff;
+          min-height: 100vh;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+          position: relative;
+          box-sizing: border-box;
+        }
+
+        .jira-toolkit-page *,
+        .jira-toolkit-page *::before,
+        .jira-toolkit-page *::after {
+          box-sizing: border-box;
+        }
+
+        /* Hero Section */
+        .jt-hero {
+          padding: 100px 0 0 0;
+          background-color: #ffffff;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        .jt-hero-content {
+          max-width: 800px;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          padding: 2rem 1rem;
+        }
+
+        .jt-category-badge {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          background: #244651;
+          color: white;
+          border-radius: 50px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .jt-page-title {
+          font-family: 'Homenaje', sans-serif;
+          font-size: 3rem;
+          font-weight: 800;
+          color: #244651;
+          margin: 0 0 0.5rem 0;
+          line-height: 1.2;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          padding: 0 0.5rem;
+        }
+
+        .jt-page-subtitle {
+          font-size: clamp(0.8rem, 2vw, 0.95rem);
+          color: #6b7280;
+          margin: 0;
+          font-weight: 500;
+        }
+
+        /* Main Content */
+        .jt-main-content {
+          padding: 4rem 1rem;
+          background-color: #ffffff;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        /* Containers */
+        .jira-toolkit-page .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        .jira-toolkit-page .container-small {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        /* Introduction */
+        .jt-intro {
+          margin-bottom: 3rem;
+        }
+
+        .jt-intro-text {
+          font-size: clamp(1rem, 2.5vw, 1.125rem);
+          color: #374151;
+          line-height: 1.75;
+          margin-bottom: 1.5rem;
+          word-wrap: break-word;
+        }
+
+        .jt-description {
+          color: #374151;
+          line-height: 1.75;
+          margin-bottom: 1rem;
+          word-wrap: break-word;
+          font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        /* Warning Box */
+        .jt-warning-box {
+          background: #fef3c7;
+          border-left: 4px solid #f59e0b;
+          padding: 1rem 1.25rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          margin: 1.5rem 0;
+          width: 100%;
+          overflow-wrap: break-word;
+        }
+
+        .jt-warning-title {
+          color: #78350f;
+          font-weight: 500;
+          margin: 0 0 0.5rem 0;
+          word-wrap: break-word;
+        }
+
+        .jt-warning-text {
+          color: #374151;
+          margin: 0;
+          word-wrap: break-word;
+        }
+
+        /* Tip Box */
+        .jt-tip-box {
+          background: #d1fae5;
+          border-left: 4px solid #059669;
+          padding: 1rem 1.25rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          margin: 1.5rem 0;
+          width: 100%;
+          overflow-wrap: break-word;
+        }
+
+        /* Reminder Box */
+        .jt-reminder-box {
+          background: #d1fae5;
+          border-left: 4px solid #059669;
+          padding: 1rem 1.25rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          margin: 1.5rem 0;
+          width: 100%;
+          overflow-wrap: break-word;
+        }
+
+        .jt-box-title {
+          color: #065f46;
+          font-weight: 600;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 0.5rem;
+        }
+
+        .jt-box-content {
+          color: #374151;
+          word-wrap: break-word;
+        }
+
+        /* Info Box */
+        .jt-info-box {
+          background: #dbeafe;
+          border-left: 4px solid #2563eb;
+          padding: 1rem 1.25rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          margin: 1.5rem 0;
+          width: 100%;
+          overflow-wrap: break-word;
+        }
+
+        .jt-info-box p {
+          color: #1f2937;
+          margin: 0;
+          word-wrap: break-word;
+        }
+
+        /* Sections */
+        .jt-section {
+          margin-bottom: 3rem;
+          scroll-margin-top: 2rem;
+          width: 100%;
+        }
+
+        .jt-section-title {
+          font-size: clamp(1.25rem, 4vw, 1.875rem);
+          font-weight: 700;
+          color: #244651;
+          margin: 0 0 1.5rem 0;
+          padding-bottom: 0.5rem;
+          border-bottom: 2px solid #e5e7eb;
+          word-wrap: break-word;
+        }
+
+        .jt-subsection {
+          margin-bottom: 2rem;
+          scroll-margin-top: 2rem;
+          width: 100%;
+        }
+
+        .jt-subsection-title {
+          font-size: clamp(1rem, 3vw, 1.5rem);
+          font-weight: 600;
+          color: #1f2937;
+          margin: 0 0 0.75rem 0;
+          word-wrap: break-word;
+        }
+
+        /* Lists */
+        .jt-bullet-list {
+          list-style-type: disc;
+          padding-left: 1.5rem;
+          margin: 1rem 0;
+          width: 100%;
+        }
+
+        .jt-bullet-list li {
+          margin: 0.75rem 0;
+          color: #374151;
+          line-height: 1.6;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+
+        .jt-numbered-list {
+          padding-left: 0;
+          list-style: none;
+          margin: 1rem 0;
+          width: 100%;
+        }
+
+        .jt-numbered-list li {
+          color: #374151;
+          margin-bottom: 0.75rem;
+          line-height: 1.6;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+
+        .jt-checklist {
+          list-style: none;
+          padding: 0;
+          margin: 0.25rem 0 0 0;
+          width: 100%;
+        }
+
+        .jt-checklist li {
+          margin-bottom: 0.25rem;
+          color: #374151;
+          word-wrap: break-word;
+        }
+
+        /* Grid */
+        .jt-two-column-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin: 1.5rem 0;
+          width: 100%;
+        }
+
+        .jt-column-title {
+          font-size: clamp(1rem, 2.5vw, 1.25rem);
+          font-weight: 600;
+          margin: 0 0 0.75rem 0;
+        }
+
+        .jt-column-title.jt-success {
+          color: #047857;
+        }
+
+        .jt-column-title.jt-error {
+          color: #dc2626;
+        }
+
+        /* Code Block */
+        .jt-code-block-container {
+          position: relative;
+          margin: 1rem 0;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .jt-code-block-container:hover .jt-copy-button {
+          opacity: 1;
+        }
+
+        .jt-code-block {
+          background: #111827;
+          color: #f3f4f6;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          overflow-x: auto;
+          font-size: clamp(0.65rem, 1.5vw, 0.875rem);
+          line-height: 1.6;
+          margin: 0;
+          font-family: 'Courier New', Courier, monospace;
+          width: 100%;
+          max-width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+
+        .jt-code-block::-webkit-scrollbar {
+          height: 8px;
+        }
+
+        .jt-code-block::-webkit-scrollbar-track {
+          background: #1f2937;
+          border-radius: 4px;
+        }
+
+        .jt-code-block::-webkit-scrollbar-thumb {
+          background: #4b5563;
+          border-radius: 4px;
+        }
+
+        .jt-code-block::-webkit-scrollbar-thumb:hover {
+          background: #6b7280;
+        }
+
+        .jt-code-block code {
+          font-family: 'Courier New', Courier, monospace;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          display: block;
+        }
+
+        .jt-copy-button {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          padding: 0.5rem;
+          background: #1f2937;
+          border: none;
+          border-radius: 0.375rem;
+          cursor: pointer;
+          opacity: 0;
+          transition: all 0.2s;
+          z-index: 10;
+        }
+
+        .jt-copy-button:hover {
+          background: #374151;
+        }
+
+        .jt-icon {
+          width: 1rem;
+          height: 1rem;
+        }
+
+        .jt-check-icon {
+          color: #10b981;
+        }
+
+        .jt-copy-icon {
+          color: #9ca3af;
+        }
+
+        /* Refinement Section */
+        .jt-refinement-section {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin-top: 1.5rem;
+          width: 100%;
+        }
+
+        .jt-refinement-title {
+          font-weight: 600;
+          color: #1f2937;
+          margin: 0 0 0.75rem 0;
+          font-size: clamp(1rem, 2.5vw, 1.5rem);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+          .jt-hero {
+            padding: 80px 0 0 0;
+          }
+          
+          .jt-hero-content {
+            padding: 1.5rem 1rem;
+          }
+          
+          .jt-main-content {
+            padding: 2rem 0.5rem;
+          }
+          
+          .jira-toolkit-page .container,
+          .jira-toolkit-page .container-small {
+            padding: 0 0.75rem;
+          }
+
+          .jt-copy-button {
+            opacity: 1;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .jt-hero {
+            padding: 70px 0 0 0;
+          }
+
+          .jt-main-content {
+            padding: 1.5rem 0.5rem;
+          }
+          
+          .jt-warning-box,
+          .jt-tip-box,
+          .jt-reminder-box,
+          .jt-info-box {
+            padding: 0.75rem 0.875rem;
+            margin: 1rem 0;
+          }
+          
+          .jt-bullet-list,
+          .jt-numbered-list {
+            padding-left: 1.25rem;
+          }
+
+          .jt-two-column-grid {
+            gap: 1.5rem;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .jt-main-content {
+            padding: 1rem 0.25rem;
+          }
+          
+          .jira-toolkit-page .container,
+          .jira-toolkit-page .container-small {
+            padding: 0 0.5rem;
+          }
+          
+          .jt-code-block {
+            padding: 0.5rem;
+          }
+
+          .jt-category-badge {
+            font-size: 0.75rem;
+            padding: 0.375rem 0.75rem;
+          }
+        }
+
+        /* Touch device improvements */
+        @media (hover: none) and (pointer: coarse) {
+          .jt-copy-button {
+            opacity: 1;
+          }
+        }
+      `}</style>
+
       {/* Hero Section */}
-      <section className="project-hero project-hero-padded">
+      <section className="jt-hero">
         <div className="container">
-          <div className="project-hero-content">
+          <div className="jt-hero-content">
             <span className="jt-category-badge">Prompt Engineering</span>
             <h1 className="jt-page-title">JIRA Feature Generation Toolkit</h1>
             <p className="jt-page-subtitle">By Patricia McPhee • August 18, 2025</p>

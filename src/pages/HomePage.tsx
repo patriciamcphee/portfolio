@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, ArrowRight, 
-  FileText, PenTool, Monitor, Code, Mail, Linkedin, Github} from 'lucide-react';
+  FileText, PenTool, Monitor, Code, Mail, Linkedin, Github,
+  Globe} from 'lucide-react';
 import type { Project, Category, Service } from '../types';
 import Resume from '../components/Resume/Resume';
 import ContactForm from '../components/ContactForm/ContactForm';
@@ -51,11 +52,11 @@ const HomePage: React.FC = () => {
     const labelMap: { [key: string]: string } = {
       'technical-writing': 'Technical Writing',
       'ux-writing': 'UX Writing',
+      'blog-writing': 'Blog Writing',
       'ux-design': 'UX/UI Design',
-      'prompt-engineering': 'Prompt Engineering',
       'web-design': 'Web Design',
       'coding': 'Coding',
-      'blog-writing': 'Blog Writing',
+      'prompt-engineering': 'Prompt Engineering',   
     };
     return labelMap[category] || category;
   };
@@ -75,7 +76,8 @@ const HomePage: React.FC = () => {
       category: "web-design",
       description: "Branding, website design, logo, mobile responsiveness, and lead-generating contact system for a landscaping business.",
       tags: ["Branding", "Web Development", "Logo Design", "React", "Mobile-First"],
-      link: "https://www.leaflinegarden.design/"
+      link: "https://www.leaflinegarden.design/",
+      githubLink: "https://github.com/patriciamcphee/leafline"
     },
     {
       id: 6,
@@ -98,8 +100,9 @@ const HomePage: React.FC = () => {
       title: "Style Guide",
       category: "technical-writing",
       description: "A style guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.",
-      tags: ["Style Guide", "Technical Writing", "Technical Documents"],
-      link: "https://demos.pixlngrid.com/welcome/"
+      tags: ["Technical Writing", "Technical Documents"],
+      link: "https://demos.pixlngrid.com/welcome/",
+      githubLink: "https://github.com/patriciamcphee/smart-search-plugin-demo"
     },
     {
       id: 2,
@@ -115,7 +118,8 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "This API provides access to information about various B-movies, including details about directors, actors, genres, and release years.",
       tags: ["Technical Writing", "API", "Documentation"],
-      link: "https://demos.pixlngrid.com/api/"
+      link: "https://demos.pixlngrid.com/api/",
+      githubLink: "https://github.com/patriciamcphee/bflix-api"
     },
     {
       id: 8,
@@ -139,7 +143,9 @@ const HomePage: React.FC = () => {
       category: "ux-design",
       description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
       tags: ["UX Design", "Navigation"],
-      link: "/project/backstage-create-page-redesign"
+      link: "/project/backstage-create-page-redesign",
+      githubLink: "https://github.com/patriciamcphee/template-catalog",
+      viteLink: "https://patriciamcphee.github.io/template-catalog/"
     },
     {
       id: 11,
@@ -148,7 +154,15 @@ const HomePage: React.FC = () => {
       description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
       tags: ["Technical Writing"],
       link: "https://demos.pixlngrid.com/style-guide/writing-release-notes/"
-    }
+    },
+    {
+      id: 12,
+      title: "Backstage Template Editor",
+      category: "technical-writing",
+      description: "The Template Editor is a browser-based sandbox for experimenting with templates. It offers a live preview and an interactive environment to prototype ideas.",
+      tags: ["Technical Writing", "Backstage"],
+      link: "https://demos.pixlngrid.com/template-editor/using-template-editor/"
+    },
   ];
 
   const filteredProjects: Project[] = selectedCategory === 'all' 
@@ -253,8 +267,8 @@ const HomePage: React.FC = () => {
               <p>
                 But documentation is just one part of the story. I approach every project 
                 as a strategist and developer advocate—someone who understands that great 
-                content doesn't just explain <em>how</em> something works, but shows developers 
-                <em>why</em> it matters and how it solves their problems.
+                content doesn't just explain <em>how</em> something works, but shows developers&nbsp; 
+                <em>why</em> &nbsp;it matters and how it solves their problems.
               </p>
             </div>
 
@@ -271,7 +285,7 @@ const HomePage: React.FC = () => {
                 turning complex platforms into accessible, compelling stories.
               </p>
               <p>
-                Currently, I am diving deeper into AI and TypeScript to better support the developer community—because in this field, 
+                Currently, I am diving deeper into AI, prompt engineering, and TypeScript to better support the developer community—because in this field, 
                 learning never stops.
               </p>
             </div>
@@ -325,9 +339,44 @@ const HomePage: React.FC = () => {
                   <div className="block-head">{getCategoryLabel(project.category)}</div>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  
+                  <div className="project-tags">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  
+                  <div className="portfolio-card-footer">
                   <Link to={project.link} className="portfolio-button" target='_blank' rel='noopener noreferrer'>
-                    <span className="button-white-text">View Project</span>
+                    <span className="button-white-text">View Project &#x2192;</span>
                   </Link>
+                  <div className="portfolio-card-links">
+                    {project.githubLink && (
+                      <a 
+                        href={project.githubLink} 
+                        className="portfolio-icon-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title="View GitHub Repository"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.viteLink && (
+                      <a 
+                        href={project.viteLink} 
+                        className="portfolio-icon-link vite-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title="View Live Prototype"
+                      >
+                        <Globe size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
                 </div>
               </div>
             ))}

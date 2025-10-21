@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext'; // Import the hook
+import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const { theme, toggleTheme } = useTheme(); // Use the context instead of local state
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
@@ -16,6 +16,15 @@ const Layout: React.FC = () => {
   }, [location]);
 
   const isHomePage = location.pathname === '/';
+
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="portfolio-container">
@@ -78,14 +87,7 @@ const Layout: React.FC = () => {
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     className="mobile-nav-link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById(item.toLowerCase());
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                      setIsMenuOpen(false);
-                    }}
+                    onClick={(e) => handleMobileNavClick(e, item.toLowerCase())}
                   >
                     {item}
                   </a>
@@ -93,14 +95,39 @@ const Layout: React.FC = () => {
               </>
             ) : (
               <>
-                <Link to="/" className="nav-link">Home</Link>
-                <Link to="/about" className="nav-link">About</Link>
-                <Link to="/#services" className="nav-link">Services</Link>
-                <Link to="/#portfolio" className="nav-link">Portfolio</Link>
-                <Link to="/#experience" className="nav-link">Experience</Link>
-                <Link to="/contact" className="nav-link">Contact</Link>
+                <Link to="/" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                <Link to="/about" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
+                <Link to="/#services" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Services</Link>
+                <Link to="/#portfolio" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+                <Link to="/#experience" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Experience</Link>
+                <Link to="/contact" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </>
             )}
+            
+            {/* Theme Toggle in Mobile Menu */}
+            <button 
+              onClick={() => {
+                toggleTheme();
+                setIsMenuOpen(false);
+              }} 
+              className="mobile-nav-link mobile-theme-btn"
+              style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                justifyContent: 'flex-start'
+              }}
+            >
+              {theme === 'dark' ? (
+                <>
+                  <Sun size={20} />
+                </>
+              ) : (
+                <>
+                  <Moon size={20} />
+                </>
+              )}
+            </button>
           </div>
         )}
       </nav>

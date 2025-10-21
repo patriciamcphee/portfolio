@@ -88,15 +88,15 @@ const ProjectDetailPage: React.FC = () => {
     },
     'backstage-create-page-redesign': {
       id: 'backstage-create-page-redesign',
-      title: 'Template Gallery Redesign',
+      title: 'Template Catalog Redesign',
       subtitle: 'Transforming Template Discovery & Selection',
       category: 'UX Design',
       client: 'Alchemy Platform',
       duration: '2 months',
       team: '3 members (1 UX, 1 Dev, 1 PM)',
       heroImage: CreatePageBackstage,
-      overview: 'Redesigned the template gallery interface to dramatically improve template discoverability and user efficiency. Increased templates visible above the fold by 200%, introduced dynamic filtering capabilities, and transformed static elements into interactive discovery tools.',
-      challenge: 'The default Backstage template gallery presented critical usability challenges: limited template visibility required excessive scrolling, oversized headers consumed valuable screen space, static tag chips provided no filtering functionality, and users struggled to discover relevant templates efficiently. The interface hadn\'t scaled with Alchemy\'s growing template ecosystem.',
+      overview: 'Redesigned the template catalog interface to dramatically improve template discoverability and user efficiency. Increased templates visible above the fold by 200%, introduced dynamic filtering capabilities, and transformed static elements into interactive discovery tools.',
+      challenge: 'The default Backstage template catalog presented critical usability challenges: limited template visibility required excessive scrolling, oversized headers consumed valuable screen space, static tag chips provided no filtering functionality, and users struggled to discover relevant templates efficiently. The interface hadn\'t scaled with Alchemy\'s growing template ecosystem.',
       solution: 'Implemented a comprehensive redesign featuring: a compact, responsive grid layout maximizing template visibility, an intelligent sidebar with Quick Filters, Categories, Teams, and Tags filtering, interactive tag chips that dynamically add filters, an Active Filters card showing all selections with clear/remove options, enhanced search integration, and improved template cards with favoriting, usage statistics, and documentation links.',
       results: [
         'Increased templates visible above fold by 200%',
@@ -109,6 +109,7 @@ const ProjectDetailPage: React.FC = () => {
       technologies: ['Figma', 'React', 'TypeScript', 'CSS Grid', 'User Testing', 'A/B Testing'],
       images: [
         CreatePageBackstage,
+        CreatePageRedesign,
         CreatePageRedesign2
       ],
       prevProject: 'backstage-sidebar-redesign'
@@ -414,11 +415,11 @@ if (projectId === 'backstage-create-page-redesign') {
         </div>
       </section>
 
-      {/* Images Gallery */}
+      {/* Images Catalog */}
       {project.images.length > 0 && (
         <section className="section section-alt">
           <div className="container">
-            <h2 className="text-center">Design Documentation</h2>
+            <h2 className="text-center">Design Showcase</h2>
             <p className="text-center gallery-description">
               Before and after comparison showing the transformation from limited visibility to an optimized discovery interface
             </p>
@@ -458,33 +459,6 @@ if (projectId === 'backstage-create-page-redesign') {
               >
                 View Prototype <ExternalLink size={20} />
               </a>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Project Navigation */}
-      <section className="project-nav">
-        <div className="container">
-          <div className="project-nav-grid">
-            {project.prevProject ? (
-              <Link to={`/project/${project.prevProject}`} className="project-nav-link prev">
-                <ArrowLeft size={20} />
-                <span>Previous Project</span>
-              </Link>
-            ) : (
-              <div></div>
-            )}
-            <Link to="/#portfolio" className="project-nav-link center">
-              All Projects
-            </Link>
-            {project.nextProject ? (
-              <Link to={`/project/${project.nextProject}`} className="project-nav-link next">
-                <span>Next Project</span>
-                <ArrowLeft size={20} className="arrow-right" />
-              </Link>
-            ) : (
-              <div></div>
             )}
           </div>
         </div>

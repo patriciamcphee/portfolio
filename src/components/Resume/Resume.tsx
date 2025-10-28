@@ -39,17 +39,19 @@ export default function Resume(): JSX.Element {
     { name: 'Docusaurus', level: 95 },
     { name: 'Markdown', level: 90 },
     { name: 'Git/GitHub', level: 90 },
-    { name: 'HTML/CSS', level: 90 },
+    { name: 'VS Code', level: 90 },
     { name: 'Confluence', level: 90 },
-    { name: 'Visual Studio', level: 90 },
-    { name: 'Docs-as-Code/JAMstack', level: 90 },
-    { name: 'JavaScript', level: 80 },
+    { name: 'Adobe InDesign', level: 90 },
+    { name: 'SnagIt', level: 90 },
     { name: 'Content Strategy', level: 80 },
     { name: 'Information Architecture', level: 80 },
     { name: 'NodeJS/React', level: 80 },
+    { name: 'JavaScript', level: 80 },
     { name: 'Figma', level: 80 },
-    { name: 'Postman', level: 70 },
     { name: 'Instructional Design', level: 70 },
+    { name: 'Accessibility Concepts', level: 70 },
+    { name: 'JIRA', level: 70 },
+    { name: 'Adobe Premiere Pro', level: 70 },
     { name: 'Backstage', level: 60 },
   ];
 
@@ -177,16 +179,6 @@ export default function Resume(): JSX.Element {
       highlights: [
         'Collaborated with video-on-demand and networking engineers on standard procedures',
         'Developed Python scripts for system administration and automation tasks, demonstrating versatility beyond writing'
-      ]
-    },
-    {
-      company: 'SolidFire',
-      role: 'Technical Writer, Contractor',
-      period: '01/2014 – 10/2014',
-      location: 'Boulder, CO',
-      highlights: [
-        'Created release notes, configuration guides, troubleshooting documentation, and white papers',
-        'Wrote technical marketing content including solution briefs for cloud storage platform'
       ]
     }
   ];
@@ -334,12 +326,10 @@ export default function Resume(): JSX.Element {
                     <div className="educationItem">
                       <h4 className="educationSchool">Kaplan University</h4>
                       <p className="educationDegree">BS in Health/Environmental Science</p>
-                      <p className="educationDate">2010 – 2012</p>
                     </div>
                     <div className="educationItem">
                       <h4 className="educationSchool">DeVry University</h4>
                       <p className="educationDegree">AS Computer Systems</p>
-                      <p className="educationDate">1999 – 2001</p>
                     </div>
                     <div className="educationItemGreen">
                       <h4 className="educationSchool">CareerFoundary</h4>

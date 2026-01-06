@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build:portfolio": "tsc -b && vite build",
+    "build:samples": "cd docs-samples && npm run build",
+    "copy:samples": "cp -r docs-samples/build/ dist/samples/",
+    "build": "npm run build:portfolio && npm run build:samples && npm run copy:samples",
     "lint": "eslint .",
     "preview": "vite preview",
     "clean": "rm -rf node_modules package-lock.json dist"

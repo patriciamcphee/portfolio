@@ -101,8 +101,8 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "A style guide for a Developer Doc Site is a roadmap for those interested in contributing to a project's documentation.",
       tags: ["Technical Writing", "Technical Documents"],
-      link: "https://demos.pixlngrid.com/welcome/",
-      githubLink: "https://github.com/patriciamcphee/smart-search-plugin-demo"
+      link: "/samples/welcome/",
+      githubLink: "https://github.com/patriciamcphee/portfolio"
     },
     {
       id: 2,
@@ -110,7 +110,7 @@ const HomePage: React.FC = () => {
       category: "blog-writing",
       description: "The Smart Search Plugin makes it easier for users to find content quickly and boosts engagement.",
       tags: ["Technical Writing", "Blog", "Writing"],
-      link: "https://demos.pixlngrid.com/blog/2024/11/08/enhancing-search-functionality/"
+      link: "/samples/blog/2024/11/08/enhancing-search-functionality/"
     },
     {
       id: 7,
@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "This API provides access to information about various B-movies, including details about directors, actors, genres, and release years.",
       tags: ["Technical Writing", "API", "Documentation"],
-      link: "https://demos.pixlngrid.com/api/",
+      link: "/samples/api/",
       githubLink: "https://github.com/patriciamcphee/bflix-api"
     },
     {
@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
       category: "ux-writing",
       description: "Effective error message UX design explains why it occurred and then provides the next steps for users to fix the problem.",
       tags: ["UX Writing", "Error Messages", "User Experience"],
-      link: "https://demos.pixlngrid.com/style-guide/writing-effective-error-messages/"
+      link: "/samples/style-guide/writing-effective-error-messages/"
     },
         {
       id: 9,
@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "When created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption.",
       tags: ["Technical Writing"],
-      link: "https://demos.pixlngrid.com/style-guide/writing-release-notes/"
+      link: "/samples/style-guide/writing-release-notes/"
     },
     {
       id: 12,
@@ -161,7 +161,7 @@ const HomePage: React.FC = () => {
       category: "technical-writing",
       description: "The Template Editor is a browser-based sandbox for experimenting with templates. It offers a live preview and an interactive environment to prototype ideas.",
       tags: ["Technical Writing", "Backstage"],
-      link: "https://demos.pixlngrid.com/template-editor/using-template-editor/"
+      link: "https://www.patriciamcphee.com/samples/template-editor/using-template-editor/"
     },
   ];
 

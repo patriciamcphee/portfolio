@@ -8,10 +8,10 @@
     "build:portfolio": "tsc -b && vite build",
     "build:samples": "cd samples && npm run build",
     "copy:samples": "cp -r samples/build/ dist/samples/",
-    "build": "npm run build:portfolio && npm run build:samples && npm run copy:samples",
     "lint": "eslint .",
     "preview": "vite preview",
-    "clean": "rm -rf node_modules package-lock.json dist"
+    "clean": "shx rm -rf dist",
+    "build": "npm run clean && npm run build:portfolio && npm run build:samples && npm run copy:samples"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

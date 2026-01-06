@@ -65,7 +65,8 @@
     "@docusaurus/module-type-aliases": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
     "@types/node": "^24.7.2",
-    "baseline-browser-mapping": "^2.9.11"
+    "baseline-browser-mapping": "^2.9.11",
+    "shx": "^0.4.0"
   },
   "browserslist": {
     "production": [

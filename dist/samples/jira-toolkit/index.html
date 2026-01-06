@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Technical Documentation Style Guide</title><meta data-rh="true" property="og:title" content="Technical Documentation Style Guide"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://www.patriciamcphee.com/samples/jira-toolkit/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/samples/img/favicon.png"><link data-rh="true" rel="canonical" href="https://www.patriciamcphee.com/samples/jira-toolkit/"><link data-rh="true" rel="alternate" href="https://www.patriciamcphee.com/samples/jira-toolkit/" hreflang="en"><link data-rh="true" rel="alternate" href="https://www.patriciamcphee.com/samples/jira-toolkit/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/samples/blog/rss.xml" title="Technical Documentation Style Guide RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/samples/blog/atom.xml" title="Technical Documentation Style Guide Atom Feed">
+
+
+
+
+
+
+
+
+
+<style>/* Image Zoom Plugin Styles */ .zoom-img-wrap { display: inline-block; cursor: zoom-in; position: relative; } .zoom-img-wrap img { display: block; cursor: zoom-in; max-width: 100%; height: auto; } .zoom-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; z-index: 999; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); } .zoom-overlay.active { opacity: 1; pointer-events: auto; cursor: zoom-out; } .zoomed-img { position: fixed; max-width: calc(100% - 20px); max-height: calc(100% - 20px); top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.5); transition: transform 0.3s ease, opacity 0.3s ease; z-index: 1000; cursor: zoom-out; opacity: 0; pointer-events: none; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); border-radius: 4px; } .zoomed-img.active { transform: translate(-50%, -50%) scale(1); opacity: 1; pointer-events: auto; } /* Loading state */ .zoom-img-wrap.loading::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px; border: 2px solid rgba(0, 0, 0, 0.1); border-top-color: #333; border-radius: 50%; animation: spin 0.6s linear infinite; } @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } } /* Mobile responsive */ @media (max-width: 768px) { .zoomed-img { max-width: calc(100% - 20px); max-height: calc(100% - 20px); } } /* Dark mode adjustments */ [data-theme='dark'] .zoom-img-wrap.loading::after { border-color: rgba(255, 255, 255, 0.1); border-top-color: #fff; } /* Accessibility */ .zoom-img-wrap:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; } /* Print styles */ @media print { .zoom-overlay, .zoomed-img { display: none !important; } }</style><link rel="stylesheet" href="/samples/assets/css/styles.ba38bc60.css">
+<script src="/samples/assets/js/runtime~main.bc190b42.js" defer="defer"></script>
+<script src="/samples/assets/js/main.7db0fed4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div class="jira-toolkit"><div class="container"><div class="content-wrapper"><nav class="sidebar"><div class="sidebar-content"><h3 class="sidebar-title">Contents</h3><ul class="nav-list"><li><a href="#intro" class="nav-link">Introduction</a></li><li><a href="#why-master" class="nav-link">Why Master First?</a></li><li><a href="#when-ai" class="nav-link">When AI Helps</a></li><li><a href="#how-works" class="nav-link">How It Works</a></li><li><a href="#using" class="nav-link">Using the Toolkit</a></li><li><a href="#prompts" class="nav-link">Ready-Made Prompts</a></li><li class="nested-list"><ul><li><a href="#comprehensive" class="nav-link-nested">Comprehensive</a></li><li><a href="#simple" class="nav-link-nested">Simple Input</a></li><li><a href="#one-line" class="nav-link-nested">One-Line</a></li><li><a href="#convert" class="nav-link-nested">Convert Notes</a></li></ul></li><li><a href="#context-specific" class="nav-link">Context-Specific</a></li><li><a href="#refinement" class="nav-link">Quick Refinement</a></li><li><a href="#validation" class="nav-link">Validation Checklist</a></li></ul></div></nav><main class="main-content"><div class="page-header"><h1 class="page-title">JIRA Feature Generation Toolkit</h1><p class="page-subtitle">By Patricia McPhee • August 18, 2025</p></div><div id="intro" class="intro"><p class="intro-text">Your AI writing assistant for creating clear, user-focused JIRA features. Master the template first, then leverage these tools to work faster while maintaining quality.</p><p class="description">This toolkit provides ready-made prompts to generate clear, user-focused JIRA features with any AI tool. These prompts convert technical details into well-formatted tasks aligned with JIRA standards, saving time and ensuring consistency.</p><div class="warning-box"><p class="warning-title"><strong>Before using this toolkit, write 1-2 JIRA features manually using the template.</strong></p><p class="warning-text">It&#x27;s recommended that you understand what GOOD looks like before you can assess AI output. Think of this as moving from walking to riding a bike - you still need to know where you&#x27;re going and how to steer.</p></div></div><section id="why-master" class="section"><h2 class="section-title">Why master the template first?</h2><ul class="bullet-list"><li><span><strong>You remain the subject matter expert</strong> - AI doesn&#x27;t understand your specific context</span></li><li><span><strong>AI can produce convincing but wrong content</strong> - You need to spot when it goes off track</span></li><li><span><strong>Quality assessment requires knowledge</strong> - You must verify technical accuracy and user benefits</span></li><li><span><strong>Template understanding prevents the 3 deadly sins</strong> - Information starvation, jargon walls, and kitchen sink features</span></li></ul></section><section id="when-ai" class="section"><h2 class="section-title">When AI helps vs. When it hurts</h2><div class="two-column-grid"><div><h4 class="column-title success">✅ It&#x27;s useful when you:</h4><ul class="bullet-list"><li>Understand the JIRA template structure and requirements</li><li>Use well-engineered prompts with specific instructions</li><li>Need to convert rough technical notes into user-friendly language</li><li>Want to ensure no critical sections are overlooked</li><li>Require consistency across multiple features</li></ul></div><div><h4 class="column-title error">❌ It creates problems when you:</h4><ul class="bullet-list"><li>Don&#x27;t understand what each template section requires</li><li>Copy output without reviewing for accuracy and completeness</li><li>Assume AI understands your specific context and constraints</li><li>Skip validation because &quot;AI wrote it&quot;</li><li>Use it as a replacement instead of an assistant</li></ul></div></div></section><section id="how-works" class="section"><h2 class="section-title">How this toolkit works</h2><p class="description">These prompts were engineered to direct AI responses by providing:</p><ul class="bullet-list"><li><strong>Clear context and structure</strong> - The template format AI should follow</li><li><strong>Specific instructions</strong> - What to focus on and what to avoid</li><li><strong>Output formatting</strong> - Consistent sections that match our standards</li><li><strong>Quality guardrails</strong> - Reminders about user focus and measurable benefits</li></ul></section><section id="using" class="section"><h2 class="section-title">Using the toolkit</h2><ol class="numbered-list"><li><strong>1.</strong> Choose the right prompt from the Ready-made prompts based on your situation</li><li><strong>2.</strong> Use any GenAI tool you want</li><li><strong>3.</strong> Fill in your specific details in the prompt template</li><li><strong>4.</strong> Submit and review the output carefully - Remember, you&#x27;re the expert</li><li><strong>5.</strong> Refine using Quick refinement prompts to address gaps or issues</li><li><strong>6.</strong> Validate completeness with the Validation checklist prompt</li><li><strong>7.</strong> Copy the validated output to your JIRA feature Description and Acceptance Criteria fields</li></ol><div class="tip-box"><div class="box-title">Tip</div><div class="box-content"><p>You can also use one of the <strong>context-specific prompts</strong> for backend, UI, and integration features.</p></div></div><div class="reminder-box"><div class="box-title">Reminder</div><div class="box-content"><p style="font-weight:600;margin-bottom:0.5rem">You are responsible for:</p><ul class="checklist"><li>✓ Verifying technical accuracy</li><li>✓ Ensuring user benefits are real and measurable</li><li>✓ Confirming acceptance criteria are testable</li><li>✓ Validating that the problem statement reflects reality</li></ul></div></div></section><section id="prompts" class="section"><h2 class="section-title">Ready-made prompts</h2><div id="comprehensive" class="subsection"><h3 class="subsection-title">Comprehensive prompt</h3><p class="description"><strong>When to use:</strong> Creating complete JIRA features with structured inputs.</p><p class="description"><strong>Best for:</strong> New features, major updates, or when you have detailed information.</p><div class="code-block-container"><pre class="code-block"><code>Use clear, non-technical language focused on user value to generate a JIRA feature description based on these inputs:
+
+Contact person: [name]
+Feature name: [what you&#x27;re building]
+Technical purpose: [what it does technically]
+Target users: [who will use it]
+Problem it solves: [current pain point]
+Business goal/OKR: [what objective it supports]
+
+=== STRUCTURED OUTPUT TEMPLATE ===
+Format the output as:
+**Primary point of contact:** [Name]
+
+#### What is it
+• [User-friendly explanation of what users can do]
+• [Focus on user capabilities and goals]
+• [Clear description of the experience]
+
+#### Problem statement
+• [Specific user frustration with example]
+• [Scenario where users currently struggle]
+• [Why existing solutions fall short]
+
+#### Validation
+• [Data point: &quot;Users report...&quot;]
+• [User feedback: &quot;Users have requested...&quot;]
+• [Business goal: &quot;Supports our objective to...&quot;]
+
+### User intent
+As a **[User Role]**,
+I want **[to perform specific action]**,
+So that **[I can achieve specific outcome]**.
+
+### User benefits
+[2-3 sentences describing how this makes the user&#x27;s life better, saves time, or enables new capabilities]
+
+### Risks
+[1-2 key implementation or adoption risks with mitigation strategies]
+
+### Acceptance Criteria
+• Given a user is [context], when they [action], then [expected result]
+• Given [setup condition], when [user action], then [system response]
+• Given [error condition], when [user action], then [appropriate error handling]
+• The system should [specific measurable behavior]
+• Users should be able to [specific capability with success metric]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div id="simple" class="subsection"><h3 class="subsection-title">Simple input form</h3><p class="description"><strong>When to use:</strong> Brainstorming, early ideas, or conversational approach.</p><p class="description"><strong>Best for:</strong> Converting rough concepts into structured features.</p><div class="code-block-container"><pre class="code-block"><code>Fill this out and I&#x27;ll generate your JIRA feature using the structured output template:
+
+=== QUICK INPUTS ===
+Contact: 
+What I&#x27;m building:
+Who uses it:
+Problem it fixes:
+How we know it&#x27;s needed:
+Related business goal:
+Main risk:
+
+=== TEST SCENARIOS (describe what should happen) ===
+Scenario 1:
+Scenario 2:
+Scenario 3:
+Error case:
+
+=== STRUCTURED OUTPUT TEMPLATE ===
+[Same template structure as above]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div id="one-line" class="subsection"><h3 class="subsection-title">One-line feature generator</h3><p class="description"><strong>When to use:</strong> Sprint planning, rapid documentation, or well-understood features.</p><p class="description"><strong>Best for:</strong> Quick turnaround when you have a clear, simple feature.</p><div class="code-block-container"><pre class="code-block"><code>Generate a complete JIRA feature for: &quot;[feature name] that helps [user type] to [do something] by [how it works] because [problem it solves]. Contact: [name]&quot;
+
+Include both description and acceptance criteria sections using the following structured template.
+
+=== STRUCTURED OUTPUT TEMPLATE ===
+[Same template structure as above]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div id="convert" class="subsection"><h3 class="subsection-title">Convert engineer notes</h3><p class="description"><strong>When to use:</strong> You have rough technical notes that need organization.</p><p class="description"><strong>Best for:</strong> Transforming existing documentation into structured features.</p><div class="code-block-container"><pre class="code-block"><code>Convert these engineering notes into a proper JIRA feature:
+
+[paste technical notes]
+
+Structure it with all required sections and user-focused language. Translate technical concepts into user benefits and actionable acceptance criteria.
+
+=== STRUCTURED OUTPUT TEMPLATE ===
+[Same template structure as above]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div></section><section id="context-specific" class="section"><h2 class="section-title">Context-specific prompts</h2><p class="description">Different feature types need tailored documentation approaches to avoid common pitfalls:</p><div id="backend" class="subsection"><h3 class="subsection-title">For backend features</h3><p class="description"><strong>Purpose:</strong> Highlight user benefits from performance improvements without technical jargon.</p><p class="description"><strong>Avoids:</strong> Jargon walls and information starvation about user impact.</p><div class="code-block-container"><pre class="code-block"><code>I&#x27;m building a backend feature:
+- Technical: [what it does]
+- User impact: [what changes for users]
+- Performance gain: [metrics]
+- Developer: [name]
+
+Generate a user-focused JIRA description that explains the value without mentioning the technical implementation. Focus on how users experience the improvement.</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div id="ui" class="subsection"><h3 class="subsection-title">For UI features</h3><p class="description"><strong>Purpose:</strong> Emphasize visual changes and user interactions.</p><p class="description"><strong>Avoids:</strong> Kitchen sink features by focusing on specific workflows.</p><div class="code-block-container"><pre class="code-block"><code>I&#x27;m adding a UI feature:
+- New element: [what I&#x27;m adding]
+- Location: [where it appears]
+- User action: [what users can do]
+- Solves: [what problem]
+- Developer: [name]
+
+Generate a JIRA feature focusing on the user workflow improvement and visual experience.</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div id="integration" class="subsection"><h3 class="subsection-title">For integration features</h3><p class="description"><strong>Purpose:</strong> Explain how external services benefit users without technical details.</p><p class="description"><strong>Avoids:</strong> Information starvation about why integration matters.</p><div class="code-block-container"><pre class="code-block"><code>I&#x27;m integrating with [service]:
+- Enables users to: [capability]
+- Replaces: [current manual process]
+- Saves: [time/effort metric]
+- Developer: [name]
+
+Generate a JIRA feature that explains the user value without technical integration details.</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div></section><section id="refinement" class="section"><h2 class="section-title">Quick refinement prompts</h2><p class="description">Use these to improve existing JIRA features without starting from scratch.</p><div class="refinement-section"><div><h4 class="refinement-title">Make it less technical</h4><div class="code-block-container"><pre class="code-block"><code>Rewrite this JIRA description to be more user-friendly.
+
+Remove all technical terms and focus on what users can do and why they care. Translate technical benefits into user value.
+
+[paste existing content to refine]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div><h4 class="refinement-title">Add missing sections</h4><div class="code-block-container"><pre class="code-block"><code>This JIRA feature is missing [validation/risks/acceptance criteria]. 
+
+Generate the missing sections based on the existing content and our template requirements.
+
+[paste existing content]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div><div><h4 class="refinement-title">Strengthen user benefits</h4><div class="code-block-container"><pre class="code-block"><code>Rewrite the user benefits section to be more specific and measurable. Focus on concrete improvements to the user experience.
+
+Current benefits: [paste current benefits]
+Context: [brief description of the feature]</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></div></div></section><section id="validation" class="section"><h2 class="section-title">Validation checklist prompt</h2><p class="description"><strong>When to use:</strong> Quality check before submitting your JIRA feature.</p><p class="description" style="font-weight:600">This is your final safety net - use it every time.</p><div class="code-block-container"><pre class="code-block"><code>Check if this JIRA feature meets our quality standards:
+
+[paste feature output]
+
+Verify it has:
+- [ ] Contact person named
+- [ ] 2-3 &quot;What is it&quot; points (user-focused, no technical jargon)
+- [ ] 2-3 &quot;Problem statement&quot; points (with specific examples/scenarios)
+- [ ] 2-3 &quot;Validation&quot; points (with data/feedback/business goals)
+- [ ] User story (As a... I want... So that...)
+- [ ] User benefits paragraph (specific and measurable)
+- [ ] At least 1 risk with mitigation strategy
+- [ ] 3-5 acceptance criteria (Given/When/Then format)
+- [ ] No jargon walls or information starvation
+- [ ] Avoids kitchen sink approach (clear focus)
+
+Flag what&#x27;s missing or needs improvement. Rate the overall quality from 1-10 and explain your reasoning.</code></pre><button class="copy-button" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon copy-icon" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></div></section><section id="remember" class="section"><h2 class="section-title">Remember: You&#x27;re the Expert</h2><p class="description">GenAI is your writing assistant, not your replacement. You remain the subject matter expert responsible for:</p><ul class="bullet-list"><li>✅ <strong>Technical accuracy</strong> - Does the solution actually work this way?</li><li>✅ <strong>User benefit validation</strong> - Are these benefits real and achievable?</li><li>✅ <strong>Testable criteria</strong> - Can QA actually test these acceptance criteria?</li><li>✅ <strong>Problem authenticity</strong> - Does this problem statement reflect real user pain?</li><li>✅ <strong>Risk assessment</strong> - Are these the right risks to worry about?</li></ul><div class="info-box"><p><strong>Great features start with great documentation.</strong> Your JIRA feature is a contract with your team - make it clear, make it complete, and make it count.</p></div></section></main></div></div></div></div>
+<script>window.__IMAGE_ZOOM_OPTIONS__={selector:".markdown img",background:"rgba(0, 0, 0, 0.8)",zIndex:999,margin:10,scrollOffset:10,id:"default"}</script></body>
+</html>

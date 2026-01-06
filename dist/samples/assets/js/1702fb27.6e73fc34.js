@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunksmart_search_plugin_demo=globalThis.webpackChunksmart_search_plugin_demo||[]).push([[9272],{29477:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/samples/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

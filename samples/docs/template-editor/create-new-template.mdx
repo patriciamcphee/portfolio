@@ -1,0 +1,74 @@
+---
+title: Create New Template
+id: create-new-template
+description: 'Create a local directory with a minimal template structure and a skeleton directory. You can also open a local directory of an existing template.'
+keywords: 
+  - templates
+  - template editor
+  - create new template
+last_update:
+  date: 06/06/2025
+  author: Patricia McPhee
+doc_type: how-to
+hide_table_of_contents: true
+---
+
+Start fresh with a template playground that contains a minimal template structure and a skeleton directory. It provides a minimal blank template to start from scratch. 
+
+**Perfect for:**
+
+- Learning template syntax and structure
+
+- Prototyping new template ideas
+
+- Quick experiments without local setup
+
+- Understanding how template steps work
+
+:::tip Looking for examples? 
+Since** Create New Template** provides only a minimal starting point, you can load existing templates using [**Load Template Directory**](./load-template-directly.mdx).
+:::
+
+---
+
+1. Select **Create New Template** in the Template Editor.
+
+1. Create a folder for the template either locally or your local version of the `software-templates` repo. Then click **Select** to populate the minimal template files.
+
+1. Once populated, you'll be presented with two messages to view and save the template files in the folder. Select **View files** and then **Save Changes**.
+
+    <img
+      id="uielement-left"
+      src={require('../images/create-new-template-view-files.png').default}
+      alt="Template Editor interface"
+    />
+
+    Next, you'll see the Template Editor interface.
+
+    <img
+      id="uielement5"
+      src={require('../images/template-editor-interface.png').default}
+      alt="Template Editor interface"
+    />
+
+    :::note important
+    The **Publish** feature does not work.
+    :::
+
+1. Select the `template.yaml` file to the left of the YAML editor.
+
+1. Make changes to the yaml file and use the form to the right of the YAML editor to test the template. 
+
+1. Click the **Save** icon to preserve your work as you develop. This updates the files in the original directory location.
+
+    <img
+      id="uielement4"
+      src={require('../images/template-editor-load-create-save-button.png').default}
+      alt="Template Editor interface"
+    />
+
+1. When your template is ready for broader use, you must create a `prod` directory in the `software-templates` repo containing the template. You must then submit a pull request to be reviewed for promotion to the production environment. For more details, see [Get your template into the prod environment](#).
+
+
+
+

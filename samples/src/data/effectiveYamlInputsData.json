@@ -1,0 +1,224 @@
+[
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Be Direct and Clear",
+    "description": "Direct and clear language in YAML fields enhances user understanding, reducing confusion and errors. ",
+    "frontContent": [
+      "By eliminating unnecessary words, YAML becomes more user-friendly and maintainable. ",
+      "This approach allows users to grasp required information quickly, making field descriptions more straightforward and less ambiguous."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which of the following is the most direct and clear YAML input for a component name?",
+      "options": [
+        "Please provide the name of your component",
+        "Enter the component's unique identifier",
+        "The component name goes here",
+        "Component name"
+      ],
+      "correctAnswer": 1,
+      "explanations": [
+        {
+          "text": "This option is too verbose and polite for a YAML field. It doesn't add value and makes the input less clear.",
+          "isCorrect": false
+        },
+        {
+          "text": "The \"Enter the component's unique identifier\" is direct, clear, and specifies that it should be unique—an important aspect of component naming. It's more specific and actionable than alternatives, providing context about the type of input required.",
+          "isCorrect": true
+        },
+        {
+          "text": "This option is not clear enough and doesn't provide any guidance on what kind of input is expected. ",
+          "isCorrect": false
+        },
+        {
+          "text": "While this option is concise, it doesn't provide enough guidance.",
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Use Short, Specific Descriptions",
+    "description": "Concise, specific descriptions in YAML fields balance brevity and informativeness. ",
+    "frontContent": [
+      "This approach reduces cognitive load and improves scannability, enabling users to quickly find needed information without feeling overwhelmed. ",
+      "The goal is to clearly communicate requirements while avoiding information overload and insufficient detail."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which description is both short and specific for a 'system' field in catalog-info.yaml?",
+      "options": [
+        "The system",
+        "Enter the system name this component is part of",
+        "Specify the broader system context for dependency tracking",
+        "Please provide the name of the system that this particular component belongs to in our organizational structure"
+      ],
+      "correctAnswer": 2,
+      "explanations": [
+        {
+          "text": "This option is too vague and doesn't provide any useful information.",
+          "isCorrect": false
+        },
+        {
+          "text": "While this option is more specific than 'The system', it doesn't explain why this information is important.",
+          "isCorrect": false
+        },
+        {
+          "text": "The phrase \"Specify the broader system context for dependency tracking\" is concise and informative. It clearly explains what to enter and why it's important. This answer provides context about dependency tracking while conveying the necessary information efficiently.",
+          "isCorrect": true
+        },
+        {
+          "text": "This option is too verbose and doesn't add much value beyond the simpler options.",
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Avoid Generic Descriptions",
+    "description": "Generic descriptions create ambiguity, making it hard for users to determine what information is required or how it will be used. ",
+    "frontContent": [
+      "Specific descriptions, on the other hand, help users understand each field's purpose.  This specificity is crucial for features like service discovery and dependency tracking. ",
+      "Clear, precise descriptions promote consistency and clarity across entries, while generic terms leave users uncertain about a field's exact function."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which of these descriptions avoids being generic for a 'type' field in catalog-info.yaml?",
+      "options": [
+        "The type of the component",
+        "Enter component type",
+        "Specify if this is a service, library, or website",
+        "Type goes here"
+      ],
+      "correctAnswer": 2,
+      "explanations": [
+        {
+          "text": "This description is too generic. It doesn't provide any specific information about what types are available.",
+          "isCorrect": false
+        },
+        {
+          "text": "While this is slightly more specific than 'The type of the component', it still doesn't provide enough information about what types are available.",
+          "isCorrect": false
+        },
+        {
+          "text": "The phrase \"Specify if this is a service, library, or website\" provides clear examples of the expected input. It offers specific instances of component types, giving users precise guidance on the information required. This clarity helps users understand exactly what they need to enter.",
+          "isCorrect": true
+        },
+        {
+          "text": "This is the most generic option and provides no useful information.",
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Provide Context in Descriptions",
+    "description": "Contextual descriptions in YAML fields help users understand the impact and use of their input within the Alchemy catalog. ",
+    "frontContent": [
+      "This insight enables informed decision-making, resulting in more useful and consistent catalog entries. ",
+      "By providing context, users can supply meaningful information that integrates seamlessly with the platform, enhancing overall catalog quality."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which description provides the best context for a 'description' field?",
+      "options": [
+        "A short description",
+        "Describe your component",
+        "Summarize the component's main function (displayed in the catalog)",
+        "Enter a description here"
+      ],
+      "correctAnswer": 2,
+      "explanations": [
+        {
+          "text": "This option is too vague and doesn't provide any context about what should be included or how it will be used.",
+          "isCorrect": false
+        },
+        {
+          "text": "While this prompts the user to describe the component, it doesn't provide context about what aspects to focus on or how the description will be used.",
+          "isCorrect": false
+        },
+        {
+          "text": "The instruction \"Summarize the component's main function (displayed in the catalog)\" provides clear guidance on content and context. It specifies what to include—the component's main function—and explains where this information will be used—in the catalog. This approach offers users precise direction while also explaining the purpose of the description, making it both informative and practical.",
+          "isCorrect": true
+        },
+        {
+          "text": "This option is too generic and doesn't provide any useful information or context.",
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Use Actionable Language in Fields",
+    "description": "Action-oriented language in YAML fields guides users effectively. ",
+    "frontContent": [
+      "Using verbs and clear instructions, it specifies exactly what actions to take. This approach is crucial in template files where user input impacts system behavior. ",
+      "Explicit directions enhance the accuracy and completeness of catalog entries, simplifying the process and ensuring users provide precise, comprehensive information."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which field uses the most actionable language?",
+      "options": [
+        "Repository URL",
+        "The URL of the repository",
+        "Paste the URL of your component's Git repository",
+        "Where can we find your code?"
+      ],
+      "correctAnswer": 2,
+      "explanations": [
+        {
+          "text": "This option is a label rather than an instruction. It doesn't use actionable language to guide the user.",
+          "isCorrect": false
+        },
+        {
+          "text": "While this option is more descriptive than just 'Repository URL', it still doesn't use actionable language.",
+          "isCorrect": false
+        },
+        {
+          "text": "The phrase \"Paste the URL of your component's Git repository\" uses a clear verb and provides specific instructions. It employs an action word (paste) and specifies exactly what information is needed, offering the most actionable guidance for the user. This wording presents a clear, direct directive that leaves no room for ambiguity.",
+          "isCorrect": true
+        },
+        {
+          "text": "This option uses a question format, which is not as direct or actionable as an instruction.",
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "byline": "YAML WRITING TIPS",
+    "title": "Be Concise and Relevant",
+    "description": "Concise YAML fields focus on essential information, enhancing readability and maintainability. ",
+    "frontContent": [
+      "By avoiding filler and jargon, they ensure only relevant details are captured, resulting in higher-quality catalog entries. ",
+      "This approach makes YAML files cleaner, easier to manage, and more accessible to users of all expertise levels."
+    ],
+    "checkYourKnowledge": {
+      "question": "Which of these is the most concise and relevant description for a 'purpose' field?",
+      "options": [
+        "Explain in detail what this component does and how it fits into the larger system architecture",
+        "The purpose of the component",
+        "State the primary goal of this component in one sentence",
+        "Describe why this component exists and what problems it solves in your infrastructure"
+      ],
+      "correctAnswer": 2,
+      "explanations": [
+        {
+          "text": "This option is too verbose and asks for too much information in a single field.",
+          "isCorrect": false
+        },
+        {
+          "text": "While this option is concise, it doesn't provide any guidance on what kind of information should be included.",
+          "isCorrect": false
+        },
+        {
+          "text": "The instruction \"State the primary goal of this component in one sentence\" is concise and focuses on essential information. It provides clear guidance on both content and format, specifying what to write (the primary goal) and how to present it (in one sentence). This approach is relevant and efficient, zeroing in on the component's most crucial aspect.",
+          "isCorrect": true
+        },
+        {
+          "text": "This option asks for multiple pieces of information, making it less concise than the correct answer.",
+          "isCorrect": false
+        }
+      ]
+    }
+  }
+]

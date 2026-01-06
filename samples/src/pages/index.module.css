@@ -1,0 +1,242 @@
+/**
+ * Homepage styles with improved responsive design and cleaned up redundancies
+ */
+
+.heroBanner {
+  position: relative;
+  min-height: 100vh;  /* Use min-height instead of height */
+  padding: 0 3rem;
+  text-align: center;
+  overflow-y: auto; /* Change from hidden to auto */
+  background-color: #4EC3C7;
+  background-image: url("../../static/img/hero-image.svg");
+  background-repeat: no-repeat;
+  background-position: 101% 100%;
+  background-size: 40%;
+  background-attachment: local;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* These classes follow Infima's naming conventions */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #360f37;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: #360f37;
+  font-weight: 600;
+}
+
+/* Button variants */
+.button--primary {
+  background-color: #360f37;
+  color: white;
+}
+
+/* Button sizes */
+.button--small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+
+.button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.heroBanner h1 {
+  text-align: left;
+  font-size: 84px;
+  padding-bottom: 10px;
+
+}
+
+.heroBanner p {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.hero__title {
+  font-size: 6.5rem; /* 72px */
+  margin: 0 0 0.5em;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  text-align: left;
+  line-height: 1.5;
+
+}
+
+.hero__subtitle a {
+  color: white;
+}
+
+.heroBanner li {
+  font-size: 28px;
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+
+/* Card styles */
+.card-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.cardContainer {
+  padding: 1.875rem 1.25rem 1.25rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cardTitle h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cardDescription p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--ifm-color-content);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-link:hover .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .cardContainer {
+  background-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .button--primary {
+  background-color: #360f37;
+  color: white;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    min-height: 100vh;
+    padding: 3rem 0.5rem;
+    background-size: 100%;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .hero__subtitle a {
+    color: white;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroBanner {
+    min-height: 100vh;
+    padding: 2rem 0.5rem; /* Reduce padding */
+    background-size: 100%;
+    align-items: flex-start; /* Align to top instead of center */
+  }
+
+  .heroBanner h1 {
+    text-align: center;
+    font-size: 42px;
+    padding-bottom: 20px;
+    margin-top: 2rem; 
+    letter-spacing: -0.5px;
+  }
+  
+  .heroBanner p {
+    text-align: left;
+    font-size: 24px; /* Slightly smaller for mobile */
+    padding-bottom: 20px;
+  }
+
+  .heroBanner li {
+    font-size: 20px; /* Reduce list item size on mobile */
+  }
+
+  .card-gallery {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .cardContainer {
+    padding: 1.25rem 1rem;
+  }
+
+  .cardTitle h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Focus on accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

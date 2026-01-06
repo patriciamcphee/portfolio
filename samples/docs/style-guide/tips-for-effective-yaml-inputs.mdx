@@ -1,0 +1,128 @@
+---
+id: tips-for-effective-yaml-inputs
+title: UX Writing Tips for YAML Files
+description: 'Actionable tips for engineers and developers to improve clarity, brevity, and effectiveness in YAML metadata inputs for catalog-info.yaml and template.yaml files, ensuring better understanding and usability across teams.'
+keywords: [tips, yaml, inputs, writing, documentation, ux writing, microcopy, catalog-info.yaml, template.yaml, metadata, engineering, clarity, brevity, effectiveness, developers, yaml best practices, formatting]
+last_update: 
+   date: 12/13/2024
+   author: Patricia McPhee
+doc_type: reference
+displayed_sidebar: mainSidebar
+---
+
+These guidelines help you create effective microcopy for YAML files. Focus on **clarity, brevity, and user value** to ensure better configuration and usability.
+
+Adhering to these guidelines will help you create YAML files that are functional and user-friendly.
+
+## Field inputs
+
+Clear field inputs make YAML configurations intuitive. Follow these best practices:
+
+- **Use descriptive labels and concise descriptions** for immediate clarity.
+- **State requirements explicitly** (e.g., "Required field. Use lowercase letters only").
+- **Provide examples** for complex inputs to minimize confusion.
+
+## Metadata descriptions
+
+Metadata descriptions in `catalog-info.yaml` should communicate the purpose and context of a component clearly and succinctly. Follow these principles:
+
+1. **Start with an active verb** to emphasize action.
+2. **State the component’s main purpose**—what it does and who it serves.
+3. **Include relevant context**, such as relationships to other systems.
+4. **Be concise**—focus on what’s essential.
+
+## Writing guidelines
+
+To craft clear, impactful descriptions, follow this **three-step process**:
+
+### 1. Analyze
+
+Answer key questions before you start:
+
+- **What does the component do?**
+- **Who uses it, and why?**
+- **What value does it provide?**
+
+### 2. Draft
+
+Structure your description with these elements:
+
+- **Active verb**: Highlight what the component does.
+- **Primary purpose**: Explain the function and value.
+- **Audience or context**: Specify who benefits or its system role.
+
+```yaml
+metadata:
+  description: [VERB] + [PRIMARY PURPOSE] + [FOR WHOM/WHAT] + [ESSENTIAL CONTEXT]
+
+```
+
+### 3. Polish
+
+Ensure your descriptions are:
+
+- **Concise**: Keep it under three sentences.
+- **User-focused**: Highlight benefits over technical details.
+- **Accessible**: Avoid technical jargon; use plain language.
+- **Consistent**: Write in the present tense and include only relevant technology.
+
+## Examples with explanations
+
+### ✅ Good examples
+
+```yaml
+# Clear purpose, context, and audience
+metadata:
+  description: Processes customer payments for the e-commerce platform using Stripe integration.
+
+# Highlights user and functionality
+metadata:
+  description: Enables marketing teams to schedule and publish social media content across multiple platforms.
+
+# Specifies relationships to other systems
+metadata:
+  description: Aggregates inventory data from warehouse systems to provide real-time stock levels for the retail website.
+
+```
+
+**Why they work:**
+
+- Starts with **active verbs** like "Processes," "Enables," and "Aggregates."
+- Clearly defines the **primary purpose** and context.
+- Specifies **who uses** the component and how it integrates with other systems.
+- Stays concise, delivering only the necessary information.
+
+### ❌ Poor examples
+
+```yaml
+# Too vague
+metadata:
+  description: Handles data processing
+
+# Overloaded with technical jargon
+metadata:
+  description: Implements NodeJS-based microservice using Redis cache and Kafka streams for event-driven architecture.
+
+# Focused on implementation details, not purpose
+metadata:
+  description: Written in Python 3.9 with FastAPI framework and PostgreSQL database
+
+# Too long and unfocused
+metadata:
+  description: A component that manages user authentication and authorization, handles session management, and provides security features like password hashing, JWT token generation, and OAuth2 integration with multiple providers such as Google, Facebook, and Twitter, including rate limiting capabilities
+
+```
+
+**Why they don’t work:**
+
+- The first example is **too generic** and lacks purpose.
+- The second example focuses on **technical jargon** without explaining its value.
+- The third example centers on **implementation details** rather than the component’s role.
+- The fourth example is **overly verbose**, making it hard to scan and understand.
+
+
+## Check your knowledge
+
+import EffectiveYamlInputs from '../../src/components/WritingTips/EffectiveYamlInputs';
+
+<EffectiveYamlInputs />

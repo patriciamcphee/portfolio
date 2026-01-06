@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "indent": "off",  // Let Prettier handle indentation
+    "linebreak-style": "off",  // Avoid issues between Windows/Unix
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],  // Downgraded to warning
+    "semi": ["warn", "always"],  // Downgraded to warning
+    "no-unused-vars": "off",  // Use TypeScript version instead
+    "react/prop-types": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/react-in-jsx-scope": "off",  // Not needed in newer React
+    "react/no-unescaped-entities": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["build/*", "dist/*", "node_modules/*"]  // Added ignore patterns
+}

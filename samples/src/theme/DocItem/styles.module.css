@@ -1,0 +1,27 @@
+@media only screen and (min-width: 997px) {
+    .docItemCol {
+      max-width: 75% !important;
+    }
+  }
+  
+  .docItemContainer {
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+  
+  @media only screen and (max-width: 996px) {
+    .docItemContainer {
+      padding: 0 0.3rem;
+    }
+  }
+  
+  .docTitle {
+    font-size: 3rem;
+    margin-bottom: -calc(var(--ifm-leading-desktop) * var(--ifm-leading));
+  }
+  
+  .docLastUpdatedAt {
+    font-weight: bold;
+  }
+  
+  

@@ -1,0 +1,778 @@
+---
+id: writing-effective-error-messages
+title: Writing Effective Error Messages
+description: 'Actionable tips for engineers and developers to improve clarity, brevity, and effectiveness in error messages, ensuring better understanding and usability across teams.'
+keywords: [tips, error messages, writing, documentation, ux writing, microcopy, error handling, engineering, clarity, brevity, effectiveness, developers, error message best practices, formatting]
+last_update: 
+   date: 10/16/2025
+   author: Patricia McPhee
+draft: false
+doc_type: reference
+displayed_sidebar: mainSidebar
+---
+
+Writing effective error messages is an essential skill in UX writing—it's an art. When something goes wrong, your error message can be the only thing standing between a user resolving the issue and quitting your product in frustration.
+
+Here's a key question to ask about every error message: Does it lead users into a dead end? For example, if someone sees "Invalid or unsupported error," do they understand what caused the problem and what steps to take next? Or are they simply stuck?
+
+The best error messages excel at two things:
+
+1. Clearly and simply explaining what happened.
+
+2. Clearly guiding users on how to fix the problem or who to contact for help.
+
+Getting these elements right transforms frustrating moments into manageable challenges. Conversely, poor error messages can cause confusion, erode trust, and overwhelm your support team.
+
+Ineffective error messages cost real money. Frustrated users may abandon their tasks, flood your support channels, or even switch to a competitor.
+
+On the other hand, well-crafted error messages build trust, reduce support costs, keep users productive, and positively influence how they perceive your product—even when things go wrong.
+
+This guide offers practical frameworks and real-world examples to help you create error messages that genuinely assist users in recovering quickly. Let’s get started.
+
+---
+
+## The four pillars of effective error messages
+
+### 1. Clarity: Explain what happened
+
+Users can't fix problems they don't understand. Skip the jargon and tell them clearly what went wrong.
+
+**Try this framework:** `[Action] failed because [specific reason]`
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header correct">
+                <h3>✓ Clear and Specific</h3>
+            </div>
+            <div class="card__body">
+                <p><strong>Unable to save "Q4:Report.xlsx"</strong></p>
+                <p>The file name contains invalid characters. File names can't include: / \ : * ? &quot; &lt; &gt; |</p>
+            </div>
+        </div>
+    </div>
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header incorrect">
+                <h3>✗ Vague and Unhelpful</h3>
+            </div>
+            <div class="card__body">
+                <p>Invalid file name</p>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+**Why this works:** The improved version tells users exactly which file failed, why it failed, and what characters caused the problem. No guessing required.
+
+---
+
+### 2. Context: Give them the details that matter
+
+Include specific information that helps users understand what happened in *their* situation.
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header correct">
+                <h3>✓ Helpful Context</h3>
+            </div>
+            <div class="card__body">
+                <p><strong>Can't upload "presentation.pptx"</strong></p>
+                <p>File size: 47 MB<br />
+                Maximum allowed: 25 MB<br /><br />
+                Compress the file or upgrade to a Pro account for 100 MB uploads.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header incorrect">
+                <h3>✗ Missing Context</h3>
+            </div>
+            <div class="card__body">
+                <p>File too large</p>
+                <br /><br /><br /><br />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+**Why this works:** Showing the actual size versus the limit helps users make decisions. Plus, the upgrade path turns a frustration into a potential sale. Win-win!
+
+---
+
+### 3. Actionability: Tell them what to do next
+
+Never leave users hanging. Every error message needs clear next steps—no dead ends.
+
+**Try this framework:** `[Problem statement]. [Specific action to resolve]`
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header correct">
+                <h3>✓ Clear Path Forward</h3>
+            </div>
+            <div class="card__body">
+                <p><strong>Connection timeout</strong></p>
+                <p>We couldn't reach the server at api.example.com.</p>
+                <ul>
+                    <li>Check your internet connection</li>
+                    <li>Try again in a few moments</li>
+                    <li>If this keeps happening, contact support with error code: NET_408</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header incorrect">
+                <h3>✗ Dead End</h3>
+            </div>
+            <div class="card__body">
+                <p>Network error occurred</p>
+                <br /><br /><br /><br />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+**Why this works:** The improved version gives users a troubleshooting path and includes an error code for when they need to call support. They know exactly what to try and when to ask for help.
+
+---
+
+### 4. Empathy: Sound like a human
+
+Your error messages should sound helpful, not robotic. And definitely not accusatory—nobody likes being blamed for things.
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header correct">
+                <h3>✓ Friendly and Helpful</h3>
+            </div>
+            <div class="card__body">
+                <p><strong>We couldn't process your payment</strong></p>
+                <p>Your card ending in 4242 was declined by your bank.</p>
+                <p>Check your card details or try a different payment method.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col col--6">
+        <div class="card margin-top--sm margin-bottom--sm">
+            <div class="card__header incorrect">
+                <h3>✗ Sounds Accusatory</h3>
+            </div>
+            <div class="card__body">
+                <p>Payment failed. You entered incorrect card information.</p>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+**Why this works:** The decline might not be about incorrect information—it could be low funds, fraud protection, or bank hiccups. The improved version doesn't make assumptions and treats users with respect.
+
+---
+
+## Message structure template
+
+Here's a simple structure that works for most error messages:
+
+```
+[SEVERITY INDICATOR - if it's critical]
+[Clear problem statement]
+
+[Why it happened - if that's helpful to know]
+[Current state/impact - if relevant]
+
+[Primary action they should take]
+[Alternative actions - if you've got them]
+[Support contact - if they need backup]
+```
+
+**Here's how it looks in practice:**
+
+
+> ⚠️ Can't publish your changes
+>
+> Your draft has 3 broken links that need fixing before you can publish:  
+> * Page 4: Link to "pricing" page not found
+> * Page 7: External link to expired domain
+> * Page 12: Anchor link "#contact" doesn't exist
+>
+> Fix these links, then try publishing again.
+> Need help? Check out our [troubleshooting guide](#).
+
+
+---
+
+## Error severity levels
+
+Match your message's tone and urgency to how bad the error actually is:
+
+### Critical errors (everything's broken)
+**Impact:** Nothing works, or data might be lost  
+**Tone:** Direct and urgent  
+**Must include:** What to do right now or who to contact
+
+
+> ⛔ Service Unavailable
+> 
+> Our servers are down for emergency maintenance right now.
+> 
+> Don't worry—your work is saved. We expect to be back online by 3:00 PM EST.
+> 
+> Check our status: status.example.com
+> Urgent issue? Call support at 1-800-HELP
+
+
+### High-priority errors (can't do important stuff)
+
+**Impact:** Blocks key tasks people need to do  
+**Tone:** Clear and solution-focused  
+**Must include:** Specific steps to fix it
+
+
+> Can't generate report: Missing required data
+>
+>Your Sales database hasn't synced since October 10, and reports
+need data from the last 7 days.
+> 
+> * Ask your database admin to run a manual sync
+> * Or schedule your report for after tonight's automatic sync (11 PM)
+
+
+### Medium-priority errors (annoying but manageable)
+
+**Impact:** Inconvenient, but work can continue  
+**Tone:** Informative and supportive  
+**Must include:** How to work around it or try again
+
+> Preview failed to load
+>
+> We couldn't generate a preview of "document.pdf," but your file
+> uploaded successfully.
+>
+> You can still share, download, or edit the file normally.
+> Try refreshing to load the preview.
+
+
+### Low-Priority errors (heads up)
+
+**Impact:** Barely a speed bump  
+**Tone:** Quick and light  
+**Must include:** Just acknowledge it happened
+
+> Some features unavailable offline
+>
+> You can keep working, but changes won't sync until you're back online.
+
+
+---
+
+## Real-World examples: Before and after
+
+Here are some actual rewrites I did for a data encryption app. Let me walk you through what changed and why.
+
+### Example 1: Authentication error
+
+| Original | Improved | What I Changed & Why |
+|----------|----------|---------------------|
+| Error logging in. System cannot connect at this time. | **We're unable to sign you in**<br /><br />Your account has been deactivated. To reactivate your account, contact your administrator at admin@company.com or call ext. 5500. | The original message blamed a connection issue, but the real problem was account deactivation. The new version tells the truth, identifies who can help, and provides two ways to reach them. This eliminated a bunch of confused support calls. |
+
+
+
+### Example 2: Permission denied
+
+| Original | Improved | What I Changed & Why |
+|----------|----------|---------------------|
+| Access denied to this resource. Please try again with an appropriate account. | **You don't have permission to view "Budget_2025.xlsx"**<br /><br />This file is restricted to Finance team members.<br /><br />[Request Access] [View My Files] | The original was weirdly vague. The new version names the specific file, explains the restriction, and gives two clear options: ask for access or go back to your files. Security's still intact, but it's actually helpful now. |
+
+
+
+### Example 3: Invalid Input Format
+
+| Original | Improved | What I Changed & Why |
+|----------|----------|---------------------|
+| Invalid/Unsupported file type. Please try again. | **Unsupported file format for directory sync**<br /><br />You entered: *.exe<br />Allowed formats:<br />• *.* (all file types)<br />• `*.{extension}`(specific types)<br /><br />Examples: *.pdf, *.docx, *.xlsx | The original just said "wrong format" and left people guessing. The new version shows what they typed, explains the correct format structure, and gives real examples. Now users can see exactly what to fix. |
+
+
+
+### Example 4: Database connection error
+
+| Original | Improved | What I Changed & Why |
+|----------|----------|---------------------|
+| ERR_DB_CONN_REFUSED: Exception at line 142 | **Can't load customer data**<br /><br />We're unable to connect to the customer database. Your recent work is saved locally.<br /><br />This usually fixes itself in a few minutes. Try refreshing the page.<br /><br />Still broken after 10 minutes? Contact IT support with error code: DB_503 | The original was pure developer-speak. The new version explains the impact (can't load data), reassures them (work is saved), suggests a fix (refresh), and includes a support code. Users get what they need, and IT still gets the technical details for debugging. |
+
+---
+
+## Technical implementation best practices
+
+### Keep user messages and logs separate
+
+Never show technical stack traces to users. Log all the geeky details separately for debugging.
+
+```javascript
+// DON'T DO THIS
+catch (error) {
+    showError(error.message); // Might show scary technical stuff
+}
+
+// DO THIS INSTEAD
+catch (error) {
+    // Log all the technical details
+    logger.error('Document save failed', {
+        error: error.stack,
+        userId: currentUser.id,
+        documentId: doc.id,
+        timestamp: Date.now()
+    });
+
+    // Show something friendly to users
+    showError({
+        title: 'Unable to save document',
+        message: 'Please try again. If this keeps happening, contact support with code: DOC_500',
+        code: 'DOC_500',
+        actions: ['retry', 'contact_support']
+    });
+}
+```
+
+---
+
+### Use progressive disclosure for details
+
+Show the essential info first. Let users dig deeper if they want the technical stuff.
+
+```javascript
+<ErrorMessage>
+    <Title>Payment processing failed</Title>
+    <Message>
+        We couldn't process your payment. Please verify your payment 
+        information and try again.
+    </Message>
+    
+    <ExpandableDetails>
+        <Summary>Technical details</Summary>
+        <Details>
+            Transaction ID: txn_1234567890<br />
+            Error code: CARD_DECLINED<br />
+            Provider response: Insufficient funds<br />
+            Timestamp: 2025-10-16 14:23:45 UTC
+        </Details>
+    </ExpandableDetails>
+    
+    <Actions>
+        <Button primary>Update Payment Method</Button>
+        <Button secondary>Contact Support</Button>
+    </Actions>
+</ErrorMessage>
+```
+
+---
+
+## Security considerations
+
+Sometimes you need to be intentionally vague to protect security. Here's where to draw the line.
+
+### Authentication errors
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>DO keep it ambiguous</h3>
+            </div>
+            <div class="card__body">
+                <p>Incorrect username or password</p>
+                <p>Try again, or click "Forgot password" to reset your password.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>DON'T tell them which part failed</h3>
+            </div>
+            <div class="card__body">
+                <p>Username not found<br />
+                ✗ Password incorrect for user@example.com</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Specific messages help attackers figure out valid usernames. That's literally one of their first steps in breaking into accounts.
+
+---
+
+### Password creation errors
+
+**During password creation (totally fine to be specific):**
+
+```
+✓ Password must contain:
+  ✗ At least 8 characters (current: 6)
+  ✓ One uppercase letter
+  ✗ One number
+  ✓ One special character (!@#$%^&*)
+```
+
+**During sign-in (keep it vague):**
+
+```
+✓ Password doesn't meet security requirements.
+
+Forgot your password? Click "Reset password" below.
+```
+
+**Why the difference:** Real-time feedback during creation helps people succeed. But at sign-in, you don't want to help attackers learn your password rules to crack accounts.
+
+---
+
+### System information disclosure
+
+Never expose internal system details that could help attackers.
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>DO use friendly fallbacks</h3>
+            </div>
+            <div class="card__body">
+              <p>Unable to load account information</p>
+                <p>We're having some technical difficulties. Please try again 
+                in a few moments or contact support if this continues.</p>
+                <p>Error code: DB_500</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>DON'T expose your infrastructure</h3>
+            </div>
+            <div class="card__body">
+                <p>MySQL error: Table 'prod_users.accounts' doesn't exist</p>
+                <p>Can't connect to internal server prod-db-01.internal.company.com:3306</p>
+                <p>Stack trace: at DatabaseController.fetchUser (/var/www/app/controllers/db.js:247)</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Revealing database names, server addresses, or stack traces gives attackers a roadmap to exploit your system. Always keep the technical details in your logs, not your UI.
+
+---
+
+## Common mistakes to avoid
+
+### 1. Using technical jargon
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>Correct</h3>
+            </div>
+            <div class="card__body">
+              <p>Can't load your profile. Refresh the page or try again later.</p>
+                <p>Unable to connect to the server. Check your internet connection and try again.</p>
+                <p>Something went wrong. Try again. If this keeps happening, contact support.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>Incorrect</h3>
+            </div>
+            <div class="card__body">
+                <p>NullReferenceException in UserController</p>
+                <p>HTTP 500 Internal Server Error</p>
+                <p>Segmentation fault (core dumped)</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Technical terms confuse users and make them feel alienated. Always write for the least technical person who might see the error.
+
+---
+
+### 2. Blaming the user
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>Correct</h3>
+            </div>
+            <div class="card__body">
+               <p>Enter a valid email address (example@domain.com)</p>
+                <p>Incorrect username or password. Try again or reset your password.</p>
+                <p>Add a subject line to send your message</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>Incorrect</h3>
+            </div>
+            <div class="card__body">
+                <p>You entered invalid data</p>
+                <p>Your password is wrong</p>
+                <p>You must include a subject line</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Blaming users makes them defensive and frustrated. Always take responsibility and offer help.
+
+---
+
+### 3. Unhelpful confirmations
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>Correct</h3>
+            </div>
+            <div class="card__body">
+               <p>Delete "Project_Final.doc"? This can't be undone. [Cancel] [Delete]</p>
+                <p>Can't save changes. [Try Again] [Save Copy] [Cancel]</p>
+                <p>Connection lost. Reconnecting... [Manual Retry] [Work Offline]</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>Incorrect</h3>
+            </div>
+            <div class="card__body">
+                <p>Are you sure? Yes/No</p>
+                <p>Operation failed. OK</p>
+                <p>Error occurred. Dismiss</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Blaming users makes them defensive and frustrated. Always take responsibility and offer help.
+
+
+---
+
+### 4. Confusing success with failure
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header correct">
+                <h3>Correct</h3>
+            </div>
+            <div class="card__body">
+                <p>Changes saved successfully</p>
+                <p>Import complete: 1,247 records added</p>
+                <p>System check passed: All services running normally</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col col--6">
+        <div class="col-demo">
+            <div class="card margin-top--sm margin-bottom--sm no-pointer">
+            <div class="card__header incorrect">
+                <h3>Incorrect</h3>
+            </div>
+            <div class="card__body">
+                <p>Error: Operation completed successfully</p>
+                <p>Failed to succeed</p>
+                <p>Warning: No problems found</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+**Why this matters:** Users need to instantly recognize if something went wrong or right. Mixing success and failure cues leads to confusion and mistakes.
+
+---
+
+## Testing your error messages
+
+### 1. Can people actually understand them?
+
+Test your messages with people who didn't write them. Ask:
+
+- "What happened here?"
+
+- "What would you do next?"
+
+- "Do you have enough info to fix this?"
+
+If they're confused or guessing, your message needs work.
+
+---
+
+### 2. Do they work in context?
+
+Test your errors in realistic situations where they'll actually appear. Check these things:
+
+- Does it show up at the right moment?
+
+- Does it block important information users need?
+
+- Can users dismiss it when they should be able to?
+
+- Does it break your page layout?
+
+- Does it work on mobile devices and tablets?
+
+- Is all the text visible, or does it get cut off?
+
+- Does it stay visible until the problem is actually fixed?
+
+- If multiple errors happen, do they stack nicely or turn into a mess?
+
+If your error looks fine in isolation but terrible in the actual product, it needs refinement.
+
+---
+
+### 3. Are they accessible?
+
+Make sure everyone can understand and interact with your errors, regardless of how they access your product. Test these aspects:
+
+- Does it have the proper ARIA role so assistive tech recognizes it?
+
+- Do screen readers announce it clearly?
+
+- Is the color contrast strong enough (minimum 4.5:1)?
+
+- Does it use more than just color to convey it's an error?
+
+- Can keyboard-only users navigate to and through it?
+
+- Does focus move to the error if it's critical?
+
+- Is the text readable when someone zooms to 200%?
+
+- Are buttons and links large enough to tap easily (at least 44×44px)?
+
+If users with disabilities can't understand or act on your error, you're leaving people behind.
+
+---
+
+### 4. Did you test the weird scenarios?
+
+Edge cases happen more often than you think. Try these situations that will definitely occur in production:
+
+- Really long file names—does your truncation work smoothly?
+
+- Special characters in dynamic content—does everything still display correctly?
+
+- Multiple simultaneous errors—do they pile up gracefully?
+
+- Slow internet connections—does the error still appear and make sense?
+
+- Different languages—does it work if you support internationalization?
+
+- JavaScript disabled—can users still understand what happened?
+
+- Old or slow devices—does it render without breaking?
+
+- Repeated errors—does showing the same error multiple times get annoying?
+
+If you haven't tested these scenarios, someone will find the bug for you—and they won't be happy about it.
+
+---
+
+
+
+## Sample details
+
+**Project:** Work-related, SaaS data encryption app, MVP Launch  
+**My Role:** Sr. Technical Writer, UX Writer  
+**Tools:** Figma, Microsoft Excel
+
+The examples below show the original error messages as they appeared in the application before the rewrite.
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4793%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4651%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Ftype%3Ddesign%26node-id%3D5863%253A113%26mode%3Ddesign%26t%3DIvZpnFDSuVwHepHG-1" allowfullscreen></iframe>
+
+
+---
+
+## The bottom line
+
+Here's what I've learned writing hundreds of error messages:
+
+**Error messages are a feature, not an afterthought.** They directly affect whether people like your product and how much your support team has to handle.
+
+**Every error needs four things:** what happened, why it matters, what to do about it, and how to get help if needed.
+
+**Write for humans, log for developers.** Never show users technical gobbledygook, but always capture it in your logs.
+
+**Test with real people.** What makes perfect sense to you might be total gibberish to someone seeing the error for the first time.
+
+**Security and helpfulness can coexist.** Be as helpful as possible without compromising your system's security.
+
+The best error messages turn a frustrating moment into a chance to build trust with your users. And honestly? That's worth the effort.
+
+
+
+

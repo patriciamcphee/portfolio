@@ -1,0 +1,95 @@
+/* last updated */
+
+.lastUpdated  {
+  font-style: normal;
+  font-size: 12px;
+}
+
+.editThisPage {
+  font-style: normal;
+  font-size: 12px;
+  text-align: right;
+  padding-top: 33px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -45px;
+  padding-bottom: 3rem;
+  margin-left: 4px;
+}
+
+.lastUpdated, .editThisPage {
+  flex: 1;
+
+}
+
+.role {
+  margin-left: -2px;
+  margin-top: 10px;
+  padding-bottom: 0.05rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .lastUpdated, .editThisPage {
+    flex: 100%;
+    text-align: left;
+
+  }
+  .editThisPage {
+    padding-top: 0.5rem;
+  }
+
+
+}
+
+@media (max-width: 996px) {
+  .lastUpdated, .editThisPage {
+    flex: 100%;
+    text-align: left;
+
+  }
+  .editThisPage {
+    padding-top: 0.5rem;
+  }
+
+}
+
+@media (min-width: 997px) {
+  .lastUpdated {
+    text-align: left;
+  }
+  .editThisPage {
+    margin-top: -38px;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+}
+
+.docItemContainer {
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+@media only screen and (max-width: 996px) {
+  .docItemContainer {
+    padding: 0 0.3rem;
+  }
+}
+
+.docTitle {
+  font-size: 3rem;
+  margin-bottom: -calc(var(--ifm-leading-desktop) * var(--ifm-leading));
+}
+

@@ -1,0 +1,231 @@
+---
+id: plugin-troubleshooting
+title: Troubleshooting
+description: 'A comprehensive guide to diagnosing and resolving common issues with the Smart Search Plugin, including troubleshooting steps for missing search icons, search results not appearing, performance issues, and handling console errors.'
+keywords:
+ - troubleshooting
+ - Smart Search Plugin
+ - search icon
+ - search results
+ - performance issues
+ - console errors
+ - Docusaurus
+ - installation issues
+ - documentation
+ - user experience
+last_update: 
+   date: 12/12/2024
+   author: Patricia McPhee
+draft: false
+doc_type: reference
+displayed_sidebar: mainSidebar
+---
+
+This guide helps you diagnose and resolve common issues with the Smart Search Plugin.
+
+## Search icon not appearing
+
+#### Symptoms
+
+- Search icon missing from navigation bar
+- Navigation bar appears normal otherwise
+
+#### Possible causes
+
+1. Incorrect navbar configuration
+2. Plugin not properly installed
+3. Theme configuration issues
+
+#### Solution
+
+1. Check configuration file
+    
+    ```jsx
+    // docusaurus.config.js
+    module.exports = {
+      themeConfig: {
+        navbar: {
+          items: [
+            {
+              type: 'search',
+              position: 'right',
+            },
+          ],
+        },
+      },
+    };
+    ```
+    
+2. Verify installation
+    
+    ```bash
+    # Check package.json dependencies
+    npm ls smart-search-plugin
+    
+    # Reinstall if necessary
+    npm install smart-search-plugin
+    ```
+    
+3. Clear cache and rebuild your project
+    
+    ```bash
+    npm run clear
+    npm run build
+    ```
+    
+
+## Search results not appearing
+
+#### Symptoms
+
+- Search bar works but shows no results
+- No error messages in console
+
+#### Possible causes
+
+1. Missing document metadata
+2. Incorrect file structure
+3. Search index not generated
+
+#### Solution
+
+1. Verify document metadata
+    
+    ```markdown
+    ---
+    title: Document Title
+    description: Description text
+    keywords: [keyword1, keyword2]
+    ---
+    ```
+    
+2. Check file structure
+    
+    ```
+    docs/
+    ├── intro.md
+    └── category/
+        └── document.md
+    ```
+    
+3. Rebuild search index
+    
+    ```bash
+    # Remove existing index
+    rm -rf static/searchIndex.json
+    
+    # Rebuild project
+    npm run build
+    ```
+    
+
+## Search performance issues
+
+#### Symptoms
+
+- Slow search response
+- Browser performance degradation
+- High memory usage
+
+#### Solution
+
+1. Optimize your metadata:
+
+   - Reduce the number of keywords
+   - Keep descriptions concise.
+   - Remove unused metadata.
+
+2. Check the size of the searchIndex.json file.
+    
+    ```jsx
+    // Check index file size
+    ls -lh static/searchIndex.json
+    ```
+    
+3. Optimize the performance.
+    
+    ```jsx
+    // docusaurus.config.js
+    module.exports = {
+      plugins: [
+        [
+          'smart-search-plugin',
+          {
+            maxResults: 8, // Limit results
+            minQueryLength: 3, // Minimum search length
+          },
+        ],
+      ],
+    };
+    ```
+    
+
+## Console errors
+
+- "Cannot find module 'smart-search-plugin'"
+    
+    ```bash
+    # Solution
+    npm install smart-search-plugin --save
+    ```
+    
+- "Search index not found"
+    
+    ```bash
+    # Solution
+    npm run build
+    ```
+
+
+## Reporting issues
+
+When you encounter issues that aren't covered in the troubleshooting guide, here's how to get help.
+
+1. Open a [bug-report](https://github.com/patriciamcphee/smart-docs-search/issues/new?assignees=&labels=&projects=&template=bug-report.yml) in the repo. 
+
+1. Provide a descriptive title, detailed description of the issue, and the following information:
+
+   ```md
+   **Environment**
+
+   - Plugin Version: [version]
+   - Docusaurus Version: [version]
+   - Node Version: [version]
+   - OS: [operating system]
+
+   **Steps to reproduce**
+
+   1. [First Step]
+   2. [Second Step]
+   3. [Additional Steps...]
+
+   **Expected behavior**
+
+   [What you expected to happen]
+
+   **Actual behavior**
+
+   [What actually happened]
+
+   **Additional context**
+
+   [Any other relevant information]
+   ```
+
+2. Include your Docusaurus configuration.
+
+   ```javascript
+   // docusaurus.config.js
+   module.exports = {
+     // Your configuration
+   };
+   ```
+
+3. Add any error logs.
+
+   ```bash
+   # Build logs
+   npm run build -- --debug
+   ```
+
+

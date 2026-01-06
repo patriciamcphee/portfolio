@@ -1,0 +1,320 @@
+---
+id: writing-effective-procedures
+title: Writing Effective Procedures
+description: 'Learn to write clear, concise, and user-friendly procedures to enhance the quality of technical documentation and improve user experience.'
+keywords: [effective procedures, technical documentation, writing guidelines, technical writing, style guide, documentation best practices, clarity in writing, user experience, writing standards, procedures, instructions, user-friendly, clarity, simplicity, task-oriented, user experience, engineers, technical knowledge, accessible instructions, technical communication, step-by-step guides, instructional writing, process documentation, documentation clarity, engineering documentation, writing tips, usability, structured content, writing workflows]
+last_update: 
+   date: 08/22/2024
+   author: Patricia McPhee
+draft: false
+doc_type: how-to
+displayed_sidebar: mainSidebar
+---
+
+
+Clear, concise, and user-friendly procedures are vital for effective technical documentation. 
+
+It's often a challenge for engineers to transform their deep technical knowledge into accessible instructions. By applying clarity and simplicity, technical documentation becomes more user-friendly and easier to navigate. These improvements enhance the user experience and help reduce common errors that arise from unclear or poorly structured instructions, underscoring the crucial role of engineers in this process.
+
+
+## Start with an action verb
+
+Begin each step with a direct action verb to make instructions clear and easy to follow. This format allows users to know immediately what they need to do.
+
+**Why it matters**: Users quickly understand what action they should take, reducing hesitation and confusion. It also ensures that your documentation is task-oriented, which is easier for users to follow.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p>
+            <ol><li>Install the latest version of <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwii-NCH-NiDAxWYJUQIHc-aB4kQFnoECBUQAQ&url=https%3A%2F%2Fdocs.docker.com%2Fget-docker%2F&usg=AOvVaw2totRzntQKFe1fXrQrztnr&opi=89978449">Docker</a>.</li></ol>
+            <ol><li>Deploy the latest build: <pre>kubectl apply -f deployment.yaml</pre></li></ol>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p>
+            <ol><li>The latest version of Docker needs to be installed. Click <a href="https://docs.docker.com/get-docker/">here</a> to install.</li></ol>
+            <ol><li>You should deploy the latest build using <code>kubectl apply -f deployment.yaml</code></li></ol>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Be clear and direct
+
+Specificity removes ambiguity. Each instruction should clearly define what action the user must take, where to perform it, and why.
+
+**Why it matters**: Clear instructions minimize the risk of errors and increase efficiency. Users should not have to guess what you mean; instead, your documentation should be precise.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Navigate to the <code>/var/logs</code> directory to review the server logs.</li></ol> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Check the server logs.</li></ol> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Limit each step to one action
+
+Each step should focus on a single, manageable task. This makes complex procedures easier to follow and helps prevent confusion when trying to manage multiple tasks simultaneously.
+
+**Why it matters**: Users are less likely to feel overwhelmed or make mistakes when each step focuses on one action. Clear, actionable steps enhance task completion success.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p>
+              <ol>
+                <li>Select <strong>File &gt; New Project</strong> to create a new workspace.</li>
+              </ol>
+              <ol>
+                <li>Select <strong>File &gt; Open</strong>.</li>
+              </ol>
+              <ol>
+                <li>Select <strong>Options &gt; Preferences</strong>.</li>
+              </ol>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>A new workspace is created by going to the <strong>File</strong> menu and selecting <strong>New Project</strong>.</li></ol>
+            <ol><li>Select <strong>File</strong>, open it, and adjust your settings.</li></ol>
+            <ol><li>Go to <strong>Options</strong>, click <strong>Preferences</strong>, and adjust your settings.</li></ol></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Include expected results within the same step 
+
+Users should know what to expect after completing each action. Including the expected result right after the step provides immediate feedback that they're on the right track.
+
+**Why it matters**: Users are reassured when they see the expected outcome, which improves their confidence in the process and reduces frustration.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Press <strong>Refresh</strong> to update the page. The latest data appears.</li></ol>
+            <ol><li>Press <strong>Start</strong> to begin the process. A green status light indicates it&#39;s working.</li></ol></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <ol>
+            <li>Press  <strong>Refresh</strong>. You will see the latest data on the page.</li>
+            </ol>
+            <ol>
+            <li>Press <strong>Start</strong>. The machine will start working (indicated by a green light).</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Use simple, accessible language 
+
+Write in simple, accessible language. Avoid jargon or overly technical terms unless absolutely necessary, and if used, provide explanations.
+
+**Why it matters**: Simple language ensures a broader audience can understand your content, including those who might not have an advanced technical background. Clarity enhances usability and inclusivity.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Use the slider to adjust the volume.</li></ol>
+            <ol><li>Click <strong>Connect</strong> to start the connection.</li></ol></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p>
+            <ol><li>Manipulate the audio output level with the slider control interface.</li></ol>
+            <ol><li>Initiate the process of establishing a connection by clicking the <strong>Connect</strong> button.</li></ol>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Avoid using "Please"
+
+import AvoidPlease from '../includes/_avoid-please.mdx';
+
+<AvoidPlease />
+
+### Be specific, not generic
+
+import BeSpecificNotGeneric from '../includes/_be-specific-not-generic.mdx';
+
+<BeSpecificNotGeneric />
+
+
+---
+
+## Provide context where necessary
+
+Offering context or rationale helps users understand the importance or purpose of a step, which can be crucial for steps that require decision-making.  If you have a lot to add, remember to keep it under 150 words or consider a separate section for the details. 
+
+This empowers users with knowledge, leading to more information actions and a deeper understanding of the process. 
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p>
+            <ol><li>Restart your system to apply the changes after updating the software.    <br /><br />Restarting ensures that all components of the software update are fully integrated and that any in-memory data is refreshed.</li></ol>
+             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Update the software and then restart your system.</li></ol></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Incorporate helpful visuals
+
+Use visuals like screenshots or diagrams to enhance understanding, especially for software navigation or complex procedures. However, avoid overloading your document with unnecessary images.
+
+**Why it matters**: Visual aids can reduce cognitive load, particularly for users navigating complex steps. However, balance is key—too many visuals can clutter the documentation.
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header correct">
+            <h3>Correct</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>In the <strong>Settings</strong> window, select the <strong>Advanced</strong> tab.<br /><br />[Image of the Settings window with the Advanced tab highlighted]</li></ol></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header incorrect">
+            <h3>Incorrect</h3>
+          </div>
+          <div class="card__body">
+            <p><ol><li>Go to the settings and then find the right tab for more options.</li></ol></p>
+          </div>
+        </div>
+        <p><em>No visual is provided, leaving users to guess which tab to select for more options.</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+

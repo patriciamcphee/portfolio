@@ -1,0 +1,101 @@
+---
+id: plugin-introduction
+title: Smart Search Plugin
+description: 'An overview of the Smart Search Plugin for Docusaurus v3.x, detailing its metadata-driven search capabilities that enhance documentation navigation. This plugin provides precise search results through a user-friendly interface, ensuring optimal performance in both online and offline environments.'
+keywords:
+ - smart search
+ - Docusaurus
+ - documentation
+ - search plugin
+ - metadata-driven search
+ - offline functionality
+ - user experience
+ - documentation navigation
+last_update: 
+   date: 12/12/2024
+   author: Patricia McPhee
+draft: false
+doc_type: overview
+displayed_sidebar: mainSidebar
+---
+
+The Smart Search Plugin for Docusaurus v3.x is a metadata-driven search solution that streamlines documentation navigation. It offers precise search capabilities through an elegant, accessible interface that works offline. 
+
+The plugin integrates smoothly with Docusaurus projects, delivering targeted search results using metadata keywords. Its metadata-driven approach—rather than full-text indexing—provides more focused results and prevents information overload. This makes it ideal for both online and firewall-restricted environments.
+
+## Key features
+
+The plugin delivers an elegant search solution with these key advantages:
+
+- Targeted search results powered by metadata keywords
+- Precise content matching to minimize information overload
+- **Full offline functionality** for firewall-restricted environments
+- **Local testing capabilities** during development
+- Modern, responsive interface with keyboard navigation
+
+## Technical considerations
+
+### Content processing
+
+The plugin parses frontmatter and assigns document IDs from the frontmatter `id` field or the topic’s path filename. It processes content through an efficient three-stage system:
+
+1. **Content collection:** Scans the /docs directory to gather markdown files and extract metadata for search functionality
+2. **Content normalization:** Standardizes URLs and formats data consistently to improve navigation and SEO
+3. **Index generation:** Creates optimized search indexes with smart caching for fast, accurate results in both development and production
+
+### Automatic exclusions
+
+The plugin automatically excludes certain content types from search indexing to maintain efficiency and relevance. These exclusions include:
+
+- The root or main index page of your documentation
+- Any documents marked as `draft: true` through the metadata flag
+
+This selective exclusion ensures that search results remain focused and meaningful for users while optimizing the search index size.
+
+### Search index files
+
+The plugin generates two search index files to optimize performance across different environments. The development index supports rapid iteration during the build process, while the production index is optimized for deployment:
+
+1. Development index: `/static/searchIndex.json` (Used during development)
+2. Production index: `/build/searchIndex.json`
+
+### Browser compatibility
+
+The smart-search-plugin is designed to work seamlessly with all major modern web browsers including:
+
+- Chrome
+- Firefox
+- Safari
+- Microsoft Edge
+- Opera
+- Brave
+
+## See how the plugin works
+
+Explore the demo to see how the smart-search-plugin enhances navigation and accessibility in your documentation projects. You'll find examples of its features and capabilities and integration instructions for your Docusaurus site.
+
+Here's how the smart-search-plugin appears in your Docusaurus navbar:
+
+- **Inactive state**
+
+    <img
+      id="diagrams"
+      src={require('../images/search-icon-only.png').default}
+      alt="Image showing the search bar in its inactive state"
+    />
+
+- **Activated state with results**
+
+    <img
+      id="diagrams"
+      src={require('../images/search-results.png').default}
+      alt="Image showing the expanded search bar when clicked"
+    />
+
+
+    <img
+      id="diagrams"
+      src={require('../images/search-results-2.png').default}
+      alt="Image showing the expanded search bar when clicked"
+    />
+

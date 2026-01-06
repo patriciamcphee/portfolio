@@ -1,0 +1,55 @@
+```md title="front matter example"
+---
+title: Getting Started with React
+sidebar_label: React # (Optional) Use this to shorten the title in the sidebar
+id: get-started-react
+description: 'Create a developer account and connect it to our sample application. This application demonstrates common workflows, like creating realms, applications, and passkeys (public-private key pairs) for user authentication.'
+keywords: [get started, react] # Use this to improve search results
+last_update:
+   date: 09/27/2024 
+   author: Patricia McPhee # Topic SME
+doc_type: get-started
+displayed_sidebar: mainSidebar
+role:  # (Optional) Use this to indicate that the topic is for Admins.
+   - Admins
+---
+```
+
+
+## Required metadata fields
+
+```md title="Required front matter"
+---
+title:  
+id: 
+description: '...'
+keywords: [keyword1, keyword2]
+last_update:
+   date: 09/27/2024 
+   author: Patricia McPhee # Replace with the topic SME or primary author of the topic
+doc_type: reference # Topic type (how-to, overview, concept, reference, troubleshooting)
+displayed_sidebar: mainSidebar # Default sidebar
+---
+```
+
+|Field  |Type  |Description  |
+|---------|---------|---------|
+|`id`     | string        | A unique identifier for the document. It must not be duplicated within the documentation set. |
+|`title`     | string        | The title of the document, written in title case, representing the primary subject of the topic. |
+|`description`     |  string       | A concise summary of the document's content, between 20-50 words, written to provide clear context. |
+|`keywords`     | string        | An array of terms or phrases that represent the document's content, helping improve searchability. The search plugin relies on these keywords rather than crawling the entire page, so ensure they accurately reflect the document's key topics. |  
+|`doc_type`     | string        | The category or type of the document, such as reference, how-to, overview, concept, or troubleshooting. |
+|`last_update:date`     |  string       |  The date when the document was last updated with significant changes. This date is displayed in search results, so it should reflect meaningful updates rather than minor edits like typos.  |
+| `last_update:author` | string | The name of the topic's subject matter expert (SME) or primary contributor, responsible for the content. |
+| `displayed_sidebar`  | string  |  Specifies the sidebar in which the document will appear, for example, mainSidebar (default). |
+
+
+## Optional metadata fields
+
+You can also include the following front matter fields based on when to use them.
+
+|Field  |Type  |Default  |When to use  |
+|---------|---------|---------|---------|
+|`sidebar_label`  | string    | `title`  | The text shown in the sidebar for this document should differ from the title field.      |
+|`hide_title`     | boolean   |  `false` | Set to `true` if the document's title should not appear at the top of the page. Useful for custom page designs like a home page.        |
+|`hide_table_of_contents`     | boolean  |  `false`  |  Set to `true` if the table of contents should not appear in the sidebar. Useful for short documents or landing pages.       |

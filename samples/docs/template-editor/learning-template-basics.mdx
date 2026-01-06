@@ -1,0 +1,232 @@
+---
+title: Learn Template Basics in the UI
+id: learning-template-basics
+description: ''
+keywords: 
+  - templates
+last_update:
+  date: 06/06/2025
+  author: Patricia McPhee
+doc_type: reference
+draft: true
+---
+
+
+## Template structure
+
+Use the **Create New Template** to explore the basic structure.
+
+1. Paste the following yaml code in the `template.yaml` file.
+
+    ```yaml
+    apiVersion: scaffolder.backstage.io/v1beta3
+    kind: Template
+    metadata:
+      name: learning-template
+      title: My Learning Template
+      description: Understanding how templates work
+    spec:
+      owner: user:guest
+      type: service
+      
+      # These are the form fields users will fill out
+      parameters:
+        - title: Basic Information
+          required:
+            - name
+          properties:
+            name:
+              title: Name
+              type: string
+              description: Name of the component
+              
+      # These are the actions the template performs
+      steps:
+        - id: log
+          name: Log Message
+          action: debug:log
+          input:
+            message: 'Hello ${{ parameters.name }}!'
+            
+      # This defines what the user sees after the template runs
+      output:
+        text:
+          - title: 'Template Execution Complete! 🎉'
+            content: |
+              Your learning template has successfully executed!
+    ```
+
+3. Fill in a name and click **Review > Create** to run a dry test.
+
+1. Check the **Log** and **Output** tabs in the **Dry-run results**.
+
+4. Modify the template and test again.
+
+---
+
+## Experiment with parameters
+
+Use the **Template Form Playground** to rapidly test different parameter types.
+
+**Learning Points:**
+
+- See how different field types render
+
+- Test validation rules
+
+- Understand default values
+
+- Experiment with field dependencies
+
+```yaml
+parameters:
+  - title: Experiment with Fields
+    properties:
+      textExample:
+        title: Text Field
+        type: string
+        default: 'Default value'
+        
+      numberExample:
+        title: Number Field
+        type: number
+        minimum: 1
+        maximum: 10
+        
+      selectExample:
+        title: Dropdown
+        type: string
+        enum:
+          - option1
+          - option2
+          - option3
+        enumNames:
+          - 'First Option'
+          - 'Second Option'  
+          - 'Third Option'
+          
+      booleanExample:
+        title: Checkbox
+        type: boolean
+        default: false
+```
+
+---
+
+## Testing a new template idea
+
+You have an idea for a template but want to validate it works before investing time in a full implementation.
+
+1. Start in **Template Form Playground**
+
+   - Design your parameter form
+
+   - Test the user experience
+
+   - Validate your field choices
+
+2. Move to **Create New Template**
+
+   - Copy your tested parameters
+
+   - Add template steps
+
+   - Test with dry runs
+
+3. Iterate Quickly
+
+   - Make changes
+
+   - Test immediately
+
+   - No Git commits needed
+
+   - No PR reviews required
+
+#### Example: Prototyping a service template
+
+```yaml
+# Start simple in the playground
+parameters:
+  - title: Service Configuration
+    properties:
+      name:
+        title: Service Name
+        type: string
+        pattern: '^[a-z][a-z0-9-]*$'
+        
+      language:
+        title: Programming Language
+        type: string
+        enum: ['java', 'python', 'nodejs']
+        
+      includeDatabase:
+        title: Include Database?
+        type: boolean
+        
+      # Conditional field - only shows if includeDatabase is true
+      databaseType:
+        title: Database Type
+        type: string
+        enum: ['postgresql', 'mysql', 'mongodb']
+        condition:
+          properties:
+            includeDatabase:
+              const: true
+```
+
+## Testing Custom Fields
+
+Before using custom fields in production templates, test them in the **Custom Field Editor**:
+
+1. **Discover available fields**
+
+   - Browse the dropdown list
+
+   - See what's installed in your instance
+
+2. **Test configurations**
+
+    ```yaml
+    # Example: Testing OwnerPicker
+    ui:field: OwnerPicker
+    ui:options:
+      catalogFilter:
+        kind: Group
+        metadata.namespace: default
+    ```
+
+3. **Validate behavior**
+
+   - Does it show the right options?
+
+   - Does filtering work correctly?
+
+   - Are the selected values in the right format?
+
+
+---
+
+## Debugging template issues
+
+When a production template isn't working:
+
+1. **Load Template Directory**
+
+   - Import the problematic template
+
+   - Make changes and save using the Save icon
+
+   - Test in isolation
+
+   - Use console logs in dry runs
+
+2. **Common Debugging Steps**
+
+   - Simplify parameters to isolate issues
+
+   - Test each step individually
+
+   - Validate YAML syntax
+
+   - Check parameter references: `${{ parameters.name }}`

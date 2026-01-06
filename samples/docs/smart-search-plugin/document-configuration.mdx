@@ -1,0 +1,58 @@
+---
+id: document-configuration
+title: Document Configuration
+description: "A detailed guide on configuring frontmatter metadata for documentation in Docusaurus. This document explains the importance of metadata in enhancing searchability, improving user experience, and managing content effectively while providing best practices for using various metadata fields."
+keywords:
+ - document configuration
+ - frontmatter
+ - metadata
+ - Docusaurus
+ - content management
+ - user experience
+ - search optimization
+ - documentation best practices
+ - discoverability
+last_update:
+  date: 12/12/2024
+  author: Patricia McPhee
+draft: false
+doc_type: how-to
+displayed_sidebar: mainSidebar
+---
+
+Adding frontmatter metadata to your documentation files is essential for maintaining quality, enhancing user experience, and managing content efficiently.
+
+Here's an example of frontmatter:
+
+```markdown
+---
+title: Document Title
+description: A brief description that appears in search results
+keywords: [search, docusaurus, plugin]
+draft: false # if set to `true`, the topic is excluded from the search index
+last_update:
+  date: 12/11/2024
+# other metadata fields
+---
+```
+
+### Understanding Metadata
+
+Metadata is essential for creating effective documentation. Here's why:
+
+1. **Enhanced Search & Discovery** - Strategic use of titles, descriptions, and keywords helps users quickly find relevant content through optimized search indexing
+2. **Better User Experience** - Clear descriptions and structured metadata help users quickly determine if content matches their needs.
+3. **Efficient Content Management** - Features like draft status and update tracking streamline documentation maintenance and version control.
+4. **Organized Navigation** - Well-structured metadata powers intuitive navigation through sidebars and filters, making content easy to browse and discover.
+
+### Metadata fields and best practices
+
+Using metadata effectively improves documentation findability and maintenance. Always keep metadata current and relevant to maximize its value for users.
+
+| Field | Description & Best Practice |
+| --- | --- |
+| `title` | A clear, descriptive heading appears in search results. Keep it concise and meaningful. |
+| `description` | Brief 2-3 sentence summary shown below title. Focus on key information users need. |
+| `keywords` | Specific, relevant search terms that match common user queries. Avoid generic terms. |
+| `draft` | Set `draft` to `true` to exclude work-in-progress content from search and navigation. |
+| `last_update:date` | Regularly updated timestamp to indicate content freshness. Update after significant changes. |

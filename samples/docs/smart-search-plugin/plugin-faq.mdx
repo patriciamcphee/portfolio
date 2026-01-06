@@ -1,0 +1,158 @@
+---
+id: plugin-faq
+title: FAQ
+description: "Frequently asked questions about the Smart Search Plugin for Docusaurus v3.x, covering installation, configuration, search functionality, user interface features, technical details, and contributing guidelines. This document provides essential information to help users effectively utilize the plugin."
+keywords:
+ - smart search plugin
+ - Docusaurus
+ - FAQ
+ - installation
+ - configuration
+ - search functionality
+ - user interface
+ - contributing
+ - metadata-driven search
+ - technical details
+last_update: 
+   date: 12/12/2024
+   author: Patricia McPhee
+draft: false
+doc_type: reference
+displayed_sidebar: mainSidebar
+---
+
+The Smart Search Plugin for Docusaurus v3.x is a metadata-driven search solution that streamlines documentation navigation. It offers precise search capabilities through an elegant, accessible interface that works offline. The plugin integrates smoothly with Docusaurus projects, delivering targeted search results using metadata keywords. Its metadata-driven approach—rather than full-text indexing—provides more focused results and prevents information overload. This makes it ideal for both online and firewall-restricted environments.
+
+## General questions
+
+### What is the Smart Search Plugin for Docusaurus?
+
+It’s a metadata-driven search plugin for Docusaurus v3.x that provides efficient and precise search capabilities by leveraging metadata keywords. It features an elegant, accessible interface, works offline, and integrates seamlessly into Docusaurus projects.
+
+### Why use metadata-driven search instead of full-text indexing?
+
+Metadata-driven search ensures more targeted results, avoiding the information overload often caused by full-text indexing. This approach provides precise and relevant results for users.
+
+### Is the plugin compatible with Docusaurus 3.x?
+
+Not yet. Support for Docusaurus 3.x is a work in progress. Stay tuned for updates!
+
+### Does the plugin work offline?
+
+Yes, the plugin is designed to work in offline and firewall-restricted environments, making it ideal for secure and local deployments.
+
+## Installation and setup
+
+### How do I install the Smart Search Plugin?
+
+You can install the plugin using either npm or yarn:
+
+- `npm install smart-search-plugin`
+- `yarn add smart-search-plugin`
+
+### What configurations are required in `docusaurus.config.js`?
+
+Ensure you add the plugin path, static directory, and configure presets and navbar items. Detailed setup instructions are in the README under the Configuration section.
+
+### What directory structure is required for the plugin?
+
+Your project should include:
+
+- `docs/`: Documentation files
+- `static/`: Static assets directory
+- `docusaurus.config.js`: Configuration file
+
+## Search functionality
+
+### How does the plugin generate the search index?
+
+It creates two search index files:
+
+- `/build/searchIndex.json`: For production use
+- `/static/searchIndex.json`: For local development
+
+### Can I exclude certain files or folders from the search?
+
+Yes, the plugin automatically excludes:
+
+- Root pages (e.g., `/`)
+- Draft documents (marked with `draft: true` in frontmatter)
+- Content in excluded folders (default: `contributor-guide`)
+
+### What frontmatter fields enhance search functionality?
+
+You can use:
+
+- `title`: Document title
+- `description`: A brief description for search results
+- `keywords`: Tags for search
+- `last_update`: Date of the last update
+- `draft`: Excludes the document when set to `true`
+
+## User interface
+
+### What features does the search interface provide?
+
+The interface includes:
+
+- Expandable search input
+- Real-time results dropdown
+- Keyboard navigation
+- Mobile-friendly design
+- Result highlighting and metadata display
+
+### Are there keyboard shortcuts for search?
+
+Yes, the following shortcuts are supported:
+
+- `Enter`: Navigate to the first result
+- `Escape`: Close the search dropdown
+- `Tab`: Navigate through results
+- `Arrow Up/Down`: Navigate results (coming soon)
+
+### How can I customize the search styling?
+
+Create a custom CSS module and override the provided classes, such as `.searchContainer`, `.searchInput`, and `.resultItem`.
+
+## Technical details
+
+### What are the key dependencies of the plugin?
+
+The plugin uses:
+
+- `lunr` for search implementation
+- `antd` for UI components
+- `gray-matter` for parsing frontmatter
+- `@ant-design/icons` for UI icons
+
+### Does the plugin support Internet Explorer?
+
+No, the plugin supports modern browsers such as Chrome, Firefox, Safari, and Edge. IE11 is not supported.
+
+### How does the plugin handle content indexing?
+
+The plugin uses intelligent caching, incremental rebuilding for modified files, and consistent URL normalization for better performance and SEO.
+
+## Contributing
+
+### How can I contribute to the plugin?
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+## Licensing and credits
+
+### What license does the plugin use?
+
+The Smart Search Plugin is licensed under MIT.
+
+### What tools and frameworks power the plugin?
+
+It is built using:
+
+- [Docusaurus](https://docusaurus.io/)
+- [Ant Design](https://ant.design/)
+- [Lunr.js](https://lunrjs.com/)

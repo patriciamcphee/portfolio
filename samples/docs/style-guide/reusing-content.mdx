@@ -1,0 +1,96 @@
+---
+id: reusing-content
+title: Content Reuse
+description: Learn how to scale your documentation with reusable content blocks and modular writing techniques.
+keywords: [content reuse, content blocks, modular content, scalability, structured content, reusable documentation, partial files, MDX, Docusaurus]
+last_update: 
+   date: 09/23/2024
+   author: Patricia McPhee
+draft: false
+doc_type: how-to
+displayed_sidebar: mainSidebar
+---
+
+
+Creating content once and reusing it in multiple places unlocks scalability. This is achieved through structured content, which breaks information into "blocks" that can be rearranged and reused to create new, tailored experiences.
+
+By leveraging content reuse, you streamline content creation and maintenance, improve consistency, and allow for flexibility in adapting your documentation to various needs. Whether reusing scenarios, notes, or reference materials, content reuse makes scaling documentation a breeze.
+
+## What is content reuse?
+
+Content reuse is a way to create reusable pieces of information—like **content blocks**—that can be included in multiple places across your documentation. Instead of writing the same content over and over again, you create these blocks once and reuse them wherever needed. 
+
+Think of content blocks as LEGO bricks. Each brick is a self-contained piece of information that can be stacked, rearranged, and reused to build different structures—just like you reuse code to build different parts of an application. This could be anything from a scenario description, a reference table, or step-by-step instructions. By reusing content, you ensure consistency, save time, and scale your documentation efficiently. They come together to form the foundation of your documentation.
+
+## Why reuse content?
+
+Content reuse offers significant advantages, much like modular coding does for developers. By creating **content blocks** that can be used across multiple documents, you streamline the documentation process in several ways:
+
+- **Efficiency:** Write content once and use it everywhere. Reusing content blocks eliminates the need to recreate similar information, saving time and effort.
+- **Consistency:** Just like a reusable function ensures consistent behavior in code, content reuse guarantees uniformity across all documents. The same information is presented consistently, reducing discrepancies.
+- **Scalability:** As your documentation grows, updating a single content block automatically updates every instance where it’s used. This makes managing large documentation sets more scalable and less error-prone.
+- **Modular Flexibility:** Reusable content blocks can be rearranged, added, or removed easily. This flexibility allows you to adapt content for different contexts without rewriting, similar to how you refactor code to work in various scenarios or classes.
+
+## Content reuse: The modular code approach
+
+As engineers and developers, you already think about **modularity and reusability** in your code. Think of **content blocks** as similar to **functions** or **modules** in your code. You write them once and use them in multiple places. Here’s how this works:
+
+- **Content block as a function:** Like a function, a content block is a self-contained piece of information. For example, it could be a standard caution or warning, step-by-step instructions for processes, or a table listing API limits. Once created, it can be "called" or included in various documents, making your documentation modular.
+- **LEGO block analogy:** Think of content blocks as **LEGO bricks**. You can stack, rearrange, and reuse the same bricks to build different structures (documents). You don't need to create new bricks every time—you reuse and combine them in different ways.
+
+## Best practices for writing reusable content
+
+To make content reusable across various contexts, it’s essential to follow these best practices:
+
+- **Keep it modular:** Just like coding, aim to keep your content blocks focused on a single concept or task.
+- **Avoid assumptions about order:** Don’t assume readers will see your content blocks in a specific sequence—write them so they make sense on their own.
+- **Use contextual cues carefully:** Avoid using words like "above" or "below" that may not make sense when content is reused in different layouts. Instead, use directional language like "next" or "previous" where relevant.
+- **Write for flexibility:** The goal is to make the content easily reusable. Avoid locking content blocks into a specific context or layout.
+
+## Reusing content
+
+Now that we understand the concept let’s dive into the technical side. In Docusaurus, you can create and reuse content blocks efficiently using MDX, a markdown extension that allows you to import and use partial files across multiple documents.
+
+### Step 1: Create a partial file
+
+In the `/docs/includes` folder, create a reusable content block by making a markdown file with an underscore prefix and an `.mdx` extension (e.g., `_pull-request-process.mdx`).
+
+<img
+  id="uielement"
+  src={require('../images/docs-includes-folder.png').default}
+  alt="Entity About card"
+/>
+
+Here’s an example of what your partial file might look like:
+
+```
+<!-- _pull-request-process.mdx -->
+
+# Pull Request Guidelines
+
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Submit a pull request with a clear title and description.
+
+```
+
+### Step 2: Import the partial file
+
+To reuse this content block in other documents, import it just like you would import a function in a programming file:
+
+```jsx
+import PullRequestProcess from './_pull-request-process.mdx';
+
+<PullRequestProcess />
+
+```
+
+Wherever you import this partial, it will display the content of the `_pull-request-process.mdx` file. This way, if you update the partial file, all documents where it’s reused will automatically reflect the changes.
+
+#### Example workflow
+
+- **Document A:** Uses the pull request guidelines in a technical guide.
+- **Document B:** Uses the same guidelines in an onboarding manual.
+
+When you update the partial file, both Document A and Document B will automatically be updated—no need to manually change each one.
+

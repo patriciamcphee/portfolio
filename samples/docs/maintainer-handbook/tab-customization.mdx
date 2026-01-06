@@ -1,0 +1,243 @@
+---
+id: tab-customization
+title: Customized Docusaurus Tabs
+description: 'Learn about ... the Alchemy user documentation.'
+keywords:
+ - keyword
+last_update: 
+   date: 08/22/2024
+   author: Patricia McPhee
+draft: true
+doc_type: how-to
+displayed_sidebar: maintainerHandbookSidebar
+---
+
+Tabs are a common UI pattern for organizing content, especially in documentation. Docusaurus provides a built-in tab component that simplifies tab creation and management. However, customizing tabs to handle URL query parameters, scroll position management, and anchor link handling can enhance the user experience and improve navigation. This guide explores how to implement these features in Docusaurus tabs.
+
+## URL query parameter Integration
+
+The URL query parameter integration allows tabs to maintain their state across page loads and enables direct linking to specific tabs. This feature is particularly valuable in documentation where you might want to reference specific content within tabs.
+
+
+```jsx
+function TabList({ className, block, selectedValue, selectValue, tabValues, queryString }) {
+  const isInitialLoad = useRef(true);
+
+  useEffect(() => {
+    if (window.location.search && queryString && isInitialLoad.current) {
+      const params = new URLSearchParams(window.location.search);
+      const parameterName = typeof queryString === 'string' ? queryString : 'tabs';
+      const queryValue = params.get(parameterName);
+      
+      if (queryValue && queryValue !== selectedValue) {
+        selectValue(queryValue);
+        // Scroll handling code follows...
+        isInitialLoad.current = false;
+      }
+    }
+  }, [queryString, selectedValue, selectValue, tabValues]);
+}
+```
+
+Let's break down how this works:
+
+1. **Initial Load Detection**: 
+   ```jsx
+   const isInitialLoad = useRef(true);
+   ```
+   - Uses `useRef` to track whether this is the first load of the component
+   - This prevents the tab selection logic from running on subsequent renders
+
+2. **URL Parameter Processing**:
+   ```jsx
+   const params = new URLSearchParams(window.location.search);
+   const parameterName = typeof queryString === 'string' ? queryString : 'tabs';
+   ```
+   - Parses the URL search parameters
+   - Allows custom parameter names through the `queryString` prop, defaulting to 'tabs'
+
+3. **Tab Selection**:
+   ```jsx
+   if (queryValue && queryValue !== selectedValue) {
+     selectValue(queryValue);
+   }
+   ```
+   - Only updates the selected tab if the URL parameter value differs from the current selection
+   - Prevents unnecessary re-renders
+
+4. **URL Update on Tab Change**:
+   ```jsx
+   const handleTabChange = (event) => {
+     // ... existing tab change logic ...
+     
+     const parameterName = typeof queryString === 'string' ? queryString : 'tabs';
+     const newUrl = `${window.location.pathname}?${parameterName}=${newTabValue}${window.location.hash}`;
+     window.history.pushState({}, '', newUrl);
+   };
+   ```
+   - Updates the URL when tabs are changed manually
+   - Preserves any existing hash fragments in the URL
+
+## Scroll position management
+
+The scroll position management ensures that tabs are visible when accessed via URL parameters, especially important for long pages or when tabs are below the fold.
+
+
+```jsx
+useEffect(() => {
+  if (window.location.search && queryString && isInitialLoad.current) {
+    // ... parameter handling ...
+    
+    requestAnimationFrame(() => {
+      if (tabListRef.current) {
+        const headerOffset = document.querySelector('header')?.offsetHeight || 0;
+        const tabListPosition = tabListRef.current.getBoundingClientRect().top + window.scrollY;
+        
+        window.scrollTo({
+          top: tabListPosition - headerOffset - 20,
+          behavior: 'instant'
+        });
+      }
+    });
+  }
+}, [queryString, selectedValue, selectValue, tabValues]);
+```
+
+Let's examine the key aspects:
+
+1. **Timing Control**:
+   ```jsx
+   requestAnimationFrame(() => {
+     // scroll logic
+   });
+   ```
+   - Uses `requestAnimationFrame` to ensure the DOM has updated
+   - Helps prevent incorrect scroll positions due to timing issues
+
+2. **Dynamic Header Compensation**:
+   ```jsx
+   const headerOffset = document.querySelector('header')?.offsetHeight || 0;
+   ```
+   - Accounts for fixed headers that might overlay content
+   - Falls back to 0 if no header is found
+
+3. **Position Calculation**:
+   ```jsx
+   const tabListPosition = tabListRef.current.getBoundingClientRect().top + window.scrollY;
+   ```
+   - Gets the absolute position of the tabs relative to the document
+   - Adds current scroll position to get the true document position
+
+4. **Smooth Scrolling**:
+   ```jsx
+   window.scrollTo({
+     top: tabListPosition - headerOffset - 20,
+     behavior: 'instant'
+   });
+   ```
+   - Adjusts the final position by subtracting header height and adding padding
+   - Uses 'instant' behavior to prevent animation conflicts
+
+## Anchor link handling
+
+The anchor link handling feature ensures proper interaction between tab state and traditional anchor navigation, preventing URL conflicts and maintaining a clean browsing history.
+
+
+```jsx
+useEffect(() => {
+  const handleClick = (event) => {
+    const anchor = event.target.closest('a[href^="#"]');
+    if (anchor) {
+      const newUrl = `${window.location.pathname}${anchor.hash}`;
+      window.history.pushState({}, '', newUrl);
+    }
+  };
+
+  document.addEventListener('click', handleClick);
+  return () => document.removeEventListener('click', handleClick);
+}, []);
+```
+
+Let's analyze the implementation:
+
+1. **Event Delegation**:
+   ```jsx
+   const anchor = event.target.closest('a[href^="#"]');
+   ```
+   - Uses event delegation to handle all anchor clicks efficiently
+   - `closest()` finds the nearest ancestor anchor element
+   - Only processes anchors that start with '#'
+
+2. **URL Cleanup**:
+   ```jsx
+   const newUrl = `${window.location.pathname}${anchor.hash}`;
+   ```
+   - Preserves the current path
+   - Removes any existing query parameters
+   - Maintains the anchor hash
+
+3. **History Management**:
+   ```jsx
+   window.history.pushState({}, '', newUrl);
+   ```
+   - Updates the URL without triggering a page reload
+   - Creates a new history entry for proper back/forward navigation
+
+4. **Cleanup**:
+   ```jsx
+   return () => document.removeEventListener('click', handleClick);
+   ```
+   - Properly removes the event listener when the component unmounts
+   - Prevents memory leaks and duplicate handlers
+
+## Integration Example
+
+Here's how these features work together in a real-world scenario:
+
+```jsx
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs queryString="api-version">
+  <TabItem value="v1">
+    <h3><a href="#v1-endpoints">V1 API Endpoints</a></h3>
+    {/* Tab content */}
+  </TabItem>
+  <TabItem value="v2">
+    <h3><a href="#v2-endpoints">V2 API Endpoints</a></h3>
+    {/* Tab content */}
+  </TabItem>
+</Tabs>
+```
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs queryString="api-version">
+  <TabItem value="v1">
+    <h3><a href="#v1-endpoints">V1 API Endpoints</a></h3>
+    <p>content for V1 API Endpoints</p>
+    {/* Tab content */}
+  </TabItem>
+  <TabItem value="v2">
+    <h3><a href="#v2-endpoints">V2 API Endpoints</a></h3>
+    <p>content for V2 API Endpoints</p>
+    {/* Tab content */}
+  </TabItem>
+</Tabs>
+
+When a user:
+
+1. Visits `maintainer-handbook/tab-customization?api-version=v2#v2-endpoints`
+
+   - The component selects the "v2" tab
+   - Scrolls to make the tabs visible
+   - Maintains the "#v2-endpoints" anchor
+
+2. Clicks an anchor link within a tab
+
+   - The URL updates to remove query parameters
+   - The selected tab state remains unchanged
+   - The page scrolls to the anchor target
+
+This integration provides a seamless experience for both direct links and interactive navigation while maintaining proper browser history and scroll positioning.

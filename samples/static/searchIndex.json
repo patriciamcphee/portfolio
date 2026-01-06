@@ -1,0 +1,2804 @@
+[
+  {
+    "id": "about",
+    "title": "About Me",
+    "description": "As a highly skilled and motivated Technical Content Manager, I excel in crafting user-friendly experiences. With expertise in technical writing, product documentation, and optimizing content delivery through CI/CD, I am determined to leverage emerging technologies and industry standards to elevate customer experiences.",
+    "keywords": [
+      "technical writing expert",
+      "tech writing expert",
+      "sr. technical writer",
+      "technical writer",
+      "technical writing",
+      "technical content manager",
+      "technical documentation",
+      "product documentation",
+      "content delivery",
+      "CI/CD",
+      "emerging technologies",
+      "industry standards",
+      "user experience",
+      "user-friendly experiences",
+      "technical writing best practices",
+      "technical writing guidelines",
+      "technical writing style guide",
+      "technical writing strategies",
+      "technical writing tips",
+      "technical writing resources",
+      "technical writing tools",
+      "technical writing techniques",
+      "technical writing examples",
+      "technical writing portfolio",
+      "technical writing services"
+    ],
+    "last_update": {
+      "date": "12/08/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/about",
+    "content": "\r\nHello, I'm Patricia McPhee. I'm a skilled Technical Content Manager for the Enterprise DevOps team at Cigna and I'm passionate about optimizing user experiences. You see, writing is just the tip of the iceberg for me—I also consider myself a strategist. I put together product documentation that yo",
+    "sections": []
+  },
+  {
+    "id": "contact",
+    "title": "Contact me",
+    "description": "As a highly skilled and motivated Sr. Technical Writer, I excel in crafting user-friendly experiences. With expertise in technical writing, product documentation, and optimizing content delivery through CI/CD, I am determined to leverage emerging technologies and industry standards to elevate customer experiences.",
+    "keywords": [],
+    "last_update": {
+      "date": "12/09/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/contact",
+    "content": "\r\nimport ContactUs from '@site/src/components/ContactForm/ContactUs.js';\r\n\r\n<ContactUs />",
+    "sections": []
+  },
+  {
+    "id": "contributor-guide-faqs",
+    "title": "FAQs",
+    "description": "Discover answers to common questions about contributing to and managing content in our documentation site.",
+    "keywords": [
+      "faqs",
+      "common questions",
+      "frequently asked",
+      "questions",
+      "documentation guidelines",
+      "content contributions",
+      "content review",
+      "technical content manager",
+      "content quality",
+      "collaborative writing"
+    ],
+    "last_update": {
+      "date": "12/10/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/faqs",
+    "content": "\r\n\r\n## Who is responsible for content creation and management? \r\n\r\nIn our DevOps environment, the Technical Content Manager oversees the documentation site's structure and content strategy, while content creation and management remain collaborative responsibilities. The Technical Content Manager rev",
+    "sections": [
+      {
+        "id": "who-is-responsible-for-content-creation-and-management",
+        "heading": "Who is responsible for content creation and management?",
+        "level": 2,
+        "content": "",
+        "url": "/faqs#who-is-responsible-for-content-creation-and-management"
+      },
+      {
+        "id": "how-can-i-contribute-to-the-content",
+        "heading": "How can I contribute to the content?",
+        "level": 2,
+        "content": "",
+        "url": "/faqs#how-can-i-contribute-to-the-content"
+      },
+      {
+        "id": "how-do-we-ensure-content-quality-and-consistency",
+        "heading": "How do we ensure content quality and consistency?",
+        "level": 2,
+        "content": "",
+        "url": "/faqs#how-do-we-ensure-content-quality-and-consistency"
+      },
+      {
+        "id": "what-if-i-identify-an-error-or-outdated-information",
+        "heading": "What if I identify an error or outdated information?",
+        "level": 2,
+        "content": "",
+        "url": "/faqs#what-if-i-identify-an-error-or-outdated-information"
+      }
+    ]
+  },
+  {
+    "id": "basic-formatting",
+    "title": "Basic Formatting",
+    "description": "Explore the basic and universal markdown formatting used in a Docusaurus-based site.",
+    "keywords": [
+      "markdown",
+      "markdown formatting",
+      "markdown syntax",
+      "markdown guide",
+      "markdown tips",
+      "markdown best practices",
+      "markdown basics"
+    ],
+    "last_update": {
+      "date": "11/7/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/markdown-reference/basic-formatting",
+    "content": "\r\n\r\n\r\n## Syntax \r\n\r\n| Format | Syntax |\r\n| --- | --- |\r\n| **Bold**  | `**Bold**`   |\r\n| _Italic_ | `_Italic_` |\r\n| ~~Strikethrough~~ | `~~Strikethrough~~` |\r\n| Horizontal rules | `---` (three hyphens)<br />`***` (three asterisks)<br />`___` (three underscores)<br /><br />Whichever style you use, pic",
+    "sections": [
+      {
+        "id": "syntax",
+        "heading": "Syntax",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#syntax"
+      },
+      {
+        "id": "headings",
+        "heading": "Headings",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#headings"
+      },
+      {
+        "id": "formatting-guidelines",
+        "heading": "Formatting guidelines",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#formatting-guidelines"
+      },
+      {
+        "id": "writing-style",
+        "heading": "Writing style",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#writing-style"
+      },
+      {
+        "id": "make-headings-scannable",
+        "heading": "Make headings scannable",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#make-headings-scannable"
+      },
+      {
+        "id": "links",
+        "heading": "Links",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#links"
+      },
+      {
+        "id": "basic-links",
+        "heading": "Basic links",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#basic-links"
+      },
+      {
+        "id": "link-with-tooltip",
+        "heading": "Link with tooltip",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#link-with-tooltip"
+      },
+      {
+        "id": "relative-links",
+        "heading": "Relative links",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#relative-links"
+      },
+      {
+        "id": "images",
+        "heading": "Images",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#images"
+      },
+      {
+        "id": "inline-style",
+        "heading": "Inline style",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#inline-style"
+      },
+      {
+        "id": "reference-style",
+        "heading": "Reference style",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#reference-style"
+      },
+      {
+        "id": "images-with-links",
+        "heading": "Images with links",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#images-with-links"
+      },
+      {
+        "id": "other-methods",
+        "heading": "Other methods",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#other-methods"
+      },
+      {
+        "id": "lists",
+        "heading": "Lists",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#lists"
+      },
+      {
+        "id": "unordered-lists",
+        "heading": "Unordered lists",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#unordered-lists"
+      },
+      {
+        "id": "ordered-lists",
+        "heading": "Ordered lists",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#ordered-lists"
+      },
+      {
+        "id": "nested-unordered-lists",
+        "heading": "Nested unordered lists",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#nested-unordered-lists"
+      },
+      {
+        "id": "nested-ordered-lists",
+        "heading": "Nested ordered lists",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#nested-ordered-lists"
+      },
+      {
+        "id": "nested-ordered-and-unordered-lists",
+        "heading": "Nested ordered and unordered lists",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#nested-ordered-and-unordered-lists"
+      },
+      {
+        "id": "line-breaks",
+        "heading": "Line breaks",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#line-breaks"
+      },
+      {
+        "id": "code-and-syntax-highlighting",
+        "heading": "Code and syntax highlighting",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#code-and-syntax-highlighting"
+      },
+      {
+        "id": "inline-code",
+        "heading": "Inline code",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#inline-code"
+      },
+      {
+        "id": "code-blocks",
+        "heading": "Code blocks",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#code-blocks"
+      },
+      {
+        "id": "highlighting-codeblocks-with-comments",
+        "heading": "Highlighting codeblocks with comments",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#highlighting-codeblocks-with-comments"
+      },
+      {
+        "id": "tables",
+        "heading": "Tables",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#tables"
+      },
+      {
+        "id": "inconsistent-column-widths",
+        "heading": "Inconsistent column widths",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#inconsistent-column-widths"
+      },
+      {
+        "id": "data-matrix-tables",
+        "heading": "Data matrix tables",
+        "level": 3,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#data-matrix-tables"
+      },
+      {
+        "id": "indentation",
+        "heading": "Indentation",
+        "level": 2,
+        "content": "",
+        "url": "/markdown-reference/basic-formatting#indentation"
+      }
+    ]
+  },
+  {
+    "id": "markdown-reference",
+    "title": "Markdown Reference",
+    "description": "Learn about the markdown styles and Docusaurus-specific markdown formatting when contributing to the user documentation.",
+    "keywords": [
+      "keyword"
+    ],
+    "last_update": {
+      "date": "10/27/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/markdown-reference/markdown-reference",
+    "content": "\r\n\r\nimport DocCardList from '@theme/DocCardList';\r\n\r\n<DocCardList />",
+    "sections": []
+  },
+  {
+    "id": "document-configuration",
+    "title": "Document Configuration",
+    "description": "A detailed guide on configuring frontmatter metadata for documentation in Docusaurus. This document explains the importance of metadata in enhancing searchability, improving user experience, and managing content effectively while providing best practices for using various metadata fields.",
+    "keywords": [
+      "document configuration",
+      "frontmatter",
+      "metadata",
+      "Docusaurus",
+      "content management",
+      "user experience",
+      "search optimization",
+      "documentation best practices",
+      "discoverability"
+    ],
+    "last_update": {
+      "date": "12/12/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/smart-search-plugin/document-configuration",
+    "content": "\r\nAdding frontmatter metadata to your documentation files is essential for maintaining quality, enhancing user experience, and managing content efficiently.\r\n\r\nHere's an example of frontmatter:\r\n\r\n\r\n### Understanding Metadata\r\n\r\nMetadata is essential for creating effective documentation. Here's why:",
+    "sections": [
+      {
+        "id": "understanding-metadata",
+        "heading": "Understanding Metadata",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/document-configuration#understanding-metadata"
+      },
+      {
+        "id": "metadata-fields-and-best-practices",
+        "heading": "Metadata fields and best practices",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/document-configuration#metadata-fields-and-best-practices"
+      }
+    ]
+  },
+  {
+    "id": "getting-started",
+    "title": "Install the Plugin",
+    "description": "A comprehensive guide to installing and configuring the Smart Search Plugin for Docusaurus v3.x. This document covers prerequisites, installation steps, configuration settings, and how to verify your installation to enhance documentation with powerful search functionality.",
+    "keywords": [
+      "smart search plugin",
+      "Docusaurus",
+      "installation guide",
+      "configuration",
+      "user experience",
+      "documentation",
+      "prerequisites",
+      "search functionality",
+      "npm",
+      "yarn"
+    ],
+    "last_update": {
+      "date": "12/12/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/smart-search-plugin/getting-started",
+    "content": "\r\nSetting up the smart search plugin for your Docusaurus documentation requires careful preparation and attention to detail. By following these instructions, you'll be able to enhance your documentation with powerful search capabilities that improve user experience and content discoverability.\r\n\r\n##",
+    "sections": [
+      {
+        "id": "prerequisites",
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/getting-started#prerequisites"
+      },
+      {
+        "id": "install-and-configure-the-plugin",
+        "heading": "Install and configure the plugin",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/getting-started#install-and-configure-the-plugin"
+      },
+      {
+        "id": "verifying-your-installation",
+        "heading": "Verifying your installation",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/getting-started#verifying-your-installation"
+      }
+    ]
+  },
+  {
+    "id": "plugin-faq",
+    "title": "FAQ",
+    "description": "Frequently asked questions about the Smart Search Plugin for Docusaurus v3.x, covering installation, configuration, search functionality, user interface features, technical details, and contributing guidelines. This document provides essential information to help users effectively utilize the plugin.",
+    "keywords": [
+      "smart search plugin",
+      "Docusaurus",
+      "FAQ",
+      "installation",
+      "configuration",
+      "search functionality",
+      "user interface",
+      "contributing",
+      "metadata-driven search",
+      "technical details"
+    ],
+    "last_update": {
+      "date": "12/12/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/smart-search-plugin/plugin-faq",
+    "content": "\r\nThe Smart Search Plugin for Docusaurus v3.x is a metadata-driven search solution that streamlines documentation navigation. It offers precise search capabilities through an elegant, accessible interface that works offline. The plugin integrates smoothly with Docusaurus projects, delivering targete",
+    "sections": [
+      {
+        "id": "general-questions",
+        "heading": "General questions",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#general-questions"
+      },
+      {
+        "id": "what-is-the-smart-search-plugin-for-docusaurus",
+        "heading": "What is the Smart Search Plugin for Docusaurus?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-is-the-smart-search-plugin-for-docusaurus"
+      },
+      {
+        "id": "why-use-metadatadriven-search-instead-of-fulltext-indexing",
+        "heading": "Why use metadata-driven search instead of full-text indexing?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#why-use-metadatadriven-search-instead-of-fulltext-indexing"
+      },
+      {
+        "id": "is-the-plugin-compatible-with-docusaurus-3x",
+        "heading": "Is the plugin compatible with Docusaurus 3.x?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#is-the-plugin-compatible-with-docusaurus-3x"
+      },
+      {
+        "id": "does-the-plugin-work-offline",
+        "heading": "Does the plugin work offline?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#does-the-plugin-work-offline"
+      },
+      {
+        "id": "installation-and-setup",
+        "heading": "Installation and setup",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#installation-and-setup"
+      },
+      {
+        "id": "how-do-i-install-the-smart-search-plugin",
+        "heading": "How do I install the Smart Search Plugin?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#how-do-i-install-the-smart-search-plugin"
+      },
+      {
+        "id": "what-configurations-are-required-in-docusaurusconfigjs",
+        "heading": "What configurations are required in `docusaurus.config.js`?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-configurations-are-required-in-docusaurusconfigjs"
+      },
+      {
+        "id": "what-directory-structure-is-required-for-the-plugin",
+        "heading": "What directory structure is required for the plugin?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-directory-structure-is-required-for-the-plugin"
+      },
+      {
+        "id": "search-functionality",
+        "heading": "Search functionality",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#search-functionality"
+      },
+      {
+        "id": "how-does-the-plugin-generate-the-search-index",
+        "heading": "How does the plugin generate the search index?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#how-does-the-plugin-generate-the-search-index"
+      },
+      {
+        "id": "can-i-exclude-certain-files-or-folders-from-the-search",
+        "heading": "Can I exclude certain files or folders from the search?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#can-i-exclude-certain-files-or-folders-from-the-search"
+      },
+      {
+        "id": "what-frontmatter-fields-enhance-search-functionality",
+        "heading": "What frontmatter fields enhance search functionality?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-frontmatter-fields-enhance-search-functionality"
+      },
+      {
+        "id": "user-interface",
+        "heading": "User interface",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#user-interface"
+      },
+      {
+        "id": "what-features-does-the-search-interface-provide",
+        "heading": "What features does the search interface provide?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-features-does-the-search-interface-provide"
+      },
+      {
+        "id": "are-there-keyboard-shortcuts-for-search",
+        "heading": "Are there keyboard shortcuts for search?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#are-there-keyboard-shortcuts-for-search"
+      },
+      {
+        "id": "how-can-i-customize-the-search-styling",
+        "heading": "How can I customize the search styling?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#how-can-i-customize-the-search-styling"
+      },
+      {
+        "id": "technical-details",
+        "heading": "Technical details",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#technical-details"
+      },
+      {
+        "id": "what-are-the-key-dependencies-of-the-plugin",
+        "heading": "What are the key dependencies of the plugin?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-are-the-key-dependencies-of-the-plugin"
+      },
+      {
+        "id": "does-the-plugin-support-internet-explorer",
+        "heading": "Does the plugin support Internet Explorer?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#does-the-plugin-support-internet-explorer"
+      },
+      {
+        "id": "how-does-the-plugin-handle-content-indexing",
+        "heading": "How does the plugin handle content indexing?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#how-does-the-plugin-handle-content-indexing"
+      },
+      {
+        "id": "contributing",
+        "heading": "Contributing",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#contributing"
+      },
+      {
+        "id": "how-can-i-contribute-to-the-plugin",
+        "heading": "How can I contribute to the plugin?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#how-can-i-contribute-to-the-plugin"
+      },
+      {
+        "id": "licensing-and-credits",
+        "heading": "Licensing and credits",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#licensing-and-credits"
+      },
+      {
+        "id": "what-license-does-the-plugin-use",
+        "heading": "What license does the plugin use?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-license-does-the-plugin-use"
+      },
+      {
+        "id": "what-tools-and-frameworks-power-the-plugin",
+        "heading": "What tools and frameworks power the plugin?",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-faq#what-tools-and-frameworks-power-the-plugin"
+      }
+    ]
+  },
+  {
+    "id": "plugin-introduction",
+    "title": "Smart Search Plugin",
+    "description": "An overview of the Smart Search Plugin for Docusaurus v3.x, detailing its metadata-driven search capabilities that enhance documentation navigation. This plugin provides precise search results through a user-friendly interface, ensuring optimal performance in both online and offline environments.",
+    "keywords": [
+      "smart search",
+      "Docusaurus",
+      "documentation",
+      "search plugin",
+      "metadata-driven search",
+      "offline functionality",
+      "user experience",
+      "documentation navigation"
+    ],
+    "last_update": {
+      "date": "12/12/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/smart-search-plugin/plugin-introduction",
+    "content": "\r\nThe Smart Search Plugin for Docusaurus v3.x is a metadata-driven search solution that streamlines documentation navigation. It offers precise search capabilities through an elegant, accessible interface that works offline. \r\n\r\nThe plugin integrates smoothly with Docusaurus projects, delivering tar",
+    "sections": [
+      {
+        "id": "key-features",
+        "heading": "Key features",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#key-features"
+      },
+      {
+        "id": "technical-considerations",
+        "heading": "Technical considerations",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#technical-considerations"
+      },
+      {
+        "id": "content-processing",
+        "heading": "Content processing",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#content-processing"
+      },
+      {
+        "id": "automatic-exclusions",
+        "heading": "Automatic exclusions",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#automatic-exclusions"
+      },
+      {
+        "id": "search-index-files",
+        "heading": "Search index files",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#search-index-files"
+      },
+      {
+        "id": "browser-compatibility",
+        "heading": "Browser compatibility",
+        "level": 3,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#browser-compatibility"
+      },
+      {
+        "id": "see-how-the-plugin-works",
+        "heading": "See how the plugin works",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-introduction#see-how-the-plugin-works"
+      }
+    ]
+  },
+  {
+    "id": "plugin-troubleshooting",
+    "title": "Troubleshooting",
+    "description": "A comprehensive guide to diagnosing and resolving common issues with the Smart Search Plugin, including troubleshooting steps for missing search icons, search results not appearing, performance issues, and handling console errors.",
+    "keywords": [
+      "troubleshooting",
+      "Smart Search Plugin",
+      "search icon",
+      "search results",
+      "performance issues",
+      "console errors",
+      "Docusaurus",
+      "installation issues",
+      "documentation",
+      "user experience"
+    ],
+    "last_update": {
+      "date": "12/12/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/smart-search-plugin/plugin-troubleshooting",
+    "content": "\r\nThis guide helps you diagnose and resolve common issues with the Smart Search Plugin.\r\n\r\n## Search icon not appearing\r\n\r\n#### Symptoms\r\n\r\n- Search icon missing from navigation bar\r\n- Navigation bar appears normal otherwise\r\n\r\n#### Possible causes\r\n\r\n1. Incorrect navbar configuration\r\n2. Plugin not",
+    "sections": [
+      {
+        "id": "search-icon-not-appearing",
+        "heading": "Search icon not appearing",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#search-icon-not-appearing"
+      },
+      {
+        "id": "symptoms",
+        "heading": "Symptoms",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#symptoms"
+      },
+      {
+        "id": "possible-causes",
+        "heading": "Possible causes",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#possible-causes"
+      },
+      {
+        "id": "solution",
+        "heading": "Solution",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#solution"
+      },
+      {
+        "id": "search-results-not-appearing",
+        "heading": "Search results not appearing",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#search-results-not-appearing"
+      },
+      {
+        "id": "symptoms",
+        "heading": "Symptoms",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#symptoms"
+      },
+      {
+        "id": "possible-causes",
+        "heading": "Possible causes",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#possible-causes"
+      },
+      {
+        "id": "solution",
+        "heading": "Solution",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#solution"
+      },
+      {
+        "id": "search-performance-issues",
+        "heading": "Search performance issues",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#search-performance-issues"
+      },
+      {
+        "id": "symptoms",
+        "heading": "Symptoms",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#symptoms"
+      },
+      {
+        "id": "solution",
+        "heading": "Solution",
+        "level": 4,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#solution"
+      },
+      {
+        "id": "console-errors",
+        "heading": "Console errors",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#console-errors"
+      },
+      {
+        "id": "reporting-issues",
+        "heading": "Reporting issues",
+        "level": 2,
+        "content": "",
+        "url": "/smart-search-plugin/plugin-troubleshooting#reporting-issues"
+      }
+    ]
+  },
+  {
+    "id": "acronyms-abbreviations",
+    "title": "Acronyms and Abbreviations",
+    "description": "A comprehensive guide to effectively using acronyms and abbreviations in technical documentation, ensuring clarity, consistency, and enhanced reader comprehension.",
+    "keywords": [
+      "acronyms",
+      "abbreviations",
+      "technical writing",
+      "clarity",
+      "documentation",
+      "writing tips",
+      "Latin abbreviations",
+      "style guide",
+      "best practices"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/acronyms-abbreviations",
+    "content": "\r\nAcronyms and abbreviations can hurt clarity, voice, and findability. Although some acronyms are widely understood and preferred to the spelled-out term, others aren't well known or are familiar only to a specific group of users.\r\n\r\n|  |  |  |\r\n| --- | --- | --- |\r\n|  | Recommended | Not recommende",
+    "sections": []
+  },
+  {
+    "id": "ai-generated-content",
+    "title": "Tips for AI-Generated Contents",
+    "description": "Learn how to create AI-generated content for technical documentation, including guidelines for quality, accuracy, and user-friendliness.",
+    "keywords": [
+      "AI-generated content",
+      "technical documentation",
+      "guidelines",
+      "best practices",
+      "pitfalls",
+      "quality",
+      "accuracy",
+      "user-friendliness"
+    ],
+    "last_update": {
+      "date": "12/17/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/ai-generated-content",
+    "content": "\r\nAI-generated content offers exciting opportunities to streamline workflows and deliver high-quality content efficiently. While AI tools enhance productivity and creativity, using them effectively requires careful planning. \r\n\r\nBy following these guidelines and addressing issues (observed through r",
+    "sections": [
+      {
+        "id": "guidelines-for-using-aigenerated-content",
+        "heading": "Guidelines for using AI-generated content",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ai-generated-content#guidelines-for-using-aigenerated-content"
+      },
+      {
+        "id": "best-practices-for-leveraging-ai-in-documentation",
+        "heading": "Best practices for leveraging AI in documentation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ai-generated-content#best-practices-for-leveraging-ai-in-documentation"
+      },
+      {
+        "id": "pitfalls-of-aigenerated-content",
+        "heading": "Pitfalls of AI-generated content",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ai-generated-content#pitfalls-of-aigenerated-content"
+      }
+    ]
+  },
+  {
+    "id": "case-studies",
+    "title": "Case Studies",
+    "description": "Explore case studies showcasing exemplary technical documentation strategies, their impacts on user experience, and best practices in content creation.",
+    "keywords": [
+      "case studies",
+      "technical documentation",
+      "user experience",
+      "onboarding",
+      "content strategy",
+      "Docs-as-Code",
+      "CI/CD",
+      "design thinking",
+      "documentation best practices",
+      "SRE practices",
+      "task-based documentation"
+    ],
+    "last_update": {
+      "date": "09/01/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/case-studies",
+    "content": "\r\n\r\nExplore case studies that showcase well-structured and thoughtfully crafted technical content.\r\n\r\n## Stripe's Documentation Strategy (2022)\r\n\r\nStripe focuses on creating [technical documentation](https://stripe.com/docs) that is both informative and engaging. Their use of illustrations, interact",
+    "sections": [
+      {
+        "id": "stripes-documentation-strategy-2022",
+        "heading": "Stripe's Documentation Strategy (2022)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/case-studies#stripes-documentation-strategy-2022"
+      },
+      {
+        "id": "githubs-docsite-transformation-2020",
+        "heading": "GitHub's DocSite Transformation (2020)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/case-studies#githubs-docsite-transformation-2020"
+      },
+      {
+        "id": "platformos-employs-design-thinking-2022",
+        "heading": "platformOS Employs Design Thinking (2022)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/case-studies#platformos-employs-design-thinking-2022"
+      },
+      {
+        "id": "increased-utilization-of-documentation-and-positive-user-feedback-2023",
+        "heading": "Increased utilization of documentation and positive user feedback (2023)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/case-studies#increased-utilization-of-documentation-and-positive-user-feedback-2023"
+      },
+      {
+        "id": "atlassian-levels-up-their-documentation-using-a-taskbased-approach-2020",
+        "heading": "Atlassian levels up their documentation using a task-based approach (2020)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/case-studies#atlassian-levels-up-their-documentation-using-a-taskbased-approach-2020"
+      }
+    ]
+  },
+  {
+    "id": "common-mistakes",
+    "title": "Common Documentation Mistakes",
+    "description": "Learn about common pitfalls in writing technical documentation for end-users, including verbosity, jargon, poor structure, and more.",
+    "keywords": [
+      "common mistakes",
+      "technical documentation",
+      "writing tips",
+      "documentation pitfalls",
+      "user-friendly content",
+      "end-user documentation"
+    ],
+    "last_update": {
+      "date": "09/06/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/common-mistakes",
+    "content": "\r\n\r\nAddressing these common mistakes in documentation is essential for creating more effective and user-friendly content. \r\n\r\n## Being wordy\r\n\r\nEngineers may include too much detail, leading to overwhelming or inefficient documentation. The key is to communicate clearly without overloading the user ",
+    "sections": [
+      {
+        "id": "being-wordy",
+        "heading": "Being wordy",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#being-wordy"
+      },
+      {
+        "id": "using-jargon-and-technical-terms",
+        "heading": "Using jargon and technical terms",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#using-jargon-and-technical-terms"
+      },
+      {
+        "id": "focusing-on-too-much-detail",
+        "heading": "Focusing on too much detail",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#focusing-on-too-much-detail"
+      },
+      {
+        "id": "lack-of-structure-and-organization",
+        "heading": "Lack of structure and organization",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#lack-of-structure-and-organization"
+      },
+      {
+        "id": "inadequate-explanation-of-concepts",
+        "heading": "Inadequate explanation of concepts",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#inadequate-explanation-of-concepts"
+      },
+      {
+        "id": "using-screenshots-without-text-instructions",
+        "heading": "Using screenshots without text instructions",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#using-screenshots-without-text-instructions"
+      },
+      {
+        "id": "using-nondescriptive-hyperlink-text",
+        "heading": "Using non-descriptive hyperlink text",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/common-mistakes#using-nondescriptive-hyperlink-text"
+      }
+    ]
+  },
+  {
+    "id": "content-quality",
+    "title": "Content Quality Checklist",
+    "description": "A comprehensive guide to planning, creating, reviewing, and revising high-quality content for your PR submission.",
+    "keywords": [
+      "checklist",
+      "content quality",
+      "content guidelines",
+      "PR best practices",
+      "writing checklist",
+      "quality control",
+      "content review",
+      "content revision",
+      "layout design",
+      "technical writing"
+    ],
+    "last_update": {
+      "date": "10/25/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/content-quality",
+    "content": "\r\nUse this checklist to evaluate and enhance the quality of your content before submitting your PR.\r\n\r\n## Planning and preparation\r\n\r\nimport PlanningChecklist from '../../src/components/ContributorGuide/PlanningChecklist'; \r\n\r\n<PlanningChecklist />\r\n\r\n\r\n## Content Creation\r\n\r\nimport ContentCreationC",
+    "sections": [
+      {
+        "id": "planning-and-preparation",
+        "heading": "Planning and preparation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-quality#planning-and-preparation"
+      },
+      {
+        "id": "content-creation",
+        "heading": "Content Creation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-quality#content-creation"
+      },
+      {
+        "id": "review-and-revision",
+        "heading": "Review and Revision",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-quality#review-and-revision"
+      },
+      {
+        "id": "layout-and-design",
+        "heading": "Layout and Design",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-quality#layout-and-design"
+      },
+      {
+        "id": "quality-control",
+        "heading": "Quality Control",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-quality#quality-control"
+      }
+    ]
+  },
+  {
+    "id": "content-structure",
+    "title": "Content Structure",
+    "description": "A comprehensive guide to creating scannable and structured content, focusing on strategic formatting, clear organization, and actionable takeaways for user engagement.",
+    "keywords": [
+      "content structure",
+      "content organization",
+      "scannable content",
+      "document structure",
+      "inverted pyramid",
+      "user engagement",
+      "content readability",
+      "technical writing",
+      "documentation tips"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/content-structure",
+    "content": "\r\nReading is the primary action people perform online, but people strive to read as little as possible. They rely on scanning instead. Thoughtful editing, strategic structuring, and effective formatting of long-form content supports scanning.\r\n\r\n***Start with an outline*** of the main content (divid",
+    "sections": [
+      {
+        "id": "intro-paragraph",
+        "heading": "Intro paragraph",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-structure#intro-paragraph"
+      },
+      {
+        "id": "main-body-structure",
+        "heading": "Main body structure",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-structure#main-body-structure"
+      },
+      {
+        "id": "ending-the-document",
+        "heading": "Ending the document",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-structure#ending-the-document"
+      }
+    ]
+  },
+  {
+    "id": "content-types",
+    "title": "Content Types",
+    "description": "Explore the various content types used in user documentation, including overviews, concepts, getting started guides, how-to guides, tutorials, troubleshooting topics, and references, with practical examples and usage scenarios.",
+    "keywords": [
+      "content types",
+      "documentation types",
+      "user documentation",
+      "overviews",
+      "how-to guides",
+      "tutorials",
+      "references",
+      "troubleshooting"
+    ],
+    "last_update": {
+      "date": "09/07/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/content-types",
+    "content": "\r\n\r\nLearn about the content types used in user documentation.\r\n\r\n## Overview\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col col--6\">\r\n      <div class=\"col-demo\">\r\n        <div class=\"card margin-top--sm margin-bottom--sm no-pointer\">\r\n          <div class=\"card__header h",
+    "sections": [
+      {
+        "id": "overview",
+        "heading": "Overview",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#overview"
+      },
+      {
+        "id": "concepts",
+        "heading": "Concepts",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#concepts"
+      },
+      {
+        "id": "getting-started",
+        "heading": "Getting started",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#getting-started"
+      },
+      {
+        "id": "similarities",
+        "heading": "Similarities",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#similarities"
+      },
+      {
+        "id": "differences",
+        "heading": "Differences",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#differences"
+      },
+      {
+        "id": "howto",
+        "heading": "How-to",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#howto"
+      },
+      {
+        "id": "similarities",
+        "heading": "Similarities",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#similarities"
+      },
+      {
+        "id": "differences",
+        "heading": "Differences",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#differences"
+      },
+      {
+        "id": "similarities",
+        "heading": "Similarities",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#similarities"
+      },
+      {
+        "id": "differences",
+        "heading": "Differences",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#differences"
+      },
+      {
+        "id": "troubleshooting",
+        "heading": "Troubleshooting",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#troubleshooting"
+      },
+      {
+        "id": "references",
+        "heading": "References",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#references"
+      },
+      {
+        "id": "tutorials",
+        "heading": "Tutorials",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/content-types#tutorials"
+      },
+      {
+        "id": "similarities",
+        "heading": "Similarities",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#similarities"
+      },
+      {
+        "id": "differences",
+        "heading": "Differences",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/content-types#differences"
+      }
+    ]
+  },
+  {
+    "id": "headings-titles",
+    "title": "Headings and Titles",
+    "description": "Learn how to structure effective headings and titles for better readability, organization, and user engagement in technical documentation.",
+    "keywords": [
+      "headings",
+      "titles",
+      "capitalization",
+      "structure",
+      "organization",
+      "title case",
+      "sentence case",
+      "technical writing",
+      "readability",
+      "UI text",
+      "hierarchy",
+      "formatting",
+      "documentation tips",
+      "effective headings"
+    ],
+    "last_update": {
+      "date": "09/07/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/headings-titles",
+    "content": "\r\n\r\n\r\nBoth provide structure and visual reference points to help readers scan content. Structuring headings in a hierarchy can make a larger topic easily scannable while helping search engines understand the context of your content.\r\n\r\nBy following these practices, you can effectively structure your",
+    "sections": [
+      {
+        "id": "capitalization-in-titles",
+        "heading": "Capitalization in titles",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#capitalization-in-titles"
+      },
+      {
+        "id": "capitalization-in-headings",
+        "heading": "Capitalization in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#capitalization-in-headings"
+      },
+      {
+        "id": "effective-headings",
+        "heading": "Effective headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#effective-headings"
+      },
+      {
+        "id": "gerunds-in-headings-and-titles",
+        "heading": "Gerunds in headings and titles",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#gerunds-in-headings-and-titles"
+      },
+      {
+        "id": "use-and-in-headings",
+        "heading": "Use 'and' in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#use-and-in-headings"
+      },
+      {
+        "id": "keep-headings-short",
+        "heading": "Keep headings short",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#keep-headings-short"
+      },
+      {
+        "id": "use-vs-in-headings",
+        "heading": "Use 'vs.' in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#use-vs-in-headings"
+      },
+      {
+        "id": "organization-of-headings",
+        "heading": "Organization of headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#organization-of-headings"
+      },
+      {
+        "id": "step-numbers-in-headings",
+        "heading": "Step numbers in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#step-numbers-in-headings"
+      },
+      {
+        "id": "punctuation-in-headings",
+        "heading": "Punctuation in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#punctuation-in-headings"
+      },
+      {
+        "id": "acronyms-in-headings",
+        "heading": "Acronyms in headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#acronyms-in-headings"
+      },
+      {
+        "id": "task-and-procedure-headings",
+        "heading": "Task and procedure headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#task-and-procedure-headings"
+      },
+      {
+        "id": "nontask-headings",
+        "heading": "Non-task headings",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/headings-titles#nontask-headings"
+      }
+    ]
+  },
+  {
+    "id": "hyperlinks",
+    "title": "Hyperlinks",
+    "description": "Learn best practices for creating informative, user-friendly, and SEO-optimized hyperlinks that enhance content usability and navigation.",
+    "keywords": [
+      "hyperlinks",
+      "best practices",
+      "SEO",
+      "content usability",
+      "navigation",
+      "user-friendly design",
+      "writing tips"
+    ],
+    "last_update": {
+      "date": "09/06/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/hyperlinks",
+    "content": "\r\n\r\nCreating engaging and user-friendly content extends beyond just the words you write; it also involves how you integrate hyperlinks. They should be informative and woven into your narrative, guiding readers to additional valuable resources.\r\n\r\n## Basic guidelines\r\n\r\n- **Be Descriptive**: Hyperlin",
+    "sections": [
+      {
+        "id": "basic-guidelines",
+        "heading": "Basic guidelines",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/hyperlinks#basic-guidelines"
+      },
+      {
+        "id": "links-to-thirdparty-documentation",
+        "heading": "Links to third-party documentation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/hyperlinks#links-to-thirdparty-documentation"
+      }
+    ]
+  },
+  {
+    "id": "images-screenshots",
+    "title": "Images and Screenshots",
+    "description": "Comprehensive guidelines for capturing, editing, and describing visual content, including screenshots, diagrams, and UI elements, to ensure clarity, consistency, and accessibility in technical documentation.",
+    "keywords": [
+      "images",
+      "screenshots",
+      "visual content",
+      "alt-text",
+      "accessibility",
+      "diagrams",
+      "UI",
+      "CLI",
+      "technical documentation"
+    ],
+    "last_update": {
+      "date": "12/16/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/images-screenshots",
+    "content": "\r\n\r\nLearn how to capture, edit, and describe visual content effectively to ensure clarity, consistency, and accessibility.\r\n\r\nThese guidelines will help you create professional, user-friendly documentation when working with screenshots, diagrams, and other visuals.\r\n\r\n## Image guidelines\r\n\r\n- Use 10",
+    "sections": [
+      {
+        "id": "image-guidelines",
+        "heading": "Image guidelines",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/images-screenshots#image-guidelines"
+      },
+      {
+        "id": "callouts",
+        "heading": "Callouts",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/images-screenshots#callouts"
+      },
+      {
+        "id": "alttext-guidelines",
+        "heading": "Alt-text guidelines",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/images-screenshots#alttext-guidelines"
+      }
+    ]
+  },
+  {
+    "id": "ordered-unordered-lists",
+    "title": "Lists (Ordered and Unordered)",
+    "description": "Learn how to effectively use ordered and unordered lists to improve readability, simplify complex information, and enhance technical documentation.",
+    "keywords": [
+      "lists",
+      "ordered lists",
+      "unordered lists",
+      "numbered lists",
+      "bullet points",
+      "bullet lists",
+      "formatting",
+      "readability",
+      "technical documentation",
+      "writing guidelines",
+      "writing tips"
+    ],
+    "last_update": {
+      "date": "09/07/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/ordered-unordered-lists",
+    "content": "\r\n\r\nLists play a crucial role in enhancing the readability and organization of information. \r\n\r\nThey help in breaking down complex instructions, features, or concepts into manageable, easy-to-digest pieces. Incorporating ordered and unordered lists effectively can significantly improve the quality a",
+    "sections": [
+      {
+        "id": "basic-guidelines",
+        "heading": "Basic guidelines",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#basic-guidelines"
+      },
+      {
+        "id": "unordered-lists-bullets",
+        "heading": "Unordered lists (bullets)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#unordered-lists-bullets"
+      },
+      {
+        "id": "ordered-lists-numbered",
+        "heading": "Ordered lists (numbered)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#ordered-lists-numbered"
+      },
+      {
+        "id": "introductory-text",
+        "heading": "Introductory text",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#introductory-text"
+      },
+      {
+        "id": "capitalization",
+        "heading": "Capitalization",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#capitalization"
+      },
+      {
+        "id": "punctuation",
+        "heading": "Punctuation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/ordered-unordered-lists#punctuation"
+      }
+    ]
+  },
+  {
+    "id": "paragraphs",
+    "title": "Paragraphs",
+    "description": "Learn to craft concise, scannable paragraphs that enhance readability and user engagement in technical documentation.",
+    "keywords": [
+      "paragraphs",
+      "engaging",
+      "scannable",
+      "concise writing",
+      "technical writing",
+      "readability",
+      "content creation",
+      "documentation best practices"
+    ],
+    "last_update": {
+      "date": "09/07/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/paragraphs",
+    "content": "\r\n\r\nIn this topic, you'll explore the importance of concise and scannable paragraphs in technical documentation. \r\n\r\nYou'll learn about maintaining a word count of 50-150 words per paragraph, balancing context with readability. \r\n\r\n\r\n\r\n## Minimum length for all paragraphs\r\n\r\nGive your paragraphs roo",
+    "sections": [
+      {
+        "id": "minimum-length-for-all-paragraphs",
+        "heading": "Minimum length for all paragraphs",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/paragraphs#minimum-length-for-all-paragraphs"
+      },
+      {
+        "id": "introduction-paragraphs",
+        "heading": "Introduction paragraphs",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/paragraphs#introduction-paragraphs"
+      }
+    ]
+  },
+  {
+    "id": "reusing-content",
+    "title": "Content Reuse",
+    "description": "Learn how to scale your documentation with reusable content blocks and modular writing techniques.",
+    "keywords": [
+      "content reuse",
+      "content blocks",
+      "modular content",
+      "scalability",
+      "structured content",
+      "reusable documentation",
+      "partial files",
+      "MDX",
+      "Docusaurus"
+    ],
+    "last_update": {
+      "date": "09/23/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/reusing-content",
+    "content": "\r\n\r\nCreating content once and reusing it in multiple places unlocks scalability. This is achieved through structured content, which breaks information into \"blocks\" that can be rearranged and reused to create new, tailored experiences.\r\n\r\nBy leveraging content reuse, you streamline content creation ",
+    "sections": [
+      {
+        "id": "what-is-content-reuse",
+        "heading": "What is content reuse?",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/reusing-content#what-is-content-reuse"
+      },
+      {
+        "id": "why-reuse-content",
+        "heading": "Why reuse content?",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/reusing-content#why-reuse-content"
+      },
+      {
+        "id": "content-reuse-the-modular-code-approach",
+        "heading": "Content reuse: The modular code approach",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/reusing-content#content-reuse-the-modular-code-approach"
+      },
+      {
+        "id": "best-practices-for-writing-reusable-content",
+        "heading": "Best practices for writing reusable content",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/reusing-content#best-practices-for-writing-reusable-content"
+      },
+      {
+        "id": "reusing-content",
+        "heading": "Reusing content",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/reusing-content#reusing-content"
+      },
+      {
+        "id": "step-1-create-a-partial-file",
+        "heading": "Step 1: Create a partial file",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/reusing-content#step-1-create-a-partial-file"
+      },
+      {
+        "id": "step-2-import-the-partial-file",
+        "heading": "Step 2: Import the partial file",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/reusing-content#step-2-import-the-partial-file"
+      },
+      {
+        "id": "example-workflow",
+        "heading": "Example workflow",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/reusing-content#example-workflow"
+      }
+    ]
+  },
+  {
+    "id": "tips-for-effective-yaml-inputs",
+    "title": "UX Writing Tips for YAML Files",
+    "description": "Actionable tips for engineers and developers to improve clarity, brevity, and effectiveness in YAML metadata inputs for catalog-info.yaml and template.yaml files, ensuring better understanding and usability across teams.",
+    "keywords": [
+      "tips",
+      "yaml",
+      "inputs",
+      "writing",
+      "documentation",
+      "ux writing",
+      "microcopy",
+      "catalog-info.yaml",
+      "template.yaml",
+      "metadata",
+      "engineering",
+      "clarity",
+      "brevity",
+      "effectiveness",
+      "developers",
+      "yaml best practices",
+      "formatting"
+    ],
+    "last_update": {
+      "date": "12/13/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/tips-for-effective-yaml-inputs",
+    "content": "\r\nThese guidelines help you create effective microcopy for YAML files. Focus on **clarity, brevity, and user value** to ensure better configuration and usability.\r\n\r\nAdhering to these guidelines will help you create YAML files that are functional and user-friendly.\r\n\r\n## Field inputs\r\n\r\nClear field ",
+    "sections": [
+      {
+        "id": "field-inputs",
+        "heading": "Field inputs",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#field-inputs"
+      },
+      {
+        "id": "metadata-descriptions",
+        "heading": "Metadata descriptions",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#metadata-descriptions"
+      },
+      {
+        "id": "writing-guidelines",
+        "heading": "Writing guidelines",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#writing-guidelines"
+      },
+      {
+        "id": "1-analyze",
+        "heading": "1. Analyze",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#1-analyze"
+      },
+      {
+        "id": "2-draft",
+        "heading": "2. Draft",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#2-draft"
+      },
+      {
+        "id": "3-polish",
+        "heading": "3. Polish",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#3-polish"
+      },
+      {
+        "id": "examples-with-explanations",
+        "heading": "Examples with explanations",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#examples-with-explanations"
+      },
+      {
+        "id": "-good-examples",
+        "heading": "✅ Good examples",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#-good-examples"
+      },
+      {
+        "id": "-poor-examples",
+        "heading": "❌ Poor examples",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#-poor-examples"
+      },
+      {
+        "id": "check-your-knowledge",
+        "heading": "Check your knowledge",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/tips-for-effective-yaml-inputs#check-your-knowledge"
+      }
+    ]
+  },
+  {
+    "id": "voice-tone",
+    "title": "Voice and Tone",
+    "description": "Discover the principles of voice and tone in end-user documentation, focusing on clarity, adaptability, and user-centric communication.",
+    "keywords": [
+      "voice",
+      "tone",
+      "writing style",
+      "documentation voice",
+      "user communication",
+      "tone adaptation",
+      "instructional writing",
+      "professional tone",
+      "empathetic communication"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/voice-tone",
+    "content": "\r\n\r\nVoice is how we talk to people.  It's the interplay of personality, substance, tone, and style. \r\n\r\nRegardless of who we're talking to or what we're saying, we adapt our tone—from serious to empathetic to lighthearted—to fit the context and the user's state of mind. \r\n\r\n## Voice (Personality)\r\n\r",
+    "sections": [
+      {
+        "id": "voice-personality",
+        "heading": "Voice (Personality)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/voice-tone#voice-personality"
+      },
+      {
+        "id": "tone-adaptable-and-respectful",
+        "heading": "Tone (Adaptable and respectful)",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/voice-tone#tone-adaptable-and-respectful"
+      }
+    ]
+  },
+  {
+    "id": "word-usage",
+    "title": "Word and Acronym Usage",
+    "description": "Master the principles of word usage and acronym handling in technical documentation to improve clarity, accessibility, and user engagement.",
+    "keywords": [
+      "word usage",
+      "acronyms",
+      "abbreviations",
+      "writing guidelines",
+      "technical writing",
+      "style guide",
+      "documentation best practices",
+      "clarity in writing",
+      "user experience",
+      "writing standards",
+      "please",
+      "click",
+      "select",
+      "choose",
+      "press",
+      "hit",
+      "avoid ambiguity",
+      "ensure",
+      "confirm",
+      "effective communication"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/word-usage",
+    "content": "\r\n\r\n\r\nEffective communication hinges on proper word usage. This guide offers tips for using words effectively, ensuring clarity, accuracy, and accessibility. \r\n\r\nBy following these guidelines, you can enhance reader comprehension and user experience. Learn to refine your writing, from avoiding ambig",
+    "sections": [
+      {
+        "id": "effective-word-usage",
+        "heading": "Effective word usage",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/word-usage#effective-word-usage"
+      },
+      {
+        "id": "avoid-andor",
+        "heading": "Avoid \"and/or\"",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#avoid-andor"
+      },
+      {
+        "id": "avoid-please",
+        "heading": "Avoid \"please\"",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#avoid-please"
+      },
+      {
+        "id": "avoid-may",
+        "heading": "Avoid \"may\"",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#avoid-may"
+      },
+      {
+        "id": "use-ensure-or-confirm",
+        "heading": "Use \"ensure\" or \"confirm\"",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#use-ensure-or-confirm"
+      },
+      {
+        "id": "click-vs-select-vs-choose",
+        "heading": "Click vs. Select vs. Choose",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#click-vs-select-vs-choose"
+      },
+      {
+        "id": "press-vs-hit",
+        "heading": "Press vs. Hit",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#press-vs-hit"
+      },
+      {
+        "id": "acronyms-and-abbreviations",
+        "heading": "Acronyms and abbreviations",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/word-usage#acronyms-and-abbreviations"
+      },
+      {
+        "id": "spell-out-the-first-instance",
+        "heading": "Spell out the first instance",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#spell-out-the-first-instance"
+      },
+      {
+        "id": "latin-abbreviations",
+        "heading": "Latin abbreviations",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#latin-abbreviations"
+      },
+      {
+        "id": "v-for-version",
+        "heading": "\"v\" for version",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/word-usage#v-for-version"
+      }
+    ]
+  },
+  {
+    "id": "writing-effective-error-messages",
+    "title": "Writing Effective Error Messages",
+    "description": "Actionable tips for engineers and developers to improve clarity, brevity, and effectiveness in error messages, ensuring better understanding and usability across teams.",
+    "keywords": [
+      "tips",
+      "error messages",
+      "writing",
+      "documentation",
+      "ux writing",
+      "microcopy",
+      "error handling",
+      "engineering",
+      "clarity",
+      "brevity",
+      "effectiveness",
+      "developers",
+      "error message best practices",
+      "formatting"
+    ],
+    "last_update": {
+      "date": "10/16/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/writing-effective-error-messages",
+    "content": "\r\nWriting effective error messages is an essential skill in UX writing—it's an art. When something goes wrong, your error message can be the only thing standing between a user resolving the issue and quitting your product in frustration.\r\n\r\nHere's a key question to ask about every error message: Doe",
+    "sections": [
+      {
+        "id": "the-four-pillars-of-effective-error-messages",
+        "heading": "The four pillars of effective error messages",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#the-four-pillars-of-effective-error-messages"
+      },
+      {
+        "id": "1-clarity-explain-what-happened",
+        "heading": "1. Clarity: Explain what happened",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#1-clarity-explain-what-happened"
+      },
+      {
+        "id": "2-context-give-them-the-details-that-matter",
+        "heading": "2. Context: Give them the details that matter",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#2-context-give-them-the-details-that-matter"
+      },
+      {
+        "id": "3-actionability-tell-them-what-to-do-next",
+        "heading": "3. Actionability: Tell them what to do next",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#3-actionability-tell-them-what-to-do-next"
+      },
+      {
+        "id": "4-empathy-sound-like-a-human",
+        "heading": "4. Empathy: Sound like a human",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#4-empathy-sound-like-a-human"
+      },
+      {
+        "id": "message-structure-template",
+        "heading": "Message structure template",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#message-structure-template"
+      },
+      {
+        "id": "error-severity-levels",
+        "heading": "Error severity levels",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#error-severity-levels"
+      },
+      {
+        "id": "critical-errors-everythings-broken",
+        "heading": "Critical errors (everything's broken)",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#critical-errors-everythings-broken"
+      },
+      {
+        "id": "highpriority-errors-cant-do-important-stuff",
+        "heading": "High-priority errors (can't do important stuff)",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#highpriority-errors-cant-do-important-stuff"
+      },
+      {
+        "id": "mediumpriority-errors-annoying-but-manageable",
+        "heading": "Medium-priority errors (annoying but manageable)",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#mediumpriority-errors-annoying-but-manageable"
+      },
+      {
+        "id": "lowpriority-errors-heads-up",
+        "heading": "Low-Priority errors (heads up)",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#lowpriority-errors-heads-up"
+      },
+      {
+        "id": "realworld-examples-before-and-after",
+        "heading": "Real-World examples: Before and after",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#realworld-examples-before-and-after"
+      },
+      {
+        "id": "example-1-authentication-error",
+        "heading": "Example 1: Authentication error",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#example-1-authentication-error"
+      },
+      {
+        "id": "example-2-permission-denied",
+        "heading": "Example 2: Permission denied",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#example-2-permission-denied"
+      },
+      {
+        "id": "example-3-invalid-input-format",
+        "heading": "Example 3: Invalid Input Format",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#example-3-invalid-input-format"
+      },
+      {
+        "id": "example-4-database-connection-error",
+        "heading": "Example 4: Database connection error",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#example-4-database-connection-error"
+      },
+      {
+        "id": "technical-implementation-best-practices",
+        "heading": "Technical implementation best practices",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#technical-implementation-best-practices"
+      },
+      {
+        "id": "keep-user-messages-and-logs-separate",
+        "heading": "Keep user messages and logs separate",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#keep-user-messages-and-logs-separate"
+      },
+      {
+        "id": "use-progressive-disclosure-for-details",
+        "heading": "Use progressive disclosure for details",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#use-progressive-disclosure-for-details"
+      },
+      {
+        "id": "security-considerations",
+        "heading": "Security considerations",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#security-considerations"
+      },
+      {
+        "id": "authentication-errors",
+        "heading": "Authentication errors",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#authentication-errors"
+      },
+      {
+        "id": "password-creation-errors",
+        "heading": "Password creation errors",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#password-creation-errors"
+      },
+      {
+        "id": "system-information-disclosure",
+        "heading": "System information disclosure",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#system-information-disclosure"
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "heading": "Common mistakes to avoid",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#common-mistakes-to-avoid"
+      },
+      {
+        "id": "1-using-technical-jargon",
+        "heading": "1. Using technical jargon",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#1-using-technical-jargon"
+      },
+      {
+        "id": "2-blaming-the-user",
+        "heading": "2. Blaming the user",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#2-blaming-the-user"
+      },
+      {
+        "id": "3-unhelpful-confirmations",
+        "heading": "3. Unhelpful confirmations",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#3-unhelpful-confirmations"
+      },
+      {
+        "id": "4-confusing-success-with-failure",
+        "heading": "4. Confusing success with failure",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#4-confusing-success-with-failure"
+      },
+      {
+        "id": "testing-your-error-messages",
+        "heading": "Testing your error messages",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#testing-your-error-messages"
+      },
+      {
+        "id": "1-can-people-actually-understand-them",
+        "heading": "1. Can people actually understand them?",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#1-can-people-actually-understand-them"
+      },
+      {
+        "id": "2-do-they-work-in-context",
+        "heading": "2. Do they work in context?",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#2-do-they-work-in-context"
+      },
+      {
+        "id": "3-are-they-accessible",
+        "heading": "3. Are they accessible?",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#3-are-they-accessible"
+      },
+      {
+        "id": "4-did-you-test-the-weird-scenarios",
+        "heading": "4. Did you test the weird scenarios?",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#4-did-you-test-the-weird-scenarios"
+      },
+      {
+        "id": "sample-details",
+        "heading": "Sample details",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#sample-details"
+      },
+      {
+        "id": "the-bottom-line",
+        "heading": "The bottom line",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-error-messages#the-bottom-line"
+      }
+    ]
+  },
+  {
+    "id": "writing-effective-procedures",
+    "title": "Writing Effective Procedures",
+    "description": "Learn to write clear, concise, and user-friendly procedures to enhance the quality of technical documentation and improve user experience.",
+    "keywords": [
+      "effective procedures",
+      "technical documentation",
+      "writing guidelines",
+      "technical writing",
+      "style guide",
+      "documentation best practices",
+      "clarity in writing",
+      "user experience",
+      "writing standards",
+      "procedures",
+      "instructions",
+      "user-friendly",
+      "clarity",
+      "simplicity",
+      "task-oriented",
+      "user experience",
+      "engineers",
+      "technical knowledge",
+      "accessible instructions",
+      "technical communication",
+      "step-by-step guides",
+      "instructional writing",
+      "process documentation",
+      "documentation clarity",
+      "engineering documentation",
+      "writing tips",
+      "usability",
+      "structured content",
+      "writing workflows"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/writing-effective-procedures",
+    "content": "\r\n\r\nClear, concise, and user-friendly procedures are vital for effective technical documentation. \r\n\r\nIt's often a challenge for engineers to transform their deep technical knowledge into accessible instructions. By applying clarity and simplicity, technical documentation becomes more user-friendly ",
+    "sections": [
+      {
+        "id": "start-with-an-action-verb",
+        "heading": "Start with an action verb",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#start-with-an-action-verb"
+      },
+      {
+        "id": "be-clear-and-direct",
+        "heading": "Be clear and direct",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#be-clear-and-direct"
+      },
+      {
+        "id": "limit-each-step-to-one-action",
+        "heading": "Limit each step to one action",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#limit-each-step-to-one-action"
+      },
+      {
+        "id": "include-expected-results-within-the-same-step",
+        "heading": "Include expected results within the same step",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#include-expected-results-within-the-same-step"
+      },
+      {
+        "id": "use-simple-accessible-language",
+        "heading": "Use simple, accessible language",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#use-simple-accessible-language"
+      },
+      {
+        "id": "avoid-using-please",
+        "heading": "Avoid using \"Please\"",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#avoid-using-please"
+      },
+      {
+        "id": "be-specific-not-generic",
+        "heading": "Be specific, not generic",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#be-specific-not-generic"
+      },
+      {
+        "id": "provide-context-where-necessary",
+        "heading": "Provide context where necessary",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#provide-context-where-necessary"
+      },
+      {
+        "id": "incorporate-helpful-visuals",
+        "heading": "Incorporate helpful visuals",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-effective-procedures#incorporate-helpful-visuals"
+      }
+    ]
+  },
+  {
+    "id": "writing-guidelines",
+    "title": "Writing Guidelines",
+    "description": "Learn how to create effective technical documentation for consumers and contributors, focusing on clarity, simplicity, and depth to meet user needs effectively.",
+    "keywords": [
+      "writing",
+      "documentation",
+      "technical documentation",
+      "writing guidelines",
+      "consumer documentation",
+      "contributor documentation",
+      "documentation roles",
+      "documentation writing",
+      "documentation quality",
+      "documentation structure",
+      "documentation principles"
+    ],
+    "last_update": {
+      "date": "12/13/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/writing-guidelines",
+    "content": "\r\n\r\nTechnical documentation serves diverse audiences with different needs and expertise levels. Unlike user experience design focusing on personas, documentation writing centers on roles aligning with specific actions and goals (user intents). \r\n\r\nTwo fundamental roles shape how users interact with ",
+    "sections": [
+      {
+        "id": "documentation-for-consumers",
+        "heading": "Documentation for consumers",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-guidelines#documentation-for-consumers"
+      },
+      {
+        "id": "documentation-for-contributors",
+        "heading": "Documentation for contributors",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-guidelines#documentation-for-contributors"
+      },
+      {
+        "id": "writing-for-technical-documentation",
+        "heading": "Writing for technical documentation",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-guidelines#writing-for-technical-documentation"
+      }
+    ]
+  },
+  {
+    "id": "writing-release-notes",
+    "title": "Writing Release Notes",
+    "description": "Learn how to write effective release notes that inform users about new features, enhancements, and bug fixes in your product.",
+    "keywords": [
+      "release notes",
+      "changelogs",
+      "user-facing changes",
+      "user experience",
+      "documentation",
+      "writing",
+      "best practices",
+      "process",
+      "format",
+      "structure",
+      "content guidelines",
+      "style principles",
+      "screenshots",
+      "formulas",
+      "improvements",
+      "known issues",
+      "creating",
+      "release announcement"
+    ],
+    "last_update": {
+      "date": "01/05/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/style-guide/writing-release-notes",
+    "content": "\r\nWhen created thoughtfully, release notes are powerful user engagement and retention tools. They can significantly impact user satisfaction and product adoption. In this topic, you'll find the principles, best practices, and process for writing effective release notes that inform users about new fe",
+    "sections": [
+      {
+        "id": "why-do-i-need-release-notes",
+        "heading": "Why do I need release notes?",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#why-do-i-need-release-notes"
+      },
+      {
+        "id": "differences-between-changelogs-and-release-notes",
+        "heading": "Differences between changelogs and release notes",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#differences-between-changelogs-and-release-notes"
+      },
+      {
+        "id": "tips-and-best-practices",
+        "heading": "Tips and best practices",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#tips-and-best-practices"
+      },
+      {
+        "id": "process-flow",
+        "heading": "Process flow",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#process-flow"
+      },
+      {
+        "id": "example-scenario",
+        "heading": "Example scenario",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#example-scenario"
+      },
+      {
+        "id": "format-and-structure",
+        "heading": "Format and structure",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#format-and-structure"
+      },
+      {
+        "id": "content-guidelines",
+        "heading": "Content guidelines",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#content-guidelines"
+      },
+      {
+        "id": "style-principles",
+        "heading": "Style principles",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#style-principles"
+      },
+      {
+        "id": "when-to-include-screenshots",
+        "heading": "When to include screenshots",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#when-to-include-screenshots"
+      },
+      {
+        "id": "formulas-for-writing-new-features",
+        "heading": "Formulas for writing new features",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#formulas-for-writing-new-features"
+      },
+      {
+        "id": "formula-1",
+        "heading": "Formula 1",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#formula-1"
+      },
+      {
+        "id": "formula-2",
+        "heading": "Formula 2",
+        "level": 4,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#formula-2"
+      },
+      {
+        "id": "formula-for-writing-improvements",
+        "heading": "Formula for writing improvements",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#formula-for-writing-improvements"
+      },
+      {
+        "id": "formula-for-writing-known-issues",
+        "heading": "Formula for writing known issues",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#formula-for-writing-known-issues"
+      },
+      {
+        "id": "creating-release-notes",
+        "heading": "Creating release notes",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#creating-release-notes"
+      },
+      {
+        "id": "prerequisites",
+        "heading": "Prerequisites",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#prerequisites"
+      },
+      {
+        "id": "1-create-a-new-markdown-file",
+        "heading": "1. Create a new Markdown file",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#1-create-a-new-markdown-file"
+      },
+      {
+        "id": "2-add-the-front-matter-metadata",
+        "heading": "2. Add the front matter (metadata)",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#2-add-the-front-matter-metadata"
+      },
+      {
+        "id": "3-use-the-truncate-marker",
+        "heading": "3. Use the truncate marker",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#3-use-the-truncate-marker"
+      },
+      {
+        "id": "4-format-your-content",
+        "heading": "4. Format your content",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#4-format-your-content"
+      },
+      {
+        "id": "5-review-and-preview-your-release-notes",
+        "heading": "5. Review and preview your release notes",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#5-review-and-preview-your-release-notes"
+      },
+      {
+        "id": "6-publish-your-release-notes",
+        "heading": "6. Publish your release notes",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#6-publish-your-release-notes"
+      },
+      {
+        "id": "full-example",
+        "heading": "Full example",
+        "level": 3,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#full-example"
+      },
+      {
+        "id": "conditional-visibility-of-templates",
+        "heading": "Conditional Visibility of Templates",
+        "level": 2,
+        "content": "",
+        "url": "/style-guide/writing-release-notes#conditional-visibility-of-templates"
+      }
+    ]
+  },
+  {
+    "id": "create-new-template",
+    "title": "Create New Template",
+    "description": "Create a local directory with a minimal template structure and a skeleton directory. You can also open a local directory of an existing template.",
+    "keywords": [
+      "templates",
+      "template editor",
+      "create new template"
+    ],
+    "last_update": {
+      "date": "06/06/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/template-editor/create-new-template",
+    "content": "\r\nStart fresh with a template playground that contains a minimal template structure and a skeleton directory. It provides a minimal blank template to start from scratch. \r\n\r\n**Perfect for:**\r\n\r\n- Learning template syntax and structure\r\n\r\n- Prototyping new template ideas\r\n\r\n- Quick experiments withou",
+    "sections": []
+  },
+  {
+    "id": "custom-field-editor",
+    "title": "Custom Field Editor",
+    "description": "Explore, test, and understand custom form fields before using them in your templates.",
+    "keywords": [
+      "templates"
+    ],
+    "last_update": {
+      "date": "06/06/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/template-editor/custom-field-editor",
+    "content": "\r\nExplore, test, and understand custom form fields before using them in your templates. Unlike the Template Form Playground, which tests complete forms, the Custom Field Editor focuses on individual fields in isolation. This makes it ideal for understanding exactly how each field works.\r\n\r\n**Perfect",
+    "sections": []
+  },
+  {
+    "id": "load-template-directly",
+    "title": "Load Template Directly",
+    "description": "Upload and edit an existing YAML template file directly within the portal.",
+    "keywords": [
+      "templates",
+      "template editor",
+      "load template directly"
+    ],
+    "last_update": {
+      "date": "06/06/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/template-editor/load-template-directly",
+    "content": "\r\nUpload and edit an existing template file directly within the portal. When you load a template directory, you can edit and save changes as you develop. \r\n\r\n**Perfect for:**\r\n\r\n- Testing templates before committing to the repository\r\n\r\n- Debugging template issues\r\n\r\n- Making quick adjustments durin",
+    "sections": []
+  },
+  {
+    "id": "template-form-playground",
+    "title": "Template Form Playground",
+    "description": "Design and test parameter forms in isolation.",
+    "keywords": [
+      "templates",
+      "template editor",
+      "template form playground"
+    ],
+    "last_update": {
+      "date": "06/06/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/template-editor/template-form-playground",
+    "content": "\r\nDesign and test parameter forms in isolation. It provides a way to validate the user experience of your template forms without executing the actual template actions. \r\n\r\n\r\n**Perfect for:**\r\n\r\n- Prototyping and testing parameter configurations without executing templates\r\n\r\n- Previewing form layout",
+    "sections": []
+  },
+  {
+    "id": "using-template-editor",
+    "title": "Using the Template Editor",
+    "description": "Accelerate template development with the Template Editor, enabling live previews and testing before merging into the main repo.",
+    "keywords": [
+      "templates",
+      "template editor",
+      "YAML",
+      "low-code",
+      "templates",
+      "custom fields",
+      "scaffolding",
+      "template creation",
+      "form editor"
+    ],
+    "last_update": {
+      "date": "06/04/2025",
+      "author": "Patricia McPhee"
+    },
+    "url": "/template-editor/using-template-editor",
+    "content": "\r\nThe Template Editor is a browser-based sandbox for experimenting with templates. It offers a live preview and an interactive environment to prototype ideas, understand how templates work, and test configurations before deploying them to your `software-templates` repository.\r\n\r\nThe Template Editor ",
+    "sections": [
+      {
+        "id": "prerequisites",
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "",
+        "url": "/template-editor/using-template-editor#prerequisites"
+      },
+      {
+        "id": "choose-the-best-ui-option",
+        "heading": "Choose the best UI option",
+        "level": 2,
+        "content": "",
+        "url": "/template-editor/using-template-editor#choose-the-best-ui-option"
+      },
+      {
+        "id": "debugging-issues",
+        "heading": "Debugging Issues",
+        "level": 2,
+        "content": "",
+        "url": "/template-editor/using-template-editor#debugging-issues"
+      },
+      {
+        "id": "common-gotchas",
+        "heading": "Common gotchas",
+        "level": 2,
+        "content": "",
+        "url": "/template-editor/using-template-editor#common-gotchas"
+      },
+      {
+        "id": "simple-tutorials-to-try",
+        "heading": "Simple tutorials to try",
+        "level": 2,
+        "content": "",
+        "url": "/template-editor/using-template-editor#simple-tutorials-to-try"
+      },
+      {
+        "id": "example-prototyping-a-service-template",
+        "heading": "Example: Prototyping a service template",
+        "level": 4,
+        "content": "",
+        "url": "/template-editor/using-template-editor#example-prototyping-a-service-template"
+      }
+    ]
+  },
+  {
+    "id": "terms-definitions",
+    "title": "Terms and Definitions",
+    "description": "A comprehensive reference for common terms and definitions in ContentOps, technical documentation, and content strategy, covering essential concepts such as UX, taxonomy, content audits, and accessibility.",
+    "keywords": [
+      "common terms",
+      "terms",
+      "definitions",
+      "contentops",
+      "content ops",
+      "content strategy",
+      "content audit",
+      "UX",
+      "user experience",
+      "taxonomy",
+      "accessibility",
+      "structured writing",
+      "content planning",
+      "content management"
+    ],
+    "last_update": {
+      "date": "08/22/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/terms-and-definitions",
+    "content": "\r\n\r\n\r\n\r\n## ContentOps\r\n\r\n**Content Operations** - A set of practices, processes, and tools used to manage, produce, and deliver content efficiently and effectively. \r\n\r\n## Content strategy\r\nIn technical documentation, content strategy refers to the planning, development, management, and maintenance ",
+    "sections": [
+      {
+        "id": "contentops",
+        "heading": "ContentOps",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#contentops"
+      },
+      {
+        "id": "content-strategy",
+        "heading": "Content strategy",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#content-strategy"
+      },
+      {
+        "id": "ux",
+        "heading": "UX",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#ux"
+      },
+      {
+        "id": "taxonomy",
+        "heading": "Taxonomy",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#taxonomy"
+      },
+      {
+        "id": "content-audit",
+        "heading": "Content audit",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#content-audit"
+      },
+      {
+        "id": "accessibility",
+        "heading": "Accessibility",
+        "level": 2,
+        "content": "",
+        "url": "/terms-and-definitions#accessibility"
+      }
+    ]
+  },
+  {
+    "id": "training-for-engineers",
+    "title": "Technical Writing for Engineers and Developers",
+    "description": "Learn the essential skills of technical writing tailored specifically for engineers. This course dives deep into engineers’ common mistakes when writing end-user documentation and offers hands-on activities to improve clarity, accuracy, and user-friendliness. ",
+    "keywords": [
+      "training",
+      "technical writing",
+      "engineers",
+      "developers",
+      "documentation",
+      "technical documentation",
+      "writing guidelines",
+      "technical writing training",
+      "technical writing course",
+      "technical writing for engineers",
+      "technical writing for developers"
+    ],
+    "last_update": {
+      "date": "12/16/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/training-for-engineers",
+    "content": "\r\nComing in late January 2025! \r\n\r\nThis course covers essential technical writing skills for engineers and developers. It addresses common documentation mistakes engineers make when writing for end users and provides hands-on activities to improve clarity, accuracy, and user-friendliness.",
+    "sections": []
+  },
+  {
+    "id": "errors-warnings-confirmations",
+    "title": "Error messages",
+    "description": "Writing error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the user in a dead end?  For example, if they get \"Invalid or unsupported\" error, do the users know what to do next?",
+    "keywords": [],
+    "last_update": {
+      "date": "10/07/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/ux-writing/errors-warnings-confirmations",
+    "content": "\r\n<h2>Sample details</h2>\r\n\r\n- **Project:** Work-related, SaaS data encryption app, MVP Launch\r\n- **My Role:** Sr. Technical Writer, UX Writer\r\n- **Tools:** Figma, Microsoft Excel\r\n\r\n<hr />\r\n\r\nWriting error messages is an art. Your goal is to provide guidance to the user.  Does the message leave the",
+    "sections": []
+  },
+  {
+    "id": "welcome",
+    "title": "Introduction",
+    "description": "My Technical Documentation Style Guide serves as a comprehensive resource for creating clear, consistent, and user-friendly technical documentation.",
+    "keywords": [
+      "introduction",
+      "technical documentation",
+      "technical writing",
+      "user-friendly experiences",
+      "best practices",
+      "style guide",
+      "tone",
+      "terminology",
+      "visual elements",
+      "user experience"
+    ],
+    "last_update": {
+      "date": "12/08/2024",
+      "author": "Patricia McPhee"
+    },
+    "url": "/welcome",
+    "content": "\r\n\r\nWelcome to my Technical Documentation Style Guide. This site serves a dual purpose: \r\n\r\n- A comprehensive style guide for creating clear, consistent, and user-friendly technical documentation.\r\n- A demo site for my [smart-search-plugin](./smart-search-plugin/plugin-introduction.mdx) designed for",
+    "sections": [
+      {
+        "id": "technical-documentation-style-guide",
+        "heading": "Technical documentation style guide",
+        "level": 2,
+        "content": "",
+        "url": "/welcome#technical-documentation-style-guide"
+      },
+      {
+        "id": "smartsearchplugin-demo",
+        "heading": "Smart-Search-Plugin demo",
+        "level": 2,
+        "content": "",
+        "url": "/welcome#smartsearchplugin-demo"
+      }
+    ]
+  }
+]

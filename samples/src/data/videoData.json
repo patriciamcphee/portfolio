@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to Alchemy",
+    "category": "General",
+    "sortOrder": 1,
+    "duration": " 1:34",
+    "description": "Explore Alchemy, the developer portal that unites tools and data into one powerful platform for developers.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=44b6e73d-3a91-4d7f-9d28-12d229f214c9",
+    "platform": "vbrick"
+  },
+  {
+    "id": "2",
+    "title": "Catalog Overview",
+    "duration": " 3:55",
+    "category": "Components",
+    "description": "Navigate the catalog to view components, understand ownership, and access detailed pages on each item.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=3ab69bd4-13c6-4608-8451-1c8a85ae113e",
+    "platform": "vbrick",
+    "sortOrder": 1
+  },
+  {
+    "id": "3",
+    "title": "How to Register a Component",
+    "duration": " 3:31",
+    "category": "Components",
+    "description": "Learn how to register a new component using GitHub, ServiceNow, and Global Group in Alchemy's portal.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=c9e0e42b-0d47-4780-8bf4-44f120716c19",
+    "platform": "vbrick",
+    "sortOrder": 1
+  },
+  {
+    "id": "4",
+    "title": "Using Alchemy Templates",
+    "duration": " 2:09",
+    "category": "Templates",
+    "description": "Discover how to use Alchemy templates to quickly generate files and publish them to your repository.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=a0605043-eb70-4d88-9609-67fcd6af2b4f",
+    "platform": "vbrick",
+    "sortOrder": 1
+  },
+  {
+    "id": "5",
+    "title": "Custom Fields and Actions",
+    "duration": " 11:45",
+    "category": "Templates",
+    "description": "Add custom fields and actions (e.g., fetch:template, publish:github:pull-request) to templates.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=bf8529bb-f9aa-4b47-879f-3ce1d5206126",
+    "platform": "vbrick",
+    "sortOrder": 5
+  },
+  {
+    "id": "6",
+    "title": "Template Development",
+    "duration": " 3:30",
+    "category": "Templates",
+    "description": "An introduction to Alchemy Templates. Learn how to develop templates locally and their key functions.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=1f539261-b05d-457e-b99b-e9562f15f5da",
+    "platform": "vbrick",
+    "sortOrder": 2
+  },
+  {
+    "id": "7",
+    "title": "Deploying Templates",
+    "duration": " 4:55",
+    "category": "Templates",
+    "description": "Push your template, test functionality, and see how changes reflect in Alchemy environments quickly.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=a8a6f2db-d45d-4d03-a7d6-fc1d3a208920",
+    "platform": "vbrick",
+    "sortOrder": 6
+  },
+  {
+    "id": "8",
+    "title": "Defining Template Fields",
+    "duration": " 7:20",
+    "category": "Templates",
+    "description": "Discover the required fields and properties for developing an effective Alchemy template.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=546d08c7-09fd-4ada-8e90-8a7e3ac90c67",
+    "platform": "vbrick",
+    "sortOrder": 3
+  },
+  {
+    "id": "9",
+    "title": "Setting Up Templates",
+    "duration": " 8:47",
+    "category": "Templates",
+    "description": "Create templates and customize fields in Alchemy's editor. Explore essential template-building steps.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=b2884d90-758a-423e-893b-9349ba16972a",
+    "platform": "vbrick",
+    "sortOrder": 4
+  },
+  {
+    "id": "10",
+    "title": "Adding TechDocs",
+    "duration": " 2:59",
+    "category": "Components",
+    "description": "Integrate TechDocs to transform Markdown into HTML for in-component documentation.",
+    "src": "https://cigna.rev.vbrick.com/embed?id=8eedfbea-e540-4b21-8a68-7375ecc4a15f",
+    "platform": "vbrick",
+    "sortOrder": 2
+  }
+]

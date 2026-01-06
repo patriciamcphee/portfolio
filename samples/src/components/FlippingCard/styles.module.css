@@ -1,0 +1,205 @@
+.flipCard {
+  perspective: 1000px;
+  width: 100%;
+  height: 415px;
+  margin-bottom: 0.25rem;
+  border-radius: 8px;
+}
+
+.flipCard:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipCard.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+[data-theme='dark'] .flipCardFront {
+  background-color: var(--ifm-background-color);
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  overflow-y: auto;
+}
+
+.cardGallery {
+  padding: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+[data-theme='dark'] .cardContainer {
+  background-color: none;
+}
+
+.cardContent {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.smallByline {
+  font-size: 11px;
+  color: var(--ifm-color-primary-lightest);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.25rem;
+}
+
+.smallBylineBack {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardDescription p {
+  font-size: .9rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.cardDescription p:last-child {
+  margin-bottom: 0;
+}
+
+.ctaContainer {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .ctaContainer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flipCardBack .ctaContainer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.ctaArrow {
+  font-size: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.flipCardBack .ctaArrow {
+  color: var(--ifm-color-white);
+}
+
+.quizContainer {
+  margin-top: 0.25rem;
+}
+
+.quizQuestion {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.quizOptions {
+  font-size: 0.875rem;
+  margin: 0.75em;
+}
+
+.explanation {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.explanationResult {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.explanationText {
+  font-size: 14px;
+}
+
+.checkAnswerButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.checkAnswerButton:hover:not(:disabled) {
+  background-color: white;
+  color: var(--ifm-color-primary);
+}
+
+.checkAnswerButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+@media (min-width: 768px) {
+  .cardContainer {
+    padding: 1.25rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  
+  .cardDescription {
+    font-size: 1rem;
+  }
+}

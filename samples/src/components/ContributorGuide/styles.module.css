@@ -1,0 +1,142 @@
+/* styles.module.css */
+.container {
+  margin: 20px;
+}
+
+/* Add margin to space out rows */
+.guideline-row {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+}
+
+/* Hide default checkbox */
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+/* Dark mode styles using Docusaurus CSS variables */
+html[data-theme='dark'] .checkmark {
+  border-color: #cecece;
+}
+
+html[data-theme='dark'] .label {
+  color: var(--ifm-font-color-base);
+}
+
+/* Hover effect */
+.checkboxContainer:hover .checkmark {
+  background-color: var(--ifm-color-primary-light);
+  opacity: 0.5;
+}
+
+/* Checked state */
+.checkboxInput:checked ~ .checkmark {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Checkmark icon */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkboxInput:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label {
+  color: var(--ifm-font-color-base);
+  line-height: 1.4;
+  margin-top: 0px;
+}
+
+/* Focus styles for accessibility */
+.checkboxInput:focus ~ .checkmark {
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lighter);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col--1 {
+    display: none; /* Hide the image column on smaller screens */
+  }
+
+  .col--11 {
+    width: 100%; /* Take up full width on smaller screens */
+  }
+
+  .guideline-row {
+    flex-direction: column; /* Stack the columns vertically on small screens */
+  }
+
+  h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+}
+
+/* Add more responsiveness for ultra-small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}

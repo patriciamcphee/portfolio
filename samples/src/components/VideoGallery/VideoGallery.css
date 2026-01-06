@@ -1,0 +1,119 @@
+.video-gallery_box {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.video-gallery_item {
+  flex-basis: calc(33.33333% - 30px);
+  margin: 0 15px 20px 0;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 15%);
+  border: 0px solid var(--ifm-color-emphasis-200);
+  display: flex;
+  flex-direction: column;
+  max-height: 400px; 
+  transition: max-height 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='dark'] .video-gallery_item {
+  background-color: var(--ifm-background-color);
+}
+
+.video-gallery-item_link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 100%;
+  padding: 30px 20px;
+  overflow: hidden;
+  position: relative;
+  color: var(--ifm-color-content); 
+  transition: color 0.3s ease; 
+}
+
+.video-gallery_item .video-gallery-item_duration-box {
+  margin-top: auto; 
+}
+
+.video-gallery-item_link:hover,
+.video-gallery-item_link:focus,
+.video-gallery-item_link:active {
+  text-decoration: none;
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+[data-theme='dark'] .video-gallery-item_link:hover,
+.video-gallery-item_link:focus,
+.video-gallery-item_link:active {
+  text-decoration: none;
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.video-gallery-item_title {
+  min-height: 36px;
+  font-size: 22px;
+  color: inherit; 
+}
+
+.video-gallery-item_subtitle {
+  font-size: 18px;
+  color: inherit;
+}
+
+.video-gallery-item_duration-box {
+  font-size: 14px;
+  color: inherit; 
+  margin-top: auto;
+}
+
+.video-gallery-item_duration {
+  font-weight: bold;
+  color: #f9b234;
+  transition: color 0.5s ease;
+}
+
+p.video-gallery-item_description {
+  margin: 20px 0;
+  font-size: 14px;
+  color: inherit; 
+  overflow: visible;
+  text-overflow: initial;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.video-gallery-item_bg {
+  height: 120px;
+  width: 120px;
+  background-color: var(--ifm-color-primary);
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.cardContainer:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+.cardContainer *:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .cardContainer {
+  background-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .video-gallery-item_description,
+[data-theme='dark'] .cardDescription {
+  color: white;
+}

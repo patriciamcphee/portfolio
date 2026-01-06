@@ -1,0 +1,56 @@
+---
+title: Custom Field Editor
+id: custom-field-editor
+description: 'Explore, test, and understand custom form fields before using them in your templates.'
+keywords: 
+  - templates
+last_update:
+  date: 06/06/2025
+  author: Patricia McPhee
+doc_type: how-to
+hide_table_of_contents: true
+---
+
+Explore, test, and understand custom form fields before using them in your templates. Unlike the Template Form Playground, which tests complete forms, the Custom Field Editor focuses on individual fields in isolation. This makes it ideal for understanding exactly how each field works.
+
+**Perfect for:**
+
+- Discovering what custom fields are available
+
+- Understanding how custom fields behave
+
+- Testing field configurations before use
+
+- Learning field-specific options
+
+---
+
+1. Select the **Custom Field Editor**.
+
+1. From the top drop-down, browse the list of installed field extensions to see what options are available.
+
+    <img
+      id="uielement5"
+      src={require('../images/choose-custom-field-selection.png').default}
+      alt="Load Template Directory option"
+    />
+
+1. Test configurations that suit your template's requirements.
+
+    | Field | What it's used for |
+    | --- | --- |
+    | [**GitHubPicker**](#)  | Lets users select GitHub repositories with organization filtering.  |
+    | [**RepoDataPicker**](#)  | Lets users select source code repositories from various SCM platforms.   |
+    | [**EntityPicker**](#)  | Lets users select entities from the Backstage catalog.   |
+    | [**GroupPicker**](#)  | Lets users select groups from the Backstage identity system.   |
+
+    :::tip
+    For more custom fields, see [Template Pickers](#).
+    :::
+
+1. Add it to your template and verify that the custom fields function correctly.
+
+    - Does it show the right options?
+    - Does filtering work correctly?
+    - Are the selected values in the right format?
+

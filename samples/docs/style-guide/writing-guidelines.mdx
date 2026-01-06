@@ -1,0 +1,91 @@
+---
+id: writing-guidelines
+title: Writing Guidelines
+description: 'Learn how to create effective technical documentation for consumers and contributors, focusing on clarity, simplicity, and depth to meet user needs effectively.'
+keywords: [writing, documentation, technical documentation, writing guidelines, consumer documentation, contributor documentation, documentation roles, documentation writing, documentation quality, documentation structure, documentation principles]
+last_update: 
+   date: 12/13/2024
+   author: Patricia McPhee
+draft: false
+doc_type: reference
+displayed_sidebar: mainSidebar
+---
+
+
+Technical documentation serves diverse audiences with different needs and expertise levels. Unlike user experience design focusing on personas, documentation writing centers on roles aligning with specific actions and goals (user intents). 
+
+Two fundamental roles shape how users interact with technical documentation:
+
+- The **Consumer Role** represents users who need to accomplish specific tasks with the product. These users require clear, action-oriented documentation that helps them achieve their goals efficiently. 
+
+- The **Contributor Role** encompasses advanced users who extend and enhance the product's capabilities, requiring more detailed technical information and architectural understanding.
+
+For example, products like [Backstage.io](https://backstage.io/docs/overview/what-is-backstage) caters to both consumers and contributors. Therefore, documentation must address the unique needs of each role effectively.
+
+
+
+## Documentation for consumers
+
+Consumers are end users who interact with the product as part of their daily workflows. Their primary focus is on using the product effectively to complete their work. Consumer documentation should emphasize clarity, simplicity, and task completion.
+
+Their responsibilities typically include using core product features, working with templates, and utilizing search and organization features. When writing for consumers, focus on providing context-rich instructions that guide users through common tasks while avoiding unnecessary technical complexity.
+
+Documentation for consumers should establish a clear path from beginning to end for each task. Writers should anticipate common questions and provide answers within the natural flow of the content. Use consistent terminology and sufficient context to help users understand the how and why of each step.
+
+## Documentation for contributors
+
+Contributors represent advanced users who actively participate in expanding the product's capabilities. These power users need comprehensive technical information to develop new features, create templates, and enhance existing functionality.
+
+Their activities often involve template development, plugin creation, documentation improvements, and setting up a local development environment. Contributor documentation requires greater technical depth, including architectural details, API specifications, and development guidelines.
+
+When writing for contributors, maintain technical accuracy while thoroughly explaining complex systems. Include detailed configuration examples, troubleshooting guides, and explanations of internal architectures. This documentation should enable contributors to make informed decisions about implementation approaches.
+
+## Writing for technical documentation
+
+Creating effective technical documentation requires a careful balance between clarity and depth. Writers should consider the following core principles:
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header header-background">
+            <h3>For Consumer Documentation</h3>
+          </div>
+          <div class="card__body">
+            <p>Begin with clear prerequisites and system requirements—present information in a logical sequence that builds understanding progressively. Include practical examples that demonstrate real-world usage. Provide troubleshooting guidance for common issues. Minimize technical jargon and define essential technical terms when they first appear.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col--6">
+      <div class="col-demo">
+        <div class="card margin-top--sm margin-bottom--sm no-pointer">
+          <div class="card__header header-background">
+            <h3>For Contributor Documentation</h3>
+          </div>
+          <div class="card__body">
+            <p>Establish a solid technical foundation before advancing to complex topics. Include detailed architecture and design explanations. Provide extensive code examples with thorough comments. Document edge cases and potential pitfalls. Maintain comprehensive API documentation with usage examples.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+The effectiveness of technical documentation depends on its ability to serve consumers and contributors appropriately. Writers should regularly review and update documentation to ensure it remains relevant and accurate as the product evolves.
+
+Successful technical documentation anticipates user needs, provides appropriate detail for each role, and maintains a consistent structure. While perfection may be aspirational, continuous improvement through regular updates and refinements helps maintain documentation quality and usefulness.
+
+:::tip
+Remember that documentation quality directly impacts product adoption and user success. Regular feedback from both consumers and contributors helps identify areas for improvement and ensures that documentation continues to meet user needs effectively.
+:::
+
+---
+
+
+import WritingGuidelines from '../../src/components/ContributorGuide/WritingGuidelines';
+
+<WritingGuidelines />
+

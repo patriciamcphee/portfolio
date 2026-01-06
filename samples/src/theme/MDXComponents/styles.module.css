@@ -1,0 +1,111 @@
+/* src/theme/MDXComponents/styles.module.css */
+
+.headingWithCopy {
+  display: block;
+  position: relative;
+}
+
+.headingContent {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+}
+
+.headingText {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyButtonWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show wrapper when it has the visible class */
+.copyButtonWrapper.visible {
+  opacity: 1;
+}
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--ifm-color-emphasis-600, var(--ifm-color-gray-500));
+  transition: color 0.2s, background-color 0.2s;
+  border-radius: 4px;
+}
+
+.copyButton:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-hover-overlay);
+  border-radius: 16px;
+}
+
+/* Remove focus outline since we're controlling visibility manually */
+.copyButton:focus {
+  outline: none;
+}
+
+.copyButton:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.copyMessage {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-background, white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.2s;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: var(--ifm-global-shadow-lw);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Add animation for the copy message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments - always show on mobile */
+@media (max-width: 996px) {
+  .copyButtonWrapper {
+    opacity: 1;
+  }
+  
+  .copyButton {
+    visibility: visible !important;
+  }
+}
+
+/* Hide the default hash-link since we're replacing it with our copy button */
+.headingWithCopy :global(.hash-link) {
+  display: none !important;
+}
+

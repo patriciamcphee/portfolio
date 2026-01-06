@@ -1,0 +1,315 @@
+---
+id: advanced-formatting
+title: Advanced Formatting
+description: Learn about advanced markdown formatting options used in a Docusaurus-based site.
+keywords: [markdown, markdown formatting, markdown syntax, markdown tips, markdown tricks, markdown guide, markdown reference, markdown cheatsheet]
+last_update: 
+   date: 11/7/2024
+   author: Patricia McPhee
+draft: true
+doc_type: how-to
+displayed_sidebar: mainSidebar
+---
+
+
+
+
+## Admonitions
+
+In addition to the basic Markdown syntax, we have a special admonitions syntax by wrapping text with a set of 3 colons, followed by a label denoting its type.
+
+Example:
+
+```md
+:::info note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+```
+
+:::info note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+
+## Tabs
+
+You can use the `<Tabs>` component in your markdown to create tabbed content. This is useful for organizing content that is related but not necessarily sequential.
+
+```jsx
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="core-features">
+  <TabItem value="system" label="System" default>
+  As software grows in complexity, systems offer a way to visualize and manage entire software ecosystems. A system comprises various components and resources, often providing public APIs. This abstraction lets developers focus on the bigger picture without worrying about specific details. For instance, a playlist management system might consist of multiple services for updating, searching, and storing playlists, an API for external communication, and data streams for playlist updates.
+  </TabItem>
+  <TabItem value="components" label="Components">
+  A component is any software element—be it a mobile feature, website, backend service, or data pipeline. Each component is tracked in source control and may implement or consume APIs. Components may also depend on other components or resources at runtime.
+  </TabItem>
+  <TabItem value="resources" label="Resources">
+  A resource refers to the infrastructure required by a component to function at runtime, such as databases, messaging topics, storage buckets, or CDNs. By modeling resources alongside components and systems, Alchemy helps teams visualize resource footprints and create tooling for efficient management.
+  </TabItem>
+  <TabItem value="groups" label="Groups">
+  A group represents an organizational entity, such as a team, business unit, or a collection of users with shared interests.
+  </TabItem>
+  <TabItem value="users" label="Users">
+  A user represents individuals, such as employees or contractors, and defines their association with various `Group` entities in the catalog.  This connection is crucial for understanding how authentication and user management work within the Alchemy ecosystem, further detailed in [auth](https://backstage.io/docs/auth).  
+  </TabItem>
+</Tabs>
+
+```
+
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="core-features">
+<TabItem value="system" label="System" default>
+
+As software grows in complexity, systems offer a way to visualize and manage entire software ecosystems. A system comprises various components and resources, often providing public APIs. This abstraction lets developers focus on the bigger picture without worrying about specific details. For instance, a playlist management system might consist of multiple services for updating, searching, and storing playlists, an API for external communication, and data streams for playlist updates.
+
+</TabItem>
+
+<TabItem value="components" label="Components">
+
+A component is any software element—be it a mobile feature, website, backend service, or data pipeline. Each component is tracked in source control and may implement or consume APIs. Components may also depend on other components or resources at runtime.
+
+</TabItem>
+
+<TabItem value="resources" label="Resources">
+
+A resource refers to the infrastructure required by a component to function at runtime, such as databases, messaging topics, storage buckets, or CDNs. By modeling resources alongside components and systems, Alchemy helps teams visualize resource footprints and create tooling for efficient management.
+
+</TabItem>
+
+<TabItem value="groups" label="Groups">
+
+A group represents an organizational entity, such as a team, business unit, or a collection of users with shared interests.
+
+</TabItem>
+
+<TabItem value="users" label="Users">
+
+A user represents individuals, such as employees or contractors, and defines their association with various `Group` entities in the catalog.  This connection is crucial for understanding how authentication and user management work within the Alchemy ecosystem, further detailed in [auth](https://backstage.io/docs/auth).  
+
+</TabItem>
+</Tabs>
+
+
+### Displaying a default tab
+
+The first tab is displayed by default, and to override this behavior, you can specify a default tab by adding `default` to one of the tab items. 
+
+```jsx
+<Tabs queryString="annotations">
+  ...
+// highlight-next-line
+  <TabItem value="aws" label="AWS" default>
+  ...
+  </TabItem>
+</Tabs>
+```
+
+### Creating shareable tab links
+
+You can create links that automatically open specific tabs when shared. This is particularly useful for directing users to specific content, such as linking to specific documentation.
+
+Use the `queryString` prop in your Tabs component. The value you provide will be used in the URL.
+
+- Windows: `yoursite.com/docs?current-os=windows`
+- macOS: `yoursite.com/docs?current-os=macos`
+
+When someone opens these shared URLs, they'll see the correct tab automatically selected.
+
+```jsx
+<Tabs queryString="current-os">
+  <TabItem value="windows" label="Windows">
+    <p>Windows</p>
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+    <p>macOS</p>
+  </TabItem>
+</Tabs>
+```
+
+:::tip Pro Tip
+When `queryString` is set to true (without a value), the system automatically uses the `groupId` value as the search parameter name.
+
+```jsx
+<Tabs groupId="current-os" queryString>
+  <TabItem value="windows" label="Windows">
+    <p>Windows</p>
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+    <p>macOS</p>
+  </TabItem>
+</Tabs>
+```
+
+When the page loads, any tab selection in the URL takes precedence over the `groupId` settings (which use `localStorage`).
+:::
+
+## Details
+The `<details>` element creates a disclosure widget that reveals information only when it is toggled to an "open" state. A `<summary>` element is required to serve as a label.
+
+```html
+<details>
+  <summary>Details</summary>
+  <p>Something small enough to escape casual notice.</p>
+</details>
+```
+
+<details>
+  <summary>Details</summary>
+  <p>Something small enough to escape casual notice.</p>
+</details>
+
+This widget is usually displayed on the screen with a small rotating triangle that indicates whether it is open or closed, along with the corresponding label.
+
+A `<details>` widget can exist in one of two states. In its default closed state, only the triangle and the label from the `<summary>` are visible. When opened, it expands to reveal the details inside.
+
+
+## Tooltips 
+
+Tooltips can be added to any word or phrase by wrapping it with the `<Tooltip>` component. This is useful for providing additional context or information about a particular word or term, espcially glossary terms. 
+
+### Basic tooltip
+
+```html
+<p><a href="#" data-tooltip>
+	word or phrase
+	<div class="tooltip-content">
+		definition or explanation		
+	</div>
+</a></p>
+```
+
+<p><a href="#" data-tooltip>
+	word or phrase
+	<div class="tooltip-content">
+		definition or explanation		
+	</div>
+</a></p>
+
+### Tooltips with hyperlinks
+
+```html
+<p><a href="#" data-tooltip>
+	Passkeys
+	<div class="tooltip-content">
+		Passkeys are a phishing-resistant alternative to traditional authentication factors (such as identifier/password) that offer an easier and more secure login experience to users. Passkeys are modeled from FIDO® W3C Web Authentication (WebAuthn) and Client to Authenticator Protocol (CTAP) specifications.<p><a href="https://auth0.com/docs/authenticate/database-connections/passkeys">Learn more</a></p>		
+	</div>
+</a></p>
+```
+
+<p><a href="#" data-tooltip>
+	Passkeys
+	<div class="tooltip-content">
+		Passkeys are a phishing-resistant alternative to traditional authentication factors (such as identifier/password) that offer an easier and more secure login experience to users. Passkeys are modeled from FIDO® W3C Web Authentication (WebAuthn) and Client to Authenticator Protocol (CTAP) specifications.<p><a href="https://auth0.com/docs/authenticate/database-connections/passkeys">Learn more</a></p>		
+	</div>
+</a></p>
+
+### Tooltips styles (CSS)
+
+Make sure to add the following CSS to your site to style the tooltips.
+
+```CSS
+/* Tooltips */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+	position: relative;
+	cursor: pointer;
+	border-bottom: 1px dashed var(--ifm-color-primary);
+	display: inline;
+}
+
+/* Hide the tooltip content by default */
+.tooltip-content {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/* Position tooltip above the element */
+.tooltip-content {
+	position: absolute;
+	top: 115%;
+	left: 50%;
+	margin-bottom: 5px;
+	margin-left: -80px;
+	padding: 15px;
+	width: 370px;
+	border-radius: 6px;
+	background-color: #000;
+	background-color: hsla(0, 0%, 10%, 0.9);
+	color: #fff;
+	text-align: left;
+	font-size: 14px;
+	line-height: 1.2;
+	z-index: 2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+.tooltip-content::after {
+	content: " ";
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	border-bottom: 5px solid #000;
+	border-bottom: 5px solid hsla(0, 0%, 10%, 0.9);
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	font-size: 0;
+	line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover .tooltip-content {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+```
+
+## Markdown front matter
+
+import FrontMatter from '../includes/_front_matter.mdx';
+
+<FrontMatter />

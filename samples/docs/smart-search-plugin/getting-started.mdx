@@ -1,0 +1,139 @@
+---
+id: getting-started
+title: Install the Plugin
+description: "A comprehensive guide to installing and configuring the Smart Search Plugin for Docusaurus v3.x. This document covers prerequisites, installation steps, configuration settings, and how to verify your installation to enhance documentation with powerful search functionality."
+keywords:
+ - smart search plugin
+ - Docusaurus
+ - installation guide
+ - configuration
+ - user experience
+ - documentation
+ - prerequisites
+ - search functionality
+ - npm
+ - yarn
+last_update: 
+   date: 12/12/2024
+   author: Patricia McPhee
+draft: false
+doc_type: how-to
+displayed_sidebar: mainSidebar
+---
+
+Setting up the smart search plugin for your Docusaurus documentation requires careful preparation and attention to detail. By following these instructions, you'll be able to enhance your documentation with powerful search capabilities that improve user experience and content discoverability.
+
+## Prerequisites
+
+Before installing the Smart Search Plugin, ensure you have:
+
+- A Docusaurus v3.x project set up
+- Node.js and npm/yarn installed
+- Proper directory structure in your Docusaurus project:
+    
+    ```
+    your-docusaurus-site/
+    ├── docs/                 # Documentation root
+    │   ├── intro.md          # Documentation files
+    │   └── advanced/
+    │       └── config.md
+    ├── static/               # Static assets directory and the searchIndex.json
+    └── docusaurus.config.js  # Configuration file
+    ```
+    
+- Required document metadata structure:
+    
+    ```markdown
+    ---
+    title: Document Title
+    description: A brief description that appears in search results
+    keywords: [search, docusaurus, plugin]
+    draft: false # if set to `true`, the topic is excluded from the search index
+    last_update:
+      date: 12/11/2024
+    # other metadata fields 
+    ---
+    ```
+    
+
+## Install and configure the plugin
+
+1. Install the plugin using npm or yarn:
+    
+    ```bash
+    npm install smart-search-plugin
+    ```
+    
+    ```bash
+    yarn add smart-search-plugin
+    ```
+    
+2. Configure your `docusaurus.config.js`:
+    
+    ```jsx
+    const path = require('path');
+    
+    module.exports = {
+      staticDirectories: ['static'],
+    
+      plugins: [
+        path.resolve(__dirname, 'node_modules/smart-search-plugin')
+      ],
+    
+      presets: [
+        ['@docusaurus/preset-classic',
+          {
+            docs: {
+              routeBasePath: '/',
+              path: 'docs',
+              showLastUpdateTime: true,
+            },
+          },
+        ],
+      ],
+    
+      themeConfig: {
+        navbar: {
+          items: [
+            {
+              type: 'search',
+              position: 'right',
+            },
+          ],
+        },
+      },
+    };
+    ```
+    
+
+## Verifying your installation
+
+After installation:
+
+1. Start your development server:
+    
+    ```bash
+    npm start
+    ```
+    
+    ```bash
+    yarn start
+    ```
+    
+2. Check that the search icon appears in your navigation bar.
+    
+    <img
+      id="diagrams"
+      src={require('../images/search.png').default}
+      alt="Image showing the search bar in its inactive state"
+    />
+    
+3. Try performing a basic search.
+
+    <img
+      id="diagrams"
+      src={require('../images/search-results.png').default}
+      alt="Image showing the expanded search bar when clicked"
+    />
+
+   

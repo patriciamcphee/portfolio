@@ -1,0 +1,41 @@
+/* src/components/VideoComponent.css */
+.video-container {
+  max-width: 560px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.container {
+  padding: 20px 0;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 315px;
+}
+
+.video-details {
+  padding: 20px;
+}
+
+.video-details h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+
+.video-details h3 {
+  font-size: 19px;
+  line-height: 120%;
+  margin-top: 0.5em;
+}
+
+.video-details p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}

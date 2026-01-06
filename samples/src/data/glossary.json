@@ -1,0 +1,21 @@
+{
+  "Alchemy": "A versatile developer portal that unifies infrastructure tooling, services, and documentation, creating a streamlined development environment. It provides a central place for engineering tools, resources, and documentation.",
+  "Software Catalog": "A unified repository for tracking and managing metadata for all software assets, including services, websites, libraries, and data pipelines. It is organized around metadata YAML files stored alongside the codebase.",
+  "Software Templates": "Tools that streamline the creation of new components within the ecosystem, providing skeletons of code, injecting variables as needed, and publishing new components to locations like GitHub or GitLab.",
+  "catalog-info.yaml file": "A manifest used to register and catalog entities such as APIs, services, websites, and libraries within the Alchemy ecosystem. It contains metadata defining the entity's type, name, ownership, and other characteristics.",
+  "Entity Type": {
+    "API": "Represents an interface that components can implement or consume, adhering to various specifications such as OpenAPI.",
+    "Component": "Signifies a software component, typically associated with its source code, viewed by developers as a cohesive software unit. It often involves a specific deployable or linkable artifact.",
+    "Domain": "Represents a grouping of systems with commonalities such as terminology, domain models, business purposes, or documentation, effectively delineating a bounded context.",
+    "Group": "Represents an organizational unit, such as a team or department, helping to organize and manage user roles and permissions.",
+    "Location": "Represents physical or logical locations where artifacts are stored or deployed, including metadata to locate and access these resources.",
+    "Resource": "Represents a fundamental building block a system requires to function correctly, such as databases, Pub/Sub topics, S3 buckets, or CDNs.",
+    "System": "Represents a collection of Resources and Components under a single umbrella, offering teams flexibility in determining what to publish regarding their APIs and artifacts.",
+    "Template": "Outlines parameters for the frontend scaffolding process and describes the sequence of steps executed during a component's scaffolding.",
+    "User": "Represents individuals and defines their association with various Group entities in the catalog, used for authentication and user management in Alchemy."
+  },
+  "Scaffolder Actions": "Predefined tasks within the Alchemy ecosystem for managing GitHub repositories and virtual machines (VMs). These tasks include merging pull requests, closing branches, converting projects, creating CI-as-a-service folders, setting up Roles-as-a-Service (RaaS), and executing poll-based jobs.",
+  "Template Pickers": "Tools that provide various options for selecting and utilizing templates within the Alchemy ecosystem, helping to streamline the process of working with templates.",
+  "GitHub Organization": "A shared account on GitHub where businesses and inner-sourced projects can collaborate on multiple projects simultaneously. It offers sophisticated security and administrative features.",
+  "Third-party Contributors": "TBD"
+}

@@ -1,0 +1,359 @@
+---
+title: Contributing to Alchemy
+id: contributing‐to‐alchemy
+description: 'Learn how to contribute to the Alchemy codebase. '
+keywords: [ contributing, alchemy, backstage, development, environment, setup, contributing, codebase, development, environment, setup, contributing, codebase ]
+last_update:
+  date: 03/06/2025
+  author: Patricia McPhee
+doc_type: reference
+displayed_sidebar: mainSidebar
+draft: true
+---
+
+Alchemy is our [Backstage](https://backstage.io/) instance — a platform for building developer portals. Our vision is for Alchemy to become the trusted standard toolbox (UX layer) for our infrastructure landscape, similar to what Kubernetes is for container orchestration.
+
+This comprehensive guide will walk you through everything you need to know to set up your development environment and start contributing to the project.
+
+By contributing to this project, you agree to follow our team's guidelines that ensure smooth collaboration, high code quality, and an inclusive environment.
+
+## Development environment setup
+
+### Required software
+
+Before getting started, make sure you have the following tools installed on your system:
+
+1. **Node.js v20**
+   - We recommend using [nvm](https://github.com/nvm-sh/nvm) to manage Node versions
+   - Run `nvm install 20` and `nvm use 20` to ensure you're using the correct version
+
+2. **Python 3.11**
+   - Alchemy is built on a framework that is incompatible with Python 3.12
+   - Verify your installation with `python --version` or `python3 --version`
+
+3. **Yarn**
+   - Install globally with `npm install -g yarn`
+   - Verify with `yarn --version`
+
+4. **Git**
+   - Latest version recommended
+   - Configure your Git identity:
+     ```bash
+     git config --global user.name "Your Name"
+     git config --global user.email "your.email@example.com"
+     ```
+
+5. **NPM Artifactory configuration**
+   - Configure NPM to use the correct Cigna address:
+     ```bash
+     npm config -g set registry "http://repo.sys.cigna.com/artifactory/api/npm/npm-repos"
+     ```
+
+### Recommended VS Code extensions
+
+For an optimal development experience with VS Code, we recommend installing the following extensions:
+
+1. **ESLint** (`dbaeumer.vscode-eslint`)
+   - Integrates ESLint into VS Code for real-time linting
+
+2. **Prettier - Code formatter** (`esbenp.prettier-vscode`)
+   - Formats your code according to our style guidelines
+
+3. **EditorConfig for VS Code** (`editorconfig.editorconfig`)
+   - Helps maintain consistent coding styles across editors
+
+4. **TypeScript Hero** (`rbbit.typescript-hero`)
+   - Organizes imports and provides enhanced TypeScript support
+
+5. **Jest** (`orta.vscode-jest`)
+   - Provides testing integration for our Jest tests
+
+6. **MDX** (`silvenon.mdx`)
+   - Syntax highlighting for MDX files
+
+7. **GitHub Pull Requests and Issues** (`github.vscode-pull-request-github`)
+   - Simplifies the PR review process directly from VS Code
+
+8. **Thunder Client** (`rangav.vscode-thunder-client`)
+   - API testing tool for testing Backstage backend APIs
+
+9. **React Developer Tools** (Browser extension)
+   - For debugging React components
+
+### Installation steps
+
+1. Install Node.js v20 using nvm or direct download
+2. Install Python 3.11 from [python.org](https://www.python.org/downloads/)
+3. Install Yarn globally: `npm install -g yarn`
+4. Configure NPM registry as shown above
+5. Install VS Code and recommended extensions
+
+## Getting started with the codebase
+
+### Cloning the repo
+
+1. Clone the Alchemy repository:
+   ```bash
+   git clone https://github.com/your-org/alchemy.git
+   cd alchemy
+   ```
+
+2. Set up Git hooks (if not automatically installed):
+   ```bash
+   yarn husky install
+   ```
+
+### Installing Dependencies
+
+Once you've cloned the repository, install the dependencies:
+
+```bash
+# Change to root directory of project
+cd /path/to/alchemy
+
+# Install dependencies (may take a while)
+yarn install
+
+# Run initial type generation and checks
+yarn tsc
+```
+
+### Local Configuration
+
+Alchemy provides a CLI to help you set up your local configuration:
+
+1. Install the Alchemy CLI globally:
+   ```bash
+   npm i -g @cigna/cigna_alchemy_cli@latest
+   ```
+
+2. Configure Alchemy to use local GitHub secret:
+   ```bash
+   alchemy config use local --secret password
+   ```
+
+3. Create or modify `app-config.local.yaml` (gitignored) for any local overrides:
+   - This file will be merged with `app-config.yaml`
+   - Use this file to store sensitive information like API tokens
+   - Example configuration:
+     ```yaml
+     auth:
+       github:
+         clientId: your-client-id
+         clientSecret: your-client-secret
+     ```
+
+### Serving the Web App
+
+Start the development server with:
+
+```bash
+yarn dev
+```
+
+This command:
+- Starts the frontend (http://localhost:3000)
+- Starts the backend (http://localhost:7007)
+- Opens a browser window to the local instance automatically
+
+You should see terminal output similar to:
+```
+$ concurrently "yarn start" "yarn start-backend"
+$ yarn workspace example-app start
+$ yarn workspace example-backend start
+$ backstage-cli app:serve
+$ backstage-cli backend:dev
+[0] Loaded config from app-config.yaml
+[1] Build succeeded
+[0] ℹ ｢wds｣: Project is running at http://localhost:3000/
+```
+
+## Contribution Workflow
+
+### Branching Strategy
+
+We use GitHub Flow for our branching strategy:
+
+1. **Main Branch**:
+   - The `main` branch is always deployable and production-ready
+   - All changes must be approved through Pull Requests
+
+2. **Feature Branches**:
+   - Create directly from `main` using the format:
+     `feature/<JIRA-TICKET-ID>-short-description`
+   - Example: `feature/FDAEAPTD-123-add-authentication`
+
+3. **Bugfix Branches**:
+   - Create from `main` using:
+     `bugfix/<JIRA-TICKET-ID>-short-description`
+   - Example: `bugfix/FDAEAPTD-234-fix-navbar`
+
+4. **Version Branches**:
+   - Created when preparing for a release using:
+     `v<version-number>`
+
+### Opening Pull Requests
+
+1. **PR Title and Description**:
+   - Write clear titles referencing the Jira ticket:
+     `FDAEAPTD-123: Add user authentication with OAuth2`
+   - Include context, purpose, and links to Jira issues:
+     `Resolves [FDAEAPTD-123](https://jira.express-scripts.com/browse/FDAEAPTD-123)`
+
+2. **Update CHANGELOG**:
+   - For user-facing changes, update the `[UNRELEASED]` section
+
+3. **Jira Ticket Management**:
+   - Update ticket status as you progress:
+     - **In Progress**: When you start work
+     - **In Review**: When you create the PR
+     - **Done**: When the PR is merged
+
+4. **PR Size**:
+   - Keep PRs small and focused to simplify reviews
+   - Consider breaking large changes into multiple PRs
+
+### PR Review Process
+
+Our "No Double Jeopardy" principle ensures efficiency:
+- Reviewers provide all significant feedback in the first review
+- Only new issues emerging from changes may be raised in subsequent reviews
+
+For more details on our review process, see the [PR Review Guidelines](#technical-standards) section.
+
+## Technical Standards
+
+### Code Quality
+
+1. **Linting and Formatting**:
+   - Run `yarn lint` before committing changes
+   - This command runs only on files you've changed
+
+2. **Naming Conventions**:
+   - Use descriptive variable and function names
+   - Follow React component naming conventions (PascalCase)
+   - Use camelCase for variables and functions
+
+3. **Code Simplicity**:
+   - Keep code simple; avoid unnecessary complexity
+   - Complex solutions should only be used when simpler alternatives won't work
+
+4. **Editor Configuration**:
+   - A consistent coding style is enforced via `.editorconfig`
+   - Your editor should respect these settings automatically
+
+### Testing Requirements
+
+1. **Testing Framework**:
+   - Jest for unit testing
+   - Playwright for end-to-end testing
+
+2. **Test Coverage**:
+   - Minimum 80% test coverage required
+   - Run tests with `yarn test`
+
+3. **Test Synchronization**:
+   - Keep test cases in sync with code changes
+   - Add new tests for new features or bug fixes
+
+### Documentation
+
+1. **README Updates**:
+   - Keep README.md up to date with major changes
+
+2. **API Documentation**:
+   - Document APIs and workflows in the TechDocs plugin
+
+3. **Code Comments**:
+   - Add comments to explain complex logic
+   - Document public APIs and functions
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Node Version Incompatibility**:
+   - Error: `The engine "node" is incompatible with this module`
+   - Solution: Ensure you're using Node.js v20 with `nvm use 20`
+
+2. **Module Resolution Errors**:
+   - Error: `Cannot find module`
+   - Solution: Try `yarn clean && yarn install`
+
+3. **TypeScript Errors**:
+   - Run `yarn tsc` to check for type errors
+   - Ensure your IDE TypeScript version matches the project
+
+4. **Missing Dependencies**:
+   - Error during build or startup related to missing packages
+   - Solution: Run `yarn install` to update dependencies
+
+### SSL and Network Configuration
+
+For corporate networks or when dealing with SSL issues:
+
+1. **Disable Node TLS Checks** (for development only):
+   ```bash
+   export NODE_TLS_REJECT_UNAUTHORIZED="0"
+   ```
+
+2. **Allow External API Calls Through zScaler**:
+   ```bash
+   export NODE_EXTRA_CA_CERTS="./packages/backend/extra-ca-certs.pem"
+   ```
+
+Note: Execute these commands from the root of the Alchemy repo in the same terminal where you will run the backend. You can also add these to your `.bash_profile` or `.zshrc` to make them apply globally.
+
+3. **Proxy Configuration**:
+   - If you're behind a corporate proxy, configure npm:
+     ```bash
+     npm config set proxy http://proxy.company.com:8080
+     npm config set https-proxy http://proxy.company.com:8080
+     ```
+
+## Site organization and files
+
+Understanding the Backstage/Alchemy file structure is essential for effective contributions. Here's a breakdown of the key directories and files:
+
+| Path | Description |
+| --- | --- |
+| `/packages/app/` | The main frontend application that ties everything together |
+| `/packages/app/src/App.tsx` | Main application component that defines the app routes and layout |
+| `/packages/app/src/components/` | Shared components used throughout the application |
+| `/packages/app/src/apis/` | API implementation and integrations for the frontend |
+| `/packages/backend/` | The backend service that powers the Backstage instance |
+| `/packages/backend/src/plugins/` | Backend plugin implementations |
+| `/packages/backend/src/index.ts` | Backend service entry point |
+| `/plugins/` | Custom plugins developed for Alchemy |
+| `/plugins/[plugin-name]/src/components/` | React components for specific plugins |
+| `/plugins/[plugin-name]/src/api/` | Plugin-specific API definitions and clients |
+| `/plugins/[plugin-name]/src/routes.ts` | Plugin route definitions |
+| `/app-config.yaml` | Main application configuration file |
+| `/app-config.local.yaml` | Local configuration overrides (gitignored) |
+| `/catalog-info.yaml` | Backstage catalog entity definition for Alchemy itself |
+| `/packages/backend/Dockerfile` | Docker configuration for the backend service |
+| `/yarn.lock` | Dependency lock file |
+| `/package.json` | Root package configuration and scripts |
+| `/tsconfig.json` | TypeScript configuration |
+| `/.eslintrc.js` | ESLint configuration |
+| `/.prettierrc` | Prettier code formatting configuration |
+| `/jest.config.js` | Jest testing configuration |
+| `/CHANGELOG.md` | Project changelog for tracking user-facing changes |
+| `/docs/` | Project documentation, ADRs, and architecture details |
+
+
+## Resources and Links
+
+- [Backstage Documentation](https://backstage.io/docs/)
+- [Jira Project Board](https://jira.express-scripts.com/browse/FDAEAPTD)
+- [Backstage Project Structure](https://backstage.io/docs/getting-started/project-structure)
+- [Backstage Linting Configuration](https://github.com/backstage/backstage/blob/master/packages/cli/config/eslint-factory.js)
+- [Jest Documentation](https://jestjs.io/docs)
+- [Playwright Documentation](https://playwright.dev/docs/intro)
+- [Git Flow Workflow](https://nvie.com/posts/a-successful-git-branching-model/)
+
+---
+
+By contributing to Alchemy, you're helping build a platform that empowers developers and improves our infrastructure management. Thank you for your contributions!
+
+For questions or additional help, reach out to the Alchemy team or check our internal documentation.

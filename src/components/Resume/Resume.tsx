@@ -48,6 +48,7 @@ export default function Resume(): JSX.Element {
     { name: 'NodeJS/React', level: 80 },
     { name: 'JavaScript', level: 80 },
     { name: 'Figma', level: 80 },
+    { name: 'TypeScript', level: 70 },
     { name: 'Instructional Design', level: 70 },
     { name: 'Accessibility Concepts', level: 70 },
     { name: 'JIRA', level: 70 },
@@ -294,7 +295,7 @@ export default function Resume(): JSX.Element {
                 </h2>
                 <div className="about-content">
                   <p>
-                    I'm a Technical Content Manager with over 20 years of experience bridging the gap 
+                    I'm a Technical Content Manager with experience bridging the gap 
                     between complex technology and human understanding. My passion lies in creating 
                     documentation that doesn't just inform, but empowers users to achieve their goals.
                   </p>

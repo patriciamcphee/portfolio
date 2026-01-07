@@ -10,7 +10,7 @@ export const AboutPage: React.FC = () => {
           
           <div className="about-intro" style={{ fontSize: '1.25rem', lineHeight: '1.8', marginBottom: '3rem' }}>
             <p>
-              I'm a Technical Content Manager with over 15 years of experience bridging the gap 
+              I'm a Technical Content Manager with experience bridging the gap 
               between complex technology and human understanding. My passion lies in creating 
               documentation that doesn't just inform, but empowers users to achieve their goals.
             </p>

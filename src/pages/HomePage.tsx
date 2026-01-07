@@ -255,7 +255,7 @@ const HomePage: React.FC = () => {
                 the intersection of documentation and developer relations.
               </p>
               <p>
-                For over 20 years, I've been doing what I love: helping developers and engineers 
+                I enjoy helping developers and engineers 
                 understand complex technology through clear, accessible content. I've 
                 written API guides that actually make sense, built docs-as-code platforms 
                 that scale, and created SDK tutorials that get developers from zero to shipped.

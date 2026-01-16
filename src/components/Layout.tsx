@@ -141,7 +141,7 @@ const Layout: React.FC = () => {
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
-            <p>© 2025 Patricia McPhee. Crafted with passion and React/TypeScript.</p>
+            <p>© 2026 Patricia McPhee. Crafted with passion and React/TypeScript.</p>
           </div>
         </div>
       </footer>

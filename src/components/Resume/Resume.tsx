@@ -313,7 +313,7 @@ export default function Resume(): JSX.Element {
 
                 <div className="about-content">
                   <h2 className="sectionTitle-h3">How I Work</h2>
-                  <p style={{ marginBottom: '3rem' }}>
+                  <p>
                     I’m docs-as-code native (Git/GitHub + Markdown/MDX + static site generators) and I’m comfortable
                     validating runnable examples. I care deeply about taxonomy, consistency, and correctness—because
                     developer trust is earned through precision.

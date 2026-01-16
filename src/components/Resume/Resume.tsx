@@ -35,25 +35,25 @@ export default function Resume(): JSX.Element {
   const RESUME_PDF_LINK = 'https://www.dropbox.com/scl/fi/4xdfzow5pfwyv09t5u75k/resume-patricia-mcphee.pdf?rlkey=dib73df41fc88aat5dykec8j1&dl=0';
 
   const skills: Skill[] = [
-    { name: 'Technical Writing', level: 100 },
-    { name: 'Docusaurus', level: 95 },
-    { name: 'Markdown', level: 90 },
-    { name: 'Git/GitHub', level: 90 },
-    { name: 'VS Code', level: 90 },
-    { name: 'Confluence', level: 90 },
-    { name: 'Adobe InDesign', level: 90 },
-    { name: 'SnagIt', level: 90 },
-    { name: 'Content Strategy', level: 80 },
-    { name: 'Information Architecture', level: 80 },
-    { name: 'NodeJS/React', level: 80 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'Figma', level: 80 },
+    { name: 'AI API & SDK Documentation', level: 95 },
+    { name: 'Docs-as-Code (Git/GitHub)', level: 90 },
+    { name: 'Markdown / MDX', level: 90 },
+    { name: 'Docusaurus / Static Site Docs', level: 95 },
+    { name: 'Information Architecture & Taxonomy', level: 85 },
+    { name: 'Developer Tutorials & Workshops', level: 85 },
+    { name: 'Prompt Engineering', level: 80 },
+    { name: 'LLM Concepts (Integration, RAG basics)', level: 70 },
     { name: 'TypeScript', level: 70 },
-    { name: 'Instructional Design', level: 70 },
+    { name: 'JavaScript', level: 80 },
+    { name: 'NodeJS / React', level: 80 },
+    { name: 'Code Example Validation', level: 75 },
+    { name: 'OpenAPI / Swagger Literacy', level: 70 },
+    { name: 'CI/CD & Versioned Releases (Docs)', level: 70 },
+    { name: 'Confluence', level: 85 },
+    { name: 'JIRA', level: 75 },
+    { name: 'UX Writing / Microcopy', level: 80 },
+    { name: 'Figma', level: 75 },
     { name: 'Accessibility Concepts', level: 70 },
-    { name: 'JIRA', level: 70 },
-    { name: 'Adobe Premiere Pro', level: 70 },
-    { name: 'Backstage', level: 60 },
   ];
 
   const timeline: TimelineJob[] = [
@@ -63,10 +63,10 @@ export default function Resume(): JSX.Element {
       period: '11/2023 – Present',
       location: 'Remote',
       highlights: [
-        'Developed GenAI toolkit reducing JIRA Feature writing time by 75% (from 2 hours to 30 minutes)',
-        'Redesigned Backstage developer portal navigation, reducing clicks by 66%',
-        'Led creation of ContentOps Playbook and style guide for Enterprise DevOps teams',
-        'Built Docusaurus markdown-based doc site for the Backstage internal developer platform documentation'
+        'Built and governed docs-as-code documentation workflows (Git/GitHub + Markdown + Docusaurus) for developer platform content',
+        'Designed documentation structure, taxonomy, and style standards to improve discoverability and consistency',
+        'Developed a GenAI writing toolkit that reduced feature-writing cycle time by 75% while improving quality and completeness',
+        'Partnered with engineering and platform teams to validate technical accuracy and publish adoption-ready guides for complex internal tooling'
       ]
     },
     {
@@ -75,8 +75,9 @@ export default function Resume(): JSX.Element {
       period: '12/2022 – 08/2023',
       location: 'Remote',
       highlights: [
-        'Conducted content audit and analysis leading to user-centric developer documentation',
-        'Built Docusaurus markdown-based doc site, adopting a user-centric approach enhancing content management and increasing content accessibility by 30%'
+        'Authored developer-facing integration documentation for identity platform workflows (Okta, Azure AD B2C)',
+        'Conducted content audits to identify gaps, restructure IA, and improve developer onboarding',
+        'Built and maintained a Docusaurus documentation site with scalable, versioned docs-as-code practices'
       ]
     },
     {
@@ -85,8 +86,8 @@ export default function Resume(): JSX.Element {
       period: '05/2022 – 11/2022',
       location: 'Remote',
       highlights: [
-        'Conducted content audit and analysis of design system documentation for designers and developers',
-        'Crafted UI text and conversation copy for chatbots'
+        'Audited design system documentation to improve clarity for both designers and developers',
+        'Created UX microcopy and conversational content patterns for automated support experiences'
       ]
     },
     {
@@ -95,10 +96,9 @@ export default function Resume(): JSX.Element {
       period: '10/2021 – 03/2022',
       location: 'Remote',
       highlights: [
-        'Developed user-friendly deployment guides for support teams and customers.',
-        'Built Docusaurus markdown-based online help, improving content accessibility by 30%.',
-        'Developed in-platform UI microcopy helping users navigate complex data encryption software.'
-
+        'Created deployment and onboarding guides for complex data security/encryption software',
+        'Built Docusaurus-based online help and improved information accessibility and navigation',
+        'Wrote in-product microcopy to reduce user friction and increase task success'
       ]
     },
     {
@@ -107,9 +107,9 @@ export default function Resume(): JSX.Element {
       period: '05/2020 – 10/2021',
       location: 'Remote',
       highlights: [
-        'Developed Azure VMware Solution learning modules, reducing implementation time by 60%',
-        'Collaborated with Azure engineering and UX Research teams on goal-oriented content',
-        'Conducted content audits and developed in-platform UI microcopy'
+        'Authored Azure VMware Solution learning modules and technical guidance for enterprise cloud adoption',
+        'Partnered with engineering and UX research to validate correctness and improve usability of content',
+        'Used content audits to refine documentation structure and improve findability'
       ]
     },
     {
@@ -118,8 +118,8 @@ export default function Resume(): JSX.Element {
       period: '07/2019 – 06/2021',
       location: 'Remote',
       highlights: [
-        'Extreme Networks: Automated API content publishing using shell scripts, reducing curation time by 40%',
-        'ZPE Systems: Wrote marketing eBook and learning materials for data center automation; produced how-to videos with voiceover'
+        'Automated API documentation publishing using scripts, reducing manual curation effort by ~40%',
+        'Produced developer learning materials and how-to video walkthroughs to support product onboarding'
       ]
     },
     {
@@ -128,8 +128,8 @@ export default function Resume(): JSX.Element {
       period: '03/2019 – 06/2019',
       location: 'Seattle, WA',
       highlights: [
-        'Wrote markdown-based SDK and API guides for mobile chatbot and live agent messaging',
-        'Contributed to chatbot and virtual assistant development with mobile app team'
+        'Wrote SDK and API documentation for chatbot and messaging platforms used by mobile engineers',
+        'Collaborated with engineering teams to document workflows and improve developer integration success'
       ]
     },
     {
@@ -138,8 +138,8 @@ export default function Resume(): JSX.Element {
       period: '01/2018 – 01/2019',
       location: 'Redmond, WA',
       highlights: [
-        'Collaborated with Microsoft Edge and Windows networking teams on markdown-based learning modules',
-        'Wrote and edited UX microcopy and UI strings based on data-driven content audit insights'
+        'Developed technical learning modules with engineering teams (Windows networking / Edge)',
+        'Created UX microcopy and UI strings informed by content audits and user needs'
       ]
     },
     {
@@ -148,8 +148,8 @@ export default function Resume(): JSX.Element {
       period: '07/2017 – 12/2017',
       location: 'Redmond, WA',
       highlights: [
-        'Developed internal cross-functional workflows and process documentation for VR R&D teams',
-        'Created technical documentation supporting virtual reality development initiatives'
+        'Documented cross-functional workflows for fast-moving R&D teams',
+        'Produced internal technical documentation supporting VR development initiatives'
       ]
     },
     {
@@ -158,8 +158,8 @@ export default function Resume(): JSX.Element {
       period: '08/2016 – 05/2017',
       location: 'Seattle, WA',
       highlights: [
-        'Updated outdated installation and upgrade guides using MadCap Flare and DITA/XML',
-        'Improved customer experience through collaboration with customers and support teams'
+        'Updated installation and upgrade guides for regulated product environments (DITA/XML)',
+        'Partnered with customer-facing teams to address documentation gaps and improve outcomes'
       ]
     },
     {
@@ -168,8 +168,8 @@ export default function Resume(): JSX.Element {
       period: '09/2015 – 07/2016',
       location: 'Seattle, WA',
       highlights: [
-        'Wrote internal feature announcements and task-oriented procedure guides',
-        'Created documentation for warehouse operations and employee training materials'
+        'Wrote operational and procedural documentation for internal teams',
+        'Created task-oriented guides supporting training and consistent execution'
       ]
     },
     {
@@ -178,32 +178,32 @@ export default function Resume(): JSX.Element {
       period: '03/2015 – 09/2015',
       location: 'Denver, CO',
       highlights: [
-        'Collaborated with video-on-demand and networking engineers on standard procedures',
-        'Developed Python scripts for system administration and automation tasks, demonstrating versatility beyond writing'
+        'Collaborated with engineering teams to document standard operating procedures',
+        'Built simple scripts to support systems tasks and improve operational efficiency'
       ]
     }
   ];
 
   const achievements: Achievement[] = [
     {
-      title: 'GenAI Toolkit Innovation',
-      description: 'Reduced JIRA Feature writing time by 75% (from 2 hours to 30 minutes)',
+      title: 'GenAI Enablement Toolkit',
+      description: 'Built a repeatable prompt toolkit that reduced feature-writing time by 75% while improving consistency and completeness.',
       icon: Award
     },
     {
-      title: 'Developer Portal UX',
-      description: 'Redesigned Backstage navigation reducing clicks by 66% and improved Create page discoverability',
-      icon: Briefcase
-    },
-    {
-      title: 'API Automation',
-      description: 'Reduced API/SDK documentation curation time by 40% through shell script automation',
+      title: 'Docs-as-Code at Scale',
+      description: 'Built and maintained multiple Docusaurus-based documentation platforms with versioned, Git-based workflows.',
       icon: Code
     },
     {
-      title: 'Documentation Optimization',
-      description: 'Reduced Azure VMware Solution implementation time by 60%',
-      icon: Award
+      title: 'Knowledge Architecture & Taxonomy',
+      description: 'Designed documentation structure and taxonomy to improve discoverability and reduce time-to-answer for developers.',
+      icon: Briefcase
+    },
+    {
+      title: 'Automation for Publishing',
+      description: 'Automated API documentation publishing pipelines, reducing manual curation effort by ~40%.',
+      icon: Code
     }
   ];
 
@@ -260,7 +260,7 @@ export default function Resume(): JSX.Element {
               </div>
               <a href={RESUME_PDF_LINK}
                   target="_blank"
-                  rel="noopener noreferrer" download="Patricia_McPhee_Resume.pdf" className="contactLink">
+                  rel="noopener noreferrer" download="Patricia_McPhee_Resume.pdf&dl=1" className="contactLink">
                 <Download size={16} />
                 Download Resume
               </a>
@@ -271,7 +271,7 @@ export default function Resume(): JSX.Element {
         {/* Navigation */}
         <nav className="navigation">
           <div className="navContent">
-            {(['about', 'timeline', 'skills', 'achievements'] as const).map((section) => (
+            {(['about', 'timeline', 'skills', 'achievements', 'contact'] as const).map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
@@ -295,19 +295,28 @@ export default function Resume(): JSX.Element {
                 </h2>
                 <div className="about-content">
                   <p>
-                    I'm a Technical Content Manager with experience bridging the gap 
-                    between complex technology and human understanding. My passion lies in creating 
-                    documentation that doesn't just inform, but empowers users to achieve their goals.
+                    I’m a Technical Writer focused on AI systems and developer enablement. I document complex
+                    developer products—APIs, SDKs, tooling, and integration workflows—so engineers can build with
+                    them quickly and correctly.
                   </p>
                 </div>
+
                 <div className="about-content">
-                  {/* Philosophy */}
-                  <h3 className="sectionTitle-h3">My Philosophy</h3>
+                  <h3 className="sectionTitle-h3">What I Do Best</h3>
                   <p>
-                    I believe that great documentation is invisible – it answers questions before they're asked, 
-                    guides without patronizing, and transforms complex systems into intuitive experiences. 
-                    Every piece of content I create is crafted with empathy, precision, and a deep understanding 
-                    of user needs.
+                    I partner closely with engineering, product, and research teams to translate advanced technical
+                    capabilities into clear, practical documentation. That includes API and SDK references,
+                    conceptual guides for integration, and workshop-style materials (tutorials, labs, walkthroughs)
+                    designed to accelerate adoption.
+                  </p>
+                </div>
+
+                <div className="about-content">
+                  <h2 className="sectionTitle-h3">How I Work</h2>
+                  <p style={{ marginBottom: '3rem' }}>
+                    I’m docs-as-code native (Git/GitHub + Markdown/MDX + static site generators) and I’m comfortable
+                    validating runnable examples. I care deeply about taxonomy, consistency, and correctness—because
+                    developer trust is earned through precision.
                   </p>
                 </div>
 
@@ -438,15 +447,15 @@ export default function Resume(): JSX.Element {
                 <ul className="additionalList">
                   <li>
                     <span className="checkmark">✓</span>
-                    <span>Redesigned Backstage Create page with dynamic filters and clickable tags, improving template discoverability and creating a more intuitive developer experience</span>
+                    <span>Produced developer-ready API and SDK documentation across SaaS platforms, validating workflows with engineering teams</span>
                   </li>
                   <li>
                     <span className="checkmark">✓</span>
-                    <span>Successfully built and deployed multiple Docusaurus-based documentation platforms, implementing modern docs-as-code workflows</span>
+                    <span>Created tutorials and learning-style content that bridges conceptual understanding and runnable implementation</span>
                   </li>
                   <li>
                     <span className="checkmark">✓</span>
-                    <span>Improved developer experience and content maintainability across multiple organizations</span>
+                    <span>Improved documentation usability through UX writing, IA, and platform discoverability enhancements</span>
                   </li>
                 </ul>
               </div>
@@ -462,8 +471,10 @@ export default function Resume(): JSX.Element {
             </h2>
             
             <p className="contactIntro">
-              Ready to dive in? Fill out the form below, and let's embark on this content journey together.
+              Want to collaborate on developer documentation, AI tooling enablement, or docs-as-code systems?
+              Send a message and I’ll respond soon.
             </p>
+
             
             <form name="contact-form" id="contact-form" ref={form} onSubmit={sendEmail} className="contactForm">
               <div className="formGroup">

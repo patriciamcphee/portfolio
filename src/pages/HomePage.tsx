@@ -44,6 +44,8 @@ const HomePage: React.FC = () => {
       'web-design': 'portfolio-card-blue-dark',
       'coding': 'portfolio-card-orange',
       'blog-writing': 'portfolio-card-gold',
+      'ai-adoption': 'portfolio-card-purple',
+
     };
     return colorMap[category] || 'portfolio-card-blue-light';
   };
@@ -56,7 +58,8 @@ const HomePage: React.FC = () => {
       'ux-design': 'UX/UI Design',
       'web-design': 'Web Design',
       'coding': 'Coding',
-      'prompt-engineering': 'Prompt Engineering',   
+      'prompt-engineering': 'Prompt Engineering',
+//      'ai-adoption': 'AI Adoption',
     };
     return labelMap[category] || category;
   };
@@ -66,8 +69,8 @@ const HomePage: React.FC = () => {
       id: 3,
       title: "JIRA Feature Toolkit",
       category: "prompt-engineering",
-      description: "Pre-made AI prompts to turn technical notes into clear, user-friendly JIRA feature descriptions with validation tools.",
-      tags: ["AI", "Prompt Engineering", "JIRA"],
+      description: "GenAI enablement toolkit that converts raw technical notes into consistent, adoption-ready JIRA feature narratives—reducing writing time and improving requirements quality.",
+      tags: ["Prompt Engineering", "Enablement", "Workflow Automation"],
       link: "/jira-toolkit"
     },
     {
@@ -91,8 +94,8 @@ const HomePage: React.FC = () => {
       id: 5,
       title: "Smart Search Plugin",
       category: "coding",
-      description: "Fuzzy search plugin for Docusaurus 3.x with real-time, section-level results.",
-      tags: ["Coding", "NPM Package", "Docusaurus v3", "Local Search"],
+      description: "AI-ready discovery layer for Docusaurus: fuzzy search with section-level results to reduce knowledge friction and improve time-to-answer.",
+      tags: ["Knowledge Systems", "Search", "Docusaurus v3", "Developer Experience"],
       link: "https://www.npmjs.com/package/smart-search-plugin"
     },
     {
@@ -133,16 +136,16 @@ const HomePage: React.FC = () => {
       id: 9,
       title: "Backstage Sidebar Redesign",
       category: "ux-design",
-      description: "A comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls.",
-      tags: ["UX Design", "Navigation"],
+      description: "Navigation redesign that reduced cognitive load and improved access to frequent actions—supporting faster task completion and smoother platform adoption.",
+      tags: ["UX for Adoption", "Information Architecture", "Navigation", "Accessibility"],
       link: "/project/backstage-sidebar-redesign"
     },
     {
       id: 10,
       title: "Backstage Create Page Redesign",
       category: "ux-design",
-      description: "Template catalog redesign that increases visibility of the templates by 200%, adding dynamic filters, and making static elements interactive.",
-      tags: ["UX Design", "Navigation"],
+      description: "Platform adoption UX redesign: improved template discoverability with dynamic filters and interactive elements to reduce friction and increase self-service.",
+      tags: ["Platform Enablement", "UX for Adoption", "Developer Experience", "Backstage"],
       link: "/project/backstage-create-page-redesign",
       githubLink: "https://github.com/patriciamcphee/template-catalog",
       viteLink: "https://patriciamcphee.github.io/template-catalog/"
@@ -177,30 +180,30 @@ const HomePage: React.FC = () => {
     { id: 'ux-design', label: 'UX/UI Design' },
     { id: 'web-design', label: 'Web Design' },
     { id: 'coding', label: 'Coding' },
-    { id: 'blog-writing', label: 'Blog Writing' }
-
+    { id: 'blog-writing', label: 'Blog Writing' },
+//    { id: 'ai-adoption', label: 'AI Adoption' }
   ];
 
   const services: Service[] = [
     {
       icon: FileText,
-      title: "Technical Writing",
-      description: "Clear, comprehensive documentation that makes complex systems accessible"
+      title: "AI Adoption Enablement",
+      description: "Adoption-ready knowledge systems that reduce onboarding time and support AI usage at scale."
     },
     {
       icon: PenTool,
-      title: "UX Writing",
-      description: "Microcopy and content design that guides users seamlessly"
+      title: "Governance & ContentOps",
+      description: "Standards, templates, and workflows that keep technical knowledge consistent, accurate, and scalable."
     },
     {
       icon: Monitor,
-      title: "UI/UX Design",
-      description: "Intuitive interfaces that delight users and drive engagement"
+      title: "Platform & UX Enablement",
+      description: "Developer-first content + UX improvements that reduce friction and improve discoverability."
     },
     {
       icon: Code,
-      title: "Web Development",
-      description: "Modern, responsive websites built with React and cutting-edge tech"
+      title: "Automation for Knowledge",
+      description: "Docs-as-code, pipelines, and tooling that reduce manual effort and speed up publishing."
     }
   ];
 
@@ -215,12 +218,12 @@ const HomePage: React.FC = () => {
           </div>
           <div className="hero-content">
             <p className="hero-description">
-              Empowering users through well-crafted content and intuitive design. 
-              Bridging the gap between complex technology and human understanding.
+              I help organizations adopt AI and complex platforms by turning them into clear, governed,
+              adoption-ready experiences—through knowledge systems, enablement content, and developer-first UX.
             </p>
             <div className="hero-buttons">
               <button onClick={() => scrollToSection('portfolio')} className="btn btn-primary">
-                View My Work <ArrowRight size={20} />
+                View Adoption Work <ArrowRight size={20} />
               </button>
               <button onClick={() => scrollToSection('contact')} className="btn btn-outline">
                 Get In Touch
@@ -251,42 +254,36 @@ const HomePage: React.FC = () => {
           <div className="about-grid">
             <div className="about-content">
               <p>
-                Hello, I'm Patricia McPhee—a Technical Content Manager who lives at 
-                the intersection of documentation and developer relations.
+                Hi, I’m Patricia McPhee—an AI Adoption & Platform Enablement leader.
+                I operationalize transformation by removing knowledge friction so teams can
+                implement and use AI and complex platforms correctly, faster, and with confidence.
               </p>
               <p>
-                I enjoy helping developers and engineers 
-                understand complex technology through clear, accessible content. I've 
-                written API guides that actually make sense, built docs-as-code platforms 
-                that scale, and created SDK tutorials that get developers from zero to shipped.
+                I treat documentation as an adoption system: structured for discoverability,
+                governed for consistency, and designed for AI-readiness (search, assistants, and reuse).
+                This approach helps reduce onboarding time, support burden, and “tribal knowledge” risk.
               </p>
               <p>
-                I've worked across the spectrum—from startups building their first developer 
-                experience to industry leaders like Microsoft, Facebook, and Cigna.
-              </p>
-              <p>
-                But documentation is just one part of the story. I approach every project 
-                as a strategist and developer advocate—someone who understands that great 
-                content doesn't just explain <em>how</em> something works, but shows developers&nbsp; 
-                <em>why</em> &nbsp;it matters and how it solves their problems.
+                My work spans enterprise and startup environments—supporting developer platforms,
+                cloud infrastructure, SDKs/APIs, and conversational experiences for teams at
+                Microsoft, Cigna, Beyond Identity, Expedia, and more.
               </p>
             </div>
 
             <div className="about-content">
-
               <p>
-                Whether I'm collaborating with full-stack developers or cloud infrastructure engineers, 
-                my focus remains the same: creating content that resonates with both seasoned 
-                architects and developers just getting started.
+                What I’m known for: translating complex technical systems into clear,
+                scalable enablement—then building the governance and content operations
+                needed to keep it accurate over time.
               </p>
               <p>
-                In a world where developer experience can make or break adoption, I bring 
-                technical depth, a developer-first mindset, and over two decades of experience 
-                turning complex platforms into accessible, compelling stories.
+                Recently, I’ve been deepening my focus on AI enablement and prompt engineering:
+                designing repeatable workflows and toolkits that improve speed, quality, and consistency
+                across product and engineering teams.
               </p>
               <p>
-                Currently, I am diving deeper into AI, prompt engineering, and TypeScript to better support the developer community—because in this field, 
-                learning never stops.
+                If you’re investing in AI or platform transformation, I help ensure the adoption side
+                scales with the technology.
               </p>
             </div>
           </div>
@@ -317,7 +314,10 @@ const HomePage: React.FC = () => {
       <section id="portfolio" className="section">
         <div className="portfolio-container">
           <h2 className="section-title">Portfolio</h2>
-          
+          <p className="portfolio-intro">
+            This portfolio highlights developer-focused documentation, tooling, and UX work designed to
+            improve adoption of complex AI, API, and platform systems.
+          </p>
           {/* Category Filter */}
           <div className="portfolio-filter">
             {categories.map((cat) => (

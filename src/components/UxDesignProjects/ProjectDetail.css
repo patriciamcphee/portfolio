@@ -8,6 +8,24 @@
    Orange: #e68342
 */
 
+.metrics-disclaimer {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+[data-theme='dark'] .metrics-disclaimer {
+  background: rgba(245, 158, 11, 0.2);
+  border-left-color: #fbbf24;
+  color: #e0e0e0;
+}
+
 
 
 /* Project Hero */

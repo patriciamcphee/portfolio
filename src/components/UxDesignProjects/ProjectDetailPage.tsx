@@ -52,7 +52,13 @@ interface ProjectDetails {
   githubLink?: string;
   nextProject?: string;
   prevProject?: string;
+  evidence?: string[];
+
 }
+
+const METRICS_DISCLAIMER =
+  "Note: Metrics are based on observed workflow reductions, user feedback, and internal team reporting. Where analytics were not instrumented, values are directional estimates.";
+
 
 const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -60,60 +66,71 @@ const ProjectDetailPage: React.FC = () => {
   // Project data
   const projectsData: Record<string, ProjectDetails> = {
     'backstage-sidebar-redesign': {
-      id: 'backstage-sidebar-redesign',
-      title: 'Backstage Sidebar Redesign',
-      subtitle: 'Streamlining Navigation and Control Access',
-      category: 'UX Design',
-      client: 'Backstage Platform',
-      duration: '3 months',
-      team: '4 members (1 UX, 2 Dev, 1 PM)',
-      heroImage: SidebarBackstage,
-      overview: 'Led a comprehensive sidebar redesign that reduced navigation complexity by 66% and improved accessibility of frequently used controls, transforming a cluttered flyout-based system into an intuitive inline navigation experience.',
-      challenge: 'The Backstage sidebar had critical UX issues: catalog navigation opened in right-side flyouts creating additional layers, Light/Dark mode toggles and sidebar controls were buried 3 clicks deep in Settings, and the interface didn\'t efficiently use vertical space. Support tickets were increasing due to hidden functionality.',
-      solution: 'Completely restructured the sidebar architecture: converted catalog flyouts to inline accordion-style expandable menus directly beneath labels, relocated theme toggle and collapse controls to prominent sidebar positions (bottom and top respectively), and implemented smooth animations with proper accessibility standards including ARIA labels and keyboard navigation.',
-      results: [
-        'Reduced clicks for theme toggle by 66% (from 3 to 1)',
-        'Reduced clicks for sidebar collapse by 66% (from 3 to 1)',
-        'Decreased catalog navigation time by 50%',
-        'Cut support tickets by 35% within 3 months',
-        'Improved satisfaction score from 2.8 to 4.6/5',
-        'Increased engagement by 120%'
-      ],
-      technologies: ['Figma', 'React', 'TypeScript', 'CSS Animations', 'ARIA/WCAG 2.1', 'User Testing'],
-      images: [
-        SidebarOriginal,
-        SidebarBackstage2
-      ],
-      nextProject: 'backstage-create-page-redesign'
-    },
+    id: 'backstage-sidebar-redesign',
+    title: 'Developer Portal Navigation Redesign (Backstage Sidebar)',
+    subtitle: 'Reducing friction in high-frequency developer workflows',
+    category: 'UX Design • Developer Enablement',
+    client: 'Backstage-based Developer Platform',
+    duration: '3 months',
+    team: '4 members (1 UX, 2 Dev, 1 PM)',
+    heroImage: SidebarBackstage,
+    overview:
+      'Led a navigation redesign for a Backstage-based developer portal focused on reducing friction in high-frequency workflows. Replaced nested flyouts with inline navigation and surfaced core controls (theme + collapse) to reduce time-to-task and improve discoverability for developers.',
+    challenge:
+      'Developers struggled with hidden controls and multi-step navigation. Key actions like theme toggle and sidebar collapse were buried under Settings, and catalog navigation relied on right-side flyouts that added visual layers, increased cognitive load, and slowed routine tasks. Support questions increased as critical functionality became harder to find.',
+    solution:
+      'Re-architected the sidebar information model: converted flyouts into inline accordion navigation, moved high-frequency controls into persistent sidebar locations, and applied accessibility-first interaction design (keyboard navigation, ARIA labeling, clear affordances). Partnered with engineering to validate interaction states and implement animations that support comprehension without adding complexity.',
+    results: [
+      'Reduced steps to access theme toggle (3 → 1)',
+      'Reduced steps to collapse/expand sidebar (3 → 1)',
+      'Improved navigation efficiency by removing flyout layering (observed in workflow reviews)',
+      'Reduced support questions related to hidden controls (observed in feedback loops)',
+      'Improved satisfaction in internal feedback and usability reviews (observed)',
+      'Increased engagement with core navigation and controls (observed)'
+    ],
+    evidence: [
+      'Internal usability testing sessions with platform engineers',
+      'Product owner and stakeholder review notes',
+      'Support feedback trends reviewed during sprint retros',
+      'Navigation workflow walk-throughs during design critiques'
+    ],
+    technologies: ['Figma', 'React', 'TypeScript', 'CSS Animations', 'ARIA/WCAG 2.1', 'User Feedback Loops'],
+    images: [SidebarOriginal, SidebarBackstage2],
+    nextProject: 'backstage-create-page-redesign'
+  },
     'backstage-create-page-redesign': {
-      id: 'backstage-create-page-redesign',
-      title: 'Template Catalog Redesign',
-      subtitle: 'Transforming Template Discovery & Selection',
-      category: 'UX Design',
-      client: 'Alchemy Platform',
-      duration: '2 months',
-      team: '3 members (1 UX, 1 Dev, 1 PM)',
-      heroImage: CreatePageBackstage,
-      overview: 'Redesigned the template catalog interface to dramatically improve template discoverability and user efficiency. Increased templates visible above the fold by 200%, introduced dynamic filtering capabilities, and transformed static elements into interactive discovery tools.',
-      challenge: 'The default Backstage template catalog presented critical usability challenges: limited template visibility required excessive scrolling, oversized headers consumed valuable screen space, static tag chips provided no filtering functionality, and users struggled to discover relevant templates efficiently. The interface hadn\'t scaled with Alchemy\'s growing template ecosystem.',
-      solution: 'Implemented a comprehensive redesign featuring: a compact, responsive grid layout maximizing template visibility, an intelligent sidebar with Quick Filters, Categories, Teams, and Tags filtering, interactive tag chips that dynamically add filters, an Active Filters card showing all selections with clear/remove options, enhanced search integration, and improved template cards with favoriting, usage statistics, and documentation links.',
-      results: [
-        'Increased templates visible above fold by 200%',
-        'Reduced average time to find templates by 65%',
-        'Improved user satisfaction score from 3.1 to 4.7/5',
-        'Decreased template selection time by 58%',
-        'Increased template usage by 145%',
-        'Reduced support requests by 42%'
-      ],
-      technologies: ['Figma', 'React', 'TypeScript', 'CSS Grid', 'User Testing', 'A/B Testing'],
-      images: [
-        CreatePageBackstage,
-        CreatePageRedesign,
-        CreatePageRedesign2
-      ],
-      prevProject: 'backstage-sidebar-redesign'
-    }
+    id: 'backstage-create-page-redesign',
+    title: 'Template Catalog Redesign (Developer Self-Service)',
+    subtitle: 'Improving discovery, selection confidence, and adoption',
+    category: 'UX Design • Developer Enablement',
+    client: 'Internal Developer Platform (Backstage/Alchemy)',
+    duration: '2 months',
+    team: '3 members (1 UX, 1 Dev, 1 PM)',
+    heroImage: CreatePageBackstage,
+    overview:
+      'Redesigned a developer template catalog to improve self-service discovery and selection. Increased the number of templates visible at a glance, introduced search + filtering patterns that scale, and made metadata actionable (clickable tags) to reduce time-to-find and improve user confidence.',
+    challenge:
+      'As the template ecosystem grew, developers struggled to find relevant templates quickly. The default catalog layout showed too few options above the fold, encouraged scrolling over scanning, and treated key metadata (tags) as static labels. The result: slower discovery, reduced confidence, and more support requests for “which template should I use?”',
+    solution:
+      'Designed a compact, responsive grid layout and a filtering system that supports real discovery: Quick Filters, Categories, Teams, and Tags; an Active Filters summary with clear/remove behaviors; clickable tag chips that apply filters directly; and improved template cards with clearer hierarchy, “favorite” affordances, and documentation links. The interaction model prioritizes fast scanning, low cognitive load, and predictable refinement.',
+    results: [
+      'Increased above-the-fold template visibility through a compact grid layout (observed)',
+      'Reduced time-to-find templates using search + filters (observed)',
+      'Improved confidence during template selection (observed in feedback and reviews)',
+      'Reduced friction by adding interactive tags and active filter controls (observed)',
+      'Increased template usage following improved discovery patterns (observed)',
+      'Reduced support questions about template selection (observed)'
+    ],
+    evidence: [
+      'Usability testing sessions with template consumers',
+      'Internal feedback from platform enablement teams',
+      'Design review notes from Alchemy stakeholders',
+      'Template discovery walkthrough observations'
+    ],
+    technologies: ['Figma', 'React', 'TypeScript', 'CSS Grid', 'User Feedback Loops', 'Usability Testing'],
+    images: [CreatePageBackstage, CreatePageRedesign, CreatePageRedesign2],
+    prevProject: 'backstage-sidebar-redesign'
+  }
   };
 
   const project = projectsData[projectId || ''];
@@ -171,6 +188,18 @@ if (projectId === 'backstage-create-page-redesign') {
           <h2>Quick Summary</h2>
           <p className="project-text quick-summary">
             {project.overview}
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container container-small">
+          <h2>Why this matters for AI developer tooling</h2>
+          <p className="project-text">
+            AI platforms succeed when developers can discover the right capability quickly, understand it with minimal friction,
+            and take confident next steps. This work focuses on the same adoption levers: information architecture, discoverability,
+            reduced cognitive load, and clear paths to action—principles that also apply directly to AI API docs, SDK guides,
+            and workshop materials.
           </p>
         </div>
       </section>
@@ -371,6 +400,11 @@ if (projectId === 'backstage-create-page-redesign') {
         </div>
       </section>
 
+      <div className="metrics-disclaimer">
+        {METRICS_DISCLAIMER}
+      </div>
+
+
       {/* Impact Metrics */}
       <section className="section section-alt">
         <div className="container">
@@ -378,23 +412,23 @@ if (projectId === 'backstage-create-page-redesign') {
           
           <div className="metrics-grid">
             <div className="metric-card">
-              <div className="metric-value">+200%</div>
-              <div className="metric-label">Templates Visible</div>
+              <div className="metric-value">↑</div>
+              <div className="metric-label">Above-the-Fold Visibility</div>
             </div>
 
             <div className="metric-card">
-              <div className="metric-value">-65%</div>
-              <div className="metric-label">Discovery Time</div>
+              <div className="metric-value">↓</div>
+              <div className="metric-label">Time-to-Find (Observed)</div>
             </div>
 
             <div className="metric-card">
-              <div className="metric-value">-42%</div>
-              <div className="metric-label">Support Requests</div>
+              <div className="metric-value">↑</div>
+              <div className="metric-label">Selection Confidence</div>
             </div>
 
             <div className="metric-card">
-              <div className="metric-value">4.7/5</div>
-              <div className="metric-label">Satisfaction Score</div>
+              <div className="metric-value">↓</div>
+              <div className="metric-label">Support Questions</div>
             </div>
           </div>
         </div>
@@ -414,6 +448,20 @@ if (projectId === 'backstage-create-page-redesign') {
           </div>
         </div>
       </section>
+
+      {/* Evidence Section */}
+      {project.evidence && (
+        <section className="section section-alt">
+          <div className="container container-small">
+            <h2>Evidence & Validation Sources</h2>
+            <ul className="jt-bullet-list">
+              {project.evidence.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Images Catalog */}
       {project.images.length > 0 && (
@@ -505,6 +553,18 @@ if (projectId === 'backstage-create-page-redesign') {
             <h2>Quick Summary</h2>
             <p className="project-text quick-summary">
               {project.overview}
+            </p>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container container-small">
+            <h2>Why this matters for AI developer tooling</h2>
+            <p className="project-text">
+              AI platforms succeed when developers can discover the right capability quickly, understand it with minimal friction,
+              and take confident next steps. This work focuses on the same adoption levers: information architecture, discoverability,
+              reduced cognitive load, and clear paths to action—principles that also apply directly to AI API docs, SDK guides,
+              and workshop materials.
             </p>
           </div>
         </section>
@@ -681,6 +741,11 @@ if (projectId === 'backstage-create-page-redesign') {
           </div>
         </section>
 
+        <div className="metrics-disclaimer">
+          {METRICS_DISCLAIMER}
+        </div>
+
+
         {/* Impact Metrics */}
         <section className="section section-alt">
           <div className="container">
@@ -688,23 +753,23 @@ if (projectId === 'backstage-create-page-redesign') {
             
             <div className="metrics-grid">
               <div className="metric-card">
-                <div className="metric-value">66%</div>
-                <div className="metric-label">Click Reduction</div>
+                <div className="metric-value">3 → 1</div>
+                <div className="metric-label">Steps for Core Controls</div>
               </div>
 
               <div className="metric-card">
-                <div className="metric-value">-50%</div>
-                <div className="metric-label">Navigation Time</div>
+                <div className="metric-value">↓</div>
+                <div className="metric-label">Time-to-Action (Observed)</div>
               </div>
 
               <div className="metric-card">
-                <div className="metric-value">-35%</div>
-                <div className="metric-label">Support Tickets</div>
+                <div className="metric-value">↓</div>
+                <div className="metric-label">“How do I…?” Questions</div>
               </div>
 
               <div className="metric-card">
-                <div className="metric-value">4.6/5</div>
-                <div className="metric-label">Satisfaction Score</div>
+                <div className="metric-value">↑</div>
+                <div className="metric-label">Discoverability</div>
               </div>
             </div>
           </div>
@@ -724,6 +789,20 @@ if (projectId === 'backstage-create-page-redesign') {
             </div>
           </div>
         </section>
+
+        {/* Evidence Section */}
+        {project.evidence && (
+          <section className="section section-alt">
+            <div className="container container-small">
+              <h2>Evidence & Validation Sources</h2>
+              <ul className="jt-bullet-list">
+                {project.evidence.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* Images Gallery */}
         {project.images.length > 0 && (
@@ -849,6 +928,21 @@ if (projectId === 'backstage-create-page-redesign') {
           </div>
         </div>
       </section>
+
+      {/* Evidence Section */}
+      {project.evidence && (
+        <section className="section section-alt">
+          <div className="container container-small">
+            <h2>Evidence & Validation Sources</h2>
+            <ul className="jt-bullet-list">
+              {project.evidence.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
 
       {/* Images Gallery */}
       {project.images.length > 0 && (

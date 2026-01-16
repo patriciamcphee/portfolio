@@ -558,9 +558,9 @@ const JiraToolkit: React.FC = () => {
       <section className="jt-hero">
         <div className="container">
           <div className="jt-hero-content">
-            <span className="jt-category-badge">Prompt Engineering</span>
-            <h1 className="jt-page-title">JIRA Feature Generation Toolkit</h1>
-            <p className="jt-page-subtitle">By Patricia McPhee • August 18, 2025</p>
+            <span className="jt-category-badge">AI Enablement • Prompt Engineering</span>
+            <h1 className="jt-page-title">Structured Prompt Toolkit (with Validation Guardrails)</h1>
+            <p className="jt-page-subtitle">Developer-ready outputs • Human-in-the-loop review • Reusable pattern</p>
           </div>
         </div>
       </section>
@@ -571,45 +571,45 @@ const JiraToolkit: React.FC = () => {
           {/* Introduction */}
           <div id="intro" className="jt-intro">
             <p className="jt-intro-text">
-              Your AI writing assistant for creating clear, user-focused JIRA features. Master the template first, 
-              then leverage these tools to work faster while maintaining quality.
+              A reusable prompt + validation pattern for turning messy technical inputs into structured,
+              developer-ready outputs—without sacrificing correctness.
             </p>
             <p className="jt-description">
-              This toolkit provides ready-made prompts to generate clear, user-focused JIRA features with any AI tool. 
-              These prompts convert technical details into well-formatted tasks aligned with JIRA standards, saving time 
-              and ensuring consistency.
+              This toolkit demonstrates applied prompt engineering practices: structured outputs, explicit
+              constraints, and validation checklists that reduce confident-sounding mistakes. While the examples
+              use a “feature spec” format, the same pattern transfers cleanly to AI API docs, SDK guides,
+              integration tutorials, and workshop/lab materials.
             </p>
             
             <div className="jt-warning-box">
               <p className="jt-warning-title">
-                <strong>Before using this toolkit, write 1-2 JIRA features manually using the template.</strong>
+                <strong>Guardrail principle:</strong> AI drafts; humans verify.
               </p>
               <p className="jt-warning-text">
-                It's recommended that you understand what GOOD looks like before you can assess AI output. 
-                Think of this as moving from walking to riding a bike - you still need to know where you're going 
-                and how to steer.
+                LLMs can produce fluent output that’s subtly wrong. This page emphasizes human-in-the-loop review,
+                testable acceptance criteria, and explicit validation to protect accuracy and developer trust.
               </p>
             </div>
           </div>
 
-          <Section id="why-master" title="Why master the template first?">
+          <Section id="why-master" title="Why start with a structured template?">
             <ul className="jt-bullet-list">
               <li>
-                <strong>You remain the subject matter expert</strong> - AI doesn't understand your specific context
+                <strong>Structure reduces ambiguity</strong> — templates prevent missing critical sections
               </li>
               <li>
-                <strong>AI can produce convincing but wrong content</strong> - You need to spot when it goes off track
+                <strong>LLMs can be confidently wrong</strong> — guardrails help you catch subtle errors
               </li>
               <li>
-                <strong>Quality assessment requires knowledge</strong> - You must verify technical accuracy and user benefits
+                <strong>Validation is non-negotiable</strong> — accuracy builds developer trust
               </li>
               <li>
-                <strong>Template understanding prevents the 3 deadly sins</strong> - Information starvation, jargon walls, and kitchen sink features
+                <strong>Clear inputs produce better outputs</strong> — you’re defining the problem, constraints, and success criteria
               </li>
             </ul>
           </Section>
 
-          <Section id="when-ai" title="When AI helps vs. When it hurts">
+          <Section id="when-ai" title="Where LLMs help vs. where they create risk">
             <div className="jt-two-column-grid">
               <div>
                 <h4 className="jt-column-title jt-success">✅ It's useful when you:</h4>
@@ -637,14 +637,21 @@ const JiraToolkit: React.FC = () => {
           <Section id="how-works" title="How this toolkit works">
             <p className="jt-description">These prompts were engineered to direct AI responses by providing:</p>
             <ul className="jt-bullet-list">
-              <li><strong>Clear context and structure</strong> - The template format AI should follow</li>
-              <li><strong>Specific instructions</strong> - What to focus on and what to avoid</li>
-              <li><strong>Output formatting</strong> - Consistent sections that match our standards</li>
-              <li><strong>Quality guardrails</strong> - Reminders about user focus and measurable benefits</li>
+              <li><strong>Schema-driven output</strong> — structured sections that keep drafts consistent</li>
+              <li><strong>Constraints & anti-patterns</strong> — explicit instructions for what to avoid</li>
+              <li><strong>Human-in-the-loop checks</strong> — accuracy, testability, and completeness</li>
+              <li><strong>Refinement prompts</strong> — targeted improvements without restarting</li>
             </ul>
+            <div className="jt-info-box">
+              <p>
+                <strong>Why this matters for AI developer documentation:</strong> The same prompt + validation pattern
+                used here can generate first drafts for API reference pages, SDK quickstarts, integration guides,
+                and workshop labs—while keeping correctness and developer trust as the primary guardrails.
+              </p>
+            </div>
           </Section>
 
-          <Section id="using" title="Using the toolkit">
+          <Section id="using" title="Workflow: draft → refine → validate">
             <ol className="jt-numbered-list">
               <li><strong>1.</strong> Choose the right prompt from the Ready-made prompts based on your situation</li>
               <li><strong>2.</strong> Use any GenAI tool you want</li>
@@ -652,25 +659,55 @@ const JiraToolkit: React.FC = () => {
               <li><strong>4.</strong> Submit and review the output carefully - Remember, you're the expert</li>
               <li><strong>5.</strong> Refine using Quick refinement prompts to address gaps or issues</li>
               <li><strong>6.</strong> Validate completeness with the Validation checklist prompt</li>
-              <li><strong>7.</strong> Copy the validated output to your JIRA feature Description and Acceptance Criteria fields</li>
+              <li><strong>6.</strong> Validate completeness with the Validation checklist prompt</li>
+              <li><strong>7.</strong> Publish the validated output in the appropriate format (spec, doc page, PRD, tutorial, or API guide)</li>
             </ol>
 
             <TipBox>
               <p>You can also use one of the <strong>context-specific prompts</strong> for backend, UI, and integration features.</p>
             </TipBox>
 
+            <SubSection id="llm-integration" title="For LLM + vector database integrations">
+              <p className="jt-description"><strong>Purpose:</strong> Produce developer-ready integration documentation with clear steps, assumptions, and validation.</p>
+              <p className="jt-description"><strong>Best for:</strong> RAG workflows, embeddings pipelines, retrieval configuration, and safety constraints.</p>
+              <CodeBlock id="llm-integration-prompt" code={`You are writing a developer guide for integrating an LLM with a vector database.
+
+            Inputs:
+            - Use case: [semantic search / RAG / classification / moderation]
+            - Model: [model name + constraints]
+            - Vector DB: [system + index type]
+            - Embeddings: [model + dimension]
+            - Data flow: [ingest -> embed -> store -> retrieve -> generate]
+            - Security/safety constraints: [PII handling, rate limits, abuse considerations]
+            - Success criteria: [latency, relevance, accuracy]
+
+            Output format:
+            1) Overview (what this enables, who it’s for)
+            2) Architecture diagram description (components + responsibilities)
+            3) Step-by-step implementation (with code placeholders)
+            4) Configuration options (what to tune and why)
+            5) Validation & troubleshooting (how to verify it works)
+            6) Safety & misuse considerations (what to watch for)
+            7) Acceptance criteria / success metrics (measurable)
+
+            Rules:
+            - Do not invent APIs. If an endpoint or method isn’t provided, insert a TODO marker.
+            - Use clear language and define terms briefly.
+            - Include explicit assumptions and prerequisites.`} />
+            </SubSection>
+
             <ReminderBox>
               <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>You are responsible for:</p>
               <ul className="jt-checklist">
-                <li>✓ Verifying technical accuracy</li>
-                <li>✓ Ensuring user benefits are real and measurable</li>
-                <li>✓ Confirming acceptance criteria are testable</li>
-                <li>✓ Validating that the problem statement reflects reality</li>
+                <li>✓ Verifying technical correctness and constraints</li>
+                <li>✓ Ensuring examples and criteria are testable</li>
+                <li>✓ Removing speculation and unsupported claims</li>
+                <li>✓ Confirming the output matches the intended audience (devs vs. partners)</li>
               </ul>
             </ReminderBox>
           </Section>
 
-          <Section id="prompts" title="Ready-made prompts">
+          <Section id="prompts" title="Prompt templates">
             <SubSection id="comprehensive" title="Comprehensive prompt">
               <p className="jt-description"><strong>When to use:</strong> Creating complete JIRA features with structured inputs.</p>
               <p className="jt-description"><strong>Best for:</strong> New features, major updates, or when you have detailed information.</p>
@@ -865,7 +902,7 @@ Verify it has:
 Flag what's missing or needs improvement. Rate the overall quality from 1-10 and explain your reasoning.`} />
           </Section>
 
-          <Section id="remember" title="Remember: You're the Expert">
+          <Section id="remember" title="Human-in-the-loop: you own correctness">
             <p className="jt-description">
               GenAI is your writing assistant, not your replacement. You remain the subject matter expert responsible for:
             </p>

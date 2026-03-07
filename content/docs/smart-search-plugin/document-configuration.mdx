@@ -1,0 +1,59 @@
+---
+title: Document Configuration
+description: Configure frontmatter metadata in Docusaurus to improve searchability, user experience, and content management.
+keywords:
+  - document configuration
+  - frontmatter
+  - frontmatter metadata
+  - Docusaurus
+  - draft mode
+  - search optimization
+  - last_update
+last_update:
+  date: 03/05/2026
+  author: Patricia McPhee
+draft: false
+role: [Developer]
+doc_type: concept
+---
+
+Adding frontmatter metadata to your documentation files improves quality, user experience, and content management.
+
+## Why metadata matters
+
+Metadata drives effective documentation in four key areas:
+
+1. **Enhanced search and discovery:** Strategic use of titles, descriptions, and keywords helps users find relevant content through optimized search indexing.
+2. **Better user experience:** Clear descriptions and structured metadata help users quickly determine if content matches their needs.
+3. **Efficient content management:** Draft status and update tracking streamline documentation maintenance and version control.
+4. **Organized navigation:** Well-structured metadata powers intuitive navigation through sidebars and filters.
+
+## Metadata fields and best practices
+
+| Field | Description and best practice |
+| --- | --- |
+| `title` | A clear, descriptive heading that appears in search results. Keep it concise and meaningful. |
+| `description` | A brief summary shown below the title. Focus on key information users need. |
+| `keywords` | Specific, relevant search terms that match common user queries. Avoid generic terms. |
+| `draft` | Set to `true` to exclude work-in-progress content from search and navigation. |
+| `last_update: date` | A timestamp that indicates content freshness. Update it after significant changes. |
+
+## Frontmatter example
+
+The following example shows a complete frontmatter block for a documentation file.
+
+```yaml
+---
+title: Document Title
+description: A brief description that appears in search results
+keywords: [search, docusaurus, plugin]
+draft: false # if set to `true`, the topic is excluded from the search index
+last_update:
+  date: 12/11/2024
+# other metadata fields
+---
+```
+
+:::tip[Best practice]
+Keep metadata current and specific. Outdated or generic metadata reduces search accuracy and makes content harder to find.
+:::

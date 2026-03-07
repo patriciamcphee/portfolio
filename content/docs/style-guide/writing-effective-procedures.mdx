@@ -1,0 +1,245 @@
+---
+title: Writing Effective Procedures
+description: Guidelines for writing clear, concise procedures in technical documentation, including action verbs, step structure, context, and visuals.
+keywords:
+  - procedures
+  - instructions
+  - step-by-step guides
+  - instructional writing
+  - process documentation
+  - technical writing
+  - writing guidelines
+  - style guide
+  - documentation best practices
+  - task-oriented writing
+  - action verbs
+  - procedure writing
+  - technical documentation
+  - documentation clarity
+  - engineering documentation
+last_update:
+  date: 01/28/2026
+  author: Patricia McPhee
+draft: false
+doc_type: reference
+---
+
+Clear, concise procedures reduce errors and help users complete tasks without confusion.
+
+## Start with an action verb
+
+Begin each step with a direct action verb. Users immediately know what action to take, which reduces hesitation and confusion.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Install the latest version of <a href="https://docs.docker.com/get-docker/">Docker</a>.</li>
+        <li>Deploy the latest build: <pre>kubectl apply -f deployment.yaml</pre></li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>The latest version of Docker needs to be installed. Select <a href="https://docs.docker.com/get-docker/">here</a> to install.</li>
+        <li>You should deploy the latest build using <code>kubectl apply -f deployment.yaml</code>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+## Be clear and direct
+
+Specificity removes ambiguity. Each instruction should clearly define what action to take, where to perform it, and why.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Navigate to the <code>/var/logs</code> directory to review the server logs.</li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Check the server logs.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+## Limit each step to one action
+
+Each step should focus on a single task. Users are less likely to make mistakes when steps don't combine multiple actions.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Select <strong>File &gt; New Project</strong> to create a new workspace.</li>
+        <li>Select <strong>File &gt; Open</strong>.</li>
+        <li>Select <strong>Options &gt; Preferences</strong>.</li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>A new workspace is created by going to the <strong>File</strong> menu and selecting <strong>New Project</strong>.</li>
+        <li>Select <strong>File</strong>, open it, and adjust your settings.</li>
+        <li>Go to <strong>Options</strong>, select <strong>Preferences</strong>, and adjust your settings.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+## Include expected results within the same step
+
+Include the expected result immediately after the action. Users confirm they're on the right track without leaving the step.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Select <strong>Refresh</strong> to update the page. The latest data appears.</li>
+        <li>Select <strong>Start</strong> to begin the process. A green status light indicates it's working.</li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Select <strong>Refresh</strong>. You will see the latest data on the page.</li>
+        <li>Select <strong>Start</strong>. The machine will start working (indicated by a green light).</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+:::note[Why the incorrect examples fail]
+Both incorrect steps use future tense ("will see," "will start") to describe system behavior. Use present tense instead.
+:::
+
+## Use simple, accessible language
+
+Avoid jargon or overly technical terms unless necessary. When you must use a technical term, define it on first use.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Use the slider to adjust the volume.</li>
+        <li>Select <strong>Connect</strong> to start the connection.</li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Manipulate the audio output level with the slider control interface.</li>
+        <li>Initiate the process of establishing a connection by selecting the <strong>Connect</strong> button.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Avoid using "please"
+
+@include ../includes/_avoid-please.mdx
+
+### Be specific, not generic
+
+@include ../includes/_be-specific-not-generic.mdx
+
+## Provide context where necessary
+
+Offering context helps users understand the purpose of a step, especially when the step requires a decision. Keep added context under 150 words. For longer explanations, use a separate section.
+
+Context empowers users with knowledge, leading to more informed actions and a deeper understanding of the process.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Restart your system to apply the changes after updating the software.<br /><br />Restarting ensures all components of the software update are fully integrated and any in-memory data is refreshed.</li>
+      </ol>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>Update the software and then restart your system.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+## Incorporate helpful visuals
+
+Use screenshots or diagrams to support complex steps or software navigation. Avoid adding images that don't directly support the instruction.
+
+Visual aids reduce cognitive load. Too many visuals clutter the documentation and dilute their impact.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <ol>
+        <li>In the <strong>Settings</strong> window, select the <strong>Advanced</strong> tab.<br /><br />[Image of the Settings window with the Advanced tab highlighted]</li>
+      </ol>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+        <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <ol>
+          <li>Go to the settings and then find the right tab for more options.</li>
+        </ol>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><em>No visual is provided, leaving users to guess which tab to select.</em></p>
+  </div>
+</div>

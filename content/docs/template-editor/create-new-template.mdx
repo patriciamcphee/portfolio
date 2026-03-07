@@ -1,0 +1,52 @@
+---
+title: Create New Template
+description: Start from scratch with a minimal template structure and skeleton directory to build, test, and develop templates in the Template Editor.
+keywords:
+  - templates
+  - template editor
+  - create new template
+last_update:
+  date: 06/06/2025
+  author: Patricia McPhee
+doc_type: how-to
+hide_table_of_contents: true
+---
+
+Start fresh with a template playground that contains a minimal template structure and a skeleton directory.
+
+**Perfect for:**
+
+- Learning template syntax and structure
+- Prototyping new template ideas
+- Quick experiments without local setup
+- Understanding how template steps work
+
+:::tip[Looking for examples?]
+Since **Create New Template** provides only a minimal starting point, you can load existing templates using [**Load Template Directory**](#).
+:::
+
+1. Select **Create New Template** in the Template Editor.
+
+1. Create a folder for the template either locally or in your local version of the `software-templates` repository. Then select **Select** to populate the minimal template files.
+
+1. After the folder is populated, two messages appear to view and save the template files. Select **View files** and then **Save Changes**.
+
+   ![Create new template view](/img/create-new-template-view-files.png)
+
+   The Template Editor interface appears.
+
+   ![Template Editor interface](/img/template-editor-interface.png "nozoom")
+
+   :::note
+   The **Publish** feature does not work.
+   :::
+
+1. Select the `template.yaml` file to the left of the YAML editor.
+
+1. Make changes to the YAML file and use the form to the right of the YAML editor to test the template.
+
+1. Select the **Save** icon to preserve your work as you develop. This updates the files in the original directory location.
+
+   ![Save icon in the Template Editor toolbar](/img/template-editor-load-create-save-button.png)
+
+1. When your template is ready for broader use, create a `prod` directory in the `software-templates` repository containing the template, then submit a pull request for review before promotion to the production environment. See [Get your template into the prod environment](#).

@@ -1,0 +1,109 @@
+---
+title: Billing and Plan Enforcement
+description: API reference for plan-based limits, feature checks, usage tracking, and billing management.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+These functions enforce plan-based limits and track usage. They depend on `./shared/planLimits` for plan configuration.
+
+## `getOrgBillingInfo(orgId)`
+
+Returns the organization's current plan, live usage counts, plan configuration, and a `limitsStatus` breakdown for each enforced limit.
+
+Usage counters are computed from live data for `activeProjects`, `totalParticipants`, and `teamMembers`. Recording minutes are read from the stored `usage` object.
+
+```js
+const billing = await getOrgBillingInfo('org_abc');
+console.log(billing.limitsStatus.activeProjects);
+// { current: 3, limit: 5, remaining: 2, isAtLimit: false }
+```
+
+Unlimited limits are serialized as `-1` in the JSON response (not `Infinity`).
+
+**Throws:** `Error('Organization not found')` if not found.
+
+**Returns:** `Promise<BillingInfo>`
+
+---
+
+## `checkLimit(orgId, limitType, incrementBy?)`
+
+Checks whether an action is within the organization's plan limits before performing it.
+
+```js
+const result = await checkLimit('org_abc', 'activeProjects');
+if (!result.allowed) {
+  // result.error.code === 'LIMIT_EXCEEDED'
+  // result.error.upgradeRequired === true
+  return res.status(402).json(result.error);
+}
+```
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `orgId` | string | Yes | — | Organization ID |
+| `limitType` | string | Yes | — | Limit key from plan config (e.g., `"activeProjects"`, `"teamMembers"`) |
+| `incrementBy` | number | No | `1` | How many units the pending action would add |
+
+**Returns:** `Promise<{ allowed: boolean, current: number, limit: number | "unlimited", remaining: number, error?: LimitError }>`
+
+---
+
+## `checkFeature(orgId, featureName)`
+
+Checks whether a feature is available on the organization's plan.
+
+```js
+const result = await checkFeature('org_abc', 'pdfExport');
+if (!result.allowed) {
+  return res.status(402).json(result.error);
+}
+```
+
+**Returns:** `Promise<{ allowed: boolean, feature: string, value?: any, error?: FeatureError }>`
+
+Error codes: `'FEATURE_UNAVAILABLE'`
+
+---
+
+## `checkParticipantLimit(orgId, projectId)` / `checkTaskLimit(orgId, projectId)`
+
+Check per-project participant and task limits. These query the `research` container directly using `COUNT`.
+
+**Returns:** `Promise<{ allowed: boolean, current: number, limit: number, error?: LimitError }>`
+
+---
+
+## Usage tracking functions
+
+| Function | Description |
+|---|---|
+| `incrementUsage(orgId, field, amount?)` | Increments a usage counter by `amount` (default `1`) |
+| `decrementUsage(orgId, field, amount?)` | Decrements a usage counter, floored at `0` |
+| `setUsage(orgId, field, value)` | Sets a usage counter to an exact value |
+| `recalculateUsage(orgId)` | Recomputes `activeProjects`, `totalParticipants`, and `teamMembers` from live data. Use after plan changes or to correct drift |
+| `resetMonthlyRecordingHours(orgId)` | Resets `recordingMinutesThisMonth` to `0`. Call from a scheduled function at month start |
+
+All usage functions throw `Error('Organization not found')` if the organization does not exist.
+
+---
+
+## `updateOrgPlan(orgId, planId, billingInfo?)`
+
+Updates the organization's plan and triggers a usage recalculation. Intended for use in Stripe webhook handlers.
+
+```js
+const result = await updateOrgPlan('org_abc', 'team', {
+  stripeCustomerId: 'cus_abc',
+  stripeSubscriptionId: 'sub_xyz'
+});
+// result: { previousPlan: 'pro', newPlan: 'team' }
+```
+
+**Returns:** `Promise<{ previousPlan: string, newPlan: string }>`
+
+**Throws:** `Error('Organization not found')`

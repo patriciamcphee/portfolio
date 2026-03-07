@@ -1,0 +1,47 @@
+---
+title: General
+description: General questions about the Trellis docs framework.
+last_update:
+  date: 02/20/2026
+  author: Trellis
+---
+
+### What is {vars.productName}?
+
+{vars.productName} is an opinionated documentation framework built on top of {vars.frameworkName}. It includes a custom theme with UX improvements, a design token system, smart search, and several plugins that enhance the documentation experience.
+
+### How do I customize the colors?
+
+Edit `design-tokens.json` at the project root. The build process converts this JSON file into CSS custom properties that are used throughout the theme. Run `npm run build-tokens` to regenerate the CSS, or simply `npm run dev` which runs it automatically.
+
+### Can I use this with an existing Docusaurus project?
+
+Not yet directly. Currently, {vars.productName} is a standalone project. In the future, we plan to publish it as `@pixlngrid/trellis` that you can install into any {vars.frameworkName} project.
+
+### How does the search work?
+
+The smart search plugin indexes all documentation at build time, generating a `searchIndex.json` file. Search is performed client-side using Fuse.js for fast, fuzzy matching. You can configure field weights in `config/site.ts`. See the Smart Search docs for details.
+
+### How do I add redirects when I move a page?
+
+Add an entry to `redirects.json` at the project root. For example: `{ "from": "/old-path/", "to": "/new-path/" }`. The redirects plugin generates HTML files with meta-refresh tags at build time. See the Redirects plugin docs.
+
+### What are design tokens?
+
+Design tokens are named values (colors, spacing, border radii, etc.) defined in a single JSON file (`design-tokens.json`). A build script converts them into CSS custom properties that the entire theme consumes. This gives you one place to manage your brand values. See the Design Tokens docs.
+
+### How do I add a new FAQ page?
+
+Create a new `.mdx` file in the `content/docs/faq/` directory. Use `###` headings for each question. The FAQ index plugin automatically picks up the file and adds its questions to the FAQ table of contents. See the FAQ Index plugin docs.
+
+### How many theme components are ejected?
+
+{vars.productName} includes custom theme components. The major customizations are in `DocItem/Content` (last-updated placement), `Tabs` (URL sync), and `Admonition/Icon` (custom SVGs). See the Theme Overview docs.
+
+### How do I deploy the site?
+
+{vars.productName} produces a standard static site via `npm run build`. The output goes to the `out/` directory. Deploy it anywhere that serves static files: Vercel, Netlify, GitHub Pages, Cloudflare Pages, S3 + CloudFront, or your own server.
+
+### Does {vars.productName} support dark mode?
+
+Yes. {vars.productName} ships with dark mode as the default and `respectPrefersColorScheme` enabled. Users can toggle between light and dark mode using the switch in the navbar. The design tokens include separate color mappings for both modes in `app/globals.css`.

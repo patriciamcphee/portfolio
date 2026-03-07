@@ -1,0 +1,138 @@
+---
+title: Feedback and Surveys
+description: API reference for user feedback, survey templates, and survey submissions management.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+## Feedback API
+
+Feedback items are stored directly in the `research` container with `type: 'feedback'`. The partition key is `feedbackId` (stored on `projectId`). [VERIFY: `feedback.delete` uses the document ID as both document ID and partition key — confirm the partition key behavior for feedback items]
+
+### `feedback.create(data)`
+
+```js
+const item = await feedback.create({
+  category: 'bug',
+  description: 'The export button does not respond on Safari.',
+  userId: 'aad-user-id',
+  userEmail: 'jane@acme.com',
+  organizationId: 'org_abc'
+});
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `data.category` | string | Yes | Feedback category |
+| `data.description` | string | Yes | Feedback content |
+| `data.userId` | string | Yes | Submitting user's ID |
+| `data.title` | string | No | Optional title |
+| `data.rating` | number | No | Numeric rating |
+| `data.contactEmail` | string | No | Contact email for follow-up |
+| `data.userEmail` | string | No | Submitting user's email |
+| `data.userName` | string | No | Submitting user's display name |
+| `data.organizationId` | string | No | Organization context |
+| `data.organizationName` | string | No | Organization display name |
+| `data.submittedFrom` | string | No | Page or feature area |
+
+**Returns:** `Promise<FeedbackItem>`
+
+---
+
+### `feedback.getAll()` → `Promise<FeedbackItem[]>`
+
+Returns all feedback ordered by `createdAt` descending.
+
+### `feedback.getById(feedbackId)` → `Promise<FeedbackItem | null>`
+
+### `feedback.update(feedbackId, updates)` → `Promise<FeedbackItem>`
+
+**Throws:** `Error('Feedback not found')`
+
+### `feedback.delete(feedbackId)` → `Promise<{ success: true }>`
+
+**Throws:** `Error('Feedback not found')`
+
+---
+
+## Survey templates API
+
+Survey templates configure JotForm form integrations. All templates are stored in the `research` container with `projectId: 'global'`.
+
+### `surveyTemplates.getAll()` → `Promise<SurveyTemplate[]>`
+
+Ordered by `sortOrder` ascending.
+
+### `surveyTemplates.getActive()` → `Promise<SurveyTemplate[]>`
+
+Returns only templates with `isActive: true`, ordered by `sortOrder`.
+
+### `surveyTemplates.getById(templateId)` → `Promise<SurveyTemplate | null>`
+
+### `surveyTemplates.getByFormId(jotformFormId)` → `Promise<SurveyTemplate | null>`
+
+Returns the active template matching the given JotForm form ID. Use this in webhook handlers to look up the template for an incoming submission.
+
+### `surveyTemplates.create(data)`
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `data.name` | string | Yes | — | Template display name |
+| `data.jotformFormId` | string | Yes | — | JotForm form ID |
+| `data.jotformFormUrl` | string | Yes | — | JotForm form URL |
+| `data.description` | string | No | `""` | Template description |
+| `data.collectsSUS` | boolean | No | `false` | Whether the form collects SUS (System Usability Scale) scores |
+| `data.collectsNPS` | boolean | No | `false` | Whether the form collects NPS scores |
+| `data.collectsDemographics` | boolean | No | `true` | Whether the form collects demographic data |
+| `data.isActive` | boolean | No | `true` | Whether to include in active template lists |
+| `data.sortOrder` | number | No | `0` | Display order |
+| `data.fieldMapping` | object | No | `{ susQuestions: [] }` | JotForm field mapping configuration |
+
+**Returns:** `Promise<SurveyTemplate>`
+
+### `surveyTemplates.update(templateId, updates)` → `Promise<SurveyTemplate>`
+
+**Throws:** `Error('Survey template not found')`
+
+### `surveyTemplates.delete(templateId)` → `Promise<{ success: true }>`
+
+**Throws:** `Error('Survey template not found')`
+
+---
+
+## Survey submissions API
+
+Survey submissions are stored as an embedded array on the project document, not as individual CosmosDB documents.
+
+### `surveySubmissions.create(projectId, data)`
+
+```js
+const submission = await surveySubmissions.create('proj_abc', {
+  templateId: 'template_xyz',
+  jotformSubmissionId: '5123456789',
+  demographics: { age: '25-34', role: 'developer' },
+  susScore: 78.5,
+  npsScore: 8
+});
+```
+
+**Throws:** `Error('Project not found: {projectId}')` if the project does not exist.
+
+**Returns:** `Promise<SurveySubmission>`
+
+---
+
+### `surveySubmissions.getByProject(projectId)` → `Promise<SurveySubmission[]>`
+
+---
+
+### `surveySubmissions.markConverted(projectId, submissionId, participantId)`
+
+Marks a submission as converted to a participant record.
+
+**Throws:** `Error('Project not found')` or `Error('Submission not found')`.
+
+**Returns:** `Promise<SurveySubmission>`

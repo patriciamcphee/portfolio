@@ -1,0 +1,395 @@
+---
+title: Document Comments API
+description: API for managing documents and comments within a project
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+:::note[About this sample]
+REST API reference for document and comment management within a project scope. Demonstrates multi-resource endpoint documentation, threaded comment workflows, and CRUD patterns for an Azure Function–based handler — covering both document and comment resource groups under a shared project context.
+:::
+
+This API handler manages documents and their comments within a project. It exposes two related resource groups — documents and comments — under a shared project scope.
+
+Use this API to create, retrieve, update, and delete documents in a project, and to manage threaded comments on those documents, including replies, resolution, and reopening.
+
+The handler is implemented as a single Azure Function [VERIFY: confirm runtime] that routes requests based on HTTP method and URL path segments.
+
+---
+
+## Base URL
+
+```
+/api/projects/{projectId}/documents
+```
+
+---
+
+## Path parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `projectId` | string | Yes | The unique identifier of the project. |
+| `documentId` | string | Conditional | Required for all single-document and comment operations. |
+| `commentId` | string | Conditional | Required for single-comment operations. |
+
+---
+
+## Documents
+
+### List all documents
+
+Returns all documents belonging to the specified project.
+
+```
+GET /api/projects/{projectId}/documents
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "documents": [
+    { "id": "doc_001", "title": "Architecture Overview", "...": "..." }
+  ]
+}
+```
+
+---
+
+### Get a document
+
+Returns a single document by its identifier.
+
+```
+GET /api/projects/{projectId}/documents/{documentId}
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "id": "doc_001",
+  "title": "Architecture Overview",
+  "content": "...",
+  "projectId": "proj_abc"
+}
+```
+
+---
+
+### Create a document
+
+Creates a new document in the specified project.
+
+```
+POST /api/projects/{projectId}/documents
+```
+
+**Request body**
+
+```json
+{
+  "title": "Architecture Overview",
+  "content": "..."
+}
+```
+
+The accepted fields in the request body depend on your `documents.create` implementation [VERIFY: document required and optional body fields].
+
+**Response — 201 Created**
+
+```json
+{
+  "id": "doc_001",
+  "title": "Architecture Overview",
+  "projectId": "proj_abc"
+}
+```
+
+---
+
+### Update a document
+
+Updates an existing document. Accepts both `PUT` and `PATCH`.
+
+```
+PUT   /api/projects/{projectId}/documents/{documentId}
+PATCH /api/projects/{projectId}/documents/{documentId}
+```
+
+**Request body**
+
+```json
+{
+  "title": "Updated Title",
+  "content": "Updated content."
+}
+```
+
+Include only the fields you want to update [VERIFY: confirm whether full replacement vs. partial merge is enforced].
+
+**Response — 200 OK**
+
+```json
+{
+  "id": "doc_001",
+  "title": "Updated Title",
+  "projectId": "proj_abc"
+}
+```
+
+---
+
+### Delete a document
+
+Deletes a document by its identifier.
+
+```
+DELETE /api/projects/{projectId}/documents/{documentId}
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "success": true,
+  "message": "Document deleted"
+}
+```
+
+---
+
+## Comments
+
+Comments are scoped to a specific document. All comment routes are nested under the document path.
+
+```
+/api/projects/{projectId}/documents/{documentId}/comments
+```
+
+### List all comments
+
+Returns all comments on the specified document.
+
+```
+GET /api/projects/{projectId}/documents/{documentId}/comments
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "comments": [
+    { "id": "cmt_001", "text": "Review this section.", "status": "open" }
+  ]
+}
+```
+
+---
+
+### Create a comment
+
+Adds a new comment to the specified document.
+
+```
+POST /api/projects/{projectId}/documents/{documentId}/comments
+```
+
+**Request body**
+
+```json
+{
+  "text": "Review this section.",
+  "author": "user_123"
+}
+```
+
+The accepted fields depend on your `documents.comments.create` implementation [VERIFY: document required and optional body fields].
+
+**Response — 201 Created**
+
+```json
+{
+  "id": "cmt_001",
+  "text": "Review this section.",
+  "status": "open",
+  "documentId": "doc_001"
+}
+```
+
+---
+
+### Update a comment
+
+Updates the content of an existing comment. Accepts both `PUT` and `PATCH`.
+
+```
+PUT   /api/projects/{projectId}/documents/{documentId}/comments/{commentId}
+PATCH /api/projects/{projectId}/documents/{documentId}/comments/{commentId}
+```
+
+**Request body**
+
+```json
+{
+  "text": "Updated comment text."
+}
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "id": "cmt_001",
+  "text": "Updated comment text.",
+  "status": "open"
+}
+```
+
+---
+
+### Delete a comment
+
+Deletes a comment by its identifier.
+
+```
+DELETE /api/projects/{projectId}/documents/{documentId}/comments/{commentId}
+```
+
+**Response — 200 OK**
+
+```json
+{
+  "success": true,
+  "message": "Comment deleted"
+}
+```
+
+---
+
+### Resolve a comment
+
+Marks a comment as resolved.
+
+```
+POST /api/projects/{projectId}/documents/{documentId}/comments/{commentId}/resolve
+```
+
+**Request body**
+
+None required.
+
+**Response — 200 OK**
+
+```json
+{
+  "id": "cmt_001",
+  "status": "resolved"
+}
+```
+
+---
+
+### Reopen a comment
+
+Reopens a previously resolved comment.
+
+```
+POST /api/projects/{projectId}/documents/{documentId}/comments/{commentId}/reopen
+```
+
+**Request body**
+
+None required.
+
+**Response — 200 OK**
+
+```json
+{
+  "id": "cmt_001",
+  "status": "open"
+}
+```
+
+---
+
+### Add a reply to a comment
+
+Adds a reply to an existing comment.
+
+```
+POST /api/projects/{projectId}/documents/{documentId}/comments/{commentId}/replies
+```
+
+**Request body**
+
+```json
+{
+  "text": "Agreed, will update.",
+  "author": "user_456"
+}
+```
+
+The accepted fields depend on your `documents.comments.addReply` implementation [VERIFY: document required and optional body fields].
+
+**Response — 201 Created**
+
+```json
+{
+  "id": "reply_001",
+  "commentId": "cmt_001",
+  "text": "Agreed, will update.",
+  "author": "user_456"
+}
+```
+
+---
+
+## Error responses
+
+All error responses follow a consistent shape:
+
+```json
+{
+  "error": "Human-readable error message."
+}
+```
+
+| Status code | Cause |
+|---|---|
+| `400 Bad Request` | Missing or invalid request data, missing required path parameter, or invalid action segment. |
+| `404 Not Found` | The specified project, document, or comment does not exist. |
+| `405 Method Not Allowed` | The HTTP method is not supported for the matched route. |
+| `500 Internal Server Error` | An unhandled server-side error occurred. The response includes a `message` field with the error detail. |
+
+**Example — 500 response**
+
+```json
+{
+  "error": "Internal server error",
+  "message": "Connection timeout."
+}
+```
+
+---
+
+## Validation and routing behavior
+
+- Every request requires a valid `projectId`. The handler returns `400` before any other check if `projectId` is absent.
+- For comment routes, the handler verifies the parent document exists before processing the comment operation.
+- The handler identifies comment routes by checking whether the first URL segment after `{documentId}` equals `comments`. Any other segment value returns `405`.
+- Both `PUT` and `PATCH` are accepted for update operations on documents and comments. The handler does not enforce a distinction between full replacement and partial update [VERIFY: confirm merge behavior in `documents.update` and `documents.comments.update`].
+
+---
+
+## Dependencies
+
+| Dependency | Description |
+|---|---|
+| `cosmosService.documents` | Data access layer for document CRUD operations. |
+| `cosmosService.projects` | Data access layer used to verify project existence before processing requests. |
+
+[VERIFY: document the full schema returned by `cosmosService` for documents, comments, and replies.]

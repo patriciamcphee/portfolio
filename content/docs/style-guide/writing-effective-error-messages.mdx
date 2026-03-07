@@ -1,0 +1,626 @@
+---
+title: Writing Effective Error Messages
+description: Guidelines for writing clear, actionable error messages, including severity levels, security considerations, and implementation best practices.
+keywords:
+  - error messages
+  - UX writing
+  - microcopy
+  - error handling
+  - error message best practices
+  - security error messages
+  - progressive disclosure
+  - accessibility
+  - engineering
+last_update:
+  date: 10/16/2025
+  author: Patricia McPhee
+draft: false
+doc_type: concept
+---
+
+When something goes wrong, your error message can be the only thing standing between a user resolving the issue and abandoning your product. A key question to ask about every error message: does it lead users to a dead end?
+
+For example, if someone sees "Invalid or unsupported error," do they understand what caused the problem and what to do next? Or are they stuck?
+
+Effective error messages do two things well:
+
+1. Explain clearly and simply what happened.
+2. Guide users on how to fix the problem or who to contact for help.
+
+Poor error messages cause confusion, erode trust, and overwhelm your support team. Well-crafted error messages build trust, reduce support costs, and keep users productive — even when things go wrong.
+
+## The four pillars of effective error messages
+
+### 1. Clarity: explain what happened
+
+Users can't fix problems they don't understand. Avoid jargon and tell them clearly what went wrong.
+
+**Framework:** `[Action] failed because [specific reason]`
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Clear and specific</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p><strong>Unable to save "Q4:Report.xlsx"</strong></p>
+      <p>The file name contains invalid characters. File names can't include: / \ : * ? &quot; &lt; &gt; |</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Vague and unhelpful</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Invalid file name</p>
+      <br /><br />
+    </div>
+  </div>
+</div>
+
+The improved version tells users exactly which file failed, why it failed, and what characters caused the problem.
+
+
+### 2. Context: give users the details that matter
+
+Include specific information that helps users understand what happened in their situation.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Helpful context</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p><strong>Can't upload "presentation.pptx"</strong></p>
+      <p>File size: 47 MB<br />
+      Maximum allowed: 25 MB<br /><br />
+      Compress the file or upgrade to a Pro account for 100 MB uploads.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Missing context</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>File too large</p>
+      <br /><br /><br /><br />
+    </div>
+  </div>
+</div>
+
+Showing the actual size versus the limit helps users make decisions. The upgrade path also turns a frustration into an actionable next step.
+
+
+### 3. Actionability: tell users what to do next
+
+Every error message needs clear next steps. Never leave users without a path forward.
+
+**Framework:** `[Problem statement]. [Specific action to resolve]`
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Clear path forward</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p><strong>Connection timeout</strong></p>
+      <p>We couldn't reach the server at api.example.com.</p>
+      <ul>
+          <li>Check your internet connection</li>
+          <li>Try again in a few moments</li>
+          <li>If this keeps happening, contact support with error code: NET_408</li>
+      </ul>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Dead end</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Network error occurred</p>
+      <br /><br /><br /><br />
+    </div>
+  </div>
+</div>
+
+The improved version gives users a troubleshooting path and an error code for when they contact support.
+
+
+### 4. Empathy: write like a human
+
+Error messages should sound helpful, not robotic. Avoid accusatory language — users rarely cause errors intentionally.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Helpful and neutral</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p><strong>We couldn't process your payment</strong></p>
+      <p>Your card ending in 4242 was declined by your bank.</p>
+      <p>Check your card details or try a different payment method.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Accusatory</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Payment failed. You entered incorrect card information.</p>
+      <br /><br />
+    </div>
+  </div>
+</div>
+
+A card decline might result from low funds, fraud protection, or a bank hold — not necessarily incorrect input. The improved version avoids assumptions and treats users with respect.
+
+---
+
+## Message structure template
+
+Use this structure for most error messages:
+
+```
+[SEVERITY INDICATOR - if critical]
+[Clear problem statement]
+
+[Why it happened - if useful]
+[Current state/impact - if relevant]
+
+[Primary action to take]
+[Alternative actions - if available]
+[Support contact - if needed]
+```
+
+**Example:**
+
+> ⚠️ Can't publish your changes
+>
+> Your draft has 3 broken links that need fixing before you can publish:
+> * Page 4: Link to "pricing" page not found
+> * Page 7: External link to expired domain
+> * Page 12: Anchor link "#contact" doesn't exist
+>
+> Fix these links, then try publishing again.
+> Need help? Check the [troubleshooting guide](#).
+
+---
+
+## Error severity levels
+
+Match your message's tone and urgency to the severity of the error.
+
+### Critical errors
+
+**Impact:** Nothing works, or data might be lost  
+**Tone:** Direct and urgent  
+**Must include:** Immediate action or contact information
+
+> ⛔ Service unavailable
+>
+> Our servers are down for emergency maintenance.
+>
+> Your work is saved. Estimated recovery time: 3:00 PM EST.
+>
+> Check status: status.example.com
+> Urgent issue? Call support at 1-800-HELP
+
+### High-priority errors
+
+**Impact:** Blocks key tasks  
+**Tone:** Clear and solution-focused  
+**Must include:** Specific steps to resolve the issue
+
+> Can't generate report: missing required data
+>
+> Your Sales database hasn't synced since October 10. Reports require data from the last 7 days.
+>
+> * Ask your database admin to run a manual sync.
+> * Schedule your report after tonight's automatic sync (11 PM).
+
+### Medium-priority errors
+
+**Impact:** Inconvenient, but work can continue  
+**Tone:** Informative and supportive  
+**Must include:** A workaround or retry option
+
+> Preview failed to load
+>
+> We couldn't generate a preview of "document.pdf," but your file uploaded successfully.
+>
+> You can still share, download, or edit the file. Try refreshing to load the preview.
+
+### Low-priority errors
+
+**Impact:** Minor disruption  
+**Tone:** Brief and light  
+**Must include:** Acknowledgment of the issue
+
+> Some features unavailable offline
+>
+> You can keep working, but changes won't sync until you're back online.
+
+---
+
+## Real-world examples: before and after
+
+The following examples show error message rewrites for a SaaS data encryption application.
+
+### Example 1: Authentication error
+
+| Original | Improved | What changed and why |
+|----------|----------|---------------------|
+| Error logging in. System cannot connect at this time. | **We're unable to sign you in**<br /><br />Your account has been deactivated. To reactivate your account, contact your administrator at admin@company.com or call ext. 5500. | The original blamed a connection issue when the real problem was account deactivation. The improved version identifies the cause, names who can help, and provides two contact options. |
+
+### Example 2: Permission denied
+
+| Original | Improved | What changed and why |
+|----------|----------|---------------------|
+| Access denied to this resource. Try again with an appropriate account. | **You don't have permission to view "Budget_2025.xlsx"**<br /><br />This file is restricted to Finance team members.<br /><br />[Request Access] [View My Files] | The original gave no useful information. The improved version names the specific file, explains the restriction, and gives two clear options. |
+
+### Example 3: Invalid input format
+
+| Original | Improved | What changed and why |
+|----------|----------|---------------------|
+| Invalid/Unsupported file type. Try again. | **Unsupported file format for directory sync**<br /><br />You entered: *.exe<br />Allowed formats:<br />• *.* (all file types)<br />• `*.{extension}` (specific types)<br /><br />Examples: *.pdf, *.docx, *.xlsx | The original identified no specific problem. The improved version shows what was entered, explains the correct format, and provides examples. |
+
+### Example 4: Database connection error
+
+| Original | Improved | What changed and why |
+|----------|----------|---------------------|
+| ERR_DB_CONN_REFUSED: Exception at line 142 | **Can't load customer data**<br /><br />We're unable to connect to the customer database. Your recent work is saved locally.<br /><br />This issue usually resolves in a few minutes. Try refreshing the page.<br /><br />Still unavailable after 10 minutes? Contact IT support with error code: DB_503 | The original exposed a raw technical error. The improved version explains the impact, reassures users their work is saved, suggests a fix, and includes a support code. |
+
+
+## Technical implementation best practices
+
+### Keep user messages and logs separate
+
+Never expose technical stack traces to users. Log all technical details separately for debugging.
+
+```javascript
+// Avoid this pattern
+catch (error) {
+    showError(error.message); // May expose technical details
+}
+
+// Use this pattern instead
+catch (error) {
+    // Log technical details for debugging
+    logger.error('Document save failed', {
+        error: error.stack,
+        userId: currentUser.id,
+        documentId: doc.id,
+        timestamp: Date.now()
+    });
+
+    // Show a clear message to users
+    showError({
+        title: 'Unable to save document',
+        message: 'Try again. If this keeps happening, contact support with code: DOC_500',
+        code: 'DOC_500',
+        actions: ['retry', 'contact_support']
+    });
+}
+```
+
+
+
+### Use progressive disclosure for details
+
+Show essential information first. Let users expand technical details if needed.
+
+```javascript
+<ErrorMessage>
+    <Title>Payment processing failed</Title>
+    <Message>
+        We couldn't process your payment. Verify your payment
+        information and try again.
+    </Message>
+
+    <ExpandableDetails>
+        <Summary>Technical details</Summary>
+        <Details>
+            Transaction ID: txn_1234567890<br />
+            Error code: CARD_DECLINED<br />
+            Provider response: Insufficient funds<br />
+            Timestamp: 2025-10-16 14:23:45 UTC
+        </Details>
+    </ExpandableDetails>
+
+    <Actions>
+        <Button primary>Update Payment Method</Button>
+        <Button secondary>Contact Support</Button>
+    </Actions>
+</ErrorMessage>
+```
+
+---
+
+## Security considerations
+
+Some situations require intentionally vague messages to protect security.
+
+### Authentication errors
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">DO: keep it ambiguous</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Incorrect username or password</p>
+      <p>Try again, or select "Forgot password" to reset your password.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">DON'T: identify which part failed</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Username not found</p>
+      <p>✗ Password incorrect for user@example.com</p>
+    </div>
+  </div>
+</div>
+
+Specific messages help attackers identify valid usernames — a common first step in account compromise.
+
+
+
+### Password creation errors
+
+**During password creation, be specific:**
+
+```
+✓ Password must contain:
+  ✗ At least 8 characters (current: 6)
+  ✓ One uppercase letter
+  ✗ One number
+  ✓ One special character (!@#$%^&*)
+```
+
+**During sign-in, keep it vague:**
+
+```
+✓ Password doesn't meet security requirements.
+
+Forgot your password? Select "Reset password" below.
+```
+
+Real-time feedback during password creation helps users succeed. At sign-in, specific feedback about password rules can help attackers exploit your system.
+
+
+
+### System information disclosure
+
+Never expose internal system details to users.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">DO: use a friendly fallback</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Unable to load account information</p>
+      <p>We're having technical difficulties. Try again in a few moments. If this continues, contact support.</p>
+      <p>Error code: DB_500</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">DON'T: expose your infrastructure</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>MySQL error: Table 'prod_users.accounts' doesn't exist</p>
+      <p>Can't connect to internal server prod-db-01.internal.company.com:3306</p>
+      <p>Stack trace: at DatabaseController.fetchUser (/var/www/app/controllers/db.js:247)</p>
+    </div>
+  </div>
+</div>
+
+Database names, server addresses, and stack traces give attackers a roadmap to exploit your system. Keep technical details in your logs, not your UI.
+
+---
+
+## Common mistakes to avoid
+
+### 1. Using technical jargon
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Can't load your profile. Refresh the page or try again later.</p>
+      <p>Unable to connect to the server. Check your internet connection and try again.</p>
+      <p>Something went wrong. Try again. If this keeps happening, contact support.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>NullReferenceException in UserController</p>
+      <p>HTTP 500 Internal Server Error</p>
+      <p>Segmentation fault (core dumped)</p>
+    </div>
+  </div>
+</div>
+
+Technical terms alienate users. Write for the least technical person who might encounter the error.
+
+
+
+### 2. Blaming the user
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Enter a valid email address (example@domain.com)</p>
+      <p>Incorrect username or password. Try again or reset your password.</p>
+      <p>Add a subject line to send your message</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>You entered invalid data</p>
+      <p>Your password is wrong</p>
+      <p>You must include a subject line</p>
+    </div>
+  </div>
+</div>
+
+Accusatory messages make users defensive. Take responsibility for the experience and offer a clear path forward.
+
+
+
+### 3. Unhelpful confirmations
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Delete "Project_Final.doc"? This can't be undone. [Cancel] [Delete]</p>
+      <p>Can't save changes. [Try Again] [Save Copy] [Cancel]</p>
+      <p>Connection lost. Reconnecting... [Manual Retry] [Work Offline]</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Are you sure? Yes/No</p>
+      <p>Operation failed. OK</p>
+      <p>Error occurred. Dismiss</p>
+    </div>
+  </div>
+</div>
+
+Vague confirmations leave users without a path forward. Clear labels and specific actions reduce confusion and support requests.
+
+
+
+### 4. Confusing success with failure
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Changes saved successfully</p>
+      <p>Import complete: 1,247 records added</p>
+      <p>System check passed: All services running normally</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Error: Operation completed successfully</p>
+      <p>Failed to succeed</p>
+      <p>Warning: No problems found</p>
+    </div>
+  </div>
+</div>
+
+Users need to recognize immediately whether something succeeded or failed. Mixing success and failure cues leads to confusion and mistakes.
+
+---
+
+## Testing your error messages
+
+### 1. Comprehension
+
+Test your messages with people who didn't write them. Ask:
+
+- "What happened here?"
+- "What would you do next?"
+- "Do you have enough information to fix this?"
+
+If they're confused or guessing, the message needs revision.
+
+
+
+### 2. Context
+
+Test your errors in realistic situations. Verify:
+
+- Does it appear at the right moment?
+- Does it block information users need?
+- Can users dismiss it when appropriate?
+- Does it break the page layout?
+- Does it work on mobile and tablet?
+- Is all text visible, or does it get cut off?
+- Does it stay visible until the problem is resolved?
+- Do multiple simultaneous errors display cleanly?
+
+An error that looks fine in isolation might behave differently in the product. Test in context.
+
+
+
+### 3. Accessibility
+
+Ensure all users can understand and interact with your errors. Verify:
+
+- Does it carry the correct ARIA role so assistive technology recognizes it?
+- Do screen readers announce it clearly?
+- Does color contrast meet the minimum ratio (4.5:1)?
+- Does it use more than color alone to indicate an error?
+- Can keyboard-only users navigate to and through it?
+- Does focus move to the error when it's critical?
+- Is the text readable at 200% zoom?
+- Are buttons and links large enough to tap (minimum 44×44 px)?
+
+
+
+### 4. Edge cases
+
+Test scenarios that commonly occur in production:
+
+- Long file names — does truncation display correctly?
+- Special characters in dynamic content — does everything render correctly?
+- Multiple simultaneous errors — do they stack cleanly?
+- Slow connections — does the error appear and remain readable?
+- Internationalization — does the message work in supported languages?
+- JavaScript disabled — can users still understand what happened?
+- Low-performance devices — does the error render without breaking?
+- Repeated errors — does the same error appearing multiple times degrade the experience?
+
+---
+
+## Reference examples
+
+The following examples show the original error messages from a SaaS data encryption application before revision.
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4793%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4651%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Ftype%3Ddesign%26node-id%3D5863%253A113%26mode%3Ddesign%26t%3DIvZpnFDSuVwHepHG-1" allowfullscreen></iframe>
+
+---
+
+## Key principles
+
+**Error messages are a feature, not an afterthought.** They directly affect user trust and support volume.
+
+**Every error needs four things:** what happened, why it matters, what to do about it, and how to get help.
+
+**Write for users, log for developers.** Never expose technical output in the UI, but always capture it in your logs.
+
+**Test with real people.** A message that seems obvious to its author might be unclear to a first-time user.
+
+**Security and helpfulness can coexist.** Be as helpful as possible without exposing system details that create risk.

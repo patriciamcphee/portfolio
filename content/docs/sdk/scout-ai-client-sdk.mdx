@@ -1,0 +1,815 @@
+---
+title: Scout AI Client SDK Reference
+description: Comprehensive reference for the ScoutAIClient class, including all methods, parameters, return types, and error handling. Use this guide to understand how to interact with the Scout AI API through the client SDK. 
+keywords:
+  - scout ai
+  - api
+  - sdk
+  - client
+last_update:
+  date: 01/16/2026
+  author: Patricia McPhee
+hide_table_of_contents: true
+doc_type: reference
+---
+
+:::note[About this sample]
+Scout AI is an Azure Function–based REST API that brings Anthropic Claude–powered research assistance into the UserLens Insights platform. This SDK integration guide was built from scratch to give developers a clear, structured path to integrating Scout AI into their own tooling — covering authentication, endpoint reference, request and response patterns, and error handling. No documentation existed before this work began, and the API was actively changing throughout. The guide was written to reduce integration friction and eliminate the need for developers to go directly to the engineering team for answers.
+:::
+
+The main client class. All API interactions go through an instance of this class.
+
+```ts
+import { ScoutAIClient } from '@userlens/scout-ai';
+```
+
+## Constructor
+
+```ts
+new ScoutAIClient(config: ScoutAIClientConfig)
+```
+
+Creates a new client instance.
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `config.baseUrl` | `string` | Yes | Base URL of the Scout AI API. Trailing slashes are stripped automatically. |
+| `config.headers` | `Record<string, string>` | No | Additional headers merged into every request. Use for auth tokens or routing headers. |
+| `config.fetch` | `typeof globalThis.fetch` | No | Custom `fetch` implementation. Defaults to the global `fetch`. Useful for Node.js < 18 polyfills or injecting mocks in tests. |
+
+**Example:**
+
+```ts
+const client = new ScoutAIClient({
+  baseUrl: 'https://your-app.azurestaticapps.net/api/scout-ai',
+  headers: {
+    Authorization: 'Bearer eyJhbG...',
+  },
+});
+```
+
+---
+
+## health()
+
+```ts
+health(): Promise<HealthResponse>
+```
+
+Check the API status and whether the Anthropic API key is configured.
+
+**Parameters:** None
+
+**Returns:** `HealthResponse`
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `status` | `string` | Service status (e.g. `"ok"`) |
+| `service` | `string` | Service name |
+| `anthropicConfigured` | `boolean` | Whether the Anthropic API key is set |
+
+**HTTP:** `GET /health`
+
+**Example:**
+
+```ts
+const status = await client.health();
+console.log(status.anthropicConfigured); // true
+```
+
+---
+
+## complete()
+
+```ts
+complete(params: CompleteParams): Promise<string>
+```
+
+Send a one-shot completion request with a system and user prompt. This is the most flexible endpoint — use it for custom AI interactions that don't fit the specialized research methods.
+
+**Parameters:** `CompleteParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `systemPrompt` | `string` | Yes | — | System-level instruction for the model |
+| `userPrompt` | `string` | Yes | — | The user message to send |
+| `maxTokens` | `number` | No | `4096` | Maximum tokens in the response |
+| `temperature` | `number` | No | `0.7` | Sampling temperature (0–1) |
+
+**Returns:** `string` — The model's response text.
+
+**HTTP:** `POST /`
+
+**Example:**
+
+```ts
+const response = await client.complete({
+  systemPrompt: 'You are a UX research expert.',
+  userPrompt: 'What are the key principles of usability testing?',
+  temperature: 0.5,
+});
+```
+
+---
+
+## chat()
+
+```ts
+chat(params: ChatParams): Promise<string>
+```
+
+Send a multi-turn chat message with optional conversation history. Supports citation instructions for research-grounded responses.
+
+**Parameters:** `ChatParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `userPrompt` | `string` | Yes | — | The current user message |
+| `systemPrompt` | `string` | No | — | System-level instruction |
+| `messages` | `ChatMessage[]` | No | `[]` | Prior conversation messages for multi-turn context |
+| `maxTokens` | `number` | No | `4096` | Maximum tokens in the response |
+| `temperature` | `number` | No | `0.7` | Sampling temperature (0–1) |
+| `includeCitations` | `boolean` | No | `true` | Instruct the model to cite evidence using bracketed identifiers (e.g. `[Session P1]`) |
+
+**Returns:** `string` — The model's response text.
+
+**HTTP:** `POST /stream` (returns plain text, not JSON)
+
+**Example:**
+
+```ts
+const reply = await client.chat({
+  systemPrompt: 'You are Scout AI, a UX research assistant.',
+  userPrompt: 'What patterns do you see across these sessions?',
+  messages: [
+    { role: 'user', content: 'Here are my session notes for 5 participants...' },
+    { role: 'assistant', content: 'I can see several emerging themes...' },
+  ],
+});
+```
+
+---
+
+## rewrite()
+
+```ts
+rewrite(params: RewriteParams): Promise<string>
+```
+
+Rewrite text to improve clarity, conciseness, and impact. Optionally provide a specific focus or direction for the rewrite.
+
+**Parameters:** `RewriteParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `text` | `string` | Yes | — | The text to rewrite |
+| `focus` | `string` | No | — | Specific rewrite direction. When omitted, a general improvement is applied. |
+
+**Returns:** `string` — The improved text with no preamble or explanation.
+
+**HTTP:** `POST /rewrite`
+
+**Example:**
+
+```ts
+const improved = await client.rewrite({
+  text: 'The user was not able to find the button easily and had trouble.',
+  focus: 'Make this more concise and suitable for a stakeholder report',
+});
+// "The user struggled to locate the button."
+```
+
+---
+
+## analyzeHypotheses()
+
+```ts
+analyzeHypotheses(params: HypothesisAnalysisParams): Promise<string>
+```
+
+Evaluate research hypotheses against collected research data. Returns a structured Markdown analysis including supporting/contradicting evidence, confidence levels, and recommended status changes for each hypothesis.
+
+**Parameters:** `HypothesisAnalysisParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | No | `"Research Project"` | Name of the research project |
+| `hypotheses` | `HypothesisInput[]` | Yes | — | Hypotheses to evaluate |
+| `researchData` | `ResearchDataItem[]` | Yes | — | Research data to analyze against |
+
+**Returns:** `string` — Markdown-formatted analysis containing:
+- Per-hypothesis evaluation with recommended status and confidence level
+- Supporting and contradicting evidence with citations
+- Summary counts (validated, invalidated, partial, insufficient)
+- Key insights and prioritized recommendations
+
+**HTTP:** `POST /hypotheses`
+
+**Limits:** First 5 research items used; each truncated to 2 000 characters.
+
+**Example:**
+
+```ts
+const analysis = await client.analyzeHypotheses({
+  projectName: 'Mobile App Redesign',
+  hypotheses: [
+    { statement: 'Users prefer bottom navigation over hamburger menus', status: 'untested' },
+    { statement: 'Onboarding reduces churn for new users', status: 'testing' },
+  ],
+  researchData: [
+    { title: 'Session P1', content: 'Participant immediately looked to the bottom...' },
+    { title: 'Session P2', content: 'User skipped the onboarding tutorial...' },
+  ],
+});
+```
+
+---
+
+## generateReport()
+
+```ts
+generateReport(params: ReportParams): Promise<string>
+```
+
+Generate a findings report from synthesis notes and hypotheses.
+
+**Parameters:** `ReportParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `synthesisNotes` | `SynthesisNote[]` | No | `[]` | Notes to base the report on |
+| `hypotheses` | `HypothesisInput[]` | No | `[]` | Hypotheses to include |
+| `reportType` | `ReportType` | No | `"detailed"` | Report format |
+
+**Report types:**
+
+| Type | Description |
+|------|-------------|
+| `"executive"` | Concise 1–2 page summary focused on business impact |
+| `"detailed"` | Comprehensive analysis with full findings and recommendations |
+| `"presentation"` | Formatted for slides with headers and bullet points |
+
+**Returns:** `string` — Markdown-formatted report.
+
+**HTTP:** `POST /report`
+
+**Limits:** First 20 synthesis notes used; each truncated to 500 characters.
+
+**Example:**
+
+```ts
+const report = await client.generateReport({
+  projectName: 'Checkout Redesign',
+  reportType: 'executive',
+  synthesisNotes: [
+    { content: '3 of 5 users abandoned at the payment step', theme: 'drop-off' },
+    { content: 'Users praised the progress indicator', theme: 'positive' },
+  ],
+  hypotheses: [
+    { statement: 'Simplifying the form reduces abandonment', status: 'validated' },
+  ],
+});
+```
+
+---
+
+## summarizeSessions()
+
+```ts
+summarizeSessions(params: SummaryParams): Promise<string>
+```
+
+Summarize multiple user research session notes into a structured analysis.
+
+**Parameters:** `SummaryParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `sessionNotes` | `SessionNote[]` | Yes | — | Session notes to summarize |
+| `summaryType` | `SummaryType` | No | `"overview"` | Summary format |
+
+**Summary types:**
+
+| Type | Description |
+|------|-------------|
+| `"overview"` | Executive summary with top 5–7 findings and recommendations |
+| `"findings-report"` | Full UX research report with severity ratings, evidence tables, and prioritized recommendations |
+| `"detailed"` | Participant-by-participant breakdown with task completion analysis |
+| `"themes"` | Thematic analysis identifying 3–7 major themes with prevalence and relationships |
+| `"quotes"` | Top 10–15 impactful quotes grouped by theme with sentiment analysis |
+
+**Returns:** `string` — Markdown-formatted summary.
+
+**HTTP:** `POST /session-summary`
+
+**Limits:** `"findings-report"`: max 8 sessions, 2 500 chars each. Others: max 10 sessions, 2 000 chars each.
+
+**Example:**
+
+```ts
+const summary = await client.summarizeSessions({
+  projectName: 'Dashboard UX Study',
+  summaryType: 'themes',
+  sessionNotes: [
+    { title: 'P1 - Sarah (Product Manager)', content: 'Found the dashboard overwhelming...' },
+    { title: 'P2 - James (Developer)', content: 'Wanted more customization options...' },
+    { title: 'P3 - Maria (Designer)', content: 'Appreciated the visual hierarchy...' },
+  ],
+});
+```
+
+---
+
+## generatePersonas()
+
+```ts
+generatePersonas(params: PersonaParams): Promise<string>
+```
+
+Generate user personas from research data. Each persona includes demographics, goals, pain points, behaviors, and a representative quote.
+
+**Parameters:** `PersonaParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `researchData` | `(string \| ResearchDataItem)[]` | No | `[]` | Source research data |
+| `count` | `number` | No | `3` | Number of personas to generate |
+
+**Returns:** `string` — Markdown-formatted personas.
+
+**HTTP:** `POST /personas`
+
+**Limits:** First 10 research items used; each truncated to 1 000 characters.
+
+**Example:**
+
+```ts
+const personas = await client.generatePersonas({
+  projectName: 'E-commerce Platform',
+  count: 4,
+  researchData: [
+    { title: 'Interview - Power User', content: 'Shops daily, price-sensitive...' },
+    { title: 'Interview - Casual Browser', content: 'Visits weekly, discovery-driven...' },
+  ],
+});
+```
+
+---
+
+## createJourneyMap()
+
+```ts
+createJourneyMap(params: JourneyMapParams): Promise<string>
+```
+
+Create a customer journey map from research data. Maps the user experience across phases including actions, emotions, pain points, and opportunities.
+
+**Parameters:** `JourneyMapParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `researchData` | `(string \| ResearchDataItem)[]` | No | `[]` | Source research data |
+
+**Returns:** `string` — Markdown-formatted journey map.
+
+**HTTP:** `POST /journey-map`
+
+**Limits:** First 8 research items used; each truncated to 1 500 characters.
+
+**Example:**
+
+```ts
+const journeyMap = await client.createJourneyMap({
+  projectName: 'Support Ticket Flow',
+  researchData: [
+    { title: 'Session 1', content: 'User started by searching the FAQ, then...' },
+    { title: 'Session 2', content: 'User went directly to live chat...' },
+  ],
+});
+```
+
+---
+
+## extractThemes()
+
+```ts
+extractThemes(params: ThemeParams): Promise<string>
+```
+
+Extract themes from research data using thematic analysis. Identifies 3–7 major themes with supporting evidence, relationships, and recommendations.
+
+**Parameters:** `ThemeParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `researchData` | `(string \| ResearchDataItem)[]` | No | `[]` | Source research data |
+
+**Returns:** `string` — Markdown-formatted theme analysis.
+
+**HTTP:** `POST /themes`
+
+**Limits:** First 10 research items used; each truncated to 1 500 characters.
+
+**Example:**
+
+```ts
+const themes = await client.extractThemes({
+  projectName: 'Dashboard Redesign',
+  researchData: [
+    { title: 'Interview 1', content: 'Participant mentioned information overload...' },
+    { title: 'Interview 2', content: 'Wanted to customize which widgets appear...' },
+  ],
+});
+```
+
+---
+
+## generateInterviewGuide()
+
+```ts
+generateInterviewGuide(params: InterviewGuideParams): Promise<string>
+```
+
+Generate a structured interview guide for user research sessions. Produces an introduction script, warm-up questions, objective-based main questions with follow-up probes, and interviewer tips.
+
+**Parameters:** `InterviewGuideParams`
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `projectName` | `string` | Yes | — | Project name |
+| `objectives` | `string[]` | No | `[]` | Research objectives the guide should address |
+| `duration` | `number` | No | `60` | Target interview duration in minutes |
+
+**Returns:** `string` — Markdown-formatted interview guide.
+
+**HTTP:** `POST /interview-guide`
+
+**Limits:** First 10 objectives used.
+
+**Example:**
+
+```ts
+const guide = await client.generateInterviewGuide({
+  projectName: 'Navigation Redesign',
+  objectives: [
+    'Understand how users discover features',
+    'Identify navigation pain points',
+    'Evaluate mental models for information architecture',
+  ],
+  duration: 45,
+});
+```
+
+---
+
+## Types
+
+### Configuration
+
+#### `ScoutAIClientConfig`
+
+```ts
+interface ScoutAIClientConfig {
+  baseUrl: string;
+  headers?: Record<string, string>;
+  fetch?: typeof globalThis.fetch;
+}
+```
+
+#### `HealthResponse`
+
+```ts
+interface HealthResponse {
+  status: string;
+  service: string;
+  anthropicConfigured: boolean;
+}
+```
+
+### Request Types
+
+#### `CompleteParams`
+
+```ts
+interface CompleteParams {
+  systemPrompt: string;
+  userPrompt: string;
+  maxTokens?: number;    // default: 4096
+  temperature?: number;  // default: 0.7
+}
+```
+
+#### `ChatParams`
+
+```ts
+interface ChatParams {
+  userPrompt: string;
+  systemPrompt?: string;
+  messages?: ChatMessage[];
+  maxTokens?: number;       // default: 4096
+  temperature?: number;     // default: 0.7
+  includeCitations?: boolean; // default: true
+}
+```
+
+#### `RewriteParams`
+
+```ts
+interface RewriteParams {
+  text: string;
+  focus?: string;
+}
+```
+
+#### `HypothesisAnalysisParams`
+
+```ts
+interface HypothesisAnalysisParams {
+  projectName?: string;          // default: "Research Project"
+  hypotheses: HypothesisInput[];
+  researchData: ResearchDataItem[];
+}
+```
+
+#### `ReportParams`
+
+```ts
+interface ReportParams {
+  projectName: string;
+  synthesisNotes?: SynthesisNote[];
+  hypotheses?: HypothesisInput[];
+  reportType?: ReportType;  // default: "detailed"
+}
+```
+
+#### `SummaryParams`
+
+```ts
+interface SummaryParams {
+  projectName: string;
+  sessionNotes: SessionNote[];
+  summaryType?: SummaryType;  // default: "overview"
+}
+```
+
+#### `PersonaParams`
+
+```ts
+interface PersonaParams {
+  projectName: string;
+  researchData?: (string | ResearchDataItem)[];
+  count?: number;  // default: 3
+}
+```
+
+#### `JourneyMapParams`
+
+```ts
+interface JourneyMapParams {
+  projectName: string;
+  researchData?: (string | ResearchDataItem)[];
+}
+```
+
+#### `ThemeParams`
+
+```ts
+interface ThemeParams {
+  projectName: string;
+  researchData?: (string | ResearchDataItem)[];
+}
+```
+
+#### `InterviewGuideParams`
+
+```ts
+interface InterviewGuideParams {
+  projectName: string;
+  objectives?: string[];
+  duration?: number;  // default: 60
+}
+```
+
+### Domain Types
+
+#### `ChatMessage`
+
+```ts
+interface ChatMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+```
+
+#### `HypothesisInput`
+
+```ts
+interface HypothesisInput {
+  statement: string;
+  status: 'validated' | 'invalidated' | 'partial' | 'untested'
+        | 'testing' | 'supported' | 'partially_supported';
+}
+```
+
+#### `ResearchDataItem`
+
+```ts
+interface ResearchDataItem {
+  title?: string;
+  content: string;
+}
+```
+
+#### `SynthesisNote`
+
+```ts
+interface SynthesisNote {
+  content: string;
+  theme?: string;
+}
+```
+
+#### `SessionNote`
+
+```ts
+interface SessionNote {
+  title: string;
+  content: string;
+}
+```
+
+### Enums
+
+#### `ReportType`
+
+```ts
+type ReportType = 'executive' | 'detailed' | 'presentation';
+```
+
+#### `SummaryType`
+
+```ts
+type SummaryType = 'overview' | 'findings-report' | 'detailed' | 'themes' | 'quotes';
+```
+
+---
+
+## Errors
+
+All errors extend `ScoutAIError`, which extends the built-in `Error`. This lets you catch all SDK errors with a single `catch` or handle specific failure modes individually.
+
+```ts
+import {
+  ScoutAIError,
+  ScoutAIValidationError,
+  ScoutAIContentTooLargeError,
+  ScoutAIRateLimitError,
+  ScoutAIServerError,
+} from '@userlens/scout-ai';
+```
+
+### Error hierarchy
+
+```
+Error
+ └── ScoutAIError
+      ├── ScoutAIValidationError      (400)
+      ├── ScoutAIContentTooLargeError  (413)
+      ├── ScoutAIRateLimitError        (429)
+      └── ScoutAIServerError           (5xx)
+```
+
+### Common properties
+
+Every error class has these properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `message` | `string` | Human-readable error description |
+| `status` | `number` | HTTP status code from the API |
+| `code` | `string` | Machine-readable error code |
+| `name` | `string` | Error class name |
+
+---
+
+### ScoutAIError
+
+Base class for all SDK errors.
+
+```ts
+class ScoutAIError extends Error {
+  readonly status: number;
+  readonly code: string;
+}
+```
+
+**Static method:**
+
+```ts
+ScoutAIError.fromResponse(status: number, body: { error?: string }): ScoutAIError
+```
+
+Factory that creates the appropriate error subclass based on the HTTP status code. Used internally by the client. If the response body has no `error` field, a default message is generated.
+
+---
+
+### ScoutAIValidationError
+
+Thrown when the API rejects the request due to invalid or missing parameters.
+
+| Property | Value |
+|----------|-------|
+| `status` | `400` |
+| `code` | `"validation_error"` |
+| `name` | `"ScoutAIValidationError"` |
+
+**Common causes:**
+- Missing required fields (e.g. `userPrompt`, `sessionNotes`)
+- Empty hypothesis or research data arrays
+- Using an unsupported HTTP method
+
+---
+
+### ScoutAIContentTooLargeError
+
+Thrown when the request payload exceeds the API's content size limit (~100 000 characters / ~25 000 tokens).
+
+| Property | Value |
+|----------|-------|
+| `status` | `413` |
+| `code` | `"content_too_large"` |
+| `name` | `"ScoutAIContentTooLargeError"` |
+
+**How to resolve:**
+- Reduce the number of session notes or research data items
+- Shorten individual content strings
+- Use fewer messages in conversation history
+
+---
+
+### ScoutAIRateLimitError
+
+Thrown when the underlying AI provider rate-limits the request.
+
+| Property | Value |
+|----------|-------|
+| `status` | `429` |
+| `code` | `"rate_limit"` |
+| `name` | `"ScoutAIRateLimitError"` |
+
+**How to resolve:**
+- Implement exponential back-off before retrying
+- Reduce request frequency
+
+---
+
+### ScoutAIServerError
+
+Thrown for unexpected server-side failures.
+
+| Property | Value |
+|----------|-------|
+| `status` | `500` (or other 5xx) |
+| `code` | `"server_error"` |
+| `name` | `"ScoutAIServerError"` |
+
+**How to resolve:**
+- Retry after a brief delay
+- If persistent, check the API health endpoint
+
+---
+
+### Error handling example
+
+```ts
+try {
+  const summary = await client.summarizeSessions({
+    projectName: 'My Study',
+    sessionNotes: notes,
+  });
+} catch (err) {
+  if (err instanceof ScoutAIContentTooLargeError) {
+    // Reduce content and retry
+    const fewerNotes = notes.slice(0, 5);
+    const summary = await client.summarizeSessions({
+      projectName: 'My Study',
+      sessionNotes: fewerNotes,
+    });
+  } else if (err instanceof ScoutAIRateLimitError) {
+    // Wait and retry
+    await new Promise(r => setTimeout(r, 5000));
+    // retry...
+  } else if (err instanceof ScoutAIError) {
+    // Any other API error
+    console.error(`Scout AI error (${err.code}): ${err.message}`);
+  } else {
+    // Network error, etc.
+    throw err;
+  }
+}
+```

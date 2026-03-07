@@ -1,0 +1,82 @@
+---
+title: Authentication Utilities
+description: API reference for Azure Static Web Apps authentication, user extraction, and role-based access validation.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+These functions parse the Azure Static Web Apps `x-ms-client-principal` header.
+
+## `extractUserInfo(req)`
+
+Decodes the `x-ms-client-principal` header and returns the user identity. When `SKIP_AUTH=true`, returns a static development user.
+
+```js
+const user = extractUserInfo(req);
+// { userId, userDetails, identityProvider, userRoles, claims }
+```
+
+**Returns:** `{ userId, userDetails, identityProvider, userRoles, claims } | null`
+
+---
+
+## `extractTenantId(req)`
+
+Extracts the Azure AD tenant ID from the client principal. Checks `tid` claims first, then falls back to parsing the `iss` (issuer) URL for Azure External ID (CIAM) tokens.
+
+**Returns:** `string | null`
+
+---
+
+## `extractOrgContext(req)`
+
+> **Note:** Legacy helper. Uses `getByTenantId()` internally — not recommended for CIAM deployments.
+
+**Returns:** `Promise<Organization | null>`
+
+---
+
+## `validateOrgAccess(req, requiredRole?)`
+
+Validates that the requesting user belongs to an organization and optionally meets a minimum role requirement.
+
+```js
+const access = await validateOrgAccess(req, 'admin');
+if (!access.authorized) {
+  return res.status(403).json({ error: access.reason });
+}
+// access.organization, access.user, access.member
+```
+
+**Role hierarchy:** `owner (3)` > `admin (2)` > `member (1)`
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `req` | object | Yes | — | Azure Functions HTTP request object |
+| `requiredRole` | string | No | `null` | Minimum role required: `"owner"`, `"admin"`, or `"member"` |
+
+**Returns:** `Promise<{ authorized: boolean, organization?, user?, member?, reason? }>`
+
+---
+
+## `validateTeamAccess(req, teamId, requiredRole?)`
+
+Extends `validateOrgAccess` with team membership validation. Org owners and admins are granted `lead`-equivalent access to all teams.
+
+```js
+const access = await validateTeamAccess(req, 'team_xyz', 'lead');
+if (!access.authorized) {
+  return res.status(403).json({ error: access.reason });
+}
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `req` | object | Yes | Azure Functions HTTP request |
+| `teamId` | string | Yes | Team ID to validate access against |
+| `requiredRole` | string | No | `"lead"` or `null` |
+
+**Returns:** `Promise<{ authorized: boolean, organization?, user?, member?, teamMember?, reason? }>`

@@ -1,0 +1,87 @@
+---
+title: Documents API
+description: API reference for managing documents, document hierarchy, versioning, and inline comments.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+Documents support hierarchical structure (parent-child via `parentId`), versioning, inline comments, and linked research items.
+
+## `documents.getAll(projectId)` → `Promise<Document[]>`
+
+## `documents.getById(projectId, documentId)` → `Promise<Document | null>`
+
+## `documents.getByParent(projectId, parentId?)` → `Promise<Document[]>`
+
+Returns direct children of `parentId`. Pass `null` to get root-level documents.
+
+## `documents.getByType(projectId, type)` → `Promise<Document[]>`
+
+## `documents.create(projectId, document)`
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `document.title` | string | No | `"Untitled"` | Document title |
+| `document.content` | string | No | `""` | Document content |
+| `document.type` | string | No | `"blank"` | Document type |
+| `document.status` | string | No | `"draft"` | `"draft"` or `"published"` [VERIFY: other valid values] |
+| `document.parentId` | string | No | `null` | Parent document ID for nesting |
+
+**Returns:** `Promise<Document>` with `version: 1`.
+
+---
+
+## `documents.update(projectId, documentId, updates)`
+
+Increments `version` on every update.
+
+**Throws:** `Error('Document not found: {documentId}')`
+
+**Returns:** `Promise<Document>`
+
+---
+
+## `documents.delete(projectId, documentId)`
+
+Recursively deletes the document and all of its descendants.
+
+**Throws:** `Error('Document not found: {documentId}')`
+
+**Returns:** `Promise<void>`
+
+---
+
+## `documents.move(projectId, documentId, newParentId)`
+
+Updates the `parentId` field. Pass `null` to move to root level.
+
+**Returns:** `Promise<Document>`
+
+---
+
+## `documents.duplicate(projectId, documentId)`
+
+Creates a copy with title appended by `" (copy)"` and resets `version` to `1`.
+
+**Throws:** `Error('Document not found: {documentId}')`
+
+**Returns:** `Promise<Document>`
+
+---
+
+## Document comments sub-API
+
+Comments are stored as an embedded array on the document. Each comment supports replies and a status of `"open"` or `"resolved"`.
+
+| Method | Description | Throws |
+|---|---|---|
+| `comments.getAll(projectId, documentId)` | Get all comments | Document not found |
+| `comments.create(projectId, documentId, comment)` | Add a comment | Document not found |
+| `comments.update(projectId, documentId, commentId, updates)` | Update a comment | Document or comment not found |
+| `comments.delete(projectId, documentId, commentId)` | Delete a comment | Document or comment not found |
+| `comments.resolve(projectId, documentId, commentId)` | Set status to `"resolved"` | Document or comment not found |
+| `comments.reopen(projectId, documentId, commentId)` | Set status to `"open"` | Document or comment not found |
+| `comments.addReply(projectId, documentId, commentId, reply)` | Append a reply to a comment | Document or comment not found |

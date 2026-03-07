@@ -1,0 +1,275 @@
+---
+title: Common Documentation Mistakes
+description: >-
+  Learn about common pitfalls in writing technical documentation for end-users,
+  including verbosity, jargon, poor structure, and more.
+keywords:
+  - common mistakes
+  - technical documentation
+  - writing tips
+  - documentation pitfalls
+  - user-friendly content
+  - end-user documentation
+last_update:
+  date: 03/02/2026
+  author: Patricia McPhee
+draft: false
+doc_type: reference
+---
+
+Technical documentation fails when it's written for the wrong audience. Engineers naturally gravitate toward precision and completeness — but what reads as thorough to a developer often reads as overwhelming to an end user. Wordiness, unexplained jargon, missing structure, and screenshot-only instructions are among the most common patterns that erode usability. Recognizing these habits is the first step toward documentation that actually helps users get things done.
+
+---
+
+## Some things to consider
+
+Creating effective technical documentation requires a careful balance between clarity and depth. Writers should consider the following core principles:
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-4 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Consumer/End-User Documentation</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p className="m-0">Begin with clear prerequisites and system requirements—present information in a logical sequence that builds understanding progressively. Include practical examples that demonstrate real-world usage. Provide troubleshooting guidance for common issues. Minimize technical jargon and define essential technical terms when they first appear.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-4 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Developer/Engineer Documentation</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p className="m-0">Establish a solid technical foundation before advancing to complex topics. Include detailed architecture and design explanations. Provide extensive code examples with thorough comments. Document edge cases and potential pitfalls. Maintain comprehensive API documentation with usage examples.</p>
+    </div>
+  </div>
+</div>
+
+The effectiveness of technical documentation depends on its ability to serve consumers and developers appropriately. Writers should regularly review and update documentation to ensure it remains relevant and accurate as the product evolves.
+
+Successful technical documentation anticipates user needs, provides appropriate detail for each role, and maintains a consistent structure. While perfection may be aspirational, continuous improvement through regular updates and refinements helps maintain documentation quality and usefulness.
+
+:::tip
+Remember that documentation quality directly impacts product adoption and user success. Regular feedback from both consumers and developers helps identify areas for improvement and ensures that documentation continues to meet user needs effectively.
+:::
+
+---
+
+## Common mistakes to avoid
+
+### Being wordy
+
+Engineers might include too much detail, leading to overwhelming or inefficient documentation. The key is to communicate clearly without overloading the user with information.
+
+**Why it matters**: Concise content is easier to understand and follow, reducing cognitive load and minimizing user frustration. Users often skim documentation, so focusing on the most critical information helps them find what they need quickly.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>To get started with using the new feature, the first thing you need to do is open the application and navigate to the settings menu, which you can find by looking at the top right corner of the screen. Once you are in the settings menu, you should look for the section that says 'New Feature Setup'. Click on that section, and you will see a button that says 'Start Setup'. Click on the 'Start Setup' button to begin the process. Follow the on-screen instructions to complete the setup of the new feature.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <ol>
+        <li>Open the application.</li>
+        <li>Navigate to <strong>Settings</strong> (top right corner).</li>
+        <li>Select <strong>New Feature Setup</strong>.</li>
+        <li>Click <strong>Start Setup</strong> and follow the on-screen instructions.</li>
+        </ol>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: Breaking down the steps into a simple list makes it easier to follow and eliminates unnecessary phrasing that can confuse the user. Engineers often struggle with verbosity, so it is critical to show them how to distill instructions into actionable items.</p>
+  </div>
+</div>
+
+
+### Using jargon and technical terms
+
+Engineers might assume users have the same level of technical knowledge, which can lead to the use of complex terminology without explanation.
+
+**Why it matters**: Not all users have the same technical background. Simplifying or explaining jargon ensures that documentation is accessible to all users, not just those with deep technical expertise. This prevents confusion and allows more users to engage with the product.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>The microservices architecture utilizes a service mesh to handle inter-service communication and observability.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>Our application uses a network layer (service mesh) to manage communication and monitoring between different services (microservices).</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: Here, the term &quot;service mesh&quot; is simplified with an explanation (&quot;network layer&quot;), helping users unfamiliar with the jargon. Engineers often resist simplifying, fearing loss of precision, but this approach maintains accuracy while improving clarity.</p>
+  </div>
+</div>
+
+
+### Focusing on too much detail
+
+Engineers often include unnecessary technical specifics that aren't relevant to most users. This leads to information overload, detracting from the primary message.
+
+**Why it matters**: Users don't need every technical detail. Focusing on key actions and critical information makes documentation easier to navigate and understand.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>The server is running on a distributed architecture with node clusters set up to scale horizontally, and you should also note that the system uses a multi-tier architecture for database operations.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>The server can scale based on usage and efficiently manage multiple layers.</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: The revised version removes unnecessary technical details that users might not need to understand. Engineers should first focus on delivering essential information and, if necessary, link to more detailed references.</p>
+  </div>
+</div>
+
+
+### Lack of structure and organization
+
+Documentation that lacks clear structure is difficult to navigate. Engineers might write in a stream-of-consciousness style without considering how users will interact with the content.
+
+**Why it matters**: Organized content lets users find information quickly. Headings, subheadings, and logical flow help users follow step-by-step processes more easily.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>First, you need to install the required dependencies. Next, configure the application settings. Finally, start the application. Before doing any of these steps, ensure your system meets the minimum requirements.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <ol>
+        <li>Ensure your system meets the minimum requirements.</li>
+        <li>Install the required dependencies.</li>
+        <li>Configure the application settings.</li>
+        <li>Start the application.</li>
+        </ol>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: Breaking up the steps into a clear list with proper order makes it easier for users to follow. This structure reduces cognitive load and prevents confusion.</p>
+  </div>
+</div>
+
+
+### Inadequate explanation of concepts
+
+Engineers often assume users already know certain technical concepts, leading to incomplete explanations.
+
+**Why it matters**: Providing sufficient context ensures users at all levels can understand the instructions. Users might be confused without adequate explanation, leading to mistakes or incorrect implementations.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Initialize the repository.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>Initialize the repository by running <code>git init</code>, which sets up the necessary files to track changes in your project.</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: Adding context explains why this step is necessary and what it accomplishes, which is often missing in technical documentation.</p>
+  </div>
+</div>
+
+
+### Using screenshots without text instructions
+
+Screenshots can be helpful, but relying on them alone can create issues if the UI changes or if users require more detailed information.
+
+**Why it matters**: Screenshots quickly become outdated, whereas written instructions provide more clarity and are easier to update.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p><code>Screenshot</code></p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>Navigate to <strong>Settings</strong> (top right) &gt; <strong>Account</strong> &gt; <strong>Manage Settings</strong>. For reference, see the image below.</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: The revised version includes text instructions in addition to the screenshot, ensuring users can follow along even if the UI has changed.</p>
+  </div>
+</div>
+
+
+### Using non-descriptive hyperlink text
+
+Engineers often use vague terms like "click here" for links, which doesn't provide users any context about where the link leads.
+
+**Why it matters**: Descriptive link text gives users context about what they are clicking, improving usability and accessibility.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+      <h3 className="text-base font-semibold text-(--foreground) m-0">Original</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>For more information, click <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer"><u>here</u></a>.</p>
+    </div>
+  </div>
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-(--muted) border-b border-(--border)">
+        <h3 className="text-base font-semibold text-(--foreground) m-0">Revised</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>For more information, see the <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">API Setup Guide</a>.</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><strong>Why this is better</strong>: By using descriptive link text, users can understand the purpose of the link before clicking. Engineers should recognize that vague links frustrate users and can reduce efficiency.</p>
+  </div>
+</div>
+
+---
+
+## Final thoughts
+
+Good documentation is a skill, not just a byproduct of technical knowledge. The mistakes covered here share a common thread — each one prioritizes the writer's perspective over the reader's experience. Fixing them doesn't mean dumbing things down; it means meeting users where they are. Small, deliberate changes in how you structure, word, and present information can be the difference between documentation users trust and documentation they abandon.

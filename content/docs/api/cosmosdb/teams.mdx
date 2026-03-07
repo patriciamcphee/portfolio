@@ -1,0 +1,335 @@
+---
+title: Teams API
+description: CRUD operations for teams, team members, and team invitations in the CosmosDB teams container.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+`teams` manages team documents and sub-resources (members, invitations) in the `teams` container.
+
+## Team roles
+
+| Role | Description |
+|---|---|
+| `lead` | Manage team members and settings. At least one lead must exist at all times |
+| `member` | Standard team access |
+
+---
+
+## `teams.getAll(orgId)`
+
+```js
+const allTeams = await teams.getAll('org_abc');
+```
+
+**Returns:** `Promise<Team[]>`
+
+---
+
+## `teams.getById(orgId, teamId)`
+
+```js
+const team = await teams.getById('org_abc', 'team_xyz');
+```
+
+**Returns:** `Promise<Team | null>`
+
+---
+
+## `teams.getBySlug(orgId, slug)`
+
+```js
+const team = await teams.getBySlug('org_abc', 'design-research');
+```
+
+**Returns:** `Promise<Team | null>`
+
+---
+
+## `teams.getByUser(orgId, userId)`
+
+Returns teams the user belongs to, each augmented with `userRole` and `joinedAt` from the membership record.
+
+```js
+const userTeams = await teams.getByUser('org_abc', 'aad-user-id');
+// Each item includes: ...teamFields, userRole, joinedAt
+```
+
+**Returns:** `Promise<(Team & { userRole: string, joinedAt: string })[]>`
+
+---
+
+## `teams.create(orgId, team, creatorUserId, creatorInfo?)`
+
+Creates a team and automatically adds the creator as `lead`.
+
+```js
+const newTeam = await teams.create(
+  'org_abc',
+  {
+    name: 'Design Research',
+    description: 'UX research team',
+    icon: '🔬',
+    visibility: 'public'
+  },
+  'aad-user-id',
+  { name: 'Jane Smith', email: 'jane@acme.com' }
+);
+```
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `orgId` | string | Yes | — | Organization ID |
+| `team.name` | string | Yes | — | Team display name |
+| `team.id` | string | No | Auto-generated | Custom ID |
+| `team.slug` | string | No | Generated from `name` | URL-safe identifier — must be unique within the org |
+| `team.description` | string | No | `""` | Team description |
+| `team.icon` | string | No | `"👥"` | Emoji icon |
+| `team.color` | string | No | `"#6366f1"` | Hex color |
+| `team.visibility` | string | No | `"public"` | `"public"` or `"private"` |
+| `team.settings` | object | No | See below | Team settings |
+| `creatorUserId` | string | Yes | — | Azure AD Object ID of the creator |
+| `creatorInfo` | object | No | `{}` | `{ name, email }` — used to populate the creator's team member record |
+
+**Default `team.settings`:**
+```json
+{
+  "defaultProjectAccess": "editor",
+  "membersCanCreateProjects": true
+}
+```
+
+**Returns:** `Promise<Team>`
+
+**Throws:** `Error('Team with slug "{slug}" already exists')` on duplicate slug.
+
+---
+
+## `teams.update(orgId, teamId, updates)`
+
+```js
+const updated = await teams.update('org_abc', 'team_xyz', { name: 'UX Research' });
+```
+
+**Throws:**
+- `Error('Team not found: {teamId}')` if not found.
+- `Error('Team with slug "{slug}" already exists')` on duplicate slug.
+
+**Returns:** `Promise<Team>`
+
+---
+
+## `teams.delete(orgId, teamId)`
+
+Deletes the team and all associated team member and invitation documents.
+
+```js
+await teams.delete('org_abc', 'team_xyz');
+```
+
+**Throws:** `Error('Team not found: {teamId}')` if not found.
+
+**Returns:** `Promise<void>`
+
+---
+
+## Team members sub-API
+
+### `teams.members.getAll(orgId, teamId)`
+
+**Returns:** `Promise<TeamMember[]>`
+
+---
+
+### `teams.members.getByUserId(orgId, teamId, userId)`
+
+**Returns:** `Promise<TeamMember | null>`
+
+---
+
+### `teams.members.isMember(orgId, teamId, userId)`
+
+```js
+const isMember = await teams.members.isMember('org_abc', 'team_xyz', 'aad-user-id');
+```
+
+**Returns:** `Promise<boolean>`
+
+---
+
+### `teams.members.add(orgId, teamId, member)`
+
+```js
+const newMember = await teams.members.add('org_abc', 'team_xyz', {
+  userId: 'aad-user-id',
+  email: 'jane@acme.com',
+  name: 'Jane Smith',
+  role: 'member'
+});
+```
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `member.userId` | string | Yes | — | Azure AD Object ID |
+| `member.email` | string | No | `"unknown@email.com"` | User email |
+| `member.name` | string | No | `"Unknown"` | Display name |
+| `member.role` | string | No | `"member"` | `"lead"` or `"member"` |
+
+**Throws:** `Error('User {userId} is already a member of this team')` on duplicate.
+
+**Returns:** `Promise<TeamMember>`
+
+---
+
+### `teams.members.updateRole(orgId, teamId, userId, newRole)`
+
+**Throws:**
+- `Error('Member not found: {userId}')` if not found.
+- `Error('Cannot remove the last team lead')` if demoting the only lead.
+
+**Returns:** `Promise<TeamMember>`
+
+---
+
+### `teams.members.remove(orgId, teamId, userId)`
+
+**Throws:**
+- `Error('Member not found: {userId}')` if not found.
+- `Error('Cannot remove the last team lead')` if removing the only lead.
+
+**Returns:** `Promise<void>`
+
+---
+
+### `teams.members.updateLastActive(orgId, teamId, userId)`
+
+Updates the `lastActiveAt` timestamp on a team member record. Silently exits if the member is not found.
+
+```js
+await teams.members.updateLastActive('org_abc', 'team_xyz', 'aad-user-id');
+```
+
+**Returns:** `Promise<void>`
+
+---
+
+## Team invitations sub-API
+
+Invitations are stored in the `teams` container with `type: 'invitation'`. Each invitation has a 7-day expiration and a cryptographically secure token.
+
+### `teams.invitations.getAll(orgId, teamId)`
+
+Returns pending invitations only.
+
+**Returns:** `Promise<Invitation[]>`
+
+---
+
+### `teams.invitations.getById(orgId, invitationId)`
+
+**Returns:** `Promise<Invitation | null>`
+
+---
+
+### `teams.invitations.getByToken(token)`
+
+Cross-partition query — does not require `orgId`. Used during invitation acceptance.
+
+**Returns:** `Promise<Invitation | null>`
+
+---
+
+### `teams.invitations.getByEmail(orgId, teamId, email)`
+
+Returns a pending invitation for the given email. Email comparison is case-insensitive.
+
+**Returns:** `Promise<Invitation | null>`
+
+---
+
+### `teams.invitations.create(orgId, teamId, invitation, invitedBy, inviterInfo?)`
+
+Creates an invitation, stores it, and sends an invitation email if the email service is configured. If the email fails, the invitation is still saved and the error is recorded on the `emailError` field.
+
+```js
+const inv = await teams.invitations.create(
+  'org_abc',
+  'team_xyz',
+  { email: 'new@acme.com', role: 'member' },
+  'aad-inviter-id',
+  { name: 'Jane Smith', email: 'jane@acme.com' }
+);
+```
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `orgId` | string | Yes | — | Organization ID |
+| `teamId` | string | Yes | — | Team ID |
+| `invitation.email` | string | Yes | — | Invitee's email address |
+| `invitation.role` | string | No | `"member"` | Role to assign on acceptance |
+| `invitedBy` | string | Yes | — | Azure AD Object ID of the inviter |
+| `inviterInfo` | object | No | `{}` | `{ name, email }` — used in the invitation email |
+
+**Throws:**
+- `Error('Invitation already sent to {email}')` if a pending invitation exists.
+- `Error('{email} is already a member of this team')` if already a member.
+
+**Returns:** `Promise<Invitation>` — includes `token`, `expiresAt`, `emailSent`, and `emailError`.
+
+---
+
+### `teams.invitations.accept(token, user)`
+
+Validates and accepts an invitation. Adds the user to both the team and the organization's member list (enabling future org lookup by `userId`). Sends a welcome email if the email service is configured.
+
+```js
+const invitation = await teams.invitations.accept('hex-token-here', {
+  userId: 'aad-user-id',
+  name: 'Alex Johnson'
+});
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `token` | string | Yes | Invitation token from the invitation email |
+| `user.userId` | string | Yes | Azure AD Object ID of the accepting user |
+| `user.name` | string | Yes | Display name of the accepting user |
+
+**Throws:**
+- `Error('Invalid invitation token')` if the token is not found.
+- `Error('Invitation has already been used')` if status is not `"pending"`.
+- `Error('Invitation has expired')` if past `expiresAt`.
+
+**Returns:** `Promise<Invitation>` — the updated invitation document with `status: 'accepted'`.
+
+---
+
+### `teams.invitations.cancel(orgId, invitationId)`
+
+Sets invitation status to `"cancelled"`.
+
+**Throws:** `Error('Invitation not found: {invitationId}')` if not found.
+
+**Returns:** `Promise<void>`
+
+---
+
+### `teams.invitations.resend(orgId, invitationId, inviterInfo?)`
+
+Generates a new token, extends the expiration 7 days from the current time, and resends the invitation email. Increments `resentCount`.
+
+```js
+const updated = await teams.invitations.resend('org_abc', 'inv_xyz', {
+  name: 'Jane Smith',
+  email: 'jane@acme.com'
+});
+```
+
+**Throws:**
+- `Error('Invitation not found: {invitationId}')` if not found.
+- `Error('Cannot resend a non-pending invitation')` if status is not `"pending"`.
+
+**Returns:** `Promise<Invitation>` — the updated invitation document.

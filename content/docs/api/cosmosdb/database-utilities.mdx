@@ -1,0 +1,138 @@
+---
+title: Database Utilities
+description: Database initialization, query helpers, and core key-value API for the CosmosDB research container.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+These functions provide utilities for working with the CosmosDB database and the `research` container. They include initialization, query helpers for common access patterns, and a core key-value API for flexible data storage.
+
+## Utilities
+
+### `initializeDatabase()`
+
+Creates the database and all three containers if they do not already exist. Call this once at application startup.
+
+```js
+await initializeDatabase();
+```
+
+**Returns:** `Promise<boolean>` — `true` on success.
+
+**Throws:** Re-throws CosmosDB errors on failure.
+
+---
+
+### `getAllData()`
+
+Returns all documents from the `research` container. Use for debugging or administrative exports only — this performs a full container scan.
+
+```js
+const allDocs = await getAllData();
+```
+
+**Returns:** `Promise<object[]>`
+
+---
+
+### `queryByType(type)`
+
+Returns all documents of a given `type` from the `research` container.
+
+```js
+const feedbackDocs = await queryByType('feedback');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `type` | string | Yes | The `type` field value to filter on |
+
+**Returns:** `Promise<object[]>`
+
+---
+
+### `queryByProject(projectId)`
+
+Returns all documents for a given project from the `research` container.
+
+```js
+const projectDocs = await queryByProject('proj_1234567890_abc');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `projectId` | string | Yes | The project ID to filter on |
+
+**Returns:** `Promise<object[]>`
+
+---
+
+## Core key-value API
+
+These functions provide low-level access to the `research` container using string keys. Higher-level APIs (`projects`, `participants`, etc.) use these functions internally.
+
+### Key format
+
+| Key pattern | Maps to | Partition |
+|---|---|---|
+| `projects:list` | Global projects list | `global` |
+| `research:{type}` | Research data by type | `global` |
+| `synthesis:{projectId}:{type}` | Synthesis data per project | `projectId` |
+| `documents:{projectId}` | Documents per project | `projectId` |
+| `participants:{projectId}` | Participants per project | `projectId` |
+
+---
+
+### `getValue(key)`
+
+Reads a value from the `research` container by key.
+
+```js
+const projects = await getValue('projects:list');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `key` | string | Yes | Storage key (see key format above) |
+
+**Returns:** `Promise<any | null>` — The stored value, or `null` if not found.
+
+**Throws:** Re-throws non-404 CosmosDB errors.
+
+---
+
+### `setValue(key, value)`
+
+Writes or updates a value in the `research` container. Uses upsert — creates the document if it does not exist.
+
+```js
+await setValue('projects:list', updatedProjects);
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `key` | string | Yes | Storage key |
+| `value` | any | Yes | Value to store |
+
+**Returns:** `Promise<void>`
+
+---
+
+### `deleteValue(key)`
+
+Deletes a document from the `research` container by key. Silently succeeds if the document does not exist.
+
+```js
+await deleteValue('synthesis:proj_abc:hypotheses');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `key` | string | Yes | Storage key |
+
+**Returns:** `Promise<void>`
+
+**Throws:** Re-throws non-404 CosmosDB errors.

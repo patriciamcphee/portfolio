@@ -1,0 +1,73 @@
+---
+title: Hyperlinks
+description: >-
+  Learn best practices for creating informative, user-friendly, and
+  SEO-optimized hyperlinks that enhance content usability and navigation.
+keywords:
+  - hyperlinks
+  - best practices
+  - SEO
+  - content usability
+  - navigation
+  - user-friendly design
+  - writing tips
+last_update:
+  date: 09/06/2024
+  author: Patricia McPhee
+draft: false
+doc_type: reference
+---
+
+
+Creating engaging and user-friendly content extends beyond just the words you write; it also involves how you integrate hyperlinks. They should be informative and woven into your narrative, guiding readers to additional valuable resources.
+
+## Basic guidelines
+
+- **Be Descriptive**: Hyperlink text should accurately describe the linked content to provide users with clear expectations of where the link will take them.
+- **Avoid Generic Text**: Instead of using generic phrases like "click here" or "read more," use descriptive text that conveys the purpose or destination of the link.
+- **Use Keywords**: Incorporate relevant keywords in the hyperlink text to improve search engine optimization (SEO) and help users quickly identify the linked topic.
+- **Keep it Concise**: Aim for brevity in hyperlink text to maintain a clean and uncluttered appearance. Ideally, keep the text short while conveying the essential information.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Install the latest version of <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">Docker</a>.</p>
+      <p>See <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">What is GitHub Cloud?</a> for details.</p>
+      <p>For detailed guidance on engaging with us, see <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">Engage with your Enterprise DevOps Team</a>.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>Install the latest version of Docker <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">here.</a></p><p>For more information about GitHub Cloud, go <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">here.</a></p>
+    </div>
+  </div>
+</div>
+
+## Links to third-party documentation
+
+In addition to the basic guidelines mentioned, avoid putting quotation marks around the link and ensure you use the exact title of the third-party document.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>See the <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/">Virtual machines in Azure</a> article in the Microsoft documentation.</p>
+    </div>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>See the "VMs in Azure" documentation <a href="javascript:void(0)" className="text-(--primary) underline underline-offset-2 cursor-pointer">here.</a></p>
+    </div>
+  </div>
+</div>

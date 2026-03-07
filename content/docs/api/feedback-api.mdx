@@ -1,0 +1,308 @@
+---
+title: Feedback API
+description: The Feedback API handles user feedback submissions and admin management of those submissions.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+:::note[About this sample]
+REST API reference for a role-based feedback submission and management API. Demonstrates access control documentation patterns — distinguishing between authenticated user permissions and owner-level admin operations — alongside standard CRUD endpoint coverage.
+:::
+
+The Feedback API handles user feedback submissions and admin management of those submissions. Authenticated users can submit feedback. Admin users — identified as owners — can list, retrieve, update, and delete feedback items.
+
+Access control is role-based. Submission is open to any authenticated user. All other operations require owner-level access, determined by matching the authenticated user's ID against the `OWNER_USER_IDS` environment variable.
+
+---
+
+## Base URL
+
+```
+/api/feedback
+```
+
+---
+
+## Authentication and authorization
+
+Every request requires a valid authenticated user. The handler extracts user identity from the request using `extractUserInfo`. Requests without a valid user identity return `401`.
+
+**Owner access** grants permission to list, retrieve, update, and delete feedback. Owner user IDs are configured via the `OWNER_USER_IDS` environment variable as a comma-separated list:
+
+```
+OWNER_USER_IDS=user_abc,user_def,user_ghi
+```
+
+If `OWNER_USER_IDS` is not set, the handler defaults to `local-dev-user` for local development only. Ensure `OWNER_USER_IDS` is set in all non-local environments.
+
+---
+
+## CORS
+
+The handler sets the following CORS headers on all responses and handles `OPTIONS` preflight requests with `204 No Content`:
+
+| Header | Value |
+|---|---|
+| `Access-Control-Allow-Origin` | `*` |
+| `Access-Control-Allow-Methods` | `GET, POST, PATCH, DELETE, OPTIONS` |
+| `Access-Control-Allow-Headers` | `Content-Type, Authorization` |
+
+---
+
+## Endpoints
+
+### Check owner status
+
+Returns whether the authenticated user has owner access.
+
+```
+GET /api/feedback/owner-check
+```
+
+> **Note:** This route uses the reserved path segment `owner-check`. Do not create a feedback item with the ID `owner-check`.
+
+**Response — 200 OK**
+
+```json
+{
+  "isOwner": true,
+  "userId": "user_abc"
+}
+```
+
+`userId` is included for debugging purposes. [VERIFY: remove `userId` from response in production if the field is considered sensitive, as noted in source code.]
+
+---
+
+### Submit feedback
+
+Creates a new feedback item. Available to all authenticated users.
+
+```
+POST /api/feedback
+```
+
+**Request body**
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `category` | string | Yes | The feedback category. Must be one of: `bug`, `feature`, `idea`, `general`. |
+| `description` | string | Yes | The full feedback text. |
+| `title` | string | No | A short summary of the feedback. Defaults to `""`. |
+| `rating` | number | No | A numeric rating. [VERIFY: range and scale.] Defaults to `null`. |
+| `contactEmail` | string | No | An email address for follow-up. Defaults to `null`. |
+| `submittedFrom` | string | No | The page or context from which feedback was submitted. Defaults to `""`. |
+
+The handler automatically appends user and organization context from the authenticated session. You do not pass these fields directly.
+
+**Example request**
+
+```json
+{
+  "category": "bug",
+  "title": "Export fails silently",
+  "description": "Selecting Export on a large project produces no output and no error message.",
+  "rating": 2,
+  "contactEmail": "user@example.com",
+  "submittedFrom": "/projects/proj_abc/export"
+}
+```
+
+**Response — 201 Created**
+
+Returns the created feedback object [VERIFY: document full response schema from `feedback.create`].
+
+```json
+{
+  "id": "fb_001",
+  "category": "bug",
+  "title": "Export fails silently",
+  "description": "Selecting Export on a large project produces no output and no error message.",
+  "status": "new",
+  "userId": "user_abc",
+  "organizationId": "org_xyz",
+  "createdAt": "2024-11-01T10:30:00.000Z"
+}
+```
+
+---
+
+### List all feedback
+
+Returns all feedback items, with optional filtering by category or status. Requires owner access.
+
+```
+GET /api/feedback
+```
+
+**Query parameters**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `category` | string | No | Filter by category. One of: `bug`, `feature`, `idea`, `general`. |
+| `status` | string | No | Filter by status. One of: `new`, `reviewed`, `planned`, `completed`, `declined`. |
+
+You can combine both query parameters to filter by category and status simultaneously.
+
+**Example request**
+
+```
+GET /api/feedback?category=bug&status=new
+```
+
+**Response — 200 OK**
+
+Results are sorted by `createdAt`, newest first.
+
+```json
+{
+  "feedback": [
+    {
+      "id": "fb_001",
+      "category": "bug",
+      "status": "new",
+      "title": "Export fails silently",
+      "createdAt": "2024-11-01T10:30:00.000Z"
+    }
+  ],
+  "total": 1
+}
+```
+
+---
+
+### Get a feedback item
+
+Returns a single feedback item by ID. Requires owner access.
+
+```
+GET /api/feedback/{id}
+```
+
+**Response — 200 OK**
+
+Returns the feedback object [VERIFY: document full response schema from `feedback.getById`].
+
+```json
+{
+  "id": "fb_001",
+  "category": "bug",
+  "status": "new",
+  "title": "Export fails silently",
+  "description": "Selecting Export on a large project produces no output and no error message.",
+  "userId": "user_abc",
+  "createdAt": "2024-11-01T10:30:00.000Z"
+}
+```
+
+---
+
+### Update a feedback item
+
+Updates the status or admin notes on a feedback item. Requires owner access.
+
+```
+PATCH /api/feedback/{id}
+```
+
+Only `status` and `adminNotes` are writable. The handler ignores all other fields in the request body.
+
+**Request body**
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `status` | string | No | The new status. Must be one of: `new`, `reviewed`, `planned`, `completed`, `declined`. |
+| `adminNotes` | string | No | Internal notes visible only to admins. |
+
+At least one of `status` or `adminNotes` must be present. Requests with no recognized fields return `400`.
+
+The handler automatically sets `reviewedBy` to the authenticated user's ID and `reviewedAt` to the current timestamp.
+
+**Example request**
+
+```json
+{
+  "status": "planned",
+  "adminNotes": "Scheduled for Q1 release."
+}
+```
+
+**Response — 200 OK**
+
+Returns the updated feedback object [VERIFY: document full response schema from `feedback.update`].
+
+```json
+{
+  "id": "fb_001",
+  "status": "planned",
+  "adminNotes": "Scheduled for Q1 release.",
+  "reviewedBy": "user_abc",
+  "reviewedAt": "2024-11-02T09:00:00.000Z"
+}
+```
+
+---
+
+### Delete a feedback item
+
+Permanently deletes a feedback item. Requires owner access.
+
+```
+DELETE /api/feedback/{id}
+```
+
+**Response — 204 No Content**
+
+No response body is returned on success.
+
+---
+
+## Error responses
+
+All error responses return JSON except `204 No Content`.
+
+```json
+{
+  "error": "Human-readable message."
+}
+```
+
+| Status code | Cause |
+|---|---|
+| `400 Bad Request` | Missing required fields, invalid `category`, invalid `status`, or no valid update fields provided. |
+| `401 Unauthorized` | No valid authenticated user found in the request. |
+| `403 Forbidden` | The authenticated user does not have owner access. |
+| `404 Not Found` | The specified feedback item does not exist. |
+| `405 Method Not Allowed` | The HTTP method is not supported for the matched route. |
+| `500 Internal Server Error` | An unhandled server-side error. The response includes a `details` field with the error message. |
+
+**Example — 500 response**
+
+```json
+{
+  "error": "Internal server error",
+  "details": "Connection timeout."
+}
+```
+
+---
+
+## Configuration
+
+| Environment variable | Description | Default |
+|---|---|---|
+| `OWNER_USER_IDS` | Comma-separated list of user IDs with owner (admin) access. | `local-dev-user` |
+
+---
+
+## Dependencies
+
+| Dependency | Description |
+|---|---|
+| `cosmosService.feedback` | Data access layer for feedback CRUD operations. |
+| `cosmosService.extractUserInfo` | Extracts the authenticated user's identity from the request. |
+| `cosmosService.validateOrgAccess` | Validates organization membership and returns organization and member context for the authenticated user. |
+
+[VERIFY: document the full schema of the object returned by `extractUserInfo` and `validateOrgAccess`, including all fields used by this handler (`userId`, `userDetails`, `member.name`, `organization.id`, `organization.name`).]

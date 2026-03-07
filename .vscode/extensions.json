@@ -1,5 +1,5 @@
 {
-    "recommendations": [
-        "docsmsft.docs-authoring-pack"
-    ]
+  "recommendations": [
+    "unifiedjs.vscode-mdx"
+  ]
 }

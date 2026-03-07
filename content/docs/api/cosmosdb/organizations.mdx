@@ -1,0 +1,318 @@
+---
+title: Organizations API
+description: CRUD operations for organizations and organization members in the CosmosDB organizations container.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+`organizations` is a service object providing CRUD operations on the `organizations` container.
+
+## Organization lookup methods
+
+Multiple lookup strategies support Azure External ID (CIAM) scenarios where users might not share a tenant ID with the organization.
+
+### `organizations.getById(orgId)`
+
+```js
+const org = await organizations.getById('org_1234567890_abc');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization document ID |
+
+**Returns:** `Promise<Organization | null>`
+
+---
+
+### `organizations.getByTenantId(tenantId)`
+
+> **Note:** Legacy method. Prefer `getByOrgIdentifier()` for Azure External ID (CIAM) deployments.
+
+```js
+const org = await organizations.getByTenantId('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `tenantId` | string | Yes | Azure AD tenant ID |
+
+**Returns:** `Promise<Organization | null>`
+
+---
+
+### `organizations.getByMemberUserId(userId)`
+
+Looks up an organization by a member's Azure Object ID. Queries `orgMember` records in the `teams` container. Use this as the primary lookup for Azure External ID (CIAM) scenarios.
+
+```js
+const org = await organizations.getByMemberUserId('aad-object-id-123');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `userId` | string | Yes | Azure AD Object ID of the user |
+
+**Returns:** `Promise<Organization | null>`
+
+---
+
+### `organizations.getByMemberEmail(email)`
+
+Looks up an organization by a member's email address. Use as a fallback when the Azure Object ID is unavailable or has changed.
+
+```js
+const org = await organizations.getByMemberEmail('user@acme.com');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `email` | string | Yes | User's email address (normalized to lowercase internally) |
+
+**Returns:** `Promise<Organization | null>`
+
+---
+
+### `organizations.getByOrgIdentifier(orgIdentifier)`
+
+Preferred lookup method for Azure External ID (CIAM). Resolves an organization by its `orgIdentifier` field.
+
+```js
+const org = await organizations.getByOrgIdentifier('domain_acme.com');
+// or for personal orgs:
+const org = await organizations.getByOrgIdentifier('personal_userId123');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgIdentifier` | string | Yes | Format: `domain_{emailDomain}` for work orgs, `personal_{userId}` for personal orgs |
+
+**Returns:** `Promise<Organization | null>`
+
+**Throws:** Re-throws CosmosDB errors.
+
+---
+
+### `organizations.getByEmailDomain(emailDomain)`
+
+Looks up a non-personal organization by email domain.
+
+```js
+const org = await organizations.getByEmailDomain('acme.com');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `emailDomain` | string | Yes | Domain portion of a work email address |
+
+**Returns:** `Promise<Organization | null>` — Returns only non-personal organizations.
+
+**Throws:** Re-throws CosmosDB errors.
+
+---
+
+## `organizations.create(org)`
+
+Creates a new organization.
+
+```js
+const newOrg = await organizations.create({
+  name: 'Acme Research',
+  orgIdentifier: 'domain_acme.com',
+  emailDomain: 'acme.com',
+  plan: 'pro'
+});
+```
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `org.name` | string | Yes | — | Display name |
+| `org.id` | string | No | Auto-generated | Custom ID — auto-generated if omitted |
+| `org.orgIdentifier` | string | No | `null` | CIAM org identifier |
+| `org.emailDomain` | string | No | `null` | Email domain for domain-based grouping |
+| `org.isPersonalOrg` | boolean | No | `false` | Whether this is a personal (single-user) organization |
+| `org.tenantId` | string | No | `null` | Legacy Azure AD tenant ID |
+| `org.slug` | string | No | Generated from `name` | URL-safe identifier |
+| `org.plan` | string | No | `"starter"` | Plan ID |
+| `org.settings` | object | No | See below | Organization settings |
+| `org.billing` | object | No | `{ status: "active" }` | Billing metadata |
+
+**Default `settings`:**
+```json
+{
+  "allowPublicTeams": true,
+  "defaultProjectAccess": "editor",
+  "requireApprovalForSignup": false
+}
+```
+
+**Returns:** `Promise<Organization>` — The created organization document.
+
+---
+
+## `organizations.update(orgId, updates)`
+
+Updates an organization by merging `updates` into the existing document.
+
+```js
+const updated = await organizations.update('org_abc', { plan: 'team' });
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization ID |
+| `updates` | object | Yes | Fields to update |
+
+**Returns:** `Promise<Organization>`
+
+**Throws:** `Error('Organization not found: {orgId}')` if not found.
+
+---
+
+## `organizations.delete(orgId)`
+
+Permanently deletes an organization. This action is irreversible and does not cascade to teams or members.
+
+```js
+await organizations.delete('org_abc');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization ID |
+
+**Returns:** `Promise<void>`
+
+**Throws:** `Error('Organization not found: {orgId}')` if not found.
+
+---
+
+## `organizations.updateStats(orgId, stats)`
+
+Merges `stats` into the organization's `stats` field. Called automatically by member and team operations — direct calls are rarely necessary.
+
+```js
+await organizations.updateStats('org_abc', { userCount: 5 });
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization ID |
+| `stats` | object | Yes | Stats fields to merge |
+
+**Returns:** `Promise<void>` — Silently exits if the organization is not found.
+
+---
+
+## Organization members API
+
+`organizations.members` manages `orgMember` documents stored in the `teams` container.
+
+### Member roles
+
+| Role | Description |
+|---|---|
+| `owner` | Full control, including deleting the organization. At least one owner must exist at all times |
+| `admin` | Manage teams and members |
+| `member` | Standard access |
+
+---
+
+### `organizations.members.getAll(orgId)`
+
+```js
+const members = await organizations.members.getAll('org_abc');
+```
+
+**Returns:** `Promise<OrgMember[]>`
+
+---
+
+### `organizations.members.getByUserId(orgId, userId)`
+
+```js
+const member = await organizations.members.getByUserId('org_abc', 'aad-user-id');
+```
+
+**Returns:** `Promise<OrgMember | null>`
+
+---
+
+### `organizations.members.add(orgId, member)`
+
+Adds a user to the organization and updates the `userCount` stat.
+
+```js
+const newMember = await organizations.members.add('org_abc', {
+  userId: 'aad-user-id',
+  email: 'jane@acme.com',
+  name: 'Jane Smith',
+  role: 'member'
+});
+```
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `member.userId` | string | Yes | — | Azure AD Object ID |
+| `member.email` | string | Yes | — | User's email address |
+| `member.name` | string | Yes | — | Display name |
+| `member.role` | string | No | `"member"` | `"owner"`, `"admin"`, or `"member"` |
+| `member.avatarUrl` | string | No | `null` | Avatar image URL |
+
+**Returns:** `Promise<OrgMember>`
+
+---
+
+### `organizations.members.updateRole(orgId, userId, newRole)`
+
+```js
+await organizations.members.updateRole('org_abc', 'aad-user-id', 'admin');
+```
+
+**Throws:**
+- `Error('Member not found: {userId}')` if not found.
+- `Error('Cannot remove the last owner')` if demoting the only owner.
+
+**Returns:** `Promise<OrgMember>`
+
+---
+
+### `organizations.members.remove(orgId, userId)`
+
+Removes a member and updates the `userCount` stat.
+
+```js
+await organizations.members.remove('org_abc', 'aad-user-id');
+```
+
+**Throws:**
+- `Error('Member not found: {userId}')` if not found.
+- `Error('Cannot remove the last owner')` if removing the only owner.
+
+**Returns:** `Promise<void>`
+
+---
+
+### `organizations.members.update(orgId, memberId, updates)`
+
+Updates profile fields on an org member record. Use this to update `name`, `avatarUrl`, or other metadata. Note that `memberId` is the document ID, not the user's Azure Object ID.
+
+```js
+const updated = await organizations.members.update('org_abc', 'orgmem_123', {
+  name: 'Jane Doe',
+  avatarUrl: 'https://cdn.example.com/avatars/jane.png'
+});
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization ID |
+| `memberId` | string | Yes | Member document ID (not `userId`) |
+| `updates` | object | Yes | Fields to merge into the member record |
+
+**Returns:** `Promise<OrgMember>`
+
+**Throws:** `Error('Member not found: {memberId}')` if not found.

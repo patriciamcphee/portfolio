@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunksmart_search_plugin_demo=globalThis.webpackChunksmart_search_plugin_demo||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/samples/blog","blogTitle":"Blog","authorsListPath":"/samples/blog/authors"}')}}]);

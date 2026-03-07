@@ -1,0 +1,124 @@
+---
+title: Projects API
+description: CRUD operations for projects, sessions, and tasks in the CosmosDB research container.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+Projects are stored as an array in a single `projects:list` document in the `research` container.
+
+## `projects.getAll()`
+
+**Returns:** `Promise<Project[]>`
+
+---
+
+## `projects.getById(projectId)`
+
+**Returns:** `Promise<Project | null>`
+
+---
+
+## `projects.getByTeam(teamId)`
+
+**Returns:** `Promise<Project[]>`
+
+---
+
+## `projects.getByOrganization(orgId)`
+
+**Returns:** `Promise<Project[]>` — All projects across all teams in the organization.
+
+---
+
+## `projects.getByUserTeams(orgId, userId)`
+
+Returns projects from teams the user belongs to. Use this for "All Teams" views to respect team membership scoping.
+
+```js
+const userProjects = await projects.getByUserTeams('org_abc', 'aad-user-id');
+```
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `orgId` | string | Yes | Organization ID |
+| `userId` | string | Yes | Azure AD Object ID |
+
+**Returns:** `Promise<Project[]>` — Empty array if `orgId` or `userId` is falsy.
+
+**Throws:** Re-throws CosmosDB errors.
+
+---
+
+## `projects.create(project)`
+
+```js
+const newProject = await projects.create({
+  name: 'Mobile Checkout Study',
+  organizationId: 'org_abc',
+  teamId: 'team_xyz',
+  createdBy: 'aad-user-id'
+});
+```
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `project.name` | string | Yes | — | Project name |
+| `project.id` | string | No | `proj_{timestamp}` | Custom ID |
+| `project.organizationId` | string | No | `null` | Organization ID |
+| `project.teamId` | string | No | `null` | Team ID |
+| `project.createdBy` | string | No | `null` | Creator's user ID |
+
+**Returns:** `Promise<Project>` — Updates team `projectCount` stat if `teamId` and `organizationId` are set.
+
+---
+
+## `projects.update(projectId, updates)`
+
+**Throws:** `Error('Project not found: {projectId}')` if not found.
+
+**Returns:** `Promise<Project>`
+
+---
+
+## `projects.delete(projectId)`
+
+Deletes the project and attempts to clean up associated synthesis and document data. Cleanup errors are silently ignored.
+
+**Throws:** `Error('Project not found: {projectId}')` if not found.
+
+**Returns:** `Promise<void>`
+
+---
+
+## `projects.transfer(projectId, newTeamId, newOrgId)`
+
+Moves a project to a different team and updates `projectCount` stats on both the old and new teams.
+
+```js
+await projects.transfer('proj_abc', 'team_new', 'org_abc');
+```
+
+**Throws:** `Error('Project not found: {projectId}')` if not found.
+
+**Returns:** `Promise<void>`
+
+---
+
+## Sessions and tasks
+
+These methods manage embedded `sessions` and `tasks` arrays within a project document.
+
+### `projects.addSession(projectId, session)` / `projects.addTask(projectId, task)` / `projects.updateTask(projectId, taskId, updates)` / `projects.deleteTask(projectId, taskId)`
+
+| Method | Throws |
+|---|---|
+| `addSession` | `Error('Project not found')` |
+| `addTask` | `Error('Project not found')` |
+| `updateTask` | `Error('Project not found')` or `Error('Task not found')` |
+| `deleteTask` | `Error('Project not found')` |
+
+All return `Promise<Project>` (the updated project document), except `deleteTask` which also returns `Promise<Project>`.

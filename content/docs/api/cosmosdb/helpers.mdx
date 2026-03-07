@@ -1,0 +1,34 @@
+---
+title: Helpers and Plan Configuration
+description: ID generation utilities and re-exported plan configuration helpers.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+## ID generation helpers
+
+These are exported for use in other service modules.
+
+| Function | Signature | Description |
+|---|---|---|
+| `generateId(prefix)` | `(string) → string` | Generates `{prefix}_{timestamp}_{random}` |
+| `generateSlug(name)` | `(string) → string` | Converts a name to a lowercase URL-safe slug, max 50 characters |
+| `getNextIdNumber(allItems, projectId, prefix)` | `(array, string\|null, string) → number` | Returns the next sequential number for IDs like `P1`, `H2`, `RQ3` by scanning existing IDs |
+
+---
+
+## Exported plan configuration helpers
+
+Re-exported from `./shared/planLimits` for convenience:
+
+| Export | Description |
+|---|---|
+| `PLAN_LIMITS` | Raw plan configuration object |
+| `getPlanLimits(planId)` | Returns the full plan config for a plan ID |
+| `getLimit(planId, limitType)` | Returns the numeric limit for a specific type |
+| `hasFeature(planId, featureName)` | Returns `boolean` |
+| `isUnlimited(value)` | Returns `true` if `value` is `Infinity` |
+| `getAllPlans()` | Returns all plan configurations |

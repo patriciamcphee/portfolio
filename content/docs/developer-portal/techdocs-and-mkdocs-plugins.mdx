@@ -1,0 +1,139 @@
+---
+title: TechDocs and MkDocs plugins
+description: Explore the plugins bundled in TechDocs and additional options available in Backstage's build environment.
+keywords:
+  - TechDocs
+  - MkDocs
+last_update:
+  date: 03/03/2026
+  author: Patricia McPhee
+draft: false
+doc_type: reference
+---
+
+
+With a docs-as-code approach, documentation lives alongside your software, staying current with each update. TechDocs is built on MkDocs — write your documentation in Markdown, commit it with your code, and access it through the software catalog. This keeps your documentation both discoverable and up to date.
+
+TechDocs uses the `techdocs-core` plugin as its foundation. It bundles a curated set of MkDocs plugins and Markdown extensions into a single package, injected automatically at build time. Backstage also provides additional plugins installed in the TechDocs build environment for use beyond the core defaults.
+
+
+
+## Plugins bundled in techdocs-core
+
+The following plugins and extensions are included in `techdocs-core` and available in every TechDocs site. You do not need to declare these in your `mkdocs.yml` — `techdocs-core` is injected automatically at build time.
+
+### MkDocs plugins
+
+| Plugin | Description |
+|---|---|
+| `search` | Default MkDocs search, powered by lunr.js |
+| `mkdocs-monorepo-plugin` | Builds documentation from multiple directories in a single MkDocs project |
+
+### Markdown extensions
+
+| Extension | Description |
+|---|---|
+| `admonition` | Callout blocks such as notes, warnings, and tips |
+| `toc` | Auto-generates a table of contents from headings |
+| `markdown_inline_graphviz` | Renders inline Graphviz diagrams as SVG or PNG |
+| `plantuml_markdown` | Renders PlantUML diagrams as images |
+| `mdx_truly_sane_lists` | Fixes nested list indentation and paragraph spacing |
+
+### PyMdown extensions
+
+All of the following are available under the `pymdownx.*` namespace.
+
+| Extension | Description |
+|---|---|
+| `pymdownx.caret` | Superscript and `<ins>` tag support |
+| `pymdownx.critic` | Critic Markup for tracked changes |
+| `pymdownx.details` | Collapsible `<details>`/`<summary>` blocks |
+| `pymdownx.emoji` | Emoji via Markdown shortcodes |
+| `pymdownx.superfences` | Enhanced fenced code blocks with nesting support |
+| `pymdownx.inlinehilite` | Syntax highlighting for inline code |
+| `pymdownx.magiclink` | Auto-linkifies URLs, emails, and repository references |
+| `pymdownx.mark` | Highlighted text |
+| `pymdownx.smartsymbols` | ASCII-to-Unicode symbol substitution (e.g., `=/=` → ≠) |
+| `pymdownx.highlight` | Configures syntax highlighting across superfences and inlinehilite |
+| `pymdownx.extra` | PyMdown equivalent of Python Markdown's Extra bundle |
+| `pymdownx.tabbed` | Tabbed content blocks |
+| `pymdownx.tasklist` | Checkboxes in lists |
+| `pymdownx.tilde` | Subscript and `<del>` tag support |
+
+
+
+## Installed plugins
+
+The following plugins have been added to the TechDocs build environment. To use any of these, declare them explicitly in the `plugins` section of your `mkdocs.yml`. When you do, confirm you also include `techdocs-core` — it is normally auto-injected, but explicitly listing any plugins in `mkdocs.yml` disables auto-injection.
+
+```yaml
+plugins:
+  - techdocs-core
+  - table-reader
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+```
+
+### mkdocstrings with mkdocstrings-python
+
+Generates API reference documentation directly from Python docstrings. The `mkdocstrings-python` handler resolves and renders Python source automatically.
+
+To use it, add the following to your `mkdocs.yml`:
+
+```yaml
+plugins:
+  - techdocs-core
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+```
+
+Then reference your Python objects in any Markdown page using the `::: ` identifier syntax:
+
+```markdown
+::: mypackage.mymodule.MyClass
+```
+
+### mkdocs-table-reader-plugin
+
+Lets you embed external data files directly into documentation pages using a simple template tag. Supported formats include CSV, JSON, YAML, Excel (`.xls`, `.xlsx`), TSV, and more.
+
+To use it, add `table-reader` to your `mkdocs.yml`:
+
+```yaml
+plugins:
+  - techdocs-core
+  - table-reader
+```
+
+Then reference your data file in any Markdown page:
+
+```markdown
+{{ read_csv('data/my-table.csv') }}
+```
+
+The path resolves relative to your `mkdocs.yml`, your `docs/` directory, or the Markdown source file — whichever matches first.
+
+
+## TechDocs Addons
+
+TechDocs Addons are React components that run in the Backstage frontend, enhancing how documentation is displayed in the reader. They operate at the UI layer — not the MkDocs build layer — so they are configured at the Backstage app level, not in `mkdocs.yml`.
+
+### backstage-plugin-techdocs-addon-mermaid
+
+Adds zoom and pan support for Mermaid diagrams rendered in the TechDocs reader. Write your Mermaid diagrams in Markdown as normal — this addon enhances how they appear when viewed in Backstage.
+
+```markdown
+​```mermaid
+graph TD
+    A[Start] --> B[Process]
+    B --> C[End]
+​```
+```
+
+:::note
+No `mkdocs.yml` configuration is required for this addon.
+:::

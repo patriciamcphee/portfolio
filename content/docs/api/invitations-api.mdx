@@ -1,0 +1,261 @@
+---
+title: Invitations API
+description: The Invitations API manages team invitation workflows, including verification, acceptance, and listing of pending invitations.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+:::note[About this sample]
+REST API reference for a team invitation workflow covering token verification, invitation acceptance, and pending invitation retrieval. Demonstrates documenting multi-step workflows with mixed authentication requirements — including unauthenticated pre-login flows alongside authenticated operations.
+:::
+
+The Invitations API manages team invitation workflows. It allows unauthenticated users to verify an invitation token before signing in, authenticated users to accept pending invitations and join a team, and authenticated users to list all pending invitations addressed to their account.
+
+Accepting an invitation automatically adds the user to the parent organization if they are not already a member, then adds them to the invited team. A welcome email is sent if the email service is configured.
+
+---
+
+## Base URL
+
+```
+/api/invitations
+```
+
+---
+
+## Authentication
+
+Token verification (`GET /verify/:token`) does not require authentication. All other routes require a valid authenticated user extracted from the request by `extractUserInfo`.
+
+---
+
+## CORS
+
+The handler sets the following CORS headers on all responses and handles `OPTIONS` preflight requests with `204 No Content`:
+
+| Header | Value |
+|---|---|
+| `Access-Control-Allow-Origin` | `*` |
+| `Access-Control-Allow-Methods` | `GET, POST, OPTIONS` |
+| `Access-Control-Allow-Headers` | `Content-Type, Authorization` |
+
+---
+
+## Endpoints
+
+### Verify an invitation token
+
+Returns the details of a pending, unexpired invitation. Use this endpoint to display invitation context — such as the team name, organization, and inviting user — before prompting the recipient to authenticate and accept.
+
+Authentication is not required for this endpoint.
+
+```
+GET /api/invitations/verify/{token}
+```
+
+**Path parameters**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `token` | string | Yes | The invitation token from the invitation link. |
+
+**Response — 200 OK**
+
+```json
+{
+  "valid": true,
+  "email": "user@example.com",
+  "role": "member",
+  "team": {
+    "id": "team_001",
+    "name": "Engineering",
+    "description": "Core engineering team.",
+    "icon": "⚙️",
+    "color": "#4A90E2"
+  },
+  "organization": {
+    "id": "org_abc",
+    "name": "Acme Corp"
+  },
+  "invitedBy": "Jane Smith",
+  "expiresAt": "2024-12-01T10:00:00.000Z"
+}
+```
+
+If the team or organization record cannot be retrieved, `team` or `organization` returns `null`. If the inviter's name is unavailable, `invitedBy` returns `"A team member"`.
+
+---
+
+### Accept an invitation
+
+Accepts a pending invitation and adds the authenticated user to the team. If the user is not already a member of the parent organization, the handler adds them automatically before processing the team membership.
+
+Requires authentication.
+
+```
+POST /api/invitations/accept/{token}
+```
+
+**Path parameters**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `token` | string | Yes | The invitation token from the invitation link. |
+
+**Request body**
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `name` | string | No | The display name for the user. Falls back to the authenticated user's email if not provided. |
+
+**Example request**
+
+```json
+{
+  "name": "Alex Johnson"
+}
+```
+
+**Behavior on accept**
+
+1. Validates that the invitation exists, is `pending`, and has not expired.
+2. Checks whether the authenticated user is already an organization member. If not, adds them with the role `member`.
+3. Calls `teams.invitations.accept` to add the user to the team with the role specified in the invitation.
+4. Sends a welcome email non-blocking. Email failure does not affect the response.
+
+> **Email matching:** The handler does not enforce that the authenticated user's email matches the invited email. [VERIFY: confirm this is the intended behavior for your deployment. The source code contains a commented-out block that enforces email matching — enable it if required.]
+
+**Response — 200 OK**
+
+```json
+{
+  "success": true,
+  "message": "You've joined Engineering!",
+  "team": {
+    "id": "team_001",
+    "name": "Engineering",
+    "slug": "engineering",
+    "icon": "⚙️",
+    "color": "#4A90E2"
+  },
+  "role": "member"
+}
+```
+
+If the team record cannot be retrieved after acceptance, `team` returns `null` and `message` returns `"You've joined the team!"`.
+
+---
+
+### List pending invitations
+
+Returns all valid, unexpired invitations addressed to the authenticated user's email. Results are enriched with team and organization details.
+
+Requires authentication.
+
+```
+GET /api/invitations
+```
+
+> **Performance note:** This endpoint executes a cross-partition query against the `teams` container filtered by email. This query might be slow at scale. [VERIFY: evaluate indexing strategy for `email` and `status` fields if performance is a concern.]
+
+**Response — 200 OK**
+
+```json
+{
+  "invitations": [
+    {
+      "id": "inv_001",
+      "token": "abc123xyz",
+      "email": "user@example.com",
+      "role": "member",
+      "team": {
+        "id": "team_001",
+        "name": "Engineering",
+        "icon": "⚙️",
+        "color": "#4A90E2"
+      },
+      "organization": {
+        "id": "org_abc",
+        "name": "Acme Corp"
+      },
+      "invitedBy": "Jane Smith",
+      "expiresAt": "2024-12-01T10:00:00.000Z",
+      "createdAt": "2024-11-01T10:00:00.000Z"
+    }
+  ]
+}
+```
+
+The response excludes invitations that have already expired. Invitations with a status other than `pending` are excluded by the database query. If no valid invitations exist, `invitations` returns an empty array.
+
+---
+
+## Error responses
+
+All error responses return JSON.
+
+```json
+{
+  "error": "Human-readable message."
+}
+```
+
+| Status code | Cause |
+|---|---|
+| `400 Bad Request` | The invitation has already been used, has expired, or the token or request data is invalid. |
+| `401 Unauthorized` | No valid authenticated user found in the request. |
+| `404 Not Found` | The token does not match any invitation, or the requested endpoint does not exist. |
+| `409 Conflict` | The authenticated user is already a member of the team. |
+| `500 Internal Server Error` | An unhandled server-side error. The response includes a `details` field with the error message. |
+
+**Already-used invitation — 400**
+
+```json
+{
+  "error": "Invitation has already been used",
+  "status": "completed"
+}
+```
+
+**Already a member — 409**
+
+```json
+{
+  "error": "You are already a member of this team"
+}
+```
+
+**Server error — 500**
+
+```json
+{
+  "error": "Internal server error",
+  "details": "Connection timeout."
+}
+```
+
+---
+
+## Email service
+
+The handler imports `emailService` at startup. If the module is not present or not configured, the import failure is caught and logged as a warning. All invitation operations continue to function without the email service.
+
+When `emailService` is available and configured, the handler sends a welcome email after a successful acceptance. Email failures are logged as warnings and do not affect the `200` response returned to the caller.
+
+[VERIFY: document the interface expected by `emailService.sendTeamWelcome(member, team)` and the behavior of `emailService.isConfigured()`.]
+
+---
+
+## Dependencies
+
+| Dependency | Description |
+|---|---|
+| `cosmosService.teams` | Data access layer for team and invitation operations, including `getById`, `invitations.getByToken`, and `invitations.accept`. |
+| `cosmosService.organizations` | Data access layer for organization and membership operations, including `getById`, `members.getByUserId`, and `members.add`. |
+| `cosmosService.containers.teams` | Direct CosmosDB container reference used for the cross-partition invitation query in the list endpoint. |
+| `cosmosService.extractUserInfo` | Extracts the authenticated user's identity from the request. Returns `null` if no valid user is present. |
+| `emailService` | Optional. Sends welcome emails after successful invitation acceptance. Loaded at startup with graceful fallback if unavailable. |
+
+[VERIFY: document the full schema returned by `extractUserInfo`, specifically the `userId` and `userDetails` fields used by this handler.]

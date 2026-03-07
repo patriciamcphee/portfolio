@@ -1,0 +1,49 @@
+---
+title: Participants and Research Questions
+description: API reference for managing participants and research questions in the CosmosDB research container.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+## Participants API
+
+Participants are stored per-project under the key `participants:{projectId}`.
+
+### `participants.getAll(projectId)` → `Promise<Participant[]>`
+
+### `participants.getById(projectId, participantId)` → `Promise<Participant | null>`
+
+### `participants.create(projectId, participant)` → `Promise<Participant>`
+
+Auto-generates a sequential ID with the format `P{n}` (e.g., `P1`, `P2`).
+
+### `participants.update(projectId, participantId, updates)` → `Promise<Participant>`
+
+**Throws:** `Error('Participant not found: {participantId}')`
+
+### `participants.delete(projectId, participantId)` → `Promise<void>`
+
+**Throws:** `Error('Participant not found: {participantId}')`
+
+---
+
+## Research questions API
+
+Research questions are stored globally under the key `research:questions`.
+
+### `researchQuestions.getAll()` → `Promise<ResearchQuestion[]>`
+
+### `researchQuestions.create(question)` → `Promise<ResearchQuestion>`
+
+Auto-generates a sequential ID with the format `RQ{n}`, scoped to the `question.projectId`.
+
+### `researchQuestions.update(questionId, updates)` → `Promise<ResearchQuestion>`
+
+**Throws:** `Error('Research question not found: {questionId}')`
+
+### `researchQuestions.delete(questionId)` → `Promise<void>`
+
+**Throws:** `Error('Research question not found: {questionId}')`

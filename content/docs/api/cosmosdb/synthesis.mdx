@@ -1,0 +1,89 @@
+---
+title: Synthesis API
+description: API reference for managing hypotheses, notes, clusters, and research questions synthesis data per project.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+The `synthesis` object provides both generic item-level operations and typed sub-object APIs for backward compatibility.
+
+## Supported types
+
+| Type | ID format | Description |
+|---|---|---|
+| `hypotheses` | `H{n}` | Research hypotheses |
+| `notes` | `note_{timestamp}` | Synthesis sticky notes |
+| `clusters` | `clusters_{timestamp}` | Affinity clusters |
+| `questions` | `RQ{n}` | Project-scoped research questions |
+
+---
+
+## Generic functions
+
+### `synthesis.initialize(projectId)`
+
+Ensures all four synthesis collections exist for a project, creating empty arrays for any that are missing.
+
+```js
+await synthesis.initialize('proj_abc');
+```
+
+**Returns:** `Promise<void>`
+
+---
+
+### `synthesis.get(projectId, type)`
+
+```js
+const hypotheses = await synthesis.get('proj_abc', 'hypotheses');
+```
+
+**Returns:** `Promise<object[]>`
+
+---
+
+### `synthesis.addItem(projectId, type, itemData)`
+
+```js
+const newHypothesis = await synthesis.addItem('proj_abc', 'hypotheses', {
+  statement: 'Users prefer guest checkout',
+  status: 'untested'
+});
+```
+
+**Returns:** `Promise<object>` — The created item with an auto-generated ID.
+
+---
+
+### `synthesis.updateItem(projectId, type, itemId, updates)`
+
+```js
+const updated = await synthesis.updateItem('proj_abc', 'hypotheses', 'H1', {
+  status: 'validated'
+});
+```
+
+**Throws:** `Error('{type} item not found: {itemId}')` if not found.
+
+**Returns:** `Promise<object>`
+
+---
+
+### `synthesis.deleteItem(projectId, type, itemId)`
+
+**Throws:** `Error('{type} item not found: {itemId}')` if not found.
+
+**Returns:** `Promise<void>`
+
+---
+
+## Legacy sub-object APIs
+
+These mirror the standalone `hypotheses`, `stickyNotes`, and cluster APIs and delegate to them internally.
+
+- `synthesis.hypotheses` → delegates to `hypotheses.*`
+- `synthesis.notes` → delegates to `stickyNotes.*` (includes `bulkUpdate`)
+- `synthesis.clusters.getAll(projectId)` / `synthesis.clusters.save(projectId, clusters)`

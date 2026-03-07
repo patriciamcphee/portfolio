@@ -1,0 +1,31 @@
+Like reusing code, content reuse allows you to manage and maintain your documentation efficiently. In Alchemy Docs, content reuse enables scalability by allowing you to reuse pieces of content across multiple files.
+
+:::info IMPORTANT
+
+The instructions below apply to Docusaurus 2x. If you are using a different platform, such as mkdocs, follow the relevant platform-specific guidelines.
+
+:::
+
+Imagine you have a markdown file called `_pull-request-process.mdx` that contains detailed guidelines for submitting pull requests. Instead of copying these guidelines into every related document, you can create a "partial" file and reuse it across multiple places.
+
+1. **Create a partial file** in the `/docs/includes` folder using an underscore prefix and the .mdx extension. Write the content, such as the pull request guidelines, in Markdown.
+    
+    Naming the file with an underscore (_) prefix marks it as a reusable component rather than a standalone page.
+    
+    ```markdown
+    _pull-request-process.mdx
+    
+    ...guidelines for submitting pull requests...
+    
+    ```
+    
+2. **Import the partial** in any markdown file where you want to use this content, use an `import` statement to bring in the partial:
+    
+    ```markdown
+    import PullRequestProcess from './_pull-request-process.mdx';
+    
+    <PullRequestProcess />
+    
+    ```
+    
+Whenever the partial file is updated, all the documents that include it are also automatically updated. This approach saves time, ensures consistency, and makes your documentation easier to maintain.

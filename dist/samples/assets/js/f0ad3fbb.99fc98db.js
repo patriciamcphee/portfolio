@@ -1,1 +1,0 @@
-(globalThis.webpackChunksmart_search_plugin_demo=globalThis.webpackChunksmart_search_plugin_demo||[]).push([[2969],{14834:()=>{},20922:()=>{},26903:()=>{},32413:()=>{}}]);

@@ -1,0 +1,646 @@
+---
+title: Scout AI REST API
+description: The Scout AI REST API provides endpoints for managing AI agents, including creation, retrieval, updating, deletion, and execution of agents within a project.
+keywords:
+  - scout ai
+  - api
+  - agents
+last_update:
+  date: 08/22/2024
+  author: Patricia McPhee
+hide_table_of_contents: true
+doc_type: reference
+---
+
+:::info[About this sample]
+REST API reference for an Azure Function-based AI research assistant powered by Anthropic Claude. Demonstrates endpoint documentation with request/response schemas, parameter tables, error handling patterns, and environment configuration — covering 11 endpoints across chat, synthesis, persona generation, and research analysis.
+:::
+
+Scout AI is an Azure Function–based REST API that provides AI-powered UX research assistance using Anthropic Claude. It exposes endpoints for chat, research synthesis, report generation, and artifact creation — including personas, journey maps, and interview guides.
+
+Use this API to integrate AI-assisted research analysis into UX tooling, internal research platforms, or automation pipelines.
+
+---
+
+## Base URL
+
+```
+/api/scout-ai
+```
+
+
+
+**AI model:** Configured via `ANTHROPIC_MODEL` environment variable. Defaults to `claude-sonnet-4-20250514`.
+
+**Content limit:** 100,000 characters (~25,000 tokens) per request.
+
+---
+
+## Requirements
+
+| Requirement | Details |
+|---|---|
+| Runtime | Node.js (Azure Functions) |
+| SDK | `@anthropic-ai/sdk` |
+| Environment variable | `ANTHROPIC_API_KEY` — required for all non-health endpoints |
+| Optional variable | `ANTHROPIC_MODEL` — overrides the default model |
+
+---
+
+## CORS
+
+All responses include the following CORS headers:
+
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: Content-Type
+```
+
+Send an `OPTIONS` preflight request to any endpoint to receive a `200` response with these headers.
+
+---
+
+## Endpoints
+
+### Health check
+
+```
+GET /api/scout-ai/health
+```
+
+Returns the service status and confirms whether the Anthropic API key is configured. No authentication is required.
+
+**Response**
+
+```json
+{
+  "status": "ok",
+  "service": "Scout AI",
+  "anthropicConfigured": true
+}
+```
+
+---
+
+### Generic Claude proxy
+
+```
+POST /api/scout-ai
+```
+
+Sends a single-turn prompt to Claude with a custom system prompt and user prompt. Use this endpoint for one-off queries that don't fit a specialized endpoint.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `systemPrompt` | string | Yes | — | System-level instruction for Claude |
+| `userPrompt` | string | Yes | — | User message to send |
+| `maxTokens` | number | No | `4096` | Maximum tokens in the response |
+| `temperature` | number | No | `0.7` | Sampling temperature (0–1) |
+
+**Example request**
+
+```json
+{
+  "systemPrompt": "You are a UX research assistant. Be concise.",
+  "userPrompt": "What are the most common methods for unmoderated usability testing?",
+  "maxTokens": 1024,
+  "temperature": 0.5
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "The most common methods include..."
+}
+```
+
+---
+
+### Chat stream
+
+```
+POST /api/scout-ai/stream
+```
+
+Sends a multi-turn conversation to Claude and returns the response as plain text. Despite the endpoint name, the response is not streamed — it returns the full Claude response body after generation completes. [VERIFY: confirm whether true HTTP streaming is planned or if the "stream" name is legacy]
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `userPrompt` | string | Yes | — | The current user message |
+| `systemPrompt` | string | No | Scout AI default | System-level instruction |
+| `messages` | array | No | `[]` | Prior conversation turns (see format below) |
+| `maxTokens` | number | No | `4096` | Maximum tokens in the response |
+| `temperature` | number | No | `0.7` | Sampling temperature (0–1) |
+| `includeCitations` | boolean | No | `true` | Appends citation formatting instructions to the system prompt |
+
+**`messages` array item format**
+
+```json
+{
+  "role": "user",
+  "content": "What themes emerged from our pilot sessions?"
+}
+```
+
+Accepted `role` values: `"user"`, `"assistant"`.
+
+**Example request**
+
+```json
+{
+  "systemPrompt": "You are Scout AI, a UX research assistant.",
+  "userPrompt": "Summarize the key pain points from these notes.",
+  "messages": [
+    { "role": "user", "content": "I have 3 session notes to analyze." },
+    { "role": "assistant", "content": "Go ahead and share them." }
+  ],
+  "includeCitations": true
+}
+```
+
+**Response**
+
+Content-Type: `text/plain; charset=utf-8`
+
+```
+Based on the session notes, the key pain points are...
+```
+
+**Content size limit**
+
+The combined character length of `systemPrompt`, `userPrompt`, and all `messages[].content` values must not exceed 100,000 characters. Requests that exceed this limit return `413`.
+
+---
+
+### Rewrite text
+
+```
+POST /api/scout-ai/rewrite
+```
+
+Rewrites and improves a block of text. Returns only the improved text with no preamble.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `text` | string | Yes | — | The text to rewrite |
+| `focus` | string | No | General clarity, conciseness, grammar | Custom rewrite instruction to override the default behavior |
+
+**Example request**
+
+```json
+{
+  "text": "Users was confused by the navigation and couldn't find things easily.",
+  "focus": "Rewrite as a formal research finding suitable for a stakeholder report."
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "result": "Participants experienced difficulty navigating the interface and struggled to locate key features."
+}
+```
+
+---
+
+### Generate findings report
+
+```
+POST /api/scout-ai/report
+```
+
+Generates a structured research findings report from synthesis notes and hypotheses.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name used as report title |
+| `synthesisNotes` | array | No | `[]` | Synthesis note objects or strings. Capped at 20 items; content truncated at 500 characters each |
+| `hypotheses` | array | No | `[]` | Hypothesis objects with `statement` and `status` fields |
+| `reportType` | string | No | `"detailed"` | Report format: `"detailed"`, `"executive"`, or `"presentation"` |
+
+**`reportType` values**
+
+| Value | Description |
+|---|---|
+| `"detailed"` | Comprehensive analysis with full findings and recommendations |
+| `"executive"` | Concise summary (1–2 pages) focused on key insights |
+| `"presentation"` | Slide-style format with headers and bullet points |
+
+**Example request**
+
+```json
+{
+  "projectName": "Mobile Checkout Study",
+  "reportType": "executive",
+  "synthesisNotes": [
+    { "content": "P1 struggled to locate the promo code field..." },
+    { "content": "P2 abandoned cart at payment step due to unclear error message..." }
+  ],
+  "hypotheses": [
+    { "statement": "Users expect a guest checkout option", "status": "untested" }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "# Executive Summary\n\n..."
+}
+```
+
+---
+
+### Summarize session notes
+
+```
+POST /api/scout-ai/session-summary
+```
+
+Summarizes one or more research session notes using a specified analysis type.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name included in the output |
+| `sessionNotes` | array | Yes | — | Session note objects with `title` and `content` fields. Must not be empty |
+| `summaryType` | string | No | `"overview"` | Analysis type (see values below) |
+| `templateStructure` | any | No | — | [VERIFY: this field is accepted but unused in the current implementation] |
+
+**`summaryType` values**
+
+| Value | Session limit | Content limit per session | Description |
+|---|---|---|---|
+| `"overview"` | 10 | 2,000 chars | Executive summary, key findings, pain points, and recommendations |
+| `"detailed"` | 10 | 2,000 chars | Participant-by-participant breakdown, task analysis, and severity ratings |
+| `"themes"` | 10 | 2,000 chars | Thematic analysis with prevalence, contradictions, and relationships |
+| `"quotes"` | 10 | 2,000 chars | Extracts impactful quotes grouped by theme with sentiment analysis |
+| `"findings-report"` | 8 | 2,500 chars | Full structured findings report with severity ratings and recommendation tables |
+
+**`sessionNotes` array item format**
+
+```json
+{
+  "title": "Session P1 – Sarah",
+  "content": "Participant had difficulty locating the filter controls..."
+}
+```
+
+**Example request**
+
+```json
+{
+  "projectName": "Onboarding Flow Study",
+  "summaryType": "findings-report",
+  "sessionNotes": [
+    {
+      "title": "Session P1 – Sarah",
+      "content": "Sarah completed task 1 successfully but struggled with task 2..."
+    },
+    {
+      "title": "Session P2 – Marcus",
+      "content": "Marcus skipped the tutorial entirely and went directly to settings..."
+    }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "# Findings Report: Onboarding Flow Study\n\n**Date:** ..."
+}
+```
+
+---
+
+### Generate user personas
+
+```
+POST /api/scout-ai/personas
+```
+
+Generates user personas from research data.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name for context |
+| `researchData` | array | No | `[]` | Research items as strings or objects with `title` and `content`. Capped at 10 items; content truncated at 1,000 characters each |
+| `count` | number | No | `3` | Number of personas to generate |
+
+**Example request**
+
+```json
+{
+  "projectName": "B2B Dashboard Study",
+  "count": 2,
+  "researchData": [
+    {
+      "title": "Session P1",
+      "content": "Participant is a data analyst who exports reports daily..."
+    }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "## Persona 1: The Analyst\n\n**Name:** Jordan Lee..."
+}
+```
+
+Each persona includes name, age, occupation, background, goals, pain points, behaviors, a representative quote, and relevant scenarios.
+
+---
+
+### Create journey map
+
+```
+POST /api/scout-ai/journey-map
+```
+
+Creates a customer journey map from research data.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name for context |
+| `researchData` | array | No | `[]` | Research items as strings or objects with `title` and `content`. Capped at 8 items; content truncated at 1,500 characters each |
+
+**Example request**
+
+```json
+{
+  "projectName": "Insurance Claims Portal",
+  "researchData": [
+    {
+      "title": "Session P3",
+      "content": "User first heard about the portal from an email notification..."
+    }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "## Customer Journey Map: Insurance Claims Portal\n\n### Phase 1: Awareness..."
+}
+```
+
+The journey map includes phases, user actions, touchpoints, emotional state, pain points, improvement opportunities, and moments of truth.
+
+---
+
+### Extract themes
+
+```
+POST /api/scout-ai/themes
+```
+
+Extracts and analyzes qualitative themes from research data.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name for context |
+| `researchData` | array | No | `[]` | Research items as strings or objects with `title` and `content`. Capped at 10 items; content truncated at 1,500 characters each |
+
+**Example request**
+
+```json
+{
+  "projectName": "Remote Work Tools Study",
+  "researchData": [
+    { "title": "Session P1", "content": "Participant mentioned feeling overwhelmed by notifications..." },
+    { "title": "Session P2", "content": "Found async communication essential but hard to track..." }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "## Themes: Remote Work Tools Study\n\n### Theme 1: Notification Fatigue..."
+}
+```
+
+Output includes 3–7 major themes with supporting evidence, theme relationships, outliers, and recommendations.
+
+---
+
+### Generate interview guide
+
+```
+POST /api/scout-ai/interview-guide
+```
+
+Generates a structured interview guide based on research objectives and session duration.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | Yes | — | Project name for context |
+| `objectives` | array | No | `[]` | Research objective strings. Capped at 10 items |
+| `duration` | number | No | `60` | Total session duration in minutes |
+
+**Example request**
+
+```json
+{
+  "projectName": "Expense Reporting Tool",
+  "duration": 45,
+  "objectives": [
+    "Understand how users currently submit expense reports",
+    "Identify pain points in the approval workflow"
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "# Interview Guide: Expense Reporting Tool (45 min)\n\n## Introduction (5 min)..."
+}
+```
+
+The guide includes an introduction script, warm-up questions, objective-based main questions with follow-up probes, wrap-up questions, a closing script, and interviewer tips.
+
+---
+
+### Analyze hypotheses
+
+```
+POST /api/scout-ai/hypotheses
+```
+
+Evaluates research hypotheses against session data and returns evidence-based status recommendations.
+
+**Request body**
+
+| Field | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `projectName` | string | No | `"Research Project"` | Project name for context |
+| `hypotheses` | array | Yes | — | Hypothesis objects. Must not be empty |
+| `researchData` | array | Yes | — | Research items to analyze against. Must not be empty. Capped at 5 items; content truncated at 2,000 characters each |
+
+**`hypotheses` array item format**
+
+```json
+{
+  "statement": "Users prefer to complete checkout as a guest rather than creating an account.",
+  "status": "untested"
+}
+```
+
+Accepted `status` values: `"validated"`, `"invalidated"`, `"partial"`, `"untested"`.
+
+**Example request**
+
+```json
+{
+  "projectName": "E-commerce Checkout Study",
+  "hypotheses": [
+    {
+      "statement": "Users prefer guest checkout over account creation.",
+      "status": "untested"
+    }
+  ],
+  "researchData": [
+    {
+      "title": "Session P1",
+      "content": "Participant immediately looked for a 'Continue as Guest' option..."
+    }
+  ]
+}
+```
+
+**Response**
+
+```json
+{
+  "success": true,
+  "response": "### Hypothesis 1: \"Users prefer guest checkout over account creation.\"\n\n**Recommended Status:** validated..."
+}
+```
+
+Output includes per-hypothesis evidence, recommended status, confidence level, and a summary across all hypotheses.
+
+---
+
+## Citations
+
+When `includeCitations` is `true` on the `/stream` endpoint, or when any synthesis endpoint is called, Claude is instructed to cite evidence using bracketed participant identifiers.
+
+**Format examples:**
+
+```
+[Session P1]
+[P2]
+[Session Notes - P3]
+[Participant 4]
+```
+
+This format is enforced by system prompt instruction, not validated in the response. Actual citation accuracy depends on the content and structure of the input data. [VERIFY]
+
+---
+
+## Error handling
+
+All error responses follow this structure:
+
+```json
+{
+  "success": false,
+  "error": "Description of the error"
+}
+```
+
+### HTTP status codes
+
+| Status | Condition |
+|---|---|
+| `200` | Success |
+| `400` | Missing required fields or invalid request |
+| `404` | Unknown endpoint action |
+| `405` | Non-POST request to a POST-only endpoint |
+| `413` | Request content exceeds the 100,000-character limit |
+| `429` | Anthropic API rate limit exceeded |
+| `500` | Internal server error or unconfigured API key |
+
+### Common errors
+
+**Missing API key**
+
+```json
+{
+  "success": false,
+  "error": "Anthropic API key is not configured or invalid"
+}
+```
+
+Ensure `ANTHROPIC_API_KEY` is set in the Azure Function application settings before invoking any endpoint other than `/health`.
+
+**Request too large**
+
+```json
+{
+  "success": false,
+  "error": "Request too large (120k chars). Try with fewer or shorter session notes. Maximum is ~100k chars."
+}
+```
+
+Reduce the number of session notes or truncate content before sending.
+
+**Rate limit**
+
+```json
+{
+  "success": false,
+  "error": "Rate limit exceeded. Please try again in a moment."
+}
+```
+
+Retry the request after a brief delay. [VERIFY: confirm whether the application implements any retry logic]
+
+---
+
+## Environment variables
+
+| Variable | Required | Default | Description |
+|---|---|---|---|
+| `ANTHROPIC_API_KEY` | Yes | — | Anthropic API key used to authenticate all Claude requests |
+| `ANTHROPIC_MODEL` | No | `claude-sonnet-4-20250514` | Claude model identifier |

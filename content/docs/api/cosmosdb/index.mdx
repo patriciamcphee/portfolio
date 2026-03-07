@@ -1,0 +1,71 @@
+---
+title: CosmosDB Service Module
+description: Documentation for the cosmosService.js module, which provides a data access layer for Azure CosmosDB in the InsightHub platform. Includes API reference for organizations, teams, projects, participants, documents, synthesis, billing, and feedback management.
+hide_table_of_contents: false
+last_update:
+  date: 01/20/2026
+  author: Patricia McPhee
+---
+
+
+:::note[About this sample]
+This reference documents a data access layer for a multi-tenant SaaS platform, written for backend developers integrating with the system. It covers 60+ methods across 11 service domains — organizations, teams, projects, participants, documents, synthesis, feedback, billing, authentication, and more — structured from source code analysis and organized by domain rather than alphabetically.
+:::
+
+`cosmosService.js` is a multi-tenant data access layer for Azure CosmosDB (NoSQL API). It provides structured APIs for organizations, teams, projects, research data, synthesis, documents, billing, and user feedback within the InsightHub platform.
+
+Use this module to read and write all application data. It abstracts CosmosDB container operations behind typed service objects and exports utility functions for authentication, plan enforcement, and usage tracking.
+
+### Container architecture
+
+| Container | Partition key | Stores |
+|---|---|---|
+| `research` | `/projectId` | Projects, participants, documents, synthesis data, feedback, survey templates |
+| `organizations` | `/id` | Organization settings, plans, billing, usage |
+| `teams` | `/organizationId` | Teams, team members, org members, invitations |
+
+### Dependencies
+
+| Dependency | Purpose |
+|---|---|
+| `@azure/cosmos` | CosmosDB client |
+| `crypto` | Secure invitation token generation |
+| `./emailService` | Invitation and welcome emails (lazy-loaded) |
+| `./shared/planLimits` | Plan configuration and limit helpers |
+
+---
+
+## Environment variables
+
+| Variable | Required | Default | Description |
+|---|---|---|---|
+| `COSMOS_DB_ENDPOINT` | Yes | — | CosmosDB account endpoint URL |
+| `COSMOS_DB_KEY` | Yes | — | CosmosDB account key |
+| `COSMOS_DB_DATABASE` | No | `"insighthub"` | Database name |
+| `COSMOS_DB_CONTAINER` | No | `"research"` | Research container name |
+| `COSMOS_DB_ORGANIZATIONS_CONTAINER` | No | `"organizations"` | Organizations container name |
+| `COSMOS_DB_TEAMS_CONTAINER` | No | `"teams"` | Teams container name |
+| `SKIP_AUTH` | No | — | Set to `"true"` to bypass authentication in local development |
+| `DEV_TENANT_ID` | No | `"local-dev-tenant"` | Tenant ID used when `SKIP_AUTH` is `"true"` |
+| `DEV_USER_ID` | No | `"local-dev-user"` | User ID used when `SKIP_AUTH` is `"true"` |
+| `DEV_USER_EMAIL` | No | `"dev@localhost"` | User email used when `SKIP_AUTH` is `"true"` |
+| `DEV_ORG_ID` | No | `"dev-org-001"` | Organization ID used when `SKIP_AUTH` is `"true"` |
+
+---
+
+## Usage
+
+```js
+const {
+  organizations,
+  teams,
+  projects,
+  participants,
+  validateOrgAccess,
+  checkLimit,
+  initializeDatabase
+} = require('./cosmosService');
+
+// Initialize containers before first use
+await initializeDatabase();
+```

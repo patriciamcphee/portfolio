@@ -1,0 +1,23 @@
+Generic descriptions like "the name of XYZ" do not provide meaningful guidance. Descriptions should indicate what the user needs to input or select.
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+  <div className="flex flex-col gap-3">
+    <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+      <div className="px-5 py-3 bg-utility-green-20 border-b border-(--border)">
+        <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
+      </div>
+      <div className="px-5 py-4 text-sm text-(--foreground)">
+        <p>Enter a unique name for the microservice, for example, 'payment-service'.</p>
+      </div>
+    </div>
+    <p className="text-sm text-(--muted-foreground) m-0"><b>Why this is better</b>: This version provides context ("unique name") and an example, making it easier for the user to understand what is expected.</p>
+  </div>
+  <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
+    <div className="px-5 py-3 bg-utility-red-20 border-b border-(--border)">
+      <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
+    </div>
+    <div className="px-5 py-4 text-sm text-(--foreground)">
+      <p>The name of XYZ.</p>
+    </div>
+  </div>
+</div>

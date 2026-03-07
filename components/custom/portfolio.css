@@ -1,0 +1,1372 @@
+/* ==================== PORTFOLIO COMPONENT STYLES ==================== */
+/* Merged from ProjectDetail.css and JiraToolkit.css */
+/* Dark mode: uses .dark class (next-themes) */
+/* Generic classes scoped under .project-detail-page */
+
+/* ---- Prose reset ---- */
+.prose .project-detail-page,
+.prose .jira-toolkit-page {
+  max-width: none;
+}
+
+.prose .project-detail-page h1,
+.prose .project-detail-page h2,
+.prose .project-detail-page h3,
+.prose .project-detail-page h4,
+.prose .project-detail-page p,
+.prose .project-detail-page ul,
+.prose .project-detail-page ol,
+.prose .project-detail-page li,
+.prose .project-detail-page img,
+.prose .jira-toolkit-page h1,
+.prose .jira-toolkit-page h2,
+.prose .jira-toolkit-page h3,
+.prose .jira-toolkit-page h4,
+.prose .jira-toolkit-page p,
+.prose .jira-toolkit-page ul,
+.prose .jira-toolkit-page ol,
+.prose .jira-toolkit-page li,
+.prose .jira-toolkit-page img {
+  margin: revert;
+  padding: revert;
+  font-size: revert;
+  font-weight: revert;
+  line-height: revert;
+  color: revert;
+  max-width: none;
+}
+
+.prose .project-detail-page a,
+.prose .jira-toolkit-page a {
+  text-decoration: none;
+}
+
+/* ==================== PROJECT DETAIL PAGE ==================== */
+
+.project-detail-page {
+  background-color: #ffffff;
+  color: #244651;
+}
+
+.dark .project-detail-page {
+  background-color: var(--color-neutral-slate-900);
+  color: #ffffff;
+}
+
+/* Metrics Disclaimer */
+.project-detail-page .metrics-disclaimer {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.dark .project-detail-page .metrics-disclaimer {
+  background: rgba(245, 158, 11, 0.2);
+  border-left-color: #fbbf24;
+  color: #e0e0e0;
+}
+
+/* Project Hero */
+.project-detail-page .project-hero {
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+
+.dark .project-detail-page .project-hero {
+  background-color: var(--color-neutral-slate-900);
+}
+
+.project-detail-page .project-hero-padded {
+  padding-top: 2rem;
+}
+
+.project-detail-page .project-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.project-detail-page .project-category-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #244651;
+  color: white;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dark .project-detail-page .project-category-badge {
+  background: #3d7689;
+}
+
+.project-detail-page .project-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #244651 !important;
+}
+
+.dark .project-detail-page .project-title {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page .project-title {
+    font-size: 2rem;
+  }
+}
+
+.project-detail-page .project-subtitle {
+  font-size: 1.25rem;
+  color: #444444;
+  margin-bottom: 2rem;
+}
+
+.dark .project-detail-page .project-subtitle {
+  color: #b0b0b0;
+}
+
+.project-detail-page .project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-detail-page .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555555;
+}
+
+.dark .project-detail-page .meta-item {
+  color: #b0b0b0;
+}
+
+.project-detail-page .meta-item svg {
+  color: #647555;
+}
+
+.dark .project-detail-page .meta-item svg {
+  color: #3d7689;
+}
+
+.project-detail-page .project-hero-image {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .project-detail-page .project-hero-image {
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-detail-page .project-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Headings */
+.project-detail-page h2 {
+  font-size: 2rem;
+  color: #244651;
+  margin-bottom: 1.5rem;
+}
+
+.dark .project-detail-page h2 {
+  color: #3d7689;
+}
+
+.project-detail-page h3 {
+  color: #244651;
+}
+
+.dark .project-detail-page h3 {
+  color: #ffffff;
+}
+
+.project-detail-page h2.text-center {
+  text-align: center;
+}
+
+/* Text */
+.project-detail-page .project-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.dark .project-detail-page .project-text {
+  color: #b0b0b0;
+}
+
+.project-detail-page .quick-summary {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Grid */
+.project-detail-page .project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section Styles (scoped) */
+.project-detail-page .section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
+
+.dark .project-detail-page .section {
+  background-color: var(--color-neutral-slate-900);
+  box-shadow: none;
+  border: none;
+}
+
+.project-detail-page .section-alt {
+  background-color: #f8f9fa;
+  box-shadow: none;
+  border: none;
+}
+
+.dark .project-detail-page .section-alt {
+  background-color: var(--color-neutral-slate-800);
+  box-shadow: none;
+  border: none;
+}
+
+.project-detail-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-detail-page .container-small {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-detail-page .text-center {
+  text-align: center;
+}
+
+/* Problem Cards */
+.project-detail-page .problems-title {
+  margin-bottom: 3rem;
+}
+
+.project-detail-page .problem-card {
+  padding-left: 1.5rem !important;
+  background: #ffffff;
+}
+
+.dark .project-detail-page .problem-card {
+  background: var(--color-neutral-slate-800);
+}
+
+.project-detail-page .problem-icon {
+  color: #647555;
+  margin-bottom: 1rem;
+}
+
+.dark .project-detail-page .problem-icon {
+  color: #3d7689;
+}
+
+.project-detail-page .problem-title {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #e68342;
+}
+
+.dark .project-detail-page .problem-title {
+  color: #3d7689;
+}
+
+.project-detail-page .problem-description {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dark .project-detail-page .problem-description {
+  color: #e0e0e0;
+}
+
+/* User Research Section */
+.project-detail-page .user-intent-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #647555;
+  margin-bottom: 2.5rem;
+}
+
+.dark .project-detail-page .user-intent-card {
+  background: var(--color-neutral-slate-800);
+  border-left-color: #3d7689;
+}
+
+.project-detail-page .user-intent-title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #244651;
+}
+
+.dark .project-detail-page .user-intent-title {
+  color: #ffffff;
+}
+
+.project-detail-page .user-intent-quote {
+  font-style: italic;
+  margin: 0;
+  color: #333333;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.dark .project-detail-page .user-intent-quote {
+  color: #b0b0b0;
+}
+
+.project-detail-page .user-needs-title {
+  margin-bottom: 1.5rem;
+  color: #244651;
+}
+
+.dark .project-detail-page .user-needs-title {
+  color: #ffffff;
+}
+
+.project-detail-page .user-needs-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-detail-page .user-need-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.dark .project-detail-page .user-need-item {
+  background: var(--color-neutral-slate-800);
+  border-color: #404040;
+}
+
+.project-detail-page .user-need-icon {
+  color: #647555;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.dark .project-detail-page .user-need-icon {
+  color: #3d7689;
+}
+
+.project-detail-page .user-need-text {
+  color: #244651;
+  line-height: 1.6;
+}
+
+.dark .project-detail-page .user-need-text {
+  color: #ffffff;
+}
+
+/* Design Changes Section */
+.project-detail-page .design-changes-grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-detail-page .design-change-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.dark .project-detail-page .design-change-card {
+  background: var(--color-neutral-slate-800);
+  border-color: #404040;
+}
+
+.project-detail-page .design-change-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.project-detail-page .design-change-icon {
+  color: #647555;
+}
+
+.dark .project-detail-page .design-change-icon {
+  color: #3d7689;
+}
+
+.project-detail-page .design-change-icon-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-detail-page .design-change-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #244651;
+}
+
+.dark .project-detail-page .design-change-title {
+  color: #ffffff;
+}
+
+.project-detail-page .design-change-benefit {
+  background: rgba(100, 117, 85, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #647555;
+  margin-top: 1rem;
+}
+
+.dark .project-detail-page .design-change-benefit {
+  background: rgba(47, 89, 101, 0.2);
+  border-left-color: #3d7689;
+}
+
+.project-detail-page .design-change-benefit strong {
+  color: #647555;
+}
+
+.dark .project-detail-page .design-change-benefit strong {
+  color: #3d7689;
+}
+
+.project-detail-page .design-change-benefit span {
+  color: #333333;
+  margin-left: 0.5rem;
+}
+
+.dark .project-detail-page .design-change-benefit span {
+  color: #b0b0b0;
+}
+
+/* Impact Metrics */
+.project-detail-page .metrics-title {
+  margin-bottom: 3rem;
+}
+
+.project-detail-page .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.project-detail-page .metric-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.dark .project-detail-page .metric-card {
+  background: var(--color-neutral-slate-800);
+  border-color: #404040;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-page .metric-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.dark .project-detail-page .metric-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-detail-page .metric-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #647555;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.dark .project-detail-page .metric-value {
+  color: #3d7689;
+}
+
+.project-detail-page .metric-label {
+  font-size: 0.95rem;
+  color: #555555;
+  font-weight: 500;
+}
+
+.dark .project-detail-page .metric-label {
+  color: #b0b0b0;
+}
+
+/* Gallery */
+.project-detail-page .gallery-description {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #555555;
+}
+
+.dark .project-detail-page .gallery-description {
+  color: #b0b0b0;
+}
+
+/* Results */
+.project-detail-page .results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-detail-page .result-card {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-left: 4rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.dark .project-detail-page .result-card {
+  background: var(--color-neutral-slate-800);
+  border-color: #404040;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-page .result-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.dark .project-detail-page .result-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-detail-page .result-number {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: #647555;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.dark .project-detail-page .result-number {
+  background: #3d7689;
+}
+
+.project-detail-page .result-card p {
+  margin: 0;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.dark .project-detail-page .result-card p {
+  color: #e0e0e0;
+}
+
+.project-detail-page .result-card h3 {
+  color: #244651;
+  margin-bottom: 0.5rem;
+}
+
+.dark .project-detail-page .result-card h3 {
+  color: #ffffff;
+}
+
+/* Project Gallery */
+.project-detail-page .project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-detail-page .gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.dark .project-detail-page .gallery-item {
+  background: var(--color-neutral-slate-800);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-page .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dark .project-detail-page .gallery-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Before & After Grid */
+.project-detail-page .before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-detail-page .before-after-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-detail-page .before-after-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.project-detail-page .before-label {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.dark .project-detail-page .before-label {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.project-detail-page .after-label {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+}
+
+.dark .project-detail-page .after-label {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.project-detail-page .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Technologies */
+.project-detail-page .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-detail-page .tech-tag {
+  padding: 0.5rem 1.25rem;
+  background: rgba(36, 70, 81, 0.1);
+  border: 1px solid rgba(36, 70, 81, 0.25);
+  color: #244651;
+  border-radius: 50px;
+  font-weight: 500;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.dark .project-detail-page .tech-tag {
+  background: var(--color-neutral-slate-800);
+  border-color: #3d7689;
+  color: #3d7689;
+}
+
+/* Project Links */
+.project-detail-page .project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-detail-page .tech-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: none;
+}
+
+/* Bullet list (shared between project detail and jira toolkit) */
+.project-detail-page .jt-bullet-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-detail-page .jt-bullet-list li {
+  margin: 0.75rem 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.dark .project-detail-page .jt-bullet-list li {
+  color: #e0e0e0;
+}
+
+/* Responsive - Project Detail */
+@media (max-width: 1024px) {
+  .project-detail-page .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .project-detail-page .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .project-detail-page .section {
+    padding: 2rem 1rem;
+  }
+
+  .project-detail-page .project-hero-content {
+    padding: 1.5rem 0;
+  }
+
+  .project-detail-page .project-meta {
+    gap: 1rem;
+  }
+
+  .project-detail-page .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-page .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-page .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-page .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-detail-page .design-changes-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-page .project-title {
+    font-size: 1.75rem;
+  }
+
+  .project-detail-page .project-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-page .project-text {
+    font-size: 1rem;
+  }
+
+  .project-detail-page .result-card {
+    padding-left: 1rem;
+    padding-top: 3rem;
+  }
+
+  .project-detail-page .result-number {
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+  }
+
+  .project-detail-page .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-page .metric-value {
+    font-size: 2.5rem;
+  }
+
+  .project-detail-page .design-change-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-detail-page .design-change-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==================== JIRA TOOLKIT PAGE ==================== */
+
+.jira-toolkit-page {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.dark .jira-toolkit-page {
+  background-color: var(--color-neutral-slate-900);
+}
+
+.jira-toolkit-page *,
+.jira-toolkit-page *::before,
+.jira-toolkit-page *::after {
+  box-sizing: border-box;
+}
+
+/* Main Content */
+.jira-toolkit-page .jt-main-content {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dark .jira-toolkit-page .jt-main-content {
+  background-color: var(--color-neutral-slate-900);
+}
+
+/* Containers */
+.jira-toolkit-page .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.jira-toolkit-page .container-small {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Introduction */
+.jira-toolkit-page .jt-intro {
+  margin-bottom: 3rem;
+}
+
+.jira-toolkit-page .jt-intro-text {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-intro-text {
+  color: #b0b0b0;
+}
+
+.jira-toolkit-page .jt-description {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-description {
+  color: #b0b0b0;
+}
+
+/* Warning Box */
+.jira-toolkit-page .jt-warning-box {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-warning-box {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.jira-toolkit-page .jt-warning-title {
+  color: #78350f;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-warning-title {
+  color: #fbbf24;
+}
+
+.jira-toolkit-page .jt-warning-text {
+  color: #374151;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-warning-text {
+  color: #b0b0b0;
+}
+
+/* Tip Box */
+.jira-toolkit-page .jt-tip-box {
+  background: #d1fae5;
+  border-left: 4px solid #059669;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-tip-box {
+  background: rgba(5, 150, 105, 0.2);
+  border-left-color: #10b981;
+}
+
+/* Reminder Box */
+.jira-toolkit-page .jt-reminder-box {
+  background: #d1fae5;
+  border-left: 4px solid #059669;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-reminder-box {
+  background: rgba(5, 150, 105, 0.2);
+  border-left-color: #10b981;
+}
+
+.jira-toolkit-page .jt-box-title {
+  color: #065f46;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.dark .jira-toolkit-page .jt-box-title {
+  color: #34d399;
+}
+
+.jira-toolkit-page .jt-box-content {
+  color: #374151;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-box-content {
+  color: #b0b0b0;
+}
+
+/* Info Box */
+.jira-toolkit-page .jt-info-box {
+  background: #dbeafe;
+  border-left: 4px solid #2563eb;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-info-box {
+  background: rgba(37, 99, 235, 0.2);
+  border-left-color: #3b82f6;
+}
+
+.jira-toolkit-page .jt-info-box p {
+  color: #1f2937;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-info-box p {
+  color: #e0e0e0;
+}
+
+/* Sections */
+.jira-toolkit-page .jt-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 2rem;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #244651;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-section-title {
+  color: #3d7689;
+  border-bottom-color: #404040;
+}
+
+.jira-toolkit-page .jt-subsection {
+  margin-bottom: 2rem;
+  scroll-margin-top: 2rem;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-subsection-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-subsection-title {
+  color: #ffffff;
+}
+
+/* Lists */
+.jira-toolkit-page .jt-bullet-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-bullet-list li {
+  margin: 0.75rem 0;
+  color: #374151;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-bullet-list li {
+  color: #e0e0e0;
+}
+
+.jira-toolkit-page .jt-numbered-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-numbered-list li {
+  color: #374151;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-numbered-list li {
+  color: #e0e0e0;
+}
+
+.jira-toolkit-page .jt-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0 0;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-checklist li {
+  margin-bottom: 0.25rem;
+  color: #374151;
+  word-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-checklist li {
+  color: #e0e0e0;
+}
+
+/* Grid */
+.jira-toolkit-page .jt-two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-column-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.jira-toolkit-page .jt-column-title.jt-success {
+  color: #047857;
+}
+
+.dark .jira-toolkit-page .jt-column-title.jt-success {
+  color: #10b981;
+}
+
+.jira-toolkit-page .jt-column-title.jt-error {
+  color: #dc2626;
+}
+
+.dark .jira-toolkit-page .jt-column-title.jt-error {
+  color: #f87171;
+}
+
+/* Code Block */
+.jira-toolkit-page .jt-code-block-container {
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.jira-toolkit-page .jt-code-block-container:hover .jt-copy-button {
+  opacity: 1;
+}
+
+.jira-toolkit-page .jt-code-block {
+  background: #111827;
+  color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.dark .jira-toolkit-page .jt-code-block {
+  background: #0d1117;
+}
+
+.jira-toolkit-page .jt-code-block::-webkit-scrollbar {
+  height: 8px;
+}
+
+.jira-toolkit-page .jt-code-block::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+.jira-toolkit-page .jt-code-block::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.jira-toolkit-page .jt-code-block::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark .jira-toolkit-page .jt-code-block::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.dark .jira-toolkit-page .jt-code-block::-webkit-scrollbar-thumb {
+  background: #30363d;
+}
+
+.dark .jira-toolkit-page .jt-code-block::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+.jira-toolkit-page .jt-code-block code {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block;
+}
+
+.jira-toolkit-page .jt-copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  background: #1f2937;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.jira-toolkit-page .jt-copy-button:hover {
+  background: #374151;
+}
+
+.jira-toolkit-page .jt-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.jira-toolkit-page .jt-check-icon {
+  color: #10b981;
+}
+
+.jira-toolkit-page .jt-copy-icon {
+  color: #9ca3af;
+}
+
+/* Refinement Section */
+.jira-toolkit-page .jt-refinement-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.jira-toolkit-page .jt-refinement-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+}
+
+.dark .jira-toolkit-page .jt-refinement-title {
+  color: #ffffff;
+}
+
+/* Responsive - Jira Toolkit */
+@media (max-width: 768px) {
+  .jira-toolkit-page .jt-two-column-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jira-toolkit-page .jt-main-content {
+    padding: 2rem 0.5rem;
+  }
+
+  .jira-toolkit-page .container,
+  .jira-toolkit-page .container-small {
+    padding: 0 0.75rem;
+  }
+
+  .jira-toolkit-page .jt-copy-button {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .jira-toolkit-page .jt-main-content {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .jira-toolkit-page .jt-warning-box,
+  .jira-toolkit-page .jt-tip-box,
+  .jira-toolkit-page .jt-reminder-box,
+  .jira-toolkit-page .jt-info-box {
+    padding: 0.75rem 0.875rem;
+    margin: 1rem 0;
+  }
+
+  .jira-toolkit-page .jt-bullet-list,
+  .jira-toolkit-page .jt-numbered-list {
+    padding-left: 1.25rem;
+  }
+
+  .jira-toolkit-page .jt-two-column-grid {
+    gap: 1.5rem;
+  }
+
+  .jira-toolkit-page .jt-section-title {
+    font-size: 1.5rem;
+  }
+
+  .jira-toolkit-page .jt-subsection-title {
+    font-size: 1.125rem;
+  }
+
+  .jira-toolkit-page .jt-code-block {
+    font-size: 0.7rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .jira-toolkit-page .jt-main-content {
+    padding: 1rem 0.25rem;
+  }
+
+  .jira-toolkit-page .container,
+  .jira-toolkit-page .container-small {
+    padding: 0 0.5rem;
+  }
+
+  .jira-toolkit-page .jt-code-block {
+    font-size: 0.65rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  .jira-toolkit-page .jt-copy-button {
+    opacity: 1;
+  }
+}

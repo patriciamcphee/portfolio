@@ -1,0 +1,149 @@
+---
+title: 'Navigating the final lap: Crafting compelling release notes'
+description: 'Dive into the intricate art of crafting release notes, a pivotal element in the release cycle, and explore how to effectively communicate product enhancements and fixes.'
+authors:
+  - patriciamcphee
+featured: false
+coverImage: /img/release-notes.png
+---
+
+Release notes are required for every product update, no matter how small. They communicate new features, enhancements, known issues, and fixes — preventing last-minute confusion and keeping users informed throughout the release cycle.
+
+Companies differ in what they highlight. Some focus only on new or improved features and keep known issues out of the spotlight. Others preview upcoming features, with varying success depending on the industry or product.
+
+Release notes serve several important purposes:
+
+- **Transparent communication** — Release notes give users a clear view of product changes, building reliability and predictability.
+- **Trust building** — Sharing what's new, pending, and planned shows users that their experience and feedback matter.
+- **User adoption** — Guidance on new features and improvements helps users get value from updates faster.
+- **Support efficiency** — Comprehensive release notes reduce user queries and lighten the load on support teams.
+- **Continuous improvement** — Regular updates demonstrate a commitment to product quality and evolution.
+- **Feedback opportunities** — Outlining new features or fixes encourages user feedback and a user-focused development approach.
+- **Compliance adherence** — In regulated industries, release notes document changes with legal or compliance implications.
+- **Marketing potential** — Release notes re-engage existing users and attract new ones by showcasing product progress.
+
+The sections below provide guidelines and examples to help you write stronger release notes.
+
+## What's new
+
+Use this section for features that did not exist before the release. If a feature exists but has been improved, include it in the [Improved](#improved) section instead.
+
+Start "What's new" entries with phrases like "You can now…" or "XYZ is now available…" and explain the benefit. For example: "XYZ feature is now available, letting you [perform this action] because [this benefit]."
+
+:::tip[What's coming!]
+You can follow the same guidelines to showcase upcoming features. Add energy to the entry to keep users engaged.
+:::
+
+### Examples
+
+- Console users can now view each user's **Enrollment Status**.
+- Cloud service optimization is now available, enhancing processing speed.
+- Support for managed automatic updates is now available for Windows and macOS, using version control settings to manage update behavior.
+
+### Guidelines
+
+- Keep it customer-centric.
+- Write in the present tense.
+- Use complete sentences.
+- Explain new features with visuals.
+
+Avoid using the Jira ticket title alone — it lacks context for readers.
+
+<Chip color="red">Don't</Chip>
+
+Drill through from Deployment Snapshot to User Grid. 
+Provide clear, concise details about the added feature and its value to the user.
+
+
+<Chip color="green">Do</Chip>
+
+Console administrators can now select **Deployment Snapshot** metrics and drill down to pre-filtered user grid lists representing those metrics. For example, selecting the pending enrollment total navigates to the user grid pre-filtered to users with pending enrollment. 
+
+## Improved
+
+Use this section for features that have been updated or enhanced. Exclude new features, known issues, and bug fixes.
+
+Start improved entries with phrases like "XYZ has been enhanced…" and explain the reason for the change. If the UI was redesigned to improve functionality, include visuals and enough detail for the reader to understand the impact.
+
+### Examples
+
+- **Activity Snapshot** displays updated visuals to improve metrics usability and clarity, including additional detail about compared date ranges.
+- Fingerprint reader response after sleep or wake events is improved. If you experience an issue after applying this update, update the fingerprint reader driver to the latest manufacturer version. In some cases, the Windows Universal driver works best.
+- The **Last Seen** column in the user profile section under the **Devices** tab is updated to improve consistency across the console.
+
+### Guidelines
+
+- Keep it customer-centric.
+- Write in the present tense.
+- Use complete sentences.
+- Explain changes with visuals.
+
+Avoid using the Jira ticket title alone — readers need context for why something changed.
+
+<Chip color="red">Don't</Chip>
+
+Verify Last Authenticated time is correct & consistent between user's table and user device. Provide the details and reason for the change.
+
+<Chip color="green">Do</Chip>
+
+Updated the **Last Seen** column name in the user profile section under the **Devices** tab to **Last Authentication** to improve consistency across the console. 
+
+## Resolved
+
+Use this section to document bug fixes. Each entry describes the observed behavior (the issue) and, where possible, the expected behavior. This is not always feasible, as shown in the examples below.
+
+Word choice matters here. Using *improved* for a resolved item implies an enhancement rather than a bug fix — choose verbs that match the nature of the change.
+
+Keep entries concise. Provide enough detail for users to recognize the issue without overwhelming them with technical depth.
+
+### Examples
+
+- An error displayed after navigating to a user's device from the Admin Console.
+- When prompted to set up security (PIN, password, swipe, or pattern) on Android, a passkey didn't export.
+- When enabling the **Login Hint Validation Config** toggle, the OIDC Login Hint Strategies required message didn't display.
+
+### Guidelines
+
+- Add context around the observed behavior.
+- Write in the past tense.
+- Use complete sentences.
+
+Avoid using the Jira ticket title alone — readers need context for what was happening.
+
+<Chip color="red">Don't</Chip>
+
+Fix issue with icons resetting to default imageDesktop Login.  Describe the observed behavior in the past tense. Include the expected behavior where possible.
+
+<Chip color="green">Do</Chip>
+
+Some security images reset to the default icon when retrieving credentials on a Windows computer.
+
+## Known issues
+
+Use this section to address known issues that affect users and their experience. If a browser limitation exists — for example, a specific behavior in Safari — describe it clearly. When a workaround is available, include it here. This tells users you are aware of the issue and are addressing it.
+
+Writing known issues in the present tense also makes it easier to update entries once an issue is resolved — a tense change is often all that's needed.
+
+Provide enough detail for users to understand the issue and act on it. Avoid dense text blocks that overwhelm rather than inform.
+
+### Guidelines
+
+- Add context around the known issue.
+- Write in the present tense.
+- Use complete sentences.
+- Keep it customer-centric.
+- Include a workaround when one is available.
+
+Avoid using the Jira ticket title alone — readers need context for what is happening.
+
+<Chip color="red">Don't</Chip>
+
+See the "Windows Failure" support article. Describe the known issue in the present tense and include the workaround when available.
+
+<Chip color="green">Do</Chip>
+
+We are investigating a Windows failure. For details and a workaround, see the [knowledgebase article](https://support.domain.com/hc/en-us/articles/1234567890123). |
+
+## Wrapping up
+
+Well-written release notes are a direct line of communication between your team and your users. By following the guidelines and examples in each section, you give users the clarity they need to understand what changed, why it matters, and what to do next.

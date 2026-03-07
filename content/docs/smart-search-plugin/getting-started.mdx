@@ -1,0 +1,78 @@
+---
+title: Getting Started
+description: Metadata-driven search plugin for Docusaurus v3.x that delivers precise results, keyboard navigation, and full offline functionality.
+keywords:
+  - smart search
+  - Docusaurus
+  - search plugin
+  - metadata-driven search
+  - offline functionality
+  - keyboard navigation
+  - Docusaurus plugin
+last_update:
+  date: 12/12/2024
+  author: Patricia McPhee
+draft: false
+doc_type: concept
+role: [Developer]
+hide_table_of_contents: false
+---
+
+The Smart Search Plugin for Docusaurus v3.x is a metadata-driven search solution. Unlike full-text indexing, it uses frontmatter metadata to deliver focused results and prevent information overload. The plugin works in both online and firewall-restricted environments.
+
+## Key features
+
+- Targeted search results powered by metadata keywords
+- Precise content matching to minimize information overload
+- **Full offline functionality** for firewall-restricted environments
+- **Local testing capabilities** during development
+- Modern, responsive interface with keyboard navigation
+
+## Technical considerations
+
+### Content processing
+
+The plugin parses frontmatter and assigns document IDs from the frontmatter `id` field or the topic's path filename. It processes content through a three-stage system:
+
+1. **Content collection:** Scans the `/docs` directory, gathers Markdown files, and extracts frontmatter metadata.
+2. **Content normalization:** Standardizes URLs and formats data for consistent navigation and SEO.
+3. **Index generation:** Creates optimized search indexes with smart caching for fast, accurate results in development and production.
+
+### Automatic exclusions
+
+The plugin automatically excludes the following content types from the search index:
+
+- The root index page of your documentation
+- Documents marked as `draft: true`
+
+### Search index files
+
+The plugin generates two search index files to optimize performance across environments:
+
+1. Development index: `/static/searchIndex.json`
+2. Production index: `/build/searchIndex.json`
+
+### Browser compatibility
+
+The Smart Search Plugin supports the following browsers:
+
+- Chrome
+- Firefox
+- Safari
+- Microsoft Edge
+- Opera
+- Brave
+
+## Plugin appearance
+
+The following screenshots show how the plugin appears in your Docusaurus navbar.
+
+<Tabs>
+  <TabItem value="inactive" label="Inactive state">
+    ![Search bar in its inactive state](/img/search-icon-only.png)
+  </TabItem>
+  <TabItem value="active" label="Activated state with results">
+    ![Search bar expanded showing a list of matching results](/img/search-results.png)
+    ![Search bar showing a second set of matched results](/img/search-results-2.png)
+  </TabItem>
+</Tabs>

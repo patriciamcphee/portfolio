@@ -13,7 +13,6 @@ const resourceItems: NavLink[] = [
 
 export const navItems: NavItem[] = [
   { label: 'About', href: '/about/' },
-  { label: 'Guides', href: '/guides/writing-docs/' },
   { label: 'Blog', href: '/blog/' },
 ]
 

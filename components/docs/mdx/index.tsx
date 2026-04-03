@@ -14,6 +14,7 @@ import { Chip } from '@/components/custom/chip'
 import { JiraToolkit } from '@/components/custom/jira-toolkit'
 import { UxSidebarRedesign } from '@/components/custom/ux-sidebar-redesign'
 import { UxCreatePageRedesign } from '@/components/custom/ux-create-page-redesign'
+import { Portfolio } from '@/components/custom/Portfolio'
 
 // Colored symbols for comparison tables
 function Check() {
@@ -86,4 +87,5 @@ export const mdxComponents: Record<string, React.ComponentType<any>> = {
   JiraToolkit,
   UxSidebarRedesign,
   UxCreatePageRedesign,
+  Portfolio,
 }

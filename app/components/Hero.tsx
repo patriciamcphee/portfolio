@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-tl from-brand-primary-dark/80 via-neutral-white to-neutral-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-tl from-brand-primary-dark/80 via-neutral-white to-neutral-white dark:from-brand-primary-dark/40 dark:via-neutral-slate-900 dark:to-neutral-slate-900">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-slate-200 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"></div>
 
@@ -21,7 +21,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/15 text-brand-primary rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/15 text-brand-primary dark:bg-brand-primary/25 dark:text-brand-primary-lighter rounded-full mb-8"
           >
             <Sparkles className="w-4 h-4" />
             <span className="text-sm font-medium">Available for new opportunities</span>
@@ -31,7 +31,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold text-neutral-slate-900 mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-neutral-slate-900 dark:text-neutral-slate-100 mb-6 leading-tight"
           >
             Technical Content Manager
             <span className="block text-brand-primary-lighter mt-2">& Developer Experience</span>
@@ -41,7 +41,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-neutral-slate-600 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-neutral-slate-600 dark:text-neutral-slate-400 mb-8 max-w-3xl mx-auto"
           >
             15+ years documenting APIs, SDKs & developer platforms for Microsoft, Amazon, Meta, and beyond
           </motion.p>
@@ -53,7 +53,7 @@ export function Hero() {
             className="flex flex-wrap gap-4 justify-center"
           >
             <Button size="lg" className="gap-2 text-lg px-8 py-6" asChild>
-              <a href="#portfolio">
+              <a href="/portfolio-overview">
                 View Portfolio
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -73,26 +73,26 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-12 max-w-2xl mx-auto"
           >
-            <div className="bg-neutral-white/80 backdrop-blur-sm border border-brand-primary/20 rounded-xl p-6 text-left">
+            <div className="bg-neutral-white/80 dark:bg-neutral-slate-800/80 backdrop-blur-sm border border-brand-primary/20 rounded-xl p-6 text-left">
               <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="w-5 h-5 text-brand-primary" />
-                <h3 className="text-lg font-bold text-neutral-slate-900">What I&apos;m Focused On</h3>
+                <Briefcase className="w-5 h-5 text-brand-primary dark:text-brand-primary-lighter" />
+                <h3 className="text-lg font-bold text-neutral-slate-900 dark:text-neutral-slate-100">What I&apos;m Focused On</h3>
               </div>
-              <div className="space-y-2 text-sm text-neutral-slate-700">
+              <div className="space-y-2 text-sm text-neutral-slate-700 dark:text-neutral-slate-300">
                 <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary rounded-full mt-1.5 shrink-0"></div>
+                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
                   <p><strong>Role:</strong> Technical Content Manager and Developer Experience</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary rounded-full mt-1.5 shrink-0"></div>
+                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
                   <p><strong>Location:</strong> Remote positions</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary rounded-full mt-1.5 shrink-0"></div>
+                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
                   <p><strong>Available:</strong> End of June 2026</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary rounded-full mt-1.5 shrink-0"></div>
+                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
                   <p><strong>Ideal for:</strong> Teams building a developer experience function, scaling docs, or needing someone who owns strategy end to end — including the tooling</p>
                 </div>
               </div>
@@ -102,21 +102,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-neutral-slate-600 rounded-full flex items-start justify-center p-2"
-        >
-          <div className="w-1.5 h-1.5 bg-brand-primary rounded-full"></div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

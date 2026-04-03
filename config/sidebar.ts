@@ -6,6 +6,7 @@ export type SidebarItem =
   | { type: 'html'; value: string }
 
 export const mainSidebar: SidebarItem[] = [
+
   {
     type: 'category',
     label: 'Smart Search Plugin',

@@ -43,8 +43,8 @@ Users can't fix problems they don't understand. Avoid jargon and tell them clear
       <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Clear and specific</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p><strong>Unable to save "Q4:Report.xlsx"</strong></p>
-      <p>The file name contains invalid characters. File names can't include: / \ : * ? &quot; &lt; &gt; |</p>
+      <div><strong>Unable to save "Q4:Report.xlsx"</strong></div>
+      <div>The file name contains invalid characters. File names can't include: / \ : * ? &quot; &lt; &gt; |</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -52,7 +52,7 @@ Users can't fix problems they don't understand. Avoid jargon and tell them clear
       <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Vague and unhelpful</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Invalid file name</p>
+      <div>Invalid file name</div>
       <br /><br />
     </div>
   </div>
@@ -71,10 +71,10 @@ Include specific information that helps users understand what happened in their 
       <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Helpful context</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p><strong>Can't upload "presentation.pptx"</strong></p>
-      <p>File size: 47 MB<br />
+      <div><strong>Can't upload "presentation.pptx"</strong></div>
+      <div>File size: 47 MB<br />
       Maximum allowed: 25 MB<br /><br />
-      Compress the file or upgrade to a Pro account for 100 MB uploads.</p>
+      Compress the file or upgrade to a Pro account for 100 MB uploads.</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -82,7 +82,7 @@ Include specific information that helps users understand what happened in their 
       <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Missing context</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>File too large</p>
+      <div>File too large</div>
       <br /><br /><br /><br />
     </div>
   </div>
@@ -103,8 +103,8 @@ Every error message needs clear next steps. Never leave users without a path for
       <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Clear path forward</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p><strong>Connection timeout</strong></p>
-      <p>We couldn't reach the server at api.example.com.</p>
+      <div><strong>Connection timeout</strong></div>
+      <div>We couldn't reach the server at api.example.com.</div>
       <ul>
           <li>Check your internet connection</li>
           <li>Try again in a few moments</li>
@@ -117,7 +117,7 @@ Every error message needs clear next steps. Never leave users without a path for
       <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Dead end</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Network error occurred</p>
+      <div>Network error occurred</div>
       <br /><br /><br /><br />
     </div>
   </div>
@@ -136,9 +136,9 @@ Error messages should sound helpful, not robotic. Avoid accusatory language — 
       <h3 className="text-base font-semibold text-utility-green-100 m-0">✓ Helpful and neutral</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p><strong>We couldn't process your payment</strong></p>
-      <p>Your card ending in 4242 was declined by your bank.</p>
-      <p>Check your card details or try a different payment method.</p>
+      <div><strong>We couldn't process your payment</strong></div>
+      <div>Your card ending in 4242 was declined by your bank.</div>
+      <div>Check your card details or try a different payment method.</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -146,7 +146,7 @@ Error messages should sound helpful, not robotic. Avoid accusatory language — 
       <h3 className="text-base font-semibold text-utility-red-100 m-0">✗ Accusatory</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Payment failed. You entered incorrect card information.</p>
+      <div>Payment failed. You entered incorrect card information.</div>
       <br /><br />
     </div>
   </div>
@@ -348,8 +348,8 @@ Some situations require intentionally vague messages to protect security.
       <h3 className="text-base font-semibold text-utility-green-100 m-0">DO: keep it ambiguous</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Incorrect username or password</p>
-      <p>Try again, or select "Forgot password" to reset your password.</p>
+      <div>Incorrect username or password</div>
+      <div>Try again, or select "Forgot password" to reset your password.</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -357,8 +357,8 @@ Some situations require intentionally vague messages to protect security.
       <h3 className="text-base font-semibold text-utility-red-100 m-0">DON'T: identify which part failed</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Username not found</p>
-      <p>✗ Password incorrect for user@example.com</p>
+      <div>Username not found</div>
+      <div>✗ Password incorrect for user@example.com</div>
     </div>
   </div>
 </div>
@@ -401,9 +401,9 @@ Never expose internal system details to users.
       <h3 className="text-base font-semibold text-utility-green-100 m-0">DO: use a friendly fallback</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Unable to load account information</p>
-      <p>We're having technical difficulties. Try again in a few moments. If this continues, contact support.</p>
-      <p>Error code: DB_500</p>
+      <div>Unable to load account information</div>
+      <div>We're having technical difficulties. Try again in a few moments. If this continues, contact support.</div>
+      <div>Error code: DB_500</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -411,9 +411,9 @@ Never expose internal system details to users.
       <h3 className="text-base font-semibold text-utility-red-100 m-0">DON'T: expose your infrastructure</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>MySQL error: Table 'prod_users.accounts' doesn't exist</p>
-      <p>Can't connect to internal server prod-db-01.internal.company.com:3306</p>
-      <p>Stack trace: at DatabaseController.fetchUser (/var/www/app/controllers/db.js:247)</p>
+      <div>MySQL error: Table 'prod_users.accounts' doesn't exist</div>
+      <div>Can't connect to internal server prod-db-01.internal.company.com:3306</div>
+      <div>Stack trace: at DatabaseController.fetchUser (/var/www/app/controllers/db.js:247)</div>
     </div>
   </div>
 </div>
@@ -432,9 +432,9 @@ Database names, server addresses, and stack traces give attackers a roadmap to e
       <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Can't load your profile. Refresh the page or try again later.</p>
-      <p>Unable to connect to the server. Check your internet connection and try again.</p>
-      <p>Something went wrong. Try again. If this keeps happening, contact support.</p>
+      <div>Can't load your profile. Refresh the page or try again later.</div>
+      <div>Unable to connect to the server. Check your internet connection and try again.</div>
+      <div>Something went wrong. Try again. If this keeps happening, contact support.</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -442,9 +442,9 @@ Database names, server addresses, and stack traces give attackers a roadmap to e
       <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>NullReferenceException in UserController</p>
-      <p>HTTP 500 Internal Server Error</p>
-      <p>Segmentation fault (core dumped)</p>
+      <div>NullReferenceException in UserController</div>
+      <div>HTTP 500 Internal Server Error</div>
+      <div>Segmentation fault (core dumped)</div>
     </div>
   </div>
 </div>
@@ -461,9 +461,9 @@ Technical terms alienate users. Write for the least technical person who might e
       <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Enter a valid email address (example@domain.com)</p>
-      <p>Incorrect username or password. Try again or reset your password.</p>
-      <p>Add a subject line to send your message</p>
+      <div>Enter a valid email address (example@domain.com)</div>
+      <div>Incorrect username or password. Try again or reset your password.</div>
+      <div>Add a subject line to send your message</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -471,9 +471,9 @@ Technical terms alienate users. Write for the least technical person who might e
       <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>You entered invalid data</p>
-      <p>Your password is wrong</p>
-      <p>You must include a subject line</p>
+      <div>You entered invalid data</div>
+      <div>Your password is wrong</div>
+      <div>You must include a subject line</div>
     </div>
   </div>
 </div>
@@ -490,9 +490,9 @@ Accusatory messages make users defensive. Take responsibility for the experience
       <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Delete "Project_Final.doc"? This can't be undone. [Cancel] [Delete]</p>
-      <p>Can't save changes. [Try Again] [Save Copy] [Cancel]</p>
-      <p>Connection lost. Reconnecting... [Manual Retry] [Work Offline]</p>
+      <div>Delete "Project_Final.doc"? This can't be undone. [Cancel] [Delete]</div>
+      <div>Can't save changes. [Try Again] [Save Copy] [Cancel]</div>
+      <div>Connection lost. Reconnecting... [Manual Retry] [Work Offline]</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -500,9 +500,9 @@ Accusatory messages make users defensive. Take responsibility for the experience
       <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Are you sure? Yes/No</p>
-      <p>Operation failed. OK</p>
-      <p>Error occurred. Dismiss</p>
+      <div>Are you sure? Yes/No</div>
+      <div>Operation failed. OK</div>
+      <div>Error occurred. Dismiss</div>
     </div>
   </div>
 </div>
@@ -519,9 +519,9 @@ Vague confirmations leave users without a path forward. Clear labels and specifi
       <h3 className="text-base font-semibold text-utility-green-100 m-0">Correct</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Changes saved successfully</p>
-      <p>Import complete: 1,247 records added</p>
-      <p>System check passed: All services running normally</p>
+      <div>Changes saved successfully</div>
+      <div>Import complete: 1,247 records added</div>
+      <div>System check passed: All services running normally</div>
     </div>
   </div>
   <div className="rounded-lg border border-(--border) bg-(--card) overflow-hidden">
@@ -529,9 +529,9 @@ Vague confirmations leave users without a path forward. Clear labels and specifi
       <h3 className="text-base font-semibold text-utility-red-100 m-0">Incorrect</h3>
     </div>
     <div className="px-5 py-4 text-sm text-(--foreground)">
-      <p>Error: Operation completed successfully</p>
-      <p>Failed to succeed</p>
-      <p>Warning: No problems found</p>
+      <div>Error: Operation completed successfully</div>
+      <div>Failed to succeed</div>
+      <div>Warning: No problems found</div>
     </div>
   </div>
 </div>
@@ -605,11 +605,11 @@ Test scenarios that commonly occur in production:
 
 The following examples show the original error messages from a SaaS data encryption application before revision.
 
-<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4793%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4793%26t%3DXlAImWQUfjmRexlD-1" allowFullScreen></iframe>
 
-<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4651%26t%3DXlAImWQUfjmRexlD-1" allowfullscreen></iframe>
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Fnode-id%3D675%253A4651%26t%3DXlAImWQUfjmRexlD-1" allowFullScreen></iframe>
 
-<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Ftype%3Ddesign%26node-id%3D5863%253A113%26mode%3Ddesign%26t%3DIvZpnFDSuVwHepHG-1" allowfullscreen></iframe>
+<iframe width="80%" height="720" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR9H8wCBqTHUZdbmtxdsv3l%2FPatricia-McPhee's-UX-Writing-Portfolio%3Ftype%3Ddesign%26node-id%3D5863%253A113%26mode%3Ddesign%26t%3DIvZpnFDSuVwHepHG-1" allowFullScreen></iframe>
 
 ---
 

@@ -13,10 +13,26 @@ const resourceItems: NavLink[] = [
 
 export const navItems: NavItem[] = [
   { label: 'About', href: '/about/' },
+  { label: 'Portfolio', href: '/portfolio-overview/' },
   { label: 'Blog', href: '/blog/' },
+  { label: 'Contact', href: '/contact/' },
 ]
 
 export const footerConfig = {
-  copyright: `© ${new Date().getFullYear()} Trellis by Pixl'n Grid`,
-  poweredBy: 'Powered by Next.js',
+  copyright: `© ${new Date().getFullYear()} Patricia McPhee. All rights reserved.`,
+  links: {
+    products: [
+      { label: 'TechWrit AI', href: 'https://techwrit.ai', external: true },
+      { label: 'Trellis Docs', href: 'https://www.trellisdocs.dev', external: true },
+    ],
+    quickLinks: [
+      { label: 'About', href: '/about' },
+      { label: 'Portfolio', href: '/portfolio-overview' },
+      { label: 'Contact', href: '/contact' },
+    ],
+    social: {
+      linkedin: 'https://www.linkedin.com/in/patriciamcphee/',
+      email: 'mailto:contact@patriciamcphee.com',
+    },
+  },
 }

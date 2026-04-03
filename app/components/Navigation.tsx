@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
+
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,8 +19,9 @@ export function Navigation() {
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'About', href: '/about' },
+    { label: 'Portfolio', href: '/portfolio-overview' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -74,9 +75,6 @@ export function Navigation() {
                   {item.label}
                 </a>
               ))}
-              <Button size="sm" className="gap-2">
-                Contact Me
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -121,9 +119,6 @@ export function Navigation() {
                   {item.label}
                 </a>
               ))}
-              <Button className="w-full gap-2 mt-2">
-                Contact Me
-              </Button>
             </div>
           </div>
         </motion.div>

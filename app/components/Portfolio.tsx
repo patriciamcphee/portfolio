@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
-import { FileText, Palette, Globe, Package, ExternalLink, Code2, Info, GitBranch, PenTool, Sparkles } from 'lucide-react';
+import { FileText, Palette, Globe, Package, ExternalLink, Info, GitBranch, PenTool, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -78,7 +78,7 @@ const portfolioItems: PortfolioSection[] = [
         link: '/sdk/scout-ai-client-sdk',
         linkLabel: 'View sample',
         repo: 'https://github.com/patriciamcphee/scout-ai-sdk',
-        caseStudy: '/portfolio/scout-ai-sdk/',
+
         about: {
           problem:
             'Developers building UX research tooling have no straightforward way to integrate AI-powered research assistance without standing up their own model infrastructure. Scout AI exposes that capability as a REST API, but without an SDK integration guide, developers had no clear path from authentication to a working implementation.',
@@ -123,7 +123,7 @@ const portfolioItems: PortfolioSection[] = [
           'A code-aware documentation platform that generates structured technical docs from source code, configs, and specs — enforcing style rules, glossary terms, and readability standards during generation, not after.',
         tags: ['SaaS', 'Documentation', 'AI', 'VS Code Extension', 'REST API'],
         link: 'https://techwrit.ai',
-        caseStudy: '/portfolio/techwrit-ai/',
+        caseStudy: '/portfolio/techwrit-ai-platform/',
         about: {
           problem:
             'Engineers started using AI tools to generate documentation, but the output ignored style guides, skipped parameter tables, and used wrong terminology. Technical writers became human linters, giving the same feedback on every PR.',

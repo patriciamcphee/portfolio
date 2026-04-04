@@ -6,23 +6,6 @@ export type SidebarItem =
   | { type: 'html'; value: string }
 
 export const mainSidebar: SidebarItem[] = [
-
-  {
-    type: 'category',
-    label: 'Smart Search Plugin',
-    link: 'smart-search-plugin',
-    collapsed: true,
-    items: [
-      { type: 'doc', id: 'smart-search-plugin/getting-started' },
-      { type: 'doc', id: 'smart-search-plugin/document-configuration' },
-      { type: 'doc', id: 'smart-search-plugin/plugin-troubleshooting' },
-      { type: 'doc', id: 'smart-search-plugin/plugin-faq' },
-    ],
-  },
-      {
-    type: 'html',
-    value: '<hr class="my-4 border-(--border)" />',
-  },
   {
     type: 'category',
     label: 'APIs & SDKs',
@@ -63,6 +46,21 @@ export const mainSidebar: SidebarItem[] = [
   },
   {
     type: 'category',
+    label: 'AI Prompt Engineering',
+    collapsed: false,
+    items: [
+      { type: 'doc', id: 'portfolio/devops-comms-utility' },
+      { type: 'doc', id: 'portfolio/techwrit-ai-platform' },
+
+      { type: 'doc', id: 'portfolio/jira-toolkit' },
+    ],
+  },
+  {
+    type: 'html',
+    value: '<hr class="my-4 border-(--border)" />',
+  },
+  {
+    type: 'category',
     label: 'Developer Portal',
     link: 'developer-portal/',
     collapsed: true,
@@ -73,20 +71,23 @@ export const mainSidebar: SidebarItem[] = [
       { type: 'doc', id: 'template-editor/create-new-template' },
     ],
   },
-  {
+   {
     type: 'html',
     value: '<hr class="my-4 border-(--border)" />',
   },
   {
     type: 'category',
-    label: 'AI Toolkit',
-    link: 'portfolio/jira-toolkit',
+    label: 'Smart Search Plugin',
+    link: 'smart-search-plugin',
     collapsed: true,
     items: [
-      { type: 'doc', id: 'portfolio/jira-toolkit' },
-      
+      { type: 'doc', id: 'smart-search-plugin/getting-started' },
+      { type: 'doc', id: 'smart-search-plugin/document-configuration' },
+      { type: 'doc', id: 'smart-search-plugin/plugin-troubleshooting' },
+      { type: 'doc', id: 'smart-search-plugin/plugin-faq' },
     ],
   },
+
   {
     type: 'html',
     value: '<hr class="my-4 border-(--border)" />',

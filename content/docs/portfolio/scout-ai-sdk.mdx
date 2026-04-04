@@ -1,0 +1,89 @@
+---
+title: Scout AI — SDK Reference Documentation
+description: SDK reference documentation built from scratch against a live, actively changing Azure Function–based REST API powered by Anthropic Claude.
+keywords:
+  - Scout AI
+  - SDK documentation
+  - API reference
+  - TypeScript
+  - Azure Functions
+  - Anthropic Claude
+last_update:
+  date: 04/04/2026
+  author: Patricia McPhee
+doc_type: how-to
+role: [Developer, Technical Writer]
+---
+
+:::note[About this sample]
+SDK reference built from scratch against a live, actively changing API — covering ten methods, full type definitions, error hierarchy, and working code examples.
+
+**Role:** Technical writer.
+
+**Project:** UserLens Insights — Scout AI Client SDK.
+
+**Platform:** Azure Functions, Anthropic Claude.
+
+**Stack:** TypeScript SDK, REST API.
+:::
+
+## The challenge
+
+Scout AI is an Azure Function–based REST API that brings Anthropic Claude–powered research assistance into the UserLens Insights platform. When documentation work began, there was nothing — no reference, no integration guide, no error documentation.
+
+The API was also actively changing throughout the project. Methods were being added, parameter defaults were shifting, and endpoint behaviors were evolving as the underlying platform developed. The documentation had to be written against a moving target, kept accurate as the API changed, and structured to reduce integration friction before any external developers encountered the SDK.
+
+The goal was to eliminate the need for developers to go directly to the engineering team for answers.
+
+## What I documented
+
+The SDK exposes ten methods across four capability categories. Each method required full documentation of parameters, return types, HTTP mapping, limits, and a working code example.
+
+**Research data collection**
+- `generateInterviewGuide()` — Produces a structured interview guide from project objectives and target duration, including an introduction script, warm-up questions, objective-based main questions with follow-up probes, and interviewer tips
+
+**Session and data analysis**
+- `summarizeSessions()` — Analyzes multiple session note sets across five output formats: overview, findings report, detailed participant breakdown, thematic analysis, and quote extraction with sentiment analysis
+- `extractThemes()` — Thematic analysis identifying 3–7 major themes with supporting evidence, inter-theme relationships, and recommendations
+- `analyzeHypotheses()` — Evaluates research hypotheses against collected data, returning per-hypothesis confidence levels, supporting and contradicting evidence with citations, and recommended status changes
+
+**Synthesis and reporting**
+- `generateReport()` — Generates findings reports in three formats: executive summary (1–2 pages, business impact focus), detailed analysis (full findings and recommendations), and presentation format (header/bullet structure for slides)
+- `generatePersonas()` — Derives user personas from research data, each with demographics, goals, pain points, behaviors, and a representative quote
+- `createJourneyMap()` — Maps the user experience across phases including actions, emotions, pain points, and opportunities
+
+**General AI interaction**
+- `complete()` — One-shot completion for custom AI interactions that don't fit the specialized research methods
+- `chat()` — Multi-turn conversation with optional history and citation instructions — the model cites evidence using bracketed session identifiers (e.g., `[Session P1]`)
+- `rewrite()` — Text improvement with optional direction, returning improved text with no preamble or explanation
+
+## Documentation decisions
+
+**The `chat()` method citation behavior** required careful documentation because it's a prompt-level feature, not an API parameter — `includeCitations: true` instructs the model to use bracketed evidence identifiers, but the identifiers themselves are derived from the session titles in the research data, not from a fixed format. Getting that nuance into the parameter table without overexplaining took several iterations.
+
+**The error hierarchy** was documented as a type tree rather than a flat list because inheritance matters for error handling. A developer catching `ScoutAIError` gets all subclasses; catching `ScoutAIContentTooLargeError` gets only that one. The hierarchy diagram makes that relationship immediately clear without requiring the developer to read the class definitions.
+
+**Limits are documented inline**, not in a separate section. Each method's limits (`"First 8 sessions used, 2,500 chars each"`) appear in the method reference directly, where a developer will see them when they're making integration decisions — not in a separate constraints page they'd have to remember to check.
+
+**The error handling example** shows all four error classes in a single realistic `try/catch` block, with the correct resolution strategy for each. The `ScoutAIContentTooLargeError` handler demonstrates the retry pattern with reduced content rather than just logging the error.
+
+## What the SDK reference covers
+
+The full reference documents:
+
+- Constructor configuration (`baseUrl`, custom headers, custom `fetch` implementation for polyfill and test injection)
+- Health check endpoint with field-level return type documentation
+- All ten SDK methods with parameter tables, return type descriptions, HTTP endpoint mapping, content limits, and TypeScript examples
+- Complete type definitions for all interfaces and enums (`ReportType`, `SummaryType`, all parameter types, all domain types)
+- Error class hierarchy with HTTP status codes, error codes, class names, common causes, and resolution guidance
+- Realistic error handling example demonstrating `instanceof` checks and per-error recovery strategies
+
+## What this demonstrates
+
+API and SDK documentation is as much about information architecture as it is about writing. A developer using the `summarizeSessions()` method needs to know — in this order — what the method does, what to pass it, what comes back, what the HTTP call looks like, what the limits are, and how to call it. That's not an arbitrary order; it's the order in which those facts become relevant during integration.
+
+The Scout AI reference was built without a documentation template, without prior examples to follow, and against an API that kept changing. It was written to be immediately useful to a developer who had never seen the platform before, produced before the platform had any external users, and maintained as a first-class artifact alongside the code.
+
+---
+
+*Part of the UserLens Insights platform — Scout AI SDK reference. Written from scratch against an actively developing API.*

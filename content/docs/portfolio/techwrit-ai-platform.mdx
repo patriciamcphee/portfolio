@@ -1,0 +1,90 @@
+---
+title: TechWrit AI Platform
+description: A code-aware SaaS documentation platform that generates structured technical docs from source code, configs, and specs — enforcing style rules, glossary terms, and readability standards during generation, not after.
+keywords:
+  - TechWrit AI
+  - documentation platform
+  - SaaS
+  - VS Code extension
+  - REST API
+  - AI documentation
+  - style guide
+last_update:
+  date: 04/04/2026
+  author: Patricia McPhee
+doc_type: how-to
+role: [Developer, Technical Writer]
+---
+
+:::note[About this sample]
+A code-aware SaaS documentation platform that generates structured technical docs from source code, configs, and specs — enforcing style rules, glossary terms, and readability standards during generation, not after.
+
+**Role:** Founder, product designer, engineer.
+
+**Organization:** Independent project.
+
+**Platform:** SaaS, VS Code extension, REST API.
+
+**Stack:** React, TypeScript, VS Code Extension API, Anthropic.
+
+**Status:** Launched February 2026.
+:::
+
+## The problem
+
+Most AI writing tools treat documentation as an afterthought — they generate prose that sounds plausible but ignores style rules, glossary terms, and the structural conventions that make technical documentation actually usable. The alternative is to write documentation manually and run it through a linter afterward, which catches problems after the effort has already been spent.
+
+Neither approach puts content standards at the center of the generation process itself.
+
+## What I built
+
+TechWrit AI is a code-aware SaaS documentation platform that generates structured technical documentation directly from source code, configs, and specs — enforcing style guide rules, glossary terms, and readability standards during generation rather than after the fact.
+
+I conceived, designed, and shipped the platform end to end: UX design, front-end development, AI integration, API architecture, VS Code extension, and go-to-market execution.
+
+## What it does
+
+**14 documentation modes** spanning three workflow categories:
+
+- **Generation** — API references, runbooks, architecture decision records (ADRs), release notes, and developer guides generated from source artifacts
+- **Audit** — Style, terminology, and readability analysis against configurable rules
+- **AI copilot** — Inline documentation assistance with awareness of the user's existing content standards
+
+**VS Code extension**
+Delivers inline style diagnostics and auto-review on save — no configuration required. Engineers get documentation feedback in the same environment where they write code, without switching tools or running a separate process.
+
+**REST API**
+Enables documentation generation and linting within CI/CD pipelines, build scripts, and custom tooling. Teams can enforce documentation standards at the same point in the pipeline where they enforce code quality.
+
+**Live readability engine**
+Computes Flesch Ease, Flesch-Kincaid Grade, and Gunning Fog scores with before/after comparison in rewrite mode — giving writers a concrete signal that a revision actually improved readability rather than just changed it.
+
+## The AI design
+
+The platform's AI layer reflects a specific philosophy: style guide compliance shouldn't be a post-processing step. It should be a generation constraint.
+
+When a user generates documentation, the model receives the source artifact — the code, config, or spec — alongside the team's style rules, glossary terms, and readability targets as part of the assembled context. The output is documentation that already conforms to those standards, not documentation that needs to be fixed.
+
+This required designing a prompt architecture that keeps style rules actionable — specific enough that the model can apply them rather than approximate them — without making the prompt so large that it degrades output quality. That tension between specificity and token budget shaped every content standard decision in the platform.
+
+The rewrite mode surfaces this most clearly: the user sees the before and after side by side, with readability scores for both, so the AI's intervention is legible rather than opaque.
+
+## The freemium model
+
+I architected a freemium-to-teams tier structure with:
+
+- **Shared team configuration** — style rules, glossary, and readability targets defined once at the team level and applied consistently across every member's generations
+- **Exportable style rules** — teams can version-control their documentation standards alongside their code
+- **Trellis Docs integration** — TechWrit AI generates documentation in correct Trellis markdown syntax automatically when Trellis is the target framework
+
+## What this demonstrates
+
+TechWrit AI exists because I kept running into the same problem at Microsoft, Amazon, Meta, and Cigna: content standards are defined in style guides that live in wikis, and the gap between the standard and the actual documentation output is a human problem that requires human review to close.
+
+The platform is an attempt to close that gap architecturally — to make the style guide part of the generation process, not a separate editorial pass. It's the same instinct that shaped my work on the DevOps Communications Utility at Cigna, where the style guide and rules files are injected into every AI generation rather than applied after the fact.
+
+The difference here is that I also built the product.
+
+---
+
+*Independent project — Pixl'n Grid Studios. Available at techwrit.ai.*

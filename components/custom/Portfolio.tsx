@@ -32,6 +32,7 @@ interface PortfolioItem {
   linkLabel?: string;
   repo?: string;
   figma?: string;
+  caseStudy?: string;
   about: AboutContent;
 }
 
@@ -121,6 +122,67 @@ const portfolioItems: PortfolioSection[] = [
     ],
   },
   {
+    category: 'AI Tools',
+    icon: 'Sparkles',
+    color: 'ai',
+    items: [
+      {
+        title: 'TechWrit AI',
+        description:
+          'A code-aware documentation platform that generates structured technical docs from source code, configs, and specs — enforcing style rules, glossary terms, and readability standards during generation, not after.',
+        tags: ['SaaS', 'Documentation', 'AI', 'VS Code Extension', 'REST API'],
+        link: 'https://techwrit.ai',
+        caseStudy: '/portfolio/techwrit-ai/',
+        about: {
+          problem:
+            'Engineers started using AI tools to generate documentation, but the output ignored style guides, skipped parameter tables, and used wrong terminology. Technical writers became human linters, giving the same feedback on every PR.',
+          solution:
+            'A documentation platform that takes 30 years of documentation standards and enforces them during generation. 14 documentation modes, 25 default style rules, a VS Code extension, and a REST API for CI/CD integration.',
+          role: 'Sole founder, designer, and developer. Designed the product, built the platform, and launched independently in February 2026.',
+          outcome:
+            'Teams generate structured, style-compliant documentation directly from code — API references, how-to guides, tutorials, runbooks, and more — without post-generation cleanup.',
+        },
+      },
+      {
+        title: 'DevOps Communications Utility',
+        description:
+          'Prompt architecture and content standards for a GitHub Actions platform that generates planned maintenance communications from ServiceNow CHG tickets — one issue in, three outputs out.',
+        tags: ['Prompt Engineering', 'Context Engineering', 'Content Standards', 'GitHub Actions'],
+        link: '/portfolio/devops-comms-utility/',
+        linkLabel: 'Case study',
+        about: {
+          problem:
+            'Every planned maintenance communication at Cigna\'s Enterprise DevOps was written from scratch — different tone, structure, and detail level with every send. Engineers spent time wordsmithing notifications instead of focusing on the change itself.',
+          solution:
+            'Designed the content layer of a GitHub Actions platform: a five-layer prompt architecture separating persona, rules, task, and output format, plus full content standards injected at runtime. One GitHub issue produces a structured HTML email, a Teams message, and a CHG description.',
+          role:
+            'Owned prompt architecture, context engineering, content standards, and complete documentation suite. Built alongside Joaquin Quintana (automation, Python, GitHub Actions).',
+          outcome:
+            'A documentation system that enforces its own standards — style guide, terminology rules, and behavioral constraints are read by the model at generation time, not by engineers after the fact.',
+          constraints:
+            'Enterprise environment with strict communication standards. Content had to work for both technical engineers and business stakeholders at a Flesch-Kincaid grade level of 8–10. Rules file evolved iteratively from observed model failures in real output.',
+        },
+      },
+      {
+        title: 'GenAI Toolkit for Feature Requirements',
+        description:
+          'A reusable prompt + validation pattern for turning messy technical inputs into structured, developer-ready JIRA feature specs — without sacrificing correctness.',
+        tags: ['GenAI', 'Prompt Engineering', 'JIRA', 'Structured Output', 'Human-in-the-Loop'],
+        link: '/portfolio/jira-toolkit/',
+        linkLabel: 'View sample',
+        about: {
+          problem:
+            'Engineers and product managers use AI tools to draft feature requirements, but the output is often vague, untestable, and missing critical sections. Without guardrails, teams ship specs that sound polished but lack accuracy and completeness.',
+          solution:
+            'A toolkit of engineered prompt templates with schema-driven output, explicit constraints, anti-patterns, and a validation checklist. Includes context-specific prompts for backend, UI, and integration features, plus refinement prompts for iterative improvement.',
+          role: 'Designed and built the full toolkit — prompt templates, validation framework, and documentation. Applied prompt engineering principles: structured outputs, constraint injection, and human-in-the-loop verification.',
+          outcome:
+            'Teams produce consistent, testable feature specs in minutes instead of hours. The same pattern transfers to API docs, SDK guides, integration tutorials, and workshop materials.',
+        },
+      },
+    ],
+  },
+  {
     category: 'UI/UX Design',
     icon: 'Palette',
     color: 'eggplant',
@@ -159,46 +221,6 @@ const portfolioItems: PortfolioSection[] = [
             'Improved template discoverability and reduced support requests related to "which template do I use." Increased self-service scaffolding activity after rollout.',
           constraints:
             'Internal enterprise project constrained by Backstage\'s plugin architecture and an existing design system that required extension rather than replacement.',
-        },
-      },
-    ],
-  },
-  {
-    category: 'AI Tools',
-    icon: 'Sparkles',
-    color: 'ai',
-    items: [
-      {
-        title: 'TechWrit AI',
-        description:
-          'A code-aware documentation platform that generates structured technical docs from source code, configs, and specs — enforcing style rules, glossary terms, and readability standards during generation, not after.',
-        tags: ['SaaS', 'Documentation', 'AI', 'VS Code Extension', 'REST API'],
-        link: 'https://techwrit.ai',
-        about: {
-          problem:
-            'Engineers started using AI tools to generate documentation, but the output ignored style guides, skipped parameter tables, and used wrong terminology. Technical writers became human linters, giving the same feedback on every PR.',
-          solution:
-            'A documentation platform that takes 30 years of documentation standards and enforces them during generation. 14 documentation modes, 25 default style rules, a VS Code extension, and a REST API for CI/CD integration.',
-          role: 'Sole founder, designer, and developer. Designed the product, built the platform, and launched independently in February 2026.',
-          outcome:
-            'Teams generate structured, style-compliant documentation directly from code — API references, how-to guides, tutorials, runbooks, and more — without post-generation cleanup.',
-        },
-      },
-      {
-        title: 'GenAI Toolkit for Feature Requirements',
-        description:
-          'A reusable prompt + validation pattern for turning messy technical inputs into structured, developer-ready JIRA feature specs — without sacrificing correctness.',
-        tags: ['GenAI', 'Prompt Engineering', 'JIRA', 'Structured Output', 'Human-in-the-Loop'],
-        link: '/portfolio/jira-toolkit/',
-        linkLabel: 'View sample',
-        about: {
-          problem:
-            'Engineers and product managers use AI tools to draft feature requirements, but the output is often vague, untestable, and missing critical sections. Without guardrails, teams ship specs that sound polished but lack accuracy and completeness.',
-          solution:
-            'A toolkit of engineered prompt templates with schema-driven output, explicit constraints, anti-patterns, and a validation checklist. Includes context-specific prompts for backend, UI, and integration features, plus refinement prompts for iterative improvement.',
-          role: 'Designed and built the full toolkit — prompt templates, validation framework, and documentation. Applied prompt engineering principles: structured outputs, constraint injection, and human-in-the-loop verification.',
-          outcome:
-            'Teams produce consistent, testable feature specs in minutes instead of hours. The same pattern transfers to API docs, SDK guides, integration tutorials, and workshop materials.',
         },
       },
     ],
@@ -491,6 +513,19 @@ export function Portfolio() {
                                     >
                                       View in Figma
                                       <PenTool className="w-3 h-3" />
+                                    </a>
+                                  </Button>
+                                )}
+                                {item.caseStudy && (
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="gap-2 flex-1"
+                                    asChild
+                                  >
+                                    <a href={item.caseStudy}>
+                                      Case study
+                                      <ExternalLink className="w-3 h-3" />
                                     </a>
                                   </Button>
                                 )}

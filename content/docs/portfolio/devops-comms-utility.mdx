@@ -63,7 +63,7 @@ The most technically differentiated part of my contribution was the prompt archi
 - **`contexts/planned.md`** — Tone and structural guidance specific to planned maintenance: what the communication is for, what to avoid, how the Teams message differs from the email
 - **Team YAML** — Contact name, email, Teams channel, department, and managed applications
 - **ServiceNow record** — The pruned CHG ticket JSON: the source of truth for all content
-- **Issue body** — The engineer's GitHub issue submission, the only human-authored content in the prompt
+- **Issue body** — The engineer's GitHub issue submission, which requires only the CHG number and optionally includes additional recipient actions
 
 Each rule in `rules.md` was added in response to a specific failure observed in real output — passive voice constructions, redundant facts across sections, "version 3.19.4" instead of "v3.19.4". The rules file is the institutional memory of what the model gets wrong without guidance.
 
@@ -94,7 +94,7 @@ Beyond the platform itself, I produced the complete documentation:
 
 This project sits at the intersection of three things I do: prompt engineering, content standards, and documentation. The work isn't just writing about a platform — it's designing the system that makes the platform write well. The style guide isn't a document engineers read; it's a file the AI model reads. The rules aren't editorial guidelines; they're behavioral constraints enforced at generation time.
 
-It's the closest thing I've built to a documentation system that enforces its own standards.
+Along with TechWrit AI, it's one of two systems I've built where the documentation standards are enforced during generation, not after.
 
 ---
 

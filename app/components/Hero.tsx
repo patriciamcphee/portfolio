@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, FileText, Sparkles, Briefcase } from 'lucide-react';
 import { Button } from './ui/button';
+import { docVariables } from '@/config/variables';
 
 export function Hero() {
   return (
@@ -59,7 +60,7 @@ export function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6" asChild>
-              <a href="https://www.dropbox.com/scl/fi/ztqpgaverevbkb2xt1pvz/resume-patricia-mcphee.pdf?rlkey=ii9stpk47hfhvw1uteun2bno8&st=zccgf8x6&dl=0" target="_blank" rel="noopener noreferrer">
+              <a href={docVariables.resume} target="_blank" rel="noopener noreferrer">
                 <FileText className="w-5 h-5" />
                 Download Resume
               </a>

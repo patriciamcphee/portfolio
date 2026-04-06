@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, X, Mail, Linkedin, FileText, ArrowUp } from 'lucide-react';
+import { docVariables } from '@/config/variables';
 
 const actions = [
   {
@@ -13,7 +14,7 @@ const actions = [
   {
     label: 'Download Resume',
     icon: FileText,
-    href: 'https://www.dropbox.com/scl/fi/ztqpgaverevbkb2xt1pvz/resume-patricia-mcphee.pdf?rlkey=ii9stpk47hfhvw1uteun2bno8&st=zccgf8x6&dl=0',
+    href: docVariables.resume,
   },
   {
     label: 'LinkedIn',

@@ -12,4 +12,6 @@ export const docVariables: Record<string, string> = {
   companyName: "Pixl'n Grid",
   version: '1.0.0',
   frameworkName: 'Next.js',
+  resume: 'https://drive.proton.me/urls/CXRDDE8MJC#Gr2V2L3lm54X',
+  devOpsCommsUtility: 'https://drive.proton.me/urls/DF26PSCPEC#ag9eGbmefHr4',
 }

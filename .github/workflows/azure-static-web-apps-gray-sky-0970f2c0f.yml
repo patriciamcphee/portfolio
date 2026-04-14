@@ -21,6 +21,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Install Linux native binary for lightningcss
+        run: npm install --no-save lightningcss-linux-x64-gnu
+
       - name: Build tokens, search index, FAQ index, and API index
         run: |
           node scripts/build-tokens.js

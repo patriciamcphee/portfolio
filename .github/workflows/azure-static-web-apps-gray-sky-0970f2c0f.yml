@@ -17,12 +17,11 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-          cache: npm
 
-      - run: npm ci
-
-      - name: Install Linux native binary for lightningcss
-        run: npm install --no-save lightningcss-linux-x64-gnu
+      - name: Install dependencies
+        run: |
+          rm -f package-lock.json
+          npm install
 
       - name: Build tokens, search index, FAQ index, and API index
         run: |

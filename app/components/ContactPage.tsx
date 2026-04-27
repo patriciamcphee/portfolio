@@ -1,26 +1,16 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
 import { Mail, Linkedin, ExternalLink, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 
 export function ContactPage() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
     <article
-      ref={ref}
       className="font-sans text-neutral-slate-900 dark:text-neutral-slate-100 max-w-[720px] mx-auto px-6 py-12 pb-16"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-      >
+      <div>
         {/* Eyebrow */}
         <div className="text-[11px] font-medium tracking-[0.18em] uppercase text-neutral-slate-500 mb-5 flex items-center gap-2.5">
           <span className="inline-block w-7 h-px bg-neutral-slate-500 shrink-0" />
@@ -44,7 +34,7 @@ export function ContactPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Card className="h-full hover:shadow-lg transition-shadow">
@@ -68,7 +58,7 @@ export function ContactPage() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Card className="h-full hover:shadow-lg transition-shadow">
@@ -94,7 +84,7 @@ export function ContactPage() {
         {/* Slack / Discord placeholder */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Card className="hover:shadow-lg transition-shadow border-dashed">
@@ -114,7 +104,7 @@ export function ContactPage() {
             </CardContent>
           </Card>
         </motion.div>
-      </motion.div>
+      </div>
     </article>
   );
 }

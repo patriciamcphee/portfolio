@@ -16,7 +16,8 @@ export default function DocsLayout({
 }) {
   const [collapsed, setCollapsed] = useState(false)
   const pathname = usePathname()
-  const showSidebar = !NO_SIDEBAR_ROUTES.includes(pathname)
+  const normalizedPath = pathname.length > 1 ? pathname.replace(/\/$/, '') : pathname
+  const showSidebar = !NO_SIDEBAR_ROUTES.includes(normalizedPath)
 
   return (
     <div className="min-h-screen flex flex-col">

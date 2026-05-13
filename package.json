@@ -36,7 +36,7 @@
     "fuse.js": "^7.1.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.474.0",
-    "mermaid": "^10.9.5",
+    "mermaid": "^10.9.6",
     "motion": "^12.34.3",
     "next": "^15.5.18",
     "next-mdx-remote": "^6.0.0",

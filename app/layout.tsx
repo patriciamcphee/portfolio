@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   description: siteConfig.tagline,
   icons: { icon: { url: siteConfig.favicon, type: 'image/svg+xml' } },
   openGraph: {
-    description: `${siteConfig.title} — an opinionated docs framework by Pixl'n Grid.`,
+    description:
+      'Patricia McPhee is a Technical Content Manager building AI-assisted content workflows and developer documentation for platforms at Microsoft, Amazon, Meta, and beyond.',
   },
 }
 

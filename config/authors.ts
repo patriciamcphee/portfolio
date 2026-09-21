@@ -16,7 +16,7 @@ export const authors: Record<string, AuthorProfile> = {
   patriciamcphee: {
     name: 'Patricia McPhee',
     role: 'Framework Founder & Lead Technical Writer',
-    bio: 'Patricia is a Technical Content Manager and Developer Experience practitioner with 30 years of Technical Writing experience. She started her career in networking and cloud engineering, writing documentation for system administrators, network engineers, and datacenter personnel. That foundation shaped how she approaches technical content — over the past 15+ years, she\'s focused on developer platforms, writing API references, SDK guides, and developer documentation at Microsoft, Amazon, Meta, GE Healthcare, and LivePerson.',
+    bio: 'Patricia is a Technical Content Manager and Developer Experience practitioner with over 20 years of Technical Writing experience. She started her career in networking and cloud engineering, writing documentation for system administrators, network engineers, and datacenter personnel. That foundation shaped how she approaches technical content — over the past 20+ years, she\'s focused on developer platforms, writing API references, SDK guides, and developer documentation at Microsoft, Amazon, Meta, GE Healthcare, and LivePerson.',
     img: '/img/authors/avatar-patriciamcphee.png',
   },
 }

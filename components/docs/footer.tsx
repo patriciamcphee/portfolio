@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Patricia McPhee</h3>
             <p className="text-neutral-slate-400 mb-4">
-              Technical Content Manager &amp; Developer Experience professional with 15+ years documenting APIs, SDKs &amp; developer platforms.
+              Technical Content Manager &amp; AI-assisted content operations professional with 20+ years documenting APIs, SDKs &amp; developer platforms.
             </p>
             <div className="flex gap-4">
               <a

@@ -24,7 +24,7 @@ const products = [
   {
     label: 'Trellis Docs',
     value:
-      'An open-source documentation framework built on Next.js 15 with reusable content variables, build-time design token processing, client-side fuzzy search, and audience role tagging — capabilities absent from every major competing framework.',
+      'An open-source documentation framework built on Next.js 15 with reusable content variables, build-time design token processing, client-side fuzzy search, and audience role tagging.',
   },
 ];
 
@@ -32,22 +32,22 @@ const attributes = [
   {
     label: 'End-to-end ownership',
     value:
-      'From content strategy through front-end implementation — Patricia doesn\u2019t hand off to engineers; she builds alongside them.',
+      'I don’t hand off to engineers — I build alongside them, from content strategy through front-end implementation.',
   },
   {
     label: 'Platform thinking',
     value:
-      'Whether inside an enterprise or as an independent founder, she builds systems designed to outlast any single project or team member.',
+      'Whether inside an enterprise or as an independent founder, I build systems designed to outlast any single project or team member.',
   },
   {
-    label: 'Practitioner credibility',
+    label: 'Why I build tools',
     value:
-      'TechWrit AI and Trellis Docs exist because she encountered genuine gaps in the tooling — and had the range to close them herself.',
+      'TechWrit AI and Trellis Docs exist because I ran into real gaps in the tooling — and had the skills to close them myself.',
   },
   {
     label: 'Cross-discipline range',
     value:
-      'UX research, product design, AI integration, open-source development, and enterprise documentation strategy — few practitioners hold this combination.',
+      'My work spans UX research, product design, AI integration, open-source development, and enterprise documentation strategy.',
   },
 ];
 
@@ -112,40 +112,37 @@ export function ExcellenceInPractice() {
         {/* Eyebrow */}
         <div className="text-xs font-medium tracking-widest uppercase text-neutral-slate-500 dark:text-brand-primary-lighter mb-5 flex items-center gap-2.5">
           <span className="inline-block w-7 h-px bg-neutral-slate-500 dark:bg-brand-primary-lighter shrink-0" />
-          Excellence in Practice
+          About
         </div>
 
         {/* Headline */}
         <h1 className="text-3xl md:text-4xl leading-tight font-semibold mb-2 text-neutral-slate-900 dark:text-neutral-slate-100">
-          Patricia McPhee:{' '}
+          I build documentation systems,{' '}
           <em className="italic text-neutral-slate-500 dark:text-brand-primary-lighter">
-            The Architect of Developer Understanding
+            not just documentation.
           </em>
         </h1>
 
         {/* Subheadline */}
         <p className="font-display text-base font-normal italic text-neutral-slate-500 dark:text-neutral-slate-400 mb-10 leading-relaxed max-w-[560px]">
-          How two decades at the intersection of technical writing, engineering, and product design
-          shaped a rare practitioner — and a builder.
+          Two decades at the intersection of technical writing, engineering, and product design —
+          now focused on AI-assisted content operations.
         </p>
-
-        <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />
 
         {/* Lede */}
         <p className="text-lg leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-8 border-l-2 border-neutral-slate-300 dark:border-neutral-slate-600 pl-5">
-          In most organizations, documentation is an afterthought. Patricia has spent over 15 years proving it doesn&apos;t have to be — and building the tools, systems, and frameworks to ensure it never is again.
+          In most organizations, documentation is an afterthought. I&apos;ve spent over 20 years proving it doesn&apos;t have to be, building the tools, systems, and processes that make it part of how a team ships, not something bolted on at the end.
         </p>
 
         {/* Background section */}
         <SectionLabel>Background</SectionLabel>
         <SectionTitle>A career at the frontier of developer experience</SectionTitle>
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          Patricia&apos;s career defies easy categorization. With a degree in computer science
-          and over 20 years in the industry, she is a technical content
-          manager, a developer experience practitioner, a platform builder, and a founder — and she
-          holds all of these identities simultaneously, each one informing the others. That CS foundation
-          shapes how she approaches every project: she reads the code, understands the architecture, and
-          documents systems from the inside out rather than the outside in.
+          My career doesn&apos;t fit one job title. I have a degree in computer science
+          and over 20 years in the industry, and I work as a technical content
+          manager, a developer experience practitioner, and a platform builder, often at the same time. That
+          computer science background shapes how I approach every project: I read the code, understand the
+          architecture, and document systems from the inside out rather than the outside in.
         </p>
 
         {/* Company tags */}
@@ -162,21 +159,19 @@ export function ExcellenceInPractice() {
 
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
           Across API platforms, cloud infrastructure, SaaS products, identity systems, and internal
-          developer portals, Patricia has consistently operated where the technical stakes are highest
+          developer portals, I&apos;ve consistently worked on problems where the technical stakes are highest
           and the cost of ambiguity is steepest.
         </p>
 
-        <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />
-
         {/* Technical depth section */}
-        <SectionLabel>Technical Depth</SectionLabel>
+        <SectionLabel>Technical depth</SectionLabel>
         <SectionTitle>Fluency across the full documentation lifecycle</SectionTitle>
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          What sets Patricia apart from content practitioners who specialize in writing alone is the
-          depth of her technical reach. She works directly in the systems she documents: authoring in
+          What sets me apart from content practitioners who specialize in writing alone is the
+          depth of my technical reach. I work directly in the systems I document: authoring in
           Markdown and MDX, building in React and TypeScript, designing in Figma, wiring up CI/CD
           pipelines, and validating real-world API behavior in Postman and against OpenAPI specs. At
-          Microsoft&apos;s Azure Dedicated team, she co-authored deployment documentation for Azure
+          Microsoft&apos;s Azure Dedicated team, I co-authored deployment documentation for Azure
           VMware Solution by working directly alongside Azure engineers and UX researchers to
           validate workflows firsthand.
         </p>
@@ -184,29 +179,31 @@ export function ExcellenceInPractice() {
         {/* Pull quote */}
         <blockquote className="font-display text-xl italic leading-relaxed text-neutral-slate-500 dark:text-neutral-slate-400 border-t border-b border-neutral-slate-200 dark:border-neutral-slate-700 py-5 my-8">
           &ldquo;Documentation built from the outside in — written after the product is finished —
-          is always a liability. Patricia&apos;s instinct is to build it from the inside out.&rdquo;
+          is always a liability. My instinct is to build it from the inside out.&rdquo;
         </blockquote>
 
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          At Cigna, she embedded within the Enterprise DevOps organization, taking ownership of
-          Alchemy Docs — the documentation platform supporting Alchemy, Cigna&apos;s internal
-          developer portal built on Backstage. Her contributions there extended well beyond writing:
-          she architected the ContentOps Playbook, authored the enterprise style guide, contributed
-          to portal UI redesign, designed the prompt and content architecture for the DevOps
-          Communications Utility, and built content systems that could scale across multiple
+          At Cigna (November 2023–May 2026), I worked within the Enterprise DevOps organization,
+          owning Alchemy Docs, the documentation platform supporting Alchemy, Cigna&apos;s
+          internal developer portal built on Backstage. My work there went well beyond
+          writing: I built the ContentOps Playbook, wrote the enterprise style guide,
+          contributed to portal UI redesign, designed the prompt and content architecture for the
+          DevOps Communications Utility, and built content systems that scaled across multiple
           engineering teams with different cadences and ownership models.
         </p>
 
-        <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />
+        <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
+          I&apos;m now a Senior Technical Content PM (contract) at Microsoft, focused on
+          AI-assisted content workflows and content operations for learn.microsoft.com.
+        </p>
 
         {/* Builder identity section */}
-        <SectionLabel>Builder Identity</SectionLabel>
+        <SectionLabel>Building my own tools</SectionLabel>
         <SectionTitle>From practitioner to founder: Pixl&apos;n Grid Studios</SectionTitle>
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          The clearest expression of Patricia&apos;s capabilities is what she does when no one has
-          asked her to do anything. Through her independent studio, Pixl&apos;n Grid Studios, she
-          has designed and shipped two production-grade platforms that address problems she
-          encountered in her own practice.
+          The clearest sign of how I work is what I build when no one has asked me to. Through my
+          independent studio, Pixl&apos;n Grid Studios, I&apos;ve designed and shipped two
+          production-grade platforms that address problems I ran into in my own practice.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-5">
@@ -216,9 +213,9 @@ export function ExcellenceInPractice() {
         </div>
 
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5 mt-5">
-          Both platforms emerged from real practitioner pain: the gap between what documentation
-          tooling promises and what it actually delivers at scale. TechWrit AI was launched publicly
-          in February 2026 and is live at{' '}
+          Both platforms came out of the same problem: the gap between what documentation
+          tooling promises and what it actually delivers at scale. I launched TechWrit AI publicly
+          in February 2026, and it&apos;s live at{' '}
           <a
             href="https://techwrit.ai"
             target="_blank"
@@ -230,17 +227,15 @@ export function ExcellenceInPractice() {
           . Trellis Docs is available as an open-source project with an active public repository.
         </p>
 
-        <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />
-
         {/* Approach section */}
         <SectionLabel>Approach</SectionLabel>
         <SectionTitle>Strategy, structure, and the system behind the sentence</SectionTitle>
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          Patricia&apos;s approach to documentation is fundamentally architectural. Whether she is
+          My approach to documentation is fundamentally architectural. Whether I&apos;m
           establishing an information hierarchy for an internal developer portal, designing a
           Diataxis-aligned content structure for an API reference, or defining metadata naming
-          conventions for Backstage software templates, she thinks in systems before she thinks in
-          sentences. The result is documentation that remains coherent and maintainable across team
+          conventions for Backstage software templates, I think in systems before I think in
+          sentences. The result is documentation that stays coherent and maintainable across team
           changes, product iterations, and organizational growth.
         </p>
 
@@ -257,18 +252,15 @@ export function ExcellenceInPractice() {
         </div>
 
         <p className="text-base leading-relaxed text-neutral-slate-700 dark:text-neutral-slate-300 mb-5">
-          Her content operations work at Cigna illustrates this systemic instinct clearly. Rather
-          than producing documentation in isolation, she built the infrastructure — playbooks, style
-          standards, publishing workflows — that allows documentation quality to be a property of the
-          system, not just the individual contributor. That is a fundamentally different kind of
-          contribution, and a far more durable one.
+          My content operations work at Cigna is a clear example of that instinct. Rather
+          than producing documentation in isolation, I built the infrastructure, playbooks, style
+          standards, and publishing workflows, that make documentation quality a property of the
+          system, not just the person writing that day.
         </p>
 
-        <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />
-
         {/* Recognition section */}
-        <SectionLabel>Industry Recognition</SectionLabel>
-        <SectionTitle>What the body of work demonstrates</SectionTitle>
+        <SectionLabel>What this adds up to</SectionLabel>
+        <SectionTitle>What I bring to a team</SectionTitle>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-5">
           {attributes.map((a) => (
@@ -276,11 +268,11 @@ export function ExcellenceInPractice() {
           ))}
         </div>
 
-
         {/* Closer */}
         <p className="font-display text-base italic text-neutral-slate-500 dark:text-neutral-slate-400 mt-10 pt-6 border-t border-neutral-slate-200 dark:border-neutral-slate-700 leading-relaxed">
-          The software industry has no shortage of people who can write about technology. Patricia represents something rarer: a practitioner who understands technology well enough to build it, and cares enough about developer experience to make the documentation itself part
-          of the product.
+          The software industry doesn&apos;t lack people who can write about technology. What I bring is
+          the ability to build it too, and the conviction that documentation belongs inside the
+          product, not bolted onto the end of it.
         </p>
       </motion.div>
     </article>

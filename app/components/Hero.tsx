@@ -35,7 +35,7 @@ export function Hero() {
             className="text-5xl md:text-7xl font-bold text-neutral-slate-900 dark:text-neutral-slate-100 mb-6 leading-tight"
           >
             Technical Content Manager
-            <span className="block text-brand-primary-lighter mt-2">& Developer Experience</span>
+            <span className="block text-brand-primary-lighter mt-2">& AI-Assisted Content Operations</span>
           </motion.h1>
 
           <motion.p
@@ -44,7 +44,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-neutral-slate-600 dark:text-neutral-slate-400 mb-8 max-w-3xl mx-auto"
           >
-            15+ years documenting APIs, SDKs & developer platforms for Microsoft, Amazon, Meta, and beyond
+            20+ years documenting APIs, SDKs & developer platforms for Microsoft, Amazon, Meta, and beyond
           </motion.p>
 
           <motion.div
@@ -77,20 +77,16 @@ export function Hero() {
             <div className="bg-neutral-white/80 dark:bg-neutral-slate-800/80 backdrop-blur-sm border border-brand-primary/20 rounded-xl p-6 text-left">
               <div className="flex items-center gap-3 mb-4">
                 <Briefcase className="w-5 h-5 text-brand-primary dark:text-brand-primary-lighter" />
-                <h3 className="text-lg font-bold text-neutral-slate-900 dark:text-neutral-slate-100">What I&apos;m Focused On</h3>
+                <h3 className="text-lg font-bold text-neutral-slate-900 dark:text-neutral-slate-100">What I&apos;m focused on</h3>
               </div>
               <div className="space-y-2 text-sm text-neutral-slate-700 dark:text-neutral-slate-300">
                 <div className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
-                  <p><strong>Role:</strong> Technical Content Manager and Developer Experience</p>
+                  <p><strong>Role:</strong> Technical Content Manager and AI-assisted content operations</p>
                 </div>
                 <div className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
                   <p><strong>Location:</strong> Remote positions</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
-                  <p><strong>Available:</strong> End of June 2026</p>
                 </div>
                 <div className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>

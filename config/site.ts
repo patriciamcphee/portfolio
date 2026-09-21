@@ -1,6 +1,6 @@
 export const siteConfig = {
   title: 'Patricia McPhee Portfolio',
-  tagline: 'Technical Content Manager & Developer Experience',
+  tagline: 'Technical Content Manager & AI-Assisted Content Operations',
   url: 'https://www.patriciamcphee.com',
   baseUrl: '/',
   favicon: '/img/favicon.svg',

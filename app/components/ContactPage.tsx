@@ -19,13 +19,12 @@ export function ContactPage() {
 
         {/* Headline */}
         <h1 className="font-display text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.15] font-normal mb-2 text-neutral-slate-900 dark:text-neutral-slate-100">
-          Let&apos;s Talk
+          Let&apos;s talk
         </h1>
 
         {/* Subheadline */}
         <p className="font-display text-base font-normal italic text-neutral-slate-500 mb-10 leading-relaxed max-w-[560px]">
-          My contract with Cigna ends at the end of June 2026, and I&apos;m actively seeking my next role.
-          Whether you have an opportunity, a question, or just want to connect — I&apos;d love to hear from you.
+          I&apos;m always glad to connect about interesting opportunities, projects, or just to talk shop.
         </p>
 
         <hr className="border-t border-neutral-slate-200 dark:border-neutral-slate-700 my-10" />

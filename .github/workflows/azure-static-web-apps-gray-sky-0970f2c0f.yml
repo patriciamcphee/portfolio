@@ -31,7 +31,7 @@ jobs:
           node scripts/build-api-index.js
 
       - name: Build site
-        run: npx next build
+        run: npx next build --webpack
 
       - name: Debug secret presence
         env:

@@ -9,7 +9,6 @@ import {
   FileText,
   Layers3,
   PenTool,
-  Sparkles,
   Workflow,
 } from 'lucide-react'
 import { docVariables } from '@/config/variables'
@@ -143,33 +142,75 @@ export function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.75, delay: 0.15 }}
-            className="relative min-h-[620px] overflow-hidden bg-[#243f47] lg:min-h-[760px]"
+            className="relative min-h-[650px] overflow-hidden bg-[#172126] lg:min-h-[760px]"
           >
-            <Image
-              src="/img/hero-content-systems.webp"
-              alt="Layered technical diagrams and drafting tools arranged on a deep teal surface"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 44vw"
-              className="object-cover object-center"
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.08]"
+              style={{
+                backgroundImage:
+                  'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
+                backgroundSize: '40px 40px',
+              }}
             />
-            <div className="absolute inset-0 bg-[#172126]/5" />
 
-            <div className="absolute right-5 top-5 max-w-[210px] rounded-2xl bg-[#f4f0e8]/95 p-5 text-[#172126] shadow-2xl sm:right-8 sm:top-8">
-              <Sparkles className="mb-7 h-5 w-5 text-accent-rust" />
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#66747a]">
-                Current focus
-              </p>
-              <p className="mt-2 font-display text-xl font-semibold leading-tight">
-                AI-assisted content systems that scale human judgment.
-              </p>
+            <div className="absolute left-6 right-6 top-7 flex items-center justify-between text-white sm:left-8 sm:right-8">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-accent-coral">
+                  Product proof
+                </p>
+                <p className="mt-1 font-display text-2xl font-semibold">TechWrit AI</p>
+              </div>
+              <span className="rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/60">
+                Built &amp; shipped
+              </span>
             </div>
 
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 sm:bottom-8 sm:left-8 sm:right-8">
-              <div className="rounded-full bg-accent-coral px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-[#172126]">
-                Strategy · Systems · Story
+            <div className="absolute left-6 right-6 top-[104px] overflow-hidden rounded-2xl border border-white/15 bg-[#f8fafc] shadow-2xl sm:left-8 sm:right-8">
+              <div className="flex h-9 items-center gap-1.5 border-b border-slate-200 bg-white px-4">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ef8e7a]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#d6a66c]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#8ba37e]" />
+                <span className="ml-3 text-[9px] font-medium uppercase tracking-[0.16em] text-slate-400">
+                  Rewrite workspace
+                </span>
               </div>
-              <span className="font-display text-6xl font-semibold text-white/90">PM</span>
+              <Image
+                src="/img/techwrit-rewrite-interface.png"
+                alt="TechWrit AI rewrite workspace showing terminology validation, readability analysis, and a text diff"
+                width={972}
+                height={944}
+                priority
+                sizes="(max-width: 1024px) 90vw, 40vw"
+                className="h-auto w-full"
+              />
+            </div>
+
+            <div className="absolute -right-10 bottom-7 w-[76%] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:-right-8 sm:bottom-9">
+              <div className="flex h-7 items-center justify-between border-b border-slate-200 px-3">
+                <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-slate-400">
+                  Style governance
+                </span>
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-coral" />
+              </div>
+              <Image
+                src="/img/techwrit-style-rules.png"
+                alt="TechWrit AI style rules settings with tone, clarity, formatting, and structure categories"
+                width={868}
+                height={569}
+                sizes="(max-width: 1024px) 70vw, 30vw"
+                className="h-auto w-full"
+              />
+            </div>
+
+            <div className="absolute -left-5 bottom-14 w-[42%] rotate-[-3deg] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.35)] sm:-left-3 sm:bottom-20">
+              <Image
+                src="/img/techwrit-api-keys.png"
+                alt="TechWrit AI API key management interface"
+                width={512}
+                height={400}
+                sizes="(max-width: 1024px) 38vw, 18vw"
+                className="h-auto w-full"
+              />
             </div>
           </motion.div>
         </div>

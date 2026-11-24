@@ -188,15 +188,15 @@ export function Hero() {
             <div className="absolute -right-10 bottom-7 w-[76%] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:-right-8 sm:bottom-9">
               <div className="flex h-7 items-center justify-between border-b border-slate-200 px-3">
                 <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-slate-400">
-                  Style governance
+                  Terminology governance
                 </span>
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-coral" />
               </div>
               <Image
-                src="/img/techwrit-style-rules.png"
-                alt="TechWrit AI style rules settings with tone, clarity, formatting, and structure categories"
+                src="/img/techwrit-terminology.png"
+                alt="TechWrit AI terminology settings showing approved substitutions for consistent technical language"
                 width={868}
-                height={569}
+                height={492}
                 sizes="(max-width: 1024px) 70vw, 30vw"
                 className="h-auto w-full"
               />
@@ -204,10 +204,10 @@ export function Hero() {
 
             <div className="absolute -left-5 bottom-14 w-[42%] rotate-[-3deg] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.35)] sm:-left-3 sm:bottom-20">
               <Image
-                src="/img/techwrit-api-keys.png"
-                alt="TechWrit AI API key management interface"
-                width={512}
-                height={400}
+                src="/img/techwrit-writing-workspace.png"
+                alt="TechWrit AI writing workspace with content mode, audience, type, and template controls"
+                width={972}
+                height={944}
                 sizes="(max-width: 1024px) 38vw, 18vw"
                 className="h-auto w-full"
               />

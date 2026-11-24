@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+npm run build-tokens
+exec npm exec -- next dev --webpack --hostname 0.0.0.0 --port "$PORT"

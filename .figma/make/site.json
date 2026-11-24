@@ -1,0 +1,10 @@
+{
+  "description": "Provides project setup, deployment configuration, and verification tools for teams preparing an imported app for reliable production and preview releases.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

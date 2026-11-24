@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Bricolage_Grotesque } from 'next/font/google'
+import { Inter, Literata } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { siteConfig } from '@/config/site'
 import './globals.css'
@@ -10,8 +10,9 @@ const inter = Inter({
   display: 'swap',
 })
 
-const bricolage = Bricolage_Grotesque({
+const literata = Literata({
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 })
@@ -61,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${bricolage.variable}`}>
+      <body className={`${inter.variable} ${literata.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme={siteConfig.colorMode.defaultMode}

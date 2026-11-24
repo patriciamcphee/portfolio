@@ -146,14 +146,14 @@ export function Hero() {
             className="relative min-h-[620px] overflow-hidden bg-[#243f47] lg:min-h-[760px]"
           >
             <Image
-              src="/img/authors/avatar-patriciamcphee.png"
-              alt="Patricia McPhee, technical content leader"
+              src="/img/hero-content-systems.webp"
+              alt="Layered technical diagrams and drafting tools arranged on a deep teal surface"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 44vw"
-              className="object-cover object-[center_22%] grayscale-[20%]"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#172126]/10" />
+            <div className="absolute inset-0 bg-[#172126]/5" />
 
             <div className="absolute right-5 top-5 max-w-[210px] rounded-2xl bg-[#f4f0e8]/95 p-5 text-[#172126] shadow-2xl sm:right-8 sm:top-8">
               <Sparkles className="mb-7 h-5 w-5 text-accent-rust" />

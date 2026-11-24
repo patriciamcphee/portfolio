@@ -1,104 +1,315 @@
-'use client';
+'use client'
 
-import { motion } from 'motion/react';
-import { ArrowRight, FileText, Sparkles, Briefcase } from 'lucide-react';
-import { Button } from './ui/button';
-import { docVariables } from '@/config/variables';
+import Image from 'next/image'
+import Link from 'next/link'
+import { motion } from 'motion/react'
+import {
+  ArrowUpRight,
+  Check,
+  FileText,
+  Layers3,
+  PenTool,
+  Sparkles,
+  Workflow,
+} from 'lucide-react'
+import { docVariables } from '@/config/variables'
+
+const proofPoints = [
+  { value: '20+', label: 'years in developer content' },
+  { value: '6', label: 'enterprise brands' },
+  { value: '2', label: 'products built and shipped' },
+  { value: '14', label: 'AI content workflows' },
+]
+
+const companies = ['Microsoft', 'Amazon', 'Meta', 'Cigna', 'GE Healthcare', 'Beyond Identity']
+
+const selectedWork = [
+  {
+    eyebrow: 'AI content operations',
+    title: 'A communications system built for enterprise DevOps',
+    description:
+      'Prompt architecture and reusable content workflows that help technical teams communicate with greater speed and consistency.',
+    image: '/img/devops_comms_utility_infographic.png',
+    href: '/portfolio/devops-comms-utility',
+    accent: 'bg-accent-coral',
+  },
+  {
+    eyebrow: 'Platform strategy',
+    title: 'TechWrit AI: governance built into generation',
+    description:
+      'A code-aware documentation platform with generation, audit, style, and CI/CD workflows designed around real content operations.',
+    image: '/img/content-audit-output.png',
+    href: '/portfolio/techwrit-ai-platform',
+    accent: 'bg-accent-moss-green',
+  },
+  {
+    eyebrow: 'Product design',
+    title: 'Reframing a complex Backstage creation flow',
+    description:
+      'A UX redesign that turns an intimidating developer workflow into a clearer, more guided product experience.',
+    image: '/img/CreatePageRedesign2.png',
+    href: '/portfolio/create-page-redesign',
+    accent: 'bg-brand-primary-lightest',
+  },
+]
+
+const capabilities = [
+  {
+    icon: Layers3,
+    number: '01',
+    title: 'Content systems',
+    description:
+      'Information architecture, governance, and publishing models that stay coherent as products and teams grow.',
+  },
+  {
+    icon: Workflow,
+    number: '02',
+    title: 'AI-assisted operations',
+    description:
+      'Practical workflows that bring automation into content production without sacrificing quality or editorial control.',
+  },
+  {
+    icon: PenTool,
+    number: '03',
+    title: 'Developer experience',
+    description:
+      'API documentation, developer portals, and product UX built from direct technical understanding—not secondhand notes.',
+  },
+]
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-tl from-brand-primary-dark/80 via-neutral-white to-neutral-white dark:from-brand-primary-dark/40 dark:via-neutral-slate-900 dark:to-neutral-slate-900">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-slate-200 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"></div>
+    <div className="overflow-hidden bg-[#f4f0e8] text-[#172126] dark:bg-[#121a1d] dark:text-[#f4f0e8]">
+      <section className="relative border-b border-[#172126]/15 dark:border-white/10">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.035] dark:opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#172126 1px, transparent 1px), linear-gradient(90deg, #172126 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto text-center"
-        >
+        <div className="relative mx-auto grid max-w-[1440px] lg:grid-cols-[1.12fr_0.88fr]">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/15 text-brand-primary dark:bg-brand-primary/25 dark:text-brand-primary-lighter rounded-full mb-8"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Available for new opportunities</span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold text-neutral-slate-900 dark:text-neutral-slate-100 mb-6 leading-tight"
+            transition={{ duration: 0.65 }}
+            className="flex flex-col justify-center px-6 py-20 sm:px-10 lg:min-h-[760px] lg:px-16 lg:py-24 xl:px-24"
           >
-            Technical Content Manager
-            <span className="block text-brand-primary-lighter mt-2">& AI-Assisted Content Operations</span>
-          </motion.h1>
+            <div className="mb-10 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#526269] dark:text-[#aebcbf]">
+              <span className="h-2.5 w-2.5 rounded-full bg-accent-coral" />
+              Technical content leadership · AI systems
+            </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-neutral-slate-600 dark:text-neutral-slate-400 mb-8 max-w-3xl mx-auto"
-          >
-            20+ years documenting APIs, SDKs & developer platforms for Microsoft, Amazon, Meta, and beyond
-          </motion.p>
+            <h1 className="max-w-4xl text-[clamp(3.25rem,7vw,6.75rem)] font-semibold leading-[0.9] tracking-[-0.055em]">
+              Complex platforms,
+              <span className="mt-2 block font-normal italic text-accent-rust dark:text-accent-coral">
+                made clear.
+              </span>
+            </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center"
-          >
-            <Button size="lg" className="gap-2 text-lg px-8 py-6" asChild>
-              <a href="/portfolio-overview">
-                View Portfolio
-                <ArrowRight className="w-5 h-5" />
+            <p className="mt-9 max-w-2xl text-lg leading-8 text-[#4c5a60] dark:text-[#bdc7c9] sm:text-xl">
+              I build the documentation systems, AI-assisted workflows, and developer experiences
+              that turn technical complexity into confident action.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/portfolio-overview"
+                className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-[#172126] px-7 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 dark:bg-accent-coral dark:text-[#172126]"
+              >
+                Explore selected work
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+              <a
+                href={docVariables.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-[#172126]/25 px-7 text-sm font-semibold transition-colors hover:bg-white/70 dark:border-white/20 dark:hover:bg-white/5"
+              >
+                <FileText className="h-4 w-4" />
+                View résumé
               </a>
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6" asChild>
-              <a href={docVariables.resume} target="_blank" rel="noopener noreferrer">
-                <FileText className="w-5 h-5" />
-                Download Resume
-              </a>
-            </Button>
-          </motion.div>
+            </div>
 
-          {/* Focused on */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-12 max-w-2xl mx-auto"
-          >
-            <div className="bg-neutral-white/80 dark:bg-neutral-slate-800/80 backdrop-blur-sm border border-brand-primary/20 rounded-xl p-6 text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="w-5 h-5 text-brand-primary dark:text-brand-primary-lighter" />
-                <h3 className="text-lg font-bold text-neutral-slate-900 dark:text-neutral-slate-100">What I&apos;m focused on</h3>
-              </div>
-              <div className="space-y-2 text-sm text-neutral-slate-700 dark:text-neutral-slate-300">
-                <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
-                  <p><strong>Role:</strong> Technical Content Manager and AI-assisted content operations</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
-                  <p><strong>Location:</strong> Remote positions</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-lighter rounded-full mt-1.5 shrink-0"></div>
-                  <p><strong>Ideal for:</strong> Teams building a developer experience function, scaling docs, or needing someone who owns strategy end to end — including the tooling</p>
-                </div>
-              </div>
+            <div className="mt-14 flex items-center gap-3 text-sm text-[#526269] dark:text-[#aebcbf]">
+              <Check className="h-4 w-4 text-accent-rust dark:text-accent-coral" />
+              Available for remote content leadership opportunities
             </div>
           </motion.div>
 
-        </motion.div>
-      </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75, delay: 0.15 }}
+            className="relative min-h-[620px] overflow-hidden bg-[#243f47] lg:min-h-[760px]"
+          >
+            <Image
+              src="/img/authors/avatar-patriciamcphee.png"
+              alt="Patricia McPhee, technical content leader"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 44vw"
+              className="object-cover object-[center_22%] grayscale-[20%]"
+            />
+            <div className="absolute inset-0 bg-[#172126]/10" />
 
-    </section>
-  );
+            <div className="absolute right-5 top-5 max-w-[210px] rounded-2xl bg-[#f4f0e8]/95 p-5 text-[#172126] shadow-2xl sm:right-8 sm:top-8">
+              <Sparkles className="mb-7 h-5 w-5 text-accent-rust" />
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#66747a]">
+                Current focus
+              </p>
+              <p className="mt-2 font-display text-xl font-semibold leading-tight">
+                AI-assisted content systems that scale human judgment.
+              </p>
+            </div>
+
+            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 sm:bottom-8 sm:left-8 sm:right-8">
+              <div className="rounded-full bg-accent-coral px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-[#172126]">
+                Strategy · Systems · Story
+              </div>
+              <span className="font-display text-6xl font-semibold text-white/90">PM</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#172126]/15 bg-[#172126] text-white dark:border-white/10">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-2 divide-x divide-white/10 lg:grid-cols-4">
+          {proofPoints.map((point) => (
+            <div key={point.label} className="px-6 py-8 sm:px-10 lg:px-12 lg:py-10">
+              <p className="font-display text-4xl font-semibold text-accent-coral sm:text-5xl">
+                {point.value}
+              </p>
+              <p className="mt-2 max-w-40 text-xs font-medium uppercase leading-5 tracking-[0.14em] text-white/60">
+                {point.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28 xl:px-24">
+        <div className="mx-auto max-w-[1248px]">
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-rust dark:text-accent-coral">
+                Selected work
+              </p>
+              <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl">
+                Systems that make complicated work feel simple.
+              </h2>
+            </div>
+            <p className="max-w-sm text-base leading-7 text-[#5e6a6f] dark:text-[#aebcbf]">
+              Strategy is only useful when it ships. These projects connect research, content,
+              product design, and implementation.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+            {selectedWork.map((project, index) => (
+              <motion.article
+                key={project.title}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="group overflow-hidden rounded-[1.75rem] border border-[#172126]/15 bg-white/70 dark:border-white/10 dark:bg-white/[0.04]"
+              >
+                <Link href={project.href} className="block">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#d9ddd8]">
+                    <Image
+                      src={project.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.035]"
+                    />
+                    <span className={`absolute left-5 top-5 h-3 w-3 rounded-full ${project.accent}`} />
+                  </div>
+                  <div className="p-7">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-rust dark:text-accent-coral">
+                      {project.eyebrow}
+                    </p>
+                    <h3 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.02em]">
+                      {project.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-6 text-[#5e6a6f] dark:text-[#aebcbf]">
+                      {project.description}
+                    </p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold">
+                      Read case study
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#e7dfd1] px-6 py-20 dark:bg-[#1b272b] sm:px-10 lg:px-16 lg:py-28 xl:px-24">
+        <div className="mx-auto max-w-[1248px]">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-rust dark:text-accent-coral">
+                What I bring
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-[-0.035em] sm:text-5xl">
+                Not just the words. The system behind them.
+              </h2>
+            </div>
+            <div className="divide-y divide-[#172126]/15 border-y border-[#172126]/15 dark:divide-white/10 dark:border-white/10">
+              {capabilities.map((capability) => {
+                const Icon = capability.icon
+                return (
+                  <div key={capability.title} className="grid gap-5 py-7 sm:grid-cols-[48px_1fr_auto] sm:items-start">
+                    <Icon className="h-6 w-6 text-accent-rust dark:text-accent-coral" />
+                    <div>
+                      <h3 className="text-xl font-semibold">{capability.title}</h3>
+                      <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5e6a6f] dark:text-[#aebcbf]">
+                        {capability.description}
+                      </p>
+                    </div>
+                    <span className="font-display text-sm text-[#7b8589]">{capability.number}</span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-[#172126]/15 py-7 dark:border-white/10">
+        <div className="mx-auto flex max-w-[1248px] flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 text-sm font-semibold tracking-[-0.01em] text-[#6f797d] dark:text-[#8f9da1] sm:justify-between">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-rust dark:text-accent-coral">
+            Experience includes
+          </span>
+          {companies.map((company) => (
+            <span key={company}>{company}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28 xl:px-24">
+        <div className="mx-auto flex max-w-[1248px] flex-col items-start justify-between gap-10 rounded-[2rem] bg-accent-coral p-8 text-[#172126] sm:p-12 lg:flex-row lg:items-end lg:p-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em]">Have a complex story to tell?</p>
+            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.03] tracking-[-0.04em] sm:text-6xl">
+              Let&apos;s make it useful, scalable, and impossible to ignore.
+            </h2>
+          </div>
+          <Link
+            href="/contact"
+            className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-[#172126] px-7 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+          >
+            Start a conversation
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
 }
